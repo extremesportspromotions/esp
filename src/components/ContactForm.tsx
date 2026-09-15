@@ -73,7 +73,8 @@ export default function ContactForm() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75">
             Tell us a bit about yourself and the sport you want to pursue. Our
-            team will follow up to match you with a professional coach.
+            team will follow up to find and introduce you to a professional coach.
+            The limited early matching fee is £30; coach session fees are separate.
           </p>
           <p className="mt-4 text-sm text-white/50">
             Prefer email?{" "}
@@ -231,7 +232,7 @@ export default function ContactForm() {
                 type="submit"
                 className="inline-flex w-full items-center justify-center rounded-full bg-accent px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto"
               >
-                Submit enquiry
+                Enquire — £30 early matching fee
               </button>
             </form>
           )}

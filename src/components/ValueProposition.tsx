@@ -13,19 +13,18 @@ export default function ValueProposition() {
             Why ESP
           </p>
           <h2 className="font-display mt-2 text-3xl font-bold text-white sm:text-4xl">
-            Match with pro coaches. Pay for results. Own the drop.
+            Match with pro coaches. Pay a clear fee. Own the drop.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
             Extreme Sports Promotions connects students with professional
-            extreme-sports coaches for a fee. Whether you are chasing your first
-            wave or dialing competition runs, we pair you with verified
-            specialists who know how to progress you safely and fast.
+            extreme-sports coaches. Our limited early matching fee is £30 to find
+            and introduce you to the right coach; coach session fees are separate.
           </p>
           <ul className="mt-6 space-y-3 text-white/80">
             {[
               "Curated coaches across land, air, and water sports",
-              "Transparent fee-based matching — no endless browsing",
-              "Built for students who want real coaching, not random tips",
+              "£30 limited early matching fee — no endless browsing",
+              "Coach session fees are separate from the £30 matching fee",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <span
@@ -42,7 +41,7 @@ export default function ValueProposition() {
             href="#enquire"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-ink shadow-lg shadow-accent/30 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Enquire now
+            Find your coach — £30
           </a>
         </div>
 
@@ -53,8 +52,8 @@ export default function ValueProposition() {
               body: "We screen instructors for credentials, experience, and teaching clarity.",
             },
             {
-              title: "Fee-based matching",
-              body: "Pay for a curated intro that fits your sport, level, and goals.",
+              title: "£30 early matching fee",
+              body: "A limited early rate to find and introduce you to a coach; session fees are separate.",
             },
             {
               title: "Student-first",

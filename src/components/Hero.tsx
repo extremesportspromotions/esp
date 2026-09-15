@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 py-16 sm:px-6 sm:py-24 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl">
           <p className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
-            Coach matching for extreme sports
+            Limited early rate · £30 matching fee
           </p>
           <h1
             id="hero-heading"
@@ -21,16 +21,16 @@ export default function Hero() {
             Train with the pros who live for the edge
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
-            Extreme Sports Promotions matches students with professional
-            extreme-sports coaches for a fee—so you spend less time searching
-            and more time progressing.
+            Extreme Sports Promotions finds and introduces you to a
+            professional extreme-sports coach for a limited early matching fee of
+            £30. Coach session fees are separate.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#enquire"
               className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-ink shadow-lg shadow-accent/25 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              Enquire now
+              Find your coach — £30
             </a>
             <a
               href="#sports"
@@ -50,9 +50,9 @@ export default function Hero() {
               <dd className="font-display text-2xl font-bold text-white">15</dd>
             </div>
             <div className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-3">
-              <dt className="text-white/60">Model</dt>
+              <dt className="text-white/60">Early rate</dt>
               <dd className="text-right font-semibold text-white">
-                Fee-based matching
+                £30 matching fee
               </dd>
             </div>
             <div className="flex items-baseline justify-between gap-4">

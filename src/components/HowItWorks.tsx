@@ -11,8 +11,8 @@ const steps = [
   },
   {
     step: "03",
-    title: "Book & pay the fee",
-    body: "Confirm the intro, cover the matching fee, and lock in your first session plan.",
+    title: "Book & pay the £30 matching fee",
+    body: "At this limited early rate, pay £30 for the coach introduction; coach session fees are separate.",
   },
   {
     step: "04",
