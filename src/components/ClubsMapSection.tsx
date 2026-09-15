@@ -1,0 +1,170 @@
+"use client";
+
+import dynamic from "next/dynamic";
+import { useMemo, useState } from "react";
+import { clubs, clubCountsBySport, type Club } from "@/data/clubs";
+import { sports } from "@/data/sports";
+
+const ClubsMapInner = dynamic(() => import("./ClubsMapInner"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full min-h-[420px] items-center justify-center rounded-xl border border-white/10 bg-surface text-sm text-white/60">
+      Loading map…
+    </div>
+  ),
+});
+
+const ALL = "all";
+
+export default function ClubsMapSection() {
+  const [sportFilter, setSportFilter] = useState<string>(ALL);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const counts = useMemo(() => clubCountsBySport(), []);
+
+  const filtered: Club[] = useMemo(() => {
+    if (sportFilter === ALL) return clubs;
+    return clubs.filter((c) => c.sportId === sportFilter);
+  }, [sportFilter]);
+
+  const listClubs = useMemo(() => {
+    return [...filtered].sort((a, b) => a.name.localeCompare(b.name)).slice(0, 80);
+  }, [filtered]);
+
+  const sportLabel = (id: string) =>
+    sports.find((s) => s.id === id)?.name ?? id;
+
+  return (
+    <section id="find-a-club" className="relative bg-surface">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mb-8 max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
+            UK club finder
+          </p>
+          <h2 className="font-display mt-2 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+            Find a club
+          </h2>
+          <p className="mt-3 text-base leading-relaxed text-white/70 sm:text-lg">
+            Explore {clubs.length.toLocaleString()} extreme-sports clubs, centres,
+            and schools across the United Kingdom. Filter by sport to focus the
+            map, then open a pin for location and website links where available.
+          </p>
+        </div>
+
+        <div className="mb-5 flex flex-wrap gap-2" role="tablist" aria-label="Filter clubs by sport">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={sportFilter === ALL}
+            onClick={() => {
+              setSportFilter(ALL);
+              setSelectedId(null);
+            }}
+            className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+              sportFilter === ALL
+                ? "bg-accent text-ink"
+                : "bg-white/10 text-white/80 hover:bg-white/15"
+            }`}
+          >
+            All ({clubs.length})
+          </button>
+          {sports.map((s) => {
+            const n = counts[s.id] ?? 0;
+            return (
+              <button
+                key={s.id}
+                type="button"
+                role="tab"
+                aria-selected={sportFilter === s.id}
+                onClick={() => {
+                  setSportFilter(s.id);
+                  setSelectedId(null);
+                }}
+                className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+                  sportFilter === s.id
+                    ? "bg-accent text-ink"
+                    : n === 0
+                      ? "bg-white/5 text-white/35"
+                      : "bg-white/10 text-white/80 hover:bg-white/15"
+                }`}
+              >
+                {s.name}
+                <span className="ml-1.5 opacity-70">{n}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {sportFilter === "base-jumping" && (counts["base-jumping"] ?? 0) === 0 ? (
+          <p className="mb-4 rounded-lg border border-white/10 bg-ink/60 px-4 py-3 text-sm text-white/70">
+            BASE jumping has almost no publicly listed affiliated clubs in the UK
+            (activity is typically informal and site-restricted). We do not invent
+            entries — check British Skydiving drop zones for related canopy skills.
+          </p>
+        ) : null}
+
+        <div className="grid gap-5 lg:grid-cols-[1fr_320px]">
+          <div className="h-[52vh] min-h-[420px] overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30 lg:h-[640px]">
+            <ClubsMapInner clubs={filtered} />
+          </div>
+
+          <div className="flex max-h-[52vh] flex-col rounded-2xl border border-white/10 bg-ink/50 lg:max-h-[640px]">
+            <div className="border-b border-white/10 px-4 py-3">
+              <p className="text-sm font-semibold text-white">
+                {sportFilter === ALL ? "All sports" : sportLabel(sportFilter)}
+              </p>
+              <p className="text-xs text-white/50">
+                Showing {Math.min(listClubs.length, filtered.length)} of{" "}
+                {filtered.length} locations
+                {filtered.length > listClubs.length ? " (list capped)" : ""}
+              </p>
+            </div>
+            <ul className="flex-1 space-y-1 overflow-y-auto p-2" role="list">
+              {listClubs.length === 0 ? (
+                <li className="px-3 py-6 text-center text-sm text-white/50">
+                  No clubs listed for this sport yet.
+                </li>
+              ) : (
+                listClubs.map((c) => (
+                  <li key={c.id}>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedId(c.id)}
+                      className={`w-full rounded-lg px-3 py-2.5 text-left transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+                        selectedId === c.id ? "bg-white/10" : ""
+                      }`}
+                    >
+                      <p className="text-sm font-medium text-white">{c.name}</p>
+                      <p className="text-xs text-accent/90">{sportLabel(c.sportId)}</p>
+                      <p className="text-xs text-white/55">
+                        {c.town}
+                        {c.region ? ` · ${c.region}` : ""}
+                      </p>
+                      {c.url ? (
+                        <a
+                          href={c.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="mt-1 inline-block text-xs text-white/80 underline hover:text-accent"
+                        >
+                          Visit website
+                        </a>
+                      ) : null}
+                    </button>
+                  </li>
+                ))
+              )}
+            </ul>
+          </div>
+        </div>
+
+        <p className="mt-4 text-xs leading-relaxed text-white/40">
+          Club locations are compiled from OpenStreetMap (Overpass), BHPA club
+          listings, British Skydiving drop-zone directories, public wake-park
+          guides, and other publicly listed centres. Coordinates are approximate.
+          Always confirm details with the club before travelling.
+        </p>
+      </div>
+    </section>
+  );
+}
