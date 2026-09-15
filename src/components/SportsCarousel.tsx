@@ -62,23 +62,23 @@ export default function SportsCarousel() {
       aria-label="Extreme sports"
       className="relative overflow-hidden bg-ink"
     >
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
-        <div className="mb-6 flex flex-col gap-2 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
+      <div className="mx-auto max-w-7xl px-3 py-12 sm:px-6 sm:py-16 lg:px-8 lg:max-w-[90rem]">
+        <div className="mb-7 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">
               Featured sports
             </p>
-            <h2 className="font-display mt-1 text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="font-display mt-1 text-3xl font-bold text-white sm:text-5xl">
               Find your next adrenaline hit
             </h2>
           </div>
-          <p className="text-sm text-white/60" aria-live="polite">
+          <p className="text-sm text-white/60 sm:text-base" aria-live="polite">
             {index + 1} / {sports.length}
           </p>
         </div>
 
         <div
-          className="relative touch-pan-y select-none overflow-hidden rounded-2xl border border-white/10 bg-surface shadow-2xl shadow-black/40"
+          className="relative touch-pan-y select-none overflow-hidden rounded-2xl border border-white/10 bg-surface shadow-2xl shadow-black/40 sm:rounded-3xl"
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={endDrag}
@@ -88,7 +88,7 @@ export default function SportsCarousel() {
           aria-label={`${sport.name}: ${sport.description}`}
         >
           <div
-            className="relative aspect-[16/10] w-full sm:aspect-[21/9]"
+            className="relative aspect-[4/3] min-h-[52vh] w-full sm:aspect-[16/9] sm:min-h-[60vh] lg:min-h-[68vh]"
             style={{
               transform: `translateX(${dragOffset * 0.35}px)`,
               transition: isDragging ? "none" : "transform 280ms ease-out",
@@ -99,16 +99,16 @@ export default function SportsCarousel() {
               alt={sport.alt}
               fill
               priority
-              sizes="(max-width: 768px) 100vw, 1152px"
+              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1440px"
               className="object-cover"
               draggable={false}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
-              <h3 className="font-display text-2xl font-bold text-white sm:text-4xl">
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/45 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12">
+              <h3 className="font-display text-3xl font-bold text-white sm:text-5xl lg:text-6xl">
                 {sport.name}
               </h3>
-              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/85 sm:text-base">
+              <p className="mt-3 max-w-3xl text-base leading-relaxed text-white/90 sm:mt-4 sm:text-lg lg:text-xl">
                 {sport.description}
               </p>
             </div>
@@ -118,9 +118,9 @@ export default function SportsCarousel() {
             type="button"
             onClick={prev}
             aria-label="Previous sport"
-            className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur transition hover:bg-accent hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:left-4"
+            className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur transition hover:bg-accent hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:left-5 sm:h-14 sm:w-14"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path
                 d="M15 18l-6-6 6-6"
                 stroke="currentColor"
@@ -134,9 +134,9 @@ export default function SportsCarousel() {
             type="button"
             onClick={next}
             aria-label="Next sport"
-            className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur transition hover:bg-accent hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:right-4"
+            className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur transition hover:bg-accent hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:right-5 sm:h-14 sm:w-14"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path
                 d="M9 18l6-6-6-6"
                 stroke="currentColor"
@@ -149,7 +149,7 @@ export default function SportsCarousel() {
         </div>
 
         <div
-          className="mt-5 flex flex-wrap justify-center gap-2"
+          className="mt-6 flex flex-wrap justify-center gap-2.5"
           role="tablist"
           aria-label="Choose a sport"
         >
@@ -163,7 +163,7 @@ export default function SportsCarousel() {
               onClick={() => goTo(i)}
               className={`h-2.5 rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                 i === index
-                  ? "w-8 bg-accent"
+                  ? "w-9 bg-accent"
                   : "w-2.5 bg-white/30 hover:bg-white/55"
               }`}
             />
