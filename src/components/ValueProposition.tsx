@@ -5,7 +5,7 @@ export default function ValueProposition() {
       className="relative overflow-hidden bg-gradient-to-b from-ink via-surface to-ink"
     >
       <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
-      <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-flame/25 blur-3xl" />
+      <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-navy/40 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-center">
         <div>
@@ -28,7 +28,7 @@ export default function ValueProposition() {
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <span
-                  className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-ink"
+                  className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-white"
                   aria-hidden
                 >
                   ✓
@@ -39,7 +39,7 @@ export default function ValueProposition() {
           </ul>
           <a
             href="#enquire"
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-ink shadow-lg shadow-accent/30 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Find your coach — £30
           </a>

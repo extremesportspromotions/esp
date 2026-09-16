@@ -80,7 +80,7 @@ const chipBase =
   "rounded-full border px-4 py-2.5 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 const chipIdle = "border-white/20 bg-white/5 text-white hover:border-accent/60 hover:text-accent";
-const chipActive = "border-accent bg-accent text-ink shadow-md shadow-accent/20";
+const chipActive = "border-accent bg-accent text-white shadow-md shadow-accent/20";
 
 function isStepValid(step: number, values: QuizState): boolean {
   switch (step) {
@@ -558,7 +558,7 @@ export default function ContactForm() {
                       type="button"
                       onClick={goNext}
                       disabled={!canContinue}
-                      className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-ink transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-accent"
+                      className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-accent"
                     >
                       Continue
                     </button>
@@ -566,7 +566,7 @@ export default function ContactForm() {
                     <button
                       type="submit"
                       disabled={!canContinue}
-                      className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-ink transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-accent"
+                      className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-accent"
                     >
                       Submit — £30 matching fee
                     </button>

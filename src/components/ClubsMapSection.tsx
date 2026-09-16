@@ -61,7 +61,7 @@ export default function ClubsMapSection() {
             }}
             className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
               sportFilter === ALL
-                ? "bg-accent text-ink"
+                ? "bg-accent text-white"
                 : "bg-white/10 text-white/80 hover:bg-white/15"
             }`}
           >
@@ -81,7 +81,7 @@ export default function ClubsMapSection() {
                 }}
                 className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                   sportFilter === s.id
-                    ? "bg-accent text-ink"
+                    ? "bg-accent text-white"
                     : n === 0
                       ? "bg-white/5 text-white/35"
                       : "bg-white/10 text-white/80 hover:bg-white/15"

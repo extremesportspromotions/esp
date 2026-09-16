@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07090f;
+  /* Subtle British palette: near-black navy, white, restrained red */
+  --background: #070b14;
   --foreground: #f5f7fb;
-  --ink: #07090f;
-  --surface: #121826;
-  --accent: #ffd60a;
-  --flame: #ff4500;
+  --ink: #070b14;
+  --surface: #121a2b;
+  --accent: #c8102e;
+  --flame: #e24a3b;
+  --navy: #1a3a6b;
 }
 
 @theme inline {
@@ -16,6 +18,7 @@
   --color-surface: var(--surface);
   --color-accent: var(--accent);
   --color-flame: var(--flame);
+  --color-navy: var(--navy);
   --font-sans: var(--font-geist-sans);
   --font-display: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -38,7 +41,7 @@ body {
 
 ::selection {
   background: color-mix(in srgb, var(--accent) 70%, transparent);
-  color: var(--ink);
+  color: #ffffff;
 }
 
 /* Leaflet map inside dark UI */

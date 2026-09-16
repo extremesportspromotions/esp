@@ -62,7 +62,7 @@ export default function ClubsMapInner({ clubs }: { clubs: Club[] }) {
       maxBoundsViscosity={0.8}
       scrollWheelZoom
       className="h-full w-full rounded-xl"
-      style={{ background: "#0b1220" }}
+      style={{ background: "#070b14" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
