@@ -13,8 +13,8 @@ export default function Home() {
       <div id="top" />
       <TopBar />
       <main className="flex-1">
-        <Hero />
         <SportsCarousel />
+        <Hero />
         <ClubsMapSection />
         <ValueProposition />
         <HowItWorks />
