@@ -25,15 +25,9 @@ export default function TopBar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <a
-          href="#top"
-          className="font-display shrink-0 text-sm font-extrabold tracking-[0.12em] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-base"
-        >
-          EXTREME SPORTS PROMOTIONS
-        </a>
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-1 md:flex lg:gap-2"
+          className="flex flex-wrap items-center gap-1 lg:gap-2"
         >
           {pageLinks.map(({ label, href }) => (
             <a
@@ -45,7 +39,7 @@ export default function TopBar() {
             </a>
           ))}
         </nav>
-        <nav aria-label="Social media" className="flex items-center gap-1 sm:gap-2">
+        <nav aria-label="Social media" className="flex shrink-0 items-center gap-1 sm:gap-2">
           {socials.map(({ name, href, Icon }) => (
             <a
               key={name}

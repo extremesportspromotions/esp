@@ -1,4 +1,5 @@
 import TopBar from "@/components/TopBar";
+import BrandTitle from "@/components/BrandTitle";
 import Hero from "@/components/Hero";
 import SportsCarousel from "@/components/SportsCarousel";
 import ClubsMapSection from "@/components/ClubsMapSection";
@@ -10,9 +11,9 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <div id="top" />
       <TopBar />
       <main className="flex-1">
+        <BrandTitle />
         <SportsCarousel />
         <Hero />
         <ClubsMapSection />

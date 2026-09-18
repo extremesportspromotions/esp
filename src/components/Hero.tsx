@@ -1,7 +1,6 @@
 export default function Hero() {
   return (
     <section
-      id="top"
       className="relative overflow-hidden bg-ink"
       aria-labelledby="hero-heading"
     >
@@ -14,12 +13,12 @@ export default function Hero() {
           <p className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
             Limited early rate · £30 matching fee
           </p>
-          <h1
+          <h2
             id="hero-heading"
-            className="font-display mt-5 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="font-display mt-5 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl"
           >
             Train with the pros who live for the edge
-          </h1>
+          </h2>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
             Extreme Sports Promotions finds and introduces you to a
             professional extreme-sports coach for a limited early matching fee of
