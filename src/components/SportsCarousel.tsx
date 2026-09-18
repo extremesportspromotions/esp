@@ -101,6 +101,7 @@ export default function SportsCarousel() {
               priority
               sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1440px"
               className="object-cover"
+              style={{ objectPosition: sport.imagePosition ?? "50% 50%" }}
               draggable={false}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/45 to-transparent" />

@@ -4,6 +4,8 @@ export type Sport = {
   description: string;
   image: string;
   alt: string;
+  /** CSS object-position to keep the action centred in the carousel crop */
+  imagePosition?: string;
 };
 
 export const sports: Sport[] = [
@@ -93,9 +95,9 @@ export const sports: Sport[] = [
     name: "Skateboarding",
     description:
       "Learn street and park fundamentals—or refine technical lines—with coaches who speak skate fluently.",
-    image:
-      "https://images.unsplash.com/photo-1499083773823-5000fa2b23e4?auto=format&fit=crop&w=2000&q=80",
-    alt: "Skateboarder grabbing the board mid-air above a skatepark bowl",
+    image: "/sports/skateboarding.jpg",
+    alt: "Skateboarder mid-air grab at a skatepark against a sunset sky",
+    imagePosition: "50% 32%",
   },
   {
     id: "surfing",
@@ -104,24 +106,25 @@ export const sports: Sport[] = [
       "Read waves, improve paddle fitness, and refine your pop-up with coastal coaches matched to your level.",
     image: "/sports/surfing.jpg",
     alt: "Surfer launching an aerial off a wave in golden-hour spray",
+    imagePosition: "50% 36%",
   },
   {
     id: "base-jumping",
     name: "BASE Jumping",
     description:
       "Progress carefully with experienced BASE mentors covering gear, exit technique, and site-specific risk.",
-    image:
-      "https://images.unsplash.com/photo-1510280781386-572b2438f88b?auto=format&fit=crop&w=2000&q=80",
-    alt: "BASE jumper leaping from a cliff silhouette above a mountain valley at sunset",
+    image: "/sports/base-jumping.jpg",
+    alt: "Two BASE jumpers falling from a cliff above a deep fjord",
+    imagePosition: "62% 36%",
   },
   {
     id: "snowboarding",
     name: "Snowboarding",
     description:
       "Carve groomers or drop into the backcountry with instructors who coach edge control and terrain park flow.",
-    image:
-      "https://images.unsplash.com/photo-1739741432363-8f5fa6ef4e7d?auto=format&fit=crop&w=2000&q=80",
-    alt: "Snowboarder grabbing the board mid-jump above snowy mountain peaks",
+    image: "/sports/snowboarding.jpg",
+    alt: "Snowboarder in black kit carving hard with powder spray",
+    imagePosition: "48% 55%",
   },
   {
     id: "kayaking",
@@ -129,7 +132,8 @@ export const sports: Sport[] = [
     description:
       "From flatwater fundamentals to whitewater lines, paddle with coaches who prioritize stroke and safety.",
     image: "/sports/kayaking.jpg",
-    alt: "Whitewater kayaker paddling hard through churning rapids in a green kayak",
+    alt: "POV of orange kayaks paddling a tree-lined waterway",
+    imagePosition: "50% 42%",
   },
   {
     id: "hang-gliding",
@@ -137,6 +141,7 @@ export const sports: Sport[] = [
     description:
       "Feel the ridge lift with hang-gliding instructors who walk you from ground handling to soaring flights.",
     image: "/sports/hang-gliding.jpg",
-    alt: "Hang glider with a white and neon green triangular wing banking against a blue sky",
+    alt: "Hang glider with a white wing and orange-red leading edge against a clear blue sky",
+    imagePosition: "50% 45%",
   },
 ];
