@@ -1,2 +1,0 @@
-Drop a real logo here as /public/logo.svg, then set showLogo = true in
-src/components/BrandTitle.tsx and src/components/TopBar.tsx.

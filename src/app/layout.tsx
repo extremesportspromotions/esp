@@ -16,11 +16,16 @@ export const metadata: Metadata = {
   title: "Extreme Sports Promotions | Match with Pro Coaches",
   description:
     "ESP connects students with professional extreme-sports coaches for a fee. Mountaineering, scuba, skydiving, surfing, and more.",
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png" }],
+  },
   openGraph: {
     title: "Extreme Sports Promotions",
     description:
       "Match with professional extreme-sports coaches. Fee-based coach matching for students and athletes.",
     type: "website",
+    images: [{ url: "/logo.png", alt: "Extreme Sports Promotions" }],
   },
 };
 

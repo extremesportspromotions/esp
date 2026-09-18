@@ -1,10 +1,8 @@
 /**
- * Wordmark / brand title.
- * Optional logo: drop a file at /public/logo.svg and set showLogo = true below
- * (or leave the conditional — if the file is missing, Next/img will 404, so keep
- * showLogo false until the asset exists).
+ * Brand header with approved Option A emblem (bigger EXTREME SPORTS PROMOTIONS wordmark).
+ * Assets: /public/logo.png (full), /public/icon.png (profile crop / favicon).
  */
-const showLogo = false; // set true when /public/logo.svg is added
+const showLogo = true;
 
 export default function BrandTitle() {
   return (
@@ -18,23 +16,28 @@ export default function BrandTitle() {
         aria-hidden
       />
       <div className="relative mx-auto max-w-7xl px-4 py-10 text-center sm:px-6 sm:py-14 lg:py-16">
-        {/* Logo slot — add public/logo.svg then flip showLogo */}
         {showLogo ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src="/logo.svg"
-            alt="Extreme Sports Promotions"
-            className="mx-auto mb-4 h-12 w-auto sm:h-14"
-          />
-        ) : null}
-        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent sm:text-sm">
-          United Kingdom
-        </p>
-        <h1 className="font-display mt-3 text-4xl font-black uppercase leading-[0.95] tracking-[0.06em] text-white sm:text-6xl md:text-7xl lg:text-8xl">
-          Extreme
-          <span className="block text-accent">Sports</span>
-          Promotions
-        </h1>
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Extreme Sports Promotions"
+              className="mx-auto mb-6 h-24 w-auto max-w-[min(100%,36rem)] sm:h-28 lg:h-32"
+            />
+            <h1 className="sr-only">Extreme Sports Promotions</h1>
+          </>
+        ) : (
+          <>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent sm:text-sm">
+              United Kingdom
+            </p>
+            <h1 className="font-display mt-3 text-4xl font-black uppercase leading-[0.95] tracking-[0.06em] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+              Extreme
+              <span className="block text-accent">Sports</span>
+              Promotions
+            </h1>
+          </>
+        )}
         <p className="mx-auto mt-5 max-w-xl text-base text-white/70 sm:text-lg">
           Pick a sport → enquire → get matched with a coach for{" "}
           <span className="font-semibold text-accent">£30</span>.

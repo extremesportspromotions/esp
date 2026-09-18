@@ -34,10 +34,10 @@ const pageLinks = [
 ] as const;
 
 /**
- * Optional logo: drop /public/logo.svg and set showLogo = true.
+ * Optional logo: use /public/logo.png and set showLogo = true.
  * Wordmark text remains as fallback.
  */
-const showLogo = false;
+const showLogo = true;
 
 export default function TopBar() {
   return (
@@ -51,7 +51,7 @@ export default function TopBar() {
           >
             {showLogo ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src="/logo.svg" alt="" className="h-8 w-auto" />
+              <img src="/logo.png" alt="Extreme Sports Promotions" className="h-9 w-auto sm:h-10" />
             ) : (
               <span className="hidden font-display text-sm font-bold uppercase tracking-wide text-white sm:inline">
                 ESP
