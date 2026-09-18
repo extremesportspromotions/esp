@@ -219,10 +219,10 @@ export default function ContactForm() {
           <p className="mt-4 text-sm text-white/50">
             Prefer email?{" "}
             <a
-              href="mailto:hello@extremesportspromotions.com?subject=ESP%20Enquiry"
+              href="mailto:extremesportspromotionsuk@gmail.com?subject=ESP%20Enquiry"
               className="text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              hello@extremesportspromotions.com
+              extremesportspromotionsuk@gmail.com
             </a>
           </p>
         </div>
