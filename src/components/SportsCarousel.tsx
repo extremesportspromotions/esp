@@ -100,16 +100,20 @@ export default function SportsCarousel() {
               fill
               priority
               sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1440px"
-              className="object-cover"
+              className="object-cover brightness-[1.06] contrast-[1.04] saturate-[1.05]"
               style={{ objectPosition: sport.imagePosition ?? "50% 50%" }}
               draggable={false}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/45 to-transparent" />
+            {/* Light bottom scrim only — keep photo tone close to the original */}
+            <div
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-black/55 via-black/20 to-transparent"
+              aria-hidden
+            />
             <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12">
-              <h3 className="font-display text-3xl font-bold text-white sm:text-5xl lg:text-6xl">
+              <h3 className="font-display text-3xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)] sm:text-5xl lg:text-6xl">
                 {sport.name}
               </h3>
-              <p className="mt-3 max-w-3xl text-base leading-relaxed text-white/90 sm:mt-4 sm:text-lg lg:text-xl">
+              <p className="mt-3 max-w-3xl text-base leading-relaxed text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)] sm:mt-4 sm:text-lg lg:text-xl">
                 {sport.description}
               </p>
             </div>
