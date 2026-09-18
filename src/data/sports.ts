@@ -14,27 +14,27 @@ export const sports: Sport[] = [
     name: "Mountaineering",
     description:
       "Scale iconic peaks with certified alpine guides who teach rope work, route finding, and high-altitude safety.",
-    image:
-      "https://images.unsplash.com/photo-1484264883846-eb04404af310?auto=format&fit=crop&w=2000&q=80",
-    alt: "Mountaineers hiking a steep rocky alpine ridge with expedition packs",
+    image: "/sports/mountaineering.jpg",
+    alt: "Hiker on a mountain ridge looking out over a cloud inversion",
+    imagePosition: "62% 58%",
   },
   {
     id: "scuba-diving",
     name: "Scuba Diving",
     description:
       "Explore reefs and wrecks alongside PADI/SSI pros who refine buoyancy, navigation, and underwater confidence.",
-    image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=2000&q=80",
-    alt: "Scuba diver swimming beside a coral reef teeming with yellow fish",
+    image: "/sports/scuba-diving.jpg",
+    alt: "Scuba diver observing an anemone with clownfish on a coral reef",
+    imagePosition: "42% 48%",
   },
   {
     id: "paragliding",
     name: "Paragliding",
     description:
       "Launch into thermal soaring with instructors who coach launches, turns, and landing technique from day one.",
-    image:
-      "https://images.unsplash.com/photo-1769963608832-cc25836772e1?auto=format&fit=crop&w=2000&q=80",
-    alt: "Paraglider with a yellow and blue wing soaring over forested mountains",
+    image: "/sports/paragliding.jpg",
+    alt: "Paraglider with a white, cyan and yellow wing over a mountain valley",
+    imagePosition: "50% 36%",
   },
   {
     id: "mountain-biking",
