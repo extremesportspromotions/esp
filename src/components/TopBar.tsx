@@ -1,17 +1,14 @@
-import {
-  FacebookIcon,
-  InstagramIcon,
-  TikTokIcon,
-  XIcon,
-  YouTubeIcon,
-} from "./SocialIcons";
+import { FacebookIcon } from "./SocialIcons";
+// When Matthew sends real links, add X / Instagram / TikTok / YouTube back
+// from SocialIcons and append to socials below. Do not invent handles.
 
 const socials = [
-  { name: "X", href: "https://x.com/", Icon: XIcon },
-  { name: "Facebook", href: "https://facebook.com/", Icon: FacebookIcon },
-  { name: "Instagram", href: "https://instagram.com/", Icon: InstagramIcon },
-  { name: "TikTok", href: "https://tiktok.com/", Icon: TikTokIcon },
-  { name: "YouTube", href: "https://youtube.com/", Icon: YouTubeIcon },
+  {
+    name: "Facebook",
+    // Resolved from share link https://www.facebook.com/share/1HNKKCfu5x/
+    href: "https://www.facebook.com/people/Extreme-Sports-Promotions/61594253231487/",
+    Icon: FacebookIcon,
+  },
 ] as const;
 
 const pageLinks = [
