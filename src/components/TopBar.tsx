@@ -1,8 +1,13 @@
-import { FacebookIcon, TikTokIcon, YouTubeIcon } from "./SocialIcons";
-// When Matthew sends real links, add X / Instagram back
-// from SocialIcons and append to socials below. Do not invent handles.
+import { FacebookIcon, TikTokIcon, XIcon, YouTubeIcon } from "./SocialIcons";
+// When Matthew sends a real Instagram link, add it from SocialIcons.
+// Do not invent handles.
 
 const socials = [
+  {
+    name: "X",
+    href: "https://x.com/ExtremeSpowke",
+    Icon: XIcon,
+  },
   {
     name: "Facebook",
     // Resolved from share link https://www.facebook.com/share/1HNKKCfu5x/
