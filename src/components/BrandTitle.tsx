@@ -15,14 +15,14 @@ export default function BrandTitle() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,16,46,0.18),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(26,58,107,0.35),_transparent_50%)]"
         aria-hidden
       />
-      <div className="relative mx-auto max-w-7xl px-4 py-10 text-center sm:px-6 sm:py-14 lg:py-16">
+      <div className="relative mx-auto max-w-[90rem] px-3 py-8 text-center sm:px-4 sm:py-12 lg:px-6 lg:py-14">
         {showLogo ? (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.png"
               alt="Extreme Sports Promotions"
-              className="mx-auto mb-6 h-24 w-auto max-w-[min(100%,36rem)] sm:h-28 lg:h-32"
+              className="mx-auto mb-6 block h-auto w-full max-w-none object-contain"
             />
             <h1 className="sr-only">Extreme Sports Promotions</h1>
           </>
