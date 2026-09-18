@@ -1,5 +1,5 @@
-import { FacebookIcon, TikTokIcon } from "./SocialIcons";
-// When Matthew sends real links, add X / Instagram / YouTube back
+import { FacebookIcon, TikTokIcon, YouTubeIcon } from "./SocialIcons";
+// When Matthew sends real links, add X / Instagram back
 // from SocialIcons and append to socials below. Do not invent handles.
 
 const socials = [
@@ -13,6 +13,11 @@ const socials = [
     name: "TikTok",
     href: "https://www.tiktok.com/@esp8852",
     Icon: TikTokIcon,
+  },
+  {
+    name: "YouTube",
+    href: "https://youtube.com/@extremesportspromotions",
+    Icon: YouTubeIcon,
   },
 ] as const;
 
