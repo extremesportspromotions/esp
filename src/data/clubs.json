@@ -1,23 +1,5 @@
 [
   {
-    "id": "skydiving-131-independent-parachute-squadron-cromwell-weir-tragedy-mem-63006995",
-    "name": "131 Independent Parachute Squadron - Cromwell Weir Tragedy Memorial",
-    "sportId": "skydiving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 56.01615,
-    "lng": -3.71888
-  },
-  {
-    "id": "skydiving-1st-polish-parachute-brigade-memorial-34272225",
-    "name": "1st Polish Parachute Brigade Memorial",
-    "sportId": "skydiving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 56.18918,
-    "lng": -2.83383
-  },
-  {
     "id": "mountaineering-270-climbing-35024498",
     "name": "270 Climbing",
     "sportId": "mountaineering",
@@ -35,24 +17,6 @@
     "region": "England",
     "lat": 50.8198,
     "lng": -1.088
-  },
-  {
-    "id": "skydiving-507th-parachute-regiment-84068959",
-    "name": "507th Parachute Regiment",
-    "sportId": "skydiving",
-    "town": "UK",
-    "region": "England",
-    "lat": 52.90756,
-    "lng": -1.08694
-  },
-  {
-    "id": "skydiving-508th-parachute-infantry-regiment-roll-of-honour-1944-1945-86400323",
-    "name": "508th Parachute Infantry Regiment Roll of Honour 1944-1945",
-    "sportId": "skydiving",
-    "town": "UK",
-    "region": "England",
-    "lat": 52.94869,
-    "lng": -1.21178
   },
   {
     "id": "motocross-a-ten-mx-55626173",
@@ -73,15 +37,6 @@
     "lng": -0.07941
   },
   {
-    "id": "skydiving-a2-parachutisme-sarl-59109931",
-    "name": "A2 Parachutisme SARL",
-    "sportId": "skydiving",
-    "town": "UK",
-    "region": "England",
-    "lat": 49.64578,
-    "lng": -1.47567
-  },
-  {
     "id": "skateboarding-abbey-skatepark-55386124",
     "name": "Abbey Skatepark",
     "sportId": "skateboarding",
@@ -98,16 +53,6 @@
     "region": "England",
     "lat": 51.70444,
     "lng": -0.42195
-  },
-  {
-    "id": "skydiving-abeille-parachutisme-34994163",
-    "name": "Abeille Parachutisme",
-    "sportId": "skydiving",
-    "town": "UK",
-    "region": "England",
-    "lat": 49.53263,
-    "lng": 0.09541,
-    "url": "https://www.abeilleparachutisme.fr/"
   },
   {
     "id": "hang-gliding-aberdeen-hg-pg-club-85368732",
@@ -192,16 +137,6 @@
     "region": "England",
     "lat": 52.39231,
     "lng": -1.46906
-  },
-  {
-    "id": "scuba-diving-alaunia-wreck-17738079",
-    "name": "Alaunia (Wreck)",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.68417,
-    "lng": -0.45472,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1783"
   },
   {
     "id": "skateboarding-albany-park-skatepark-97947983",
@@ -362,16 +297,6 @@
     "region": "England",
     "lat": 51.84602,
     "lng": -1.1252
-  },
-  {
-    "id": "scuba-diving-arno-2172865",
-    "name": "Arno",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.7,
-    "lng": -0.75,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1732"
   },
   {
     "id": "motocross-ashdown-motocross-track-2440679",
@@ -948,15 +873,6 @@
     "lng": -1.9371
   },
   {
-    "id": "scuba-diving-black-head-reef-77120105",
-    "name": "Black Head Reef",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.47051,
-    "lng": -3.49156
-  },
-  {
     "id": "skydiving-black-knights-parachute-club-93352289",
     "name": "Black Knights Parachute Club",
     "sportId": "skydiving",
@@ -1019,15 +935,6 @@
     "region": "England",
     "lat": 52.457,
     "lng": 1.563
-  },
-  {
-    "id": "scuba-diving-bleamoor-85318353",
-    "name": "Bleamoor",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.36662,
-    "lng": -3.41668
   },
   {
     "id": "skateboarding-bloblands-skatepark-6793571",
@@ -1130,15 +1037,6 @@
     "region": "England",
     "lat": 53.57586,
     "lng": -2.42999
-  },
-  {
-    "id": "scuba-diving-boma-78591864",
-    "name": "Boma",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.53329,
-    "lng": -3.23332
   },
   {
     "id": "mountaineering-boomerang-boulder-40144949",
@@ -1466,16 +1364,6 @@
     "lng": 1.01373
   },
   {
-    "id": "scuba-diving-britsum-42022992",
-    "name": "Britsum",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.67278,
-    "lng": -0.79417,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1761"
-  },
-  {
     "id": "skateboarding-brixham-skate-park-74431738",
     "name": "Brixham Skate Park",
     "sportId": "skateboarding",
@@ -1483,16 +1371,6 @@
     "region": "England",
     "lat": 50.3888,
     "lng": -3.52859
-  },
-  {
-    "id": "scuba-diving-broderick-62719109",
-    "name": "Broderick",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.77111,
-    "lng": -0.62972,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1785"
   },
   {
     "id": "snowboarding-bromley-ski-snowboard-centre-closed-64850344",
@@ -1585,15 +1463,6 @@
     "region": "Wales",
     "lat": 53.17192,
     "lng": -3.08167
-  },
-  {
-    "id": "scuba-diving-buesten-85777463",
-    "name": "Buesten",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.34994,
-    "lng": -3.40004
   },
   {
     "id": "mountaineering-bulging-wall-4644233",
@@ -1832,16 +1701,6 @@
     "url": "https://londonclimbingcentres.co.uk/centre/canarywall/"
   },
   {
-    "id": "scuba-diving-candia-76886177",
-    "name": "Candia",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.57167,
-    "lng": -0.51139,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1769"
-  },
-  {
     "id": "skateboarding-cann-hall-park-skatepark-99175139",
     "name": "Cann Hall Park Skatepark",
     "sportId": "skateboarding",
@@ -1988,25 +1847,6 @@
     "lng": -1.78817
   },
   {
-    "id": "scuba-diving-caulonia-23831426",
-    "name": "Caulonia",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.92083,
-    "lng": 0.83722,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1784"
-  },
-  {
-    "id": "mountaineering-cemetery-park-boulder-96086084",
-    "name": "Cemetery Park Boulder",
-    "sportId": "mountaineering",
-    "town": "UK",
-    "region": "England",
-    "lat": 53.37011,
-    "lng": -1.48404
-  },
-  {
     "id": "skateboarding-centenary-park-skate-park-98301815",
     "name": "Centenary Park Skate Park",
     "sportId": "skateboarding",
@@ -2060,15 +1900,6 @@
     "region": "England",
     "lat": 51.48125,
     "lng": 0.04116
-  },
-  {
-    "id": "scuba-diving-chateau-yquem-89425810",
-    "name": "Chateau Yquem",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.48327,
-    "lng": -2.98336
   },
   {
     "id": "skateboarding-cheddar-reservoir-bmx-skate-park-58704543",
@@ -2182,7 +2013,7 @@
   },
   {
     "id": "motocross-circuit-de-motocross-de-saint-vale-ry-en-caux-14163697",
-    "name": "Circuit de Motocross de Saint-Valéry-en-Caux",
+    "name": "Circuit de Motocross de Saint-Val\u00e9ry-en-Caux",
     "sportId": "motocross",
     "town": "UK",
     "region": "England",
@@ -2217,46 +2048,6 @@
     "lat": 51.53719,
     "lng": -0.00394,
     "url": "https://www.citybouldering.co.uk/locations/stratford"
-  },
-  {
-    "id": "scuba-diving-city-of-brisbane-5455363",
-    "name": "City of Brisbane",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.7425,
-    "lng": -0.01389,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1774"
-  },
-  {
-    "id": "scuba-diving-city-of-london-80417942",
-    "name": "City of London",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.705,
-    "lng": -0.23806,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1772"
-  },
-  {
-    "id": "scuba-diving-city-of-waterford-62777786",
-    "name": "City of Waterford",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.675,
-    "lng": -0.11056,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1776"
-  },
-  {
-    "id": "scuba-diving-clan-macmillan-53276672",
-    "name": "Clan Macmillan",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.72611,
-    "lng": -0.01194,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1775"
   },
   {
     "id": "skateboarding-clanfield-skate-park-2357876",
@@ -2545,15 +2336,6 @@
     "url": "https://www.cotentinsurfclub.com"
   },
   {
-    "id": "scuba-diving-countesse-of-erne-52124437",
-    "name": "Countesse of Erne",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.58479,
-    "lng": -2.41967
-  },
-  {
     "id": "motocross-coupar-angus-motocross-track-62403824",
     "name": "Coupar Angus Motocross Track",
     "sportId": "motocross",
@@ -2711,16 +2493,6 @@
     "lng": -0.0665
   },
   {
-    "id": "scuba-diving-cuckoo-29773002",
-    "name": "Cuckoo",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.74361,
-    "lng": -0.70667,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1765"
-  },
-  {
     "id": "motocross-culham-mx-park-88899898",
     "name": "Culham Mx Park",
     "sportId": "motocross",
@@ -2786,15 +2558,6 @@
     "lng": -3.1791
   },
   {
-    "id": "scuba-diving-d1-63113968",
-    "name": "D1",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.33278,
-    "lng": -3.49947
-  },
-  {
     "id": "skateboarding-daisy-dip-skate-hill-73027901",
     "name": "Daisy Dip Skate Hill",
     "sportId": "skateboarding",
@@ -2840,15 +2603,6 @@
     "region": "Scotland",
     "lat": 56.4341,
     "lng": -4.067
-  },
-  {
-    "id": "scuba-diving-dartmouth-mewstone-92313727",
-    "name": "Dartmouth Mewstone",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.33365,
-    "lng": -3.53392
   },
   {
     "id": "mountain-biking-davagh-forest-mtb-52347594",
@@ -3148,16 +2902,6 @@
     "lat": 51.0814,
     "lng": -1.1697,
     "url": "http://www.dfhgc.org"
-  },
-  {
-    "id": "scuba-diving-dresden-6168329",
-    "name": "Dresden",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.63167,
-    "lng": -0.72833,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1763"
   },
   {
     "id": "surfing-drift-surf-shop-5812700",
@@ -3614,15 +3358,6 @@
     "lng": 1.14295
   },
   {
-    "id": "scuba-diving-f2-12390408",
-    "name": "F2",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.84549,
-    "lng": -3.19455
-  },
-  {
     "id": "scuba-diving-fairy-cove-10289884",
     "name": "Fairy Cove",
     "sportId": "scuba-diving",
@@ -3983,16 +3718,6 @@
     "lng": -0.24245
   },
   {
-    "id": "scuba-diving-frode-95484448",
-    "name": "Frode",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.76833,
-    "lng": -0.48167,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1766"
-  },
-  {
     "id": "mountaineering-frome-boulder-rooms-80858571",
     "name": "Frome Boulder Rooms",
     "sportId": "mountaineering",
@@ -4021,15 +3746,6 @@
     "lng": -1.96967
   },
   {
-    "id": "scuba-diving-galicia-48671006",
-    "name": "Galicia",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.54997,
-    "lng": -3.43338
-  },
-  {
     "id": "mountaineering-gallery-bouldering-87122472",
     "name": "Gallery Bouldering",
     "sportId": "mountaineering",
@@ -4047,16 +3763,6 @@
     "region": "England",
     "lat": 53.35122,
     "lng": -2.8989
-  },
-  {
-    "id": "scuba-diving-gascogny-67981255",
-    "name": "Gascogny",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.6575,
-    "lng": -0.65861,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1759"
   },
   {
     "id": "skateboarding-gasworx-skatepark-66491390",
@@ -4187,15 +3893,6 @@
     "region": "England",
     "lat": 51.8642,
     "lng": -2.2382
-  },
-  {
-    "id": "scuba-diving-gobernador-28257303",
-    "name": "Gobernador",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.9232,
-    "lng": -3.31113
   },
   {
     "id": "mountaineering-golden-gecko-climbing-7697417",
@@ -4904,66 +4601,6 @@
     "lng": -1.33168
   },
   {
-    "id": "scuba-diving-hms-ariadne-wreck-41253272",
-    "name": "HMS Ariadne (Wreck)",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.71444,
-    "lng": -0.39139,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1782"
-  },
-  {
-    "id": "scuba-diving-hms-keryado-22064668",
-    "name": "HMS Keryado",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.64278,
-    "lng": -0.12861,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1779"
-  },
-  {
-    "id": "scuba-diving-hms-minion-74487573",
-    "name": "HMS Minion",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.64361,
-    "lng": -0.23139,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1773"
-  },
-  {
-    "id": "scuba-diving-hms-moldavia-17830228",
-    "name": "HMS Moldavia",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.38556,
-    "lng": -0.47861,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1770"
-  },
-  {
-    "id": "scuba-diving-hms-pine-11783828",
-    "name": "HMS Pine",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.71806,
-    "lng": -0.61944,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1768"
-  },
-  {
-    "id": "scuba-diving-hmt-ocean-sunlight-6673547",
-    "name": "HMT Ocean Sunlight",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.76917,
-    "lng": -0.06778,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1777"
-  },
-  {
     "id": "motocross-holeshot-motocross-82060562",
     "name": "Holeshot Motocross",
     "sportId": "motocross",
@@ -5101,16 +4738,6 @@
     "region": "England",
     "lat": 53.92872,
     "lng": -1.82249
-  },
-  {
-    "id": "scuba-diving-indiana-22584946",
-    "name": "Indiana",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.78417,
-    "lng": -0.37,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1771"
   },
   {
     "id": "mountaineering-ingleton-wall-26732471",
@@ -6063,7 +5690,7 @@
   },
   {
     "id": "mountain-biking-llys-y-fra-n-mountain-bike-skills-area-92424876",
-    "name": "Llys-y-frân Mountain Bike Skills Area",
+    "name": "Llys-y-fr\u00e2n Mountain Bike Skills Area",
     "sportId": "mountain-biking",
     "town": "UK",
     "region": "Wales",
@@ -6210,15 +5837,6 @@
     "region": "Scotland",
     "lat": 55.89245,
     "lng": -3.20121
-  },
-  {
-    "id": "scuba-diving-louis-sheid-30592904",
-    "name": "Louis Sheid",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.26221,
-    "lng": -3.8637
   },
   {
     "id": "skateboarding-loundsley-green-skate-park-74523793",
@@ -6568,15 +6186,6 @@
     "lng": -1.75863
   },
   {
-    "id": "scuba-diving-mew-stone-73236218",
-    "name": "Mew Stone",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.39333,
-    "lng": -3.4877
-  },
-  {
     "id": "motocross-micklefield-motocross-track-41151296",
     "name": "Micklefield Motocross Track",
     "sportId": "motocross",
@@ -6732,16 +6341,6 @@
     "region": "England",
     "lat": 51.33128,
     "lng": 1.3103
-  },
-  {
-    "id": "scuba-diving-mira-32499514",
-    "name": "Mira",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.68639,
-    "lng": -0.14,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1778"
   },
   {
     "id": "mountaineering-mitzy-wall-41838470",
@@ -6945,7 +6544,7 @@
   },
   {
     "id": "surfing-narosa-magheraroarty-surf-school-cafe-shop-72261864",
-    "name": "Narosa Magheraroarty Surf School, Café & Shop",
+    "name": "Narosa Magheraroarty Surf School, Caf\u00e9 & Shop",
     "sportId": "surfing",
     "town": "UK",
     "region": "Northern Ireland",
@@ -7054,15 +6653,6 @@
     "region": "England",
     "lat": 50.8225,
     "lng": -0.1372
-  },
-  {
-    "id": "scuba-diving-nimble-rock-51707097",
-    "name": "Nimble Rock",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.34658,
-    "lng": -3.50899
   },
   {
     "id": "skateboarding-no-comply-skate-park-89360853",
@@ -7371,16 +6961,6 @@
     "lng": -6.652
   },
   {
-    "id": "scuba-diving-oceana-wreck-3484505",
-    "name": "Oceana (Wreck)",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.70528,
-    "lng": -0.42917,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1781"
-  },
-  {
     "id": "mountaineering-odin-s-wall-50898932",
     "name": "Odin's Wall",
     "sportId": "mountaineering",
@@ -7473,15 +7053,6 @@
     "lng": -0.06317
   },
   {
-    "id": "scuba-diving-outer-mulberry-73568011",
-    "name": "Outer Mulberry",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.74519,
-    "lng": -0.70437
-  },
-  {
     "id": "mountaineering-over-hang-climbing-centre-524854",
     "name": "Over Hang Climbing Centre",
     "sportId": "mountaineering",
@@ -7554,15 +7125,6 @@
     "region": "Scotland",
     "lat": 55.05079,
     "lng": -1.44921
-  },
-  {
-    "id": "skydiving-parachute-regiment-9399368",
-    "name": "Parachute Regiment",
-    "sportId": "skydiving",
-    "town": "UK",
-    "region": "England",
-    "lat": 52.72579,
-    "lng": -1.72681
   },
   {
     "id": "mountaineering-parc-penallta-bouldering-rocks-87156992",
@@ -7732,15 +7294,6 @@
     "region": "Scotland",
     "lat": 55.17931,
     "lng": -1.58125
-  },
-  {
-    "id": "scuba-diving-peronne-95053750",
-    "name": "Peronne",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.46661,
-    "lng": -3.36663
   },
   {
     "id": "surfing-perranporth-surf-school-2459062",
@@ -9281,7 +8834,7 @@
   },
   {
     "id": "skateboarding-skatepark-planchodrome-de-cherbourg-napole-on-95569736",
-    "name": "Skatepark - Planchodrome de Cherbourg - Napoléon",
+    "name": "Skatepark - Planchodrome de Cherbourg - Napol\u00e9on",
     "sportId": "skateboarding",
     "town": "UK",
     "region": "England",
@@ -9290,7 +8843,7 @@
   },
   {
     "id": "skateboarding-skatepark-planchodrome-de-cherbourg-e-le-is-20022485",
-    "name": "Skatepark - Planchodrome de Cherbourg - Éléis",
+    "name": "Skatepark - Planchodrome de Cherbourg - \u00c9l\u00e9is",
     "sportId": "skateboarding",
     "town": "UK",
     "region": "England",
@@ -9326,7 +8879,7 @@
   },
   {
     "id": "skateboarding-skatepark-la-ma-ture-51732049",
-    "name": "Skatepark La Mâture",
+    "name": "Skatepark La M\u00e2ture",
     "sportId": "skateboarding",
     "town": "UK",
     "region": "England",
@@ -9596,75 +9149,6 @@
     "region": "England",
     "lat": 52.97844,
     "lng": -1.07791
-  },
-  {
-    "id": "scuba-diving-sms-brummer-80854552",
-    "name": "SMS Brummer",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.89723,
-    "lng": -3.15192,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1865"
-  },
-  {
-    "id": "scuba-diving-sms-co-ln-84785759",
-    "name": "SMS Cöln",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.89805,
-    "lng": -3.14583,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1862"
-  },
-  {
-    "id": "scuba-diving-sms-dresden-79419062",
-    "name": "SMS Dresden",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.87855,
-    "lng": -3.18398,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1867"
-  },
-  {
-    "id": "scuba-diving-sms-karlsruhe-70794992",
-    "name": "SMS Karlsruhe",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.88952,
-    "lng": -3.18707
-  },
-  {
-    "id": "scuba-diving-sms-kronprinz-wilhelm-55154328",
-    "name": "SMS Kronprinz Wilhelm",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.89417,
-    "lng": -3.16306,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1863"
-  },
-  {
-    "id": "scuba-diving-sms-ko-nig-49700460",
-    "name": "SMS König",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.87055,
-    "lng": -3.15196,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1864"
-  },
-  {
-    "id": "scuba-diving-sms-markgraf-86045447",
-    "name": "SMS Markgraf",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.89193,
-    "lng": -3.16527,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1866"
   },
   {
     "id": "snowboarding-snow-factor-glasgow-19566647",
@@ -10027,33 +9511,6 @@
     "lng": -2.11606
   },
   {
-    "id": "scuba-diving-ss-braunton-73030284",
-    "name": "SS Braunton",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.64971,
-    "lng": 0.16645
-  },
-  {
-    "id": "scuba-diving-ss-bretagne-74455558",
-    "name": "SS Bretagne",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.48331,
-    "lng": -3.36665
-  },
-  {
-    "id": "scuba-diving-ss-rosalie-75757481",
-    "name": "SS Rosalie",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 52.9517,
-    "lng": 1.13331
-  },
-  {
     "id": "skateboarding-st-albans-road-skate-area-35547614",
     "name": "St Albans Road Skate Area",
     "sportId": "skateboarding",
@@ -10091,7 +9548,7 @@
   },
   {
     "id": "skateboarding-st-margaret-s-pastures-skatepark-74937706",
-    "name": "St Margaret’s Pastures Skatepark",
+    "name": "St Margaret\u2019s Pastures Skatepark",
     "sportId": "skateboarding",
     "town": "UK",
     "region": "England",
@@ -10374,15 +9831,6 @@
     "region": "England",
     "lat": 52.69832,
     "lng": -1.07658
-  },
-  {
-    "id": "scuba-diving-tabarka-block-ship-85347960",
-    "name": "Tabarka (block ship)",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "Scotland",
-    "lat": 58.92677,
-    "lng": -3.31311
   },
   {
     "id": "skateboarding-tadley-common-skateboard-park-57591295",
@@ -10739,15 +10187,6 @@
     "region": "England",
     "lat": 52.46687,
     "lng": 1.44603
-  },
-  {
-    "id": "scuba-diving-the-dredger-71763167",
-    "name": "The Dredger",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.56789,
-    "lng": -2.42461
   },
   {
     "id": "mountaineering-the-font-climbing-centre-81956882",
@@ -11452,25 +10891,6 @@
     "lng": -4.09028
   },
   {
-    "id": "scuba-diving-u296-93385960",
-    "name": "U296",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.01667,
-    "lng": -2.98342
-  },
-  {
-    "id": "scuba-diving-ub-81-56898782",
-    "name": "UB-81",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.48944,
-    "lng": -0.97,
-    "url": "http://www.dive-links.com/tauchplatz.php?id=1764"
-  },
-  {
     "id": "hang-gliding-ulster-hang-gliding-paragliding-club-30970416",
     "name": "Ulster Hang Gliding & Paragliding Club",
     "sportId": "hang-gliding",
@@ -11782,7 +11202,7 @@
   },
   {
     "id": "skateboarding-waterman-s-wheel-park-17762923",
-    "name": "Waterman’s Wheel Park",
+    "name": "Waterman\u2019s Wheel Park",
     "sportId": "skateboarding",
     "town": "UK",
     "region": "England",
@@ -11973,15 +11393,6 @@
     "region": "England",
     "lat": 52.89727,
     "lng": -1.28229
-  },
-  {
-    "id": "scuba-diving-west-rock-38304251",
-    "name": "West Rock",
-    "sportId": "scuba-diving",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.33104,
-    "lng": -3.54053
   },
   {
     "id": "mountaineering-west-wall-62959924",

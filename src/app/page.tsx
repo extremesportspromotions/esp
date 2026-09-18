@@ -5,6 +5,7 @@ import SportsCarousel from "@/components/SportsCarousel";
 import ClubsMapSection from "@/components/ClubsMapSection";
 import ValueProposition from "@/components/ValueProposition";
 import HowItWorks from "@/components/HowItWorks";
+import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <ClubsMapSection />
         <ValueProposition />
         <HowItWorks />
+        <Testimonials />
         <ContactForm />
       </main>
       <Footer />

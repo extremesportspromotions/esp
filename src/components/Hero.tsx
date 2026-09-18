@@ -24,18 +24,24 @@ export default function Hero() {
             professional extreme-sports coach for a limited early matching fee of
             £30. Coach session fees are separate.
           </p>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/55">
+            <span className="font-semibold text-white/75">Find a coach</span>{" "}
+            (enquire below) = get matched for £30.{" "}
+            <span className="font-semibold text-white/75">Find a club</span>{" "}
+            = browse centres and parks near you — free, no booking.
+          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#enquire"
               className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/25 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              Find your coach — £30
+              Get matched — £30
             </a>
             <a
-              href="#sports"
+              href="#find-a-club"
               className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              Browse sports
+              Find a club
             </a>
           </div>
         </div>

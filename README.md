@@ -34,3 +34,12 @@ Open [http://localhost:3000](http://localhost:3000).
 - `src/app` — App Router entry (`layout.tsx`, `page.tsx`, styles)
 - `src/components` — UI sections (top bar, carousel, forms, etc.)
 - `src/data/sports.ts` — Featured sports content for the carousel
+
+## Custom domain
+
+The site is deployed on Vercel (`esp-lemon.vercel.app`). When Matthew buys a custom domain, point its DNS at the Vercel project — no domain purchase is required for the current live site.
+
+## Club map data
+
+UK club pins live in `src/data/clubs.json`. Non-venue POIs (memorials, wrecks that are not dive centres, etc.) are filtered out; see `/workspace/esp-improvement-report.txt` for the latest cleanup counts.
+

@@ -48,6 +48,17 @@ export default function ClubsMapSection() {
             and schools across the United Kingdom. Filter by sport to focus the
             map, then open a pin for location and website links where available.
           </p>
+          <p className="mt-3 rounded-lg border border-white/10 bg-ink/50 px-4 py-3 text-sm text-white/65">
+            <span className="font-semibold text-white">Find a club</span> = browse
+            venues near you (free). Want a coach instead?{" "}
+            <a
+              href="#enquire"
+              className="font-semibold text-accent underline-offset-2 hover:underline"
+            >
+              Get matched for £30
+            </a>
+            .
+          </p>
         </div>
 
         <div className="mb-5 flex flex-wrap gap-2" role="tablist" aria-label="Filter clubs by sport">

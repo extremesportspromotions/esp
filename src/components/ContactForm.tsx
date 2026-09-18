@@ -205,6 +205,17 @@ export default function ContactForm() {
             coach. Takes about a minute. The limited early matching fee is £30;
             coach session fees are separate.
           </p>
+          <p className="mt-3 rounded-lg border border-accent/25 bg-accent/10 px-4 py-3 text-sm text-white/75">
+            <span className="font-semibold text-accent">Find a coach / enquire</span>{" "}
+            = get matched for £30. Not looking for a coach?{" "}
+            <a
+              href="#find-a-club"
+              className="font-semibold text-white underline-offset-2 hover:underline"
+            >
+              Browse clubs near you
+            </a>{" "}
+            instead — free, no matching fee.
+          </p>
           <p className="mt-4 text-sm text-white/50">
             Prefer email?{" "}
             <a
