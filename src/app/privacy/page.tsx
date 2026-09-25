@@ -42,7 +42,8 @@ export default function PrivacyPage() {
 
           <div className="guide-prose prose prose-invert mt-10">
             <h2>Who we are</h2>
-            <p>
+            {/* Normal body size: .guide-prose enlarges the first paragraph as an article lead. */}
+            <p style={{ fontSize: "1em", lineHeight: "inherit", color: "inherit" }}>
               Extreme Sports Promotions (&ldquo;ESP&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) matches
               people in the UK with professional extreme-sports coaches. We are responsible for the
               personal details you send us. You can contact us about anything in this notice at{" "}
