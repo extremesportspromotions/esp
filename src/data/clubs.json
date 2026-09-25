@@ -398,13 +398,13 @@
   },
   {
     "id": "snowboarding-chill-factore-manchester-23765663",
-    "name": "Chill Factore Manchester",
+    "name": "The Snow Centre Manchester",
     "sportId": "snowboarding",
     "town": "Manchester",
     "region": "England",
     "lat": 53.4808,
     "lng": -2.2426,
-    "url": "https://www.chillfactore.com",
+    "url": "https://thesnowcentre.com/manchester/",
     "phone": "0161 271 1555",
     "email": "marketing-mcr@thesnowcentre.com"
   },
@@ -2203,7 +2203,7 @@
     "region": "England",
     "lat": 51.5074,
     "lng": -0.1278,
-    "url": "https://www.thesnowcentre.com",
+    "url": "https://thesnowcentre.com/hemel-hempstead/",
     "phone": "01442 433311",
     "email": "info-hml@thesnowcentre.com"
   },
