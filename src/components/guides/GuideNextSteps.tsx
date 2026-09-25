@@ -30,7 +30,7 @@ export default function GuideNextSteps({ sport, sportName }: { sport: string; sp
             href={enquireHref}
             className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3.5 text-[13px] font-bold sm:px-7 sm:text-sm uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Get matched with a coach — £30
+            Get matched — £30
           </a>
         </div>
       </div>

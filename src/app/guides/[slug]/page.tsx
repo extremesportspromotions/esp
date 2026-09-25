@@ -184,7 +184,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
                   href={guide.sport !== GENERAL_SPORT ? `/?sport=${guide.sport}#enquire` : "/#enquire"}
                   className="flex w-full items-center justify-center rounded-full bg-accent px-5 py-3 text-xs font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
-                  Get matched · £30
+                  Get matched — £30
                 </a>
               </div>
             </aside>

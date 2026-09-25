@@ -100,7 +100,7 @@ export default function TopBar({ active }: TopBarProps = {}) {
             href="/#enquire"
             className="hidden rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:inline-flex"
           >
-            Get matched · £30
+            Get matched — £30
           </Link>
           <nav aria-label="Social media" className="flex items-center gap-1 sm:gap-2">
             {socials.map(({ name, href, Icon }) => (

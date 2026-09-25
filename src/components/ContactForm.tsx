@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useEffect, useId, useMemo, useState } from "react";
 import { sports } from "@/data/sports";
+import { ENQUIRY_EMAIL, ENQUIRY_ENDPOINT } from "@/lib/site";
 
 const TOTAL_STEPS = 6;
 
@@ -72,6 +74,47 @@ const STEP_TITLES = [
   "Booking type",
   "Safety + contact",
 ] as const;
+
+type SendStatus = "idle" | "sending" | "success" | "error";
+
+const SEND_TIMEOUT_MS = 20000;
+
+function labelFor(
+  options: readonly { value: string; label: string }[],
+  value: string,
+): string {
+  return options.find((o) => o.value === value)?.label ?? value;
+}
+
+/**
+ * Every quiz answer, with human-readable labels, as sent to ESP's inbox via
+ * FormSubmit (https://formsubmit.co). Keys starting with "_" are FormSubmit
+ * settings rather than form answers.
+ */
+function buildPayload(values: QuizState, honey: string) {
+  const sportName = sports.find((s) => s.id === values.sport)?.name ?? values.sport;
+  const pageUrl = typeof window === "undefined" ? "" : window.location.href;
+  return {
+    _subject: `New ESP enquiry — ${sportName}`,
+    _replyto: values.email.trim(),
+    _template: "table",
+    _captcha: "false",
+    _url: pageUrl,
+    _honey: honey,
+    Name: values.name.trim(),
+    Email: values.email.trim(),
+    Sport: sportName,
+    Level: labelFor(LEVELS, values.level),
+    Goal: values.goal.trim() || "—",
+    "Age band": labelFor(AGE_BANDS, values.ageBand),
+    "Injuries or conditions": values.healthNote.trim() || "—",
+    "Town / city": values.location.trim(),
+    "How far they will travel": labelFor(TRAVEL_OPTIONS, values.travel),
+    "Booking type": labelFor(BOOKING_TYPES, values.bookingType),
+    "Understands the risks": values.riskAck ? "Yes" : "No",
+    "Sent from": pageUrl,
+  };
+}
 
 const fieldClass =
   "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-white/35 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40";
@@ -157,8 +200,11 @@ export default function ContactForm() {
       setValues((v) => (v.sport ? v : { ...v, sport: requested }));
     }
   }, []);
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<SendStatus>("idle");
+  const [honey, setHoney] = useState("");
   const [emailTouched, setEmailTouched] = useState(false);
+  const submitted = status === "success";
+  const sending = status === "sending";
 
   const progressPct = useMemo(
     () => Math.round((step / TOTAL_STEPS) * 100),
@@ -184,18 +230,50 @@ export default function ContactForm() {
     setStep((s) => Math.min(TOTAL_STEPS, s + 1));
   };
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (sending) return;
     if (!isStepValid(6, values)) {
       setEmailTouched(true);
       return;
     }
-    setSubmitted(true);
+    // Honeypot: real people never see or fill this field, so quietly
+    // pretend it worked for bots without sending anything.
+    if (honey.trim()) {
+      setStatus("success");
+      return;
+    }
+
+    setStatus("sending");
+    const controller = new AbortController();
+    const timer = window.setTimeout(() => controller.abort(), SEND_TIMEOUT_MS);
+    try {
+      const res = await fetch(ENQUIRY_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(buildPayload(values, honey)),
+        signal: controller.signal,
+      });
+      const data: unknown = await res.json().catch(() => null);
+      const success =
+        typeof data === "object" && data !== null && "success" in data
+          ? String((data as { success: unknown }).success) === "true"
+          : false;
+      setStatus(res.ok && success ? "success" : "error");
+    } catch {
+      setStatus("error");
+    } finally {
+      window.clearTimeout(timer);
+    }
   };
 
   const resetQuiz = () => {
-    setSubmitted(false);
+    setStatus("idle");
     setValues(initial);
+    setHoney("");
     setStep(1);
     setEmailTouched(false);
   };
@@ -212,12 +290,14 @@ export default function ContactForm() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75">
             Answer a few quick questions so we can match you with the right
-            coach. Takes about a minute. The limited early matching fee is £30;
-            coach session fees are separate.
+            coach. Takes about a minute. Our limited early matching fee is £30
+            to find and introduce you to the right coach; coach session fees are
+            separate. You won&apos;t be charged anything by sending this form.
           </p>
           <p className="mt-3 rounded-lg border border-accent/25 bg-accent/10 px-4 py-3 text-sm text-white/75">
-            <span className="font-semibold text-accent">Find a coach / enquire</span>{" "}
-            = get matched for £30. Not looking for a coach?{" "}
+            <span className="font-semibold text-accent">Find a coach</span>{" "}
+            = send a free enquiry below, then get matched — £30. Not looking
+            for a coach?{" "}
             <a
               href="#find-a-club"
               className="font-semibold text-white underline-offset-2 hover:underline"
@@ -229,10 +309,10 @@ export default function ContactForm() {
           <p className="mt-4 text-sm text-white/50">
             Prefer email?{" "}
             <a
-              href="mailto:extremesportspromotionsuk@gmail.com?subject=ESP%20Enquiry"
+              href={`mailto:${ENQUIRY_EMAIL}?subject=ESP%20Enquiry`}
               className="text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              extremesportspromotionsuk@gmail.com
+              {ENQUIRY_EMAIL}
             </a>
           </p>
         </div>
@@ -247,9 +327,10 @@ export default function ContactForm() {
                 Thanks — we&apos;ll be in touch!
               </p>
               <p className="text-white/75">
-                We received your enquiry
+                Your enquiry has been sent
                 {values.name.trim() ? `, ${values.name.trim()}` : ""}. A member
-                of the ESP team will reach out shortly.
+                of the ESP team will reply by email shortly. You haven&apos;t been
+                charged anything.
               </p>
               <button
                 type="button"
@@ -260,7 +341,28 @@ export default function ContactForm() {
               </button>
             </div>
           ) : (
-            <form onSubmit={onSubmit} noValidate className="flex flex-col gap-6">
+            <form
+              onSubmit={onSubmit}
+              noValidate
+              aria-busy={sending}
+              className="flex flex-col gap-6"
+            >
+              {/* Honeypot for spam bots: hidden from people and screen readers. */}
+              <div
+                aria-hidden="true"
+                className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden"
+              >
+                <label htmlFor="_honey">Leave this field empty</label>
+                <input
+                  id="_honey"
+                  name="_honey"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honey}
+                  onChange={(e) => setHoney(e.target.value)}
+                />
+              </div>
               <div>
                 <div className="flex items-center justify-between gap-3">
                   <p
@@ -552,9 +654,10 @@ export default function ContactForm() {
                     </div>
 
                     <p id="fee-note" className="text-sm text-white/55">
-                      Limited early matching fee:{" "}
-                      <span className="font-semibold text-accent">£30</span>.
-                      Coach session fees are separate.
+                      Our limited early matching fee is £30 to find and
+                      introduce you to the right coach; coach session fees are
+                      separate. You won&apos;t be charged anything by sending
+                      this form.
                     </p>
                   </div>
                 )}
@@ -586,14 +689,61 @@ export default function ContactForm() {
                   ) : (
                     <button
                       type="submit"
-                      disabled={!canContinue}
-                      className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-accent"
+                      disabled={!canContinue || sending}
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-accent"
                     >
-                      Submit — £30 matching fee
+                      {sending && (
+                        <span
+                          className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white"
+                          aria-hidden
+                        />
+                      )}
+                      {sending ? "Sending…" : "Send enquiry"}
                     </button>
                   )}
                 </div>
               </div>
+
+              {step === TOTAL_STEPS && (
+                <div className="-mt-2 space-y-3">
+                  {sending && (
+                    <p role="status" className="text-sm text-white/70">
+                      Sending your enquiry…
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <div
+                      role="alert"
+                      className="rounded-xl border border-flame/50 bg-flame/10 px-4 py-3 text-sm leading-relaxed text-white"
+                    >
+                      <p className="font-semibold text-flame">
+                        Sorry, your enquiry didn&apos;t send.
+                      </p>
+                      <p className="mt-1 text-white/80">
+                        Please try again, or email us directly at{" "}
+                        <a
+                          href={`mailto:${ENQUIRY_EMAIL}?subject=ESP%20Enquiry`}
+                          className="font-semibold text-accent underline underline-offset-2"
+                        >
+                          {ENQUIRY_EMAIL}
+                        </a>
+                        .
+                      </p>
+                    </div>
+                  )}
+                  <p className="text-xs leading-relaxed text-white/50">
+                    We&apos;ll only use your details to reply to your enquiry.
+                    See our{" "}
+                    <Link
+                      href="/privacy"
+                      className="font-semibold text-accent underline-offset-2 hover:underline"
+                    >
+                      privacy notice
+                    </Link>
+                    .
+                  </p>
+                </div>
+              )}
             </form>
           )}
         </div>

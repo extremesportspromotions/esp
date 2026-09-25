@@ -20,13 +20,14 @@ export default function Hero() {
             Train with the pros who live for the edge
           </h2>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
-            Extreme Sports Promotions finds and introduces you to a
-            professional extreme-sports coach for a limited early matching fee of
-            £30. Coach session fees are separate.
+            Extreme Sports Promotions matches you with a professional
+            extreme-sports coach. Our limited early matching fee is £30 to find
+            and introduce you to the right coach; coach session fees are
+            separate.
           </p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/55">
             <span className="font-semibold text-white/75">Find a coach</span>{" "}
-            (enquire below) = get matched for £30.{" "}
+            = send a free enquiry below, then get matched — £30.{" "}
             <span className="font-semibold text-white/75">Find a club</span>{" "}
             = browse centres and parks near you — free, no booking.
           </p>

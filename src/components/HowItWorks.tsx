@@ -2,7 +2,7 @@ const steps = [
   {
     step: "01",
     title: "Tell us your sport",
-    body: "Share your interest, experience level, and what you want to achieve.",
+    body: "Share your interest, experience level, and what you want to achieve. Sending an enquiry is free.",
   },
   {
     step: "02",
@@ -11,8 +11,8 @@ const steps = [
   },
   {
     step: "03",
-    title: "Book & pay the £30 matching fee",
-    body: "At this limited early rate, pay £30 for the coach introduction; coach session fees are separate.",
+    title: "Your £30 coach introduction",
+    body: "Our limited early matching fee is £30 to find and introduce you to the right coach; coach session fees are separate.",
   },
   {
     step: "04",
