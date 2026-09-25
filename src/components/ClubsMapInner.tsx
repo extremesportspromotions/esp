@@ -79,16 +79,34 @@ export default function ClubsMapInner({ clubs }: { clubs: Club[] }) {
                 {c.town}
                 {c.region ? `, ${c.region}` : ""}
               </p>
-              {c.url ? (
-                <a
-                  href={c.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 inline-block text-xs font-medium text-blue-700 underline"
-                >
-                  Website
-                </a>
-              ) : null}
+              <div className="mt-1 flex flex-col gap-0.5">
+                {c.url ? (
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-medium text-blue-700 underline"
+                  >
+                    Website
+                  </a>
+                ) : null}
+                {c.phone ? (
+                  <a
+                    href={`tel:${c.phone.replace(/[^+\d]/g, "")}`}
+                    className="text-xs font-medium text-blue-700 underline"
+                  >
+                    {c.phone}
+                  </a>
+                ) : null}
+                {c.email ? (
+                  <a
+                    href={`mailto:${c.email}`}
+                    className="text-xs font-medium text-blue-700 underline"
+                  >
+                    {c.email}
+                  </a>
+                ) : null}
+              </div>
             </div>
           </Popup>
         </Marker>

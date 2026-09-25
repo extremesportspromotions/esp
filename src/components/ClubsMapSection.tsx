@@ -44,9 +44,10 @@ export default function ClubsMapSection() {
             Find a club
           </h2>
           <p className="mt-3 text-base leading-relaxed text-white/70 sm:text-lg">
-            Explore {clubs.length.toLocaleString()} extreme-sports clubs, centres,
-            and schools across the United Kingdom. Filter by sport to focus the
-            map, then open a pin for location and website links where available.
+            Explore {clubs.length.toLocaleString()} UK clubs, centres, and schools
+            that offer coaching, lessons, or courses. Every venue listed has a
+            working website and contact details. Filter by sport to focus the
+            map, then open a pin for the website, phone, or email.
           </p>
           <p className="mt-3 rounded-lg border border-white/10 bg-ink/50 px-4 py-3 text-sm text-white/65">
             <span className="font-semibold text-white">Find a club</span> = browse
@@ -105,12 +106,27 @@ export default function ClubsMapSection() {
           })}
         </div>
 
-        {sportFilter === "base-jumping" && (counts["base-jumping"] ?? 0) === 0 ? (
-          <p className="mb-4 rounded-lg border border-white/10 bg-ink/60 px-4 py-3 text-sm text-white/70">
-            BASE jumping has almost no publicly listed affiliated clubs in the UK
-            (activity is typically informal and site-restricted). We do not invent
-            entries — check British Skydiving drop zones for related canopy skills.
-          </p>
+        {sportFilter !== ALL && filtered.length === 0 ? (
+          <div
+            role="status"
+            className="mb-4 rounded-lg border border-white/10 bg-ink/60 px-4 py-3 text-sm text-white/70"
+          >
+            <p className="font-semibold text-white">
+              No listed coaching venues yet for {sportLabel(sportFilter)}.
+            </p>
+            <p className="mt-1">
+              {sportFilter === "base-jumping"
+                ? "BASE jumping has almost no publicly listed affiliated clubs in the UK (activity is typically informal and site-restricted). We do not invent entries — check British Skydiving drop zones for related canopy skills."
+                : "We only list venues we have checked for coaching and contact details, and none made the cut for this sport yet."}{" "}
+              <a
+                href="#enquire"
+                className="font-semibold text-accent underline-offset-2 hover:underline"
+              >
+                Ask us to find you a coach
+              </a>
+              .
+            </p>
+          </div>
         ) : null}
 
         <div className="grid gap-5 lg:grid-cols-[1fr_320px]">
@@ -132,7 +148,7 @@ export default function ClubsMapSection() {
             <ul className="flex-1 space-y-1 overflow-y-auto p-2" role="list">
               {listClubs.length === 0 ? (
                 <li className="px-3 py-6 text-center text-sm text-white/50">
-                  No clubs listed for this sport yet.
+                  No listed coaching venues yet.
                 </li>
               ) : (
                 listClubs.map((c) => (
@@ -150,17 +166,37 @@ export default function ClubsMapSection() {
                         {c.town}
                         {c.region ? ` · ${c.region}` : ""}
                       </p>
-                      {c.url ? (
-                        <a
-                          href={c.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="mt-1 inline-block text-xs text-white/80 underline hover:text-accent"
-                        >
-                          Visit website
-                        </a>
-                      ) : null}
+                      <span className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5">
+                        {c.url ? (
+                          <a
+                            href={c.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-xs text-white/80 underline hover:text-accent"
+                          >
+                            Visit website
+                          </a>
+                        ) : null}
+                        {c.phone ? (
+                          <a
+                            href={`tel:${c.phone.replace(/[^+\d]/g, "")}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-xs text-white/80 underline hover:text-accent"
+                          >
+                            {c.phone}
+                          </a>
+                        ) : null}
+                        {c.email ? (
+                          <a
+                            href={`mailto:${c.email}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-xs text-white/80 underline hover:text-accent"
+                          >
+                            Email
+                          </a>
+                        ) : null}
+                      </span>
                     </button>
                   </li>
                 ))
@@ -172,8 +208,11 @@ export default function ClubsMapSection() {
         <p className="mt-4 text-xs leading-relaxed text-white/40">
           Club locations are compiled from OpenStreetMap (Overpass), BHPA club
           listings, British Skydiving drop-zone directories, public wake-park
-          guides, and other publicly listed centres. Coordinates are approximate.
-          Always confirm details with the club before travelling.
+          guides, and other publicly listed centres. The map only shows venues
+          that offer coaching or lessons and publish contact details. Shops and
+          venues without a working website are left out. Last checked September
+          2026. Coordinates are approximate. Always confirm details with the
+          club before travelling.
         </p>
       </div>
     </section>

@@ -9,6 +9,8 @@ export type Club = {
   lat: number;
   lng: number;
   url?: string;
+  phone?: string;
+  email?: string;
 };
 
 export const clubs = clubsData as Club[];
