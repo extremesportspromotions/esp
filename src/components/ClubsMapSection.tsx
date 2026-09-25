@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { clubs, clubCountsBySport, type Club } from "@/data/clubs";
 import { sports } from "@/data/sports";
 
@@ -20,6 +20,16 @@ export default function ClubsMapSection() {
   const [sportFilter, setSportFilter] = useState<string>(ALL);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const counts = useMemo(() => clubCountsBySport(), []);
+
+  // Deep links such as /?sport=skydiving#find-a-club (used by the Guides pages)
+  // pre-select that sport on the map.
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get("sport");
+    if (requested && sports.some((s) => s.id === requested)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setSportFilter(requested);
+    }
+  }, []);
 
   const filtered: Club[] = useMemo(() => {
     if (sportFilter === ALL) return clubs;

@@ -34,6 +34,14 @@ Open [http://localhost:3000](http://localhost:3000).
 - `src/app` — App Router entry (`layout.tsx`, `page.tsx`, styles)
 - `src/components` — UI sections (top bar, carousel, forms, etc.)
 - `src/data/sports.ts` — Featured sports content for the carousel
+- `content/guides/` — **ESP Guides articles** (one Markdown file per article). See `content/guides/README.md` for how to add one.
+- `src/lib/guides.ts` — loads and renders the guides (gray-matter + remark/rehype, static generation)
+- `src/app/guides/` — `/guides` index, `/guides/[slug]` articles, `/guides/sport/[sport]` hubs, `/guides/rss.xml`
+- `src/app/sitemap.ts`, `src/app/robots.ts` — SEO files (include all guides)
+
+## Guides deep links
+
+Guide pages link to `/?sport=<slug>#find-a-club` and `/?sport=<slug>#enquire`; the club map and enquiry form pre-select that sport.
 
 ## Custom domain
 

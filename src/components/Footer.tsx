@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-ink">
@@ -8,30 +9,36 @@ export default function Footer() {
             reserved.
           </p>
           <nav aria-label="Footer" className="flex flex-wrap gap-4">
-            <a
-              href="#about"
+            <Link
+              href="/#about"
               className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               About
-            </a>
-            <a
-              href="#find-a-club"
+            </Link>
+            <Link
+              href="/guides"
+              className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Guides
+            </Link>
+            <Link
+              href="/#find-a-club"
               className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Find a club
-            </a>
-            <a
-              href="#how-it-works"
+            </Link>
+            <Link
+              href="/#how-it-works"
               className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               How it works
-            </a>
-            <a
-              href="#enquire"
+            </Link>
+            <Link
+              href="/#enquire"
               className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Enquire
-            </a>
+            </Link>
           </nav>
         </div>
         <p className="text-xs leading-relaxed text-white/40">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FacebookIcon, TikTokIcon, XIcon, YouTubeIcon } from "./SocialIcons";
 // When Matthew sends a real Instagram link, add it from SocialIcons.
 // Do not invent handles.
@@ -26,12 +27,44 @@ const socials = [
   },
 ] as const;
 
+// Absolute paths (/#…) so the links also work from sub-pages such as /guides.
 const pageLinks = [
-  { label: "Sports", href: "#sports" },
-  { label: "Find a club", href: "#find-a-club" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Enquire", href: "#enquire" },
+  { label: "Sports", href: "/#sports", key: "sports" },
+  { label: "Guides", href: "/guides", key: "guides" },
+  { label: "Find a club", href: "/#find-a-club", key: "find-a-club" },
+  { label: "How it works", href: "/#how-it-works", key: "how-it-works" },
+  { label: "Enquire", href: "/#enquire", key: "enquire" },
 ] as const;
+
+type TopBarProps = {
+  /** Highlights the current section in the nav */
+  active?: (typeof pageLinks)[number]["key"];
+};
+
+const linkBase =
+  "shrink-0 whitespace-nowrap rounded-full py-1.5 text-sm transition hover:bg-white/10 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+
+function NavLinks({ active, compact }: TopBarProps & { compact?: boolean }) {
+  return (
+    <>
+      {pageLinks.map(({ label, href, key }) => {
+        const isActive = active === key;
+        return (
+          <Link
+            key={key}
+            href={href}
+            aria-current={isActive ? "page" : undefined}
+            className={`${linkBase} ${compact ? "px-2.5" : "px-3"} ${
+              isActive ? "bg-white/10 font-semibold text-white" : "text-white/75"
+            }`}
+          >
+            {label}
+          </Link>
+        );
+      })}
+    </>
+  );
+}
 
 /**
  * Optional logo: use /public/logo.png and set showLogo = true.
@@ -39,13 +72,13 @@ const pageLinks = [
  */
 const showLogo = true;
 
-export default function TopBar() {
+export default function TopBar({ active }: TopBarProps = {}) {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <a
-            href="#top"
+          <Link
+            href="/#top"
             className="flex shrink-0 items-center gap-2 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             aria-label="Extreme Sports Promotions — home"
           >
@@ -57,29 +90,18 @@ export default function TopBar() {
                 ESP
               </span>
             )}
-          </a>
-          <nav
-            aria-label="Primary"
-            className="flex flex-wrap items-center gap-1 lg:gap-2"
-          >
-            {pageLinks.map(({ label, href }) => (
-              <a
-                key={href}
-                href={href}
-                className="rounded-full px-3 py-1.5 text-sm text-white/75 transition hover:bg-white/10 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                {label}
-              </a>
-            ))}
+          </Link>
+          <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex lg:gap-2">
+            <NavLinks active={active} />
           </nav>
         </div>
         <div className="flex shrink-0 items-center gap-2">
-          <a
-            href="#enquire"
+          <Link
+            href="/#enquire"
             className="hidden rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:inline-flex"
           >
             Get matched · £30
-          </a>
+          </Link>
           <nav aria-label="Social media" className="flex items-center gap-1 sm:gap-2">
             {socials.map(({ name, href, Icon }) => (
               <a
@@ -96,6 +118,12 @@ export default function TopBar() {
           </nav>
         </div>
       </div>
+      <nav
+        aria-label="Primary (mobile)"
+        className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-3 pb-2 [scrollbar-width:none] sm:px-5 lg:hidden [&::-webkit-scrollbar]:hidden"
+      >
+        <NavLinks active={active} compact />
+      </nav>
     </header>
   );
 }

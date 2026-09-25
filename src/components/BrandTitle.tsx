@@ -2,6 +2,7 @@
  * Brand header with approved Option A emblem (bigger EXTREME SPORTS PROMOTIONS wordmark).
  * Assets: /public/logo.png (full), /public/icon.png (profile crop / favicon).
  */
+import Link from "next/link";
 const showLogo = true;
 
 export default function BrandTitle() {
@@ -43,24 +44,24 @@ export default function BrandTitle() {
           <span className="font-semibold text-accent">£30</span>.
         </p>
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="#enquire"
+          <Link
+            href="/#enquire"
             className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Get matched — £30
-          </a>
-          <a
-            href="#sports"
+          </Link>
+          <Link
+            href="/#sports"
             className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             Browse sports
-          </a>
+          </Link>
         </div>
         <p className="mx-auto mt-4 max-w-lg text-xs text-white/45 sm:text-sm">
           Looking for somewhere to train near you?{" "}
-          <a href="#find-a-club" className="text-white/70 underline-offset-2 hover:text-accent hover:underline">
+          <Link href="/#find-a-club" className="text-white/70 underline-offset-2 hover:text-accent hover:underline">
             Find a club
-          </a>{" "}
+          </Link>{" "}
           is free to browse. Coach matching is separate.
         </p>
       </div>

@@ -6,6 +6,7 @@ import ClubsMapSection from "@/components/ClubsMapSection";
 import ValueProposition from "@/components/ValueProposition";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
+import LatestGuides from "@/components/LatestGuides";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <ValueProposition />
         <HowItWorks />
         <Testimonials />
+        <LatestGuides />
         <ContactForm />
       </main>
       <Footer />

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   /* Subtle British palette: near-black navy, white, restrained red */
@@ -7,6 +8,8 @@
   --ink: #070b14;
   --surface: #121a2b;
   --accent: #c8102e;
+  /* Lighter red for small text on dark backgrounds (WCAG AA contrast) */
+  --accent-soft: #f25c6e;
   --flame: #e24a3b;
   --navy: #1a3a6b;
 }
@@ -17,6 +20,7 @@
   --color-ink: var(--ink);
   --color-surface: var(--surface);
   --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   --color-flame: var(--flame);
   --color-navy: var(--navy);
   --font-sans: var(--font-geist-sans);
@@ -56,4 +60,147 @@ body {
 }
 .leaflet-popup-content-wrapper {
   border-radius: 10px;
+}
+
+/* ---------- Guides: long-form article typography ---------- */
+.guide-prose {
+  --tw-prose-invert-body: rgb(245 247 251 / 0.84);
+  --tw-prose-invert-headings: #ffffff;
+  --tw-prose-invert-lead: rgb(245 247 251 / 0.9);
+  --tw-prose-invert-links: var(--accent-soft);
+  --tw-prose-invert-bold: #ffffff;
+  --tw-prose-invert-counters: var(--accent-soft);
+  --tw-prose-invert-bullets: var(--accent);
+  --tw-prose-invert-hr: rgb(255 255 255 / 0.12);
+  --tw-prose-invert-quotes: #ffffff;
+  --tw-prose-invert-quote-borders: var(--accent);
+  --tw-prose-invert-captions: rgb(255 255 255 / 0.6);
+  --tw-prose-invert-code: #ffffff;
+  --tw-prose-invert-th-borders: rgb(255 255 255 / 0.2);
+  --tw-prose-invert-td-borders: rgb(255 255 255 / 0.1);
+  max-width: 70ch;
+}
+
+.guide-prose h2,
+.guide-prose h3 {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  scroll-margin-top: 7.5rem;
+}
+
+.guide-prose h2 {
+  position: relative;
+  padding-top: 0.75rem;
+}
+
+.guide-prose h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 9999px;
+  background: var(--accent);
+}
+
+.guide-prose a {
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.guide-prose a:hover {
+  color: #ffffff;
+}
+
+.guide-prose a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.guide-prose > p:first-of-type {
+  font-size: 1.2em;
+  line-height: 1.65;
+  color: rgb(245 247 251 / 0.92);
+}
+
+/* Pull quote: a plain Markdown blockquote */
+.guide-prose blockquote {
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-weight: 600;
+  font-style: normal;
+  border-left-width: 4px;
+  padding: 0.25em 0 0.25em 1em;
+  margin: 2em 0;
+}
+
+.guide-prose blockquote p:first-of-type::before,
+.guide-prose blockquote p:last-of-type::after {
+  content: none;
+}
+
+.guide-prose img {
+  border-radius: 1rem;
+}
+
+/* Callouts: > [!SAFETY], > [!TIP], > [!NOTE], > [!WARNING] */
+.guide-prose .callout {
+  margin: 2.25em 0;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: 1rem;
+  padding: 1.25em 1.5em;
+  background: var(--surface);
+  font-size: 0.95em;
+}
+
+.guide-prose .callout > :last-child {
+  margin-bottom: 0;
+}
+
+.guide-prose .callout .callout-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.6em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.guide-prose .callout .callout-title::before {
+  content: "";
+  flex: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  background: currentColor;
+  -webkit-mask: var(--callout-icon) center / contain no-repeat;
+  mask: var(--callout-icon) center / contain no-repeat;
+}
+
+.guide-prose .callout-safety,
+.guide-prose .callout-warning {
+  border-color: rgb(200 16 46 / 0.6);
+  background: linear-gradient(135deg, rgb(200 16 46 / 0.18), rgb(18 26 43 / 0.95) 60%);
+  --callout-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1 5h2v6h-2V7Zm0 8h2v2h-2v-2Z'/%3E%3C/svg%3E");
+}
+
+.guide-prose .callout-safety .callout-title,
+.guide-prose .callout-warning .callout-title {
+  color: var(--accent-soft);
+}
+
+.guide-prose .callout-tip,
+.guide-prose .callout-note {
+  border-color: rgb(92 132 204 / 0.5);
+  background: linear-gradient(135deg, rgb(26 58 107 / 0.55), rgb(18 26 43 / 0.95) 60%);
+  --callout-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z'/%3E%3C/svg%3E");
+}
+
+.guide-prose .callout-tip .callout-title,
+.guide-prose .callout-note .callout-title {
+  color: #a9c3f0;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useId, useMemo, useState } from "react";
+import { FormEvent, useEffect, useId, useMemo, useState } from "react";
 import { sports } from "@/data/sports";
 
 const TOTAL_STEPS = 6;
@@ -147,6 +147,16 @@ export default function ContactForm() {
   const progressId = useId();
   const [step, setStep] = useState(1);
   const [values, setValues] = useState<QuizState>(initial);
+
+  // Deep links such as /?sport=skydiving#enquire (used by the Guides pages)
+  // pre-select that sport in step 1.
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get("sport");
+    if (requested && sports.some((s) => s.id === requested)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setValues((v) => (v.sport ? v : { ...v, sport: requested }));
+    }
+  }, []);
   const [submitted, setSubmitted] = useState(false);
   const [emailTouched, setEmailTouched] = useState(false);
 
