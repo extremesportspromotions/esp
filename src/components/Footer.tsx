@@ -39,6 +39,12 @@ export default function Footer() {
             >
               Enquire
             </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Privacy
+            </Link>
           </nav>
         </div>
         <p className="text-xs leading-relaxed text-white/40">
