@@ -259,6 +259,16 @@
     "url": "https://blocclimbing.co.uk/"
   },
   {
+    "id": "snowboarding-bluebird-ski-snowboard-services-22645632",
+    "name": "Bluebird Ski & Snowboard Services",
+    "sportId": "snowboarding",
+    "town": "UK",
+    "region": "England",
+    "lat": 50.25693,
+    "lng": -5.05531,
+    "url": "https://bluebird-ski-snowboard-services-cornwall.square.site/"
+  },
+  {
     "id": "mountaineering-boulder-brighton-11352062",
     "name": "Boulder Brighton",
     "sportId": "mountaineering",
