@@ -6,7 +6,8 @@ sport: scuba-diving
 category: Getting started
 author: ESP Editorial
 date: 2026-09-25
-heroAlt: "Scuba diver observing an anemone with clownfish on a coral reef"
+heroImage: /guides/first-scuba-course-hero.jpg
+heroAlt: "Two seals swimming above a sandy seabed alongside three scuba divers"
 featured: false
 draft: false
 ---
