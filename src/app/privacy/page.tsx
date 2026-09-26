@@ -45,12 +45,13 @@ export default function PrivacyPage() {
 
             <h2>What the enquiry form collects</h2>
             <ul>
-              <li>your name and email address;</li>
+              <li>your full name, email address and phone number;</li>
+              <li>the best time to call you, if you tell us;</li>
               <li>the sport you&apos;re interested in, your level and your goal;</li>
               <li>your age band;</li>
               <li>
-                if you&apos;re under 18, that you&apos;ve confirmed a parent or guardian consents and
-                will travel with you;
+                if you&apos;re under 18, your parent or guardian&apos;s full name and phone number, and
+                that you&apos;ve confirmed they consent and will travel with you;
               </li>
               <li>
                 any injuries or health conditions you choose to tell us about (this is optional);
@@ -64,7 +65,9 @@ export default function PrivacyPage() {
             <h2>Why we use it</h2>
             <p>
               We use your details only to reply to your enquiry and to find and introduce you to a
-              suitable coach, because you&apos;ve asked us to.
+              suitable coach, because you&apos;ve asked us to. We use your phone number to call you
+              about your enquiry and your match. If you&apos;re under 18, we use your parent or
+              guardian&apos;s phone number to call them and confirm their consent.
             </p>
 
             <h2>Health and injury information</h2>

@@ -35,6 +35,29 @@ const TRAVEL_OPTIONS = [
   { value: "anywhere-uk", label: "Anywhere in the UK" },
 ] as const;
 
+const CALL_TIMES = [
+  { value: "morning", label: "Morning" },
+  { value: "afternoon", label: "Afternoon" },
+  { value: "evening", label: "Evening" },
+  { value: "any", label: "Any time" },
+] as const;
+
+const PHONE_ERROR = "Please enter a UK phone number, e.g. 07700 900123";
+
+/**
+ * UK phone numbers: 07 mobiles (11 digits), 01/02 landlines (10 or 11 digits)
+ * and 03 numbers (11 digits), written with 0 or +44 (also +44 (0)…).
+ * Spaces, dashes and brackets are ignored.
+ */
+function normaliseUkPhone(raw: string): string | null {
+  let n = raw.replace(/[\s\-()]/g, "");
+  if (n.startsWith("+440")) n = `0${n.slice(4)}`;
+  else if (n.startsWith("+44")) n = `0${n.slice(3)}`;
+  return /^(?:07\d{9}|0[12]\d{8,9}|03\d{9})$/.test(n) ? n : null;
+}
+
+const isUkPhone = (raw: string) => normaliseUkPhone(raw) !== null;
+
 const BOOKING_TYPES = [
   { value: "solo", label: "Solo" },
   { value: "group", label: "Group" },
@@ -54,8 +77,12 @@ type QuizState = {
   bookingType: string;
   riskAck: boolean;
   guardianConsent: boolean;
+  guardianName: string;
+  guardianPhone: string;
   name: string;
   email: string;
+  phone: string;
+  callTime: string;
 };
 
 const initial: QuizState = {
@@ -69,8 +96,12 @@ const initial: QuizState = {
   bookingType: "",
   riskAck: false,
   guardianConsent: false,
+  guardianName: "",
+  guardianPhone: "",
   name: "",
   email: "",
+  phone: "",
+  callTime: "",
 };
 
 const STEP_TITLES = [
@@ -96,8 +127,13 @@ function enquirySubject(sportId: string): string {
   return sportName ? `New ESP enquiry — ${sportName}` : "New ESP enquiry";
 }
 
-function enquiryMailto(sportId: string): string {
-  return `mailto:${ENQUIRY_EMAIL}?subject=${encodeURIComponent(enquirySubject(sportId))}`;
+function enquiryMailto(values: QuizState): string {
+  const lines = [
+    values.name.trim() && `Name: ${values.name.trim()}`,
+    values.phone.trim() && `Phone: ${values.phone.trim()}`,
+  ].filter(Boolean);
+  const body = lines.length ? `&body=${encodeURIComponent(`${lines.join("\n")}\n\n`)}` : "";
+  return `mailto:${ENQUIRY_EMAIL}?subject=${encodeURIComponent(enquirySubject(values.sport))}${body}`;
 }
 
 function labelFor(
@@ -112,9 +148,12 @@ function labelFor(
  * FormSubmit (https://formsubmit.co). Keys starting with "_" are FormSubmit
  * settings rather than form answers.
  */
+const NOT_APPLICABLE = "Not applicable (18 or over)";
+
 function buildPayload(values: QuizState, honey: string) {
   const sportName = sports.find((s) => s.id === values.sport)?.name ?? values.sport;
   const pageUrl = typeof window === "undefined" ? "" : window.location.href;
+  const under18 = values.ageBand === UNDER_18;
   return {
     _subject: enquirySubject(values.sport),
     _replyto: values.email.trim(),
@@ -122,18 +161,23 @@ function buildPayload(values: QuizState, honey: string) {
     _captcha: "false",
     _url: pageUrl,
     _honey: honey,
-    Name: values.name.trim(),
+    "Full name": values.name.trim(),
     Email: values.email.trim(),
+    Phone: values.phone.trim(),
+    "Best time to call": values.callTime
+      ? labelFor(CALL_TIMES, values.callTime)
+      : "No preference",
+    "Age group": labelFor(AGE_BANDS, values.ageBand),
+    "Parent/guardian name": under18 ? values.guardianName.trim() : NOT_APPLICABLE,
+    "Parent/guardian phone": under18 ? values.guardianPhone.trim() : NOT_APPLICABLE,
+    "Parent/guardian consent": under18
+      ? values.guardianConsent
+        ? "Yes — confirmed a parent or guardian consents and will travel with them"
+        : "No"
+      : NOT_APPLICABLE,
     Sport: sportName,
     Level: labelFor(LEVELS, values.level),
     Goal: values.goal.trim() || "—",
-    "Age band": labelFor(AGE_BANDS, values.ageBand),
-    "Parent / guardian consent (under 18s)":
-      values.ageBand === UNDER_18
-        ? values.guardianConsent
-          ? "Yes — confirmed a parent or guardian consents and will travel with them"
-          : "No"
-        : "Not applicable (18 or over)",
     "Injuries or conditions": values.healthNote.trim() || "—",
     "Town / city": values.location.trim(),
     "How far they will travel": labelFor(TRAVEL_OPTIONS, values.travel),
@@ -161,7 +205,10 @@ function isStepValid(step: number, values: QuizState): boolean {
     case 3:
       return (
         Boolean(values.ageBand) &&
-        (values.ageBand !== UNDER_18 || values.guardianConsent)
+        (values.ageBand !== UNDER_18 ||
+          (values.guardianConsent &&
+            Boolean(values.guardianName.trim()) &&
+            isUkPhone(values.guardianPhone)))
       );
     case 4:
       return Boolean(values.location.trim() && values.travel);
@@ -171,7 +218,8 @@ function isStepValid(step: number, values: QuizState): boolean {
       return (
         values.riskAck &&
         Boolean(values.name.trim()) &&
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim())
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim()) &&
+        isUkPhone(values.phone)
       );
     default:
       return false;
@@ -216,6 +264,67 @@ function ChipGroup({
   );
 }
 
+function FieldError({ id, children }: { id: string; children: string }) {
+  return (
+    <p id={id} className="mt-1.5 text-sm text-flame">
+      {children}
+    </p>
+  );
+}
+
+function PhoneField({
+  id,
+  label,
+  value,
+  onChange,
+  showError,
+  onBlur,
+  autoComplete,
+  hint,
+}: {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  showError: boolean;
+  onBlur: () => void;
+  autoComplete: string;
+  hint?: string;
+}) {
+  const errorId = `${id}-error`;
+  const hintId = `${id}-hint`;
+  return (
+    <div>
+      <label htmlFor={id} className="mb-1.5 block text-sm font-medium text-white">
+        {label}
+      </label>
+      <input
+        id={id}
+        name={id}
+        type="tel"
+        inputMode="tel"
+        autoComplete={autoComplete}
+        required
+        aria-required="true"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        onBlur={onBlur}
+        aria-invalid={showError}
+        aria-describedby={showError ? errorId : hint ? hintId : undefined}
+        className={fieldClass}
+        placeholder="e.g. 07700 900123"
+      />
+      {showError ? (
+        <FieldError id={errorId}>{PHONE_ERROR}</FieldError>
+      ) : hint ? (
+        <p id={hintId} className="mt-1.5 text-xs text-white/50">
+          {hint}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 export default function ContactForm() {
   const progressId = useId();
   const [step, setStep] = useState(1);
@@ -233,6 +342,9 @@ export default function ContactForm() {
   const [status, setStatus] = useState<SendStatus>("idle");
   const [honey, setHoney] = useState("");
   const [emailTouched, setEmailTouched] = useState(false);
+  // Fields the visitor has left (blurred); errors show only after that.
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const touch = (key: string) => setTouched((t) => ({ ...t, [key]: true }));
   const submitted = status === "success";
   const sending = status === "sending";
 
@@ -244,8 +356,14 @@ export default function ContactForm() {
   const canContinue = isStepValid(step, values);
   const emailInvalid =
     emailTouched &&
-    values.email.trim().length > 0 &&
     !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email.trim());
+
+  const phoneInvalid = Boolean(touched.phone) && !isUkPhone(values.phone);
+  const nameMissing = Boolean(touched.name) && !values.name.trim();
+  const guardianNameMissing =
+    Boolean(touched.guardianName) && !values.guardianName.trim();
+  const guardianPhoneInvalid =
+    Boolean(touched.guardianPhone) && !isUkPhone(values.guardianPhone);
 
   const setField = <K extends keyof QuizState>(key: K, value: QuizState[K]) => {
     setValues((v) => ({ ...v, [key]: value }));
@@ -265,6 +383,7 @@ export default function ContactForm() {
     if (sending) return;
     if (!isStepValid(3, values) || !isStepValid(6, values)) {
       setEmailTouched(true);
+      setTouched((t) => ({ ...t, name: true, phone: true }));
       return;
     }
     // Honeypot: real people never see or fill this field, so quietly
@@ -306,6 +425,7 @@ export default function ContactForm() {
     setHoney("");
     setStep(1);
     setEmailTouched(false);
+    setTouched({});
   };
 
   return (
@@ -340,7 +460,7 @@ export default function ContactForm() {
           <p className="mt-4 text-sm text-white/50">
             Prefer email?{" "}
             <a
-              href={enquiryMailto(values.sport)}
+              href={enquiryMailto(values)}
               className="text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {ENQUIRY_EMAIL}
@@ -359,9 +479,9 @@ export default function ContactForm() {
               </p>
               <p className="text-white/75">
                 Your enquiry has been sent
-                {values.name.trim() ? `, ${values.name.trim()}` : ""}. A member
-                of the ESP team will reply by email shortly. You haven&apos;t been
-                charged anything.
+                {values.name.trim() ? `, ${values.name.trim()}` : ""}. We&apos;ll
+                call you shortly to talk through your enquiry and match. You
+                haven&apos;t been charged anything.
               </p>
               <button
                 type="button"
@@ -528,6 +648,46 @@ export default function ContactForm() {
                         >
                           {UNDER_18_NOTE}
                         </p>
+                        <div>
+                          <label
+                            htmlFor="guardianName"
+                            className="mb-1.5 block text-sm font-medium text-white"
+                          >
+                            Parent/guardian full name
+                          </label>
+                          <input
+                            id="guardianName"
+                            name="guardianName"
+                            type="text"
+                            autoComplete="off"
+                            required
+                            aria-required="true"
+                            value={values.guardianName}
+                            onChange={(e) => setField("guardianName", e.target.value)}
+                            onBlur={() => touch("guardianName")}
+                            aria-invalid={guardianNameMissing}
+                            aria-describedby={
+                              guardianNameMissing ? "guardianName-error" : undefined
+                            }
+                            className={fieldClass}
+                            placeholder="Their full name"
+                          />
+                          {guardianNameMissing && (
+                            <FieldError id="guardianName-error">
+                              Please enter your parent or guardian&apos;s full name.
+                            </FieldError>
+                          )}
+                        </div>
+                        <PhoneField
+                          id="guardianPhone"
+                          label="Parent/guardian phone"
+                          value={values.guardianPhone}
+                          onChange={(v) => setField("guardianPhone", v)}
+                          onBlur={() => touch("guardianPhone")}
+                          showError={guardianPhoneInvalid}
+                          autoComplete="off"
+                          hint="We'll call them to confirm their consent."
+                        />
                         <label className="flex cursor-pointer items-start gap-3 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-accent">
                           <input
                             type="checkbox"
@@ -640,7 +800,7 @@ export default function ContactForm() {
                       </h3>
                       <p className="mt-1 text-sm text-white/60">
                         Almost done — confirm you understand the risks, then leave
-                        your details.
+                        your details so we can call you about your match.
                       </p>
                     </div>
 
@@ -671,18 +831,26 @@ export default function ContactForm() {
                         htmlFor="name"
                         className="mb-1.5 block text-sm font-medium text-white"
                       >
-                        Name
+                        Full name
                       </label>
                       <input
                         id="name"
                         name="name"
                         type="text"
                         autoComplete="name"
+                        required
+                        aria-required="true"
                         value={values.name}
                         onChange={(e) => setField("name", e.target.value)}
+                        onBlur={() => touch("name")}
+                        aria-invalid={nameMissing}
+                        aria-describedby={nameMissing ? "name-error" : undefined}
                         className={fieldClass}
                         placeholder="Your full name"
                       />
+                      {nameMissing && (
+                        <FieldError id="name-error">Please enter your full name.</FieldError>
+                      )}
                     </div>
 
                     <div>
@@ -690,13 +858,15 @@ export default function ContactForm() {
                         htmlFor="email"
                         className="mb-1.5 block text-sm font-medium text-white"
                       >
-                        Email
+                        Email address
                       </label>
                       <input
                         id="email"
                         name="email"
                         type="email"
                         autoComplete="email"
+                        required
+                        aria-required="true"
                         value={values.email}
                         onChange={(e) => setField("email", e.target.value)}
                         onBlur={() => setEmailTouched(true)}
@@ -712,6 +882,47 @@ export default function ContactForm() {
                           Enter a valid email address.
                         </p>
                       )}
+                    </div>
+
+                    <PhoneField
+                      id="phone"
+                      label="Contact phone number"
+                      value={values.phone}
+                      onChange={(v) => setField("phone", v)}
+                      onBlur={() => touch("phone")}
+                      showError={phoneInvalid}
+                      autoComplete="tel"
+                      hint="We'll call you to talk through your enquiry and match."
+                    />
+
+                    <div>
+                      <label
+                        htmlFor="callTime"
+                        className="mb-1.5 block text-sm font-medium text-white"
+                      >
+                        Best time to call{" "}
+                        <span className="font-normal text-white/45">(optional)</span>
+                      </label>
+                      <select
+                        id="callTime"
+                        name="callTime"
+                        value={values.callTime}
+                        onChange={(e) => setField("callTime", e.target.value)}
+                        className={`${fieldClass} appearance-none bg-[length:1rem] bg-[right_1rem_center] bg-no-repeat pr-10`}
+                        style={{
+                          backgroundImage:
+                            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23ffffff99'%3E%3Cpath d='M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z'/%3E%3C/svg%3E\")",
+                        }}
+                      >
+                        <option value="" className="bg-ink text-white">
+                          No preference
+                        </option>
+                        {CALL_TIMES.map((t) => (
+                          <option key={t.value} value={t.value} className="bg-ink text-white">
+                            {t.label}
+                          </option>
+                        ))}
+                      </select>
                     </div>
 
                     <div id="fee-note" className="space-y-2 text-sm text-white/55">
@@ -790,7 +1001,7 @@ export default function ContactForm() {
                       <p className="mt-1 text-white/80">
                         Please try again, or email us directly at{" "}
                         <a
-                          href={enquiryMailto(values.sport)}
+                          href={enquiryMailto(values)}
                           className="font-semibold text-accent underline underline-offset-2"
                         >
                           {ENQUIRY_EMAIL}
