@@ -6,8 +6,8 @@ sport: general
 category: "How-to"
 author: "ESP Editorial"
 date: 2026-10-08
-heroImage: /sports/mountaineering.jpg
-heroAlt: "Hiker on a mountain ridge looking out over a cloud inversion"
+heroImage: "/sports/mountaineering.jpg"
+heroAlt: "A walker with a blue rucksack sits on a grassy hilltop, looking out over a cloud inversion with rounded hilltops poking through"
 featured: false
 draft: true
 ---
@@ -70,7 +70,7 @@ We aim to secure you a place within 5 working days of your enquiry. That's an ai
 
 Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 26 September 2026.) [18]
 
-We refund the matching fee if we can't provide a coach, or if your health or similar circumstances mean you can't train.
+We refund the matching fee if we can't provide a coach, or if your health means you're unable to train.
 
 ### Under-18s
 
@@ -95,7 +95,7 @@ The map is a starting point, not a complete directory: there are no venues yet f
 No. The payment link for the £29.99 matching fee comes at the last stage of your enquiry, and coach session fees are separate.
 
 **Can I get a refund?**
-Yes, if we can't provide a coach, or if your health or similar circumstances mean you can't train.
+Yes, if we can't provide a coach, or if your health means you're unable to train.
 
 **How quickly will I be matched?**
 We aim to secure you a place within 5 working days, but we can't guarantee it.
