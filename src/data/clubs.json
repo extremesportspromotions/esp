@@ -31,6 +31,27 @@
     "url": "http://www.ahpc.org.uk"
   },
   {
+    "id": "snowboarding-aberdeen-snowsports-centre-80572722",
+    "name": "Aberdeen Snowsports Centre",
+    "sportId": "snowboarding",
+    "town": "Aberdeen",
+    "region": "Scotland",
+    "lat": 57.1497,
+    "lng": -2.0943,
+    "url": "https://www.sportaberdeen.co.uk/activities/snowsports",
+    "email": "snowsports@sportaberdeen.co.uk"
+  },
+  {
+    "id": "snowboarding-alpine-snowsports-65028019",
+    "name": "Alpine Snowsports, Aldershot",
+    "sportId": "snowboarding",
+    "town": "Aldershot",
+    "region": "United Kingdom",
+    "lat": 51.25642,
+    "lng": -0.75001,
+    "url": "https://www.everyoneactive.com/centre/alpine-snowsports/"
+  },
+  {
     "id": "mountaineering-alter-rock-climbing-centre-40262945",
     "name": "Alter Rock Climbing Centre",
     "sportId": "mountaineering",
@@ -257,16 +278,6 @@
     "lat": 51.46855,
     "lng": -2.5705,
     "url": "https://blocclimbing.co.uk/"
-  },
-  {
-    "id": "snowboarding-bluebird-ski-snowboard-services-22645632",
-    "name": "Bluebird Ski & Snowboard Services",
-    "sportId": "snowboarding",
-    "town": "UK",
-    "region": "England",
-    "lat": 50.25693,
-    "lng": -5.05531,
-    "url": "https://bluebird-ski-snowboard-services-cornwall.square.site/"
   },
   {
     "id": "mountaineering-boulder-brighton-11352062",
@@ -1485,6 +1496,18 @@
     "url": "https://www.plasticplayground.co.uk/"
   },
   {
+    "id": "snowboarding-plymouth-ski-snowboard-centre-52573324",
+    "name": "Plymouth Ski & Snowboard Centre",
+    "sportId": "snowboarding",
+    "town": "Plymouth",
+    "region": "England",
+    "lat": 50.3755,
+    "lng": -4.1427,
+    "url": "https://www.jnlplymouth.co.uk/",
+    "phone": "01752 600220",
+    "email": "info@jnlplymouth.co.uk"
+  },
+  {
     "id": "kayaking-poole-harbour-canoe-club-26356084",
     "name": "Poole Harbour Canoe Club",
     "sportId": "kayaking",
@@ -1826,6 +1849,18 @@
     "lat": 55.8642,
     "lng": -4.2518,
     "url": "https://www.snowfactor.com"
+  },
+  {
+    "id": "snowboarding-snowdome-tamworth-11781966",
+    "name": "SnowDome Tamworth",
+    "sportId": "snowboarding",
+    "town": "Tamworth",
+    "region": "England",
+    "lat": 52.63017,
+    "lng": -1.6956,
+    "url": "https://www.snowdome.co.uk/",
+    "phone": "03448 000 011 (WhatsApp only)",
+    "email": "guestservices@snowdome.co.uk"
   },
   {
     "id": "hang-gliding-snowdonia-sky-sports-hg-pg-33282383",
