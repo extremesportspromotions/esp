@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { sports } from "@/data/sports";
 import {
+  GENERAL_SPORT,
   GUIDE_CATEGORIES,
   categoryFromSlug,
   categorySlug,
@@ -63,7 +64,7 @@ function Chip({
 export function GuidesBrowserView({ guides, featuredSlug, sport, category }: ViewProps) {
   const categoryName = category === ALL ? undefined : categoryFromSlug(category);
   const activeCategory = categoryName ? category : ALL;
-  const activeSport = sport === ALL || sports.some((s) => s.id === sport) || sport === "general" ? sport : ALL;
+  const activeSport = sport === ALL || sports.some((s) => s.id === sport) || sport === GENERAL_SPORT ? sport : ALL;
 
   const countsBySport = guides.reduce<Record<string, number>>((acc, g) => {
     acc[g.sport] = (acc[g.sport] ?? 0) + 1;

@@ -24,7 +24,7 @@ export default function GuideNextSteps({ sport, sportName }: { sport: string; sp
             href={mapHref}
             className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:border-accent hover:text-accent-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            {isSport ? `Find ${sportName} clubs` : "Find a club"}
+            {isSport ? `Find ${sportName} clubs` : "Find clubs near you"}
           </a>
           <a
             href={enquireHref}

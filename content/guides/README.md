@@ -43,6 +43,18 @@ Reading time is worked out automatically.
 `skydiving`, `motocross`, `kiteboarding`, `wingsuit-flying`, `skateboarding`,
 `surfing`, `base-jumping`, `snowboarding`, `kayaking`, `hang-gliding` — or `general`.
 
+Use **`general`** for site-wide articles that aren't about one sport (for example
+how ESP's coach matching works). A `general` article:
+
+- shows a **General** tag, which links to `/guides`;
+- has no sport hub page and no sport filter chip — it's listed under "All sports";
+- has no sport step in its breadcrumb (just "Guides");
+- ends with a generic "Find clubs near you" button (to `/#find-a-club`) and a
+  "Get matched" button to the enquiry form with no sport pre-selected (`/#enquire`);
+- still gets related guides (same category first, then newest);
+- has no sport photo to fall back on, so **set `heroImage` and `heroAlt`**
+  (the default is `/sports/mountaineering.jpg`).
+
 ### Allowed categories (`category`)
 
 `How-to`, `Safety`, `Gear`, `Getting started`, `Club reviews`, `Stories`, `News`
