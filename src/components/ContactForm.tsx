@@ -22,6 +22,11 @@ const AGE_BANDS = [
   { value: "55-plus", label: "55+" },
 ] as const;
 
+const UNDER_18 = "under-18";
+
+const UNDER_18_NOTE =
+  "Under 18? You'll need a parent or guardian's consent, and they must travel with you to the club.";
+
 const TRAVEL_OPTIONS = [
   { value: "local", label: "Local only" },
   { value: "25-miles", label: "Up to 25 miles" },
@@ -48,6 +53,7 @@ type QuizState = {
   travel: string;
   bookingType: string;
   riskAck: boolean;
+  guardianConsent: boolean;
   name: string;
   email: string;
 };
@@ -62,6 +68,7 @@ const initial: QuizState = {
   travel: "",
   bookingType: "",
   riskAck: false,
+  guardianConsent: false,
   name: "",
   email: "",
 };
@@ -107,6 +114,12 @@ function buildPayload(values: QuizState, honey: string) {
     Level: labelFor(LEVELS, values.level),
     Goal: values.goal.trim() || "—",
     "Age band": labelFor(AGE_BANDS, values.ageBand),
+    "Parent / guardian consent (under 18s)":
+      values.ageBand === UNDER_18
+        ? values.guardianConsent
+          ? "Yes — confirmed a parent or guardian consents and will travel with them"
+          : "No"
+        : "Not applicable (18 or over)",
     "Injuries or conditions": values.healthNote.trim() || "—",
     "Town / city": values.location.trim(),
     "How far they will travel": labelFor(TRAVEL_OPTIONS, values.travel),
@@ -132,7 +145,10 @@ function isStepValid(step: number, values: QuizState): boolean {
     case 2:
       return Boolean(values.level);
     case 3:
-      return Boolean(values.ageBand);
+      return (
+        Boolean(values.ageBand) &&
+        (values.ageBand !== UNDER_18 || values.guardianConsent)
+      );
     case 4:
       return Boolean(values.location.trim() && values.travel);
     case 5:
@@ -233,7 +249,7 @@ export default function ContactForm() {
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (sending) return;
-    if (!isStepValid(6, values)) {
+    if (!isStepValid(3, values) || !isStepValid(6, values)) {
       setEmailTouched(true);
       return;
     }
@@ -290,13 +306,14 @@ export default function ContactForm() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75">
             Answer a few quick questions so we can match you with the right
-            coach. Takes about a minute. Our limited early matching fee is £30
-            to find and introduce you to the right coach; coach session fees are
-            separate. You won&apos;t be charged anything by sending this form.
+            coach. Takes about a minute. Our matching fee is £29.99 to find and
+            introduce you to the right coach; coach session fees are separate.
+            You won&apos;t be charged anything by sending this form — payment
+            is the final step, once we&apos;ve found your coach.
           </p>
           <p className="mt-3 rounded-lg border border-accent/25 bg-accent/10 px-4 py-3 text-sm text-white/75">
             <span className="font-semibold text-accent">Find a coach</span>{" "}
-            = send a free enquiry below, then get matched — £30. Not looking
+            = send a free enquiry below, then get matched — £29.99. Not looking
             for a coach?{" "}
             <a
               href="#find-a-club"
@@ -489,6 +506,36 @@ export default function ContactForm() {
                       value={values.ageBand}
                       onChange={(v) => setField("ageBand", v)}
                     />
+                    {values.ageBand === UNDER_18 && (
+                      <div className="space-y-3 rounded-xl border border-accent/40 bg-accent/10 p-4">
+                        <p
+                          id="under-18-note"
+                          className="text-sm font-medium leading-relaxed text-white"
+                        >
+                          {UNDER_18_NOTE}
+                        </p>
+                        <label className="flex cursor-pointer items-start gap-3 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-accent">
+                          <input
+                            type="checkbox"
+                            name="guardianConsent"
+                            required
+                            aria-describedby="under-18-note"
+                            checked={values.guardianConsent}
+                            onChange={(e) =>
+                              setField("guardianConsent", e.target.checked)
+                            }
+                            className="mt-0.5 h-4 w-4 shrink-0 rounded border-white/30 bg-white/5 text-accent accent-accent focus:ring-2 focus:ring-accent/40"
+                          />
+                          <span className="text-sm font-medium text-white">
+                            My parent or guardian consents to this enquiry and
+                            will travel with me to the club{" "}
+                            <span className="font-normal text-white/60">
+                              (required for under 18s)
+                            </span>
+                          </span>
+                        </label>
+                      </div>
+                    )}
                     <div>
                       <label
                         htmlFor="healthNote"
@@ -653,12 +700,19 @@ export default function ContactForm() {
                       )}
                     </div>
 
-                    <p id="fee-note" className="text-sm text-white/55">
-                      Our limited early matching fee is £30 to find and
-                      introduce you to the right coach; coach session fees are
-                      separate. You won&apos;t be charged anything by sending
-                      this form.
-                    </p>
+                    <div id="fee-note" className="space-y-2 text-sm text-white/55">
+                      <p>
+                        Our matching fee is £29.99 to find and introduce you to
+                        the right coach; coach session fees are separate.
+                      </p>
+                      <p>
+                        You won&apos;t be charged anything by sending this form
+                        — payment is the final step, once we&apos;ve found your
+                        coach.
+                      </p>
+                      <p>All our coaches are UK-based.</p>
+                      <p>{UNDER_18_NOTE}</p>
+                    </div>
                   </div>
                 )}
               </div>

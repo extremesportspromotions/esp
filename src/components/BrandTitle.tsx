@@ -41,14 +41,14 @@ export default function BrandTitle() {
         )}
         <p className="mx-auto mt-5 max-w-xl text-base text-white/70 sm:text-lg">
           Pick a sport → enquire → get matched with a coach for{" "}
-          <span className="font-semibold text-accent">£30</span>.
+          <span className="font-semibold text-accent">£29.99</span>.
         </p>
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           <Link
             href="/#enquire"
             className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Get matched — £30
+            Get matched — £29.99
           </Link>
           <Link
             href="/#sports"

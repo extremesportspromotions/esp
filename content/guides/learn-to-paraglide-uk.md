@@ -90,7 +90,7 @@ Getting your Club Pilot rating isn't the end of learning. You'll join a BHPA rec
 
 ## Ready to take off?
 
-Start by finding a BHPA registered school on the BHPA website [1]. Our [club map](https://esp-lemon.vercel.app/?sport=paragliding#find-a-club) currently shows BHPA recreational clubs rather than schools, so use it to find your local club once your training is under way. If you'd like help finding a coach, ESP can match you with one. Our limited early matching fee is £30 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 25 September 2026.)
+Start by finding a BHPA registered school on the BHPA website [1]. Our [club map](https://esp-lemon.vercel.app/?sport=paragliding#find-a-club) currently shows BHPA recreational clubs rather than schools, so use it to find your local club once your training is under way. If you'd like help finding a coach, ESP can match you with one. Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 26 September 2026.)
 
 ## Sources
 

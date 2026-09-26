@@ -118,7 +118,7 @@ Once you can link turns and control your speed, the mountains are a brilliant ne
 
 Snowboarding rewards good habits early. A qualified coach can check your stance, spot small issues before they become ingrained, set drills that match your level and keep your learning safe – so you progress with confidence rather than guesswork.
 
-If you'd like help finding the right person, ESP can match you with a qualified snowboard coach. Our limited early matching fee is £30 to find and introduce you to the right coach; coach session fees are separate. No pressure – get in touch if and when it suits you.
+If you'd like help finding the right person, ESP can match you with a qualified snowboard coach. Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. No pressure – get in touch if and when it suits you.
 
 ## FAQ
 

@@ -7,12 +7,12 @@ const steps = [
   {
     step: "02",
     title: "Get matched",
-    body: "We connect you with a professional coach who fits your goals and schedule.",
+    body: "We connect you with a professional coach who fits your goals and schedule. All our coaches are UK-based.",
   },
   {
     step: "03",
-    title: "Your £30 coach introduction",
-    body: "Our limited early matching fee is £30 to find and introduce you to the right coach; coach session fees are separate.",
+    title: "Your £29.99 coach introduction",
+    body: "Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. Payment is the final step, once we've found your coach.",
   },
   {
     step: "04",

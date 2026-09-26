@@ -76,7 +76,7 @@ A good instructor will be happy to answer all of these and won't rush you.
 
 ## Ready to dive in?
 
-Our [club map](https://esp-lemon.vercel.app/?sport=scuba-diving#find-a-club) shows some of the UK's scuba centres and clubs. It isn't a complete list, so check PADI's and BSAC's own finders too [2][3]. If you'd like help finding an instructor, ESP can match you with a coach. Our limited early matching fee is £30 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 25 September 2026.)
+Our [club map](https://esp-lemon.vercel.app/?sport=scuba-diving#find-a-club) shows some of the UK's scuba centres and clubs. It isn't a complete list, so check PADI's and BSAC's own finders too [2][3]. If you'd like help finding an instructor, ESP can match you with a coach. Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 26 September 2026.)
 
 ## Sources
 

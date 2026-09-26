@@ -29,7 +29,7 @@ export default function GuidesComingSoon({ sport, sportName }: { sport?: string;
           href={enquireHref}
           className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
-          Get matched — £30
+          Get matched — £29.99
         </a>
       </div>
     </div>

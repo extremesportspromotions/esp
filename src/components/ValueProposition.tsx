@@ -17,14 +17,14 @@ export default function ValueProposition() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
             Extreme Sports Promotions connects students with professional
-            extreme-sports coaches. Our limited early matching fee is £30 to find
-            and introduce you to the right coach; coach session fees are separate.
+            extreme-sports coaches. Our matching fee is £29.99 to find and
+            introduce you to the right coach; coach session fees are separate.
           </p>
           <ul className="mt-6 space-y-3 text-white/80">
             {[
-              "Curated coaches across land, air, and water sports",
-              "£30 limited early matching fee — no endless browsing",
-              "Coach session fees are separate from the £30 matching fee",
+              "Curated, UK-based coaches across land, air, and water sports",
+              "£29.99 matching fee — no endless browsing",
+              "Coach session fees are separate from the £29.99 matching fee",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <span
@@ -41,7 +41,7 @@ export default function ValueProposition() {
             href="#enquire"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Find your coach — £30
+            Get matched — £29.99
           </a>
         </div>
 
@@ -52,8 +52,8 @@ export default function ValueProposition() {
               body: "We screen instructors for credentials, experience, and teaching clarity.",
             },
             {
-              title: "£30 early matching fee",
-              body: "A limited early rate to find and introduce you to a coach; session fees are separate.",
+              title: "£29.99 matching fee",
+              body: "Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate.",
             },
             {
               title: "Student-first",

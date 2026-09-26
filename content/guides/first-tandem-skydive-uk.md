@@ -72,7 +72,7 @@ Many people jump once for the experience; others want more [4]. British Skydivin
 
 ## Ready to jump?
 
-Use our [club map](https://esp-lemon.vercel.app/?sport=skydiving#find-a-club) to find some of the UK's skydiving centres. It doesn't list every affiliated PTO, so check British Skydiving's own list too [4]. If you'd like help with coaching after your first jump, ESP can match you with a coach. Our limited early matching fee is £30 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 25 September 2026.)
+Use our [club map](https://esp-lemon.vercel.app/?sport=skydiving#find-a-club) to find some of the UK's skydiving centres. It doesn't list every affiliated PTO, so check British Skydiving's own list too [4]. If you'd like help with coaching after your first jump, ESP can match you with a coach. Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 26 September 2026.)
 
 ## Sources
 

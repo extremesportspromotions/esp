@@ -17,7 +17,7 @@ export default function GuideNextSteps({ sport, sportName }: { sport: string; sp
         </h2>
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-white/75">
           Browse checked UK clubs, centres and schools on our free map — or tell us what you want to
-          achieve and we&apos;ll match you with a professional coach.
+          achieve and we&apos;ll match you with a professional, UK-based coach.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <a
@@ -30,7 +30,7 @@ export default function GuideNextSteps({ sport, sportName }: { sport: string; sp
             href={enquireHref}
             className="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3.5 text-[13px] font-bold sm:px-7 sm:text-sm uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Get matched — £30
+            Get matched — £29.99
           </a>
         </div>
       </div>

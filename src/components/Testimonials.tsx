@@ -12,7 +12,7 @@ export default function Testimonials() {
       attribution: "Alex R. — beginner climber (sample quote)",
     },
     {
-      text: "I knew the sport I wanted; I just needed someone qualified to teach it safely. The £30 match was straightforward.",
+      text: "I knew the sport I wanted; I just needed someone qualified to teach it safely. The £29.99 match was straightforward.",
       attribution: "Jordan M. — scuba intro (sample quote)",
     },
     {

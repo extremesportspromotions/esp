@@ -38,4 +38,4 @@ Sub-headings (###) appear indented in the table of contents.
 
 ## Ready to get started?
 
-End with a short nudge to find a club on the map or get matched with a coach for £30. (The page adds the buttons automatically.)
+End with a short nudge to find a club on the map or get matched with a coach for £29.99. (The page adds the buttons automatically.)

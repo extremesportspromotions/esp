@@ -25,13 +25,6 @@ export default function PrivacyPage() {
       <TopBar />
       <main id="main" className="flex-1 bg-ink">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
-          <p
-            role="note"
-            className="mb-8 rounded-xl border border-accent/40 bg-accent/10 px-4 py-3 text-sm font-semibold text-white"
-          >
-            Draft — awaiting review by ESP
-          </p>
-
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Your privacy</p>
           <h1 className="font-display mt-2 text-3xl font-bold text-white sm:text-4xl">Privacy notice</h1>
           <p className="mt-4 text-base leading-relaxed text-white/75">
@@ -56,6 +49,10 @@ export default function PrivacyPage() {
               <li>the sport you&apos;re interested in, your level and your goal;</li>
               <li>your age band;</li>
               <li>
+                if you&apos;re under 18, that you&apos;ve confirmed a parent or guardian consents and
+                will travel with you;
+              </li>
+              <li>
                 any injuries or health conditions you choose to tell us about (this is optional);
               </li>
               <li>your town or city and how far you&apos;ll travel;</li>
@@ -67,9 +64,18 @@ export default function PrivacyPage() {
             <h2>Why we use it</h2>
             <p>
               We use your details only to reply to your enquiry and to find and introduce you to a
-              suitable coach, because you&apos;ve asked us to. If you tell us about an injury or health
-              condition, we use it only to help find a coach who can teach you safely, and you can ask
-              us to delete it at any time.
+              suitable coach, because you&apos;ve asked us to.
+            </p>
+
+            <h2>Health and injury information</h2>
+            <p>
+              The question about injuries or health conditions is optional: you don&apos;t have to
+              answer it to send an enquiry. If you do tell us about an injury or health condition, we
+              use it only to pass relevant health information to the coach or club you&apos;re matched
+              with, so they can train you safely. We only share it when we&apos;re introducing you to
+              them, and we&apos;ll check with you before passing on your details. Like the rest of your
+              enquiry, we keep it for up to 12 months after your last contact with us, and you can ask
+              us to delete it sooner at any time.
             </p>
 
             <h2>How your enquiry reaches us</h2>
@@ -94,11 +100,8 @@ export default function PrivacyPage() {
 
             <h2>How long we keep it</h2>
             <p>
-              We keep your enquiry for up to 12 months after your last contact with us, then delete
-              it. You can ask us to delete it sooner at any time.
-            </p>
-            <p className="text-sm text-white/55">
-              [For ESP to confirm: the 12-month retention period above is a suggestion.]
+              We keep enquiry details for up to 12 months after your last contact with us, then
+              delete them. You can ask us to delete them sooner at any time.
             </p>
 
             <h2>Your rights</h2>
