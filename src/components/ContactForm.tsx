@@ -31,8 +31,8 @@ const TRAVEL_OPTIONS = [
   { value: "local", label: "Local only" },
   { value: "25-miles", label: "Up to 25 miles" },
   { value: "50-miles", label: "Up to 50 miles" },
-  { value: "further", label: "Happy to travel further" },
-  { value: "overseas", label: "Overseas OK" },
+  { value: "100-miles", label: "Up to 100 miles" },
+  { value: "anywhere-uk", label: "Anywhere in the UK" },
 ] as const;
 
 const BOOKING_TYPES = [
@@ -86,6 +86,20 @@ type SendStatus = "idle" | "sending" | "success" | "error";
 
 const SEND_TIMEOUT_MS = 20000;
 
+/**
+ * Email subject for every enquiry, e.g. "New ESP enquiry — Surfing". Used by the
+ * form (FormSubmit's _subject) and by the "email us" mailto links, so emails
+ * from either route arrive with the same subject.
+ */
+function enquirySubject(sportId: string): string {
+  const sportName = sports.find((s) => s.id === sportId)?.name;
+  return sportName ? `New ESP enquiry — ${sportName}` : "New ESP enquiry";
+}
+
+function enquiryMailto(sportId: string): string {
+  return `mailto:${ENQUIRY_EMAIL}?subject=${encodeURIComponent(enquirySubject(sportId))}`;
+}
+
 function labelFor(
   options: readonly { value: string; label: string }[],
   value: string,
@@ -102,7 +116,7 @@ function buildPayload(values: QuizState, honey: string) {
   const sportName = sports.find((s) => s.id === values.sport)?.name ?? values.sport;
   const pageUrl = typeof window === "undefined" ? "" : window.location.href;
   return {
-    _subject: `New ESP enquiry — ${sportName}`,
+    _subject: enquirySubject(values.sport),
     _replyto: values.email.trim(),
     _template: "table",
     _captcha: "false",
@@ -326,7 +340,7 @@ export default function ContactForm() {
           <p className="mt-4 text-sm text-white/50">
             Prefer email?{" "}
             <a
-              href={`mailto:${ENQUIRY_EMAIL}?subject=ESP%20Enquiry`}
+              href={enquiryMailto(values.sport)}
               className="text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {ENQUIRY_EMAIL}
@@ -776,7 +790,7 @@ export default function ContactForm() {
                       <p className="mt-1 text-white/80">
                         Please try again, or email us directly at{" "}
                         <a
-                          href={`mailto:${ENQUIRY_EMAIL}?subject=ESP%20Enquiry`}
+                          href={enquiryMailto(values.sport)}
                           className="font-semibold text-accent underline underline-offset-2"
                         >
                           {ENQUIRY_EMAIL}
