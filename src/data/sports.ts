@@ -28,6 +28,7 @@ export const sports: Sport[] = [
   {
     id: "scuba-diving",
     guide: "/guides/first-scuba-course",
+    video: "/carousel-clips/carousel-02-scuba-diving.mp4",
     name: "Scuba Diving",
     description:
       "Explore reefs and wrecks alongside PADI/SSI pros who refine buoyancy, navigation, and underwater confidence.",
@@ -49,6 +50,7 @@ export const sports: Sport[] = [
   {
     id: "mountain-biking",
     guide: "/guides/learn-to-mountain-bike-uk",
+    video: "/carousel-clips/carousel-04-mountain-biking.mp4",
     name: "Mountain Biking",
     description:
       "Rip trails with coaches who dial in bike setup, cornering, and descending skills for every terrain level.",
@@ -82,6 +84,7 @@ export const sports: Sport[] = [
   {
     id: "motocross",
     guide: "/guides/motocross-for-beginners-uk",
+    video: "/carousel-clips/carousel-07-motocross.mp4",
     name: "Motocross",
     description:
       "Build throttle control, jumps, and race craft with coaches who know the dirt track inside out.",
@@ -124,6 +127,7 @@ export const sports: Sport[] = [
   {
     id: "surfing",
     guide: "/guides/surfing-for-beginners-uk",
+    video: "/carousel-clips/carousel-11-surfing.mp4",
     name: "Surfing",
     description:
       "Read waves, improve paddle fitness, and refine your pop-up with coastal coaches matched to your level.",
@@ -168,6 +172,8 @@ export const sports: Sport[] = [
   {
     id: "hang-gliding",
     guide: "/guides/hang-gliding-for-beginners-uk",
+    video: "/carousel-clips/carousel-15-hang-gliding.mp4",
+    credit: "TamaMer, CC BY-SA 3.0",
     name: "Hang Gliding",
     description:
       "Feel the ridge lift with hang-gliding instructors who walk you from ground handling to soaring flights.",

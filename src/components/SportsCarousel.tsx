@@ -63,7 +63,7 @@ export default function SportsCarousel() {
       id="sports"
       aria-roledescription="carousel"
       aria-label="Extreme sports"
-      className="relative overflow-hidden bg-ink"
+      className="relative bg-ink"
     >
       <div className="mx-auto max-w-7xl px-3 py-12 sm:px-6 sm:py-16 lg:px-8 lg:max-w-[90rem]">
         <div className="mb-7 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
@@ -81,7 +81,7 @@ export default function SportsCarousel() {
         </div>
 
         <div
-          className="relative touch-pan-y select-none overflow-hidden rounded-2xl border border-white/10 bg-surface shadow-2xl shadow-black/40 sm:rounded-3xl"
+          className="relative touch-pan-y select-none rounded-2xl border border-white/10 bg-surface shadow-2xl shadow-black/40 sm:rounded-3xl"
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={endDrag}
@@ -120,7 +120,7 @@ export default function SportsCarousel() {
                     playsInline
                     preload="metadata"
                     aria-label={sport.alt}
-                    className="absolute inset-0 h-full w-full object-contain brightness-[1.1] contrast-[1.02] saturate-[1.04]"
+                    className="absolute inset-0 block h-full w-full object-contain brightness-[1.1] contrast-[1.02] saturate-[1.04]"
                   />
                 ) : (
                   <Image
