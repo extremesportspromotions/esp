@@ -82,7 +82,6 @@ export const sports: Sport[] = [
   {
     id: "motocross",
     guide: "/guides/motocross-for-beginners-uk",
-    video: "/carousel-clips/carousel-07-motocross.mp4",
     name: "Motocross",
     description:
       "Build throttle control, jumps, and race craft with coaches who know the dirt track inside out.",
