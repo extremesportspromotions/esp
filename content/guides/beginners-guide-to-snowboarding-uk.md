@@ -5,11 +5,10 @@ description: "Never snowboarded? Where to learn in the UK, what happens in your 
 sport: snowboarding
 category: "Getting started"
 author: "ESP Editorial"
-date: 2026-10-06
-heroImage: /sports/snowboarding.jpg
-heroAlt: "Snowboarder in black kit carving through powder snow with spray, wearing a helmet and goggles, among evergreen trees"
+date: 2026-10-03
+heroAlt: "A beginner snowboarder in a helmet and gloves side-slipping on their heel edge down a gentle indoor real-snow slope while an instructor watches"
 featured: false
-draft: true
+draft: false
 ---
 
 Never strapped into a snowboard? You don't need to live next to a mountain to learn. Between indoor real-snow centres, outdoor artificial slopes and Scotland's ski centres, the UK has plenty of places to take your first slide. Here's where to go, what happens in your first lesson, what kit you need and how to stay safe.
