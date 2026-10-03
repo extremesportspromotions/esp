@@ -108,6 +108,8 @@ export const sports: Sport[] = [
   {
     id: "wingsuit-flying",
     guide: "/guides/wingsuit-flying-for-beginners-uk",
+    video: "/carousel-clips/carousel-09-wingsuit-flying.mp4",
+    credit: "Ace_NoOne, CC BY-SA 2.0",
     name: "Wingsuit Flying",
     description:
       "Advance from BASE/sky foundations into proximity flying with elite wingsuit mentors and safety protocols.",
