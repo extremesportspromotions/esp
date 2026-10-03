@@ -12,7 +12,7 @@ featured: false
 draft: false
 ---
 
-Learning to scuba dive opens up a whole new world. Whether you dream of tropical reefs or want to explore the wrecks and wildlife around the British coast, it all starts with an entry-level course. Here's what happens on one, and how to choose a course that suits you.
+Scuba diving is breathing underwater from a tank, with an instructor beside you. Here's how to start.
 
 ## Try it before you sign up
 
@@ -53,7 +53,7 @@ In the UK, you'll usually choose between a dive centre and a club.
 
 **Dive centres** are businesses that run courses to a schedule. BSAC says you can learn at one of its training centres in around five days [5].
 
-**Clubs**, such as BSAC clubs, usually spread training over weeks or months [5]. BSAC's instructors are volunteers, who introduce around 5,000 people a year to diving and snorkelling [15]. Once you qualify, you can join in regular club dives [6].
+**Clubs**, such as BSAC clubs, usually spread training over weeks or months [5]. BSAC's instructors are volunteers [15]. Once you qualify, you can join in regular club dives [6].
 
 Neither is better. It depends on your schedule, your budget and whether you want a community to dive with afterwards.
 
@@ -76,7 +76,7 @@ A good instructor will be happy to answer all of these and won't rush you.
 
 ## Ready to dive in?
 
-Our [club map](https://esp-lemon.vercel.app/?sport=scuba-diving#find-a-club) shows some of the UK's scuba centres and clubs. It isn't a complete list, so check PADI's and BSAC's own finders too [2][3]. If you'd like help finding an instructor, ESP can match you with a coach. Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 26 September 2026.)
+Our [club map](https://esp-lemon.vercel.app/?sport=scuba-diving#find-a-club) shows some of the UK's scuba centres and clubs. It isn't a complete list, so check PADI's and BSAC's own finders too [2][3]. If you would like help finding a coach, ESP can match you. The fee is £29.99. Nothing is charged when you send the form. The coach's own fees are separate. We refund the fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.
 
 ## Sources
 

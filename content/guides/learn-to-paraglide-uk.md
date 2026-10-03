@@ -3,7 +3,7 @@ title: "Learning to paraglide in the UK: how to get started"
 slug: learn-to-paraglide-uk
 description: "How to learn to paraglide in the UK: choosing a BHPA registered school, what training involves, the Elementary Pilot and Club Pilot stages, and what's next."
 sport: paragliding
-category: How-to
+category: Getting started
 author: ESP Editorial
 date: 2026-09-25
 heroAlt: "Paraglider with a white, cyan and yellow wing over a mountain valley"
@@ -90,7 +90,7 @@ Getting your Club Pilot rating isn't the end of learning. You'll join a BHPA rec
 
 ## Ready to take off?
 
-Start by finding a BHPA registered school on the BHPA website [1]. Our [club map](https://esp-lemon.vercel.app/?sport=paragliding#find-a-club) currently shows BHPA recreational clubs rather than schools, so use it to find your local club once your training is under way. If you'd like help finding a coach, ESP can match you with one. Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 26 September 2026.)
+Start by finding a BHPA registered school on the BHPA website [1]. Our [club map](https://esp-lemon.vercel.app/?sport=paragliding#find-a-club) currently shows BHPA recreational clubs rather than schools, so use it to find your local club once your training is under way. If you would like help finding a coach, ESP can match you. The fee is £29.99. Nothing is charged when you send the form. The coach's own fees are separate. We refund the fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.
 
 ## Sources
 
