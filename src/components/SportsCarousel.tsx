@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { sports } from "@/data/sports";
 
@@ -10,6 +11,7 @@ export default function SportsCarousel() {
   const [index, setIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const touchDeltaX = useRef(0);
+  const suppressClick = useRef(false);
   const [dragOffset, setDragOffset] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -49,6 +51,7 @@ export default function SportsCarousel() {
     touchDeltaX.current = 0;
     setIsDragging(false);
     setDragOffset(0);
+    suppressClick.current = Math.abs(dx) > 10;
     if (dx > SWIPE_THRESHOLD) prev();
     else if (dx < -SWIPE_THRESHOLD) next();
   };
@@ -94,6 +97,18 @@ export default function SportsCarousel() {
               transition: isDragging ? "none" : "transform 280ms ease-out",
             }}
           >
+            <Link
+              href={sport.guide}
+              aria-label={`Read the ${sport.name} guide`}
+              className="absolute inset-0 block"
+              draggable={false}
+              onClick={(e) => {
+                if (suppressClick.current) {
+                  e.preventDefault();
+                  suppressClick.current = false;
+                }
+              }}
+            >
             <Image
               src={sport.image}
               alt={sport.alt}
@@ -116,7 +131,11 @@ export default function SportsCarousel() {
               <p className="mt-3 max-w-3xl text-base leading-relaxed text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)] sm:mt-4 sm:text-lg lg:text-xl">
                 {sport.description}
               </p>
+              <p className="mt-3 text-sm font-semibold text-white underline decoration-white/70 underline-offset-4 sm:text-base">
+                Read the guide
+              </p>
             </div>
+            </Link>
           </div>
 
           <button
