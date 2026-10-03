@@ -91,7 +91,7 @@ export default function SportsCarousel() {
           aria-label={`${sport.name}: ${sport.description}`}
         >
           <div
-            className="relative aspect-[4/3] min-h-[52vh] w-full sm:aspect-[16/9] sm:min-h-[60vh] lg:min-h-[68vh]"
+            className="relative w-full"
             style={{
               transform: `translateX(${dragOffset * 0.35}px)`,
               transition: isDragging ? "none" : "transform 280ms ease-out",
@@ -100,7 +100,7 @@ export default function SportsCarousel() {
             <Link
               href={sport.guide}
               aria-label={`Read the ${sport.name} guide`}
-              className="absolute inset-0 block"
+              className="block"
               draggable={false}
               onClick={(e) => {
                 if (suppressClick.current) {
@@ -109,32 +109,52 @@ export default function SportsCarousel() {
                 }
               }}
             >
-            <Image
-              src={sport.image}
-              alt={sport.alt}
-              fill
-              priority
-              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1440px"
-              className="object-cover brightness-[1.1] contrast-[1.02] saturate-[1.04]"
-              style={{ objectPosition: sport.imagePosition ?? "50% 50%" }}
-              draggable={false}
-            />
-            {/* Minimal bottom scrim — photos stay close to originals */}
-            <div
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-[32%] bg-gradient-to-t from-black/40 via-black/12 to-transparent"
-              aria-hidden
-            />
-            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 lg:p-12">
-              <h3 className="font-display text-3xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">
-                {sport.name}
-              </h3>
-              <p className="mt-3 max-w-3xl text-base leading-relaxed text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.55)] sm:mt-4 sm:text-lg lg:text-xl">
-                {sport.description}
-              </p>
-              <p className="mt-3 text-sm font-semibold text-white underline decoration-white/70 underline-offset-4 sm:text-base">
-                Read the guide
-              </p>
-            </div>
+              <div className="relative aspect-[16/9] w-full">
+                {sport.video ? (
+                  <video
+                    src={sport.video}
+                    poster={sport.image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-label={sport.alt}
+                    className="absolute inset-0 h-full w-full object-contain brightness-[1.1] contrast-[1.02] saturate-[1.04]"
+                  />
+                ) : (
+                  <Image
+                    src={sport.image}
+                    alt={sport.alt}
+                    fill
+                    priority
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1440px"
+                    className="object-contain brightness-[1.1] contrast-[1.02] saturate-[1.04]"
+                    draggable={false}
+                  />
+                )}
+                {/* Minimal bottom scrim — photos stay close to originals */}
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[32%] bg-gradient-to-t from-black/40 via-black/12 to-transparent"
+                  aria-hidden
+                />
+              </div>
+              <div className="bg-surface px-6 py-5 sm:px-10 sm:py-7 lg:px-12">
+                <h3 className="font-display text-3xl font-bold text-white sm:text-5xl lg:text-6xl">
+                  {sport.name}
+                </h3>
+                <p className="mt-3 max-w-3xl text-base leading-relaxed text-white sm:text-lg lg:text-xl">
+                  {sport.description}
+                </p>
+                <p className="mt-3 text-sm font-semibold text-white underline decoration-white/70 underline-offset-4 sm:text-base">
+                  Read the guide
+                </p>
+                {sport.credit ? (
+                  <p className="mt-3 text-xs text-white/65 sm:text-sm">
+                    Credit: {sport.credit}
+                  </p>
+                ) : null}
+              </div>
             </Link>
           </div>
 
