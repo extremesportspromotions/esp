@@ -6,7 +6,7 @@ sport: mountain-biking
 category: Getting started
 author: ESP Editorial
 date: 2026-10-03
-heroAlt: "A rider in a helmet on a waymarked forest trail"
+heroAlt: "A rider in a helmet on a wooded dirt trail"
 heroImage: "https://images.unsplash.com/photo-1761225155424-d6bfed504284?auto=format&fit=crop&w=2000&q=80"
 featured: false
 draft: false
