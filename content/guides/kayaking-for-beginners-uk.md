@@ -6,7 +6,7 @@ sport: kayaking
 category: Getting started
 author: ESP Editorial
 date: 2026-10-03
-heroAlt: "A paddler in a buoyancy aid on calm water"
+heroAlt: "A paddler in a blue shirt, seen from behind, in an orange kayak on calm tree-lined water"
 heroImage: "/sports/kayaking.jpg"
 featured: false
 draft: false
