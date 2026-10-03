@@ -18,7 +18,6 @@ export const sports: Sport[] = [
   {
     id: "mountaineering",
     guide: "/guides/mountaineering-for-beginners-uk",
-    video: "/carousel-clips/carousel-01-mountaineering.mp4",
     name: "Mountaineering",
     description:
       "Scale iconic peaks with certified alpine guides who teach rope work, route finding, and high-altitude safety.",
@@ -29,7 +28,6 @@ export const sports: Sport[] = [
   {
     id: "scuba-diving",
     guide: "/guides/first-scuba-course",
-    video: "/carousel-clips/carousel-02-scuba-diving.mp4",
     name: "Scuba Diving",
     description:
       "Explore reefs and wrecks alongside PADI/SSI pros who refine buoyancy, navigation, and underwater confidence.",
@@ -51,7 +49,6 @@ export const sports: Sport[] = [
   {
     id: "mountain-biking",
     guide: "/guides/learn-to-mountain-bike-uk",
-    video: "/carousel-clips/carousel-04-mountain-biking.mp4",
     name: "Mountain Biking",
     description:
       "Rip trails with coaches who dial in bike setup, cornering, and descending skills for every terrain level.",
@@ -107,8 +104,6 @@ export const sports: Sport[] = [
   {
     id: "wingsuit-flying",
     guide: "/guides/wingsuit-flying-for-beginners-uk",
-    video: "/carousel-clips/carousel-09-wingsuit-flying.mp4",
-    credit: "Anton Squeezer, CC BY 3.0",
     name: "Wingsuit Flying",
     description:
       "Advance from BASE/sky foundations into proximity flying with elite wingsuit mentors and safety protocols.",
@@ -130,7 +125,6 @@ export const sports: Sport[] = [
   {
     id: "surfing",
     guide: "/guides/surfing-for-beginners-uk",
-    video: "/carousel-clips/carousel-11-surfing.mp4",
     name: "Surfing",
     description:
       "Read waves, improve paddle fitness, and refine your pop-up with coastal coaches matched to your level.",
@@ -175,7 +169,6 @@ export const sports: Sport[] = [
   {
     id: "hang-gliding",
     guide: "/guides/hang-gliding-for-beginners-uk",
-    video: "/carousel-clips/carousel-15-hang-gliding.mp4",
     name: "Hang Gliding",
     description:
       "Feel the ridge lift with hang-gliding instructors who walk you from ground handling to soaring flights.",

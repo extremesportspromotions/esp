@@ -129,7 +129,7 @@ export default function SportsCarousel() {
                     fill
                     priority
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1440px"
-                    className="object-contain brightness-[1.1] contrast-[1.02] saturate-[1.04]"
+                    className="object-cover brightness-[1.1] contrast-[1.02] saturate-[1.04]"
                     draggable={false}
                   />
                 )}
