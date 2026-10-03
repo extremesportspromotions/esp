@@ -18,6 +18,8 @@ export const sports: Sport[] = [
   {
     id: "mountaineering",
     guide: "/guides/mountaineering-for-beginners-uk",
+    video: "/carousel-clips/carousel-01-mountaineering.mp4",
+    credit: "Pixabay Content License",
     name: "Mountaineering",
     description:
       "Scale iconic peaks with certified alpine guides who teach rope work, route finding, and high-altitude safety.",
