@@ -66,7 +66,7 @@ export default function ClubsMapSection() {
               href="#enquire"
               className="font-semibold text-accent underline-offset-2 hover:underline"
             >
-              Get matched — £29.99
+              Get matched
             </a>
             .
           </p>

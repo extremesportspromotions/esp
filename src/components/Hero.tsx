@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-4 py-16 sm:px-6 sm:py-24 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-2xl">
           <p className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent">
-            £29.99 matching fee · UK-based coaches
+            UK-based coaches
           </p>
           <h2
             id="hero-heading"
@@ -21,12 +21,11 @@ export default function Hero() {
           </h2>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
             Extreme Sports Promotions matches you with a professional
-            extreme-sports coach. Our matching fee is £29.99 to find and
-            introduce you to the right coach; coach session fees are separate.
+            extreme-sports coach.
           </p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/55">
             <span className="font-semibold text-white/75">Find a coach</span>{" "}
-            = send a free enquiry below, then get matched — £29.99.{" "}
+            = send a free enquiry below, then get matched.{" "}
             <span className="font-semibold text-white/75">Find a club</span>{" "}
             = browse centres and parks near you — free, no booking.
           </p>
@@ -35,7 +34,7 @@ export default function Hero() {
               href="#enquire"
               className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/25 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              Get matched — £29.99
+              Get matched
             </a>
           </div>
         </div>

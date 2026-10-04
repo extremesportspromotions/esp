@@ -440,14 +440,11 @@ export default function ContactForm() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75">
             Answer a few quick questions so we can match you with the right
-            coach. Takes about a minute. Our matching fee is £29.99 to find and
-            introduce you to the right coach; coach session fees are separate.
-            You won&apos;t be charged anything by sending this form — payment
-            is the final step, once we&apos;ve found your coach.
+            coach. Takes about a minute.
           </p>
           <p className="mt-3 rounded-lg border border-accent/25 bg-accent/10 px-4 py-3 text-sm text-white/75">
             <span className="font-semibold text-accent">Find a coach</span>{" "}
-            = send a free enquiry below, then get matched — £29.99. Not looking
+            = send a free enquiry below, then get matched. Not looking
             for a coach?{" "}
             <a
               href="#find-a-club"
@@ -455,7 +452,7 @@ export default function ContactForm() {
             >
               Browse clubs near you
             </a>{" "}
-            instead — free, no matching fee.
+            instead — free.
           </p>
           <p className="mt-4 text-base leading-relaxed text-white/75">
             Nothing is charged when you send this enquiry, and the £29.99 is only after a coach is found.
@@ -929,15 +926,6 @@ export default function ContactForm() {
                     </div>
 
                     <div id="fee-note" className="space-y-2 text-sm text-white/55">
-                      <p>
-                        Our matching fee is £29.99 to find and introduce you to
-                        the right coach; coach session fees are separate.
-                      </p>
-                      <p>
-                        You won&apos;t be charged anything by sending this form
-                        — payment is the final step, once we&apos;ve found your
-                        coach.
-                      </p>
                       <p>All our coaches are UK-based.</p>
                       <p>{UNDER_18_NOTE}</p>
                     </div>
