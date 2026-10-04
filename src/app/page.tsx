@@ -1,7 +1,6 @@
 import TopBar from "@/components/TopBar";
-import BrandTitle from "@/components/BrandTitle";
-import Hero from "@/components/Hero";
 import SportsCarousel from "@/components/SportsCarousel";
+import BrandTitle from "@/components/BrandTitle";
 import ClubsMapSection from "@/components/ClubsMapSection";
 import ValueProposition from "@/components/ValueProposition";
 import HowItWorks from "@/components/HowItWorks";
@@ -15,9 +14,8 @@ export default function Home() {
     <>
       <TopBar />
       <main className="flex-1">
-        <BrandTitle />
         <SportsCarousel />
-        <Hero />
+        <BrandTitle />
         <ClubsMapSection />
         <ValueProposition />
         <HowItWorks />
