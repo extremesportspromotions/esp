@@ -457,6 +457,9 @@ export default function ContactForm() {
             </a>{" "}
             instead — free, no matching fee.
           </p>
+          <p className="mt-4 text-base leading-relaxed text-white/75">
+            Nothing is charged when you send this enquiry, and the £29.99 is only after a coach is found.
+          </p>
           <p className="mt-4 text-sm text-white/50">
             Prefer email?{" "}
             <a
