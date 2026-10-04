@@ -2525,5 +2525,65 @@
     "lng": -0.04094,
     "url": "https://www.thisisyonder.com/",
     "email": "info@thisisyonder.com"
+  },
+  {
+    "id": "skydiving-ifly-manchester-33435472",
+    "name": "iFLY Manchester",
+    "sportId": "skydiving",
+    "town": "Manchester",
+    "region": "England",
+    "lat": 53.468046,
+    "lng": -2.361492,
+    "url": "https://www.iflyworld.co.uk/locations/ifly-manchester/",
+    "phone": "0161 359 7040",
+    "email": "support@iflyworld.co.uk"
+  },
+  {
+    "id": "skydiving-ifly-birmingham-nec-17268169",
+    "name": "iFLY Birmingham (NEC)",
+    "sportId": "skydiving",
+    "town": "Birmingham",
+    "region": "England",
+    "lat": 52.453063,
+    "lng": -1.720053,
+    "url": "https://www.iflyworld.co.uk/locations/ifly-birmingham/",
+    "phone": "0161 359 7040",
+    "email": "support@iflyworld.co.uk"
+  },
+  {
+    "id": "skydiving-ifly-milton-keynes-50638000",
+    "name": "iFLY Milton Keynes",
+    "sportId": "skydiving",
+    "town": "Milton Keynes",
+    "region": "England",
+    "lat": 52.041539,
+    "lng": -0.748834,
+    "url": "https://www.iflyworld.co.uk/locations/ifly-milton-keynes/",
+    "phone": "0161 359 7040",
+    "email": "support@iflyworld.co.uk"
+  },
+  {
+    "id": "skydiving-ifly-london-at-the-o2-62727462",
+    "name": "iFLY London at The O2",
+    "sportId": "skydiving",
+    "town": "London",
+    "region": "England",
+    "lat": 51.502194,
+    "lng": 0.002819,
+    "url": "https://www.iflyworld.co.uk/locations/ifly-london-at-the-o2/",
+    "phone": "0161 359 7040",
+    "email": "support@iflyworld.co.uk"
+  },
+  {
+    "id": "skydiving-ifly-basingstoke-46832605",
+    "name": "iFLY Basingstoke",
+    "sportId": "skydiving",
+    "town": "Basingstoke",
+    "region": "England",
+    "lat": 51.264947,
+    "lng": -1.117771,
+    "url": "https://www.iflyworld.co.uk/locations/ifly-basingstoke/",
+    "phone": "0161 359 7040",
+    "email": "support@iflyworld.co.uk"
   }
 ]
