@@ -468,7 +468,11 @@ export default function ContactForm() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-ink/60 p-6 shadow-xl shadow-black/30 backdrop-blur sm:p-8">
+        <div className="flex flex-col gap-4">
+          <p className="text-base leading-relaxed text-white/75">
+            The £29.99 is due before any coach or club is contacted.
+          </p>
+          <div className="rounded-2xl border border-white/10 bg-ink/60 p-6 shadow-xl shadow-black/30 backdrop-blur sm:p-8">
           {submitted ? (
             <div
               role="status"
@@ -968,7 +972,7 @@ export default function ContactForm() {
                           aria-hidden
                         />
                       )}
-                      {sending ? "Sending…" : "Send enquiry"}
+                      {sending ? "Sending…" : "Send enquiry — £29.99"}
                     </button>
                   )}
                 </div>
@@ -1016,6 +1020,7 @@ export default function ContactForm() {
               )}
             </form>
           )}
+          </div>
         </div>
       </div>
     </section>
