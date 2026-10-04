@@ -54,8 +54,8 @@ export default async function SportGuidesPage({ params }: PageProps<"/guides/spo
           intro={sport.description}
           image={{ src: sport.image, alt: sport.alt, position: sport.imagePosition }}
         >
-          <nav aria-label="Breadcrumb" className="mt-6 text-sm text-white/70">
-            <Link href="/guides" className="hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+          <nav aria-label="Breadcrumb" className="mt-6 text-sm text-[#1C1917]/70">
+            <Link href="/guides" className="hover:text-[#1C1917] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
               ← All guides
             </Link>
           </nav>
@@ -64,10 +64,10 @@ export default async function SportGuidesPage({ params }: PageProps<"/guides/spo
           {guides.length > 0 ? (
             <section aria-labelledby="sport-guides-heading">
               <div className="mb-6 flex items-baseline justify-between gap-3">
-                <h2 id="sport-guides-heading" className="font-display text-2xl font-bold text-white sm:text-3xl">
+                <h2 id="sport-guides-heading" className="font-display text-2xl font-bold text-[#1C1917] sm:text-3xl">
                   {sport.name} guides
                 </h2>
-                <p className="text-sm text-white/60">
+                <p className="text-sm text-[#1C1917]/60">
                   {guides.length} {guides.length === 1 ? "guide" : "guides"}
                 </p>
               </div>

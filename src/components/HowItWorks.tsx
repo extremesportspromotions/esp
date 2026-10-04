@@ -23,13 +23,13 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="bg-ink">
+    <section id="how-it-works" className="bg-[#F6F1EA]">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
             How it works
           </p>
-          <h2 className="font-display mt-2 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">
             From enquiry to first session in four clear steps
           </h2>
         </div>
@@ -38,13 +38,13 @@ export default function HowItWorks() {
           {steps.map((s) => (
             <li
               key={s.step}
-              className="relative rounded-2xl border border-white/10 bg-surface p-6"
+              className="relative rounded-2xl border border-[#1C1917]/10 bg-surface p-6"
             >
               <span className="font-display text-3xl font-extrabold text-accent/90">
                 {s.step}
               </span>
-              <h3 className="mt-3 text-lg font-semibold text-white">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/65">{s.body}</p>
+              <h3 className="mt-3 text-lg font-semibold text-[#1C1917]">{s.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[#1C1917]/65">{s.body}</p>
             </li>
           ))}
         </ol>

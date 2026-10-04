@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FacebookIcon, XIcon } from "@/components/SocialIcons";
 
 const btn =
-  "inline-flex h-10 items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 text-sm font-semibold text-white/85 transition hover:border-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "inline-flex h-10 items-center gap-2 rounded-full border border-[#1C1917]/15 bg-[#1C1917]/5 px-4 text-sm font-semibold text-[#1C1917]/85 transition hover:border-accent hover:text-[#1C1917] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 export default function ShareLinks({ url, title }: { url: string; title: string }) {
   const [copied, setCopied] = useState(false);
@@ -27,7 +27,7 @@ export default function ShareLinks({ url, title }: { url: string; title: string 
 
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="mr-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/55">Share</span>
+      <span className="mr-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#1C1917]/55">Share</span>
       <a
         className={btn}
         href={`https://x.com/intent/post?text=${enc(title)}&url=${enc(url)}`}

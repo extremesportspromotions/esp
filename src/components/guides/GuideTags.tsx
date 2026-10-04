@@ -30,7 +30,7 @@ export default function GuideTags({ sport, sportName, category, linked, classNam
         <span className={sportTagClass}>{sportName}</span>
       )}
       {linked ? (
-        <Link href={categoryHref} className={`${categoryTagClass} hover:text-white ${focus}`}>
+        <Link href={categoryHref} className={`${categoryTagClass} hover:text-[#1C1917] ${focus}`}>
           {category}
         </Link>
       ) : (

@@ -8,7 +8,7 @@ import { sports } from "@/data/sports";
 const ClubsMapInner = dynamic(() => import("./ClubsMapInner"), {
   ssr: false,
   loading: () => (
-    <div className="flex h-full min-h-[420px] items-center justify-center rounded-xl border border-white/10 bg-surface text-sm text-white/60">
+    <div className="flex h-full min-h-[420px] items-center justify-center rounded-xl border border-[#1C1917]/10 bg-surface text-sm text-[#1C1917]/60">
       Loading map…
     </div>
   ),
@@ -50,17 +50,17 @@ export default function ClubsMapSection() {
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
             UK club finder
           </p>
-          <h2 className="font-display mt-2 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+          <h2 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl lg:text-5xl">
             Find a club
           </h2>
-          <p className="mt-3 text-base leading-relaxed text-white/70 sm:text-lg">
+          <p className="mt-3 text-base leading-relaxed text-[#1C1917]/70 sm:text-lg">
             Explore {clubs.length.toLocaleString()} UK clubs, centres, and schools
             that offer coaching, lessons, or courses. Every venue listed has a
             working website and contact details. Filter by sport to focus the
             map, then open a pin for the website, phone, or email.
           </p>
-          <p className="mt-3 rounded-lg border border-white/10 bg-ink/50 px-4 py-3 text-sm text-white/65">
-            <span className="font-semibold text-white">Find a club</span> = browse
+          <p className="mt-3 rounded-lg border border-[#1C1917]/10 bg-white px-4 py-3 text-sm text-[#1C1917]/65">
+            <span className="font-semibold text-[#1C1917]">Find a club</span> = browse
             venues near you (free). Want a coach instead?{" "}
             <a
               href="#enquire"
@@ -84,7 +84,7 @@ export default function ClubsMapSection() {
             className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
               sportFilter === ALL
                 ? "bg-accent text-white"
-                : "bg-white/10 text-white/80 hover:bg-white/15"
+                : "bg-[#1C1917]/10 text-[#1C1917]/80 hover:bg-[#1C1917]/15"
             }`}
           >
             All ({clubs.length})
@@ -105,8 +105,8 @@ export default function ClubsMapSection() {
                   sportFilter === s.id
                     ? "bg-accent text-white"
                     : n === 0
-                      ? "bg-white/5 text-white/35"
-                      : "bg-white/10 text-white/80 hover:bg-white/15"
+                      ? "bg-[#1C1917]/5 text-[#1C1917]/35"
+                      : "bg-[#1C1917]/10 text-[#1C1917]/80 hover:bg-[#1C1917]/15"
                 }`}
               >
                 {s.name}
@@ -119,9 +119,9 @@ export default function ClubsMapSection() {
         {sportFilter !== ALL && filtered.length === 0 ? (
           <div
             role="status"
-            className="mb-4 rounded-lg border border-white/10 bg-ink/60 px-4 py-3 text-sm text-white/70"
+            className="mb-4 rounded-lg border border-[#1C1917]/10 bg-white px-4 py-3 text-sm text-[#1C1917]/70"
           >
-            <p className="font-semibold text-white">
+            <p className="font-semibold text-[#1C1917]">
               No listed coaching venues yet for {sportLabel(sportFilter)}.
             </p>
             <p className="mt-1">
@@ -140,16 +140,16 @@ export default function ClubsMapSection() {
         ) : null}
 
         <div className="grid gap-5 lg:grid-cols-[1fr_320px]">
-          <div className="h-[52vh] min-h-[420px] overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30 lg:h-[640px]">
+          <div className="h-[52vh] min-h-[420px] overflow-hidden rounded-2xl border border-[#1C1917]/10 shadow-2xl shadow-black/30 lg:h-[640px]">
             <ClubsMapInner clubs={filtered} />
           </div>
 
-          <div className="flex max-h-[52vh] flex-col rounded-2xl border border-white/10 bg-ink/50 lg:max-h-[640px]">
-            <div className="border-b border-white/10 px-4 py-3">
-              <p className="text-sm font-semibold text-white">
+          <div className="flex max-h-[52vh] flex-col rounded-2xl border border-[#1C1917]/10 bg-white lg:max-h-[640px]">
+            <div className="border-b border-[#1C1917]/10 px-4 py-3">
+              <p className="text-sm font-semibold text-[#1C1917]">
                 {sportFilter === ALL ? "All sports" : sportLabel(sportFilter)}
               </p>
-              <p className="text-xs text-white/50">
+              <p className="text-xs text-[#1C1917]/50">
                 Showing {Math.min(listClubs.length, filtered.length)} of{" "}
                 {filtered.length} locations
                 {filtered.length > listClubs.length ? " (list capped)" : ""}
@@ -157,7 +157,7 @@ export default function ClubsMapSection() {
             </div>
             <ul className="flex-1 space-y-1 overflow-y-auto p-2" role="list">
               {listClubs.length === 0 ? (
-                <li className="px-3 py-6 text-center text-sm text-white/50">
+                <li className="px-3 py-6 text-center text-sm text-[#1C1917]/50">
                   No listed coaching venues yet.
                 </li>
               ) : (
@@ -166,13 +166,13 @@ export default function ClubsMapSection() {
                     <button
                       type="button"
                       onClick={() => setSelectedId(c.id)}
-                      className={`w-full rounded-lg px-3 py-2.5 text-left transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
-                        selectedId === c.id ? "bg-white/10" : ""
+                      className={`w-full rounded-lg px-3 py-2.5 text-left transition hover:bg-[#1C1917]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
+                        selectedId === c.id ? "bg-[#1C1917]/10" : ""
                       }`}
                     >
-                      <p className="text-sm font-medium text-white">{c.name}</p>
+                      <p className="text-sm font-medium text-[#1C1917]">{c.name}</p>
                       <p className="text-xs text-accent/90">{sportLabel(c.sportId)}</p>
-                      <p className="text-xs text-white/55">
+                      <p className="text-xs text-[#1C1917]/55">
                         {c.town}
                         {c.region ? ` · ${c.region}` : ""}
                       </p>
@@ -183,7 +183,7 @@ export default function ClubsMapSection() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="text-xs text-white/80 underline hover:text-accent"
+                            className="text-xs text-[#1C1917]/80 underline hover:text-accent"
                           >
                             Visit website
                           </a>
@@ -192,7 +192,7 @@ export default function ClubsMapSection() {
                           <a
                             href={`tel:${c.phone.replace(/[^+\d]/g, "")}`}
                             onClick={(e) => e.stopPropagation()}
-                            className="text-xs text-white/80 underline hover:text-accent"
+                            className="text-xs text-[#1C1917]/80 underline hover:text-accent"
                           >
                             {c.phone}
                           </a>
@@ -201,7 +201,7 @@ export default function ClubsMapSection() {
                           <a
                             href={`mailto:${c.email}`}
                             onClick={(e) => e.stopPropagation()}
-                            className="text-xs text-white/80 underline hover:text-accent"
+                            className="text-xs text-[#1C1917]/80 underline hover:text-accent"
                           >
                             Email
                           </a>
@@ -215,7 +215,7 @@ export default function ClubsMapSection() {
           </div>
         </div>
 
-        <p className="mt-4 text-xs leading-relaxed text-white/40">
+        <p className="mt-4 text-xs leading-relaxed text-[#1C1917]/40">
           Club locations are compiled from OpenStreetMap (Overpass), BHPA club
           listings, British Skydiving drop-zone directories, public wake-park
           guides, and other publicly listed centres. The map only shows venues

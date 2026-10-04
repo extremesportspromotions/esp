@@ -63,7 +63,7 @@ export default function SportsCarousel() {
       id="sports"
       aria-roledescription="carousel"
       aria-label="Extreme sports"
-      className="relative bg-ink"
+      className="relative bg-[#F6F1EA]"
     >
       <div className="mx-auto max-w-7xl px-3 pt-2 pb-12 sm:px-6 sm:pt-2 sm:pb-16 lg:px-8 lg:pt-2 lg:max-w-[90rem]">
         <div className="mb-7 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
@@ -71,17 +71,17 @@ export default function SportsCarousel() {
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">
               Featured sports
             </p>
-            <h2 className="font-display mt-1 text-3xl font-bold text-white sm:text-5xl">
+            <h2 className="font-display mt-1 text-3xl font-bold text-[#1C1917] sm:text-5xl">
               Find your next adrenaline hit
             </h2>
           </div>
-          <p className="text-sm text-white/60 sm:text-base" aria-live="polite">
+          <p className="text-sm text-[#1C1917]/60 sm:text-base" aria-live="polite">
             {index + 1} / {sports.length}
           </p>
         </div>
 
         <div
-          className="relative touch-pan-y select-none rounded-2xl border border-white/10 bg-surface shadow-2xl shadow-black/40 sm:rounded-3xl"
+          className="relative touch-pan-y select-none rounded-2xl border border-[#1C1917]/10 bg-surface shadow-2xl shadow-black/40 sm:rounded-3xl"
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={endDrag}
@@ -139,17 +139,17 @@ export default function SportsCarousel() {
                 />
               </div>
               <div className="bg-surface px-6 py-5 sm:px-10 sm:py-7 lg:px-12">
-                <h3 className="font-display text-3xl font-bold text-white sm:text-5xl lg:text-6xl">
+                <h3 className="font-display text-3xl font-bold text-[#1C1917] sm:text-5xl lg:text-6xl">
                   {sport.name}
                 </h3>
-                <p className="mt-3 max-w-3xl text-base leading-relaxed text-white sm:text-lg lg:text-xl">
+                <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#1C1917] sm:text-lg lg:text-xl">
                   {sport.description}
                 </p>
-                <p className="mt-3 text-sm font-semibold text-white underline decoration-white/70 underline-offset-4 sm:text-base">
+                <p className="mt-3 text-sm font-semibold text-[#1C1917] underline decoration-[#1C1917]/70 underline-offset-4 sm:text-base">
                   Read the guide
                 </p>
                 {sport.credit ? (
-                  <p className="mt-3 text-xs text-white/65 sm:text-sm">
+                  <p className="mt-3 text-xs text-[#1C1917]/65 sm:text-sm">
                     Credit: {sport.credit}
                   </p>
                 ) : null}
@@ -207,7 +207,7 @@ export default function SportsCarousel() {
               className={`h-2.5 rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
                 i === index
                   ? "w-9 bg-accent"
-                  : "w-2.5 bg-white/30 hover:bg-white/55"
+                  : "w-2.5 bg-[#1C1917]/30 hover:bg-[#1C1917]/55"
               }`}
             />
           ))}

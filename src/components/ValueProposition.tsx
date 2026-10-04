@@ -2,7 +2,7 @@ export default function ValueProposition() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-gradient-to-b from-ink via-surface to-ink"
+      className="relative overflow-hidden bg-gradient-to-b from-[#F6F1EA] via-[#EFE8DF] to-[#F6F1EA]"
     >
       <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
       <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-navy/40 blur-3xl" />
@@ -12,14 +12,14 @@ export default function ValueProposition() {
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
             Why ESP
           </p>
-          <h2 className="font-display mt-2 text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">
             Match with pro coaches. Pay a clear fee. Own the drop.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/75 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-[#1C1917]/75 sm:text-lg">
             Extreme Sports Promotions connects students with professional
             extreme-sports coaches.
           </p>
-          <ul className="mt-6 space-y-3 text-white/80">
+          <ul className="mt-6 space-y-3 text-[#1C1917]/80">
             {[
               "Curated, UK-based coaches across land, air, and water sports",
             ].map((item) => (
@@ -59,12 +59,12 @@ export default function ValueProposition() {
           ].map((card) => (
             <article
               key={card.title}
-              className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition hover:border-accent/40"
+              className="rounded-2xl border border-[#1C1917]/10 bg-[#1C1917]/5 p-5 backdrop-blur transition hover:border-accent/40"
             >
-              <h3 className="font-display text-lg font-semibold text-white">
+              <h3 className="font-display text-lg font-semibold text-[#1C1917]">
                 {card.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/65">
+              <p className="mt-2 text-sm leading-relaxed text-[#1C1917]/65">
                 {card.body}
               </p>
             </article>

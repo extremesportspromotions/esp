@@ -7,7 +7,7 @@ import Link from "next/link";
 const showLogo = true;
 
 const sectionClass =
-  "relative overflow-hidden border-b border-white/10 bg-ink";
+  "relative overflow-hidden border-b border-[#1C1917]/10 bg-[#F6F1EA]";
 
 function Backdrop() {
   return (
@@ -52,7 +52,7 @@ export function BrandLogo() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent sm:text-sm">
               United Kingdom
             </p>
-            <h1 className="font-display mt-3 text-4xl font-black uppercase leading-[0.95] tracking-[0.06em] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="font-display mt-3 text-4xl font-black uppercase leading-[0.95] tracking-[0.06em] text-[#1C1917] sm:text-6xl md:text-7xl lg:text-8xl">
               Extreme
               <span className="block text-accent">Sports</span>
               Promotions
@@ -69,7 +69,7 @@ export function BrandPickLine() {
     <section aria-label="Get matched with a coach" className={sectionClass}>
       <Backdrop />
       <div className="relative mx-auto max-w-[90rem] px-3 py-8 text-center sm:px-4 sm:py-12 lg:px-6 lg:py-14">
-        <p className="mx-auto mt-5 max-w-xl text-base text-white/70 sm:text-lg">
+        <p className="mx-auto mt-5 max-w-xl text-base text-[#1C1917]/70 sm:text-lg">
           Pick a sport → enquire → get matched with a coach.
         </p>
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
@@ -80,9 +80,9 @@ export function BrandPickLine() {
             Get matched
           </Link>
         </div>
-        <p className="mx-auto mt-4 max-w-lg text-xs text-white/45 sm:text-sm">
+        <p className="mx-auto mt-4 max-w-lg text-xs text-[#1C1917]/45 sm:text-sm">
           Looking for somewhere to train near you?{" "}
-          <Link href="/#find-a-club" className="text-white/70 underline-offset-2 hover:text-accent hover:underline">
+          <Link href="/#find-a-club" className="text-[#1C1917]/70 underline-offset-2 hover:text-accent hover:underline">
             Find a club
           </Link>{" "}
           is free to browse. Coach matching is separate.

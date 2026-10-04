@@ -170,10 +170,10 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
             <div className="min-w-0">
               <TableOfContents items={guide.toc} variant="inline" />
               <div
-                className="guide-prose prose prose-invert sm:prose-lg"
+                className="guide-prose prose sm:prose-lg"
                 dangerouslySetInnerHTML={{ __html: guide.html }}
               />
-              <div className="mt-12 max-w-[70ch] border-t border-white/10 pt-8">
+              <div className="mt-12 max-w-[70ch] border-t border-[#1C1917]/10 pt-8">
                 <ShareLinks url={url} title={guide.title} />
               </div>
             </div>
@@ -197,12 +197,12 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
           {related.length > 0 ? (
             <section aria-labelledby="related-heading">
               <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
-                <h2 id="related-heading" className="font-display text-2xl font-bold text-white sm:text-3xl">
+                <h2 id="related-heading" className="font-display text-2xl font-bold text-[#1C1917] sm:text-3xl">
                   Related guides
                 </h2>
                 <Link
                   href="/guides"
-                  className="text-sm font-semibold text-accent-soft underline-offset-4 hover:text-white hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="text-sm font-semibold text-accent-soft underline-offset-4 hover:text-[#1C1917] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   All guides →
                 </Link>

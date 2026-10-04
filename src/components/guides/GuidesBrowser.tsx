@@ -51,8 +51,8 @@ function Chip({
         active
           ? "bg-accent text-white"
           : muted
-            ? "bg-white/5 text-white/55 hover:bg-white/10 hover:text-white"
-            : "bg-white/10 text-white/85 hover:bg-white/15"
+            ? "bg-[#1C1917]/5 text-[#1C1917]/55 hover:bg-[#1C1917]/10 hover:text-[#1C1917]"
+            : "bg-[#1C1917]/10 text-[#1C1917]/85 hover:bg-[#1C1917]/15"
       }`}
     >
       {children}
@@ -89,9 +89,9 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
         </div>
       ) : null}
 
-      <div id="browse" className="scroll-mt-24 space-y-4 rounded-2xl border border-white/10 bg-surface/60 p-4 sm:p-5">
+      <div id="browse" className="scroll-mt-24 space-y-4 rounded-2xl border border-[#1C1917]/10 bg-surface/60 p-4 sm:p-5">
         <div>
-          <p id="filter-sport-label" className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
+          <p id="filter-sport-label" className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1C1917]/55">
             Sport
           </p>
           <nav aria-labelledby="filter-sport-label" className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 sm:flex-wrap sm:overflow-visible">
@@ -112,7 +112,7 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
           </nav>
         </div>
         <div>
-          <p id="filter-category-label" className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
+          <p id="filter-category-label" className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1C1917]/55">
             Category
           </p>
           <nav aria-labelledby="filter-category-label" className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 sm:flex-wrap sm:overflow-visible">
@@ -129,12 +129,12 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
       </div>
 
       <div className="mt-8 flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+        <h2 className="font-display text-2xl font-bold text-[#1C1917] sm:text-3xl">
           {unfiltered
             ? "Latest guides"
             : [activeSport !== ALL ? sportName(activeSport) : null, categoryName].filter(Boolean).join(" · ")}
         </h2>
-        <p className="text-sm text-white/60" aria-live="polite">
+        <p className="text-sm text-[#1C1917]/60" aria-live="polite">
           {filtered.length} {filtered.length === 1 ? "guide" : "guides"}
         </p>
       </div>
@@ -154,7 +154,7 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
             sportName={activeSport === ALL ? undefined : sportName(activeSport)}
           />
         ) : (
-          <p className="text-white/60">That&apos;s everything for now — more guides are on the way.</p>
+          <p className="text-[#1C1917]/60">That&apos;s everything for now — more guides are on the way.</p>
         )}
       </div>
     </div>

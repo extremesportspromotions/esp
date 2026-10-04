@@ -25,7 +25,7 @@ export default function Testimonials() {
     <section
       id="trust"
       aria-labelledby="trust-heading"
-      className="border-y border-white/10 bg-ink"
+      className="border-y border-[#1C1917]/10 bg-[#F6F1EA]"
     >
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -34,11 +34,11 @@ export default function Testimonials() {
           </p>
           <h2
             id="trust-heading"
-            className="font-display mt-2 text-3xl font-bold text-white sm:text-4xl"
+            className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl"
           >
             What people say
           </h2>
-          <p className="mt-3 text-sm text-white/50">
+          <p className="mt-3 text-sm text-[#1C1917]/50">
             Sample quotes for layout — replace with real testimonials when ready.
           </p>
         </div>
@@ -46,9 +46,9 @@ export default function Testimonials() {
           {quotes.map((q) => (
             <li
               key={q.attribution}
-              className="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6"
+              className="flex flex-col rounded-2xl border border-[#1C1917]/10 bg-[#1C1917]/5 p-6"
             >
-              <p className="flex-1 text-base leading-relaxed text-white/85">
+              <p className="flex-1 text-base leading-relaxed text-[#1C1917]/85">
                 &ldquo;{q.text}&rdquo;
               </p>
               <p className="mt-4 text-sm font-medium text-accent/90">

@@ -23,17 +23,17 @@ export default function PrivacyPage() {
   return (
     <>
       <TopBar />
-      <main id="main" className="flex-1 bg-ink">
+      <main id="main" className="flex-1 bg-[#F6F1EA]">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Your privacy</p>
-          <h1 className="font-display mt-2 text-3xl font-bold text-white sm:text-4xl">Privacy notice</h1>
-          <p className="mt-4 text-base leading-relaxed text-white/75">
+          <h1 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">Privacy notice</h1>
+          <p className="mt-4 text-base leading-relaxed text-[#1C1917]/75">
             This notice explains what happens to the details you send us through the enquiry form on
             this website. We keep it simple: we only use your details to reply to you and help match
             you with a coach.
           </p>
 
-          <div className="guide-prose prose prose-invert mt-10">
+          <div className="guide-prose prose mt-10">
             <h2>Who we are</h2>
             {/* Normal body size: .guide-prose enlarges the first paragraph as an article lead. */}
             <p style={{ fontSize: "1em", lineHeight: "inherit", color: "inherit" }}>
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
             </p>
           </div>
 
-          <p className="mt-12 border-t border-white/10 pt-6 text-sm text-white/55">
+          <p className="mt-12 border-t border-[#1C1917]/10 pt-6 text-sm text-[#1C1917]/55">
             <Link href="/#enquire" className="font-semibold text-accent underline-offset-2 hover:underline">
               Back to the enquiry form
             </Link>

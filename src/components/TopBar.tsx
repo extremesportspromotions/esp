@@ -42,7 +42,7 @@ type TopBarProps = {
 };
 
 const linkBase =
-  "shrink-0 whitespace-nowrap rounded-full py-1.5 text-sm transition hover:bg-white/10 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "shrink-0 whitespace-nowrap rounded-full py-1.5 text-sm transition hover:bg-[#1C1917]/10 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 function NavLinks({ active, compact }: TopBarProps & { compact?: boolean }) {
   return (
@@ -55,7 +55,7 @@ function NavLinks({ active, compact }: TopBarProps & { compact?: boolean }) {
             href={href}
             aria-current={isActive ? "page" : undefined}
             className={`${linkBase} ${compact ? "px-2.5" : "px-3"} ${
-              isActive ? "bg-white/10 font-semibold text-white" : "text-white/75"
+              isActive ? "bg-[#1C1917]/10 font-semibold text-[#1C1917]" : "text-[#1C1917]/75"
             }`}
           >
             {label}
@@ -74,7 +74,7 @@ const showLogo = true;
 
 export default function TopBar({ active }: TopBarProps = {}) {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[#1C1917]/10 bg-[#F6F1EA]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <div className="flex min-w-0 flex-1 items-center gap-3">
           <Link
@@ -86,7 +86,7 @@ export default function TopBar({ active }: TopBarProps = {}) {
               // eslint-disable-next-line @next/next/no-img-element
               <img src="/logo-header.png" alt="Extreme Sports Promotions" className="h-9 w-auto sm:h-10" />
             ) : (
-              <span className="hidden font-display text-sm font-bold uppercase tracking-wide text-white sm:inline">
+              <span className="hidden font-display text-sm font-bold uppercase tracking-wide text-[#1C1917] sm:inline">
                 ESP
               </span>
             )}
@@ -110,7 +110,7 @@ export default function TopBar({ active }: TopBarProps = {}) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={name}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-[#1C1917]/80 transition hover:bg-[#1C1917]/10 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <Icon />
               </a>
