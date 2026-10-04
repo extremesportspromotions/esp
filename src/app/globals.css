@@ -2,14 +2,15 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  /* Subtle British palette: near-black navy, white, restrained red */
-  --background: #070b14;
+  /* Warmer page, white text, clear blue accents */
+  --background: #4A433C;
   --foreground: #f5f7fb;
-  --ink: #070b14;
-  --surface: #121a2b;
-  --accent: #c8102e;
-  /* Lighter red for small text on dark backgrounds (WCAG AA contrast) */
-  --accent-soft: #f25c6e;
+  --ink: #4A433C;
+  --surface: #564E47;
+  --accent: #2F7BFF;
+  /* Same clear blue for small accent text. Not a washed tint. */
+  --accent-soft: #2F7BFF;
+  /* Form validation only. Not a brand accent. */
   --flame: #e24a3b;
   --navy: #1a3a6b;
 }
@@ -183,8 +184,8 @@ body {
 
 .guide-prose .callout-safety,
 .guide-prose .callout-warning {
-  border-color: rgb(200 16 46 / 0.6);
-  background: linear-gradient(135deg, rgb(200 16 46 / 0.18), rgb(18 26 43 / 0.95) 60%);
+  border-color: rgb(47 123 255 / 0.6);
+  background: linear-gradient(135deg, rgb(47 123 255 / 0.18), rgb(86 78 71 / 0.95) 60%);
   --callout-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1 5h2v6h-2V7Zm0 8h2v2h-2v-2Z'/%3E%3C/svg%3E");
 }
 
@@ -196,7 +197,7 @@ body {
 .guide-prose .callout-tip,
 .guide-prose .callout-note {
   border-color: rgb(92 132 204 / 0.5);
-  background: linear-gradient(135deg, rgb(26 58 107 / 0.55), rgb(18 26 43 / 0.95) 60%);
+  background: linear-gradient(135deg, rgb(26 58 107 / 0.55), rgb(86 78 71 / 0.95) 60%);
   --callout-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z'/%3E%3C/svg%3E");
 }
 

@@ -7,7 +7,7 @@ export default function GuideNextSteps({ sport, sportName }: { sport: string; sp
   return (
     <section aria-labelledby="next-steps-heading" className="relative overflow-hidden rounded-3xl border border-white/10 bg-surface p-6 sm:p-10">
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(200,16,46,0.2),_transparent_55%),radial-gradient(ellipse_at_bottom_left,_rgba(26,58,107,0.45),_transparent_55%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(47,123,255,0.2),_transparent_55%),radial-gradient(ellipse_at_bottom_left,_rgba(26,58,107,0.45),_transparent_55%)]"
         aria-hidden
       />
       <div className="relative">

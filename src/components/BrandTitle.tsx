@@ -12,7 +12,7 @@ const sectionClass =
 function Backdrop() {
   return (
     <div
-      className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,16,46,0.18),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(26,58,107,0.35),_transparent_50%)]"
+      className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(47,123,255,0.18),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(26,58,107,0.35),_transparent_50%)]"
       aria-hidden
     />
   );
