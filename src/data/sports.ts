@@ -121,6 +121,7 @@ export const sports: Sport[] = [
     id: "skateboarding",
     guide: "/guides/skateboarding-for-beginners-uk",
     video: "/carousel-clips/carousel-10-skateboarding.mp4",
+    credit: "blackmarketmusic, Pixabay Content License, https://pixabay.com/videos/id-275498/",
     name: "Skateboarding",
     description:
       "Learn street and park fundamentals—or refine technical lines—with coaches who speak skate fluently.",
