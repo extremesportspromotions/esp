@@ -26,15 +26,25 @@ export function BrandLogo() {
       className={sectionClass}
     >
       <Backdrop />
-      <div className="relative mx-auto max-w-[90rem] px-3 pt-4 pb-2 text-center sm:px-4 sm:pt-5 sm:pb-2 lg:px-6 lg:pt-6 lg:pb-3">
+      <div className="relative mx-auto max-w-[90rem] px-3 pt-2 pb-1 text-center sm:px-4 sm:pt-2 sm:pb-1 lg:px-6 lg:pt-3 lg:pb-1">
         {showLogo ? (
           <>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logo.png"
-              alt="Extreme Sports Promotions"
-              className="mx-auto mb-2 block h-auto w-full max-w-none object-contain"
-            />
+            {/* logo.png is 1280×720. The wordmark and title sit in rows 124–558;
+                the rest of the canvas is empty black. This window keeps the
+                image at full width (same artwork size) and only hides that
+                empty canvas. It does not crop the wordmark or the title line. */}
+            <div
+              className="relative mx-auto w-full overflow-hidden"
+              style={{ aspectRatio: "1280 / 458" }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo.png"
+                alt="Extreme Sports Promotions"
+                className="absolute left-0 block h-auto w-full max-w-none"
+                style={{ top: `${(-112 / 458) * 100}%` }}
+              />
+            </div>
             <h1 className="sr-only">Extreme Sports Promotions</h1>
           </>
         ) : (
