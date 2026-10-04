@@ -26,14 +26,14 @@ export function BrandLogo() {
       className={sectionClass}
     >
       <Backdrop />
-      <div className="relative mx-auto max-w-[90rem] px-3 py-8 text-center sm:px-4 sm:py-12 lg:px-6 lg:py-14">
+      <div className="relative mx-auto max-w-[90rem] px-3 pt-4 pb-2 text-center sm:px-4 sm:pt-5 sm:pb-2 lg:px-6 lg:pt-6 lg:pb-3">
         {showLogo ? (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.png"
               alt="Extreme Sports Promotions"
-              className="mx-auto mb-6 block h-auto w-full max-w-none object-contain"
+              className="mx-auto mb-2 block h-auto w-full max-w-none object-contain"
             />
             <h1 className="sr-only">Extreme Sports Promotions</h1>
           </>
