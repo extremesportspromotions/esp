@@ -18,10 +18,10 @@ export default function Home() {
         <SportsCarousel />
         <BrandPickLine />
         <ClubsMapSection />
+        <LatestGuides />
         <ValueProposition />
         <HowItWorks />
         <Testimonials />
-        <LatestGuides />
         <ContactForm />
       </main>
       <Footer />
