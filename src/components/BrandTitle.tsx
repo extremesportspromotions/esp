@@ -1,21 +1,31 @@
 /**
  * Brand header with approved Option A emblem (bigger EXTREME SPORTS PROMOTIONS wordmark).
  * Assets: /public/logo.png (full), /public/icon.png (profile crop / favicon).
+ * Logo and title render above the carousel; the pick-a-sport line renders below it.
  */
 import Link from "next/link";
 const showLogo = true;
 
-export default function BrandTitle() {
+const sectionClass =
+  "relative overflow-hidden border-b border-white/10 bg-ink";
+
+function Backdrop() {
+  return (
+    <div
+      className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,16,46,0.18),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(26,58,107,0.35),_transparent_50%)]"
+      aria-hidden
+    />
+  );
+}
+
+export function BrandLogo() {
   return (
     <section
       id="top"
       aria-label="Extreme Sports Promotions"
-      className="relative overflow-hidden border-b border-white/10 bg-ink"
+      className={sectionClass}
     >
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(200,16,46,0.18),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(26,58,107,0.35),_transparent_50%)]"
-        aria-hidden
-      />
+      <Backdrop />
       <div className="relative mx-auto max-w-[90rem] px-3 py-8 text-center sm:px-4 sm:py-12 lg:px-6 lg:py-14">
         {showLogo ? (
           <>
@@ -39,6 +49,16 @@ export default function BrandTitle() {
             </h1>
           </>
         )}
+      </div>
+    </section>
+  );
+}
+
+export function BrandPickLine() {
+  return (
+    <section aria-label="Get matched with a coach" className={sectionClass}>
+      <Backdrop />
+      <div className="relative mx-auto max-w-[90rem] px-3 py-8 text-center sm:px-4 sm:py-12 lg:px-6 lg:py-14">
         <p className="mx-auto mt-5 max-w-xl text-base text-white/70 sm:text-lg">
           Pick a sport → enquire → get matched with a coach.
         </p>
