@@ -50,12 +50,6 @@ export default function BrandTitle() {
           >
             Get matched — £29.99
           </Link>
-          <Link
-            href="/#sports"
-            className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-          >
-            Browse sports
-          </Link>
         </div>
         <p className="mx-auto mt-4 max-w-lg text-xs text-white/45 sm:text-sm">
           Looking for somewhere to train near you?{" "}

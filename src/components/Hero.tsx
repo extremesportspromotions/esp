@@ -37,12 +37,6 @@ export default function Hero() {
             >
               Get matched — £29.99
             </a>
-            <a
-              href="#find-a-club"
-              className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              Find a club
-            </a>
           </div>
         </div>
         <aside className="w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
