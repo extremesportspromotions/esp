@@ -119,15 +119,7 @@ export default function SportsCarousel() {
                     playsInline
                     preload="metadata"
                     aria-label={sport.alt}
-                    className="absolute inset-0 block h-full w-full object-contain brightness-[1.1] contrast-[1.02] saturate-[1.04]"
-                    style={
-                      sport.id === "wingsuit-flying"
-                        ? {
-                            transform: "translateY(4%) scale(0.82)",
-                            transformOrigin: "center center",
-                          }
-                        : undefined
-                    }
+                    className="absolute inset-0 block h-full w-full object-contain contrast-[1.02] saturate-[1.04]"
                   />
                 ) : (
                   <Image
