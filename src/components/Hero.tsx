@@ -39,29 +39,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <aside className="w-full max-w-sm rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
-            At a glance
-          </p>
-          <dl className="mt-4 space-y-4">
-            <div className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-3">
-              <dt className="text-white/60">Sports featured</dt>
-              <dd className="font-display text-2xl font-bold text-white">15</dd>
-            </div>
-            <div className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-3">
-              <dt className="text-white/60">Matching fee</dt>
-              <dd className="text-right font-semibold text-white">
-                £29.99
-              </dd>
-            </div>
-            <div className="flex items-baseline justify-between gap-4">
-              <dt className="text-white/60">For</dt>
-              <dd className="text-right font-semibold text-white">
-                Students &amp; athletes
-              </dd>
-            </div>
-          </dl>
-        </aside>
       </div>
     </section>
   );
