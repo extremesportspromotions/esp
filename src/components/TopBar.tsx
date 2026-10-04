@@ -67,7 +67,7 @@ function NavLinks({ active, compact }: TopBarProps & { compact?: boolean }) {
 }
 
 /**
- * Optional logo: use /public/logo.png and set showLogo = true.
+ * Header mark: /public/logo-header.png. The homepage wordmark is /public/logo.png.
  * Wordmark text remains as fallback.
  */
 const showLogo = true;
@@ -84,7 +84,7 @@ export default function TopBar({ active }: TopBarProps = {}) {
           >
             {showLogo ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src="/logo.png" alt="Extreme Sports Promotions" className="h-9 w-auto sm:h-10" />
+              <img src="/logo-header.png" alt="Extreme Sports Promotions" className="h-9 w-auto sm:h-10" />
             ) : (
               <span className="hidden font-display text-sm font-bold uppercase tracking-wide text-white sm:inline">
                 ESP
