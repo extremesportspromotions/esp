@@ -113,7 +113,6 @@ export default function SportsCarousel() {
                 {sport.video ? (
                   <video
                     src={sport.video}
-                    poster={sport.image}
                     autoPlay
                     muted
                     loop
