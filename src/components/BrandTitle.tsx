@@ -1,6 +1,6 @@
 /**
  * Brand header with approved Option A emblem (bigger EXTREME SPORTS PROMOTIONS wordmark).
- * Assets: /public/logo.png (full), /public/icon.png (profile crop / favicon).
+ * Assets: /public/logo.png (full), /public/icon.png (32px app icon); app icons in /public (apple-touch-icon, icon-192/512, favicon-32).
  * Logo and title render above the carousel; the pick-a-sport line renders below it.
  */
 import Link from "next/link";

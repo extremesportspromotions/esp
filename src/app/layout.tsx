@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
@@ -13,14 +13,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#1E8CFF",
+};
+
 export const metadata: Metadata = {
+  appleWebApp: { title: "ESP", capable: true },
   metadataBase: new URL(SITE_URL),
   title: "Extreme Sports Promotions | Get trained by a pro",
   description:
     "Get trained by a pro. Free enquiry. We find you a named UK coach across 15 extreme sports, from skydiving to surfing.",
   icons: {
-    icon: [{ url: "/icon.png", type: "image/png" }],
-    apple: [{ url: "/apple-icon.png" }],
+    icon: [{ url: "/favicon-32.png", sizes: "32x32", type: "image/png" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     title: "Extreme Sports Promotions",
