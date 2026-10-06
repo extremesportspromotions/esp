@@ -29,7 +29,7 @@ export function BrandLogo() {
       <div className="relative mx-auto max-w-[90rem] px-3 pt-2 pb-1 text-center sm:px-4 sm:pt-2 sm:pb-1 lg:px-6 lg:pt-3 lg:pb-1">
         {showLogo ? (
           <>
-            {/* logo.png is 1168×784 with a light-blue gradient background.
+            {/* logo.png is 1328×944 with a light-blue gradient background.
                 Show the full artwork at natural aspect — no crop window. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
