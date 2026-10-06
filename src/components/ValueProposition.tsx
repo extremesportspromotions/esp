@@ -13,7 +13,7 @@ export default function ValueProposition() {
             Why ESP
           </p>
           <h2 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">
-            Match with pro coaches. Free enquiry. Own the drop.
+            Get trained by a pro.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-[#1C1917]/75 sm:text-lg">
             Extreme Sports Promotions connects students with professional
