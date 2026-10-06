@@ -467,9 +467,9 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-4">
           <p className="text-base leading-relaxed text-[#1C1917]/75">
-            The enquiry is free. You pay our match fee only once we have found a
-            named coach. The coach or club bills you separately for the training.
-            We do not take bookings for them.
+            The enquiry is free. Once we have found a named coach, you pay the
+            match fee — then we release the contact. The coach or club bills you
+            separately for the training. We do not take bookings for them.
           </p>
           <div className="rounded-2xl border border-[#1C1917]/10 bg-white p-6 shadow-xl shadow-black/30 backdrop-blur sm:p-8">
           {submitted ? (
@@ -783,7 +783,8 @@ export default function ContactForm() {
                       </h3>
                       <p className="mt-1 text-sm text-[#1C1917]/60">
                         What are you looking for? These are ESP match fees — paid
-                        only after we find a named coach — not training fees.
+                        only after we find a named coach, then we release the
+                        contact. Not training fees.
                       </p>
                     </div>
                     <ChipGroup
@@ -794,9 +795,10 @@ export default function ContactForm() {
                       onChange={(v) => setField("matchFee", v)}
                     />
                     <p className="text-xs leading-relaxed text-[#1C1917]/55">
-                      The enquiry is free. You pay our match fee only once we have
-                      found a named coach. The coach or club bills you separately
-                      for the training. We do not take bookings for them.
+                      The enquiry is free. Once we have found a named coach, you
+                      pay the match fee — then we release the contact. The coach
+                      or club bills you separately for the training. We do not
+                      take bookings for them.
                     </p>
                   </div>
                 )}
@@ -936,10 +938,10 @@ export default function ContactForm() {
 
                     <div id="fee-note" className="space-y-2 text-sm text-[#1C1917]/55">
                       <p>
-                        The enquiry is free. You pay our match fee only once we
-                        have found a named coach. The coach or club bills you
-                        separately for the training. We do not take bookings for
-                        them.
+                        The enquiry is free. Once we have found a named coach,
+                        you pay the match fee — then we release the contact. The
+                        coach or club bills you separately for the training. We
+                        do not take bookings for them.
                       </p>
                       <p>All our coaches are UK-based.</p>
                       <p>{UNDER_18_NOTE}</p>

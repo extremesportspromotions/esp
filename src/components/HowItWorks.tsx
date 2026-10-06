@@ -1,23 +1,23 @@
 const steps = [
   {
     step: "01",
-    title: "Tell us your sport",
-    body: "Share your interest, experience level, and what you want to achieve. Sending an enquiry is free.",
+    title: "Free enquiry",
+    body: "Send the form with your sport, level, and goals. Nothing to pay yet — the enquiry is free.",
   },
   {
     step: "02",
-    title: "Get matched",
-    body: "We connect you with a professional coach who fits your goals and schedule. All our coaches are UK-based.",
+    title: "We find a named coach",
+    body: "We match you with a UK-based professional coach who fits your goals and schedule.",
   },
   {
     step: "03",
     title: "Pay the match fee",
-    body: "You pay our match fee only once we have found a named coach — taster £19, course £49, trip £99, party £79 or £129. The coach or club bills training separately. We do not take bookings for them.",
+    body: "Only after a named coach is found: taster £19, course £49, trip £99, party £79 or £129. Fee bands are on the form.",
   },
   {
     step: "04",
-    title: "Train with a pro",
-    body: "Show up ready to progress—with coaching built for safety and real skill gains.",
+    title: "We release the contact",
+    body: "After payment we share the coach's contact details. The coach or club bills training separately. ESP does not book the lesson.",
   },
 ];
 

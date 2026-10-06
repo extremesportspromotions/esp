@@ -47,7 +47,7 @@ Colours are a guide, not a promise, and not every UK venue uses the same words. 
 
 Ask to see the qualification, and ask to see that the insurance is current. ESP checks qualifications, insurance and references only. The coaches it introduces are UK-based.
 
-If you would like help finding a coach, ESP can match you. The enquiry is free. You pay our match fee only once we have found a named coach — fee bands are on the form (taster £19, course £49, trip £99, party £79 or £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.
+If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party £79 or £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.
 
 > [!SAFETY]
 > Off-road cycling carries inherent risk. Ride within your ability, and attempt a jump only if you are sure you can do it. On Forestry England trails, always wear a helmet and gloves. In an emergency, dial 999, then tell the forest centre.

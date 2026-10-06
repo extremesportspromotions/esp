@@ -78,7 +78,7 @@ how ESP's coach matching works). A `general` article:
   you can verify — never make up quotes.
 - Links: `[link text](https://example.com)`. External links open in a new tab.
 - Finish with a short nudge to find a club on the map or get matched with a coach.
-  The "Find clubs" and "Get matched — £29.99" buttons are added to every article
+  The "Find clubs" and "Get matched" buttons are added to every article
   automatically, so you don't need to add them.
 
 ## Images

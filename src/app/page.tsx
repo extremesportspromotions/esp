@@ -4,7 +4,6 @@ import { BrandLogo, BrandPickLine } from "@/components/BrandTitle";
 import ClubsMapSection from "@/components/ClubsMapSection";
 import ValueProposition from "@/components/ValueProposition";
 import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
 import LatestGuides from "@/components/LatestGuides";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
@@ -21,7 +20,6 @@ export default function Home() {
         <LatestGuides />
         <ValueProposition />
         <HowItWorks />
-        <Testimonials />
         <ContactForm />
       </main>
       <Footer />
