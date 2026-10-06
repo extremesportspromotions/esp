@@ -2,7 +2,7 @@ export default function ValueProposition() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-gradient-to-b from-[#F6F1EA] via-[#EFE8DF] to-[#F6F1EA]"
+      className="relative overflow-hidden bg-gradient-to-b from-[#EEF4FA] via-[#E4EBF3] to-[#EEF4FA]"
     >
       <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
       <div className="pointer-events-none absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-navy/40 blur-3xl" />

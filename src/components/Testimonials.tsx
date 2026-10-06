@@ -25,7 +25,7 @@ export default function Testimonials() {
     <section
       id="trust"
       aria-labelledby="trust-heading"
-      className="border-y border-[#1C1917]/10 bg-[#F6F1EA]"
+      className="border-y border-[#1C1917]/10 bg-[#EEF4FA]"
     >
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">

@@ -7,7 +7,7 @@ import Link from "next/link";
 const showLogo = true;
 
 const sectionClass =
-  "relative overflow-hidden border-b border-[#1C1917]/10 bg-[#F6F1EA]";
+  "relative overflow-hidden border-b border-[#1C1917]/10 bg-[#EEF4FA]";
 
 function Backdrop() {
   return (

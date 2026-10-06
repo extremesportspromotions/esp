@@ -429,7 +429,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="enquire" className="bg-gradient-to-b from-[#F6F1EA] to-[#EFE8DF]">
+    <section id="enquire" className="bg-gradient-to-b from-[#EEF4FA] to-[#E4EBF3]">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2">
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">
@@ -923,11 +923,11 @@ export default function ContactForm() {
                             "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23ffffff99'%3E%3Cpath d='M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z'/%3E%3C/svg%3E\")",
                         }}
                       >
-                        <option value="" className="bg-[#F6F1EA] text-[#1C1917]">
+                        <option value="" className="bg-[#EEF4FA] text-[#1C1917]">
                           No preference
                         </option>
                         {CALL_TIMES.map((t) => (
-                          <option key={t.value} value={t.value} className="bg-[#F6F1EA] text-[#1C1917]">
+                          <option key={t.value} value={t.value} className="bg-[#EEF4FA] text-[#1C1917]">
                             {t.label}
                           </option>
                         ))}

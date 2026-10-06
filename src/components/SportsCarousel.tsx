@@ -63,7 +63,7 @@ export default function SportsCarousel() {
       id="sports"
       aria-roledescription="carousel"
       aria-label="Extreme sports"
-      className="relative bg-[#F6F1EA]"
+      className="relative bg-[#EEF4FA]"
     >
       <div className="mx-auto max-w-7xl px-3 pt-2 pb-12 sm:px-6 sm:pt-2 sm:pb-16 lg:px-8 lg:pt-2 lg:max-w-[90rem]">
         <div className="mb-7 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">

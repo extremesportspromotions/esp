@@ -23,7 +23,7 @@ export default function PrivacyPage() {
   return (
     <>
       <TopBar />
-      <main id="main" className="flex-1 bg-[#F6F1EA]">
+      <main id="main" className="flex-1 bg-[#EEF4FA]">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Your privacy</p>
           <h1 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">Privacy notice</h1>

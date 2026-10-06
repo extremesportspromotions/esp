@@ -7,7 +7,7 @@ export default function LatestGuides() {
   const guides = getAllGuides().slice(0, 3);
   if (guides.length === 0) return null;
   return (
-    <section aria-labelledby="latest-guides-heading" className="bg-[#F6F1EA]">
+    <section aria-labelledby="latest-guides-heading" className="bg-[#EEF4FA]">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>

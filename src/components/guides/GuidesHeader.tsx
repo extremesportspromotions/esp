@@ -12,7 +12,7 @@ type Props = {
 /** Hero header shared by /guides and the per-sport hub pages. */
 export default function GuidesHeader({ eyebrow, title, tagline, intro, image, children }: Props) {
   return (
-    <section className="relative overflow-hidden border-b border-[#1C1917]/10 bg-[#F6F1EA]">
+    <section className="relative overflow-hidden border-b border-[#1C1917]/10 bg-[#EEF4FA]">
       {image ? (
         <>
           <Image
@@ -24,7 +24,7 @@ export default function GuidesHeader({ eyebrow, title, tagline, intro, image, ch
             className="object-cover opacity-45"
             style={{ objectPosition: image.position ?? "50% 50%" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F6F1EA] via-[#F6F1EA]/85 to-[#F6F1EA]/45" aria-hidden />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#EEF4FA] via-[#EEF4FA]/85 to-[#EEF4FA]/45" aria-hidden />
         </>
       ) : (
         <div
