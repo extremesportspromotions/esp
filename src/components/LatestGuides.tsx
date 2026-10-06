@@ -13,8 +13,11 @@ export default function LatestGuides() {
           <div>
             <p className="text-sm font-semibold uppercase tracking-widest text-accent">ESP Guides</p>
             <h2 id="latest-guides-heading" className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">
-              Learn before you leap
+              Never leap alone.
             </h2>
+            <p className="mt-3 text-base leading-relaxed text-[#1C1917]/70 sm:text-lg">
+              Let's find the right coach for you.
+            </p>
           </div>
           <Link
             href="/guides"
