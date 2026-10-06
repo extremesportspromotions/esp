@@ -40,8 +40,10 @@ export default function ClubsMapSection() {
     return [...filtered].sort((a, b) => a.name.localeCompare(b.name)).slice(0, 80);
   }, [filtered]);
 
-  const sportLabel = (id: string) =>
-    sports.find((s) => s.id === id)?.name ?? id;
+  const sportLabel = (id: string) => {
+    const sport = sports.find((s) => s.id === id);
+    return sport?.mapLabel ?? sport?.name ?? id;
+  };
 
   return (
     <section id="find-a-club" className="relative bg-surface">
@@ -110,7 +112,7 @@ export default function ClubsMapSection() {
                       : "bg-[#1C1917]/10 text-[#1C1917]/80 hover:bg-[#1C1917]/15"
                 }`}
               >
-                {s.name}
+                {s.mapLabel ?? s.name}
                 <span className="ml-1.5 opacity-70">{n}</span>
               </button>
             );

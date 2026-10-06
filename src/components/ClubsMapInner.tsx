@@ -13,8 +13,10 @@ import type { Club } from "@/data/clubs";
 import { sports } from "@/data/sports";
 import "leaflet/dist/leaflet.css";
 
-const sportName = (id: string) =>
-  sports.find((s) => s.id === id)?.name ?? id;
+const sportName = (id: string) => {
+  const sport = sports.find((s) => s.id === id);
+  return sport?.mapLabel ?? sport?.name ?? id;
+};
 
 // Fix default marker icons under Next/webpack bundling
 const DefaultIcon = L.icon({

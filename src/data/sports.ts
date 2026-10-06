@@ -12,6 +12,8 @@ export type Sport = {
   video?: string;
   /** Optional attribution shown below the carousel media */
   credit?: string;
+  /** Optional label used on the club map (filter chip, cards and popups) instead of `name` */
+  mapLabel?: string;
 };
 
 export const sports: Sport[] = [
@@ -168,6 +170,7 @@ export const sports: Sport[] = [
     guide: "/guides/kayaking-for-beginners-uk",
     video: "/carousel-clips/carousel-14-kayaking.mp4",
     name: "Kayaking",
+    mapLabel: "Kayaking & rafting",
     description:
       "From flatwater fundamentals to whitewater lines, paddle with coaches who prioritize stroke and safety.",
     image: "/sports/kayaking.jpg",
