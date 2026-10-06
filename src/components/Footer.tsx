@@ -47,10 +47,6 @@ export default function Footer() {
             </Link>
           </nav>
         </div>
-        <p className="text-xs leading-relaxed text-[#1C1917]/40">
-          Hosted on Vercel. A custom domain can be pointed here later when one
-          is purchased — no domain is required to use the live site.
-        </p>
       </div>
     </footer>
   );
