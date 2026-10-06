@@ -72,7 +72,7 @@ export default function SportsCarousel() {
               Featured sports
             </p>
             <h2 className="font-display mt-1 text-3xl font-bold text-[#1C1917] sm:text-5xl">
-              Find your next adrenaline hit
+              Your next adventure starts here
             </h2>
           </div>
           <p className="text-sm text-[#1C1917]/60 sm:text-base" aria-live="polite">
