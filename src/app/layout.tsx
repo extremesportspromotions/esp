@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Extreme Sports Promotions | Get trained by a pro",
   description:
-    "ESP connects students with professional extreme-sports coaches for a fee. Mountaineering, scuba, skydiving, surfing, and more.",
+    "Get trained by a pro. Free enquiry. We find you a named UK coach across 15 extreme sports, from skydiving to surfing.",
   icons: {
     icon: [{ url: "/icon.png", type: "image/png" }],
     apple: [{ url: "/apple-icon.png" }],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Extreme Sports Promotions",
     description:
-      "Match with professional extreme-sports coaches. Fee-based coach matching for students and athletes.",
+      "Get trained by a pro. Free enquiry. We find you a named UK coach across 15 extreme sports, from skydiving to surfing.",
     type: "website",
     images: [{ url: "/logo.png", alt: "Extreme Sports Promotions" }],
   },
