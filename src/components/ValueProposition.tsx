@@ -13,7 +13,7 @@ export default function ValueProposition() {
             Why ESP
           </p>
           <h2 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">
-            Match with pro coaches. Pay a clear fee. Own the drop.
+            Match with pro coaches. Free enquiry. Own the drop.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-[#1C1917]/75 sm:text-lg">
             Extreme Sports Promotions connects students with professional
@@ -38,7 +38,7 @@ export default function ValueProposition() {
             href="#enquire"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Get matched — £29.99
+            Send a free enquiry
           </a>
         </div>
 

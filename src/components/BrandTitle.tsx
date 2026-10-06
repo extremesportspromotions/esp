@@ -69,7 +69,7 @@ export function BrandPickLine() {
             href="/#enquire"
             className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Get matched
+            Send a free enquiry
           </Link>
         </div>
         <p className="mx-auto mt-4 max-w-lg text-xs text-[#1C1917]/45 sm:text-sm">

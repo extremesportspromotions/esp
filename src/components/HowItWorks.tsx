@@ -11,8 +11,8 @@ const steps = [
   },
   {
     step: "03",
-    title: "Your £29.99 coach introduction",
-    body: "Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. Payment is the final step, once we've found your coach.",
+    title: "Pay the match fee",
+    body: "You pay our match fee only once we have found a named coach — taster £19, course £49, trip £99, party £79 or £129. The coach or club bills training separately. We do not take bookings for them.",
   },
   {
     step: "04",

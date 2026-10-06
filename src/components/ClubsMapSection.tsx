@@ -60,13 +60,14 @@ export default function ClubsMapSection() {
             map, then open a pin for the website, phone, or email.
           </p>
           <p className="mt-3 rounded-lg border border-[#1C1917]/10 bg-white px-4 py-3 text-sm text-[#1C1917]/65">
-            <span className="font-semibold text-[#1C1917]">Find a club</span> = browse
-            venues near you (free). Want a coach instead?{" "}
+            <span className="font-semibold text-[#1C1917]">Find a club</span> = free
+            self-serve browsing of venues near you. ESP does not book the lesson.
+            Want a coach instead?{" "}
             <a
               href="#enquire"
               className="font-semibold text-accent underline-offset-2 hover:underline"
             >
-              Get matched
+              Send a free enquiry
             </a>
             .
           </p>

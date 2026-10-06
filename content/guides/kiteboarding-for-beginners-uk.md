@@ -29,4 +29,4 @@ In UK waters you need a wetsuit for the time of year. You need a harness to spre
 
 Our club map shows [some UK kiteboarding clubs](https://esp-lemon.vercel.app/?sport=kiteboarding#find-a-club), and it is a starting point rather than a full list.
 
-If you would like help finding a coach, ESP can match you. The fee is £29.99. Nothing is charged when you send the form. The coach's own fees are separate. We refund the fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.
+If you would like help finding a coach, ESP can match you. The enquiry is free. You pay our match fee only once we have found a named coach — fee bands are on the form (taster £19, course £49, trip £99, party £79 or £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.

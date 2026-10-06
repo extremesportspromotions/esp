@@ -58,12 +58,12 @@ function normaliseUkPhone(raw: string): string | null {
 
 const isUkPhone = (raw: string) => normaliseUkPhone(raw) !== null;
 
-const BOOKING_TYPES = [
-  { value: "solo", label: "Solo" },
-  { value: "group", label: "Group" },
-  { value: "party", label: "Party" },
-  { value: "office", label: "Office booking" },
-  { value: "education", label: "Education trip" },
+const MATCH_FEES = [
+  { value: "taster", label: "Taster — £19" },
+  { value: "course", label: "Course or block of lessons — £49" },
+  { value: "trip", label: "Trip / rating / high-ticket (e.g. AFF) — £99" },
+  { value: "party-one", label: "Party/group · one sport, one date — £79" },
+  { value: "party-multi", label: "Several sports/venues — £129" },
 ] as const;
 
 type QuizState = {
@@ -74,7 +74,7 @@ type QuizState = {
   healthNote: string;
   location: string;
   travel: string;
-  bookingType: string;
+  matchFee: string;
   riskAck: boolean;
   guardianConsent: boolean;
   guardianName: string;
@@ -93,7 +93,7 @@ const initial: QuizState = {
   healthNote: "",
   location: "",
   travel: "",
-  bookingType: "",
+  matchFee: "",
   riskAck: false,
   guardianConsent: false,
   guardianName: "",
@@ -109,7 +109,7 @@ const STEP_TITLES = [
   "Level & goal",
   "About you",
   "Location",
-  "Booking type",
+  "Match fee",
   "Safety + contact",
 ] as const;
 
@@ -181,7 +181,7 @@ function buildPayload(values: QuizState, honey: string) {
     "Injuries or conditions": values.healthNote.trim() || "—",
     "Town / city": values.location.trim(),
     "How far they will travel": labelFor(TRAVEL_OPTIONS, values.travel),
-    "Booking type": labelFor(BOOKING_TYPES, values.bookingType),
+    "Match fee band": labelFor(MATCH_FEES, values.matchFee),
     "Understands the risks": values.riskAck ? "Yes" : "No",
     "Sent from": pageUrl,
   };
@@ -213,7 +213,7 @@ function isStepValid(step: number, values: QuizState): boolean {
     case 4:
       return Boolean(values.location.trim() && values.travel);
     case 5:
-      return Boolean(values.bookingType);
+      return Boolean(values.matchFee);
     case 6:
       return (
         values.riskAck &&
@@ -467,7 +467,9 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-4">
           <p className="text-base leading-relaxed text-[#1C1917]/75">
-            The £29.99 is due before any coach or club is contacted.
+            The enquiry is free. You pay our match fee only once we have found a
+            named coach. The coach or club bills you separately for the training.
+            We do not take bookings for them.
           </p>
           <div className="rounded-2xl border border-[#1C1917]/10 bg-white p-6 shadow-xl shadow-black/30 backdrop-blur sm:p-8">
           {submitted ? (
@@ -777,19 +779,25 @@ export default function ContactForm() {
                   <div className="space-y-5">
                     <div>
                       <h3 className="font-display text-xl font-bold text-[#1C1917]">
-                        Booking type
+                        Match fee
                       </h3>
                       <p className="mt-1 text-sm text-[#1C1917]/60">
-                        Who is this session for?
+                        What are you looking for? These are ESP match fees — paid
+                        only after we find a named coach — not training fees.
                       </p>
                     </div>
                     <ChipGroup
-                      legend="Booking type"
-                      name="bookingType"
-                      options={BOOKING_TYPES}
-                      value={values.bookingType}
-                      onChange={(v) => setField("bookingType", v)}
+                      legend="What are you looking for?"
+                      name="matchFee"
+                      options={MATCH_FEES}
+                      value={values.matchFee}
+                      onChange={(v) => setField("matchFee", v)}
                     />
+                    <p className="text-xs leading-relaxed text-[#1C1917]/55">
+                      The enquiry is free. You pay our match fee only once we have
+                      found a named coach. The coach or club bills you separately
+                      for the training. We do not take bookings for them.
+                    </p>
                   </div>
                 )}
 
@@ -927,6 +935,12 @@ export default function ContactForm() {
                     </div>
 
                     <div id="fee-note" className="space-y-2 text-sm text-[#1C1917]/55">
+                      <p>
+                        The enquiry is free. You pay our match fee only once we
+                        have found a named coach. The coach or club bills you
+                        separately for the training. We do not take bookings for
+                        them.
+                      </p>
                       <p>All our coaches are UK-based.</p>
                       <p>{UNDER_18_NOTE}</p>
                     </div>
@@ -969,7 +983,7 @@ export default function ContactForm() {
                           aria-hidden
                         />
                       )}
-                      {sending ? "Sending…" : "Send enquiry — £29.99"}
+                      {sending ? "Sending…" : "Send free enquiry"}
                     </button>
                   )}
                 </div>
