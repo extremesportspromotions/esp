@@ -21,7 +21,7 @@ export default function ValueProposition() {
           </p>
           <ul className="mt-6 space-y-3 text-[#1C1917]/80">
             {[
-              "Curated, UK-based coaches across land, air, and water sports",
+              "UK-based coaches across land, air, and water sports",
             ].map((item) => (
               <li key={item} className="flex gap-3">
                 <span
@@ -45,8 +45,8 @@ export default function ValueProposition() {
         <div className="grid gap-4 sm:grid-cols-2">
           {[
             {
-              title: "Pro-verified coaches",
-              body: "We screen instructors for credentials, experience, and teaching clarity.",
+              title: "Qualified coaches",
+              body: "We look for coaches with recognised qualifications, experience and clear teaching.",
             },
             {
               title: "Student-first",

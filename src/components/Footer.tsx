@@ -45,6 +45,12 @@ export default function Footer() {
             >
               Privacy
             </Link>
+            <Link
+              href="/terms"
+              className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Terms
+            </Link>
           </nav>
         </div>
       </div>

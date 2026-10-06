@@ -1,0 +1,94 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import TopBar from "@/components/TopBar";
+import Footer from "@/components/Footer";
+import { ENQUIRY_EMAIL } from "@/lib/site";
+
+const title = "Terms";
+const description =
+  "How Extreme Sports Promotions (ESP) works: a free enquiry, a match fee only once we find you a named coach, and what you and the coach are each responsible for.";
+
+export const metadata: Metadata = {
+  title: `${title} | Extreme Sports Promotions`,
+  description,
+  alternates: { canonical: "/terms" },
+  openGraph: { title: `${title} | Extreme Sports Promotions`, description, type: "website", url: "/terms" },
+};
+
+function Mail() {
+  return <a href={`mailto:${ENQUIRY_EMAIL}`}>{ENQUIRY_EMAIL}</a>;
+}
+
+export default function TermsPage() {
+  return (
+    <>
+      <TopBar />
+      <main id="main" className="flex-1 bg-[#EEF4FA]">
+        <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
+          <p className="text-sm font-semibold uppercase tracking-widest text-accent">How it works</p>
+          <h1 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">Terms</h1>
+          <p className="mt-4 text-base leading-relaxed text-[#1C1917]/75">
+            These terms explain how Extreme Sports Promotions (&ldquo;ESP&rdquo;, &ldquo;we&rdquo;,
+            &ldquo;us&rdquo;) works and what you pay for. This is a plain-English summary, not legal
+            advice.
+          </p>
+
+          <div className="guide-prose prose mt-10">
+            <h2>Your enquiry is free</h2>
+            {/* Normal body size: .guide-prose enlarges the first paragraph as an article lead. */}
+            <p style={{ fontSize: "1em", lineHeight: "inherit", color: "inherit" }}>
+              Sending us an enquiry is free. We then look for a named coach for you.
+            </p>
+
+            <h2>Our match fee</h2>
+            <p>
+              You pay our match fee only after we&apos;ve found a named coach for you, and before we
+              release their contact details. The fee depends on what you&apos;re looking for:
+            </p>
+            <ul>
+              <li>Taster: £19</li>
+              <li>Course or block of lessons: £49</li>
+              <li>Trip, rating or other high-ticket course: £99</li>
+              <li>Party or group (one sport, one date): £79</li>
+              <li>Several sports or venues: £129</li>
+            </ul>
+
+            <h2>Paying for your training</h2>
+            <p>
+              The coach or club bills you separately for the training. ESP does not book lessons, run
+              training, or take the club&apos;s training fee.
+            </p>
+
+            <h2>Safety and checks</h2>
+            <p>
+              You must check the coach&apos;s credentials and insurance yourself, and follow the
+              club&apos;s safety rules.
+            </p>
+
+            <h2>Under-18s</h2>
+            <p>If you&apos;re under 18, you need a parent or guardian&apos;s consent.</p>
+
+            <h2>Refunds</h2>
+            <p>
+              No fee is due if we can&apos;t find a coach. If the coach can&apos;t be reached or
+              won&apos;t take you on within 14 days of us releasing their contact details, we&apos;ll
+              find you another coach or refund the fee.
+            </p>
+
+            <h2>Contact us</h2>
+            <p>
+              If you have a question about these terms, email <Mail />.
+            </p>
+          </div>
+
+          <p className="mt-12 border-t border-[#1C1917]/10 pt-6 text-sm text-[#1C1917]/55">
+            <Link href="/#enquire" className="font-semibold text-accent underline-offset-2 hover:underline">
+              Back to the enquiry form
+            </Link>
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}

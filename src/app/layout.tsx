@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Extreme Sports Promotions | Match with Pro Coaches",
+  title: "Extreme Sports Promotions | Get trained by a pro",
   description:
     "ESP connects students with professional extreme-sports coaches for a fee. Mountaineering, scuba, skydiving, surfing, and more.",
   icons: {
