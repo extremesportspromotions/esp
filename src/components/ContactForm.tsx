@@ -148,9 +148,6 @@ function labelFor(
  * FormSubmit (https://formsubmit.co). Keys starting with "_" are FormSubmit
  * settings rather than form answers.
  */
-const AUTORESPONSE =
-  "Thanks for your free enquiry with Extreme Sports Promotions. We have your details and will now look for a named UK coach who suits you, then get back to you by email or phone. The enquiry is free: you only pay our match fee once we have found a named coach, and then we release their contact details. Any questions, email enquiries@extremesportspromotions.com.";
-
 const NOT_APPLICABLE = "Not applicable (18 or over)";
 
 function buildPayload(values: QuizState, honey: string) {
@@ -162,8 +159,6 @@ function buildPayload(values: QuizState, honey: string) {
     _replyto: values.email.trim(),
     _template: "table",
     _captcha: "false",
-    // FormSubmit emails this confirmation to the address in the "email" field.
-    _autoresponse: AUTORESPONSE,
     _url: pageUrl,
     _honey: honey,
     "Full name": values.name.trim(),
@@ -416,7 +411,18 @@ export default function ContactForm() {
         typeof data === "object" && data !== null && "success" in data
           ? String((data as { success: unknown }).success) === "true"
           : false;
-      setStatus(res.ok && success ? "success" : "error");
+      const delivered = res.ok && success;
+      if (delivered) {
+        // Instant confirmation email to the student; never blocks the success message.
+        const sportName = sports.find((s) => s.id === values.sport)?.name ?? "";
+        void fetch("/api/autoreply", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: values.name, email: values.email, sport: sportName, _honey: honey }),
+          keepalive: true,
+        }).catch(() => {});
+      }
+      setStatus(delivered ? "success" : "error");
     } catch {
       setStatus("error");
     } finally {
