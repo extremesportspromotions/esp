@@ -57,7 +57,7 @@ export const sports: Sport[] = [
   {
     id: "mountain-biking",
     guide: "/guides/learn-to-mountain-bike-uk",
-    video: "/carousel-clips/carousel-04-mountain-biking-v2.mp4",
+    video: "/carousel-clips/carousel-04-mountain-biking-v3.mp4",
     videoPosition: "60% 55%",
     credit: "Supplied by ESP",
     name: "Mountain Biking",
