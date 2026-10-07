@@ -46,7 +46,8 @@ export const sports: Sport[] = [
   {
     id: "paragliding",
     guide: "/guides/learn-to-paraglide-uk",
-    video: "/carousel-clips/carousel-03-paragliding.mp4",
+    video: "/carousel-clips/carousel-03-paragliding-v2.mp4",
+    credit: "Supplied by ESP",
     name: "Paragliding",
     description:
       "Launch into thermal soaring with instructors who coach launches, turns, and landing technique from day one.",
@@ -83,8 +84,8 @@ export const sports: Sport[] = [
   {
     id: "skydiving",
     guide: "/guides/first-tandem-skydive-uk",
-    video: "/carousel-clips/carousel-06-skydiving.mp4",
-    credit: "Pigheart, CC BY-SA 4.0",
+    video: "/carousel-clips/carousel-06-skydiving-v2.mp4",
+    credit: "Supplied by ESP",
     name: "Skydiving",
     description:
       "Train freefall body flight and canopy control with licensed jumpmasters focused on safe progression.",
