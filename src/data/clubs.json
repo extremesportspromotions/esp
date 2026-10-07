@@ -3049,5 +3049,53 @@
     "url": "https://ukparachuting.co.uk/",
     "email": "book@ukparachuting.co.uk",
     "phone": "01502 476131"
+  },
+  {
+    "id": "kiteboarding-kitesurf-scotland-troon-37498767",
+    "name": "Kitesurf Scotland (Troon)",
+    "sportId": "kiteboarding",
+    "town": "Troon",
+    "region": "United Kingdom",
+    "lat": 55.557476,
+    "lng": -4.656253,
+    "url": "https://www.kitesurfscotland.co.uk/",
+    "email": "info.kitesurfscotland@gmail.com",
+    "phone": "07841 765845"
+  },
+  {
+    "id": "motocross-mx-factory-off-road-school-08654210",
+    "name": "MX Factory Off-Road School",
+    "sportId": "motocross",
+    "town": "Henstridge",
+    "region": "United Kingdom",
+    "lat": 50.982327,
+    "lng": -2.357034,
+    "url": "https://mxfactoryoffroadschool.co.uk/",
+    "email": "neilberry39@gmail.com",
+    "phone": "07491 389898"
+  },
+  {
+    "id": "motocross-mildenhall-motocross-train-2-gain-mx-tryout-99994350",
+    "name": "Mildenhall Motocross (Train 2 Gain / MX Tryout)",
+    "sportId": "motocross",
+    "town": "West Row",
+    "region": "United Kingdom",
+    "lat": 52.363723,
+    "lng": 0.437858,
+    "url": "https://mildenhallmx.co.uk/",
+    "email": "info@mxtryout.com",
+    "phone": "07595 996802"
+  },
+  {
+    "id": "motocross-doncaster-moto-parc-56116580",
+    "name": "Doncaster Moto Parc",
+    "sportId": "motocross",
+    "town": "Austerfield",
+    "region": "United Kingdom",
+    "lat": 53.443979,
+    "lng": -1.005999,
+    "url": "https://doncastermotoparc.co.uk/",
+    "email": "ride@doncastermotoparc.co.uk",
+    "phone": "+44 (0)7547 584554"
   }
 ]
