@@ -56,7 +56,7 @@ A good coach will happily answer these:
 3. **Pay the matching fee.** The payment link is the last stage of your enquiry.
 4. **Train with a pro.**
 
-Prefer email? You can write to extremesportspromotionsuk@gmail.com [1].
+Prefer email? You can write to enquiries@extremesportspromotions.com [1].
 
 ### Who we work with
 
