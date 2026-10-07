@@ -109,7 +109,8 @@ export const sports: Sport[] = [
   {
     id: "kiteboarding",
     guide: "/guides/kiteboarding-for-beginners-uk",
-    video: "/carousel-clips/carousel-08-kiteboarding.mp4",
+    video: "/carousel-clips/carousel-08-kiteboarding-v2.mp4",
+    credit: "Supplied by ESP",
     name: "Kiteboarding",
     description:
       "Master kite power and board skills with IKO coaches who prioritize wind awareness and water starts.",
@@ -178,7 +179,8 @@ export const sports: Sport[] = [
   {
     id: "kayaking",
     guide: "/guides/kayaking-for-beginners-uk",
-    video: "/carousel-clips/carousel-14-kayaking.mp4",
+    video: "/carousel-clips/carousel-14-kayaking-v2.mp4",
+    credit: "Supplied by ESP",
     name: "Kayaking",
     mapLabel: "Kayaking & rafting",
     description:
@@ -190,8 +192,8 @@ export const sports: Sport[] = [
   {
     id: "hang-gliding",
     guide: "/guides/hang-gliding-for-beginners-uk",
-    video: "/carousel-clips/carousel-15-hang-gliding.mp4",
-    credit: "TamaMer, CC BY-SA 3.0",
+    video: "/carousel-clips/carousel-15-hang-gliding-v2.mp4",
+    credit: "Supplied by ESP",
     name: "Hang Gliding",
     description:
       "Feel the ridge lift with hang-gliding instructors who walk you from ground handling to soaring flights.",
