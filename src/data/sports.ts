@@ -12,6 +12,8 @@ export type Sport = {
   video?: string;
   /** Optional attribution shown below the carousel media */
   credit?: string;
+  /** Optional CSS object-position for the carousel video */
+  videoPosition?: string;
   /** Optional label used on the club map (filter chip, cards and popups) instead of `name` */
   mapLabel?: string;
 };
@@ -20,8 +22,9 @@ export const sports: Sport[] = [
   {
     id: "mountaineering",
     guide: "/guides/mountaineering-for-beginners-uk",
-    video: "/carousel-clips/carousel-01-mountaineering.mp4",
-    credit: "Pixabay Content License",
+    video: "/carousel-clips/carousel-01-mountaineering-v2.mp4",
+    videoPosition: "50% 35%",
+    credit: "Supplied by ESP",
     name: "Mountaineering",
     description:
       "Scale iconic peaks with certified alpine guides who teach rope work, route finding, and high-altitude safety.",
@@ -54,7 +57,9 @@ export const sports: Sport[] = [
   {
     id: "mountain-biking",
     guide: "/guides/learn-to-mountain-bike-uk",
-    video: "/carousel-clips/carousel-04-mountain-biking.mp4",
+    video: "/carousel-clips/carousel-04-mountain-biking-v2.mp4",
+    videoPosition: "60% 55%",
+    credit: "Supplied by ESP",
     name: "Mountain Biking",
     description:
       "Rip trails with coaches who dial in bike setup, cornering, and descending skills for every terrain level.",
@@ -65,7 +70,9 @@ export const sports: Sport[] = [
   {
     id: "wakeboarding",
     guide: "/guides/wakeboarding-for-beginners-uk",
-    video: "/carousel-clips/carousel-05-wakeboarding.mp4",
+    video: "/carousel-clips/carousel-05-wakeboarding-v2.mp4",
+    videoPosition: "60% 65%",
+    credit: "Supplied by ESP",
     name: "Wakeboarding",
     description:
       "Progress from deep-water starts to aerial tricks with wake pros who film and break down every run.",
@@ -88,7 +95,9 @@ export const sports: Sport[] = [
   {
     id: "motocross",
     guide: "/guides/motocross-for-beginners-uk",
-    video: "/carousel-clips/carousel-07-motocross.mp4",
+    video: "/carousel-clips/carousel-07-motocross-v2.mp4",
+    videoPosition: "50% 30%",
+    credit: "Supplied by ESP",
     name: "Motocross",
     description:
       "Build throttle control, jumps, and race craft with coaches who know the dirt track inside out.",
