@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Extreme Sports Promotions | Get trained by a pro",
   description:
-    "Get trained by a pro. Free enquiry. We find you a named UK coach across 15 extreme sports, from skydiving to surfing.",
+    "Get trained by a pro. We find you the right UK coach across 15 extreme sports, from skydiving to surfing.",
   icons: {
     icon: [{ url: "/favicon-32.png", sizes: "32x32", type: "image/png" }],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Extreme Sports Promotions",
     description:
-      "Get trained by a pro. Free enquiry. We find you a named UK coach across 15 extreme sports, from skydiving to surfing.",
+      "Get trained by a pro. We find you the right UK coach across 15 extreme sports, from skydiving to surfing.",
     type: "website",
     images: [{ url: "/logo.png", alt: "Extreme Sports Promotions" }],
   },

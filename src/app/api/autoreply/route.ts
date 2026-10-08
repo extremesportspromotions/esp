@@ -74,8 +74,8 @@ export async function POST(req: Request): Promise<Response> {
   const about = sportName ? ` about ${sportLower}` : "";
   const lines = [
     greeting,
-    `Thanks for your free enquiry${about} with Extreme Sports Promotions. We have your details and will now look for a named UK coach who suits you, then get back to you by email or phone.`,
-    "The enquiry is free: you only pay our match fee once we have found a named coach, and then we release their contact details. The coach or club bills you separately for the training.",
+    `Thanks for your enquiry${about} with Extreme Sports Promotions. We have your details.`,
+    "Next, we'll email you a secure payment link for your match fee. We start finding your UK coach as soon as it's paid, and you get a full refund if we can't find you a coach within 14 days. The coach or club bills you separately for the training.",
     "Any questions, just reply to this email or write to enquiries@extremesportspromotions.com.",
     "Matthew\nExtreme Sports Promotions\nhttps://www.extremesportspromotions.com",
   ];

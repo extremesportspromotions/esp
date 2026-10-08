@@ -1,4 +1,5 @@
 import MatchFeeTable from "./MatchFeeTable";
+import { REFUND_LINE } from "@/lib/payment";
 
 type Step = {
   step: string;
@@ -15,13 +16,14 @@ const steps: Step[] = [
   },
   {
     step: "02",
-    title: "We find the right course for you",
-    body: "We match you with a UK-based professional coach who fits your goals.",
+    title: "Pay the match fee",
+    feeTable: true,
+    body: REFUND_LINE,
   },
   {
     step: "03",
-    title: "Pay the match fee",
-    feeTable: true,
+    title: "We find the right course for you",
+    body: "We match you with a UK-based professional coach who fits your goals.",
   },
   {
     step: "04",

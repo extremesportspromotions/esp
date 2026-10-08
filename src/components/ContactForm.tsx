@@ -4,6 +4,8 @@ import Link from "next/link";
 import { FormEvent, useEffect, useId, useMemo, useState } from "react";
 import { sports } from "@/data/sports";
 import { ENQUIRY_EMAIL, ENQUIRY_ENDPOINT } from "@/lib/site";
+import { REFUND_LINE, paymentStatusLabel, startPayment } from "@/lib/payment";
+import PaymentStep from "@/components/PaymentStep";
 
 const TOTAL_STEPS = 6;
 
@@ -180,6 +182,7 @@ function buildPayload(values: QuizState, honey: string) {
     "Town / city": values.location.trim(),
     "How far they will travel": labelFor(TRAVEL_OPTIONS, values.travel),
     "Match fee band": labelFor(MATCH_FEES, values.matchFee),
+    Payment: paymentStatusLabel(),
     "Understands the risks": values.riskAck ? "Yes" : "No",
     "Sent from": pageUrl,
   };
@@ -431,6 +434,8 @@ export default function ContactForm() {
         }).catch(() => {});
       }
       setStatus(delivered ? "success" : "error");
+      // Hook for Stripe Checkout later; does nothing in "email-link" mode.
+      if (delivered) void startPayment(values.matchFee);
     } catch {
       setStatus("error");
     } finally {
@@ -486,9 +491,9 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-4">
           <p className="text-base leading-relaxed text-[#1C1917]/75">
-            Once we have found a named coach, you pay the
-            match fee — then we release the contact. The coach or club bills you
-            separately for the training. We do not take bookings for them.
+            You pay the match fee up front, when you enquire. {REFUND_LINE} The
+            coach or club bills you separately for the training. We do not take
+            bookings for them.
           </p>
           <div className="rounded-2xl border border-[#1C1917]/10 bg-white p-6 shadow-xl shadow-black/30 backdrop-blur sm:p-8">
           {submitted ? (
@@ -502,8 +507,8 @@ export default function ContactForm() {
               <p className="text-[#1C1917]/75">
                 Your enquiry has been sent
                 {values.name.trim() ? `, ${values.name.trim()}` : ""}. We&apos;ll
-                call you shortly to talk through your enquiry and match. You
-                haven&apos;t been charged anything.
+                email you a secure payment link for your match fee. We start
+                finding your coach as soon as it&apos;s paid.
               </p>
               <button
                 type="button"
@@ -808,9 +813,8 @@ export default function ContactForm() {
                         Match fee
                       </h3>
                       <p className="mt-1 text-sm text-[#1C1917]/60">
-                        What are you looking for? These are ESP match fees — paid
-                        only after we find a named coach, then we release the
-                        contact. Not training fees.
+                        What are you looking for? This is the ESP match fee, paid
+                        up front when you enquire. It isn&apos;t the training fee.
                       </p>
                     </div>
                     <ChipGroup
@@ -821,10 +825,9 @@ export default function ContactForm() {
                       onChange={(v) => setField("matchFee", v)}
                     />
                     <p className="text-xs leading-relaxed text-[#1C1917]/55">
-                      Once we have found a named coach, you
-                      pay the match fee — then we release the contact. The coach
-                      or club bills you separately for the training. We do not
-                      take bookings for them.
+                      We email you a secure payment link after you send the
+                      form. {REFUND_LINE} The coach or club bills you separately
+                      for the training.
                     </p>
                   </div>
                 )}
@@ -962,13 +965,9 @@ export default function ContactForm() {
                       </select>
                     </div>
 
+                    <PaymentStep feeLabel={labelFor(MATCH_FEES, values.matchFee)} />
+
                     <div id="fee-note" className="space-y-2 text-sm text-[#1C1917]/55">
-                      <p>
-                        Once we have found a named coach,
-                        you pay the match fee — then we release the contact. The
-                        coach or club bills you separately for the training. We
-                        do not take bookings for them.
-                      </p>
                       <p>All our coaches are UK-based.</p>
                       <p>{UNDER_18_NOTE}</p>
                     </div>

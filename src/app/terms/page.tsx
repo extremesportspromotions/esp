@@ -6,7 +6,7 @@ import { ENQUIRY_EMAIL } from "@/lib/site";
 
 const title = "Terms";
 const description =
-  "How Extreme Sports Promotions (ESP) works: a free enquiry, a match fee only once we find you a named coach, and what you and the coach are each responsible for.";
+  "How Extreme Sports Promotions (ESP) works: the match fee you pay when you enquire, refunds, and what you and the coach are each responsible for.";
 
 export const metadata: Metadata = {
   title: `${title} | Extreme Sports Promotions`,
@@ -34,16 +34,11 @@ export default function TermsPage() {
           </p>
 
           <div className="guide-prose prose mt-10">
-            <h2>Your enquiry is free</h2>
+            <h2>Our match fee</h2>
             {/* Normal body size: .guide-prose enlarges the first paragraph as an article lead. */}
             <p style={{ fontSize: "1em", lineHeight: "inherit", color: "inherit" }}>
-              Sending us an enquiry is free. We then look for a named coach for you.
-            </p>
-
-            <h2>Our match fee</h2>
-            <p>
-              You pay our match fee only after we&apos;ve found a named coach for you, and before we
-              release their contact details. The fee depends on what you&apos;re looking for:
+              You pay our match fee up front, when you enquire. We start finding your coach as soon
+              as it&apos;s paid. The fee depends on what you&apos;re looking for:
             </p>
             <ul>
               <li>Experience day (one person, one day): £19</li>
@@ -70,9 +65,8 @@ export default function TermsPage() {
 
             <h2>Refunds</h2>
             <p>
-              No fee is due if we can&apos;t find a coach. If the coach can&apos;t be reached or
-              won&apos;t take you on within 14 days of us releasing their contact details, we&apos;ll
-              find you another coach or refund the fee.
+              If we can&apos;t find you a coach within 14 days of your payment, we refund the match
+              fee in full. We also refund it if your health means you can&apos;t train.
             </p>
 
             <h2>Contact us</h2>
