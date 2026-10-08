@@ -1,7 +1,7 @@
 ---
 title: "How ESP coach matching works (and why a qualified coach matters)"
 slug: how-esp-coach-matching-works
-description: "How ESP coach matching works: the £29.99 fee, refunds, timings, under-18s and our checks, plus what to ask any coach before you book a lesson."
+description: "How ESP coach matching works: the free enquiry, our match-fee bands, refunds, timings, under-18s and our checks, plus what to ask any coach before you book a lesson."
 sport: general
 category: "How-to"
 author: "ESP Editorial"
@@ -9,7 +9,7 @@ date: 2026-10-08
 heroImage: "/sports/mountaineering.jpg"
 heroAlt: "A walker with a blue rucksack sits on a grassy hilltop, looking out over a cloud inversion with rounded hilltops poking through"
 featured: false
-draft: true
+draft: false
 ---
 
 Finding a coach is the exciting bit, but it pays to know who you're learning from. Here's what UK governing bodies say about choosing a qualified, insured instructor, the questions to ask before you book, and exactly how ESP's coach matching and free club map work.
@@ -53,7 +53,7 @@ A good coach will happily answer these:
 
 1. **Tell us your sport.** Fill in the [enquiry form](https://www.extremesportspromotions.com/#enquire), which takes about a minute. It asks about your sport, level, goals, age and location, including how far you'll travel [1]. Sending it is free: no charge is taken when you submit it [18].
 2. **We get in touch.** We open a line of communication with you and start looking for the right coach or club [18].
-3. **Pay the matching fee.** The payment link is the last stage of your enquiry.
+3. **We find a named coach, then you pay the match fee.** You pay only once we have found a named coach, and then we release their contact details [18].
 4. **Train with a pro.**
 
 Prefer email? You can write to enquiries@extremesportspromotions.com [1].
@@ -68,9 +68,9 @@ We aim to secure you a place within 5 working days of your enquiry. That's an ai
 
 ### The fee and refunds
 
-Our matching fee is £29.99 to find and introduce you to the right coach; coach session fees are separate. (Price correct as of 26 September 2026.) [18]
+The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. (Prices correct as of 8 October 2026.) [18]
 
-We refund the matching fee if we can't provide a coach, or if your health means you're unable to train.
+We refund the match fee if we can't provide a coach, or if your health means you're unable to train.
 
 ### Under-18s
 
@@ -78,21 +78,21 @@ If the student is under 18, we need consent from a parent or guardian, and Matth
 
 ## Using the club map
 
-The [club map](https://www.extremesportspromotions.com/#find-a-club) lists UK clubs, centres and schools that offer coaching, lessons or courses. As of 25 September 2026 it included 223 venues, each with a working website and contact details [1].
+The [club map](https://www.extremesportspromotions.com/#find-a-club) lists UK clubs, centres and schools that offer coaching, lessons or courses. As of 8 October 2026 it included 304 venues, each with a working website and contact details [1].
 
 - **Filter by sport**, then open a pin for the venue's website, phone number or email.
 - **Jump straight to a sport** with a link like `https://www.extremesportspromotions.com/?sport=skydiving#find-a-club`.
-- **Check before you travel.** Listings come from public sources, including OpenStreetMap, BHPA club listings and British Skydiving drop zone directories. They were last checked in September 2026, and map positions are approximate.
+- **Check before you travel.** Listings come from public sources, including OpenStreetMap, BHPA club listings and British Skydiving drop zone directories. They were last checked in September and October 2026, and map positions are approximate.
 
-The map is a starting point, not a complete directory: there are no venues yet for kiteboarding or BASE jumping, and only a few for motocross, wingsuit flying and kayaking. A listing isn't a review or an endorsement. The paragliding pins are currently BHPA recreational clubs, so do your first training at a BHPA registered school [2], though the BHPA encourages trainees to contact their local club early [3].
+The map is a starting point, not a complete directory: there are no venues yet for BASE jumping, and only a few for wingsuit flying. A listing isn't a review or an endorsement. The paragliding pins are currently BHPA recreational clubs, so do your first training at a BHPA registered school [2], though the BHPA encourages trainees to contact their local club early [3].
 
 > [!TIP]
-> Not after a coach? Browsing the club map is free, with no matching fee.
+> Not after a coach? Browsing the club map is free, with no match fee.
 
 ## FAQ
 
 **Do I pay anything when I send the enquiry form?**
-No. The payment link for the £29.99 matching fee comes at the last stage of your enquiry, and coach session fees are separate.
+No. The enquiry is free. You pay the match fee only once we have found a named coach, and the coach or club bills you separately for the training.
 
 **Can I get a refund?**
 Yes, if we can't provide a coach, or if your health means you're unable to train.
@@ -123,4 +123,4 @@ Browse the club map, or ask us to find a coach for you. Either way, make sure yo
 15. DBS. Snowsport England. [https://www.snowsportengland.org.uk/dbs/](https://www.snowsportengland.org.uk/dbs/) (accessed 25 September 2026).
 16. The adventure activities licensing scheme legislation. Health and Safety Executive. [https://www.hse.gov.uk/aala/general-information.htm](https://www.hse.gov.uk/aala/general-information.htm) (accessed 25 September 2026).
 17. Open Water Diver eLearning Course (FAQs: medical requirements). PADI. [https://www.padi.com/courses/open-water-diver](https://www.padi.com/courses/open-water-diver) (accessed 25 September 2026).
-18. ESP, matching policy confirmed by Matthew Thornton, 26 September 2026 (payment timing, refunds, checks on coaches and clubs, matching times, the £29.99 fee, under-18s and UK-based coaches).
+18. ESP, matching policy confirmed by Matthew Thornton, 26 September 2026, with the match-fee bands and pay-after-match model approved on 6 October 2026 (payment timing, refunds, checks on coaches and clubs, matching times, the match fee, under-18s and UK-based coaches).
