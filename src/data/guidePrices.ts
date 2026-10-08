@@ -2,7 +2,7 @@
  * "What it costs" box shown near the end of every sport guide, directly above the
  * closing club map / enquiry line. One entry per sport, keyed by sport slug.
  *
- * Source: /home/box/agent-data/shared/esp/uk-sport-prices-2026-10.md (checked October 2026).
+ * Source: /home/box/agent-data/shared/esp/uk-sport-prices-2026-10-v2.md (Matthew, 8 Oct 2026; checked October 2026).
  * Rules:
  * - Show the real UK range from each sport's notes. Never the "Guide price to show"
  *   figure, and never a figure with the 20 percent added.
@@ -23,44 +23,44 @@ export const GUIDE_PRICES_TITLE = "What it costs";
 
 export const GUIDE_PRICES: Record<string, GuidePriceRow[]> = {
   "mountaineering": [
-    { label: "Experience day", text: "Typical UK price: £50 to £150 per person" },
+    { label: "Experience day", text: "Typical UK price: £55 to £150 per person" },
     { label: "Become qualified", text: "Typical UK price: £450 to £1,000 (Rock Climbing Instructor to Mountain Leader; registration extra)" },
-    { label: "Hourly", text: "Typical UK price: £25 to £60 an hour (indoor wall to private outdoor)" },
+    { label: "Hourly", text: "Typical UK price: £40 to £70 an hour (outdoor coach)" },
   ],
   "scuba-diving": [
-    { label: "Experience day", text: "Typical UK price: £40 to £160 per person" },
-    { label: "Become qualified", text: "Typical UK price: £395 to £900 (PADI or SSI Open Water)" },
-    { label: "Per dive", text: "Typical UK price: £45 to £120 a dive" },
+    { label: "Experience day", text: "Typical UK price: £55 to £160 per person" },
+    { label: "Become qualified", text: "Typical UK price: £445 to £900 (PADI or SSI Open Water)" },
+    { label: "Per dive", text: "Typical UK price: £65 to £120 a dive" },
   ],
   "paragliding": [
-    { label: "Experience day", text: "Typical UK price: £120 to £230 per person (BHPA day membership sometimes extra)" },
-    { label: "Become qualified", text: "Typical UK price: £1,200 to £1,700 (Elementary Pilot + Club Pilot; BHPA membership extra)" },
+    { label: "Experience day", text: "Typical UK price: £140 to £230 per person (BHPA day membership sometimes extra)" },
+    { label: "Become qualified", text: "Typical UK price: £1,250 to £1,700 (Elementary Pilot + Club Pilot; BHPA membership extra)" },
     { label: "Per day", text: "Typical UK price: £140 to £200 a day" },
   ],
   "mountain-biking": [
-    { label: "Experience day", text: "Typical UK price: £65 to £180 per person" },
+    { label: "Experience day", text: "Typical UK price: £80 to £250 per person" },
     { label: "Become qualified", text: "Typical UK price: £250 to £600 (British Cycling coaching award)" },
-    { label: "Hourly", text: "Typical UK price: £35 to £70 an hour" },
+    { label: "Hourly", text: "Typical UK price: £45 to £70 an hour" },
   ],
   "wakeboarding": [
-    { label: "Experience day", text: "Typical UK price: £45 to £165 per person (30-minute intro to a private hour)" },
+    { label: "Experience day", text: "Typical UK price: £70 to £165 per person (coached cable session with kit)" },
     { label: "Become qualified", text: "Typical UK price: £595 to £850 (BWSW Level 1 and 2, extras included)" },
-    { label: "Hourly", text: "Typical UK price: £40 to £165 an hour (shared cable to private with a coach)" },
+    { label: "Hourly", text: "Typical UK price: £70 to £165 an hour (coached cable time)" },
   ],
   "skydiving": [
-    { label: "Experience day", text: "Typical UK price: £149 to £349 per person (video extra)" },
-    { label: "Become qualified", text: "Typical UK price: £1,200 to £1,900 (AFF + A licence; British Skydiving membership extra)" },
+    { label: "Experience day", text: "Typical UK price: £189 to £349 per person (video extra)" },
+    { label: "Become qualified", text: "Typical UK price: £1,400 to £1,900 (AFF + A licence; British Skydiving membership extra)" },
     { label: "Per coached jump", text: "Typical UK price: £40 to £80 a coached jump" },
   ],
   "motocross": [
-    { label: "Experience day", text: "Typical UK price: £179 to £350 per person (bike and kit included)" },
-    { label: "Become qualified", text: "Typical UK price: £285 to £560 (coached development day)" },
-    { label: "Hourly", text: "Typical UK price: £40 to £140 an hour (track time on a hire bike to one-to-one coaching)" },
+    { label: "Experience day", text: "Typical UK price: £189 to £350 per person (bike and kit included)" },
+    { label: "Become qualified", text: "Typical UK price: £425 to £560 (one-to-one development day)" },
+    { label: "Hourly", text: "Typical UK price: £70 to £140 an hour (coached track time with a bike)" },
   ],
   "kiteboarding": [
     { label: "Experience day", text: "Typical UK price: £130 to £199 per person" },
-    { label: "Become qualified", text: "Typical UK price: £255 to £1,000 (beginner to independent rider)" },
-    { label: "Hourly", text: "Typical UK price: £65 to £90 an hour (private lesson)" },
+    { label: "Become qualified", text: "Typical UK price: £360 to £1,000 (beginner to independent rider)" },
+    { label: "Hourly", text: "Typical UK price: £65 to £80 an hour (private lesson)" },
   ],
   "wingsuit-flying": [
     { label: "First-flight course (after about 200 skydives)", text: "Typical UK price: £250 to £600 per person (jump tickets extra)" },
@@ -68,26 +68,26 @@ export const GUIDE_PRICES: Record<string, GuidePriceRow[]> = {
     { label: "Per coached jump", text: "Typical UK price: £40 to £100 a coached jump" },
   ],
   "skateboarding": [
-    { label: "Experience day", text: "Typical UK price: £28 to £45 per person (one-hour lesson with board and pads)" },
-    { label: "Become qualified", text: "Typical UK price: £150 to £450 (coaching award)" },
-    { label: "Hourly", text: "Typical UK price: £15 to £60 an hour (group to private)" },
+    { label: "Experience day", text: "Typical UK price: £32 to £60 per person (one-hour private lesson with board and pads)" },
+    { label: "Become qualified", text: "Typical UK price: £200 to £450 (coaching award)" },
+    { label: "Hourly", text: "Typical UK price: £32 to £60 an hour (private coaching)" },
   ],
   "surfing": [
-    { label: "Experience day", text: "Typical UK price: £35 to £50 per person (two-hour group lesson with wetsuit and board)" },
-    { label: "Become qualified", text: "Typical UK price: £120 to £250 (beginner course of 3 to 5 lessons)" },
-    { label: "Hourly", text: "Typical UK price: £18 to £70 an hour (group to private)" },
+    { label: "Experience day", text: "Typical UK price: £45 to £140 per person (two-hour lesson with kit, group to private)" },
+    { label: "Become qualified", text: "Typical UK price: £160 to £400 (block of lessons to ISA Level 1 surf coach)" },
+    { label: "Hourly", text: "Typical UK price: £35 to £70 an hour" },
   ],
   "base-jumping": [
-    { label: "Become qualified", text: "Typical price abroad: £1,250 to £2,600 (the first BASE course is the entry step; there is no UK qualification)" },
+    { label: "Become qualified", text: "Typical price abroad: £1,250 to £2,500 (the first BASE course is the entry step; there is no UK qualification)" },
     { label: "Per day", text: "Typical price abroad: £200 to £400 a day for coaching" },
   ],
   "snowboarding": [
-    { label: "Experience day", text: "Typical UK price: £90 to £150 per person (full day on an indoor or dry slope)" },
-    { label: "Become qualified", text: "Typical UK price: £720 to £1,200 (BASI Level 1, indoor package)" },
-    { label: "Hourly", text: "Typical UK price: £20 to £90 an hour (group to private)" },
+    { label: "Experience day", text: "Typical UK price: £70 to £140 per person (private hour or indoor learn-to-ride day)" },
+    { label: "Become qualified", text: "Typical UK price: £600 to £900 (BASI Level 1, up to an indoor package)" },
+    { label: "Hourly", text: "Typical UK price: £45 to £110 an hour (private lesson)" },
   ],
   "kayaking": [
-    { label: "Experience day", text: "Typical UK price: £35 to £90 per person" },
+    { label: "Experience day", text: "Typical UK price: £45 to £90 per person" },
     { label: "Become qualified", text: "Typical UK price: £220 to £500 (Paddle UK instructor to White Water Leader)" },
     { label: "Hourly", text: "Typical UK price: £35 to £60 an hour with a coach" },
   ],
