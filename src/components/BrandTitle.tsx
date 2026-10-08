@@ -38,9 +38,6 @@ export function BrandLogo() {
               className="mx-auto block h-auto w-full"
             />
             <h1 className="sr-only">Extreme Sports Promotions</h1>
-            <p className="mx-auto max-w-2xl px-2 pb-4 pt-1 text-sm leading-relaxed text-[#1C1917]/70 sm:text-base">
-              The guides, the map and the club finder are free to use. A match fee applies only if you ask us to find a coach, and only after a coach is named.
-            </p>
           </>
         ) : (
           <>
