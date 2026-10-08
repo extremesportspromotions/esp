@@ -68,8 +68,6 @@ We searched course prices at clubs and schools across the UK, so you know what t
 - **Become qualified:** Typical UK price: £6,000 to £12,000 from no jumps (AFF, at least 200 jumps, a first-flight course and a wingsuit)
 - **Per coached jump:** Typical UK price: £40 to £100 a coached jump
 
-You pay these prices to the club or coach. Our match fee is separate and paid on top.
-
 ## [Skateboarding and BMX](https://www.extremesportspromotions.com/guides/skateboarding-for-beginners-uk)
 
 - **Experience day:** Typical UK price: £32 to £60 per person (one-hour private lesson with board and pads)
@@ -86,6 +84,8 @@ You pay these prices to the club or coach. Our match fee is separate and paid on
 
 - **Become qualified:** Typical price abroad: £1,250 to £2,500 (the first BASE course is the entry step; there is no UK qualification)
 - **Per day:** Typical price abroad: £200 to £400 a day for coaching
+
+BASE is for experienced skydivers only. You'll need at least 200 skydives, including some from a hot air balloon, before a BASE course will even consider you.
 
 ## [Snowboarding and skiing](https://www.extremesportspromotions.com/guides/beginners-guide-to-snowboarding-uk)
 
@@ -104,6 +104,8 @@ You pay these prices to the club or coach. Our match fee is separate and paid on
 - **Experience day:** Typical UK price: £180 to £220 per person (one-day taster)
 - **Become qualified:** Typical UK price: £1,300 to £1,600 (Elementary Pilot + Club Pilot; BHPA membership extra)
 - **Per day:** Typical UK price: £140 to £200 a day
+
+You pay these prices to the club or coach. Our match fee is separate and paid on top.
 
 ## Our match fee
 
