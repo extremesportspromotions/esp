@@ -51,7 +51,7 @@ A good coach will happily answer these:
 
 ### Step by step
 
-1. **Tell us your sport.** Fill in the [enquiry form](https://esp-lemon.vercel.app/#enquire), which takes about a minute. It asks about your sport, level, goals, age and location, including how far you'll travel [1]. Sending it is free: no charge is taken when you submit it [18].
+1. **Tell us your sport.** Fill in the [enquiry form](https://www.extremesportspromotions.com/#enquire), which takes about a minute. It asks about your sport, level, goals, age and location, including how far you'll travel [1]. Sending it is free: no charge is taken when you submit it [18].
 2. **We get in touch.** We open a line of communication with you and start looking for the right coach or club [18].
 3. **Pay the matching fee.** The payment link is the last stage of your enquiry.
 4. **Train with a pro.**
@@ -78,7 +78,7 @@ If the student is under 18, we need consent from a parent or guardian, and Matth
 
 ## Using the club map
 
-The [club map](https://esp-lemon.vercel.app/#find-a-club) lists UK clubs, centres and schools that offer coaching, lessons or courses. As of 25 September 2026 it included 223 venues, each with a working website and contact details [1].
+The [club map](https://www.extremesportspromotions.com/#find-a-club) lists UK clubs, centres and schools that offer coaching, lessons or courses. As of 25 September 2026 it included 223 venues, each with a working website and contact details [1].
 
 - **Filter by sport**, then open a pin for the venue's website, phone number or email.
 - **Jump straight to a sport** with a link like `https://www.extremesportspromotions.com/?sport=skydiving#find-a-club`.
@@ -106,7 +106,7 @@ Browse the club map, or ask us to find a coach for you. Either way, make sure yo
 
 ## Sources
 
-1. Extreme Sports Promotions homepage ("Find a club", "Why ESP", "How it works" and "Enquire" sections). Extreme Sports Promotions. [https://esp-lemon.vercel.app/](https://esp-lemon.vercel.app/) (accessed 25 September 2026).
+1. Extreme Sports Promotions homepage ("Find a club", "Why ESP", "How it works" and "Enquire" sections). Extreme Sports Promotions. [https://www.extremesportspromotions.com/](https://www.extremesportspromotions.com/) (accessed 25 September 2026).
 2. Welcome to the BHPA website. British Hang Gliding and Paragliding Association. [https://www.bhpa.co.uk/](https://www.bhpa.co.uk/) (accessed 25 September 2026).
 3. Learn to Fly. British Hang Gliding and Paragliding Association. [https://www.bhpa.co.uk/sport/learn_to_fly/](https://www.bhpa.co.uk/sport/learn_to_fly/) (accessed 25 September 2026).
 4. My First Jump. British Skydiving. [https://britishskydiving.org/my-first-jump/](https://britishskydiving.org/my-first-jump/) (accessed 25 September 2026).
