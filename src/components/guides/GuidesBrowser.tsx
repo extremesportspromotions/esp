@@ -141,9 +141,12 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
 
       <div className="mt-6">
         {rest.length > 0 ? (
-          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <ul
+            aria-label="Guides"
+            className="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 pt-1 pb-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pt-0 sm:pb-0 lg:grid-cols-3"
+          >
             {rest.map((g) => (
-              <li key={g.slug}>
+              <li key={g.slug} className="w-[85%] shrink-0 snap-start sm:w-auto">
                 <GuideCard guide={g} />
               </li>
             ))}
