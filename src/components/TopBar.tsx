@@ -80,10 +80,10 @@ export default function TopBar({ active }: TopBarProps = {}) {
         </div>
         <div className="flex shrink-0 items-center gap-2">
           <Link
-            href="/#enquire"
-            className="hidden rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:inline-flex"
+            href="/#how-it-works"
+            className="inline-flex whitespace-nowrap rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Enquire
+            How it works
           </Link>
           <nav aria-label="Social media" className="flex items-center gap-1 sm:gap-2">
             {socials.map(({ name, href, Icon }) => (
