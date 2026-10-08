@@ -15,7 +15,7 @@ const steps: Step[] = [
   },
   {
     step: "02",
-    title: "We find a named coach",
+    title: "We find the right course for you",
     body: "We match you with a UK-based professional coach who fits your goals.",
   },
   {
