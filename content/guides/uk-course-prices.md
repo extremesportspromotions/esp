@@ -14,7 +14,7 @@ draft: false
 
 We searched course prices at clubs and schools across the UK, so you know what to expect. Typical ranges, checked October 2026. Each club or coach sets its own price.
 
-**We don't take payment for any of these courses.** You book and pay the club or coach directly. Our match fee pays for our know-how: we find you the right qualified coach for your sport, so you save time and learn from the pros.
+**We don't take payment for any of these courses.** You book and pay the club or coach directly. [Our match fee](#our-match-fee) pays for our know-how: we find you the right qualified coach for your sport, so you save time and learn from the pros.
 
 ## [Mountaineering, coasteering and rock climbing](https://www.extremesportspromotions.com/guides/mountaineering-for-beginners-uk)
 
