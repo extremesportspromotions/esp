@@ -350,6 +350,8 @@ export default function ContactForm() {
     }
   }, []);
   const [status, setStatus] = useState<SendStatus>("idle");
+  // True once the browser is on its way to Stripe Checkout.
+  const [payRedirect, setPayRedirect] = useState(false);
   const [honey, setHoney] = useState("");
   const [emailTouched, setEmailTouched] = useState(false);
   // Fields the visitor has left (blurred); errors show only after that.
@@ -453,9 +455,18 @@ export default function ContactForm() {
           keepalive: true,
         }).catch(() => {});
       }
+      if (delivered) {
+        // Send the student to Stripe Checkout; if that isn't possible, we email a payment link.
+        const picked = sports.find((s) => s.id === values.sport);
+        const redirecting = await startPayment(values.matchFee, {
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          sport: picked ? (picked.mapLabel ?? picked.name) : "",
+        });
+        setPayRedirect(redirecting);
+      }
       setStatus(delivered ? "success" : "error");
-      // Hook for Stripe Checkout later; does nothing in "email-link" mode.
-      if (delivered) void startPayment(values.matchFee);
     } catch {
       setStatus("error");
     } finally {
@@ -464,6 +475,7 @@ export default function ContactForm() {
   };
 
   const resetQuiz = () => {
+    setPayRedirect(false);
     setStatus("idle");
     setValues(initial);
     setHoney("");
@@ -522,12 +534,20 @@ export default function ContactForm() {
               <p className="font-display text-2xl font-bold text-accent">
                 Thanks — we&apos;ll be in touch!
               </p>
-              <p className="text-[#1C1917]/75">
-                Your enquiry has been sent
-                {values.name.trim() ? `, ${values.name.trim()}` : ""}. We&apos;ll
-                email you a secure payment link for your match fee. We start
-                finding your coach as soon as it&apos;s paid.
-              </p>
+              {payRedirect ? (
+                <p className="text-[#1C1917]/75">
+                  Your enquiry has been sent
+                  {values.name.trim() ? `, ${values.name.trim()}` : ""}. Taking
+                  you to secure payment for your match fee&hellip;
+                </p>
+              ) : (
+                <p className="text-[#1C1917]/75">
+                  Your enquiry has been sent
+                  {values.name.trim() ? `, ${values.name.trim()}` : ""}. We&apos;ll
+                  email you a secure payment link for your match fee. We start
+                  finding your coach as soon as it&apos;s paid.
+                </p>
+              )}
               <button
                 type="button"
                 onClick={resetQuiz}

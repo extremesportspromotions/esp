@@ -18,7 +18,7 @@ You tell us the sport you want to try, and we find you a qualified coach or club
 ## How it works
 
 1. **Send the enquiry.** Fill in the [enquiry form](https://www.extremesportspromotions.com/#enquire). It takes about a minute. It asks about your sport, your level, your age, where you live and how far you will travel.
-2. **Pay the match fee.** We email you a secure payment link. We start looking for your coach as soon as it is paid.
+2. **Pay the match fee.** You pay it securely when you enquire. We start looking for your coach as soon as it is paid.
 3. **We find the right coach.** We introduce you, agree what the course covers and what it costs, then send you their contact details.
 4. **You book and train.** You arrange your sessions with the coach or club directly.
 

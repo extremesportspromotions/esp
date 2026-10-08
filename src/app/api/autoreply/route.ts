@@ -1,4 +1,5 @@
 import { sports } from "@/data/sports";
+import { PAYMENT_MODE } from "@/lib/payment";
 
 /**
  * Sends the student an instant confirmation email via Resend after the
@@ -75,7 +76,9 @@ export async function POST(req: Request): Promise<Response> {
   const lines = [
     greeting,
     `Thanks for your enquiry${about} with Extreme Sports Promotions. We have your details.`,
-    "Next, we'll email you a secure payment link for your match fee. We start finding your UK coach as soon as it's paid, and you get a full refund if we can't find you a coach within 14 days. The coach or club bills you separately for the training.",
+    PAYMENT_MODE === "stripe-checkout"
+      ? "We start finding your UK coach as soon as your match fee is paid. If you didn't finish paying, we'll email you a secure payment link. You get a full refund if we can't find you a coach within 14 days. The coach or club bills you separately for the training."
+      : "Next, we'll email you a secure payment link for your match fee. We start finding your UK coach as soon as it's paid, and you get a full refund if we can't find you a coach within 14 days. The coach or club bills you separately for the training.",
     "Any questions, just reply to this email or write to enquiries@extremesportspromotions.com.",
     "Matthew\nExtreme Sports Promotions\nhttps://www.extremesportspromotions.com",
   ];

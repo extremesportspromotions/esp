@@ -3,6 +3,7 @@ import Link from "next/link";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import { ENQUIRY_EMAIL } from "@/lib/site";
+import { PAYMENT_MODE } from "@/lib/payment";
 
 const title = "Terms";
 const description =
@@ -37,8 +38,9 @@ export default function TermsPage() {
             <h2>Our match fee</h2>
             {/* Normal body size: .guide-prose enlarges the first paragraph as an article lead. */}
             <p style={{ fontSize: "1em", lineHeight: "inherit", color: "inherit" }}>
-              You pay our match fee up front, when you enquire. We start finding your coach as soon
-              as it&apos;s paid. The fee depends on what you&apos;re looking for:
+              You pay our match fee up front, when you enquire
+              {PAYMENT_MODE === "stripe-checkout" ? ", by card through Stripe, our payment provider" : ""}.
+              We start finding your coach as soon as it&apos;s paid. The fee depends on what you&apos;re looking for:
             </p>
             <ul>
               <li>Experience day (one person, one day): £19</li>

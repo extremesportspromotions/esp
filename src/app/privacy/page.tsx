@@ -87,7 +87,9 @@ export default function PrivacyPage() {
               <a href="https://formsubmit.co" rel="noopener noreferrer">FormSubmit</a> (formsubmit.co),
               a form service that emails them to our inbox. FormSubmit acts as a processor on our
               behalf; it says it keeps a copy of form submissions for up to 30 days. Our email is
-              provided by Google (Gmail). These services may store data outside the UK.
+              provided by Google (Gmail). Card payments for the match fee are handled by{" "}
+              <a href="https://stripe.com" rel="noopener noreferrer">Stripe</a>; we never see your
+              card details. These services may store data outside the UK.
             </p>
             <p>
               <strong>We never sell your details</strong>, and we don&apos;t use them for marketing.
