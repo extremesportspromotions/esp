@@ -59,11 +59,10 @@ function normaliseUkPhone(raw: string): string | null {
 const isUkPhone = (raw: string) => normaliseUkPhone(raw) !== null;
 
 const MATCH_FEES = [
-  { value: "taster", label: "Taster — £19" },
-  { value: "course", label: "Course or block of lessons — £49" },
-  { value: "trip", label: "Trip / rating / high-ticket (e.g. AFF) — £99" },
-  { value: "party-one", label: "Party/group · one sport, one date — £79" },
-  { value: "party-multi", label: "Several sports/venues — £129" },
+  { value: "experience-day", label: "Experience day — one person, one day — £19" },
+  { value: "become-qualified", label: "Become qualified — one person, one club, full course — £49" },
+  { value: "group-experience-day", label: "Group experience day — a party, one taster day — £49" },
+  { value: "group-qualification", label: "Group qualification — team building, become qualified — £99" },
 ] as const;
 
 type QuizState = {

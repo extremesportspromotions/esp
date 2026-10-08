@@ -46,11 +46,10 @@ export default function TermsPage() {
               release their contact details. The fee depends on what you&apos;re looking for:
             </p>
             <ul>
-              <li>Taster: £19</li>
-              <li>Course or block of lessons: £49</li>
-              <li>Trip, rating or other high-ticket course: £99</li>
-              <li>Party or group (one sport, one date): £79</li>
-              <li>Several sports or venues: £129</li>
+              <li>Experience day (one person, one day): £19</li>
+              <li>Become qualified (one person, one club, full course): £49</li>
+              <li>Group experience day (a party, one taster day): £49</li>
+              <li>Group qualification (team building, become qualified): £99</li>
             </ul>
 
             <h2>Paying for your training</h2>

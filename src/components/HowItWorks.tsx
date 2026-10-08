@@ -12,7 +12,7 @@ const steps = [
   {
     step: "03",
     title: "Pay the match fee",
-    body: "Only after a named coach is found: taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129. Fee bands are on the form.",
+    body: "The enquiry is free. After we name a coach, the match fee is £19 for an experience day, £49 to become qualified, £49 for a group experience day, or £99 for a group qualification. That fee is for the introduction only. The coach or club bills the training separately.",
   },
   {
     step: "04",

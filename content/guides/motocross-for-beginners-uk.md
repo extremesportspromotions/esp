@@ -35,4 +35,19 @@ The AMCA says you bring your own bike.
 
 Our club map shows [some UK motocross clubs](https://www.extremesportspromotions.com/?sport=motocross#find-a-club), and it is a starting point rather than a full list.
 
-If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.
+If you would like help finding a coach, ESP can match you.
+
+**What you pay ESP**
+
+The enquiry is free. You pay only after we have named a coach, and only so we can pass on their contact. The coach or club then bills the training. We do not book the session.
+
+| | What you want | ESP match fee |
+| --- | --- | --- |
+| 1 | Experience day — one person, one day | £19 |
+| 2 | Become qualified — one person, one club, full course | £49 |
+| 3 | Group experience day — a party, one taster day | £49 |
+| 4 | Group qualification — team building, become qualified | £99 |
+
+You pay nothing if we cannot find a coach. If the coach cannot be reached or will not take you on within 14 days, we find you another coach or refund the fee. We also refund it if your health means you cannot train.
+
+Under 18: a parent or guardian must consent, we contact that guardian, and the guardian travels with the student.

@@ -28,17 +28,16 @@ Prefer email? Write to enquiries@extremesportspromotions.com.
 
 ## What it costs
 
-The enquiry is free. The match fee depends on what you are looking for, and you choose the band on the form:
+The enquiry is free. You pay only after we have named a coach, and only so we can pass on their contact. The coach or club then bills the training. We do not book the session.
 
-- A taster session: £19
-- A course or a block of lessons: £49
-- A trip, a rating, or another bigger booking: £99
-- A party or group, one sport on one date: £79
-- Several sports or venues: £129
+| | What you want | ESP match fee |
+| --- | --- | --- |
+| 1 | Experience day — one person, one day | £19 |
+| 2 | Become qualified — one person, one club, full course | £49 |
+| 3 | Group experience day — a party, one taster day | £49 |
+| 4 | Group qualification — team building, become qualified | £99 |
 
-You pay only once we have found a named coach. The coach or club bills you separately for the training itself. We do not take bookings for them.
-
-If we cannot find you a coach, you pay nothing. If the coach cannot be reached or will not take you on within 14 days of us sending you their details, we find you another coach or refund the fee. We also refund it if your health means you cannot train.
+You pay nothing if we cannot find a coach. If the coach cannot be reached or will not take you on within 14 days, we find you another coach or refund the fee. We also refund it if your health means you cannot train.
 
 ## Under-18s
 
