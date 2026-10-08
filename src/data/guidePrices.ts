@@ -63,8 +63,8 @@ export const GUIDE_PRICES: Record<string, GuidePriceRow[]> = {
     { label: "Hourly", text: "Typical UK price: £65 to £80 an hour (private lesson)" },
   ],
   "wingsuit-flying": [
-    { label: "First-flight course (after about 200 skydives)", text: "Typical UK price: £250 to £600 per person (jump tickets extra)" },
-    { label: "Become qualified", text: "Typical UK price: £6,000 to £12,000 from no jumps (AFF, about 200 jumps, a first-flight course and a wingsuit)" },
+    { label: "First-flight course (after at least 200 skydives)", text: "Typical UK price: £250 to £600 per person (jump tickets extra)" },
+    { label: "Become qualified", text: "Typical UK price: £6,000 to £12,000 from no jumps (AFF, at least 200 jumps, a first-flight course and a wingsuit)" },
     { label: "Per coached jump", text: "Typical UK price: £40 to £100 a coached jump" },
   ],
   "skateboarding": [
