@@ -1,7 +1,7 @@
 ---
 title: "How ESP coach matching works"
 slug: how-esp-coach-matching-works
-description: "How ESP finds you a coach: a free enquiry, a match fee only once we've found a named coach, and what to check before your first lesson."
+description: "How ESP finds you a coach: a free enquiry, a simple match fee once we've named a coach, and why the right coach matters."
 sport: general
 category: "How-to"
 author: "ESP Editorial"
