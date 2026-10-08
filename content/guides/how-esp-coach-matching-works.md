@@ -45,11 +45,11 @@ If the student is under 18, we need a parent's or guardian's consent, and we con
 
 ## Who we work with
 
-All our coaches are in the UK. We check the qualifications, insurance and references of the coaches and clubs we work with. That does not replace your own checks.
+All our coaches are in the UK. Before we introduce you, we check each coach's qualifications, insurance and references for you. That is what the match fee pays for.
 
 > [!SAFETY]
-> Before your first session, ask the coach what qualification they hold and who issued it, and whether they are insured for coaching. Fill in any medical form honestly. If a coach cannot show you a qualification or insurance, look elsewhere.
+> The right coach keeps you safe, so we only introduce you to coaches who hold a recognised qualification for your sport and are insured to coach. On the day, listen to your coach's safety briefing and fill in any medical form honestly.
 
 ## The club map
 
-If you would rather look yourself, the [club map](https://www.extremesportspromotions.com/#find-a-club) shows some UK clubs, centres and schools that offer coaching. Pick a sport, then open a pin for the venue's website or contact details. It is free to use, there is no match fee, and it is a starting point rather than a full list. A listing is not a review, so check with the venue before you travel.
+If you would rather look yourself, the [club map](https://www.extremesportspromotions.com/#find-a-club) shows some UK clubs, centres and schools that offer coaching. Pick a sport, then open a pin for the venue's website or contact details. It is free to use and a starting point rather than a full list. We have not checked the venues on the map, so contact them before you travel. If you want a coach we have checked for you, send us an enquiry.

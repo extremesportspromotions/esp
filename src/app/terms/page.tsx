@@ -60,8 +60,9 @@ export default function TermsPage() {
 
             <h2>Safety and checks</h2>
             <p>
-              You must check the coach&apos;s credentials and insurance yourself, and follow the
-              club&apos;s safety rules.
+              Before we introduce you, we check the coach&apos;s qualifications and insurance. You
+              must follow the coach&apos;s and club&apos;s safety rules and fill in any medical form
+              honestly.
             </p>
 
             <h2>Under-18s</h2>
