@@ -58,7 +58,7 @@ export default function ClubsMapSection() {
           <p className="mt-3 text-base leading-relaxed text-[#1C1917]/70 sm:text-lg">
             Explore {clubs.length.toLocaleString()} UK clubs, centres, and schools
             that offer coaching, lessons, or courses. Every venue listed has a
-            working website and contact details. Filter by sport to focus the
+            website. Filter by sport to focus the
             map, then open a pin for the website, phone, or email.
           </p>
           <p className="mt-3 rounded-lg border border-[#1C1917]/10 bg-white px-4 py-3 text-sm text-[#1C1917]/65">
