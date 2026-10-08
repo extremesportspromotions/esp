@@ -66,7 +66,7 @@ A helmet is required at many centres, and wrist guards are worth asking about. A
 > [!SAFETY]
 > Always learn with a qualified instructor, wear a helmet, and stay on slopes that match your ability. Learn the FIS code before you go.
 
-Beginner lessons are often led by a BASI Level 1 instructor or equivalent. The Snow Centre says that is the minimum for its beginner snowboard lessons. Ask to see the qualification.
+Beginner lessons are often led by a BASI Level 1 instructor or equivalent. The Snow Centre says that is the minimum for its beginner snowboard lessons. When ESP matches you, we check the instructor's qualification for you.
 
 ## Your first few sessions
 

@@ -1,7 +1,7 @@
 ---
 title: "How to start mountain biking in the UK"
 slug: learn-to-mountain-bike-uk
-description: "How to start mountain biking in the UK: a first trail-centre session, what to hire, Forestry England grades, and how to check a coach is qualified."
+description: "How to start mountain biking in the UK: a first trail-centre session, what to hire, Forestry England grades, and why the right coach matters."
 sport: mountain-biking
 category: Getting started
 author: ESP Editorial
@@ -43,9 +43,9 @@ British Cycling says skill matters as much as fitness, and riders come in all sh
 
 Colours are a guide, not a promise, and not every UK venue uses the same words. Forestry England's scale, updated on 5 July 2023, is green (easy: relatively flat, wide and smooth, though it can be loose or muddy), blue (moderate), red (difficult), black (severe) and double-black (extreme, with obstacles you cannot ride around). Check the forest you are visiting, and start on green.
 
-## Checking a coach
+## Why the right coach matters
 
-Ask to see the qualification, and ask to see that the insurance is current. ESP checks qualifications, insurance and references only. The coaches it introduces are UK-based.
+A qualified, insured coach keeps you safe while you learn. When ESP matches you, we check the coach's qualifications and insurance for you.
 
 If you would like help finding a coach, ESP can match you.
 

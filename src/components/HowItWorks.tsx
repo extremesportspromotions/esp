@@ -1,8 +1,10 @@
+import MatchFeeTable from "./MatchFeeTable";
+
 type Step = {
   step: string;
   title: string;
   body: string;
-  prices?: { label: string; price: string }[];
+  feeTable?: boolean;
 };
 
 const steps: Step[] = [
@@ -20,12 +22,7 @@ const steps: Step[] = [
     step: "03",
     title: "Pay the match fee",
     body: "The enquiry is free. You pay only after we name a coach.",
-    prices: [
-      { label: "Experience day", price: "£19" },
-      { label: "Become qualified", price: "£49" },
-      { label: "Group experience day", price: "£49" },
-      { label: "Group qualification", price: "£99" },
-    ],
+    feeTable: true,
   },
   {
     step: "04",
@@ -57,15 +54,10 @@ export default function HowItWorks() {
                 {s.step}
               </span>
               <h3 className="mt-3 text-lg font-semibold text-[#1C1917]">{s.title}</h3>
-              {s.prices && (
-                <dl className="mt-3 divide-y divide-[#1C1917]/10 rounded-xl border border-[#1C1917]/10 bg-[#EEF4FA]/60 text-sm">
-                  {s.prices.map((p) => (
-                    <div key={p.label} className="flex items-baseline justify-between gap-3 px-3 py-2">
-                      <dt className="text-[#1C1917]/75">{p.label}</dt>
-                      <dd className="shrink-0 font-semibold tabular-nums text-[#1C1917]">{p.price}</dd>
-                    </div>
-                  ))}
-                </dl>
+              {s.feeTable && (
+                <div className="guide-prose prose prose-sm mt-3 max-w-none">
+                  <MatchFeeTable />
+                </div>
               )}
               <p className="mt-2 text-sm leading-relaxed text-[#1C1917]/65">{s.body}</p>
             </li>
