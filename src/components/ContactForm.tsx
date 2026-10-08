@@ -151,7 +151,8 @@ function labelFor(
 const NOT_APPLICABLE = "Not applicable (18 or over)";
 
 function buildPayload(values: QuizState, honey: string) {
-  const sportName = sports.find((s) => s.id === values.sport)?.name ?? values.sport;
+  const sport = sports.find((s) => s.id === values.sport);
+  const sportName = sport ? (sport.mapLabel ?? sport.name) : values.sport;
   const pageUrl = typeof window === "undefined" ? "" : window.location.href;
   const under18 = values.ageBand === UNDER_18;
   return {
@@ -414,7 +415,8 @@ export default function ContactForm() {
       const delivered = res.ok && success;
       if (delivered) {
         // Instant confirmation email to the student; never blocks the success message.
-        const sportName = sports.find((s) => s.id === values.sport)?.name ?? "";
+        const picked = sports.find((s) => s.id === values.sport);
+        const sportName = picked ? (picked.mapLabel ?? picked.name) : "";
         void fetch("/api/autoreply", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -566,7 +568,7 @@ export default function ContactForm() {
                       Which sport?
                     </legend>
                     <p className="mb-4 text-sm text-[#1C1917]/60">
-                      Pick the sport you want to train in.
+                      Pick the sport you want to train in. Related activities sit under the closest sport, for example skiing under snowboarding, BMX under skateboarding and indoor skydiving under skydiving.
                     </p>
                     <div
                       className="grid grid-cols-2 gap-2 sm:grid-cols-3"
@@ -588,7 +590,7 @@ export default function ContactForm() {
                                 : "border-[#1C1917]/15 bg-[#1C1917]/5 text-[#1C1917] hover:border-accent/50"
                             }`}
                           >
-                            {s.name}
+                            {s.mapLabel ?? s.name}
                           </button>
                         );
                       })}

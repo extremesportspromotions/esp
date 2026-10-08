@@ -105,7 +105,7 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
                 active={activeSport === s.id}
                 muted={!countsBySport[s.id]}
               >
-                {s.name}
+                {s.mapLabel ?? s.name}
                 {countsBySport[s.id] ? <span className="ml-1.5 opacity-70">{countsBySport[s.id]}</span> : null}
               </Chip>
             ))}

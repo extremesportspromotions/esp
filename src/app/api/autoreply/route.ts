@@ -66,7 +66,8 @@ export async function POST(req: Request): Promise<Response> {
 
   const rawName = typeof body.name === "string" ? body.name.trim() : "";
   const firstName = rawName.split(/\s+/)[0]?.replace(/[^\p{L}\p{M}'-]/gu, "").slice(0, 40) ?? "";
-  const sportName = sports.find((s) => s.name === body.sport)?.name ?? "";
+  const match = sports.find((s) => s.name === body.sport || s.mapLabel === body.sport);
+  const sportName = match ? (match.mapLabel ?? match.name) : "";
   const sportLower = sportName.toLowerCase();
 
   const greeting = firstName ? `Hi ${firstName},` : "Hi,";

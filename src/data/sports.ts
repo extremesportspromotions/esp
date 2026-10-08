@@ -14,7 +14,7 @@ export type Sport = {
   credit?: string;
   /** Optional CSS object-position for the carousel video */
   videoPosition?: string;
-  /** Optional label used on the club map (filter chip, cards and popups) instead of `name` */
+  /** Optional wider label (map filters, cards and popups, guide filters, enquiry form) instead of `name` */
   mapLabel?: string;
 };
 
@@ -26,8 +26,9 @@ export const sports: Sport[] = [
     videoPosition: "50% 35%",
     credit: "Supplied by ESP",
     name: "Mountaineering",
+    mapLabel: "Mountaineering, climbing & coasteering",
     description:
-      "Scale iconic peaks with certified alpine guides who teach rope work, route finding, and high-altitude safety.",
+      "Scale peaks, learn to rock climb or try coasteering with qualified guides who teach rope work, route finding and safety on rock and sea cliffs.",
     image: "/sports/mountaineering.jpg",
     alt: "Hiker on a mountain ridge looking out over a cloud inversion",
     imagePosition: "62% 58%",
@@ -87,8 +88,9 @@ export const sports: Sport[] = [
     video: "/carousel-clips/carousel-06-skydiving-v2.mp4",
     credit: "Supplied by ESP",
     name: "Skydiving",
+    mapLabel: "Skydiving & indoor skydiving",
     description:
-      "Train freefall body flight and canopy control with licensed jumpmasters focused on safe progression.",
+      "Start in an indoor wind tunnel or jump from a plane, with licensed instructors who teach body flight, canopy control and safe progression.",
     image:
       "https://images.unsplash.com/photo-1474623809196-26c1d33457cc?auto=format&fit=crop&w=2000&q=80",
     alt: "Four skydivers freefalling in formation high above the countryside",
@@ -136,8 +138,9 @@ export const sports: Sport[] = [
     video: "/carousel-clips/carousel-10-skateboarding.mp4",
     credit: "blackmarketmusic, Pixabay Content License, https://pixabay.com/videos/id-275498/",
     name: "Skateboarding",
+    mapLabel: "Skateboarding & BMX",
     description:
-      "Learn street and park fundamentals—or refine technical lines—with coaches who speak skate fluently.",
+      "Learn park and street basics on a skateboard or a BMX, or refine technical lines, with coaches who know the scene.",
     image: "/sports/skateboarding.jpg",
     alt: "Skateboarder mid-air grab at a skatepark against a sunset sky",
     imagePosition: "50% 32%",
@@ -170,8 +173,9 @@ export const sports: Sport[] = [
     guide: "/guides/beginners-guide-to-snowboarding-uk",
     video: "/carousel-clips/carousel-13-snowboarding.mp4",
     name: "Snowboarding",
+    mapLabel: "Snowboarding & skiing",
     description:
-      "Carve groomers or drop into the backcountry with instructors who coach edge control and terrain park flow.",
+      "Learn to snowboard or ski on UK indoor and dry slopes, or take it to the mountains, with instructors who coach edge control and confidence.",
     image: "/sports/snowboarding.jpg",
     alt: "Snowboarder in black kit carving hard with powder spray",
     imagePosition: "48% 55%",
@@ -184,7 +188,7 @@ export const sports: Sport[] = [
     name: "Kayaking",
     mapLabel: "Kayaking & rafting",
     description:
-      "From flatwater fundamentals to whitewater lines, paddle with coaches who prioritize stroke and safety.",
+      "From flatwater basics to white water kayaking and rafting, paddle with coaches who put stroke technique and safety first.",
     image: "/sports/kayaking.jpg",
     alt: "POV of orange kayaks paddling a tree-lined waterway",
     imagePosition: "50% 42%",
