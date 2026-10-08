@@ -3,7 +3,7 @@ import MatchFeeTable from "./MatchFeeTable";
 type Step = {
   step: string;
   title: string;
-  body: string;
+  body?: string;
   feeTable?: boolean;
 };
 
@@ -16,18 +16,17 @@ const steps: Step[] = [
   {
     step: "02",
     title: "We find a named coach",
-    body: "We match you with a UK-based professional coach who fits your goals and schedule.",
+    body: "We match you with a UK-based professional coach who fits your goals.",
   },
   {
     step: "03",
     title: "Pay the match fee",
-    body: "Only after a coach is named. That fee is for the introduction. The coach or club bills the training.",
     feeTable: true,
   },
   {
     step: "04",
-    title: "We release the contact",
-    body: "After payment we share the coach's contact details. The coach or club bills training separately. ESP does not book the lesson.",
+    title: "We organise the training programmes",
+    body: "The coach or club bills training separately. ESP does not book the lesson.",
   },
 ];
 
@@ -59,7 +58,9 @@ export default function HowItWorks() {
                   <MatchFeeTable />
                 </div>
               )}
-              <p className="mt-2 text-sm leading-relaxed text-[#1C1917]/65">{s.body}</p>
+              {s.body && (
+                <p className="mt-2 text-sm leading-relaxed text-[#1C1917]/65">{s.body}</p>
+              )}
             </li>
           ))}
         </ol>
