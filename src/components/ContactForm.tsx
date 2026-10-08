@@ -601,15 +601,13 @@ export default function ContactForm() {
                             }`}
                           >
                             {s.mapLabel ?? s.name}
-                            {s.notice ? (
-                              <span className="mt-1 block text-xs font-normal leading-snug text-[#1C1917]/70">
-                                {s.notice}
-                              </span>
-                            ) : null}
                           </button>
                         );
                       })}
                     </div>
+                    <p aria-live="polite" className="mt-3 text-xs leading-snug text-[#1C1917]/70">
+                      {sports.find((s) => s.id === values.sport)?.notice ?? ""}
+                    </p>
                   </fieldset>
                 )}
 
