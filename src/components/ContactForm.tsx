@@ -763,7 +763,7 @@ export default function ContactForm() {
                         Location
                       </h3>
                       <p className="mt-1 text-sm text-[#1C1917]/60">
-                        Where should we look for coaches?
+                        Where are you based?
                       </p>
                     </div>
                     <div>
