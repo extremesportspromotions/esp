@@ -26,7 +26,6 @@ export const sports: Sport[] = [
     guide: "/guides/mountaineering-for-beginners-uk",
     video: "/carousel-clips/carousel-01-mountaineering-v2.mp4",
     videoPosition: "50% 35%",
-    credit: "Supplied by ESP",
     name: "Mountaineering",
     mapLabel: "Mountaineering, climbing & coasteering",
     description:
@@ -50,7 +49,6 @@ export const sports: Sport[] = [
     id: "paragliding",
     guide: "/guides/learn-to-paraglide-uk",
     video: "/carousel-clips/carousel-03-paragliding-v2.mp4",
-    credit: "Supplied by ESP",
     name: "Paragliding",
     description:
       "Launch into thermal soaring with instructors who coach launches, turns, and landing technique from day one.",
@@ -63,7 +61,6 @@ export const sports: Sport[] = [
     guide: "/guides/learn-to-mountain-bike-uk",
     video: "/carousel-clips/carousel-04-mountain-biking-v3.mp4",
     videoPosition: "60% 55%",
-    credit: "Supplied by ESP",
     name: "Mountain Biking",
     description:
       "Rip trails with coaches who dial in bike setup, cornering, and descending skills for every terrain level.",
@@ -76,7 +73,6 @@ export const sports: Sport[] = [
     guide: "/guides/wakeboarding-for-beginners-uk",
     video: "/carousel-clips/carousel-05-wakeboarding-v2.mp4",
     videoPosition: "60% 65%",
-    credit: "Supplied by ESP",
     name: "Wakeboarding",
     description:
       "Progress from deep-water starts to aerial tricks with wake pros who film and break down every run.",
@@ -88,7 +84,6 @@ export const sports: Sport[] = [
     id: "skydiving",
     guide: "/guides/first-tandem-skydive-uk",
     video: "/carousel-clips/carousel-06-skydiving-v2.mp4",
-    credit: "Supplied by ESP",
     name: "Skydiving",
     mapLabel: "Skydiving & indoor skydiving",
     description:
@@ -102,7 +97,6 @@ export const sports: Sport[] = [
     guide: "/guides/motocross-for-beginners-uk",
     video: "/carousel-clips/carousel-07-motocross-v2.mp4",
     videoPosition: "50% 30%",
-    credit: "Supplied by ESP",
     name: "Motocross",
     description:
       "Build throttle control, jumps, and race craft with coaches who know the dirt track inside out.",
@@ -114,7 +108,6 @@ export const sports: Sport[] = [
     id: "kiteboarding",
     guide: "/guides/kiteboarding-for-beginners-uk",
     video: "/carousel-clips/carousel-08-kiteboarding-v2.mp4",
-    credit: "Supplied by ESP",
     name: "Kiteboarding",
     description:
       "Master kite power and board skills with IKO coaches who prioritize wind awareness and water starts.",
@@ -188,7 +181,6 @@ export const sports: Sport[] = [
     id: "kayaking",
     guide: "/guides/kayaking-for-beginners-uk",
     video: "/carousel-clips/carousel-14-kayaking-v2.mp4",
-    credit: "Supplied by ESP",
     name: "Kayaking",
     mapLabel: "Kayaking & rafting",
     description:
@@ -201,7 +193,6 @@ export const sports: Sport[] = [
     id: "hang-gliding",
     guide: "/guides/hang-gliding-for-beginners-uk",
     video: "/carousel-clips/carousel-15-hang-gliding-v2.mp4",
-    credit: "Supplied by ESP",
     name: "Hang Gliding",
     description:
       "Feel the ridge lift with hang-gliding instructors who walk you from ground handling to soaring flights.",
