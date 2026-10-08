@@ -28,11 +28,9 @@ const UNDER_18_NOTE =
   "Under 18? You'll need a parent or guardian's consent, and they must travel with you to the club.";
 
 const TRAVEL_OPTIONS = [
-  { value: "local", label: "Local only" },
-  { value: "25-miles", label: "Up to 25 miles" },
   { value: "50-miles", label: "Up to 50 miles" },
   { value: "100-miles", label: "Up to 100 miles" },
-  { value: "anywhere-uk", label: "Anywhere in the UK" },
+  { value: "anywhere-uk", label: "Anywhere in the UK", tag: "Recommended" },
 ] as const;
 
 const CALL_TIMES = [
@@ -91,7 +89,7 @@ const initial: QuizState = {
   ageBand: "",
   healthNote: "",
   location: "",
-  travel: "",
+  travel: "anywhere-uk",
   matchFee: "",
   riskAck: false,
   guardianConsent: false,
@@ -235,7 +233,7 @@ function ChipGroup({
 }: {
   legend: string;
   name: string;
-  options: readonly { value: string; label: string }[];
+  options: readonly { value: string; label: string; tag?: string }[];
   value: string;
   onChange: (value: string) => void;
 }) {
@@ -255,6 +253,15 @@ function ChipGroup({
               className={`${chipBase} ${selected ? chipActive : chipIdle}`}
             >
               {opt.label}
+              {opt.tag && (
+                <span
+                  className={`ml-2 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
+                    selected ? "bg-white/25 text-white" : "bg-accent/15 text-accent"
+                  }`}
+                >
+                  {opt.tag}
+                </span>
+              )}
             </button>
           );
         })}
@@ -778,12 +785,19 @@ export default function ContactForm() {
                       />
                     </div>
                     <ChipGroup
-                      legend="How far will you travel?"
+                      legend="How far would you travel?"
                       name="travel"
                       options={TRAVEL_OPTIONS}
                       value={values.travel}
                       onChange={(v) => setField("travel", v)}
                     />
+                    <p className="text-xs leading-relaxed text-[#1C1917]/55">
+                      Most of these sports aren&apos;t taught locally, so we look
+                      across the UK and use what we know about clubs and coaches to
+                      find the best training, not just the nearest. Nearer is a
+                      preference, not a limit: a short distance means fewer coaches
+                      and a slower match.
+                    </p>
                   </div>
                 )}
 
