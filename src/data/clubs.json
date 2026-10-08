@@ -8,7 +8,8 @@
     "lat": 51.8453,
     "lng": -2.12769,
     "url": "https://www.270climbing.com/",
-    "email": "info@270climbing.com"
+    "email": "info@270climbing.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "hang-gliding-aberdeen-hg-pg-club-85368732",
@@ -39,7 +40,8 @@
     "lat": 57.12165,
     "lng": -2.12608,
     "url": "https://www.sportaberdeen.co.uk/activities/snowsports",
-    "email": "snowsports@sportaberdeen.co.uk"
+    "email": "snowsports@sportaberdeen.co.uk",
+    "subActivity": "dry-slope"
   },
   {
     "id": "snowboarding-alpine-snowsports-65028019",
@@ -49,7 +51,8 @@
     "region": "United Kingdom",
     "lat": 51.25642,
     "lng": -0.75001,
-    "url": "https://www.everyoneactive.com/centre/alpine-snowsports/"
+    "url": "https://www.everyoneactive.com/centre/alpine-snowsports/",
+    "subActivity": "dry-slope"
   },
   {
     "id": "mountaineering-alter-rock-climbing-centre-40262945",
@@ -61,7 +64,8 @@
     "lng": -1.46945,
     "url": "https://www.alter-rock.co.uk/",
     "phone": "01332 367200",
-    "email": "questions@alter-rock.co.uk"
+    "email": "questions@alter-rock.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-ambleside-climbing-wall-7154952",
@@ -71,7 +75,8 @@
     "region": "United Kingdom",
     "lat": 54.42975,
     "lng": -2.96254,
-    "url": "https://www.amblesideadventure.co.uk/ambleside-wall/"
+    "url": "https://www.amblesideadventure.co.uk/ambleside-wall/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "scuba-diving-aquasport-international-29604438",
@@ -94,7 +99,8 @@
     "lng": -1.79,
     "url": "https://www.netheravon.com",
     "phone": "01980 630608",
-    "email": "skydive@netheravon.com"
+    "email": "skydive@netheravon.com",
+    "subActivity": "skydiving"
   },
   {
     "id": "wingsuit-flying-army-parachute-association-netheravon-wingsuit-freefly-coach-52191008",
@@ -116,7 +122,8 @@
     "region": "United Kingdom",
     "lat": 52.02741,
     "lng": 1.2059,
-    "url": "https://www.avidclimbing.co.uk/"
+    "url": "https://www.avidclimbing.co.uk/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "hang-gliding-avon-hang-gliding-paragliding-82036442",
@@ -150,7 +157,8 @@
     "lng": -2.99577,
     "url": "https://awesomewalls.co.uk/liverpool/",
     "phone": "01512982422",
-    "email": "liverpool@awesomewalls.co.uk"
+    "email": "liverpool@awesomewalls.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-awesome-walls-sheffield-50430210",
@@ -162,7 +170,8 @@
     "lng": -1.44674,
     "url": "https://awesomewalls.co.uk/sheffield/",
     "phone": "0114 244 0084",
-    "email": "sheffield@awesomewalls.co.uk"
+    "email": "sheffield@awesomewalls.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-awesome-walls-stockport-13956196",
@@ -173,7 +182,8 @@
     "lat": 53.41406,
     "lng": -2.13336,
     "url": "https://awesomewalls.co.uk/stockport/",
-    "email": "stockport@awesomewalls.co.uk"
+    "email": "stockport@awesomewalls.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-awesome-walls-stoke-209311",
@@ -184,7 +194,8 @@
     "lat": 52.98182,
     "lng": -2.11492,
     "url": "https://awesomewalls.co.uk/stoke/",
-    "phone": "01782 341919"
+    "phone": "01782 341919",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "skateboarding-baysixty6-83634930",
@@ -196,7 +207,8 @@
     "lng": -0.20486,
     "url": "https://baysixty6.com",
     "phone": "020 8969 3399",
-    "email": "info@baysixty6.com"
+    "email": "info@baysixty6.com",
+    "subActivity": "skateboarding"
   },
   {
     "id": "skydiving-beccles-skydivers-uk-parachuting-92172777",
@@ -208,7 +220,8 @@
     "lng": 1.563,
     "url": "https://www.ukparachuting.co.uk",
     "phone": "01502 476131",
-    "email": "book@ukparachuting.co.uk"
+    "email": "book@ukparachuting.co.uk",
+    "subActivity": "skydiving"
   },
   {
     "id": "mountaineering-bethwall-climbing-centre-33244574",
@@ -219,7 +232,8 @@
     "lat": 51.52774,
     "lng": -0.05638,
     "url": "https://londonclimbingcentres.co.uk/centre/bethwall/",
-    "phone": "020 3026 4912"
+    "phone": "020 3026 4912",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountain-biking-bike-park-kernow-40879010",
@@ -255,7 +269,8 @@
     "lng": -1.90223,
     "url": "https://www.birminghamboulderingcentre.com/",
     "phone": "0121 236 0533",
-    "email": "birminghamboulderingcentre@gmail.com"
+    "email": "birminghamboulderingcentre@gmail.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "skydiving-black-knights-parachute-club-93352289",
@@ -267,7 +282,8 @@
     "lng": -2.817,
     "url": "https://www.bkpc.co.uk",
     "phone": "01524 791820",
-    "email": "skydive@bkpc.co.uk"
+    "email": "skydive@bkpc.co.uk",
+    "subActivity": "skydiving"
   },
   {
     "id": "mountaineering-bloc-climbing-20660244",
@@ -277,7 +293,8 @@
     "region": "United Kingdom",
     "lat": 51.46855,
     "lng": -2.5705,
-    "url": "https://blocclimbing.co.uk/"
+    "url": "https://blocclimbing.co.uk/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-boulder-brighton-11352062",
@@ -289,7 +306,8 @@
     "lng": -0.21154,
     "url": "https://www.boulderbrighton.com/",
     "phone": "01273 422408",
-    "email": "info@boulderbrighton.com"
+    "email": "info@boulderbrighton.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-boulder-central-56046780",
@@ -299,7 +317,8 @@
     "region": "England",
     "lat": 52.52995,
     "lng": -2.02461,
-    "url": "https://www.bouldercentral.co.uk/"
+    "url": "https://www.bouldercentral.co.uk/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-boulder-shack-climbing-gym-36714180",
@@ -311,7 +330,8 @@
     "lng": -1.39376,
     "url": "https://bouldershack.co.uk/",
     "phone": "023 8017 1808",
-    "email": "team@bouldershack.co.uk"
+    "email": "team@bouldershack.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-boulder-uk-43557273",
@@ -323,7 +343,8 @@
     "lng": -2.48644,
     "url": "https://www.boulderuk.co.uk/",
     "phone": "01772 337447",
-    "email": "info@boulderuk.co.uk"
+    "email": "info@boulderuk.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-boulder-world-97196425",
@@ -335,7 +356,8 @@
     "lng": -5.95803,
     "url": "https://boulderworldbelfast.com/",
     "phone": "028 9066 2007",
-    "email": "boulderworld@gmail.com"
+    "email": "boulderworld@gmail.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-boulders-17001938",
@@ -345,7 +367,8 @@
     "region": "England",
     "lat": 51.91425,
     "lng": -2.09659,
-    "url": "https://cheltenham.bouldersuk.com/"
+    "url": "https://cheltenham.bouldersuk.com/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-boulders-climbing-centre-55201795",
@@ -357,7 +380,8 @@
     "lng": -3.14182,
     "url": "https://bouldersuk.com/cardiff",
     "phone": "029 20 48 48 80",
-    "email": "info@bouldersuk.com"
+    "email": "info@bouldersuk.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "wakeboarding-box-end-park-6677237",
@@ -380,7 +404,8 @@
     "lat": 55.86746,
     "lng": -4.24013,
     "url": "https://www.brushworksclimbing.co.uk",
-    "phone": "+441417240066"
+    "phone": "+441417240066",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "snowboarding-cairngorm-mountain-snowsports-4850519",
@@ -392,7 +417,8 @@
     "lng": -3.825,
     "url": "https://www.cairngormmountain.co.uk",
     "phone": "+441479861261",
-    "email": "info@cairngormmountain.co.uk"
+    "email": "info@cairngormmountain.co.uk",
+    "subActivity": "ski-slope"
   },
   {
     "id": "mountaineering-canary-wall-43152087",
@@ -404,7 +430,8 @@
     "lng": -0.02737,
     "url": "https://londonclimbingcentres.co.uk/centre/canarywall/",
     "phone": "020 3026 4964",
-    "email": "canarywall@londonclimbingcentres.co.uk"
+    "email": "canarywall@londonclimbingcentres.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "motocross-captains-adventure-62869877",
@@ -427,7 +454,8 @@
     "lng": -2.2426,
     "url": "https://thesnowcentre.com/manchester/",
     "phone": "0161 271 1555",
-    "email": "marketing-mcr@thesnowcentre.com"
+    "email": "marketing-mcr@thesnowcentre.com",
+    "subActivity": "ski-slope"
   },
   {
     "id": "mountaineering-chimera-climbing-18592131",
@@ -439,7 +467,8 @@
     "lng": 1.06904,
     "url": "https://www.chimeraclimbingcanterbury.com",
     "phone": "01892457294",
-    "email": "canterbury@chimeraclimbing.com"
+    "email": "canterbury@chimeraclimbing.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-city-bouldering-15756716",
@@ -449,7 +478,8 @@
     "region": "United Kingdom",
     "lat": 51.51439,
     "lng": -0.07497,
-    "url": "https://www.citybouldering.co.uk/"
+    "url": "https://www.citybouldering.co.uk/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-climbing-co-fulham-34171065",
@@ -459,7 +489,8 @@
     "region": "United Kingdom",
     "lat": 51.47634,
     "lng": -0.19958,
-    "url": "https://www.citybouldering.co.uk/locations/climbing-co-fulham"
+    "url": "https://www.citybouldering.co.uk/locations/climbing-co-fulham",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-climbing-district-89453222",
@@ -469,7 +500,8 @@
     "region": "United Kingdom",
     "lat": 51.53465,
     "lng": -0.06033,
-    "url": "https://climbingdistrict.uk/climbing-gym/london-fields/"
+    "url": "https://climbingdistrict.uk/climbing-gym/london-fields/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-climbing-hut-91418561",
@@ -481,7 +513,8 @@
     "lng": -2.72386,
     "url": "https://www.climbinghut.com/",
     "phone": "0151 305 6868",
-    "email": "ellesmereport@climbinghut.com"
+    "email": "ellesmereport@climbinghut.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "skydiving-cornish-parachute-club-56631397",
@@ -493,7 +526,8 @@
     "lng": -5.154,
     "url": "https://www.cornishparachuteclub.co.uk",
     "phone": "07711 714021",
-    "email": "cpcbookings@hotmail.com"
+    "email": "cpcbookings@hotmail.com",
+    "subActivity": "skydiving"
   },
   {
     "id": "surfing-croyde-surf-academy-73310103",
@@ -517,7 +551,8 @@
     "lng": -0.11551,
     "url": "https://londonclimbingcentres.co.uk/centre/croywall/",
     "phone": "020 3026 4967",
-    "email": "croywall@londonclimbingcentres.co.uk"
+    "email": "croywall@londonclimbingcentres.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "hang-gliding-cumbria-soaring-club-86515460",
@@ -580,7 +615,8 @@
     "lat": 52.47186,
     "lng": -1.89203,
     "url": "https://www.theclimbingdepot.co.uk/birmingham",
-    "phone": "01133459295"
+    "phone": "01133459295",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "hang-gliding-derbyshire-soaring-club-94922731",
@@ -688,7 +724,8 @@
     "lat": 54.75151,
     "lng": -1.61559,
     "url": "https://www.durhamclimbingcentre.co.uk/",
-    "phone": "0191 378 9555"
+    "phone": "0191 378 9555",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountain-biking-dyfi-bike-park-67675779",
@@ -709,7 +746,8 @@
     "region": "Scotland",
     "lat": 55.92339,
     "lng": -3.39766,
-    "url": "https://www.edinburghleisure.co.uk/venues/edinburgh-international-climbing-arena/"
+    "url": "https://www.edinburghleisure.co.uk/venues/edinburgh-international-climbing-arena/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-eustonwall-climbing-centre-29595044",
@@ -721,7 +759,8 @@
     "lng": -0.14189,
     "url": "https://londonclimbingcentres.co.uk/centre/eustonwall/",
     "phone": "020 3026 4911",
-    "email": "eustonwall@londonclimbingcentres.co.uk"
+    "email": "eustonwall@londonclimbingcentres.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "kayaking-exe-canoe-club-76164969",
@@ -732,7 +771,8 @@
     "lat": 50.71615,
     "lng": -3.52956,
     "url": "https://www.exetercanoeclub.org.uk/",
-    "email": "membership@exetercanoeclub.org.uk"
+    "email": "membership@exetercanoeclub.org.uk",
+    "subActivity": "kayaking"
   },
   {
     "id": "scuba-diving-exeter-bsac-52772370",
@@ -765,7 +805,8 @@
     "lat": 52.66618,
     "lng": 0.15628,
     "url": "https://fenrock.com",
-    "email": "nate@fenrock.com"
+    "email": "nate@fenrock.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "scuba-diving-fins-scuba-88520325",
@@ -801,7 +842,8 @@
     "lng": -2.33577,
     "url": "https://boulderrooms.co.uk/",
     "phone": "01373474914",
-    "email": "hello@fromeboulderrooms.co.uk"
+    "email": "hello@fromeboulderrooms.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-gallery-bouldering-87122472",
@@ -811,7 +853,8 @@
     "region": "United Kingdom",
     "lat": 51.74747,
     "lng": -1.2401,
-    "url": "https://gallerybouldering.co.uk/"
+    "url": "https://gallerybouldering.co.uk/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "wakeboarding-glasfryn-parc-cable-wakepark-89812150",
@@ -834,7 +877,8 @@
     "lat": 57.195,
     "lng": -3.825,
     "url": "https://www.glenmorelodge.org.uk",
-    "phone": "01479861256"
+    "phone": "01479861256",
+    "subActivity": "mountaineering"
   },
   {
     "id": "snowboarding-glenshee-ski-centre-40305800",
@@ -846,7 +890,8 @@
     "lng": -3.41483,
     "url": "https://www.ski-glenshee.co.uk/",
     "phone": "013397 41320",
-    "email": "bookings@ski-glenshee.co.uk"
+    "email": "bookings@ski-glenshee.co.uk",
+    "subActivity": "ski-slope"
   },
   {
     "id": "mountaineering-golden-gecko-climbing-7697417",
@@ -858,7 +903,8 @@
     "lng": -1.49293,
     "url": "https://www.ggclimbing.com/",
     "phone": "01794 590022",
-    "email": "info@ggclimbing.com"
+    "email": "info@ggclimbing.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "skydiving-goskydive-47189138",
@@ -869,7 +915,8 @@
     "lat": 51.069,
     "lng": -1.794,
     "url": "https://www.goskydive.com",
-    "phone": "01722442967"
+    "phone": "01722442967",
+    "subActivity": "skydiving"
   },
   {
     "id": "paragliding-grupa-303-polish-pg-club-28084490",
@@ -891,7 +938,8 @@
     "lat": 51.55278,
     "lng": -0.03605,
     "url": "https://www.hackneybumps.co.uk/",
-    "email": "hackneybumps@gmail.com"
+    "email": "hackneybumps@gmail.com",
+    "subActivity": "skateboarding"
   },
   {
     "id": "mountaineering-harrowall-32009494",
@@ -903,7 +951,8 @@
     "lng": -0.34439,
     "url": "https://londonclimbingcentres.co.uk/centre/harrowall/",
     "phone": "020 3026 4960",
-    "email": "harrowall@londonclimbingcentres.co.uk"
+    "email": "harrowall@londonclimbingcentres.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-highball-climbing-centre-67518719",
@@ -915,7 +964,8 @@
     "lng": 1.26578,
     "url": "https://highballnorwich.co.uk/",
     "phone": "01603 513513",
-    "email": "hello@highballnorwich.co.uk"
+    "email": "hello@highballnorwich.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "hang-gliding-highland-hg-pg-club-92036125",
@@ -988,7 +1038,8 @@
     "lat": 54.60397,
     "lng": -3.09463,
     "url": "https://www.activity-centre.com/keswick-climbing-wall/",
-    "phone": "01768772000"
+    "phone": "01768772000",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-lakeland-climbing-centre-95943404",
@@ -1000,7 +1051,8 @@
     "lng": -2.73994,
     "url": "https://lakelandclimbingcentres.co.uk/centre/kendalwall/",
     "phone": "01539 721766",
-    "email": "info@kendalwall.co.uk"
+    "email": "info@kendalwall.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "hang-gliding-lanarkshire-lothian-sc-78514325",
@@ -1031,7 +1083,8 @@
     "lat": 53.81447,
     "lng": -1.60577,
     "url": "https://www.leedscanoeclub.com/",
-    "email": "join@leedscanoeclub.com"
+    "email": "join@leedscanoeclub.com",
+    "subActivity": "kayaking"
   },
   {
     "id": "mountain-biking-leeds-sailing-activity-centre-34906688",
@@ -1064,7 +1117,8 @@
     "lat": 51.93226,
     "lng": -3.2408,
     "url": "https://www.activityuk.com/",
-    "phone": "+441874658272"
+    "phone": "+441874658272",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "wakeboarding-loch-earn-wakeschool-34538625",
@@ -1121,7 +1175,8 @@
     "lng": -1.5344,
     "url": "https://ls-ten.org/",
     "phone": "0113 532 5357",
-    "email": "hello@ls-ten.org"
+    "email": "hello@ls-ten.org",
+    "subActivity": "skateboarding"
   },
   {
     "id": "hang-gliding-malvern-hang-gliding-club-75364605",
@@ -1174,7 +1229,8 @@
     "lat": 51.52765,
     "lng": -0.03967,
     "url": "https://www.mileendwall.org.uk/",
-    "email": "enquiries@mileendwall.org.uk"
+    "email": "enquiries@mileendwall.org.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "motocross-monster-mountain-motocross-track-39615314",
@@ -1197,7 +1253,8 @@
     "lng": -5.1935,
     "url": "https://www.mounthawkeskatepark.com/",
     "phone": "01209 890005",
-    "email": "info@mounthawke.com"
+    "email": "info@mounthawke.com",
+    "subActivity": "skateboarding"
   },
   {
     "id": "snowboarding-nevis-range-snowsports-35109751",
@@ -1208,7 +1265,8 @@
     "lat": 56.8198,
     "lng": -5.1052,
     "url": "https://www.nevisrange.co.uk",
-    "phone": "+441397705825"
+    "phone": "+441397705825",
+    "subActivity": "ski-slope"
   },
   {
     "id": "mountaineering-newcastle-climbing-centre-55328563",
@@ -1220,7 +1278,8 @@
     "lng": -1.57538,
     "url": "https://www.newcastleclimbingcentre.co.uk/",
     "phone": "0191 2656060",
-    "email": "info@newcastleclimbingcentre.co.uk"
+    "email": "info@newcastleclimbingcentre.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "scuba-diving-newhaven-scuba-center-29855754",
@@ -1361,7 +1420,8 @@
     "region": "United Kingdom",
     "lat": 51.39648,
     "lng": -1.31644,
-    "url": "https://northwayclimbing.com/"
+    "url": "https://northwayclimbing.com/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-oakwood-climbing-centre-14404975",
@@ -1371,7 +1431,8 @@
     "region": "United Kingdom",
     "lat": 51.40346,
     "lng": -0.79897,
-    "url": "https://www.oakwoodclimbingcentre.com/"
+    "url": "https://www.oakwoodclimbingcentre.com/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-overhang-climbing-centre-45805844",
@@ -1383,7 +1444,8 @@
     "lng": -4.31687,
     "url": "https://www.climboverhang.com/",
     "phone": "01267237981",
-    "email": "hello@climboverhang.com"
+    "email": "hello@climboverhang.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "scuba-diving-padi-68682764",
@@ -1406,7 +1468,8 @@
     "lat": 50.94017,
     "lng": -1.4699,
     "url": "https://parthianclimbing.com/southampton/",
-    "phone": "02381103112"
+    "phone": "02381103112",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-parthian-climbing-reading-63493268",
@@ -1417,7 +1480,8 @@
     "lat": 51.44248,
     "lng": -0.97017,
     "url": "https://www.parthianclimbing.com/reading/",
-    "phone": "01189756298"
+    "phone": "01189756298",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-parthian-climbing-wandsworth-97822986",
@@ -1428,7 +1492,8 @@
     "lat": 51.45493,
     "lng": -0.19312,
     "url": "https://parthianclimbing.com/wandsworth/",
-    "phone": "02081614440"
+    "phone": "02081614440",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "hang-gliding-peak-soaring-association-42044884",
@@ -1471,7 +1536,8 @@
     "lat": 52.22928,
     "lng": -0.9071,
     "url": "https://www.thepinnaclecentre.co.uk/",
-    "phone": "01604 875 996"
+    "phone": "01604 875 996",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-plas-y-brenin-national-outdoor-centre-23651021",
@@ -1483,7 +1549,8 @@
     "lng": -3.912,
     "url": "https://www.pyb.co.uk",
     "phone": "01690720214",
-    "email": "info@pyb.co.uk"
+    "email": "info@pyb.co.uk",
+    "subActivity": "mountaineering"
   },
   {
     "id": "wakeboarding-plastic-playground-wake-park-87050029",
@@ -1505,7 +1572,8 @@
     "lng": -4.09179,
     "url": "https://www.jnlplymouth.co.uk/",
     "phone": "01752 600220",
-    "email": "info@jnlplymouth.co.uk"
+    "email": "info@jnlplymouth.co.uk",
+    "subActivity": "dry-slope"
   },
   {
     "id": "kayaking-poole-harbour-canoe-club-26356084",
@@ -1516,7 +1584,8 @@
     "lat": 50.71445,
     "lng": -2.02486,
     "url": "http://www.pooleharbourcanoeclub.uk/",
-    "email": "enquiries@pooleharbourcanoeclub.uk"
+    "email": "enquiries@pooleharbourcanoeclub.uk",
+    "subActivity": "kayaking"
   },
   {
     "id": "kayaking-reading-canoe-club-11522374",
@@ -1527,7 +1596,8 @@
     "lat": 51.46802,
     "lng": -0.9826,
     "url": "https://reading-canoe.org.uk/",
-    "email": "info@reading-canoe.org.uk"
+    "email": "info@reading-canoe.org.uk",
+    "subActivity": "kayaking"
   },
   {
     "id": "mountaineering-red-spider-climbing-61635911",
@@ -1539,7 +1609,8 @@
     "lng": -1.16613,
     "url": "https://spiderclimbing.com/red-spider/",
     "phone": "01329 282923",
-    "email": "climb@redspiderclimbing.com"
+    "email": "climb@redspiderclimbing.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-redpoint-climbing-centre-17579229",
@@ -1550,7 +1621,8 @@
     "lat": 52.48933,
     "lng": -1.89581,
     "url": "https://www.redpointbirmingham.co.uk/",
-    "phone": "0121 359 1777"
+    "phone": "0121 359 1777",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-rise-climbing-77927493",
@@ -1561,7 +1633,8 @@
     "lat": 51.51119,
     "lng": 0.01273,
     "url": "https://www.rise-climbing.com/",
-    "email": "info@rise-climbing.com"
+    "email": "info@rise-climbing.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-rockcity-climbing-38751699",
@@ -1571,7 +1644,8 @@
     "region": "United Kingdom",
     "lat": 53.73625,
     "lng": -0.38035,
-    "url": "https://rockcity.co.uk/"
+    "url": "https://rockcity.co.uk/",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-rockstar-climbing-centre-67212996",
@@ -1582,7 +1656,8 @@
     "lat": 51.58213,
     "lng": -1.75422,
     "url": "https://www.rockstarclimbing.co.uk/",
-    "email": "hello@rockstarclimbing.co.uk"
+    "email": "hello@rockstarclimbing.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-rof-59-climbing-centre-95397673",
@@ -1593,7 +1668,8 @@
     "lat": 54.60031,
     "lng": -1.57242,
     "url": "https://rof59climbingcentre.com",
-    "email": "climb@rof59.co.uk"
+    "email": "climb@rof59.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-rokt-climbing-gym-38320066",
@@ -1605,7 +1681,8 @@
     "lng": -1.78177,
     "url": "https://www.rokt.co.uk/",
     "phone": "01484 717444",
-    "email": "climbing@rokt.co.uk"
+    "email": "climbing@rokt.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-romford-rock-and-boulder-35192562",
@@ -1617,7 +1694,8 @@
     "lng": 0.17457,
     "url": "https://www.romfordrockandboulder.co.uk/",
     "phone": "07988 076436",
-    "email": "romfordrockandboulder@gmail.com"
+    "email": "romfordrockandboulder@gmail.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "surfing-saltburn-surf-school-hire-96251014",
@@ -1712,7 +1790,8 @@
     "region": "England",
     "lat": 52.456,
     "lng": 0.049,
-    "url": "https://www.skydivechatteris.co.uk"
+    "url": "https://www.skydivechatteris.co.uk",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-gb-91931787",
@@ -1724,7 +1803,8 @@
     "lng": -0.192,
     "url": "https://www.skydivegb.com",
     "phone": "01262 228033",
-    "email": "info@skydivegb.com"
+    "email": "info@skydivegb.com",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-headcorn-82710213",
@@ -1735,7 +1815,8 @@
     "lat": 51.169,
     "lng": 0.62,
     "url": "https://www.headcorn.com",
-    "phone": "01622 890641"
+    "phone": "01622 890641",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-hinton-54101031",
@@ -1747,7 +1828,8 @@
     "lng": -1.21025,
     "url": "https://www.skydive.co.uk/",
     "phone": "01295 812300",
-    "email": "info@skydive.co.uk"
+    "email": "info@skydive.co.uk",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-jersey-36223139",
@@ -1759,7 +1841,8 @@
     "lng": -2.1312,
     "url": "https://www.skydivejersey.net",
     "phone": "07797 813944",
-    "email": "info@skydive.je"
+    "email": "info@skydive.je",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-langar-94731353",
@@ -1770,7 +1853,8 @@
     "lat": 52.89,
     "lng": -0.91,
     "url": "https://www.skydivelangar.co.uk",
-    "phone": "01949 860878"
+    "phone": "01949 860878",
+    "subActivity": "skydiving"
   },
   {
     "id": "wingsuit-flying-skydive-langar-wingsuit-freefly-coaching-20673063",
@@ -1794,7 +1878,8 @@
     "lng": -2.96344,
     "url": "https://skydivenorthwest.co.uk/",
     "phone": "+441539558672",
-    "email": "info@skydivenorthwest.co.uk"
+    "email": "info@skydivenorthwest.co.uk",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-southwest-20491224",
@@ -1805,7 +1890,8 @@
     "lat": 50.86,
     "lng": -3.23,
     "url": "https://www.skydivesouthwest.co.uk",
-    "phone": "07369216900"
+    "phone": "07369216900",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-strathallan-95287411",
@@ -1817,7 +1903,8 @@
     "lng": -3.75112,
     "url": "https://skydivestrathallan.co.uk/",
     "phone": "01764 662572",
-    "email": "book@skydivestrathallan.co.uk"
+    "email": "book@skydivestrathallan.co.uk",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-swansea-38931886",
@@ -1828,7 +1915,8 @@
     "lat": 51.6214,
     "lng": -3.9436,
     "url": "https://www.skydiveswansea.co.uk",
-    "phone": "01722442967"
+    "phone": "01722442967",
+    "subActivity": "skydiving"
   },
   {
     "id": "skydiving-skydive-tilstock-74760603",
@@ -1839,7 +1927,8 @@
     "lat": 52.92,
     "lng": -2.7,
     "url": "https://www.skydivetilstock.co.uk",
-    "phone": "01948 841111"
+    "phone": "01948 841111",
+    "subActivity": "skydiving"
   },
   {
     "id": "snowboarding-snow-factor-glasgow-19566647",
@@ -1849,7 +1938,8 @@
     "region": "Scotland",
     "lat": 55.8642,
     "lng": -4.2518,
-    "url": "https://www.snowfactor.com"
+    "url": "https://www.snowfactor.com",
+    "subActivity": "ski-slope"
   },
   {
     "id": "snowboarding-snowdome-tamworth-11781966",
@@ -1861,7 +1951,8 @@
     "lng": -1.6956,
     "url": "https://www.snowdome.co.uk/",
     "phone": "03448 000 011 (WhatsApp only)",
-    "email": "guestservices@snowdome.co.uk"
+    "email": "guestservices@snowdome.co.uk",
+    "subActivity": "ski-slope"
   },
   {
     "id": "hang-gliding-snowdonia-sky-sports-hg-pg-33282383",
@@ -1894,7 +1985,8 @@
     "lat": 50.79448,
     "lng": -1.81864,
     "url": "https://www.snowtrax.eu/",
-    "phone": "01202 499155"
+    "phone": "01202 499155",
+    "subActivity": "dry-slope"
   },
   {
     "id": "hang-gliding-south-devon-hg-pg-club-44890531",
@@ -1991,7 +2083,8 @@
     "lat": 50.78046,
     "lng": -1.08714,
     "url": "https://southseaskatepark.org/",
-    "email": "info@southseaskatepark.org"
+    "email": "info@southseaskatepark.org",
+    "subActivity": "skateboarding"
   },
   {
     "id": "skateboarding-spit-sawdust-12428097",
@@ -2002,7 +2095,8 @@
     "lat": 51.49794,
     "lng": -3.13931,
     "url": "https://www.spitandsawdust.co.uk/",
-    "email": "info@spitandsawdust.co.uk"
+    "email": "info@spitandsawdust.co.uk",
+    "subActivity": "skateboarding"
   },
   {
     "id": "mountaineering-st-mary-s-calne-sports-club-24953942",
@@ -2014,7 +2108,8 @@
     "lng": -2.01231,
     "url": "https://www.smcsports.co.uk/index.php/hall-wall/climbing-wall",
     "phone": "01249 857335",
-    "email": "sportsclub@stmaryscalne.org"
+    "email": "sportsclub@stmaryscalne.org",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-sunderland-wall-79933451",
@@ -2026,7 +2121,8 @@
     "lng": -1.41499,
     "url": "https://sunderlandwall.com/",
     "phone": "0191 514 4234",
-    "email": "info@sunderlandwall.co.uk"
+    "email": "info@sunderlandwall.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "scuba-diving-surrey-dive-centre-62899358",
@@ -2049,7 +2145,8 @@
     "lat": 53.51,
     "lng": -0.52,
     "url": "https://www.skydiving.co.uk",
-    "phone": "01652 648700"
+    "phone": "01652 648700",
+    "subActivity": "skydiving"
   },
   {
     "id": "wingsuit-flying-target-skysports-hibaldstow-wingsuit-freefly-coaching-54698521",
@@ -2091,7 +2188,8 @@
     "region": "United Kingdom",
     "lat": 51.49329,
     "lng": -0.06106,
-    "url": "https://www.archclimbingwall.com/building-one"
+    "url": "https://www.archclimbingwall.com/building-one",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-barn-climbing-wall-79755915",
@@ -2103,7 +2201,8 @@
     "lng": -4.27577,
     "url": "https://www.barnclimbingwall.co.uk/",
     "phone": "01822870521",
-    "email": "info@barnclimbingwall.co.uk"
+    "email": "info@barnclimbingwall.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-boulder-bunker-32550036",
@@ -2115,7 +2214,8 @@
     "lng": -3.5401,
     "url": "https://theboulderbunker.com/",
     "phone": "01803293229",
-    "email": "bookings@theboulderbunker.com"
+    "email": "bookings@theboulderbunker.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-castle-climbing-centre-55390020",
@@ -2126,7 +2226,8 @@
     "lat": 51.56528,
     "lng": -0.09244,
     "url": "https://www.castle-climbing.co.uk/",
-    "email": "info@castle-climbing.co.uk"
+    "email": "info@castle-climbing.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-climbing-depot-24645341",
@@ -2137,7 +2238,8 @@
     "lat": 53.80338,
     "lng": -1.66711,
     "url": "https://www.theclimbingdepot.co.uk/",
-    "phone": "01133459295"
+    "phone": "01133459295",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-climbing-hangar-19031578",
@@ -2147,7 +2249,8 @@
     "region": "United Kingdom",
     "lat": 55.95606,
     "lng": -3.12411,
-    "url": "https://www.theclimbinghangar.com/locations/edinburgh"
+    "url": "https://www.theclimbinghangar.com/locations/edinburgh",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-climbing-hub-47822329",
@@ -2159,7 +2262,8 @@
     "lng": -1.78304,
     "url": "https://www.theclimbinghub.co.uk",
     "phone": "07838174704",
-    "email": "info@theclimbinghub.co.uk"
+    "email": "info@theclimbinghub.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-depot-climbing-centre-28410831",
@@ -2170,7 +2274,8 @@
     "lat": 53.46414,
     "lng": -2.32092,
     "url": "https://www.depotclimbing.co.uk/manchester/",
-    "phone": "01618489495"
+    "phone": "01618489495",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-indy-climbing-wall-72007821",
@@ -2181,7 +2286,8 @@
     "lat": 53.21885,
     "lng": -4.1992,
     "url": "https://www.indyclimbingwall.co.uk/",
-    "phone": "01248 716058"
+    "phone": "01248 716058",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-ledge-climbing-gym-66972382",
@@ -2193,7 +2299,8 @@
     "lng": -4.24441,
     "url": "https://www.theledgeclimbing.com/",
     "phone": "07873 818868",
-    "email": "admin@theledgeinverness.com"
+    "email": "admin@theledgeinverness.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-lock-climbing-wall-84535867",
@@ -2204,7 +2311,8 @@
     "lat": 51.78183,
     "lng": 0.09193,
     "url": "https://www.essexoutdoors.com/the-lock-climbing-wall/",
-    "phone": "0345 200 4220"
+    "phone": "0345 200 4220",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-newsroom-the-climbing-academy-80651706",
@@ -2216,7 +2324,8 @@
     "lng": -4.28195,
     "url": "https://www.theclimbingacademy.com/locations/the-newsroom/",
     "phone": "0141 429 6331",
-    "email": "glasgow@theclimbingacademy.com"
+    "email": "glasgow@theclimbingacademy.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-ordinary-climbers-89161474",
@@ -2228,7 +2337,8 @@
     "lng": 0.26977,
     "url": "https://www.theordinaryclimbers.com",
     "phone": "01323 483799",
-    "email": "info@theordinaryclimbers.co.uk"
+    "email": "info@theordinaryclimbers.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-the-prop-store-the-climbing-academy-63598079",
@@ -2240,7 +2350,8 @@
     "lng": -4.28647,
     "url": "https://www.theclimbingacademy.com/locations/the-prop-store/",
     "phone": "0141 429 6331",
-    "email": "glasgow@theclimbingacademy.com"
+    "email": "glasgow@theclimbingacademy.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "snowboarding-the-snow-centre-hemel-hempstead-75951193",
@@ -2252,7 +2363,8 @@
     "lng": -0.1278,
     "url": "https://thesnowcentre.com/hemel-hempstead/",
     "phone": "01442 433311",
-    "email": "info-hml@thesnowcentre.com"
+    "email": "info-hml@thesnowcentre.com",
+    "subActivity": "ski-slope"
   },
   {
     "id": "skateboarding-the-tracks-35563212",
@@ -2264,7 +2376,8 @@
     "lng": -1.46761,
     "url": "https://rollersnakes.co.uk/pages/rollersnakes-skate-park",
     "phone": "+44-333-6000-666",
-    "email": "support@rollersnakes.co.uk"
+    "email": "support@rollersnakes.co.uk",
+    "subActivity": "skateboarding"
   },
   {
     "id": "skateboarding-the-vault-73275477",
@@ -2276,7 +2389,8 @@
     "lng": -1.46732,
     "url": "https://rollersnakes.co.uk/pages/rollersnakes-skate-park",
     "phone": "+44-333-6000-666",
-    "email": "support@rollersnakes.co.uk"
+    "email": "support@rollersnakes.co.uk",
+    "subActivity": "skateboarding"
   },
   {
     "id": "skateboarding-the-warehouse-indoor-skatepark-21945691",
@@ -2287,7 +2401,8 @@
     "lat": 52.20867,
     "lng": 0.14367,
     "url": "https://www.cam-skate.co.uk/",
-    "email": "hello@cam-skate.co.uk"
+    "email": "hello@cam-skate.co.uk",
+    "subActivity": "skateboarding"
   },
   {
     "id": "surfing-the-wave-61946421",
@@ -2321,7 +2436,8 @@
     "region": "United Kingdom",
     "lat": 51.50828,
     "lng": -0.04969,
-    "url": "https://towerhamletscanoeclub.co.uk/"
+    "url": "https://towerhamletscanoeclub.co.uk/",
+    "subActivity": "kayaking"
   },
   {
     "id": "surfing-tris-surf-shop-580290",
@@ -2381,7 +2497,8 @@
     "lng": -4.5547,
     "url": "https://unit23skatepark.co.uk/",
     "phone": "01389768333",
-    "email": "unit23skatepark@btconnect.com"
+    "email": "unit23skatepark@btconnect.com",
+    "subActivity": "skateboarding"
   },
   {
     "id": "mountaineering-vauxwall-east-climbing-centre-63631842",
@@ -2393,7 +2510,8 @@
     "lng": -0.11459,
     "url": "https://londonclimbingcentres.co.uk/centre/vauxeast/",
     "phone": "020 3026 4958",
-    "email": "vauxwall@londonclimbingcentres.co.uk"
+    "email": "vauxwall@londonclimbingcentres.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "mountaineering-vauxwall-west-climbing-centre-11383845",
@@ -2405,7 +2523,8 @@
     "lng": -0.12292,
     "url": "https://londonclimbingcentres.co.uk/centre/vauxwest/",
     "phone": "020 7160 0248",
-    "email": "vauxwall@londonclimbingcentres.co.uk"
+    "email": "vauxwall@londonclimbingcentres.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "scuba-diving-viewpoint-diving-centre-54450366",
@@ -2429,7 +2548,8 @@
     "lng": -0.03906,
     "url": "https://www.volume1climbing.co.uk",
     "phone": "+441342891292",
-    "email": "reception@volume1climbing.co.uk"
+    "email": "reception@volume1climbing.co.uk",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "wakeboarding-wakeup-docklands-57239284",
@@ -2471,7 +2591,8 @@
     "lng": -0.29146,
     "url": "https://spiderclimbing.com/white-spider/",
     "phone": "020 8397 0390",
-    "email": "climb@whitespiderclimbing.com"
+    "email": "climb@whitespiderclimbing.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "wakeboarding-wild-shore-blackpool-11177228",
@@ -2526,7 +2647,8 @@
     "lat": 51.5896,
     "lng": -0.04094,
     "url": "https://www.thisisyonder.com/",
-    "email": "info@thisisyonder.com"
+    "email": "info@thisisyonder.com",
+    "subActivity": "climbing-wall"
   },
   {
     "id": "skydiving-ifly-manchester-33435472",
@@ -2538,7 +2660,8 @@
     "lng": -2.361492,
     "url": "https://www.iflyworld.co.uk/locations/ifly-manchester/",
     "phone": "0161 359 7040",
-    "email": "support@iflyworld.co.uk"
+    "email": "support@iflyworld.co.uk",
+    "subActivity": "wind-tunnel"
   },
   {
     "id": "skydiving-ifly-birmingham-nec-17268169",
@@ -2550,7 +2673,8 @@
     "lng": -1.720053,
     "url": "https://www.iflyworld.co.uk/locations/ifly-birmingham/",
     "phone": "0161 359 7040",
-    "email": "support@iflyworld.co.uk"
+    "email": "support@iflyworld.co.uk",
+    "subActivity": "wind-tunnel"
   },
   {
     "id": "skydiving-ifly-milton-keynes-50638000",
@@ -2562,7 +2686,8 @@
     "lng": -0.748834,
     "url": "https://www.iflyworld.co.uk/locations/ifly-milton-keynes/",
     "phone": "0161 359 7040",
-    "email": "support@iflyworld.co.uk"
+    "email": "support@iflyworld.co.uk",
+    "subActivity": "wind-tunnel"
   },
   {
     "id": "skydiving-ifly-london-at-the-o2-62727462",
@@ -2574,7 +2699,8 @@
     "lng": 0.002819,
     "url": "https://www.iflyworld.co.uk/locations/ifly-london-at-the-o2/",
     "phone": "0161 359 7040",
-    "email": "support@iflyworld.co.uk"
+    "email": "support@iflyworld.co.uk",
+    "subActivity": "wind-tunnel"
   },
   {
     "id": "skydiving-ifly-basingstoke-46832605",
@@ -2586,7 +2712,8 @@
     "lng": -1.117771,
     "url": "https://www.iflyworld.co.uk/locations/ifly-basingstoke/",
     "phone": "0161 359 7040",
-    "email": "support@iflyworld.co.uk"
+    "email": "support@iflyworld.co.uk",
+    "subActivity": "wind-tunnel"
   },
   {
     "id": "kayaking-lee-valley-white-water-centre-rafting",
@@ -2598,7 +2725,8 @@
     "lng": -0.01703,
     "url": "https://www.better.org.uk/leisure-centre/lee-valley/white-water-centre",
     "phone": "03000 030 616",
-    "email": "LVwhitewater@gll.org"
+    "email": "LVwhitewater@gll.org",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-cardiff-international-white-water-rafting",
@@ -2610,7 +2738,8 @@
     "lng": -3.18271,
     "url": "https://www.ciww.com/",
     "phone": "029 2082 9970",
-    "email": "info@ciww.com"
+    "email": "info@ciww.com",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-national-white-water-centre-rafting",
@@ -2622,7 +2751,8 @@
     "lng": -3.65199,
     "url": "https://www.nationalwhitewatercentre.co.uk/",
     "phone": "01678 521083",
-    "email": "info@nationalwhitewatercentre.co.uk"
+    "email": "info@nationalwhitewatercentre.co.uk",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-tees-barrage-international-white-water-centre-rafting",
@@ -2634,7 +2764,8 @@
     "lng": -1.28469,
     "url": "https://tbiwwc.com/",
     "phone": "01642 678000",
-    "email": "enquiries@tbiwwc.com"
+    "email": "enquiries@tbiwwc.com",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-national-water-sports-centre-holme-pierrepont-rafting",
@@ -2646,7 +2777,8 @@
     "lng": -1.09194,
     "url": "https://www.nwscnotts.com/",
     "phone": "0115 982 1212",
-    "email": "info.nwsc@serco.com"
+    "email": "info.nwsc@serco.com",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-the-rafting-company-rafting",
@@ -2658,7 +2790,8 @@
     "lng": -3.77435,
     "url": "https://theraftingcompany.co.uk/",
     "phone": "01887 840461",
-    "email": "info@theraftingcompany.co.uk"
+    "email": "info@theraftingcompany.co.uk",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-splash-white-water-rafting",
@@ -2670,7 +2803,8 @@
     "lng": -3.85968,
     "url": "https://rafting.co.uk/",
     "phone": "01887 829706",
-    "email": "info@rafting.co.uk"
+    "email": "info@rafting.co.uk",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-beyond-adventure-rafting",
@@ -2682,7 +2816,8 @@
     "lng": -3.84873,
     "url": "https://www.beyondadventure.co.uk/",
     "phone": "01887 829202",
-    "email": "email@beyondadventure.co.uk"
+    "email": "email@beyondadventure.co.uk",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-whitewater-active-rafting",
@@ -2693,7 +2828,8 @@
     "lat": 52.97036,
     "lng": -3.16944,
     "url": "https://whitewateractive.co.uk/",
-    "email": "enquiries@whitewateractive.co.uk"
+    "email": "enquiries@whitewateractive.co.uk",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kayaking-tnr-outdoors-rafting",
@@ -2705,7 +2841,8 @@
     "lng": -3.18114,
     "url": "https://tnroutdoors.co.uk/",
     "phone": "01978 860700",
-    "email": "hello@tnroutdoors.co.uk"
+    "email": "hello@tnroutdoors.co.uk",
+    "subActivity": "white-water-rafting"
   },
   {
     "id": "kiteboarding-the-kitesurf-centre-camber-89667948",
@@ -3097,5 +3234,374 @@
     "url": "https://doncastermotoparc.co.uk/",
     "email": "ride@doncastermotoparc.co.uk",
     "phone": "+44 (0)7547 584554"
+  },
+  {
+    "id": "mountaineering-xtreme-coasteering-49216836",
+    "name": "Xtreme Coasteering",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Croyde",
+    "region": "United Kingdom",
+    "lat": 51.13373,
+    "lng": -4.229931,
+    "url": "https://www.xtremecoasteering.co.uk/",
+    "email": "will@xtremecoasteering.co.uk",
+    "phone": "07568 371 957"
+  },
+  {
+    "id": "mountaineering-reach-outdoors-16087509",
+    "name": "Reach Outdoors",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Paignton",
+    "region": "United Kingdom",
+    "lat": 50.425166,
+    "lng": -3.559734,
+    "url": "https://reach-outdoors.com/products/devon-coasteering",
+    "email": "info@reach-outdoors.com",
+    "phone": "01803 524 950"
+  },
+  {
+    "id": "mountaineering-surfing-croyde-bay-coasteering-68866115",
+    "name": "Surfing Croyde Bay (coasteering)",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Croyde",
+    "region": "United Kingdom",
+    "lat": 51.136052,
+    "lng": -4.245339,
+    "url": "https://surfingcroydebay.co.uk/coasteering/",
+    "phone": "0800 188 4860"
+  },
+  {
+    "id": "mountaineering-north-devon-coasteering-42226113",
+    "name": "North Devon Coasteering",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Ilfracombe",
+    "region": "United Kingdom",
+    "lat": 51.200374,
+    "lng": -4.132957,
+    "url": "https://www.northdevoncoasteering.com/",
+    "email": "northdevoncoasteering@gmail.com",
+    "phone": "07841 458906"
+  },
+  {
+    "id": "mountaineering-newquay-activity-centre-30574136",
+    "name": "Newquay Activity Centre",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Newquay",
+    "region": "United Kingdom",
+    "lat": 50.415622,
+    "lng": -5.08763,
+    "url": "https://newquayactivitycentre.co.uk/",
+    "email": "info@newquayactivitycentre.co.uk",
+    "phone": "01637 877722"
+  },
+  {
+    "id": "mountaineering-ebo-adventure-47554985",
+    "name": "EBO Adventure",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Newquay",
+    "region": "United Kingdom",
+    "lat": 50.416186,
+    "lng": -5.087062,
+    "url": "https://eboadventure.co.uk/",
+    "email": "info@eboadventure.com",
+    "phone": "01637 498200"
+  },
+  {
+    "id": "mountaineering-cornish-rock-tors-21640020",
+    "name": "Cornish Rock Tors",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Port Isaac",
+    "region": "United Kingdom",
+    "lat": 50.592022,
+    "lng": -4.821657,
+    "url": "https://www.cornishrocktors.com/",
+    "email": "info@cornishrocktors.com",
+    "phone": "07791 534884"
+  },
+  {
+    "id": "mountaineering-cornish-coasteering-38831557",
+    "name": "Cornish Coasteering",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "St Minver",
+    "region": "United Kingdom",
+    "lat": 50.537965,
+    "lng": -4.867124,
+    "url": "https://www.cornishcoasteering.com/",
+    "email": "info@cornishcoasteering.com",
+    "phone": "01208 622012"
+  },
+  {
+    "id": "mountaineering-st-ives-surf-school-coasteering-51654994",
+    "name": "St Ives Surf School (coasteering)",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "St Ives",
+    "region": "United Kingdom",
+    "lat": 50.214983,
+    "lng": -5.482981,
+    "url": "https://www.stivessurfschool.co.uk/",
+    "email": "info@stivessurfschool.co.uk",
+    "phone": "01736 793 938"
+  },
+  {
+    "id": "mountaineering-tyf-adventure-64982837",
+    "name": "TYF Adventure",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "St Davids",
+    "region": "United Kingdom",
+    "lat": 51.880706,
+    "lng": -5.263823,
+    "url": "https://www.tyf.com/",
+    "email": "play@tyf.com",
+    "phone": "01437 721611"
+  },
+  {
+    "id": "mountaineering-preseli-venture-26344077",
+    "name": "Preseli Venture",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Mathry",
+    "region": "United Kingdom",
+    "lat": 51.95757,
+    "lng": -5.075656,
+    "url": "https://www.preseliventure.co.uk/",
+    "email": "info@preseliventure.co.uk",
+    "phone": "01348 837709"
+  },
+  {
+    "id": "mountaineering-celtic-quest-coasteering-86067242",
+    "name": "Celtic Quest Coasteering",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Abereiddy",
+    "region": "United Kingdom",
+    "lat": 51.936468,
+    "lng": -5.204428,
+    "url": "https://www.celticquestcoasteering.com/",
+    "email": "info@celticquestcoasteering.com",
+    "phone": "01348 837337"
+  },
+  {
+    "id": "mountaineering-down-to-earth-project-gower-coasteering-72706042",
+    "name": "Down to Earth Project (Gower coasteering)",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Swansea",
+    "region": "United Kingdom",
+    "lat": 51.580629,
+    "lng": -4.035348,
+    "url": "https://downtoearthproject.org.uk/adventures/coasteering/",
+    "email": "info@downtoearthproject.org.uk",
+    "phone": "01792 232 439"
+  },
+  {
+    "id": "mountaineering-coasteering-ni-13729216",
+    "name": "Coasteering NI",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Ballintoy",
+    "region": "United Kingdom",
+    "lat": 55.240256,
+    "lng": -6.366949,
+    "url": "https://www.coasteeringni.co.uk/",
+    "email": "splash@coasteeringni.co.uk"
+  },
+  {
+    "id": "mountaineering-ocean-vertical-63536197",
+    "name": "Ocean Vertical",
+    "sportId": "mountaineering",
+    "subActivity": "coasteering",
+    "town": "Dunbar",
+    "region": "United Kingdom",
+    "lat": 55.998608,
+    "lng": -2.574971,
+    "url": "https://www.oceanvertical.com/adventures/coasteering-scotland",
+    "phone": "01368 373848"
+  },
+  {
+    "id": "mountaineering-the-peak-climbing-school-58935283",
+    "name": "The Peak Climbing School",
+    "sportId": "mountaineering",
+    "subActivity": "rock-climbing",
+    "town": "Upper Hulme",
+    "region": "United Kingdom",
+    "lat": 53.145549,
+    "lng": -1.983571,
+    "url": "https://www.peakclimbingschool.co.uk/",
+    "email": "info@peakclimbingschool.co.uk",
+    "phone": "01538 300174"
+  },
+  {
+    "id": "mountaineering-more-than-mountains-40139444",
+    "name": "More than Mountains",
+    "sportId": "mountaineering",
+    "subActivity": "rock-climbing",
+    "town": "Ulverston",
+    "region": "United Kingdom",
+    "lat": 54.195324,
+    "lng": -3.084771,
+    "url": "https://www.morethanmountains.co.uk/",
+    "email": "nick@morethanmountains.co.uk",
+    "phone": "07878 471253"
+  },
+  {
+    "id": "mountaineering-raw-adventures-41849013",
+    "name": "RAW Adventures",
+    "sportId": "mountaineering",
+    "subActivity": "rock-climbing",
+    "town": "Brynrefail",
+    "region": "United Kingdom",
+    "lat": 53.142236,
+    "lng": -4.154384,
+    "url": "https://www.raw-adventures.co.uk/",
+    "email": "ross@raw-adventures.co.uk",
+    "phone": "01286 870870"
+  },
+  {
+    "id": "skateboarding-cornwall-bmx-racing-club-84213106",
+    "name": "Cornwall BMX Racing Club",
+    "sportId": "skateboarding",
+    "subActivity": "bmx",
+    "town": "Blackwater",
+    "region": "United Kingdom",
+    "lat": 50.271937,
+    "lng": -5.188379,
+    "url": "https://cornwallbmx.co.uk/",
+    "email": "info@cornwallbmx.co.uk"
+  },
+  {
+    "id": "skateboarding-lee-valley-velopark-bmx-48947970",
+    "name": "Lee Valley VeloPark (BMX)",
+    "sportId": "skateboarding",
+    "subActivity": "bmx",
+    "town": "London",
+    "region": "United Kingdom",
+    "lat": 51.550397,
+    "lng": -0.015228,
+    "url": "https://www.better.org.uk/leisure-centre/lee-valley/velopark/bmx",
+    "email": "LVvelopark@gll.org",
+    "phone": "0330 123 1500"
+  },
+  {
+    "id": "skateboarding-national-cycling-centre-bmx-platt-fields-98313018",
+    "name": "National Cycling Centre BMX (Platt Fields)",
+    "sportId": "skateboarding",
+    "subActivity": "bmx",
+    "town": "Manchester",
+    "region": "United Kingdom",
+    "lat": 53.445155,
+    "lng": -2.220104,
+    "url": "https://www.nationalcyclingcentre.com/bmx",
+    "email": "cyclingcentre@gll.org",
+    "phone": "0161 223 2244"
+  },
+  {
+    "id": "skateboarding-peckham-bmx-club-64447104",
+    "name": "Peckham BMX Club",
+    "sportId": "skateboarding",
+    "subActivity": "bmx",
+    "town": "London",
+    "region": "United Kingdom",
+    "lat": 51.485244,
+    "lng": -0.083308,
+    "url": "https://www.peckhambmx.co.uk/",
+    "email": "peckhambmxclub@gmail.com",
+    "phone": "07491 448079"
+  },
+  {
+    "id": "skateboarding-glasgow-bmx-centre-72102452",
+    "name": "Glasgow BMX Centre",
+    "sportId": "skateboarding",
+    "subActivity": "bmx",
+    "town": "Glasgow",
+    "region": "United Kingdom",
+    "lat": 55.893947,
+    "lng": -4.346481,
+    "url": "https://www.glasgowlife.org.uk/sport/venues/glasgow-bmx-centre",
+    "phone": "0141 276 0700"
+  },
+  {
+    "id": "skateboarding-bruntwood-park-bmx-club-17806220",
+    "name": "Bruntwood Park BMX Club",
+    "sportId": "skateboarding",
+    "subActivity": "bmx",
+    "town": "Cheadle",
+    "region": "United Kingdom",
+    "lat": 53.38029,
+    "lng": -2.212373,
+    "url": "https://bpbmxclub.org.uk/",
+    "email": "info@bpbmxclub.org.uk"
+  },
+  {
+    "id": "skateboarding-llynfi-bmx-racing-club-11112314",
+    "name": "Llynfi BMX Racing Club",
+    "sportId": "skateboarding",
+    "subActivity": "bmx",
+    "town": "Maesteg",
+    "region": "United Kingdom",
+    "lat": 51.629106,
+    "lng": -3.649247,
+    "url": "https://llynfibmx.wales/",
+    "email": "llynfivalleybmx@gmail.com"
+  },
+  {
+    "id": "snowboarding-snozone-milton-keynes-20464249",
+    "name": "Snozone Milton Keynes",
+    "sportId": "snowboarding",
+    "subActivity": "ski-slope",
+    "town": "Milton Keynes",
+    "region": "United Kingdom",
+    "lat": 52.042007,
+    "lng": -0.74713,
+    "url": "https://www.snozoneuk.com/milton-keynes/",
+    "phone": "0333 0030 520"
+  },
+  {
+    "id": "snowboarding-chatham-snowsports-centre-75814032",
+    "name": "Chatham Snowsports Centre",
+    "sportId": "snowboarding",
+    "subActivity": "dry-slope",
+    "town": "Gillingham",
+    "region": "United Kingdom",
+    "lat": 51.35567,
+    "lng": 0.559826,
+    "url": "https://www.jnlchatham.co.uk/",
+    "email": "info@jnlchatham.co.uk",
+    "phone": "01634 827 979"
+  },
+  {
+    "id": "snowboarding-snowsports-centre-swadlincote-18532917",
+    "name": "Snowsports Centre Swadlincote",
+    "sportId": "snowboarding",
+    "subActivity": "dry-slope",
+    "town": "Swadlincote",
+    "region": "United Kingdom",
+    "lat": 52.770074,
+    "lng": -1.550925,
+    "url": "https://www.jnlswadlincote.co.uk/",
+    "email": "jnl-swadlincote@nikegroup.co.uk",
+    "phone": "01283 890089"
+  },
+  {
+    "id": "snowboarding-brentwood-park-ski-snowboard-centre-54166800",
+    "name": "Brentwood Park Ski & Snowboard Centre",
+    "sportId": "snowboarding",
+    "subActivity": "dry-slope",
+    "town": "Brentwood",
+    "region": "United Kingdom",
+    "lat": 51.594918,
+    "lng": 0.301456,
+    "url": "http://brentwoodskicentre.co.uk/",
+    "email": "info@brentwoodskicentre.co.uk",
+    "phone": "01277 211994"
   }
 ]

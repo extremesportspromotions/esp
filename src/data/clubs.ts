@@ -11,6 +11,8 @@ export type Club = {
   url?: string;
   phone?: string;
   email?: string;
+  /** Scout's activity tag within the widened sport, e.g. coasteering, bmx, wind-tunnel */
+  subActivity?: string;
 };
 
 export const clubs = clubsData as Club[];
