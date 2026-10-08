@@ -25,8 +25,8 @@ const steps: Step[] = [
   },
   {
     step: "04",
-    title: "We organise the training programmes",
-    body: "The coach or club bills training separately. ESP does not book the lesson.",
+    title: "We organise the course",
+    body: "We introduce you to your coach, agree what the course covers and what it costs, then pass you their details so you can book with them.",
   },
 ];
 
