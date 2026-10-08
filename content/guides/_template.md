@@ -38,4 +38,4 @@ Sub-headings (###) appear indented in the table of contents.
 
 ## Ready to get started?
 
-End with the standard closing line, with no prices: "The club map lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the enquiry form." Link "club map" to this sport's map and "enquiry form" to /#enquire. (The page adds the buttons automatically.)
+End with the standard closing line, with no prices: "The club map lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the enquiry form." Link "club map" to this sport's map and "enquiry form" to /#enquire. (The page adds the buttons automatically, and for sport guides it adds the "What it costs" box from src/data/guidePrices.ts directly above this line, so don't write prices here.)

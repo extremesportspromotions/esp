@@ -77,6 +77,13 @@ how ESP's coach matching works). A `general` article:
 - A plain `>` quote becomes a large pull quote. Only quote real people or sources
   you can verify — never make up quotes.
 - Links: `[link text](https://example.com)`. External links open in a new tab.
+- **"What it costs" box (sport guides only):** don't write it in Markdown. The page
+  adds it automatically from `src/data/guidePrices.ts`, directly above the standard
+  closing line. A new sport needs an entry there: three rows (experience day,
+  "Become qualified", then hourly / per dive / per day), each value starting
+  "Typical UK price:", using the real UK range from the price notes. Never the ESP
+  match fee. `general` articles get no box. The build stops if a sport guide is
+  missing the closing line.
 - Finish with a short nudge to find a club on the map or get matched with a coach.
   The "Find clubs" and "Get matched" buttons are added to every article
   automatically, so you don't need to add them.

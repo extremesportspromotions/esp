@@ -13,6 +13,7 @@ import { toString as hastToString } from "hast-util-to-string";
 import type { Root as MdastRoot, Paragraph, Text } from "mdast";
 import type { Root as HastRoot, Element } from "hast";
 import { sports } from "@/data/sports";
+import { GUIDE_PRICES, GUIDE_PRICES_NOTE, GUIDE_PRICES_TITLE } from "@/data/guidePrices";
 import {
   GENERAL_SPORT,
   GUIDE_CATEGORIES,
@@ -267,7 +268,55 @@ function rehypeHeadingsAndLinks(toc: TocItem[]) {
   };
 }
 
-async function renderMarkdown(markdown: string) {
+/** Start of the standard closing paragraph every sport guide ends with. */
+const CLOSING_LINE_START = "The club map lists some of the UK clubs for this sport.";
+
+function el(tagName: string, className: string | null, children: Element["children"]): Element {
+  return {
+    type: "element",
+    tagName,
+    properties: className ? { className: [className] } : {},
+    children,
+  };
+}
+
+/**
+ * Sport guides get the shared "What it costs" box (src/data/guidePrices.ts),
+ * placed directly above the standard closing club map / enquiry paragraph.
+ */
+function rehypePriceBox(sport: string, file: string) {
+  return () => (tree: HastRoot) => {
+    const rows = GUIDE_PRICES[sport];
+    if (!rows || rows.length === 0) return;
+    const index = tree.children.findIndex(
+      (node) =>
+        node.type === "element" &&
+        node.tagName === "p" &&
+        hastToString(node).trim().startsWith(CLOSING_LINE_START),
+    );
+    if (index === -1) {
+      fail(file, `sport guides must include the standard closing line ("${CLOSING_LINE_START} …").`);
+    }
+    const box = el("aside", "price-box", [
+      el("p", "price-box-title", [{ type: "text", value: GUIDE_PRICES_TITLE }]),
+      el(
+        "dl",
+        null,
+        rows.map((row) =>
+          el("div", null, [
+            el("dt", null, [{ type: "text", value: row.label }]),
+            el("dd", null, [{ type: "text", value: row.text }]),
+          ]),
+        ),
+      ),
+    ]);
+    box.properties = { ...box.properties, "aria-label": GUIDE_PRICES_TITLE };
+    const note = el("p", "price-box-note", [{ type: "text", value: GUIDE_PRICES_NOTE }]);
+    tree.children.splice(index, 0, box, { type: "text", value: "\n" }, note, { type: "text", value: "\n" });
+  };
+}
+
+async function renderMarkdown(markdown: string, sport: string, sourceFile: string) {
   const toc: TocItem[] = [];
   const file = await unified()
     .use(remarkParse)
@@ -276,6 +325,7 @@ async function renderMarkdown(markdown: string) {
     .use(remarkRehype)
     .use(rehypeSlug)
     .use(rehypeHeadingsAndLinks(toc))
+    .use(rehypePriceBox(sport, sourceFile))
     .use(rehypeStringify)
     .process(markdown);
   return { html: String(file), toc };
@@ -284,6 +334,6 @@ async function renderMarkdown(markdown: string) {
 export async function getGuideBySlug(slug: string): Promise<Guide | undefined> {
   const raw = loadAll().find((g) => g.slug === slug);
   if (!raw) return undefined;
-  const { html, toc } = await renderMarkdown(raw.body);
+  const { html, toc } = await renderMarkdown(raw.body, raw.sport, raw.file);
   return { ...toSummary(raw), html, toc, wordCount: raw.wordCount };
 }

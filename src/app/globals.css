@@ -206,3 +206,62 @@ body {
 .guide-prose .callout-note .callout-title {
   color: #1E8CFF;
 }
+
+/* "What it costs" box in sport guides (src/data/guidePrices.ts) */
+.guide-prose .price-box {
+  margin: 2.25em 0 0;
+  border: 1px solid rgb(28 25 23 / 0.14);
+  border-radius: 1rem;
+  padding: 1.1em 1.25em 0.4em;
+  background: var(--surface);
+  font-size: 0.95em;
+}
+
+.guide-prose .price-box .price-box-title {
+  margin: 0 0 0.4em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #1C1917;
+}
+
+.guide-prose .price-box dl {
+  margin: 0;
+}
+
+.guide-prose .price-box dl > div {
+  padding: 0.7em 0;
+  border-top: 1px solid rgb(28 25 23 / 0.1);
+}
+
+.guide-prose .price-box dt {
+  margin: 0;
+  font-weight: 700;
+  color: #1C1917;
+  line-height: 1.4;
+}
+
+.guide-prose .price-box dd {
+  margin: 0.2em 0 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+@media (min-width: 640px) {
+  .guide-prose .price-box dl > div {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: 1.25em;
+  }
+
+  .guide-prose .price-box dd {
+    margin: 0;
+  }
+}
+
+.guide-prose .price-box-note {
+  margin: 0.6em 0 2.25em;
+  font-size: 0.85em;
+  color: rgb(28 25 23 / 0.65);
+}
