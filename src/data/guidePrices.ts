@@ -17,7 +17,7 @@
 export type GuidePriceRow = { label: string; text: string };
 
 export const GUIDE_PRICES_NOTE =
-  "Typical UK prices, checked October 2026. The club or coach sets and bills the price.";
+  "Typical prices, checked October 2026. The club or coach sets and bills the price.";
 
 export const GUIDE_PRICES_TITLE = "What it costs";
 
@@ -44,7 +44,7 @@ export const GUIDE_PRICES: Record<string, GuidePriceRow[]> = {
   ],
   "wakeboarding": [
     { label: "Experience day", text: "Typical UK price: £45 to £165 per person (30-minute intro to a private hour)" },
-    { label: "Become qualified", text: "Typical UK price: £595 to £850 (BWSW Level 1 and 2, with boat-driver ticket, first aid and disclosure check)" },
+    { label: "Become qualified", text: "Typical UK price: £595 to £850 (BWSW Level 1 and 2, extras included)" },
     { label: "Hourly", text: "Typical UK price: £40 to £165 an hour (shared cable to private with a coach)" },
   ],
   "skydiving": [
@@ -78,7 +78,6 @@ export const GUIDE_PRICES: Record<string, GuidePriceRow[]> = {
     { label: "Hourly", text: "Typical UK price: £18 to £70 an hour (group to private)" },
   ],
   "base-jumping": [
-    { label: "First BASE course, abroad (after about 200 skydives)", text: "Typical price abroad: £1,250 to £2,600 per person (four or five days)" },
     { label: "Become qualified", text: "Typical price abroad: £1,250 to £2,600 (the first BASE course is the entry step; there is no UK qualification)" },
     { label: "Per day", text: "Typical price abroad: £200 to £400 a day for coaching" },
   ],
