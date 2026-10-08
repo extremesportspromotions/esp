@@ -28,3 +28,25 @@ export function clubCountsBySport(): Record<string, number> {
     return acc;
   }, {});
 }
+
+const FLYING = new Set(["hang-gliding", "paragliding"]);
+const flyingKey = (c: Club) => c.name.trim().toLowerCase();
+
+/** Clubs listed under both hang gliding and paragliding (same club, one pin per sport). */
+const dualFlyingNames = (() => {
+  const seen = new Map<string, Set<string>>();
+  for (const c of clubs) {
+    if (!FLYING.has(c.sportId)) continue;
+    const key = flyingKey(c);
+    if (!seen.has(key)) seen.set(key, new Set());
+    seen.get(key)!.add(c.sportId);
+  }
+  return new Set([...seen].filter(([, s]) => s.size === 2).map(([k]) => k));
+})();
+
+export const DUAL_FLYING_NOTE = "Hang gliding & paragliding";
+
+/** True when this club teaches both hang gliding and paragliding. */
+export function isDualFlyingClub(c: Club): boolean {
+  return FLYING.has(c.sportId) && dualFlyingNames.has(flyingKey(c));
+}

@@ -9,7 +9,8 @@ import {
   useMap,
 } from "react-leaflet";
 import L from "leaflet";
-import type { Club } from "@/data/clubs";
+import { DUAL_FLYING_NOTE, isDualFlyingClub, type Club } from "@/data/clubs";
+import { formatUkPhone, ukPhoneHref } from "@/lib/phone";
 import { sports } from "@/data/sports";
 import "leaflet/dist/leaflet.css";
 
@@ -77,6 +78,9 @@ export default function ClubsMapInner({ clubs }: { clubs: Club[] }) {
             <div className="min-w-[160px] text-sm text-ink">
               <p className="font-semibold">{c.name}</p>
               <p className="mt-0.5 text-xs opacity-80">{sportName(c.sportId)}</p>
+              {isDualFlyingClub(c) ? (
+                <p className="mt-0.5 text-[11px] font-semibold text-blue-800">{DUAL_FLYING_NOTE}</p>
+              ) : null}
               <p className="text-xs opacity-70">
                 {c.town}
                 {c.region ? `, ${c.region}` : ""}
@@ -94,10 +98,10 @@ export default function ClubsMapInner({ clubs }: { clubs: Club[] }) {
                 ) : null}
                 {c.phone ? (
                   <a
-                    href={`tel:${c.phone.replace(/[^+\d]/g, "")}`}
+                    href={ukPhoneHref(c.phone)}
                     className="text-xs font-medium text-blue-700 underline"
                   >
-                    {c.phone}
+                    {formatUkPhone(c.phone)}
                   </a>
                 ) : null}
                 {c.email ? (
