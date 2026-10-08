@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FormEvent, useEffect, useId, useMemo, useState } from "react";
 import { sports } from "@/data/sports";
 import { ENQUIRY_EMAIL, ENQUIRY_ENDPOINT } from "@/lib/site";
-import { REFUND_LINE, paymentStatusLabel, startPayment } from "@/lib/payment";
+import { paymentStatusLabel, startPayment } from "@/lib/payment";
 import PaymentStep from "@/components/PaymentStep";
 
 const TOTAL_STEPS = 6;
@@ -491,9 +491,7 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-4">
           <p className="text-base leading-relaxed text-[#1C1917]/75">
-            You pay the match fee up front, when you enquire. {REFUND_LINE} The
-            coach or club bills you separately for the training. We do not take
-            bookings for them.
+            You pay the match fee up front, when you enquire.
           </p>
           <div className="rounded-2xl border border-[#1C1917]/10 bg-white p-6 shadow-xl shadow-black/30 backdrop-blur sm:p-8">
           {submitted ? (
@@ -825,9 +823,7 @@ export default function ContactForm() {
                       onChange={(v) => setField("matchFee", v)}
                     />
                     <p className="text-xs leading-relaxed text-[#1C1917]/55">
-                      We email you a secure payment link after you send the
-                      form. {REFUND_LINE} The coach or club bills you separately
-                      for the training.
+                      The coach or club bills you separately for the training.
                     </p>
                   </div>
                 )}
