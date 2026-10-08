@@ -22,13 +22,13 @@ const steps: Step[] = [
   },
   {
     step: "03",
-    title: "We find the right course for you",
-    body: "We match you with a UK-based professional coach who fits your goals.",
+    title: "We find the right coach",
+    body: "A UK professional who fits your sport, level and goals.",
   },
   {
     step: "04",
-    title: "We organise the course",
-    body: "We introduce you to your coach, agree what the course covers and what it costs, then pass you their details so you can book with them.",
+    title: "We introduce you",
+    body: "You get their details, agree the course, and book with them.",
   },
 ];
 
