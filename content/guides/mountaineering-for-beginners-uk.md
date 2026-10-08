@@ -1,18 +1,19 @@
 ---
-title: "How to start mountaineering in the UK"
+title: "How to start mountaineering, coasteering and rock climbing in the UK"
 slug: mountaineering-for-beginners-uk
-description: "How to start mountaineering in the UK with a summer hill walk, and the kit a first day needs."
+description: "How to start mountaineering in the UK with a summer hill walk, and the kit a first day needs, plus a first go at coasteering and rock climbing."
 sport: mountaineering
 category: Getting started
 author: ESP Editorial
 date: 2026-10-03
+updated: 2026-10-08
 heroAlt: "A person with a blue backpack, seen from behind, sitting on a grassy ridge above a cloud-filled valley"
 heroImage: "/sports/mountaineering.jpg"
 featured: false
 draft: false
 ---
 
-Hill walking is walking in the hills and mountains. The uplands can be hazardous, so you need a little knowledge and some basic equipment. A beginner practises navigation on low ground first, in summer, and does not start on a scramble or in winter.
+Hill walking is walking in the hills and mountains. The uplands can be hazardous, so you need a little knowledge and some basic equipment. A beginner practises navigation on low ground first, in summer, and does not start on a scramble or in winter. This guide also covers two related ways in: coasteering on the coast, and rock climbing, which most people now start indoors.
 
 ## A first session
 
@@ -33,6 +34,26 @@ If you are just starting out, use what you have, as long as it keeps you safe, h
 > [!SAFETY]
 > Mountain weather can change very quickly, and a general weather app often does not account for conditions in the mountains. Use a forecast made for hill and mountain users, such as the Met Office, and turn around if you are tired, the weather is worse than you expected, or you are running out of time. In an accident, Mountain Rescue England and Wales says to dial 999 or 112, ask for the police and then mountain rescue, give the details you have prepared, and do not change your position until the rescue team contacts you.
 
-Our club map shows [some UK mountaineering clubs](https://esp-lemon.vercel.app/?sport=mountaineering#find-a-club), and it is a starting point rather than a full list.
+## Coasteering
+
+Coasteering is moving along the rocky edge of the sea, where the land meets the water. You swim, scramble over rocks, traverse (move sideways along the rock) and jump into the sea. It is done with a coasteering guide. You wear a wetsuit, a buoyancy aid, a helmet and closed-toe shoes that will not come off. The National Coasteering Charter (NCC) represents and advises coasteering providers across the UK.
+
+Most people first try it with an adventure activity provider. The NCC says this is the best way to learn the basic skills safely. You cannot coasteer anywhere. Some coastline, such as Army ranges, is off limits, and some places have restrictions at certain times of year, for example while birds are nesting. If you are new, the NCC suggests going in the warmest part of the year, roughly May to October. Coasteering began in Pembrokeshire, in west Wales, in the 1980s.
+
+At TYF in St Davids, a half-day Discovery Coasteering session is listed at £65 per person, with all specialist kit provided (October 2026). At Preseli Venture, near Mathry, a half-day coasteering session is listed at £55 (October 2026). Both list a minimum age of 8 for these sessions. Preseli Venture says you do not need to be able to swim, but you need to be happy in deep water wearing a flotation device.
+
+The guide picks the stretch of coast on the day, based on the tide, the swell and the weather. Do not try jumping into the sea from a height on your own. The RNLI warns that the water is not always as deep as it looks, the tide changes, rocks can be hidden and cold water shock can affect anyone. In an emergency at the coast, call 999 or 112 and ask for the Coastguard.
+
+## Rock climbing
+
+Most people now take their first climbing steps on an indoor climbing wall rather than on real rock. Most walls have two kinds of climbing. Bouldering is short climbs, called problems, no more than a few metres off the ground, over thick padding and with no rope. Top-roping is a taller climb on a rope that runs through an anchor at the top. A partner on the ground, called the belayer, holds the other end through a belay device and can stop you if you slip.
+
+The BMC says there are few towns in the UK without a climbing wall. Most large walls run introductory taster sessions with all the equipment provided, and the BMC calls these by far the best way to start. Many walls will not let a complete beginner climb until they have done one. On your first visit you fill in a registration form. Be honest about what you can do, and if you do not know how to belay, say so.
+
+At Redpoint Bristol, a 90-minute adult taster session is listed at £18 for non-members, with climbing shoe hire included (October 2026).
+
+The BMC says climbing, hill walking and mountaineering involve a risk of personal injury or death. Warm up before you climb, and stop before you are worn out, because most injuries happen when people are tired. If you are unsure how a belay device works, ask the wall staff.
+
+Our club map shows [some UK mountaineering clubs](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club), and it is a starting point rather than a full list.
 
 If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.

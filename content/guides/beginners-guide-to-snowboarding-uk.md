@@ -1,18 +1,19 @@
 ---
-title: "A beginner's guide to snowboarding in the UK"
+title: "A beginner's guide to snowboarding and skiing in the UK"
 slug: beginners-guide-to-snowboarding-uk
-description: "Never snowboarded? Where to learn in the UK, what happens in your first lesson, what kit to rent or buy, how to stay safe and how to keep progressing."
+description: "Never snowboarded? Where to learn in the UK, what happens in your first lesson, what kit to rent or buy, how to stay safe and how to keep progressing, plus how to start skiing."
 sport: snowboarding
 category: "Getting started"
 author: "ESP Editorial"
 date: 2026-10-03
+updated: 2026-10-08
 heroAlt: "A beginner snowboarder in a helmet and gloves side-slipping on their heel edge down a gentle indoor real-snow slope while an instructor watches"
 heroImage: "/sports/snowboarding.jpg"
 featured: false
 draft: false
 ---
 
-Never strapped into a snowboard? You don't need to live next to a mountain to learn. Between indoor real-snow centres, outdoor artificial slopes and Scotland's ski centres, the UK has plenty of places to take your first slide. Here's where to go, what happens in your first lesson, what kit you need and how to stay safe.
+Never strapped into a snowboard? You don't need to live next to a mountain to learn. Between indoor real-snow centres, outdoor artificial slopes and Scotland's ski centres, the UK has plenty of places to take your first slide. Here's where to go, what happens in your first lesson, what kit you need and how to stay safe. Prefer two skis to one board? We also cover how to start skiing in the same places.
 
 ## What is snowboarding?
 
@@ -44,7 +45,7 @@ One example is **Midlothian Snowsports Centre** at Hillend, near Edinburgh, whic
 
 For real mountain snow without leaving the UK, Scotland has five ski centres: Cairngorm Mountain, Glencoe Mountain, Nevis Range, The Lecht 2090 and Glenshee. VisitScotland says all five have beginner-friendly slopes and offer lessons with qualified instructors, and describes The Lecht as ideal for novices. The season typically runs from December to April, depending on snowfall and weather, so always check each centre's conditions report before you travel.
 
-Want to see what's near you? Our club map shows [some of the UK centres that offer coaching](https://esp-lemon.vercel.app/?sport=snowboarding#find-a-club), including snowboarding venues. It's a starting point rather than a complete list, so confirm details with a venue before you go.
+Want to see what's near you? Our club map shows [some of the UK centres that offer coaching](https://www.extremesportspromotions.com/?sport=snowboarding#find-a-club), including snowboarding venues. It's a starting point rather than a complete list, so confirm details with a venue before you go.
 
 ## Your first lesson
 
@@ -77,5 +78,17 @@ The Snow Centre's beginner pathway gives a good idea of what to expect:
 4. **Stage 4, developing:** steering, linking curves together and learning to use a button lift.
 
 Everyone learns at a different pace, but The Snow Centre suggests a complete beginner will need at least six lessons to feel comfortable and confident on the slopes.
+
+## Skiing
+
+Skiing is sliding down a slope on skis, which are fixed to your boots with bindings. You learn in the same places as snowboarding. In England you don't need snow on the ground, because indoor snow centres and dry slopes run lessons all year round. Snowsport England regulates skiing and snowboarding in England, in partnership with the national governing body, GB Snowsport. It says England has more than 120 clubs and facilities where you can start, and its website has a finder to help you look.
+
+Most slopes hire out skis, boots and bindings, and a helmet is often included, so you don't need to buy anything at first. Poles come later, once you need them. On indoor snow, wear a waterproof jacket and trousers. On a dry slope, a long-sleeved top and comfortable trousers such as tracksuit bottoms will do.
+
+At The Snow Centre, adult beginner ski lessons follow three stages. Stage 1 covers your equipment, standing and walking on skis, and using the beginner slope lift. Stage 2 teaches the snowplough, a basic way to change direction and control your speed. Stage 3 takes you down the full length of the beginner slope, stopping with snowplough turns.
+
+At Midlothian Snowsports Centre near Edinburgh, a two-hour adult ski taster for first-timers is listed at £41, with equipment hire included (October 2026).
+
+The safety advice above applies to skiing too. Snowsport England says a helmet is important for safety, and that gloves and warm socks are essential for comfort and to prevent injury.
 
 If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.

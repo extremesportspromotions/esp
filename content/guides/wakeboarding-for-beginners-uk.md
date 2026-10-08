@@ -28,6 +28,6 @@ Take swimming clothes, a towel and a change of clothes. BWSW says you will be pr
 > [!SAFETY]
 > On a site that BWSW accredits, you are given a safety briefing, and you have to wear a helmet and other protective equipment, with a warning that the protection is limited.
 
-Our club map shows [some UK wakeboarding clubs](https://esp-lemon.vercel.app/?sport=wakeboarding#find-a-club), and it is a starting point rather than a full list.
+Our club map shows [some UK wakeboarding clubs](https://www.extremesportspromotions.com/?sport=wakeboarding#find-a-club), and it is a starting point rather than a full list.
 
 If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.

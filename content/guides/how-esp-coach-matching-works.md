@@ -81,7 +81,7 @@ If the student is under 18, we need consent from a parent or guardian, and Matth
 The [club map](https://esp-lemon.vercel.app/#find-a-club) lists UK clubs, centres and schools that offer coaching, lessons or courses. As of 25 September 2026 it included 223 venues, each with a working website and contact details [1].
 
 - **Filter by sport**, then open a pin for the venue's website, phone number or email.
-- **Jump straight to a sport** with a link like `https://esp-lemon.vercel.app/?sport=skydiving#find-a-club`.
+- **Jump straight to a sport** with a link like `https://www.extremesportspromotions.com/?sport=skydiving#find-a-club`.
 - **Check before you travel.** Listings come from public sources, including OpenStreetMap, BHPA club listings and British Skydiving drop zone directories. They were last checked in September 2026, and map positions are approximate.
 
 The map is a starting point, not a complete directory: there are no venues yet for kiteboarding or BASE jumping, and only a few for motocross, wingsuit flying and kayaking. A listing isn't a review or an endorsement. The paragliding pins are currently BHPA recreational clubs, so do your first training at a BHPA registered school [2], though the BHPA encourages trainees to contact their local club early [3].

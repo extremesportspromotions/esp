@@ -27,6 +27,6 @@ In UK waters you need a wetsuit for the time of year. You need a harness to spre
 > [!SAFETY]
 > A bar and kite have a safety system that releases the kite's power without letting the kite go, by easing all but one line or by letting the kite flag. If you are unsure about a session, do not go: ask a more experienced rider or, preferably, a local school or instructor.
 
-Our club map shows [some UK kiteboarding clubs](https://esp-lemon.vercel.app/?sport=kiteboarding#find-a-club), and it is a starting point rather than a full list.
+Our club map shows [some UK kiteboarding clubs](https://www.extremesportspromotions.com/?sport=kiteboarding#find-a-club), and it is a starting point rather than a full list.
 
 If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.

@@ -33,6 +33,6 @@ The AMCA says you bring your own bike.
 > [!SAFETY]
 > A parent or legal guardian must go with a rider under 18, and stay for the whole time that rider is there. They must make sure a young rider's protective clothing fits.
 
-Our club map shows [some UK motocross clubs](https://esp-lemon.vercel.app/?sport=motocross#find-a-club), and it is a starting point rather than a full list.
+Our club map shows [some UK motocross clubs](https://www.extremesportspromotions.com/?sport=motocross#find-a-club), and it is a starting point rather than a full list.
 
 If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.

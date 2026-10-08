@@ -1,18 +1,19 @@
 ---
-title: "Your first tandem skydive in the UK: what to expect"
+title: "Your first tandem skydive and indoor skydive in the UK: what to expect"
 slug: first-tandem-skydive-uk
-description: "Thinking about a tandem skydive? What happens on the day in the UK, from age, weight and medical rules to the briefing, freefall, canopy ride and landing."
+description: "Thinking about a tandem skydive? What happens on the day in the UK, from age, weight and medical rules to the briefing, freefall, canopy ride and landing, plus how to try indoor skydiving in a wind tunnel."
 sport: skydiving
 category: Getting started
 author: ESP Editorial
 date: 2026-09-25
+updated: 2026-10-08
 heroAlt: "Four skydivers freefalling in formation high above the countryside"
 heroImage: "https://images.unsplash.com/photo-1474623809196-26c1d33457cc?auto=format&fit=crop&w=2000&q=80"
 featured: true
 draft: false
 ---
 
-A tandem skydive is the simplest way to experience freefall for the first time. You don't need any previous experience or a long training course: you're securely attached to a qualified instructor who takes care of the technical side. Here's what to expect, from booking to landing.
+A tandem skydive is the simplest way to experience freefall for the first time. You don't need any previous experience or a long training course: you're securely attached to a qualified instructor who takes care of the technical side. Here's what to expect, from booking to landing. We also cover indoor skydiving, where you float on a column of air inside a wind tunnel.
 
 ## How a tandem skydive works
 
@@ -69,6 +70,18 @@ Your instructor then deploys the parachute for a canopy ride of several minutes,
 
 Many people jump once for the experience; others want more. British Skydiving offers two routes to learning to skydive solo: Accelerated Freefall (AFF) and the Category System (often called static line). Many people qualify for a British Skydiving A Licence in around 18 jumps.
 
+## Indoor skydiving in a wind tunnel
+
+Indoor skydiving is flying on a strong column of air inside a vertical wind tunnel. It recreates the feeling of freefall, with no aircraft and no parachute. British Skydiving notes that tunnel flying, also called indoor skydiving, has grown as a way to train.
+
+iFLY runs several UK tunnels, including Manchester and Milton Keynes. Its first-time flyer packages include instruction from instructors qualified by the International Bodyflight Association (IBA), which iFLY describes as the independent governing body of the sport. Each flight lasts around 55 seconds. iFLY asks you to arrive 45 minutes before your flight and says to expect to be on site for about an hour and a half.
+
+At iFLY, a first-time flyer package of two flights is listed from £49.99 per person, plus a £3 booking fee per transaction (October 2026). The price depends on the package, the location and when you fly.
+
+iFLY says flyers can be aged 3 or over, as long as the flight suit and helmet fit. Anyone under 18 must have a parent or guardian with them on the day, and that adult signs the waiver for them.
+
+Every flyer completes an online waiver before arriving, and it includes your pre-flight training. iFLY will not fly you if you have ever dislocated a shoulder, are pregnant, are wearing a hard cast, or are under the influence of alcohol or non-prescribed drugs. If you have had neck, back, heart or shoulder problems, iFLY says to ask your doctor before flying. There is also an upper weight limit, so check the current figure with the tunnel before you book. Wear lace-up trainers and take off all jewellery and loose items.
+
 ## Ready to jump?
 
-Use our [club map](https://esp-lemon.vercel.app/?sport=skydiving#find-a-club) to find some of the UK's skydiving centres. It doesn't list every affiliated PTO, so check British Skydiving's own list too. If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.
+Use our [club map](https://www.extremesportspromotions.com/?sport=skydiving#find-a-club) to find some of the UK's skydiving centres. It doesn't list every affiliated PTO, so check British Skydiving's own list too. If you would like help finding a coach, ESP can match you. The enquiry is free. Once we have found a named coach, you pay the match fee — then we release the contact. Fee bands are on the form (taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129). The coach or club bills you separately for the training. We do not take bookings for them. We refund the match fee if we cannot provide a coach, or if your health means you cannot train. If the student is under 18, we need a guardian's consent, we contact that guardian, and the guardian travels with them.
