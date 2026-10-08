@@ -88,7 +88,7 @@ export default function SportsCarousel() {
           onPointerCancel={endDrag}
           role="group"
           aria-roledescription="slide"
-          aria-label={`${sport.name}: ${sport.description}`}
+          aria-label={`${sport.name}: ${sport.description}${sport.notice ? ` ${sport.notice}` : ""}`}
         >
           <div
             className="relative w-full"
@@ -146,6 +146,11 @@ export default function SportsCarousel() {
                 <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#1C1917] sm:text-lg lg:text-xl">
                   {sport.description}
                 </p>
+                {sport.notice ? (
+                  <p className="mt-3 max-w-3xl rounded-lg border border-[#1C1917]/15 bg-white/70 px-3 py-2 text-sm font-medium text-[#1C1917] sm:text-base">
+                    {sport.notice}
+                  </p>
+                ) : null}
                 <p className="mt-3 text-sm font-semibold text-[#1C1917] underline decoration-[#1C1917]/70 underline-offset-4 sm:text-base">
                   Read the guide
                 </p>

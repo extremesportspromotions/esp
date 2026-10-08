@@ -14,6 +14,8 @@ export type Sport = {
   credit?: string;
   /** Optional CSS object-position for the carousel video */
   videoPosition?: string;
+  /** Optional short notice shown on the carousel card and in the enquiry form's sport list */
+  notice?: string;
   /** Optional wider label (map filters, cards and popups, guide filters, enquiry form) instead of `name` */
   mapLabel?: string;
 };
@@ -162,6 +164,8 @@ export const sports: Sport[] = [
     video: "/carousel-clips/carousel-12-base-jumping.mp4",
     credit: "Quest Films, CC BY 3.0",
     name: "BASE Jumping",
+    notice:
+      "Arranged by ESP only after you hold the required skydiving qualifications. Not a beginner booking.",
     description:
       "Progress carefully with experienced BASE mentors covering gear, exit technique, and site-specific risk.",
     image: "/sports/base-jumping.jpg",

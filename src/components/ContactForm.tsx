@@ -523,18 +523,19 @@ export default function ContactForm() {
               aria-busy={sending}
               className="flex flex-col gap-6"
             >
-              {/* Honeypot for spam bots: hidden from people and screen readers. */}
+              {/* Honeypot for spam bots: off-screen, out of the tab order and hidden
+                  from screen readers. No visible text. Still sent as _honey. */}
               <div
                 aria-hidden="true"
-                className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden"
+                style={{ position: "absolute", left: "-10000px", top: "auto", width: 1, height: 1, overflow: "hidden" }}
               >
-                <label htmlFor="_honey">Leave this field empty</label>
                 <input
                   id="_honey"
                   name="_honey"
                   type="text"
                   tabIndex={-1}
                   autoComplete="off"
+                  aria-hidden="true"
                   value={honey}
                   onChange={(e) => setHoney(e.target.value)}
                 />
@@ -600,6 +601,11 @@ export default function ContactForm() {
                             }`}
                           >
                             {s.mapLabel ?? s.name}
+                            {s.notice ? (
+                              <span className="mt-1 block text-xs font-normal leading-snug text-[#1C1917]/70">
+                                {s.notice}
+                              </span>
+                            ) : null}
                           </button>
                         );
                       })}
