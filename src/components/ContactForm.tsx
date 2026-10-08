@@ -432,6 +432,26 @@ export default function ContactForm() {
           body: JSON.stringify({ name: values.name, email: values.email, sport: sportName, _honey: honey }),
           keepalive: true,
         }).catch(() => {});
+        // Telegram alert to Matthew; never blocks the success message.
+        const under18 = values.ageBand === UNDER_18;
+        void fetch("/api/enquiry-alert", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: values.name,
+            phone: values.phone,
+            email: values.email,
+            sport: sportName,
+            location: values.location,
+            travel: labelFor(TRAVEL_OPTIONS, values.travel),
+            matchFee: labelFor(MATCH_FEES, values.matchFee),
+            age: labelFor(AGE_BANDS, values.ageBand),
+            guardianName: under18 ? values.guardianName : "",
+            guardianPhone: under18 ? values.guardianPhone : "",
+            _honey: honey,
+          }),
+          keepalive: true,
+        }).catch(() => {});
       }
       setStatus(delivered ? "success" : "error");
       // Hook for Stripe Checkout later; does nothing in "email-link" mode.
