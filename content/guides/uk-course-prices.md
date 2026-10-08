@@ -6,8 +6,8 @@ sport: general
 category: "How-to"
 author: "ESP Editorial"
 date: 2026-10-08
-heroImage: "/sports/mountaineering.jpg"
-heroAlt: "A walker with a blue rucksack sits on a grassy hilltop, looking out over a cloud inversion with rounded hilltops poking through"
+heroImage: "/guides/uk-course-prices-hero.jpg"
+heroAlt: "A paraglider in a red jacket and helmet flies under a blue, orange and red wing against a clear blue sky"
 featured: false
 draft: false
 ---
