@@ -317,11 +317,11 @@ export default function ClubsMapSection() {
         </div>
 
         <p className="mt-4 text-xs leading-relaxed text-[#1C1917]/40">
-          Club locations are compiled from OpenStreetMap (Overpass), BHPA club
+          Club locations are compiled from OpenStreetMap (Overpass), BHPA training-school
           listings, British Skydiving drop-zone directories, public wake-park
           guides, and other publicly listed centres. The map only shows venues
           that offer coaching or lessons and publish contact details. Shops and
-          venues without a working website are left out. Last checked September
+          venues without a working website are left out. Last checked October
           2026. Coordinates are approximate. Always confirm details with the
           club before travelling.
         </p>
