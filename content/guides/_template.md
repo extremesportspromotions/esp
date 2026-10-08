@@ -38,4 +38,4 @@ Sub-headings (###) appear indented in the table of contents.
 
 ## Ready to get started?
 
-End with a short nudge to find a club on the map or send a free enquiry to get matched with a coach. (The page adds the buttons automatically.)
+End with the standard closing line, with no prices: "The club map lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the enquiry form." Link "club map" to this sport's map and "enquiry form" to /#enquire. (The page adds the buttons automatically.)

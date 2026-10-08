@@ -16,7 +16,7 @@ export default function GuideNextSteps({ sport, sportName }: { sport: string; sp
           {isSport ? `Find ${sportName.toLowerCase()} clubs near you` : "Find a club near you"}
         </h2>
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#1C1917]/75">
-          Browse checked UK clubs, centres and schools on our free map — or tell us what you want to
+          Browse UK clubs, centres and schools on our map — or tell us what you want to
           achieve and we&apos;ll match you with a professional, UK-based coach.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

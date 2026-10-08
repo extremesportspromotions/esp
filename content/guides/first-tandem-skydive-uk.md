@@ -84,21 +84,6 @@ Every flyer completes an online waiver before arriving, and it includes your pre
 
 ## Ready to jump?
 
-Use our [club map](https://www.extremesportspromotions.com/?sport=skydiving#find-a-club) to find some of the UK's skydiving centres. It doesn't list every affiliated PTO, so check British Skydiving's own list too.
+British Skydiving also lists every affiliated centre on its own site.
 
-If you would like help finding a coach, ESP can match you.
-
-**What you pay ESP**
-
-The enquiry is free. You pay only after we have named a coach, and only so we can pass on their contact. The coach or club then bills the training. We do not book the session.
-
-| | What you want | ESP match fee |
-| --- | --- | --- |
-| 1 | Experience day — one person, one day | £19 |
-| 2 | Become qualified — one person, one club, full course | £49 |
-| 3 | Group experience day — a party, one taster day | £49 |
-| 4 | Group qualification — team building, become qualified | £99 |
-
-You pay nothing if we cannot find a coach. If the coach cannot be reached or will not take you on within 14 days, we find you another coach or refund the fee. We also refund it if your health means you cannot train.
-
-Under 18: a parent or guardian must consent, we contact that guardian, and the guardian travels with the student.
+The [club map](https://www.extremesportspromotions.com/?sport=skydiving#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

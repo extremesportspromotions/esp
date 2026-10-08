@@ -13,11 +13,11 @@ featured: false
 draft: false
 ---
 
-You tell us the sport you want to try, and we find you a qualified coach or club in the UK. The enquiry is free. You only pay once we have found a named coach.
+You tell us the sport you want to try, and we find you a qualified coach or club in the UK. You only pay once we have found a named coach.
 
 ## How it works
 
-1. **Send the enquiry.** Fill in the [enquiry form](https://www.extremesportspromotions.com/#enquire). It takes about a minute. It asks about your sport, your level, your age, where you live and how far you will travel. Nothing is charged when you send it.
+1. **Send the enquiry.** Fill in the [enquiry form](https://www.extremesportspromotions.com/#enquire). It takes about a minute. It asks about your sport, your level, your age, where you live and how far you will travel.
 2. **We get in touch.** We start looking for the right coach or club for you.
 3. **We find a named coach.** We tell you who it is, you pay the match fee, and then we send you their contact details.
 4. **You book and train.** You arrange your sessions with the coach or club directly.
@@ -28,7 +28,7 @@ Prefer email? Write to enquiries@extremesportspromotions.com.
 
 ## What it costs
 
-The enquiry is free. You pay only after we have named a coach, and only so we can pass on their contact. The coach or club then bills the training. We do not book the session.
+You pay only after we have named a coach, and only so we can pass on their contact. The coach or club then bills the training. We do not book the session.
 
 | | What you want | ESP match fee |
 | --- | --- | --- |
@@ -52,4 +52,4 @@ All our coaches are in the UK. Before we introduce you, we check each coach's qu
 
 ## The club map
 
-If you would rather look yourself, the [club map](https://www.extremesportspromotions.com/#find-a-club) shows some UK clubs, centres and schools that offer coaching. Pick a sport, then open a pin for the venue's website or contact details. It is free to use and a starting point rather than a full list. We have not checked the venues on the map, so contact them before you travel. If you want a coach we have checked for you, send us an enquiry.
+If you would rather look yourself, the [club map](https://www.extremesportspromotions.com/#find-a-club) shows some UK clubs, centres and schools that offer coaching. Pick a sport, then open a pin for the venue's website or contact details. It is a starting point rather than a full list. We have not checked the venues on the map, so contact them before you travel. If you want a coach we have checked for you, send us an enquiry.

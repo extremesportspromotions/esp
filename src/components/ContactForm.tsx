@@ -456,7 +456,7 @@ export default function ContactForm() {
           </p>
           <p className="mt-3 rounded-lg border border-accent/25 bg-accent/10 px-4 py-3 text-sm text-[#1C1917]/75">
             <span className="font-semibold text-accent">Find a coach</span>{" "}
-            = send a free enquiry below, then get matched. Not looking
+            = send an enquiry below, then get matched. Not looking
             for a coach?{" "}
             <a
               href="#find-a-club"
@@ -464,7 +464,7 @@ export default function ContactForm() {
             >
               Browse clubs near you
             </a>{" "}
-            instead — free.
+            instead.
           </p>
           <p className="mt-4 text-sm text-[#1C1917]/50">
             Prefer email?{" "}
@@ -479,7 +479,7 @@ export default function ContactForm() {
 
         <div className="flex flex-col gap-4">
           <p className="text-base leading-relaxed text-[#1C1917]/75">
-            The enquiry is free. Once we have found a named coach, you pay the
+            Once we have found a named coach, you pay the
             match fee — then we release the contact. The coach or club bills you
             separately for the training. We do not take bookings for them.
           </p>
@@ -807,7 +807,7 @@ export default function ContactForm() {
                       onChange={(v) => setField("matchFee", v)}
                     />
                     <p className="text-xs leading-relaxed text-[#1C1917]/55">
-                      The enquiry is free. Once we have found a named coach, you
+                      Once we have found a named coach, you
                       pay the match fee — then we release the contact. The coach
                       or club bills you separately for the training. We do not
                       take bookings for them.
@@ -950,7 +950,7 @@ export default function ContactForm() {
 
                     <div id="fee-note" className="space-y-2 text-sm text-[#1C1917]/55">
                       <p>
-                        The enquiry is free. Once we have found a named coach,
+                        Once we have found a named coach,
                         you pay the match fee — then we release the contact. The
                         coach or club bills you separately for the training. We
                         do not take bookings for them.
@@ -997,7 +997,7 @@ export default function ContactForm() {
                           aria-hidden
                         />
                       )}
-                      {sending ? "Sending…" : "Send free enquiry"}
+                      {sending ? "Sending…" : "Send enquiry"}
                     </button>
                   )}
                 </div>

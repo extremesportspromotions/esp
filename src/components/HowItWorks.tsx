@@ -10,8 +10,8 @@ type Step = {
 const steps: Step[] = [
   {
     step: "01",
-    title: "Free enquiry",
-    body: "Send the form with your sport, level, and goals. Nothing to pay yet — the enquiry is free.",
+    title: "Send an enquiry",
+    body: "Send the form with your sport, level and goals.",
   },
   {
     step: "02",
@@ -21,7 +21,7 @@ const steps: Step[] = [
   {
     step: "03",
     title: "Pay the match fee",
-    body: "The enquiry is free. You pay only after we name a coach.",
+    body: "Only after a coach is named. That fee is for the introduction. The coach or club bills the training.",
     feeTable: true,
   },
   {

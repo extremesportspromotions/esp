@@ -38,6 +38,9 @@ export function BrandLogo() {
               className="mx-auto block h-auto w-full"
             />
             <h1 className="sr-only">Extreme Sports Promotions</h1>
+            <p className="mx-auto max-w-2xl px-2 pb-4 pt-1 text-sm leading-relaxed text-[#1C1917]/70 sm:text-base">
+              The guides, the map and the club finder are free to use. A match fee applies only if you ask us to find a coach, and only after a coach is named.
+            </p>
           </>
         ) : (
           <>
@@ -69,7 +72,7 @@ export function BrandPickLine() {
             href="/#enquire"
             className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Send a free enquiry
+            Send an enquiry
           </Link>
         </div>
         <p className="mx-auto mt-4 max-w-lg text-xs text-[#1C1917]/45 sm:text-sm">
@@ -77,7 +80,7 @@ export function BrandPickLine() {
           <Link href="/#find-a-club" className="text-[#1C1917]/70 underline-offset-2 hover:text-accent hover:underline">
             Find a club
           </Link>{" "}
-          is free to browse. Coach matching is separate.
+          on the map.
         </p>
       </div>
     </section>
