@@ -1,6 +1,6 @@
-/** Canonical public URL of the site. Change here (or via env) when a custom domain is bought. */
+/** Canonical public URL of the site (also set as NEXT_PUBLIC_SITE_URL in Vercel production). */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://esp-lemon.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.extremesportspromotions.com"
 ).replace(/\/$/, "");
 
 export const SITE_NAME = "Extreme Sports Promotions";

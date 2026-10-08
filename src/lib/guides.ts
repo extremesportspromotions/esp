@@ -69,6 +69,11 @@ function countWords(markdown: string): number {
   return text.split(/\s+/).filter(Boolean).length;
 }
 
+/** The one place read times are worked out. Every guide card, list and page uses this value. */
+export function readingMinutes(wordCount: number): number {
+  return Math.max(1, Math.round(wordCount / WORDS_PER_MINUTE));
+}
+
 function isGuideFile(name: string): boolean {
   return /\.mdx?$/.test(name) && !name.startsWith("_") && name.toLowerCase() !== "readme.md";
 }
@@ -126,7 +131,7 @@ function parseFile(file: string): RawGuide {
     heroPosition: customImage ? undefined : sportData?.imagePosition,
     featured: data.featured === true,
     draft: data.draft === true,
-    readingMinutes: Math.max(1, Math.round(wordCount / WORDS_PER_MINUTE)),
+    readingMinutes: readingMinutes(wordCount),
     wordCount,
     body: content,
   };

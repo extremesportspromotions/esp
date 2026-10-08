@@ -45,7 +45,7 @@ Guide pages link to `/?sport=<slug>#find-a-club` and `/?sport=<slug>#enquire`; t
 
 ## Custom domain
 
-The site is deployed on Vercel (`esp-lemon.vercel.app`). When Matthew buys a custom domain, point its DNS at the Vercel project — no domain purchase is required for the current live site.
+The site is deployed on Vercel at https://www.extremesportspromotions.com (`esp-lemon.vercel.app` still works as an alias). `NEXT_PUBLIC_SITE_URL` in Vercel production is set to the custom domain, and `src/lib/site.ts` falls back to it.
 
 ## Club map data
 

@@ -53,6 +53,7 @@ export default function Footer() {
             </Link>
           </nav>
         </div>
+        <p>We don&apos;t use advertising or tracking cookies.</p>
       </div>
     </footer>
   );
