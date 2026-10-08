@@ -12,7 +12,7 @@ const steps = [
   {
     step: "03",
     title: "Pay the match fee",
-    body: "Only after a named coach is found: taster £19, course £49, trip £99, party £79 or £129. Fee bands are on the form.",
+    body: "Only after a named coach is found: taster £19, course £49, trip £99, party or group for one sport on one date £79, several sports or venues £129. Fee bands are on the form.",
   },
   {
     step: "04",
