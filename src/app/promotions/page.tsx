@@ -111,6 +111,31 @@ export default function PromotionsPage() {
               We organise professional videographers. Several clubs share one shoot, so each pays a share. We&apos;ll
               quote each shoot up front.
             </p>
+            <p className="mt-6 mb-3.5 font-semibold text-white">Typical UK videographer rates (2026):</p>
+            <div className="overflow-x-auto rounded-[14px] border border-[#2a2a3a] bg-[#14141c]">
+              <table className="w-full border-collapse text-left text-white">
+                <thead>
+                  <tr className="border-b border-[#2a2a3a]">
+                    <th scope="col" className="px-5 py-3 font-semibold">Filming day rate</th>
+                    <th scope="col" className="px-5 py-3 font-semibold">Typical UK range</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-[#2a2a3a]">
+                    <td className="px-5 py-3">Mid-level</td>
+                    <td className="px-5 py-3">£400 to £750</td>
+                  </tr>
+                  <tr>
+                    <td className="px-5 py-3">Experienced</td>
+                    <td className="px-5 py-3">£750 to £1,400</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-6 mb-3.5 text-white">Editing a short episode: £250 to £700.</p>
+            <p className={p}>
+              Rates usually cover labour only. Kit and travel can be extra.
+            </p>
           </div>
         </section>
 
