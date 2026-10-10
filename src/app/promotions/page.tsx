@@ -150,6 +150,27 @@ export default function PromotionsPage() {
           </div>
         </section>
 
+        <section className={section}>
+          <div className={wrap}>
+            <h2 className={h2}>The 2028 season plan</h2>
+            <p className={p}>From 2028 we&apos;ll make at least 15 episodes a year across our sports.</p>
+            <div className={grid}>
+              <Card
+                heading="2027 is our groundwork year."
+                body="I'll visit and review clubs across the UK, meet coaches and learn how each venue runs. That way the 2028 episodes are properly planned, not rushed. Clubs can still make short videos with us now."
+              />
+              <Card
+                heading="One headquarters per sport."
+                body="Each sport gets one club or venue as its base. Coaches and owners meet there to plan episodes, agree challenges and set the calendar. One base keeps it simple and builds a stronger local network."
+              />
+              <Card
+                heading="Filmed in season."
+                body="Episodes are timed to each sport's natural season, when conditions and energy are at their best. That gives clubs and viewers a steady stream of content all year."
+              />
+            </div>
+          </div>
+        </section>
+
         <div className="px-6 py-16 text-center sm:py-[70px]">
           <h2 className={h2}>Ready to be in the next episode?</h2>
           <a
