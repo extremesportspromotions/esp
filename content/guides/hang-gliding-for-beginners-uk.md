@@ -43,6 +43,6 @@ Bring something to eat and drink. Training is usually a long way from a cafe.
 > [!SAFETY]
 > No medical examination is required, but you should be in good health, and you should ask your doctor if you suffer from epilepsy, fainting, giddiness, high blood pressure, a heart condition or diabetes.
 
-Our club map shows [some UK hang gliding clubs](https://www.extremesportspromotions.com/?sport=hang-gliding#find-a-club), and it is a starting point rather than a full list.
+Governing body: [British Hang Gliding and Paragliding Association (BHPA)](https://www.bhpa.co.uk). It sets the UK safety standards and training awards for hang gliding, so it's the official place to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=hang-gliding#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

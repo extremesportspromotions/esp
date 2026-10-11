@@ -24,6 +24,6 @@ The sports councils' list of recognised sporting activities names British Skydiv
 
 BASE is for experienced skydivers only. You'll need at least 200 skydives, including some from a hot air balloon, before a BASE course will even consider you.
 
-Our club map shows [some UK BASE jumping clubs](https://www.extremesportspromotions.com/?sport=base-jumping#find-a-club), and it is a starting point rather than a full list.
+There is no UK governing body for BASE jumping. [British Skydiving](https://britishskydiving.org) governs skydiving, which is the experience you need first, so it's the official place to start.
 
 The [club map](https://www.extremesportspromotions.com/?sport=base-jumping#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

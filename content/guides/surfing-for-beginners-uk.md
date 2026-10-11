@@ -31,6 +31,6 @@ A wetsuit is essential to keep you warm. It is generally made of neoprene, and i
 > [!SAFETY]
 > A rip current is a strong current that can take you quickly from shallow to deep water. If you are caught in one, keep hold of your board, and do not try to swim directly against the rip, or you will get exhausted.
 
-Our club map shows [some UK surfing clubs](https://www.extremesportspromotions.com/?sport=surfing#find-a-club), and it is a starting point rather than a full list.
+Governing body: [Surfing England](https://www.surfingengland.org). It sets the safety standards and training awards for surfing in England, so it's the official place to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=surfing#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

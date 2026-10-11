@@ -91,4 +91,6 @@ At Midlothian Snowsports Centre near Edinburgh, a two-hour adult ski taster for 
 
 The safety advice above applies to skiing too. Snowsport England says a helmet is important for safety, and that gloves and warm socks are essential for comfort and to prevent injury.
 
+Governing body: [Snowsport England](https://snowsportengland.org.uk). It sets the standards for skiing and snowboarding in England, so it's the official place to find out more. Instructor qualifications come from [BASI](https://basi.org.uk).
+
 The [club map](https://www.extremesportspromotions.com/?sport=snowboarding#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

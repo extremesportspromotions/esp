@@ -44,6 +44,6 @@ At Lee Valley VeloPark in east London, a 60-minute BMX Learn to Ride session is 
 
 British Cycling says full-face helmets are compulsory in BMX racing, and full-finger gloves are a must. Cover your arms and legs to protect your skin if you fall, and knee and elbow pads are recommended.
 
-Our club map shows [some UK skateboarding clubs](https://www.extremesportspromotions.com/?sport=skateboarding#find-a-club), and it is a starting point rather than a full list.
+Skateboarding: [Skateboard GB](https://skateboardgb.org) describes itself as the national governing body and runs the coaching course, so it's the place to find out more. BMX: [British Cycling](https://www.britishcycling.org.uk) sets the UK safety standards and training awards.
 
 The [club map](https://www.extremesportspromotions.com/?sport=skateboarding#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

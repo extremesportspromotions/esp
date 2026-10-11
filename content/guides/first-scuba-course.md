@@ -78,4 +78,6 @@ A good instructor will be happy to answer all of these and won't rush you.
 
 PADI and BSAC also list centres on their own sites.
 
+Governing body: [British Sub-Aqua Club (BSAC)](https://www.bsac.com). It sets the UK safety standards and training awards for scuba diving, so it's the official place to find out more. PADI and SSI run their own courses too.
+
 The [club map](https://www.extremesportspromotions.com/?sport=scuba-diving#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

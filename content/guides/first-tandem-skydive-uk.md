@@ -86,4 +86,6 @@ Every flyer completes an online waiver before arriving, and it includes your pre
 
 British Skydiving also lists every affiliated centre on its own site.
 
+Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
+
 The [club map](https://www.extremesportspromotions.com/?sport=skydiving#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

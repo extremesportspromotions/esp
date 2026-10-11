@@ -22,6 +22,6 @@ British Skydiving is the trading name of the British Parachute Association. To b
 
 The suit and the rig are chosen with the wingsuit coach. A little too loose is better than too tight, and the coach may refuse the jump if they are not happy with the equipment.
 
-Our club map shows [some UK wingsuit flying clubs](https://www.extremesportspromotions.com/?sport=wingsuit-flying#find-a-club), and it is a starting point rather than a full list.
+Governing body: [British Skydiving](https://britishskydiving.org). Wingsuit flying is a skydiving discipline, and British Skydiving sets its entry rules and grades, so it's the official place to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=wingsuit-flying#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

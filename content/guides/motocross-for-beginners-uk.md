@@ -33,6 +33,6 @@ The AMCA says you bring your own bike.
 > [!SAFETY]
 > A parent or legal guardian must go with a rider under 18, and stay for the whole time that rider is there. They must make sure a young rider's protective clothing fits.
 
-Our club map shows [some UK motocross clubs](https://www.extremesportspromotions.com/?sport=motocross#find-a-club), and it is a starting point rather than a full list.
+Governing body: [Auto-Cycle Union (ACU)](https://www.acu.org.uk). It sets the UK safety standards and licences for motocross, so it's the official place to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=motocross#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

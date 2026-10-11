@@ -46,6 +46,6 @@ At Lee Valley White Water Centre, a 90-minute white water rafting session is lis
 
 The National White Water Centre asks that rafters can swim and are physically fit, and says rafting can mean falling into cold water. You wear a wetsuit, a helmet and a buoyancy aid, and you have a full safety briefing before you go on the water. Both centres set a weight limit of 18 stone.
 
-Our club map shows [some UK kayaking clubs](https://www.extremesportspromotions.com/?sport=kayaking#find-a-club), and it is a starting point rather than a full list.
+Governing body: [Paddle UK](https://paddleuk.org.uk). It sets the safety standards and training awards for paddlesport in England, so it's the official place to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=kayaking#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

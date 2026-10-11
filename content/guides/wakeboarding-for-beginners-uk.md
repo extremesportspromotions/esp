@@ -28,6 +28,6 @@ Take swimming clothes, a towel and a change of clothes. BWSW says you will be pr
 > [!SAFETY]
 > On a site that BWSW accredits, you are given a safety briefing, and you have to wear a helmet and other protective equipment, with a warning that the protection is limited.
 
-Our club map shows [some UK wakeboarding clubs](https://www.extremesportspromotions.com/?sport=wakeboarding#find-a-club), and it is a starting point rather than a full list.
+Governing body: [British Water Ski and Wakeboard (BWSW)](https://www.bwsw.org.uk). It sets the UK safety standards and training awards for wakeboarding, so it's the official place to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=wakeboarding#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

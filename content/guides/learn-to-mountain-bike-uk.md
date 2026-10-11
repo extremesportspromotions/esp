@@ -47,7 +47,9 @@ Colours are a guide, not a promise, and not every UK venue uses the same words. 
 
 A qualified, insured coach keeps you safe while you learn. When ESP matches you, we check the coach's qualifications and insurance for you.
 
-The [club map](https://www.extremesportspromotions.com/?sport=mountain-biking#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).
-
 > [!SAFETY]
 > Off-road cycling carries inherent risk. Ride within your ability, and attempt a jump only if you are sure you can do it. On Forestry England trails, always wear a helmet and gloves. In an emergency, dial 999, then tell the forest centre.
+
+Governing body: [British Cycling](https://www.britishcycling.org.uk). It sets the UK safety standards and training awards for mountain biking, so it's the official place to find out more.
+
+The [club map](https://www.extremesportspromotions.com/?sport=mountain-biking#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

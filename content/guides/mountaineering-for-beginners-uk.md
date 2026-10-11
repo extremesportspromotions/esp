@@ -54,6 +54,6 @@ At Redpoint Bristol, a 90-minute adult taster session is listed at £18 for non-
 
 The BMC says climbing, hill walking and mountaineering involve a risk of personal injury or death. Warm up before you climb, and stop before you are worn out, because most injuries happen when people are tired. If you are unsure how a belay device works, ask the wall staff.
 
-Our club map shows [some UK mountaineering clubs](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club), and it is a starting point rather than a full list.
+Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

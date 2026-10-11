@@ -27,6 +27,6 @@ In UK waters you need a wetsuit for the time of year. You need a harness to spre
 > [!SAFETY]
 > A bar and kite have a safety system that releases the kite's power without letting the kite go, by easing all but one line or by letting the kite flag. If you are unsure about a session, do not go: ask a more experienced rider or, preferably, a local school or instructor.
 
-Our club map shows [some UK kiteboarding clubs](https://www.extremesportspromotions.com/?sport=kiteboarding#find-a-club), and it is a starting point rather than a full list.
+Governing body: [British Kitesports Association (BKSA)](https://britishkitesports.org). It sets the UK safety standards and training awards for kiteboarding, so it's the official place to find out more. Many schools also use IKO courses.
 
 The [club map](https://www.extremesportspromotions.com/?sport=kiteboarding#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

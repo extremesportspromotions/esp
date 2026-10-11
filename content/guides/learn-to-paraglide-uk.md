@@ -92,4 +92,6 @@ Getting your Club Pilot rating isn't the end of learning. You'll join a BHPA rec
 
 Start by finding a BHPA registered school on the BHPA website.
 
+Governing body: [British Hang Gliding and Paragliding Association (BHPA)](https://www.bhpa.co.uk). It sets the UK safety standards and training awards for paragliding, so it's the official place to find out more.
+
 The [club map](https://www.extremesportspromotions.com/?sport=paragliding#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).
