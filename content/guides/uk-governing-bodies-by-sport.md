@@ -29,7 +29,7 @@ For the training stages in each sport, see [UK qualifications by sport](https://
 
 - [British Sub-Aqua Club (BSAC)](https://www.bsac.com). The recognised UK governing body for sub-aqua diving.
 
-PADI and SSI are also widely used in the UK.
+[PADI](https://www.padi.com) and SSI are also widely used in the UK.
 
 ## [3. Paragliding](https://www.extremesportspromotions.com/guides/learn-to-paraglide-uk)
 
