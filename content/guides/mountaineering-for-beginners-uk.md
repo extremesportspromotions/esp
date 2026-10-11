@@ -1,58 +1,61 @@
 ---
-title: "How to start mountaineering, coasteering and rock climbing in the UK"
+title: "How to start mountaineering, coasteering and rock climbing"
 slug: mountaineering-for-beginners-uk
-description: "How to start mountaineering in the UK with a summer hill walk, and the kit a first day needs, plus a first go at coasteering and rock climbing."
+description: "Hill walking, coasteering and rock climbing in the UK: how to take your first steps safely and become a formidable wild traveller."
 sport: mountaineering
 category: Getting started
-author: ESP Editorial
+author: Matthew Thornton
 date: 2026-10-03
-updated: 2026-10-08
+updated: 2026-10-11
 heroAlt: "A person with a blue backpack, seen from behind, sitting on a grassy ridge above a cloud-filled valley"
 heroImage: "/sports/mountaineering.jpg"
 featured: false
 draft: false
 ---
 
-Hill walking is walking in the hills and mountains. The uplands can be hazardous, so you need a little knowledge and some basic equipment. A beginner practises navigation on low ground first, in summer, and does not start on a scramble or in winter. This guide also covers two related ways in: coasteering on the coast, and rock climbing, which most people now start indoors.
+There are many ways to explore Britain's mountains, hills and coastlines. Mountaineering, scrambling, hiking, rock climbing, camping and coasteering are all different skills. Learn each one properly, piece them together, and you'll become a formidable wild traveller.
 
-## A first session
+## Your first steps
 
-The British Mountaineering Council (BMC) is the national representative body for climbers, hill walkers, mountaineers and ski mountaineers in England and Wales.
+The British Mountaineering Council (BMC) represents climbers, hill walkers and mountaineers in England and Wales.
 
-There are many ways in. The BMC says the best way is the one that suits you. If you are a complete beginner, practise navigation on low ground first, then take on bigger walks as you get more confident. You can learn with a friend, a club member, a group leader or a training provider. You can hire a leader to take you, or a group, into the hills. The BMC has over 250 affiliated clubs in England and Wales, and a club is a way to learn some skills.
+If you're a complete beginner, practise navigating on low ground first, and then take on bigger hikes as your confidence grows. Going solo carries real risks. A fall, a slip or a simple twisted ankle can quickly become serious, especially if no one knows where you are. Our advice is simple: take it easy, ideally with a friend. If you can't, join a club or book a coach. It's the safest way to progress, and you'll meet people who love the same things you do.
 
-One taught course for people who are new to the hills is called Hill Skills. No previous experience is required, and the minimum age is 10. It takes two days, in hill and moorland areas across the UK and Ireland. The people who run it are experienced hill walkers. You plan a walk, learn what to take and how to pack, use a map and compass, and cover common hazards and what to do in an emergency.
-
-Scrambling sits between walking and climbing, and it needs some rock climbing, so it is a step on from hill walking. Winter hill walking needs extra skills that are not needed for the rest of the year. That is not where you start.
+In just a few days, a coach can teach you how to plan a hike, what kit you need, how to use a map and compass, how to spot common hazards and, most importantly, what to do in an emergency.
 
 ## What to take
 
-For a first day, take walking boots or shoes, a warm layer such as fleece or wool, and a waterproof outer layer. Avoid cotton and denim. They get wet easily, dry slowly, and are cold when wet. Also take a map and compass, a torch, a rucksack, food and drink, and a mobile phone.
+For your first day, wear walking boots and bring a warm layer (a fleece or wool jumper) and a waterproof jacket. Avoid cotton and denim. They soak up water, dry slowly and stay cold when wet.
 
-If you are just starting out, use what you have, as long as it keeps you safe, healthy and comfortable. On many lowland walks in good weather, most hill walkers will not need much specialist clothing or equipment. On the BMC's further list, items such as a whistle or spare gloves can be shared with friends or family, or you can own them.
+Your bag should hold food, a drink, a map, a compass, a torch and a charged mobile phone. That's the minimum for a day walk. If you're training, your coach will tell you what else to bring.
 
-> [!SAFETY]
-> Mountain weather can change very quickly, and a general weather app often does not account for conditions in the mountains. Use a forecast made for hill and mountain users, such as the Met Office, and turn around if you are tired, the weather is worse than you expected, or you are running out of time. In an accident, Mountain Rescue England and Wales says to dial 999 or 112, ask for the police and then mountain rescue, give the details you have prepared, and do not change your position until the rescue team contacts you.
+On low ground in good weather you won't need much. As your skills grow, so will your kit.
 
 ## Coasteering
 
-Coasteering is moving along the rocky edge of the sea, where the land meets the water. You swim, scramble over rocks, traverse (move sideways along the rock) and jump into the sea. It is done with a coasteering guide. You wear a wetsuit, a buoyancy aid, a helmet and closed-toe shoes that will not come off. The National Coasteering Charter (NCC) represents and advises coasteering providers across the UK.
+Coasteering is scrambling along the rocky edge of the sea. You climb over sharp rock, then leap from ledges into a wild ocean while the waves crash around you. Only ever do it with a qualified guide or activity provider.
 
-Most people first try it with an adventure activity provider. The NCC says this is the best way to learn the basic skills safely. You cannot coasteer anywhere. Some coastline, such as Army ranges, is off limits, and some places have restrictions at certain times of year, for example while birds are nesting. If you are new, the NCC suggests going in the warmest part of the year, roughly May to October. Coasteering began in Pembrokeshire, in west Wales, in the 1980s.
+Your guide will give you a wetsuit, buoyancy aid and helmet. Bring closed-toe shoes that won't come off.
 
-At TYF in St Davids, a half-day Discovery Coasteering session is listed at £65 per person, with all specialist kit provided (October 2026). At Preseli Venture, near Mathry, a half-day coasteering session is listed at £55 (October 2026). Both list a minimum age of 8 for these sessions. Preseli Venture says you do not need to be able to swim, but you need to be happy in deep water wearing a flotation device.
+The National Coasteering Charter (NCC) sets standards for coasteering providers across the UK. It recommends learning with an adventure activity provider. You can't coasteer just anywhere, because location, season, weather and sea conditions all limit where it's safe. Your guide picks the stretch of coast on the day.
 
-The guide picks the stretch of coast on the day, based on the tide, the swell and the weather. Do not try jumping into the sea from a height on your own. The RNLI warns that the water is not always as deep as it looks, the tide changes, rocks can be hidden and cold water shock can affect anyone. In an emergency at the coast, call 999 or 112 and ask for the Coastguard.
+The season runs from May to October. A half-day session costs around £55 to £65, and children can usually join from age 8.
+
+The RNLI warns never to jump into the sea on your own. The water is often shallower than it looks, tides change fast, rocks hide under the surface, and cold water can shock your body. In an emergency, call 999 or 112 and ask for the Coastguard.
 
 ## Rock climbing
 
-Most people now take their first climbing steps on an indoor climbing wall rather than on real rock. Most walls have two kinds of climbing. Bouldering is short climbs, called problems, no more than a few metres off the ground, over thick padding and with no rope. Top-roping is a taller climb on a rope that runs through an anchor at the top. A partner on the ground, called the belayer, holds the other end through a belay device and can stop you if you slip.
+Most people take their first climbing steps on an indoor wall, not real rock. Walls offer two types of climbing:
 
-The BMC says there are few towns in the UK without a climbing wall. Most large walls run introductory taster sessions with all the equipment provided, and the BMC calls these by far the best way to start. Many walls will not let a complete beginner climb until they have done one. On your first visit you fill in a registration form. Be honest about what you can do, and if you do not know how to belay, say so.
+- **Bouldering.** Short climbs, called problems, a few metres off the ground, with a thick mat to land on.
+- **Top-roping.** Taller climbs on a rope that runs through an anchor at the top. Your partner on the ground, the belayer, holds the rope through a belay device and catches you if you slip.
 
-At Redpoint Bristol, a 90-minute adult taster session is listed at £18 for non-members, with climbing shoe hire included (October 2026).
+An indoor wall is the best place to learn. Start with an intro session with a coach, so you learn to climb safely and keep your partner safe too. A taster usually lasts 90 minutes and costs around £20 to £30.
 
-The BMC says climbing, hill walking and mountaineering involve a risk of personal injury or death. Warm up before you climb, and stop before you are worn out, because most injuries happen when people are tired. If you are unsure how a belay device works, ask the wall staff.
+Once you're comfortable indoors, you can head outside, from gentle first climbs to some of the sheerest, most intense routes you can imagine.
+
+> [!SAFETY]
+> Mountain weather can change very quickly, and a general weather app often does not account for conditions in the mountains. Use a forecast made for hill and mountain users, such as the Met Office, and turn around if you are tired, the weather is worse than you expected, or you are running out of time. In an accident, Mountain Rescue England and Wales says to dial 999 or 112, ask for the police and then mountain rescue, give the details you have prepared, and do not change your position until the rescue team contacts you.
 
 Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
