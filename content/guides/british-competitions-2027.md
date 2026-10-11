@@ -68,6 +68,8 @@ For who runs each sport, see [UK governing bodies by sport](https://www.extremes
 
 Calendar: [BMC national competitions](https://www.thebmc.co.uk/en/national-competition-calendar)
 
+Contact: [events@thebmc.co.uk](mailto:events@thebmc.co.uk) or [office@thebmc.co.uk](mailto:office@thebmc.co.uk)
+
 - **16–17 January.** British Boulder Championships. Highball, Norwich.
 - **30–31 January.** British Youth Boulder Championships. Rockstar Climbing Centre, Swindon.
 - **20–21 February.** British Lead Championships. EICA Ratho, Edinburgh.
@@ -83,6 +85,8 @@ Calendar: [BMC national competitions](https://www.thebmc.co.uk/en/national-compe
 ### [Motocross](https://www.extremesportspromotions.com/guides/motocross-for-beginners-uk)
 
 Calendar: [ACU British Motocross Championship (MXGB)](https://mxgb.co.uk/events/)
+
+Contact: [moto.cross@acu.org.uk](mailto:moto.cross@acu.org.uk) or [admin@acu.org.uk](mailto:admin@acu.org.uk)
 
 Provisional dates. Venues TBC. Dates may move if the world championship calendar changes.
 
@@ -100,12 +104,16 @@ Provisional dates. Venues TBC. Dates may move if the world championship calendar
 
 Calendar: [British Cycling events](https://www.britishcycling.org.uk/events)
 
+Contact: [events@britishcycling.org.uk](mailto:events@britishcycling.org.uk) or [info@britishcycling.org.uk](mailto:info@britishcycling.org.uk)
+
 - **Spring to autumn, dates TBC.** National Series for cross-country and downhill.
 - **Summer, dates TBC.** National Championships, including BMX Race. In 2026 the BMX British Championships ran in late August.
 
 ### [Kayaking and rafting](https://www.extremesportspromotions.com/guides/kayaking-for-beginners-uk)
 
 Calendar: [Paddle UK](https://paddleuk.org.uk) and the [canoe slalom calendar](https://www.canoeslalom.co.uk/slalom-2027-overview/)
+
+Contact: [hello@paddleuk.org.uk](mailto:hello@paddleuk.org.uk)
 
 - **20–22 August (provisional).** Canoe Slalom World Cup (slalom and kayak cross). Lee Valley White Water Centre, London.
 - **2027 season, dates TBC.** UK slalom, kayak cross and wild water races.
@@ -114,12 +122,16 @@ Calendar: [Paddle UK](https://paddleuk.org.uk) and the [canoe slalom calendar](h
 
 Calendar: [BHPA competitions and events](https://www.bhpa.co.uk/events/)
 
+Contact: [office@bhpa.co.uk](mailto:office@bhpa.co.uk)
+
 - **6–9 May.** [British Paragliding Cup](https://www.bpcup.co.uk/), Dales round. Yorkshire Dales. For BHPA pilots rated Pilot and above.
 - **Spring to autumn, dates TBC.** Other BHPA competitions, including accuracy and cross-country events.
 
 ### [Skydiving](https://www.extremesportspromotions.com/guides/first-tandem-skydive-uk)
 
 Calendar: [British Skydiving competitions](https://britishskydiving.org/competitions/)
+
+Contact: [info@britishskydiving.org](mailto:info@britishskydiving.org)
 
 - **Summer, dates TBC.** British National Championships. The host drop zone isn't announced yet.
 - **Season, dates TBC.** UK Skydiving League and Grand Prix meets at drop zones around the UK.
@@ -128,11 +140,15 @@ Calendar: [British Skydiving competitions](https://britishskydiving.org/competit
 
 Calendar: [BKSA events](https://britishkitesports.org/events/)
 
+Contact: [info@britishkitesports.org](mailto:info@britishkitesports.org)
+
 - **Spring to autumn, dates TBC.** British Championship Series: big air, foiling and wave. The 2026 series ran April to October at coastal venues.
 
 ### [Wakeboarding](https://www.extremesportspromotions.com/guides/wakeboarding-for-beginners-uk)
 
 Calendar: [BWSW events and results](https://www.bwsw.org.uk/events-and-results/)
+
+Contact: [info@bwsf.co.uk](mailto:info@bwsf.co.uk)
 
 - **Summer, dates TBC.** Wakeboard Nationals. In 2026 they ran in July at Grendon Lakes, Northamptonshire.
 
@@ -140,16 +156,22 @@ Calendar: [BWSW events and results](https://www.bwsw.org.uk/events-and-results/)
 
 Calendar: [Surfing England national championships](https://www.surfingengland.org/calendar/category/national-championships/)
 
+Contact: [info@surfingengland.org](mailto:info@surfingengland.org)
+
 - **Dates TBC.** English National Surfing Championships. In 2026 the shortboard final ran in late October at The Wave, Bristol.
 
 ### [Skateboarding](https://www.extremesportspromotions.com/guides/skateboarding-for-beginners-uk)
 
 Calendar: [Skateboard GB national championships](https://skateboardgb.org/national-championships-2026/)
 
+Contact: [info@skateboardgb.org](mailto:info@skateboardgb.org)
+
 - **Summer, dates TBC.** National Park Championships. In 2026 they ran in July at Concrete Waves, Newquay.
 - **Autumn, dates TBC.** National Street Championships. In 2026 they ran in September at BaySixty6, London.
 
 ### [Snowboarding and skiing](https://www.extremesportspromotions.com/guides/beginners-guide-to-snowboarding-uk)
+
+Contact: [info@snowsportengland.org.uk](mailto:info@snowsportengland.org.uk) (England) or [info@snowsportscotland.org](mailto:info@snowsportscotland.org) (Scotland)
 
 - **14–19 March.** [The BRITS](https://www.britssnow.com/), the British Snowboard and Freeski Championships. Held abroad, in Mayrhofen, Austria.
 - **Dates TBC.** UK indoor, dry slope and Scottish events. See [Snowsport England](https://snowsportengland.org.uk) and Snowsport Scotland.
