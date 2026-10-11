@@ -152,6 +152,27 @@ export default function PromotionsPage() {
 
         <section className={section}>
           <div className={wrap}>
+            <h2 className={h2}>Lessons from your coaches</h2>
+            <p className={p}>When we visit your club, we&apos;d like to film your coaches showing how it&apos;s done.</p>
+            <div className={grid}>
+              <Card
+                heading="Filmed at your club."
+                body="Your coaches show key skills step by step, in short clips we film on the day."
+              />
+              <Card
+                heading="A written lesson."
+                body="Every guide we publish is a detailed written lesson, so students know what to expect."
+              />
+              <Card
+                heading="Then the video."
+                body="Each lesson links to the matching video, so students can read it, then watch it done properly."
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className={section}>
+          <div className={wrap}>
             <h2 className={h2}>The 2028 season plan</h2>
             <p className={p}>From 2028 we&apos;ll make at least 15 episodes a year across our sports.</p>
             <div className={grid}>
