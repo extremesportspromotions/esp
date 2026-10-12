@@ -66,7 +66,7 @@ For who runs each sport, see [UK governing bodies by sport](https://www.extremes
 
 ### [Climbing](https://www.extremesportspromotions.com/guides/mountaineering-for-beginners-uk)
 
-Calendar: [BMC national competitions](https://www.thebmc.co.uk/en/national-competition-calendar)
+**Enter and find out more:** [BMC national competition calendar](https://www.thebmc.co.uk/en/national-competition-calendar) · [ClimbScotland competitions](https://www.climbscotland.net/competitions/)
 
 Contact: [events@thebmc.co.uk](mailto:events@thebmc.co.uk) or [office@thebmc.co.uk](mailto:office@thebmc.co.uk)
 
@@ -88,7 +88,7 @@ Contact: [events@thebmc.co.uk](mailto:events@thebmc.co.uk) or [office@thebmc.co.
 
 ### [Motocross](https://www.extremesportspromotions.com/guides/motocross-for-beginners-uk)
 
-Calendar: [ACU British Motocross Championship (MXGB)](https://mxgb.co.uk/events/)
+**Enter and find out more:** [ACU British Motocross Championship (MXGB)](https://mxgb.co.uk/events/)
 
 Contact: [moto.cross@acu.org.uk](mailto:moto.cross@acu.org.uk) or [admin@acu.org.uk](mailto:admin@acu.org.uk)
 
@@ -110,7 +110,7 @@ Provisional dates. Venues TBC. Dates may move if the world championship calendar
 
 ### [Mountain biking and BMX](https://www.extremesportspromotions.com/guides/learn-to-mountain-bike-uk)
 
-Calendar: [British Cycling events](https://www.britishcycling.org.uk/events)
+**Enter and find out more:** [British Cycling events](https://www.britishcycling.org.uk/events)
 
 Contact: [events@britishcycling.org.uk](mailto:events@britishcycling.org.uk) or [info@britishcycling.org.uk](mailto:info@britishcycling.org.uk)
 
@@ -123,7 +123,7 @@ Contact: [events@britishcycling.org.uk](mailto:events@britishcycling.org.uk) or 
 
 ### [Kayaking and rafting](https://www.extremesportspromotions.com/guides/kayaking-for-beginners-uk)
 
-Calendar: [Paddle UK](https://paddleuk.org.uk) and the [canoe slalom calendar](https://www.canoeslalom.co.uk/slalom-2027-overview/)
+**Enter and find out more:** [Paddle UK](https://paddleuk.org.uk/) · [Canoe slalom 2027 calendar](https://www.canoeslalom.co.uk/slalom-2027-overview/) · [Canoe Slalom (Paddle UK)](https://www.canoeslalom.co.uk/)
 
 Contact: [hello@paddleuk.org.uk](mailto:hello@paddleuk.org.uk)
 
@@ -136,7 +136,7 @@ Contact: [hello@paddleuk.org.uk](mailto:hello@paddleuk.org.uk)
 
 ### [Paragliding](https://www.extremesportspromotions.com/guides/learn-to-paraglide-uk) and [hang gliding](https://www.extremesportspromotions.com/guides/hang-gliding-for-beginners-uk)
 
-Calendar: [BHPA competitions and events](https://www.bhpa.co.uk/events/)
+**Enter and find out more:** [BHPA competitions and events](https://www.bhpa.co.uk/events/) · [British Paragliding Cup](https://www.bpcup.co.uk/)
 
 Contact: [office@bhpa.co.uk](mailto:office@bhpa.co.uk)
 
@@ -149,7 +149,7 @@ Contact: [office@bhpa.co.uk](mailto:office@bhpa.co.uk)
 
 ### [Skydiving](https://www.extremesportspromotions.com/guides/first-tandem-skydive-uk)
 
-Calendar: [British Skydiving competitions](https://britishskydiving.org/competitions/)
+**Enter and find out more:** [British Skydiving competitions](https://britishskydiving.org/competitions/)
 
 Contact: [info@britishskydiving.org](mailto:info@britishskydiving.org)
 
@@ -162,7 +162,7 @@ Contact: [info@britishskydiving.org](mailto:info@britishskydiving.org)
 
 ### [Kiteboarding](https://www.extremesportspromotions.com/guides/kiteboarding-for-beginners-uk)
 
-Calendar: [BKSA events](https://britishkitesports.org/events/)
+**Enter and find out more:** [British Kitesports Association (BKSA) events](https://britishkitesports.org/events/)
 
 Contact: [info@britishkitesports.org](mailto:info@britishkitesports.org)
 
@@ -174,7 +174,7 @@ Contact: [info@britishkitesports.org](mailto:info@britishkitesports.org)
 
 ### [Wakeboarding](https://www.extremesportspromotions.com/guides/wakeboarding-for-beginners-uk)
 
-Calendar: [BWSW events and results](https://www.bwsw.org.uk/events-and-results/)
+**Enter and find out more:** [British Water Ski & Wakeboard (BWSW) events and results](https://www.bwsw.org.uk/events-and-results/)
 
 Contact: [info@bwsf.co.uk](mailto:info@bwsf.co.uk)
 
@@ -186,7 +186,7 @@ Contact: [info@bwsf.co.uk](mailto:info@bwsf.co.uk)
 
 ### [Surfing](https://www.extremesportspromotions.com/guides/surfing-for-beginners-uk)
 
-Calendar: [Surfing England national championships](https://www.surfingengland.org/calendar/category/national-championships/)
+**Enter and find out more:** [Surfing England national championships](https://www.surfingengland.org/calendar/category/national-championships/) · [Surfing England](https://www.surfingengland.org/)
 
 Contact: [info@surfingengland.org](mailto:info@surfingengland.org)
 
@@ -198,7 +198,7 @@ Contact: [info@surfingengland.org](mailto:info@surfingengland.org)
 
 ### [Skateboarding](https://www.extremesportspromotions.com/guides/skateboarding-for-beginners-uk)
 
-Calendar: [Skateboard GB national championships](https://skateboardgb.org/national-championships-2026/)
+**Enter and find out more:** [Skateboard GB national championships](https://skateboardgb.org/national-championships-2026/) · [Skateboard GB](https://skateboardgb.org/)
 
 Contact: [info@skateboardgb.org](mailto:info@skateboardgb.org)
 
@@ -211,10 +211,12 @@ Contact: [info@skateboardgb.org](mailto:info@skateboardgb.org)
 
 ### [Snowboarding and skiing](https://www.extremesportspromotions.com/guides/beginners-guide-to-snowboarding-uk)
 
+**Enter and find out more:** [The BRITS](https://www.britssnow.com/) · [Snowsport England](https://snowsportengland.org.uk) · [Snowsport Scotland](https://www.snowsportscotland.org/)
+
 Contact: [info@snowsportengland.org.uk](mailto:info@snowsportengland.org.uk) (England) or [info@snowsportscotland.org](mailto:info@snowsportscotland.org) (Scotland)
 
 - **14–19 March.** [The BRITS](https://www.britssnow.com/), the British Snowboard and Freeski Championships. Held abroad, in Mayrhofen, Austria.
-- **Dates TBC.** UK indoor, dry slope and Scottish events. See [Snowsport England](https://snowsportengland.org.uk) and Snowsport Scotland.
+- **Dates TBC.** UK indoor, dry slope and Scottish events. See [Snowsport England](https://snowsportengland.org.uk) and [Snowsport Scotland](https://www.snowsportscotland.org/).
 
 **To enter:** At the BRITS, banked slalom is open to all ages and abilities. The FIS big air and slopestyle events are open to British nationals and anyone with a current FIS licence. Registration usually opens in February.
 
