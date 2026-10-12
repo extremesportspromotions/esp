@@ -82,6 +82,10 @@ Contact: [events@thebmc.co.uk](mailto:events@thebmc.co.uk) or [office@thebmc.co.
 - **3–4 July.** BMC Youth Climbing Festival. Beacon Climbing Centre, North Wales.
 - **2027, date TBC.** British Ice Climbing Championships.
 
+**To enter:** You need to be a BMC member (youth events also accept Mountaineering Scotland or Mountaineering Ireland members). Book online before entries close. Places are limited at some events.
+
+**To win:** In bouldering and lead, the most problems topped or the highest hold reached wins, through qualification, semi-final and final. In speed, the fastest time up the wall wins.
+
 ### [Motocross](https://www.extremesportspromotions.com/guides/motocross-for-beginners-uk)
 
 Calendar: [ACU British Motocross Championship (MXGB)](https://mxgb.co.uk/events/)
@@ -100,6 +104,10 @@ Provisional dates. Venues TBC. Dates may move if the world championship calendar
 - **19 September.** Round 8.
 - **26 September.** Reserve date.
 
+**To enter:** You need an ACU competition licence and an MXGB registration for the season. Classes are MX1, MX2 (with an under-21 title) and 125cc.
+
+**To win:** Each round has timed qualifying, then two races, called motos. Points from every moto add up over the season, so steady finishes matter as much as outright speed.
+
 ### [Mountain biking and BMX](https://www.extremesportspromotions.com/guides/learn-to-mountain-bike-uk)
 
 Calendar: [British Cycling events](https://www.britishcycling.org.uk/events)
@@ -108,6 +116,10 @@ Contact: [events@britishcycling.org.uk](mailto:events@britishcycling.org.uk) or 
 
 - **Spring to autumn, dates TBC.** National Series for cross-country and downhill.
 - **Summer, dates TBC.** National Championships, including BMX Race. In 2026 the BMX British Championships ran in late August.
+
+**To enter:** You need a British Cycling race licence. For the National Championships you also need Silver or Gold membership and UK citizenship, and your licence must show GBR and be issued at least 28 days before. BMX Championship places have gone first to the top-ranked riders in the National Series.
+
+**To win:** Series titles go to the most points over the rounds. A championship goes to the fastest rider on the day.
 
 ### [Kayaking and rafting](https://www.extremesportspromotions.com/guides/kayaking-for-beginners-uk)
 
@@ -118,6 +130,10 @@ Contact: [hello@paddleuk.org.uk](mailto:hello@paddleuk.org.uk)
 - **20–22 August (provisional).** Canoe Slalom World Cup (slalom and kayak cross). Lee Valley White Water Centre, London.
 - **2027 season, dates TBC.** UK slalom, kayak cross and wild water races.
 
+**To enter:** You need Paddle UK membership with competition rights. From 2027, UK slalom races are graded by tier, and Green and Taster tier races are for novices. World Cup places go to paddlers picked through GB team selection races.
+
+**To win:** In slalom, the fastest run wins. Touching a gate adds 2 seconds, and missing one adds 50.
+
 ### [Paragliding](https://www.extremesportspromotions.com/guides/learn-to-paraglide-uk) and [hang gliding](https://www.extremesportspromotions.com/guides/hang-gliding-for-beginners-uk)
 
 Calendar: [BHPA competitions and events](https://www.bhpa.co.uk/events/)
@@ -126,6 +142,10 @@ Contact: [office@bhpa.co.uk](mailto:office@bhpa.co.uk)
 
 - **6–9 May.** [British Paragliding Cup](https://www.bpcup.co.uk/), Dales round. Yorkshire Dales. For BHPA pilots rated Pilot and above.
 - **Spring to autumn, dates TBC.** Other BHPA competitions, including accuracy and cross-country events.
+
+**To enter:** For the British Paragliding Cup you need BHPA membership, a Pilot rating or higher (Club Pilot isn't enough), and an EN A, B or C glider. Each event sets its own rules.
+
+**To win:** The organisers set a cross-country task each day. Points come from distance and speed to goal, and the most points over the event wins.
 
 ### [Skydiving](https://www.extremesportspromotions.com/guides/first-tandem-skydive-uk)
 
@@ -136,6 +156,10 @@ Contact: [info@britishskydiving.org](mailto:info@britishskydiving.org)
 - **Summer, dates TBC.** British National Championships. The host drop zone isn't announced yet.
 - **Season, dates TBC.** UK Skydiving League and Grand Prix meets at drop zones around the UK.
 
+**To enter:** You need British Skydiving membership, a current medical declaration and your logbook. Licence and jump rules differ by discipline. In 2026, speed skydiving needed a C Licence, 200 jumps and 20 jumps in the last 3 months, and canopy piloting needed a D Licence and CT4.
+
+**To win:** Judges score each round, or the result is measured by time or accuracy. The best total across the rounds wins.
+
 ### [Kiteboarding](https://www.extremesportspromotions.com/guides/kiteboarding-for-beginners-uk)
 
 Calendar: [BKSA events](https://britishkitesports.org/events/)
@@ -143,6 +167,10 @@ Calendar: [BKSA events](https://britishkitesports.org/events/)
 Contact: [info@britishkitesports.org](mailto:info@britishkitesports.org)
 
 - **Spring to autumn, dates TBC.** British Championship Series: big air, foiling and wave. The 2026 series ran April to October at coastal venues.
+
+**To enter:** You need BKSA membership. Register online by 7pm the night before, because there are no entries on the day. Big air has Open and Amateur categories.
+
+**To win:** Judges score each ride in heats. The best scores move on, up to the final.
 
 ### [Wakeboarding](https://www.extremesportspromotions.com/guides/wakeboarding-for-beginners-uk)
 
@@ -152,6 +180,10 @@ Contact: [info@bwsf.co.uk](mailto:info@bwsf.co.uk)
 
 - **Summer, dates TBC.** Wakeboard Nationals. In 2026 they ran in July at Grendon Lakes, Northamptonshire.
 
+**To enter:** You need BWSW membership, a BWSW competition licence and an IWWF EMS licence (the international entry system). In 2026, entry was open to UK residents, with divisions by age and level.
+
+**To win:** Judges score each run on its tricks. The top scores go through to the final.
+
 ### [Surfing](https://www.extremesportspromotions.com/guides/surfing-for-beginners-uk)
 
 Calendar: [Surfing England national championships](https://www.surfingengland.org/calendar/category/national-championships/)
@@ -159,6 +191,10 @@ Calendar: [Surfing England national championships](https://www.surfingengland.or
 Contact: [info@surfingengland.org](mailto:info@surfingengland.org)
 
 - **Dates TBC.** English National Surfing Championships. In 2026 the shortboard final ran in late October at The Wave, Bristol.
+
+**To enter:** You need Surfing England membership. In 2026, the under-12 and under-14 titles were by qualification only, through Junior Surf Series results or a wildcard application.
+
+**To win:** Judges score each wave you ride. Your best waves count, and the highest scorers go through each heat to the final.
 
 ### [Skateboarding](https://www.extremesportspromotions.com/guides/skateboarding-for-beginners-uk)
 
@@ -169,12 +205,20 @@ Contact: [info@skateboardgb.org](mailto:info@skateboardgb.org)
 - **Summer, dates TBC.** National Park Championships. In 2026 they ran in July at Concrete Waves, Newquay.
 - **Autumn, dates TBC.** National Street Championships. In 2026 they ran in September at BaySixty6, London.
 
+**To enter:** You need Skateboard GB skateboarder membership and an application before entries close. In 2026, Park applications opened in May and Street applications in August.
+
+**To win:** Judges score your runs. The highest score in the final wins.
+
 ### [Snowboarding and skiing](https://www.extremesportspromotions.com/guides/beginners-guide-to-snowboarding-uk)
 
 Contact: [info@snowsportengland.org.uk](mailto:info@snowsportengland.org.uk) (England) or [info@snowsportscotland.org](mailto:info@snowsportscotland.org) (Scotland)
 
 - **14–19 March.** [The BRITS](https://www.britssnow.com/), the British Snowboard and Freeski Championships. Held abroad, in Mayrhofen, Austria.
 - **Dates TBC.** UK indoor, dry slope and Scottish events. See [Snowsport England](https://snowsportengland.org.uk) and Snowsport Scotland.
+
+**To enter:** At the BRITS, banked slalom is open to all ages and abilities. The FIS big air and slopestyle events are open to British nationals and anyone with a current FIS licence. Registration usually opens in February.
+
+**To win:** In banked slalom, the fastest time wins. In big air and slopestyle, the judges' highest score wins.
 
 ## Before you go
 
