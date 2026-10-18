@@ -31,7 +31,7 @@ A thousand jumps. That's a thousand exits, a thousand openings and a thousand la
 You need at least a D Licence and ten hours of freefall to become an Accelerated Freefall Instructor. Read more in [coaching and instructor ratings](https://www.extremesportspromotions.com/guides/skydiving-coach-and-instructor-ratings-uk).
 
 > [!SAFETY]
-> Experience is not immunity. Keep doing the same careful kit checks and canopy planning you did on jump one.
+> Experience is not immunity. Keep doing the same careful kit checks and canopy planning you did on jump one. In an emergency, call 999.
 
 Source: [Training & Progression](https://britishskydiving.org/training-progression/) and [Be an Instructor](https://britishskydiving.org/be-an-instructor/), British Skydiving, checked October 2026.
 

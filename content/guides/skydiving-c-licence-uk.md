@@ -37,7 +37,7 @@ Two hundred jumps. You've got the skills, and now the sport starts asking you to
 - Start on the instructor path: Category System Basic Instructor, then Category System Instructor. Tandem Instructor needs 800 jumps and 8 hours of freefall. See [coaching and instructor ratings](https://www.extremesportspromotions.com/guides/skydiving-coach-and-instructor-ratings-uk).
 
 > [!SAFETY]
-> A camera is a distraction. Only fly one when your Chief Instructor approves it.
+> A camera is a distraction. Only fly one when your Chief Instructor approves it. In an emergency, call 999.
 
 Source: [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
 

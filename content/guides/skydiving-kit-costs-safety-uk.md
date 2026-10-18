@@ -37,7 +37,7 @@ British Skydiving Full Membership is £121.17 for access until 31 March 2027.
 Centres provide student kit. When you're ready to buy, British Skydiving says to get advice from your Chief Instructor and check the canopy size chart, Form 330i. Cameras come later, at C Licence, with your Chief Instructor's approval.
 
 > [!SAFETY]
-> Never jump a canopy smaller than the size chart allows for your experience.
+> Never jump a canopy smaller than the size chart allows for your experience. In an emergency, call 999.
 
 Source: [Accelerated Free Fall](https://britishskydiving.org/accelerated-free-fall/), [Full Member](https://britishskydiving.org/full-member/), [Training & Progression](https://britishskydiving.org/training-progression/) and [My First Jump](https://britishskydiving.org/my-first-jump/), British Skydiving, checked October 2026.
 

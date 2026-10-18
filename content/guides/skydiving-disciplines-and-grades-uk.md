@@ -35,7 +35,7 @@ This is where skydiving gets playful. British Skydiving says many new skydivers 
 Most centres have coaches who can introduce you to these disciplines. British Skydiving also runs development events for non-seniors.
 
 > [!SAFETY]
-> Every discipline has its own break-off and separation rules. Learn them from a coach before you try it with friends.
+> Every discipline has its own break-off and separation rules. Learn them from a coach before you try it with friends. In an emergency, call 999.
 
 Source: [Disciplines](https://britishskydiving.org/disciplines/), [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
 

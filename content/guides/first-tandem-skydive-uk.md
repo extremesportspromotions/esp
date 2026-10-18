@@ -51,7 +51,7 @@ Next comes your briefing. British Skydiving says it covers safety procedures, eq
 Then you may have to wait. Skydiving is very weather-dependent: centres must operate within strict British Skydiving limits on cloud and wind, and if conditions aren't suitable you'll be offered another date. Bring food, water and something to pass the time.
 
 > [!SAFETY]
-> Be completely honest on your medical form. You must tell the instructors if you've ever partly or fully dislocated a shoulder; it doesn't automatically stop you jumping, but it lets your instructor help reduce the risk of it happening again. Colds or sore throats can make you temporarily unfit to jump, and anyone believed to be under the influence of alcohol or drugs won't be allowed to jump. Follow every instruction in your briefing, and ask about anything that's unclear before you board.
+> Be completely honest on your medical form. You must tell the instructors if you've ever partly or fully dislocated a shoulder; it doesn't automatically stop you jumping, but it lets your instructor help reduce the risk of it happening again. Colds or sore throats can make you temporarily unfit to jump, and anyone believed to be under the influence of alcohol or drugs won't be allowed to jump. Follow every instruction in your briefing, and ask about anything that's unclear before you board. In an emergency, call 999.
 
 ## The jump itself
 

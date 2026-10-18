@@ -34,7 +34,7 @@ You can act as jump master, check equipment on the flight line and make more cho
 Thinking of buying your own rig? British Skydiving says to get advice from your Chief Instructor and check the canopy size chart, Form 330i, before you buy.
 
 > [!SAFETY]
-> More freedom means more decisions. A canopy that's too small for your experience is a fast way to get hurt.
+> More freedom means more decisions. A canopy that's too small for your experience is a fast way to get hurt. In an emergency, call 999.
 
 Source: [Training & Progression](https://britishskydiving.org/training-progression/), [Disciplines](https://britishskydiving.org/disciplines/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
 

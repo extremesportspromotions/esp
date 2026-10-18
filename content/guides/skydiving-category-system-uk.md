@@ -29,7 +29,7 @@ The Category System takes you from student to Category 8 in eight levels. Early 
 It suits you if you'd rather pay as you go than buy a whole course at once.
 
 > [!SAFETY]
-> Your instructor clears you for each category. If they ask you to repeat a jump, it's because you're not ready yet, and that's the system keeping you safe.
+> Your instructor clears you for each category. If they ask you to repeat a jump, it's because you're not ready yet, and that's the system keeping you safe. In an emergency, call 999.
 
 Source: [Static Line](https://britishskydiving.org/static-line/) and [My First Jump](https://britishskydiving.org/my-first-jump/), British Skydiving, checked October 2026.
 

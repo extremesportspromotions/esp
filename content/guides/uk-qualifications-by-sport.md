@@ -225,7 +225,7 @@ British Skydiving does not cover BASE jumping. There is no official UK beginner 
 
 ### Typical progression (experience-based)
 
-- Become a competent skydiver first. Courses commonly ask for at least 200 skydives, strong canopy skills and often some balloon jumps.
+- Become a competent skydiver first. BASE is for experienced skydivers only. No official UK source sets a minimum number of skydives, so ask any course provider abroad for its entry rules in writing.
 - Complete a recognised First Jump Course (usually abroad).
 - Progress slowly with experienced mentors. Kit and sites differ from skydiving.
 

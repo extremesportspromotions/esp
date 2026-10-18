@@ -22,7 +22,7 @@ The sports councils' list of recognised sporting activities names British Skydiv
 
 ## Before you can start
 
-BASE is for experienced skydivers only. You'll need at least 200 skydives, including some from a hot air balloon, before a BASE course will even consider you.
+BASE is for experienced skydivers only. No official UK source sets a minimum number of skydives, so ask any course provider abroad for its entry rules in writing.
 
 There is no UK governing body for BASE jumping. [British Skydiving](https://britishskydiving.org) governs skydiving, which is the experience you need first, so it's the official place to start.
 

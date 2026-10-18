@@ -66,8 +66,8 @@ We searched course prices at clubs and schools across the UK, so you know what t
 
 ## [Wingsuit flying](https://www.extremesportspromotions.com/guides/wingsuit-flying-for-beginners-uk)
 
-- **First-flight course (after at least 200 skydives):** Typical UK price: £250 to £600 per person (jump tickets extra)
-- **Become qualified:** Typical UK price: £6,000 to £12,000 from no jumps (AFF, at least 200 jumps, a first-flight course and a wingsuit)
+- **First-flight course (after a C Licence, TR1, and 500 jumps, or 200 in the last 18 months):** Typical UK price: £250 to £600 per person (jump tickets extra)
+- **Become qualified:** Typical UK price: £6,000 to £12,000 from no jumps (AFF, a C Licence, TR1, 500 jumps or 200 in the last 18 months, a first-flight course and a wingsuit)
 - **Per coached jump:** Typical UK price: £40 to £100 a coached jump
 
 ## [Skateboarding and BMX](https://www.extremesportspromotions.com/guides/skateboarding-for-beginners-uk)
@@ -87,7 +87,7 @@ We searched course prices at clubs and schools across the UK, so you know what t
 - **Become qualified:** Typical price abroad: £1,250 to £2,500 (the first BASE course is the entry step; there is no UK qualification)
 - **Per day:** Typical price abroad: £200 to £400 a day for coaching
 
-BASE is for experienced skydivers only. You'll need at least 200 skydives, including some from a hot air balloon, before a BASE course will even consider you.
+BASE is for experienced skydivers only. No official UK source sets a minimum number of skydives, so ask any course provider abroad for its entry rules in writing.
 
 ## [Snowboarding and skiing](https://www.extremesportspromotions.com/guides/beginners-guide-to-snowboarding-uk)
 

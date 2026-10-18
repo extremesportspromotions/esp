@@ -32,7 +32,7 @@ Competition skydiving is fast, technical and great fun. You don't have to be a c
 For dates, see our [British competitions 2027](https://www.extremesportspromotions.com/guides/british-competitions-2027) guide and British Skydiving's diary of events.
 
 > [!SAFETY]
-> Competition is not the place to try something new. Train it first, then compete it.
+> Competition is not the place to try something new. Train it first, then compete it. In an emergency, call 999.
 
 Source: [Competitions](https://britishskydiving.org/competitions/), British Skydiving, checked October 2026.
 

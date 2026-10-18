@@ -29,7 +29,7 @@ In freefall your instructors guide you with hand signals. Under canopy, a radio 
 Our advice is simple: if you already know you want to skydive, AFF is the quickest and most motivating way in. It costs more up front than the [Category System](https://www.extremesportspromotions.com/guides/skydiving-category-system-uk), but you're in freefall from jump one.
 
 > [!SAFETY]
-> Health rules apply to every student. Be honest on your medical form and listen to your instructors every single time.
+> Health rules apply to every student. Be honest on your medical form and listen to your instructors every single time. In an emergency, call 999.
 
 Source: [Accelerated Free Fall](https://britishskydiving.org/accelerated-free-fall/) and [My First Jump](https://britishskydiving.org/my-first-jump/), British Skydiving, checked October 2026.
 
