@@ -6,7 +6,9 @@ sport: paragliding
 category: Getting started
 author: ESP Editorial
 date: 2026-09-25
-heroAlt: "Paraglider with a white, cyan and yellow wing over a mountain valley"
+heroImage: "/guides/learn-to-paraglide-uk-hero.jpg"
+heroAlt: "A paraglider under a red wing flying over a coastal hillside and bay at sunset"
+heroPosition: "29% 0%"
 featured: false
 draft: false
 ---

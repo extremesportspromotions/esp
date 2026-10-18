@@ -129,7 +129,12 @@ function parseFile(file: string): RawGuide {
     updated: data.updated ? toIsoDate(data.updated, file, "updated") : undefined,
     heroImage,
     heroAlt,
-    heroPosition: customImage ? undefined : sportData?.imagePosition,
+    heroPosition:
+      typeof data.heroPosition === "string" && data.heroPosition.trim()
+        ? data.heroPosition.trim()
+        : customImage
+          ? undefined
+          : sportData?.imagePosition,
     featured: data.featured === true,
     draft: data.draft === true,
     readingMinutes: readingMinutes(wordCount),

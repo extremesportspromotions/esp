@@ -32,6 +32,7 @@ message saying which file and field to fix.
 | `updated`     | No       | Date of the last meaningful update, `YYYY-MM-DD`.                                                   |
 | `heroImage`   | No       | Path to a photo in `public/guides/`, e.g. `/guides/surf-school-hero.jpg`. Leave out to use the sport's photo. |
 | `heroAlt`     | Yes      | A short description of what the hero photo shows (alt text). Required whenever you set `heroImage`. |
+| `heroPosition` | No      | Which part of the hero photo stays in view when it is cropped, as CSS object-position, e.g. `"50% 20%"`. Defaults to the centre. |
 | `featured`    | No       | `true` to feature at the top of `/guides`. Keep only one article featured at a time.               |
 | `draft`       | No       | `true` hides the article from the live site. Set to `false` to publish.                             |
 
