@@ -1,0 +1,62 @@
+{
+  "sport": "snowboarding",
+  "title": "Snowboarding and skiing: from first lesson to pro",
+  "intro": "Start with your first lessons and Snowsport England Level 1, then pick a track. The UK slope track (Snowsport England) keeps you teaching on UK slopes. The mountain track (BASI) takes you to the top international awards. Both end with coaching, competitions and safety.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: snowboarding and skiing",
+      "coursePricesAnchor": "snowboarding-and-skiing",
+      "guides": ["snowboarding-kit-costs-safety-uk"]
+    },
+    "governingBody": {
+      "links": [
+        { "label": "Snowsport England", "href": "https://snowsportengland.org.uk" },
+        { "label": "GB Snowsport", "href": "https://gbsnowsport.com" },
+        { "label": "BASI", "href": "https://basi.org.uk" }
+      ],
+      "governingBodiesAnchor": "13-snowboarding-and-skiing",
+      "qualificationsAnchor": "13-snowboarding-and-skiing"
+    },
+    "competitions": {
+      "guides": ["snowsport-competitions-uk"],
+      "competitions2027Anchor": "snowboarding-and-skiing",
+      "competitions2027Label": "British competitions 2027: snowboarding and skiing"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "intro": "Both tracks start with these two steps.",
+      "items": [
+        { "slug": "beginners-guide-to-snowboarding-uk", "summary": "Your first lessons in snowboarding and skiing in the UK." },
+        { "slug": "snowsport-england-level-1-instructor-uk", "summary": "Snowsport England Level 1 (ski or snowboard): teach beginners on UK slopes." }
+      ]
+    },
+    {
+      "title": "UK slope track (Snowsport England)",
+      "intro": "After Level 2, skiers go on to Ski Development Coach. Snowboarders go to the coaching pathways (step 9).",
+      "items": [
+        { "slug": "snowsport-england-level-2-instructor-uk", "summary": "Snowsport England Level 2: teach on your own, with 20 logged hours." },
+        { "slug": "snowsport-england-ski-development-coach-uk", "summary": "Ski Development Coach, Levels 3 and 4 (ski only)." }
+      ]
+    },
+    {
+      "title": "Mountain track (BASI)",
+      "items": [
+        { "slug": "basi-level-1-instructor-uk", "summary": "BASI Level 1: the four-day entry course for ski or snowboard." },
+        { "slug": "basi-level-2-instructor-uk", "summary": "BASI Level 2: eight days on the mountain, or the four-day UK Level 2." },
+        { "slug": "basi-level-3-isia-uk", "summary": "BASI Level 3 ISIA: modules, 200 logged hours and a second discipline." },
+        { "slug": "basi-level-4-istd-uk", "summary": "BASI Level 4 ISTD: Teaching, Technical and, for skiers, Freeride." }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "intro": "Both tracks end here.",
+      "items": [
+        { "slug": "snowsport-coaching-pathways-uk", "summary": "Coaching pathways: alpine race, park and pipe, moguls and nordic, plus licensing." },
+        { "slug": "snowsport-competitions-uk", "summary": "Competitions: the English Slopestyle and Alpine Championships, the Scottish Park + Pipe Series and the talent pathway." },
+        { "slug": "snowboarding-kit-costs-safety-uk", "summary": "Prices, who governs what in England, Scotland and Wales, and the FIS slope code." }
+      ]
+    }
+  ]
+}

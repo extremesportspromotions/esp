@@ -1,0 +1,121 @@
+{
+  "sport": "kayaking",
+  "title": "Kayaking and rafting: from first paddle to coach",
+  "intro": "Start with your first paddle, then build your own skills and learn safety and rescue. From there, pick a track: teaching and coaching, leading on white water, rafting or racing. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: kayaking and rafting",
+      "coursePricesAnchor": "kayaking-and-white-water-rafting",
+      "guides": [
+        "kayaking-costs-licences-safety-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "Paddle UK",
+          "href": "https://paddleuk.org.uk"
+        },
+        {
+          "label": "Paddle Scotland",
+          "href": "https://www.paddlescotland.org.uk"
+        },
+        {
+          "label": "Paddle Cymru",
+          "href": "https://paddlecymru.org.uk"
+        },
+        {
+          "label": "Paddle Northern Ireland",
+          "href": "https://www.paddleni.org.uk"
+        }
+      ],
+      "governingBodiesAnchor": "14-kayaking-and-rafting",
+      "qualificationsAnchor": "14-kayaking-and-rafting"
+    },
+    "competitions": {
+      "guides": [
+        "paddlesport-competitions-uk"
+      ],
+      "competitions2027Anchor": "kayaking-and-rafting",
+      "competitions2027Label": "British competitions 2027: kayaking and rafting"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "kayaking-for-beginners-uk",
+          "summary": "How to start kayaking and white water rafting in the UK. Then pick a track."
+        }
+      ]
+    },
+    {
+      "title": "Paddling skills track",
+      "intro": "Every other track builds on these two steps, except rafting, which needs only step 3.",
+      "items": [
+        {
+          "slug": "paddle-awards-uk",
+          "summary": "Paddle Awards and Personal Performance Awards: build your own paddling."
+        },
+        {
+          "slug": "paddlesport-safety-rescue-uk",
+          "summary": "Paddlesport Safety and Rescue and White Water Safety: the rescue courses."
+        }
+      ]
+    },
+    {
+      "title": "Teaching and coaching track",
+      "intro": "After steps 2 and 3.",
+      "items": [
+        {
+          "slug": "paddlesport-instructor-uk",
+          "summary": "Paddlesport Instructor: run your first taster sessions."
+        },
+        {
+          "slug": "coach-award-paddlesport-uk",
+          "summary": "Coach Award and Performance Coach: coach paddlers properly."
+        }
+      ]
+    },
+    {
+      "title": "Leading track",
+      "intro": "After steps 2 and 3. White Water Safety (step 3) is the prerequisite.",
+      "items": [
+        {
+          "slug": "white-water-leader-uk",
+          "summary": "White Water Leader: lead groups on grade 2(3) rivers."
+        }
+      ]
+    },
+    {
+      "title": "Rafting track",
+      "intro": "After step 3.",
+      "items": [
+        {
+          "slug": "raft-guide-uk",
+          "summary": "Raft Guide and rafting races: guide groups or race as a team."
+        }
+      ]
+    },
+    {
+      "title": "Racing track",
+      "intro": "After step 2.",
+      "items": [
+        {
+          "slug": "paddlesport-competitions-uk",
+          "summary": "Kayak and canoe racing in the UK: pick your discipline."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "kayaking-costs-licences-safety-uk",
+          "summary": "Kayaking in the UK: prices, who runs what, licences and safety."
+        }
+      ]
+    }
+  ]
+}

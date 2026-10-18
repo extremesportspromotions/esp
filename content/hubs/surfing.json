@@ -1,0 +1,59 @@
+{
+  "sport": "surfing",
+  "title": "Surfing: from first wave to coach",
+  "intro": "Start with your first lessons, then follow the instructor and coach track or the competition track. Every step is here in order, with the UK bodies that run each one.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: surfing",
+      "coursePricesAnchor": "surfing",
+      "guides": ["surf-costs-safety-uk"]
+    },
+    "governingBody": {
+      "links": [{ "label": "Surfing England", "href": "https://www.surfingengland.org" }],
+      "governingBodiesAnchor": "11-surfing",
+      "qualificationsAnchor": "11-surfing"
+    },
+    "competitions": {
+      "guides": ["surf-competitions-uk"],
+      "competitions2027Anchor": "surfing",
+      "competitions2027Label": "British competitions 2027: surfing"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        { "slug": "surfing-for-beginners-uk", "summary": "How to start surfing in the UK. Then pick a track." }
+      ]
+    },
+    {
+      "title": "Instructor and coach track",
+      "intro": "After the lifesaving award, take Surf Instructor: Recreation (step 3) or ISA Level 1 (step 4).",
+      "items": [
+        { "slug": "surf-lifesaving-awards-for-coaches-uk", "summary": "Surf lifesaving awards: the first step to teaching surfing." },
+        { "slug": "surf-instructor-recreation-award-uk", "summary": "Surf Instructor: Recreation (SE1): teach your first beginner lessons." },
+        { "slug": "isa-level-1-surf-instructor-uk", "summary": "ISA Level 1 surf instructor: the international award (Scotland, Wales, and RPL in England)." },
+        { "slug": "surf-coach-progression-award-uk", "summary": "Surf Coach: Progression (SE2): coach surfers out back." }
+      ]
+    },
+    {
+      "title": "Surf schools",
+      "intro": "Useful for everyone, whether you're booking a lesson or looking for work.",
+      "items": [
+        { "slug": "surf-school-accreditation-uk", "summary": "Surf school accreditation: what Surfing England checks." }
+      ]
+    },
+    {
+      "title": "Competition track",
+      "items": [
+        { "slug": "surf-competitions-uk", "summary": "Surf competitions in the UK: from Junior Surf Series to GB." }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        { "slug": "surf-costs-safety-uk", "summary": "Surfing in the UK: prices, who runs what, and safety." }
+      ]
+    }
+  ]
+}

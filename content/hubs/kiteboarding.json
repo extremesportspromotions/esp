@@ -1,0 +1,63 @@
+{
+  "sport": "kiteboarding",
+  "title": "Kiteboarding: from first lesson to instructor",
+  "intro": "Start with your first lessons, then pick a track: teaching on the water, teaching kites on land, wing foiling or competing. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: kiteboarding",
+      "coursePricesAnchor": "kiteboarding",
+      "guides": ["kitesurf-costs-safety-uk"]
+    },
+    "governingBody": {
+      "links": [{ "label": "British Kitesports Association (BKSA)", "href": "https://britishkitesports.org" }],
+      "governingBodiesAnchor": "8-kiteboarding",
+      "qualificationsAnchor": "8-kiteboarding"
+    },
+    "competitions": {
+      "guides": ["kitesurf-competitions-uk"],
+      "competitions2027Anchor": "kiteboarding",
+      "competitions2027Label": "British competitions 2027: kiteboarding"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        { "slug": "kiteboarding-for-beginners-uk", "summary": "How to start kiteboarding in the UK. Then pick a track." }
+      ]
+    },
+    {
+      "title": "Water instructor track",
+      "items": [
+        { "slug": "kitesurf-instructor-level-1-uk", "summary": "BKSA Level 1 kitesurf instructor: start teaching on the water." },
+        { "slug": "kitesurf-senior-instructor-uk", "summary": "BKSA Level 2, Senior Instructor and Coach: the kitesurf career ladder." }
+      ]
+    },
+    {
+      "title": "Land track",
+      "intro": "Want to take it onto the water later? Go on to Level 1 (step 2).",
+      "items": [
+        { "slug": "powerkite-instructor-uk", "summary": "BKSA powerkite instructor: teach kites on land." }
+      ]
+    },
+    {
+      "title": "Wing track",
+      "intro": "This is the RYA route. BKSA also runs a wing instructor course.",
+      "items": [
+        { "slug": "wing-foil-instructor-uk", "summary": "Wing foil instructor: the RYA route." }
+      ]
+    },
+    {
+      "title": "Competition track",
+      "items": [
+        { "slug": "kitesurf-competitions-uk", "summary": "Kitesurf competitions: from the British series to the world tour." }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        { "slug": "kitesurf-costs-safety-uk", "summary": "Kitesurfing in the UK: prices, who runs what, and safety." }
+      ]
+    }
+  ]
+}

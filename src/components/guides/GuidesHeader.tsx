@@ -7,10 +7,12 @@ type Props = {
   intro: string;
   image?: { src: string; alt: string; position?: string };
   children?: React.ReactNode;
+  /** Smaller title, for hub pages with long titles. */
+  compact?: boolean;
 };
 
 /** Hero header shared by /guides and the per-sport hub pages. */
-export default function GuidesHeader({ eyebrow, title, tagline, intro, image, children }: Props) {
+export default function GuidesHeader({ eyebrow, title, tagline, intro, image, children, compact }: Props) {
   return (
     <section className="relative overflow-hidden border-b border-[#1C1917]/10 bg-[#EEF4FA]">
       {image ? (
@@ -34,10 +36,16 @@ export default function GuidesHeader({ eyebrow, title, tagline, intro, image, ch
       )}
       <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-accent-soft">{eyebrow}</p>
-        <h1 className="font-display mt-3 text-4xl font-black text-[#1C1917] sm:text-6xl lg:text-7xl">{title}</h1>
-        <p className="font-display mt-4 max-w-3xl text-2xl font-bold leading-tight text-[#1C1917] sm:text-3xl">
-          {tagline}
-        </p>
+        <h1
+          className={`font-display mt-3 font-black text-[#1C1917] ${compact ? "max-w-4xl text-4xl leading-[1.05] sm:text-5xl lg:text-6xl" : "text-4xl sm:text-6xl lg:text-7xl"}`}
+        >
+          {title}
+        </h1>
+        {tagline ? (
+          <p className="font-display mt-4 max-w-3xl text-2xl font-bold leading-tight text-[#1C1917] sm:text-3xl">
+            {tagline}
+          </p>
+        ) : null}
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-[#1C1917]/75 sm:text-lg">{intro}</p>
         {children}
       </div>

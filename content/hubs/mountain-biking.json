@@ -1,0 +1,53 @@
+{
+  "sport": "mountain-biking",
+  "title": "Mountain biking: from first ride to pro",
+  "intro": "Start with your first trail-centre session, then pick a track. The leader track takes groups onto harder and wilder terrain. The coach track helps riders build their skills. Both end with kit, costs and safety.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: mountain biking",
+      "coursePricesAnchor": "mountain-biking",
+      "guides": ["mtb-kit-costs-safety-uk"]
+    },
+    "governingBody": {
+      "links": [{ "label": "British Cycling", "href": "https://www.britishcycling.org.uk" }],
+      "governingBodiesAnchor": "4-mountain-biking",
+      "qualificationsAnchor": "4-mountain-biking"
+    },
+    "competitions": {
+      "guides": ["mtb-racing-uk"],
+      "competitions2027Anchor": "mountain-biking-and-bmx",
+      "competitions2027Label": "British competitions 2027: mountain biking and BMX"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        { "slug": "learn-to-mountain-bike-uk", "summary": "Your first trail-centre session in the UK. Then pick a track." }
+      ]
+    },
+    {
+      "title": "Leader track",
+      "items": [
+        { "slug": "off-road-leader-award-uk", "summary": "Off-Road Leader: lead up to 8 riders on non-technical trails and gravel, up to trail-centre blue." },
+        { "slug": "trail-leader-award-uk", "summary": "Trail Leader (formerly Level 2): up to 8 riders on red-grade trails, 15 logged rides recommended." },
+        { "slug": "mountain-bike-leader-award-uk", "summary": "Mountain Bike Leader (formerly Level 3): remote and severe technical terrain, plus the Remote Award." }
+      ]
+    },
+    {
+      "title": "Coach track",
+      "intro": "Off-Road Leader (step 2) is a useful start for coaches too, but you don't need it.",
+      "items": [
+        { "slug": "introduction-to-coaching-off-road-uk", "summary": "Introduction to Coaching – Off-Road: become an Activity Coach from 14." },
+        { "slug": "coaching-in-context-mtb-uk", "summary": "Coaching in Context – MTB XC or Gravity: 100 hours of coaching in, now coach advanced skills." },
+        { "slug": "mtb-racing-uk", "summary": "Racing: Go-Ride, licences, the national XC and downhill series, and national championships including enduro and e-enduro." }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        { "slug": "mtb-kit-costs-safety-uk", "summary": "Prices, who runs what, and safety. Both tracks end here." }
+      ]
+    }
+  ]
+}

@@ -91,6 +91,9 @@ function parseFile(file: string): RawGuide {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
     fail(file, `"slug" must be lower-case words joined by hyphens (got "${slug}").`);
   }
+  if (slug === "hub" || slug === "sport") {
+    fail(file, `"${slug}" is reserved for /guides/${slug}/… pages, so pick another slug.`);
+  }
   const description = requiredString(data, "description", file);
 
   const sport = requiredString(data, "sport", file);

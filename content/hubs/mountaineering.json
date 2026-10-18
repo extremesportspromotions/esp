@@ -1,0 +1,58 @@
+{
+  "sport": "mountaineering",
+  "title": "Mountaineering and climbing: from first hill to pro",
+  "intro": "Start with the basics, then pick a track. The walking track takes you to the Mountain Leader award. The climbing track goes from your first rope to instructing and coaching. Both end with kit, costs and safety.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: mountaineering and climbing",
+      "coursePricesAnchor": "mountaineering-coasteering-and-rock-climbing",
+      "guides": ["mountaineering-kit-costs-safety-uk"]
+    },
+    "governingBody": {
+      "links": [
+        { "label": "British Mountaineering Council (BMC)", "href": "https://www.thebmc.co.uk" },
+        { "label": "Mountain Training", "href": "https://www.mountain-training.org" }
+      ],
+      "governingBodiesAnchor": "1-mountaineering-climbing-and-coasteering",
+      "qualificationsAnchor": "1-mountaineering-climbing-and-coasteering"
+    },
+    "competitions": {
+      "guides": ["climbing-competitions-uk"],
+      "competitions2027Anchor": "climbing",
+      "competitions2027Label": "British competitions 2027: climbing"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        { "slug": "mountaineering-for-beginners-uk", "summary": "Your first steps in hill walking, coasteering and rock climbing. Then pick a track." }
+      ]
+    },
+    {
+      "title": "Walking and leading track",
+      "items": [
+        { "slug": "hill-and-mountain-skills-uk", "summary": "Two-day courses to become an independent hill and mountain walker." },
+        { "slug": "walking-group-leader-awards-uk", "summary": "Lowland Leader and Hill and Moorland Leader, your first group-leading awards." },
+        { "slug": "mountain-leader-award-uk", "summary": "40 quality mountain days and wild camps: the classic UK mountain award." },
+        { "slug": "mountaineering-and-climbing-instructor-uk", "summary": "Multi-pitch and mountain instructing. Needs the Mountain Leader award plus serious climbing, so both tracks meet here." }
+      ]
+    },
+    {
+      "title": "Climbing track",
+      "items": [
+        { "slug": "rock-skills-courses-uk", "summary": "Four courses, from your first rope to leading sport and trad." },
+        { "slug": "climbing-wall-instructor-uk", "summary": "Instructing climbing and bouldering sessions indoors." },
+        { "slug": "rock-climbing-instructor-uk", "summary": "Instructing on single-pitch crags and walls." },
+        { "slug": "climbing-coaching-awards-uk", "summary": "Foundation, Development and Performance Coach: helping climbers move better." },
+        { "slug": "climbing-competitions-uk", "summary": "The Youth Climbing Series, trials and British Championships." }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        { "slug": "mountaineering-kit-costs-safety-uk", "summary": "Prices, membership, the under-18s licensing law and safety basics. Both tracks end here." }
+      ]
+    }
+  ]
+}

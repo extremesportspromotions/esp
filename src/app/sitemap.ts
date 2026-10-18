@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllGuides } from "@/lib/guides";
 import { sports } from "@/data/sports";
 import { absoluteUrl } from "@/lib/site";
+import { getHubSummaries } from "@/lib/hubs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const guides = getAllGuides();
@@ -16,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(g.updated ?? g.date),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    ...getHubSummaries().map((h) => ({
+      url: absoluteUrl(h.href),
+      lastModified: latest,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
     ...sports.map((s) => ({
       url: absoluteUrl(`/guides/sport/${s.id}`),

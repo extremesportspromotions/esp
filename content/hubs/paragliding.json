@@ -1,0 +1,97 @@
+{
+  "sport": "paragliding",
+  "title": "Paragliding: from first flight to instructor",
+  "intro": "Start with your first flights at a BHPA school, then work up the pilot ratings. From there you can coach at your club, train as an instructor or fly competitions. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: paragliding",
+      "coursePricesAnchor": "paragliding",
+      "guides": [
+        "paragliding-costs-safety-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "British Hang Gliding and Paragliding Association (BHPA)",
+          "href": "https://www.bhpa.co.uk"
+        }
+      ],
+      "governingBodiesAnchor": "3-paragliding",
+      "qualificationsAnchor": "3-paragliding"
+    },
+    "competitions": {
+      "guides": [
+        "paragliding-competitions-uk"
+      ],
+      "competitions2027Anchor": "paragliding-and-hang-gliding",
+      "competitions2027Label": "British competitions 2027: paragliding"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "learn-to-paraglide-uk",
+          "summary": "Learn to paraglide in the UK. Then work up the ratings."
+        }
+      ]
+    },
+    {
+      "title": "Pilot ratings track",
+      "items": [
+        {
+          "slug": "elementary-club-pilot-paragliding-uk",
+          "summary": "Elementary Pilot and Club Pilot: from first hop to flying solo."
+        },
+        {
+          "slug": "pilot-rating-paragliding-uk",
+          "summary": "BHPA Pilot rating: get qualified to fly cross-country."
+        },
+        {
+          "slug": "advanced-pilot-paragliding-uk",
+          "summary": "BHPA Advanced Pilot: the top paragliding rating."
+        }
+      ]
+    },
+    {
+      "title": "Coach track",
+      "intro": "Club Coach needs Club Pilot (step 2) plus 10 hours on the hill or 50 tow flights. Senior Coach needs the Pilot rating (step 3).",
+      "items": [
+        {
+          "slug": "bhpa-club-coach-uk",
+          "summary": "BHPA Club Coach and Senior Coach: help new pilots progress."
+        }
+      ]
+    },
+    {
+      "title": "Instructor track",
+      "intro": "Needs the Pilot rating (step 3) plus 25 launches.",
+      "items": [
+        {
+          "slug": "bhpa-paragliding-instructor-uk",
+          "summary": "BHPA paragliding Instructor and Senior Instructor: teach new pilots."
+        }
+      ]
+    },
+    {
+      "title": "Competition track",
+      "items": [
+        {
+          "slug": "paragliding-competitions-uk",
+          "summary": "Paragliding competitions in the UK: XC League, BP Cup and the British Champs."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "paragliding-costs-safety-uk",
+          "summary": "Paragliding in the UK: prices, who runs what, and safety."
+        }
+      ]
+    }
+  ]
+}

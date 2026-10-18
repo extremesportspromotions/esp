@@ -9,6 +9,8 @@ import GuideCard from "@/components/guides/GuideCard";
 import GuideNextSteps from "@/components/guides/GuideNextSteps";
 import ShareLinks from "@/components/guides/ShareLinks";
 import TableOfContents from "@/components/guides/TableOfContents";
+import HubBanner from "@/components/guides/HubBanner";
+import { getHubForGuide } from "@/lib/hubs";
 import { getAllGuides, getGuideBySlug, getRelatedGuides } from "@/lib/guides";
 import { GENERAL_SPORT, formatGuideDate } from "@/data/guides-meta";
 import { SITE_NAME, absoluteUrl } from "@/lib/site";
@@ -59,6 +61,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
   if (!guide) notFound();
 
   const related = getRelatedGuides(guide.slug, 3);
+  const hub = getHubForGuide(guide.slug);
   const url = absoluteUrl(`/guides/${guide.slug}`);
 
   const jsonLd = {
@@ -168,6 +171,14 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
 
           <div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1fr)_17rem] lg:px-8">
             <div className="min-w-0">
+              {hub ? (
+                <HubBanner
+                  href={hub.href}
+                  title={hub.title}
+                  step={hub.slugs.indexOf(guide.slug) + 1}
+                  stepCount={hub.stepCount}
+                />
+              ) : null}
               <TableOfContents items={guide.toc} variant="inline" />
               <div
                 className="guide-prose prose sm:prose-lg"

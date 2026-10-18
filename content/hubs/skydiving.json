@@ -1,0 +1,37 @@
+{
+  "sport": "skydiving",
+  "title": "Skydiving: from first jump to pro",
+  "intro": "Every step of learning to skydive in the UK, in order. Start with a tandem, train on AFF or the Category System, then work through the licences, disciplines and ratings at your own pace.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesAnchor": "skydiving-and-indoor-skydiving",
+      "guides": ["skydiving-kit-costs-safety-uk"]
+    },
+    "governingBody": {
+      "links": [{ "label": "British Skydiving", "href": "https://britishskydiving.org" }],
+      "governingBodiesAnchor": "6-skydiving",
+      "qualificationsAnchor": "6-skydiving"
+    },
+    "competitions": {
+      "guides": ["skydiving-competitions-uk"],
+      "competitions2027Anchor": "skydiving"
+    }
+  },
+  "sections": [
+    {
+      "items": [
+        { "slug": "first-tandem-skydive-uk", "summary": "Your first skydive, strapped to an instructor." },
+        { "slug": "skydiving-aff-course-uk", "summary": "AFF, the fast track: real freefall from jump one with two instructors." },
+        { "slug": "skydiving-category-system-uk", "summary": "The Category System (static line): ground school, then solo jumps at your own pace." },
+        { "slug": "skydiving-a-licence-uk", "summary": "Consolidation jumps, the canopy exam and your first licence." },
+        { "slug": "skydiving-b-licence-uk", "summary": "50 jumps, JM1 and CT1: jump master duties and your own kit." },
+        { "slug": "skydiving-c-licence-uk", "summary": "200 jumps, CT2 and a second grade 1 sticker: cameras and coaching." },
+        { "slug": "skydiving-d-licence-uk", "summary": "1,000 jumps: the top licence, needed to become an AFF instructor." },
+        { "slug": "skydiving-disciplines-and-grades-uk", "summary": "FS, FF, CT, tracking, canopy formation and wingsuit, and what each needs." },
+        { "slug": "skydiving-coach-and-instructor-ratings-uk", "summary": "Foundation and Advanced coach, plus the CSI, TI and AFFI instructor ratings." },
+        { "slug": "skydiving-competitions-uk", "summary": "UKSL, Grand Prix, the Nationals and the world stage." },
+        { "slug": "skydiving-kit-costs-safety-uk", "summary": "Age, weight, membership, prices and kit rules." }
+      ]
+    }
+  ]
+}

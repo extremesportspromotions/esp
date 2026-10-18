@@ -1,0 +1,88 @@
+{
+  "sport": "scuba-diving",
+  "title": "Scuba diving: from first course to instructor",
+  "intro": "Start with your first scuba course, then work up the BSAC diver grades. Along the way you can train as an instructor, or look at the other UK diving agencies. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: scuba diving",
+      "coursePricesAnchor": "scuba-diving",
+      "guides": [
+        "scuba-medical-costs-safety-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "British Sub-Aqua Club (BSAC)",
+          "href": "https://www.bsac.com"
+        },
+        {
+          "label": "Scottish Sub-Aqua Club",
+          "href": "https://www.scotsac.com"
+        }
+      ],
+      "governingBodiesAnchor": "2-scuba-diving",
+      "qualificationsAnchor": "2-scuba-diving"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "first-scuba-course",
+          "summary": "Your first scuba course: what happens and how to choose one."
+        }
+      ]
+    },
+    {
+      "title": "BSAC diver grades",
+      "items": [
+        {
+          "slug": "bsac-ocean-diver-advanced-ocean-diver-uk",
+          "summary": "BSAC Ocean Diver and Advanced Ocean Diver: your first two grades."
+        },
+        {
+          "slug": "bsac-sports-diver-uk",
+          "summary": "BSAC Sports Diver: deeper dives, decompression and rescue skills."
+        },
+        {
+          "slug": "bsac-dive-leader-advanced-diver-uk",
+          "summary": "BSAC Dive Leader and Advanced Diver: plan and lead dives."
+        },
+        {
+          "slug": "bsac-first-class-diver-uk",
+          "summary": "BSAC First Class Diver: the top grade."
+        }
+      ]
+    },
+    {
+      "title": "BSAC instructor grades",
+      "intro": "Starts once you're a Sports Diver (step 3) aged 16 or over. Each instructor grade also needs the matching diver grade (steps 4 and 5).",
+      "items": [
+        {
+          "slug": "bsac-instructor-grades-uk",
+          "summary": "BSAC instructor grades: from Assistant Diving Instructor to National Instructor."
+        }
+      ]
+    },
+    {
+      "title": "Other agencies and paid instructing",
+      "items": [
+        {
+          "slug": "padi-ssi-saa-raid-scuba-uk",
+          "summary": "PADI, SSI, SAA and RAID: the other UK diving agencies, and the HSE rules."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "scuba-medical-costs-safety-uk",
+          "summary": "Scuba diving in the UK: medicals, prices, who's in charge and emergencies."
+        }
+      ]
+    }
+  ]
+}
