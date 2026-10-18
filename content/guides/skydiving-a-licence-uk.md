@@ -32,12 +32,12 @@ Then you're eligible for your A Licence and cleared to jump on your own or with 
 
 ## What it opens up
 
-With an A Licence you can take part in solo and group jumps and start your first discipline sticker, such as FS1 or FF1. See [disciplines and grades](https://www.extremesportspromotions.com/guides/skydiving-disciplines-and-grades-uk).
+With an A Licence you can take part in solo and group jumps and start your first discipline sticker, such as FS1 or CT1. See [disciplines and grades](https://www.extremesportspromotions.com/guides/skydiving-disciplines-and-grades-uk).
 
 > [!SAFETY]
 > Your canopy flies you home on every jump. Treat the canopy exam as a skill, not a box to tick.
 
-Source: [Training & Progression](https://britishskydiving.org/training-progression/), [Accelerated Free Fall](https://britishskydiving.org/accelerated-free-fall/) and [My First Jump](https://britishskydiving.org/my-first-jump/), British Skydiving, checked October 2026.
+Source: [Training & Progression](https://britishskydiving.org/training-progression/), [Accelerated Free Fall](https://britishskydiving.org/accelerated-free-fall/), [My First Jump](https://britishskydiving.org/my-first-jump/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

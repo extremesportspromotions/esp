@@ -29,9 +29,9 @@ British Skydiving's coaching qualification, the Foundation Coach, is accredited 
 
 There are three ratings, one for each way into the sport. Each starts with a Basic Instructor (BI) course:
 
-- **Category System:** CSBI, then CSI. Needs a C Licence.
+- **Category System:** CSBI, then CSI. Needs a C Licence. The CSI course also needs a Canopy Handling Coach qualification.
 - **Tandem:** TBI, then TI. Needs a C Licence, 800 jumps and 8 hours of freefall.
-- **AFF:** AFFBI, then AFFI. Needs a D Licence, 1,000 jumps, 10 hours of freefall and a Canopy Handling Coach qualification.
+- **AFF:** AFFBI, then AFFI. The AFFBI course needs a C Licence, 500 jumps and a Formation Skydiving Coach qualification. The AFFI course needs a D Licence, 1,000 jumps, 10 hours of freefall and a Canopy Handling Coach qualification.
 
 All three need a packing certificate and two years in the sport. If you'll be talking students down by radio, you also need a parachuting radio operator's certificate of competence (ROCC) from the [Civil Aviation Authority](https://www.caa.co.uk/commercial-industry/airspace/air-traffic-management-and-air-navigational-services/licences-for-air-traffic-roles/radio-operators/radio-operators-certificate-of-competence/).
 
@@ -40,7 +40,7 @@ Our advice: the second course is a test, not a lesson. If you fail the closed-bo
 > [!SAFETY]
 > As an instructor, you may be the one who decides whether someone jumps. Ground them when in doubt.
 
-Source: [Be a Coach](https://britishskydiving.org/be-a-coach/), [Be an Instructor](https://britishskydiving.org/be-an-instructor/) and [Training & Progression](https://britishskydiving.org/training-progression/), British Skydiving, checked October 2026.
+Source: [Be a Coach](https://britishskydiving.org/be-a-coach/), [Be an Instructor](https://britishskydiving.org/be-an-instructor/), [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

@@ -29,14 +29,14 @@ Fifty jumps in, you're not a student any more. The B Licence shows you can be tr
 
 ## What it lets you do
 
-You can act as jump master, check equipment on the flight line and make more choices about the personal equipment you use. It's also the licence you need to begin training in canopy formation and tracking.
+You can act as jump master, check equipment on the flight line and make more choices about the personal equipment you use. It's also the first licence you need for canopy formation (with at least 100 jumps, 5 of them in the last 2 months) and tracking (with FS1).
 
 Thinking of buying your own rig? British Skydiving says to get advice from your Chief Instructor and check the canopy size chart, Form 330i, before you buy.
 
 > [!SAFETY]
 > More freedom means more decisions. A canopy that's too small for your experience is a fast way to get hurt.
 
-Source: [Training & Progression](https://britishskydiving.org/training-progression/) and [Disciplines](https://britishskydiving.org/disciplines/), British Skydiving, checked October 2026.
+Source: [Training & Progression](https://britishskydiving.org/training-progression/), [Disciplines](https://britishskydiving.org/disciplines/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

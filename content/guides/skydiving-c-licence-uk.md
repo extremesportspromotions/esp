@@ -14,7 +14,7 @@ draft: false
 ---
 
 - **What it is:** The third British Skydiving licence.
-- **What you need first:** A B Licence, at least 200 total jumps, CT2 and one further grade 1 qualification, such as FS1 or FF1.
+- **What you need first:** A B Licence, at least 200 total jumps, CT2, one further grade 1 qualification, such as FS1 or FF1, and the C Licence written exam.
 - **What you'll learn:** More demanding disciplines, and how to coach newer skydivers.
 - **How long it takes:** The minimum is 200 jumps.
 - **Cost:** Per coached jump: typical UK price £40 to £80.
@@ -27,6 +27,7 @@ Two hundred jumps. You've got the skills, and now the sport starts asking you to
 - A B Licence.
 - At least 200 total jumps.
 - CT2 and one further grade 1 qualification (FS1, FF1 and so on).
+- A pass in the C Licence written exam.
 
 ## What it lets you do
 
@@ -38,7 +39,7 @@ Two hundred jumps. You've got the skills, and now the sport starts asking you to
 > [!SAFETY]
 > A camera is a distraction. Only fly one when your Chief Instructor approves it.
 
-Source: [Training & Progression](https://britishskydiving.org/training-progression/), British Skydiving, checked October 2026.
+Source: [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 
