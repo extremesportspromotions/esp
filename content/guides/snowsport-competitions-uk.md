@@ -15,8 +15,6 @@ draft: false
 
 - **What it is:** Competitive skiing and snowboarding, from open-to-all events to the GB teams.
 - **What you need first:** Home nation membership for the English Slopestyle Championships (Snowsport England Blue minimum, Snowsport Scotland or Snowsport Cymru Wales).
-- **What you'll learn:** Riding under pressure, and where the talent pathway leads.
-- **How long it takes:** A season at a time.
 - **Cost:** The English Slopestyle Championships cost £50 to enter, or £55 on the day, with a lift pass included.
 - **What's next:** [Kit, costs and safety](https://www.extremesportspromotions.com/guides/snowboarding-kit-costs-safety-uk).
 

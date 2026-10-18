@@ -13,11 +13,7 @@ heroPosition: "43% 50%"
 draft: false
 ---
 
-- **What it is:** The background every UK diver needs: fitness to dive, costs, who sets the rules and who to call.
 - **What you need first:** Nothing. Read it before you book.
-- **What you'll learn:** How the medical form works, typical prices, and the emergency numbers BSAC gives.
-- **How long it takes:** A few minutes to read.
-- **Cost:** See the price list below.
 - **What's next:** Diving track: [Ocean Diver](https://www.extremesportspromotions.com/guides/bsac-ocean-diver-advanced-ocean-diver-uk). Instructing: [BSAC instructor grades](https://www.extremesportspromotions.com/guides/bsac-instructor-grades-uk). Other agencies: [PADI, SSI, SAA and RAID](https://www.extremesportspromotions.com/guides/padi-ssi-saa-raid-scuba-uk).
 
 ## Typical prices

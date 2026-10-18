@@ -12,10 +12,8 @@ featured: false
 draft: false
 ---
 
-- **What it is:** The second British Skydiving licence.
 - **What you need first:** An A Licence, at least 50 jumps, and the JM1 and CT1 qualifications.
 - **What you'll learn:** Jump master duties, canopy skills (CT1) and smarter choices about your own kit.
-- **How long it takes:** It depends on how often you jump. The minimum is 50 jumps.
 - **Cost:** Per coached jump: typical UK price £40 to £80.
 - **What's next:** [The C licence](https://www.extremesportspromotions.com/guides/skydiving-c-licence-uk)
 

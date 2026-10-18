@@ -17,7 +17,6 @@ draft: false
 - **What you need first:** Level 3: Ski Instructor (Level 2) or a recognised equivalent. Level 4: Level 3 or a recognised equivalent. The minimum age is 16.
 - **What you'll learn:** Profiling performance, planning long-term programmes and, at Level 4, mentoring other coaches.
 - **How long it takes:** Six days (35 hours) of training at each level. Level 3 adds a portfolio and a one-day assessment; Level 4 adds a portfolio and a project.
-- **Cost:** Set by Snowsport England. Check the course listing when you book.
 - **What's next:** [Coaching pathways](https://www.extremesportspromotions.com/guides/snowsport-coaching-pathways-uk).
 
 You've got skiers coming back week after week. Now you plan their whole season.

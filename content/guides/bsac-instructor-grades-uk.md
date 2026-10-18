@@ -15,8 +15,6 @@ draft: false
 - **What it is:** BSAC's volunteer instructor ladder, from your first one-day course to National Instructor.
 - **What you need first:** Sports Diver (or equivalent) and age 16 or over.
 - **What you'll learn:** Teaching theory and open-water lessons, then dive management and training other instructors.
-- **How long it takes:** The IFC and the Open Water Instructor Course are one day each, the Practical Instructor Exam about half a day, and Advanced Instructor a two-day course plus an exam.
-- **Cost:** Not priced on BSAC's instructor pages. Your club or centre will tell you.
 - **What's next:** Your diver grade sets how high you can go, so [Dive Leader](https://www.extremesportspromotions.com/guides/bsac-dive-leader-advanced-diver-uk) and [First Class Diver](https://www.extremesportspromotions.com/guides/bsac-first-class-diver-uk) unlock the top steps.
 
 ## The ladder

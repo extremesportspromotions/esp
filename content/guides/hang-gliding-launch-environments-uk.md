@@ -14,8 +14,6 @@ draft: false
 
 - **What it is:** Short BHPA courses that add a new launch method, called an environment, to your hang gliding rating.
 - **What you need first:** At least Club Pilot (Novice) in hang gliding. Some courses need logged hours or flights on top (listed below).
-- **What you'll learn:** New launch, tow and release skills, signals and emergency drills, plus an exam for each environment.
-- **How long it takes:** The minimum flights are listed for each course. Otherwise it's down to your instructor or coach.
 - **Cost:** If you train at a school, a day is usually £140 to £200. The BHPA charges £20 to add each environment (fees from 1 April 2026).
 - **What's next:** Pilot track: [Advanced Pilot](https://www.extremesportspromotions.com/guides/pilot-advanced-pilot-hang-gliding-uk), which needs a second environment. Coaching track: [Tow or Aerotow Coach](https://www.extremesportspromotions.com/guides/hang-gliding-coaches-instructors-uk).
 

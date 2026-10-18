@@ -15,8 +15,6 @@ draft: false
 
 - **What it is:** A BHPA licence to carry a passenger on a hang glider certified for two.
 - **What you need first:** Annual Flying Membership, age 18 or over, and the Pilot rating with the right environment. Plus the logged flying below.
-- **What you'll learn:** Passenger briefing and care, wheeled and stand-up landings, and tow or aerotow set-up if relevant.
-- **How long it takes:** At least 200 hours or 250 launches before you start, then the training and an exam.
 - **Cost:** The BHPA's Dual Pilot exam is £150 (£175 to re-sit), and the licence registration is £121, including the insurance supplement (fees from 1 April 2026). Training costs aren't published.
 - **What's next:** Teaching track: to take paying passengers you also need to be an Instructor or Air Experience Instructor (Dual) working in a registered school. See [coaches and instructors](https://www.extremesportspromotions.com/guides/hang-gliding-coaches-instructors-uk). Pilot track: [Advanced Pilot](https://www.extremesportspromotions.com/guides/pilot-advanced-pilot-hang-gliding-uk).
 

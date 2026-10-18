@@ -16,7 +16,6 @@ draft: false
 - **What it is:** Dive Leader is for planning and leading club dives and managing rescues. Advanced Diver is for running dives and expeditions at sites you haven't been to before.
 - **What you need first:** Dive Leader: Sports Diver (or equivalent), a Nitrox qualification and age 14 or over. Advanced Diver: Dive Leader (or equivalent) and age 14 or over.
 - **What you'll learn:** Leading divers, dive management, rescue management, then search techniques, seamanship, chartwork and expedition planning.
-- **How long it takes:** Dive Leader: at least 60 dives before you qualify. Advanced Diver: 20 open-water dives and 600 minutes underwater after Dive Leader.
 - **Cost:** A guided or instructional dive is usually £65 to £120.
 - **What's next:** Diving track: [First Class Diver](https://www.extremesportspromotions.com/guides/bsac-first-class-diver-uk). Instructing: Dive Leader opens Theory and Open Water Instructor, and Advanced Diver opens Advanced Instructor (see [instructor grades](https://www.extremesportspromotions.com/guides/bsac-instructor-grades-uk)).
 

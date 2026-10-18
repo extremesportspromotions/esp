@@ -13,11 +13,7 @@ heroPosition: "42% 50%"
 draft: false
 ---
 
-- **What it is:** What hang gliding costs, the kit rules that are only for hang gliding, and who sets the rules.
 - **What you need first:** Nothing. This is background for anyone thinking about starting.
-- **What you'll learn:** Typical prices and BHPA fees, glider and harness rules, the age limits and who to call in an emergency.
-- **How long it takes:** A few minutes to read.
-- **Cost:** See the price list below.
 - **What's next:** Pilot track: [Club Pilot course](https://www.extremesportspromotions.com/guides/club-pilot-hang-gliding-uk). Coaching track: [coaches and instructors](https://www.extremesportspromotions.com/guides/hang-gliding-coaches-instructors-uk).
 
 ## Typical prices

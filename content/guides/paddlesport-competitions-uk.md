@@ -13,10 +13,7 @@ heroPosition: "69% 50%"
 draft: false
 ---
 
-- **What it is:** Paddle UK's competition disciplines, from Olympic sprint to canoe polo.
 - **What you need first:** Nothing formal. Paddle UK points you to a club, and every discipline page has a club finder.
-- **What you'll learn:** Racing, tactics and teamwork, depending on the discipline.
-- **How long it takes:** No set time. Sprint has local regattas for beginners, and marathon's Hasler divisions match you with paddlers of similar speed.
 - **Cost:** Coached time usually costs £35 to £60 an hour.
 - **What's next:** Racing track: the Personal Performance Awards for your discipline in [Paddle Awards](https://www.extremesportspromotions.com/guides/paddle-awards-uk). Coaching track: [Coach Award](https://www.extremesportspromotions.com/guides/coach-award-paddlesport-uk).
 

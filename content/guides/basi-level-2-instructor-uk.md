@@ -16,7 +16,6 @@ draft: false
 - **What it is:** BASI's second level, in ski or snowboard.
 - **What you need first:** The BASI Level 1 qualification in the same discipline.
 - **What you'll learn:** The Central Theme, the TIED teaching model, lesson planning and delivery, group management and safety. Ski adds bumps, steeps, variable snow and freestyle. Snowboard adds fitness and off-snow theory.
-- **How long it takes:** Eight days on the mountain for the full Level 2, or four days for UK Level 2.
 - **Cost:** BASI's Level 2 course fee is £900 from 1 June 2026. Lift passes aren't included.
 - **What's next:** [BASI Level 3 ISIA](https://www.extremesportspromotions.com/guides/basi-level-3-isia-uk).
 

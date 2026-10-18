@@ -16,7 +16,6 @@ draft: false
 - **What it is:** Discipline grades, or stickers, that show basic competence in an area of the sport.
 - **What you need first:** An A Licence for most first grades. Some disciplines need more.
 - **What you'll learn:** Flying with other people, in new body positions, and under canopy.
-- **How long it takes:** It depends on the discipline and on you.
 - **Cost:** Per coached jump: typical UK price £40 to £80.
 - **What's next:** [Coaching and instructor ratings](https://www.extremesportspromotions.com/guides/skydiving-coach-and-instructor-ratings-uk)
 

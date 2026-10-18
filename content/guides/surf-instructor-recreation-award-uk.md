@@ -16,7 +16,6 @@ draft: false
 - **What it is:** Surfing England's entry-level award (SE1). You teach beginner lessons in waist-deep water to groups of up to 8.
 - **What you need first:** Nothing to start. To qualify you need a recognised surf lifesaving award, safeguarding training and the surfing skills below.
 - **What you'll learn:** How to coach, plus running safe beginner lessons.
-- **How long it takes:** About 10 hours of theory and about 20 hours of practical training and mentoring, then an assessment.
 - **Cost:** Surfing England lists £300 (checked October 2026).
 - **What's next:** Coach track: [Surf Coach: Progression](https://www.extremesportspromotions.com/guides/surf-coach-progression-award-uk). Work track: [Surf school accreditation](https://www.extremesportspromotions.com/guides/surf-school-accreditation-uk).
 

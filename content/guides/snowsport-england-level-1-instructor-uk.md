@@ -16,7 +16,6 @@ draft: false
 - **What you need first:** You must be 16. Skiers need to show linked parallel steering, and snowboarders controlled linked turns.
 - **What you'll learn:** Assisting with beginner lessons, basic teaching principles, communicating with learners and managing groups safely.
 - **How long it takes:** Two days (14 hours) of training, then a formal one-day assessment or a workplace assessment.
-- **Cost:** Set by Snowsport England. Check the course listing when you book.
 - **What's next:** UK slope track: [Snowsport England Level 2](https://www.extremesportspromotions.com/guides/snowsport-england-level-2-instructor-uk). Mountain track: [BASI Level 1](https://www.extremesportspromotions.com/guides/basi-level-1-instructor-uk).
 
 You love the slope. Now you get to share it. Snowsport England says you don't need any teaching experience, just a passion for skiing or snowboarding and the drive to develop.

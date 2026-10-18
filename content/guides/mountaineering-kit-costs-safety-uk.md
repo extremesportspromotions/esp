@@ -12,11 +12,7 @@ featured: false
 draft: false
 ---
 
-- **What it is:** The costs, rules and safety basics behind every step of the pathway.
 - **What you need first:** Nothing. Read this before you book.
-- **What you'll learn:** What things typically cost, why membership matters and how the law protects under-18s.
-- **How long it takes:** A few minutes.
-- **Cost:** See the What it costs box below.
 - **What's next:** You've reached the end of both tracks.
 
 The hills don't care how fit you are. Good habits do the heavy lifting.

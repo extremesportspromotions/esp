@@ -16,11 +16,10 @@ draft: false
 - **What it is:** The BHPA's top rating, for the above-average pilot who is a total master of their wing.
 - **What you need first:** The Pilot rating.
 - **What you'll learn:** Wider conditions, more wings, more environments and advanced glider control.
-- **How long it takes:** At least 100 logged hours.
 - **Cost:** £20 for the rating (BHPA fees, 1 April 2026). Your SIV course is priced separately by whoever runs it.
 - **What's next:** Pilot track: the FAI Eagle badges, which the BHPA points to beyond AP. Teaching track: [Instructor](https://www.extremesportspromotions.com/guides/bhpa-paragliding-instructor-uk), which needs the Pilot rating.
 
-Think 100km thermal flights, four different wings and an SIV course. Here's the full list, signed off task by task.
+Think 100km thermal flights, four different wings and an SIV course.
 
 ## All pilots must
 

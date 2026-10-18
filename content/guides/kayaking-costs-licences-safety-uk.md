@@ -13,11 +13,7 @@ heroPosition: "35% 50%"
 draft: false
 ---
 
-- **What it is:** Prices, the bodies in charge, licences and safety.
 - **What you need first:** Nothing. Start here.
-- **What you'll learn:** What it costs, who sets the rules, when you need a licence and how to call for help.
-- **How long it takes:** A five-minute read.
-- **Cost:** A lake taster or half-day guided paddle usually costs £35 to £90.
 - **What's next:** [How to start kayaking](https://www.extremesportspromotions.com/guides/kayaking-for-beginners-uk).
 
 ## Prices

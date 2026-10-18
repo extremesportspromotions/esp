@@ -13,10 +13,7 @@ heroPosition: "43% 50%"
 draft: false
 ---
 
-- **What it is:** Contests run by the home nations, with GB Surfing on top for British teams.
-- **What you need first:** Confident surfing. Each contest sets its own entry rules, so check with the organiser.
-- **What you'll learn:** Heats, judging and how the pathway works.
-- **How long it takes:** One weekend for a local contest. Years for national titles.
+- **What you need first:** Confident surfing.
 - **Cost:** Coached time usually costs £35 to £70 an hour.
 - **What's next:** [Prices, who runs what, and safety](https://www.extremesportspromotions.com/guides/surf-costs-safety-uk).
 

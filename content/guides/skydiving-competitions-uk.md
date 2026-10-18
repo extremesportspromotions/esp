@@ -13,10 +13,7 @@ featured: false
 draft: false
 ---
 
-- **What it is:** Competitive skydiving in formation, freefly, artistic, canopy and more.
 - **What you need first:** The licence and grades your discipline needs (see disciplines and grades).
-- **What you'll learn:** How to perform under pressure as a team.
-- **How long it takes:** A season at a time.
 - **Cost:** You cover your own jumps. Event fees vary.
 - **What's next:** [Kit, costs and safety](https://www.extremesportspromotions.com/guides/skydiving-kit-costs-safety-uk)
 

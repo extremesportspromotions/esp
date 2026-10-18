@@ -13,10 +13,7 @@ featured: false
 draft: false
 ---
 
-- **What it is:** The third British Skydiving licence.
 - **What you need first:** A B Licence, at least 200 total jumps, CT2, one further grade 1 qualification, such as FS1 or FF1, and the C Licence written exam.
-- **What you'll learn:** More demanding disciplines, and how to coach newer skydivers.
-- **How long it takes:** The minimum is 200 jumps.
 - **Cost:** Per coached jump: typical UK price £40 to £80.
 - **What's next:** [The D licence](https://www.extremesportspromotions.com/guides/skydiving-d-licence-uk)
 

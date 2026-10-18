@@ -16,7 +16,6 @@ draft: false
 - **What it is:** BASI's international-standard qualification, built from separate modules.
 - **What you need first:** The BASI Level 2 qualification in your main discipline.
 - **What you'll learn:** Advanced teaching strategies, technical riding and performance analysis.
-- **How long it takes:** A four-day Teaching course and a five-day Technical course, plus 200 hours of teaching experience.
 - **Cost:** Not published on BASI's course pages. Lift passes aren't included.
 - **What's next:** [BASI Level 4 ISTD](https://www.extremesportspromotions.com/guides/basi-level-4-istd-uk).
 

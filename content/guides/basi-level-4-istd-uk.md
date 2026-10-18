@@ -15,8 +15,6 @@ draft: false
 
 - **What it is:** The highest level in BASI's instructor system.
 - **What you need first:** The BASI Level 3 qualification in your discipline. Ski Level 4 Teaching also needs 200 hours of teaching experience.
-- **What you'll learn:** Teaching and riding or skiing at the highest level in the BASI system.
-- **How long it takes:** A four-day Teaching course and a Technical course (four days for ski, five for snowboard). Skiers also take a three-day Freeride course.
 - **Cost:** Not published on BASI's course pages. Lift passes aren't included.
 - **What's next:** [Coaching pathways](https://www.extremesportspromotions.com/guides/snowsport-coaching-pathways-uk).
 

@@ -16,7 +16,6 @@ draft: false
 - **What it is:** Licensed instructors train novices to CP level and beyond, at BHPA registered schools.
 - **What you need first:** Annual Flying Membership, age 18+, your CFI's support, a Pilot rating, and 25 launches in the environment.
 - **What you'll learn:** Every training exercise up to CP, plus BHPA operating procedures.
-- **How long it takes:** At least 10 days of instructing experience, then an independent exam.
 - **Cost:** Trainee Instructor registration is £40 (insurance included), the Instructor course is £450 (can vary with location), and the first Instructor exam is £50 (BHPA fees, 1 April 2026).
 - **What's next:** Senior Instructor, then Instructor Training extension or Chief Flying Instructor.
 

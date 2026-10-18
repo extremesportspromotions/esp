@@ -15,7 +15,6 @@ draft: false
 
 - **What it is:** Rescue courses for paddlers. One for sheltered water, one for white water.
 - **What you need first:** Paddle Explore (or equal ability) for sheltered water. The matching Personal Performance Award (or equal ability) for white water.
-- **What you'll learn:** Self-rescues, towing, deep water rescues, chase boating and river emergencies.
 - **How long it takes:** 6 hours for sheltered water. 2 days for white water.
 - **Cost:** Coached time usually costs £35 to £60 an hour.
 - **What's next:** Skills track: more [Personal Performance Awards](https://www.extremesportspromotions.com/guides/paddle-awards-uk). Leading track: [Paddlesport Instructor](https://www.extremesportspromotions.com/guides/paddlesport-instructor-uk) or [White Water Leader](https://www.extremesportspromotions.com/guides/white-water-leader-uk).

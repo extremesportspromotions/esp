@@ -17,7 +17,6 @@ draft: false
 - **What you need first:** Swimming and basic fitness. The awards set their own tests.
 - **What you'll learn:** Rescue, group supervision and, on the RLSS surf coach award, first aid and life support.
 - **How long it takes:** Instructor-only awards typically take three days. The full beach lifeguard award typically takes six.
-- **Cost:** The provider sets it. Check with them when you book.
 - **What's next:** [Surf Instructor: Recreation](https://www.extremesportspromotions.com/guides/surf-instructor-recreation-award-uk) or [ISA Level 1](https://www.extremesportspromotions.com/guides/isa-level-1-surf-instructor-uk).
 
 No rescue award, no teaching. You can start Surf Instructor: Recreation without one, but you need it to qualify. For Surf Coach: Progression, the full NVBLQ is a prerequisite.

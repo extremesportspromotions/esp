@@ -13,11 +13,7 @@ heroPosition: "19% 50%"
 draft: false
 ---
 
-- **What it is:** Prices, the bodies in charge, and safety.
 - **What you need first:** Nothing. Start here.
-- **What you'll learn:** What training costs, who sets the rules, and the safety basics.
-- **How long it takes:** A five-minute read.
-- **Cost:** An experience day is usually £140 to £230.
 - **What's next:** [Learn to paraglide](https://www.extremesportspromotions.com/guides/learn-to-paraglide-uk).
 
 ## Prices

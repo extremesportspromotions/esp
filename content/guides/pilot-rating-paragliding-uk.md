@@ -16,7 +16,7 @@ draft: false
 - **What you need first:** Club Pilot (Novice).
 - **What you'll learn:** Thermalling, top landings, accuracy, flying with others, plus air law, navigation, weather, principles of flight and airmanship.
 - **How long it takes:** You work at your own pace in a club. Hill pilots need at least 50 flights and 25 hours.
-- **Cost:** £20 for the rating (BHPA fees, 1 April 2026). The mock exams are free.
+- **Cost:** £20 for the rating (BHPA fees, 1 April 2026). The mock exams are at no cost.
 - **What's next:** Pilot track: [Advanced Pilot](https://www.extremesportspromotions.com/guides/advanced-pilot-paragliding-uk). Coaching track: [Senior Coach](https://www.extremesportspromotions.com/guides/bhpa-club-coach-uk), which needs the Pilot rating.
 
 ## Two strands
@@ -45,7 +45,7 @@ Tow pilots have their own list, starting with at least 75 flights. The BHPA says
 
 - **Online:** five shorter papers (meteorology, air law, principles of flight, human factors and airmanship, and navigation). You can sit them over several sessions, and you need 75% on each.
 - **On paper:** one sitting of 1 hour 45 minutes, with 70% needed in every section.
-- Paraglider pilots without a motor sit the Generic Pilot paper. The BHPA's free online mock exams show you the level.
+- Paraglider pilots without a motor sit the Generic Pilot paper. The BHPA's no-cost online mock exams show you the level.
 
 ## Start with the Foundation Syllabus
 

@@ -16,7 +16,6 @@ draft: false
 - **What it is:** BSAC's second-level grade. It takes you to 40m, adds decompression diving and teaches rescue skills.
 - **What you need first:** Ocean Diver or Advanced Ocean Diver (or another agency's equivalent), age 12 or over, and the medical form. You need to be 14 to go deeper than 20m once qualified.
 - **What you'll learn:** Self-rescue, recovering an unresponsive diver, basic life support, decompression stops and depth progression in 5m steps.
-- **How long it takes:** BSAC doesn't give a time. It depends on your club or centre.
 - **Cost:** A guided or instructional dive is usually £65 to £120. Diving is sold by the dive, not by the hour.
 - **What's next:** Diving track: [Dive Leader](https://www.extremesportspromotions.com/guides/bsac-dive-leader-advanced-diver-uk). Instructing: the Instructor Foundation Course, from age 16 (see [instructor grades](https://www.extremesportspromotions.com/guides/bsac-instructor-grades-uk)). Skills: 30+ Skill Development Courses.
 

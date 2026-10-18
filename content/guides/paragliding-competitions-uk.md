@@ -13,11 +13,7 @@ heroPosition: "92% 50%"
 draft: false
 ---
 
-- **What it is:** BHPA-supported cross-country competitions, from logging your own XC flights to the British Championships.
 - **What you need first:** BHPA membership. The BP Cup needs the Pilot rating or above and an EN A, B or C glider.
-- **What you'll learn:** Setting up your instruments, flying set tasks and flying alongside other pilots.
-- **How long it takes:** The 2027 BP Cup Dales round runs over four days, 6 to 9 May.
-- **Cost:** Entry fees aren't on the BHPA or BP Cup pages, so ask the organiser when you enter.
 - **What's next:** Competition track: the British Championships and the Paragliding World Cup. Coaching track: [Club Coach](https://www.extremesportspromotions.com/guides/bhpa-club-coach-uk).
 
 ## Who runs it

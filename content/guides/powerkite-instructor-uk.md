@@ -17,7 +17,6 @@ draft: false
 - **What you need first:** BKSA membership, an in-person first aid course, kite flying experience and 12 hours of shadow teaching.
 - **What you'll learn:** Safety, communication and the full BKSA teaching scheme.
 - **How long it takes:** Two days, often with an evening session on day one.
-- **Cost:** Not listed on BKSA's training page. Ask when you book.
 - **What's next:** Senior Powerkite Instructor, or take it to the water with [Level 1 kitesurf instructor](https://www.extremesportspromotions.com/guides/kitesurf-instructor-level-1-uk).
 
 BKSA calls powerkiting the fundamental skill of every kitesport. Teach it well and you're teaching the start of everything.

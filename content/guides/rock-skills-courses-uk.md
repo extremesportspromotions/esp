@@ -14,8 +14,6 @@ draft: false
 
 - **What it is:** Four Mountain Training courses that turn you into an independent rock climber.
 - **What you need first:** Nothing for the Introduction course (minimum age 10). Each later course asks for logged climbs and belays (see below).
-- **What you'll learn:** Belaying, abseiling, building anchors, seconding, then leading on bolts and on your own gear.
-- **How long it takes:** 1 day for the Introduction course, then 2 days each for the other three.
 - **Cost:** Set by each provider. A coached outdoor intro climb is typically £55 to £150 per person in the UK.
 - **What's next:** [Climbing Wall Instructor](https://www.extremesportspromotions.com/guides/climbing-wall-instructor-uk) (climbing track)
 

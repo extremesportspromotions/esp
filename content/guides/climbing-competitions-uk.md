@@ -14,9 +14,6 @@ draft: false
 
 - **What it is:** Indoor competition climbing in bouldering, lead and speed.
 - **What you need first:** BMC membership for the Youth Climbing Series and the England and Wales Climbing Trials.
-- **What you'll learn:** How to climb under pressure, on routes you've never seen.
-- **How long it takes:** A season at a time.
-- **Cost:** Entry fees vary by event.
 - **What's next:** [Kit, costs and safety](https://www.extremesportspromotions.com/guides/mountaineering-kit-costs-safety-uk)
 
 Chalk in the air, a crowd behind you and one shot at the problem. Competition climbing is pure focus.

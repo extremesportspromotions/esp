@@ -17,7 +17,6 @@ draft: false
 - **What you need first:** BKSA membership, 12 hours of shadow teaching, verified riding, RYA Powerboat Level 2 and an in-person first aid course.
 - **What you'll learn:** The BKSA syllabus, plus foil and single-skin kites, extra safety, and the legal side of setting up a UK school.
 - **How long it takes:** A 5-day course, then a post-course action plan.
-- **Cost:** Not listed on BKSA's training page. Ask when you book.
 - **What's next:** [Level 2, Senior Instructor and beyond](https://www.extremesportspromotions.com/guides/kitesurf-senior-instructor-uk). Prefer land? [Powerkite instructor](https://www.extremesportspromotions.com/guides/powerkite-instructor-uk).
 
 Turn your riding into a job on the water. BKSA built one recognised instructor training route for kitesurfing in the UK, and this is the first step on it.

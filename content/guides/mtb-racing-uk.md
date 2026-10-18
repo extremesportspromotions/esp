@@ -15,9 +15,6 @@ draft: false
 
 - **What it is:** Competitive cross-country, downhill, enduro and marathon racing.
 - **What you need first:** Nothing for Go-Ride Racing (under-16s). For licensed races, you need British Cycling membership. A full licence is needed to earn points.
-- **What you'll learn:** Racing under pressure, and where each discipline leads.
-- **How long it takes:** A season at a time.
-- **Cost:** Entry fees vary by event.
 - **What's next:** [Kit, costs and safety](https://www.extremesportspromotions.com/guides/mtb-kit-costs-safety-uk).
 
 Number board on, heart rate through the roof. Racing is the fastest way to find out what you can really do.
@@ -32,7 +29,7 @@ Members and Premium Members get a provisional race licence automatically. You ca
 
 ## The national scene
 
-British Cycling runs the Lloyds National MTB Cross-Country Series and the Lloyds National Downhill Series, plus National Championships in cross-country (Olympic and short course), downhill, cross-country marathon, and enduro and e-enduro. The 2026 Enduro and E-Enduro Championships ran on the Isle of Man on 1 and 2 August. For 2027 dates, see our [British competitions 2027](https://www.extremesportspromotions.com/guides/british-competitions-2027) guide.
+British Cycling runs the Lloyds National MTB Cross-Country Series and the Lloyds National Downhill Series, plus National Championships in cross-country (Olympic and short course), downhill, cross-country marathon, and enduro and e-enduro. For 2027 dates, see our [British competitions 2027](https://www.extremesportspromotions.com/guides/british-competitions-2027) guide.
 
 > [!SAFETY]
 > Walk the course before you race it. Know where the hard lines are before you hit them at speed.

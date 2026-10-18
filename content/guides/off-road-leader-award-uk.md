@@ -15,7 +15,6 @@ draft: false
 
 - **What it is:** The entry leadership award run by British Cycling, Scottish Cycling and Welsh Cycling. Once qualified, you can lead up to 8 riders on non-technical trails and gravel tracks, in non-remote places, in summer conditions, on routes you've ridden first.
 - **What you need first:** British Cycling membership. You must be 16 in Scotland or 17 in England and Wales, and you can only lead on your own from 18. You need to ride comfortably on roads with some traffic and on trails up to trail-centre blue grade.
-- **What you'll learn:** Leadership skills for a brilliant day out on the bike with a group.
 - **How long it takes:** 2 to 3 hours of e-learning, then a 2-day course that includes training and assessment.
 - **Cost:** British Cycling lists courses at £205 to £275, set by each provider.
 - **What's next:** Leader track: [Trail Leader Award](https://www.extremesportspromotions.com/guides/trail-leader-award-uk). Coach track: [Introduction to Coaching – Off-Road](https://www.extremesportspromotions.com/guides/introduction-to-coaching-off-road-uk).

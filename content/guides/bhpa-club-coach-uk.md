@@ -16,7 +16,7 @@ draft: false
 - **What you need first:** BHPA Annual Flying Membership, CP with 10 hours (hill) or 50 flights (tow) logged since CP, and your club's backing.
 - **What you'll learn:** Safe ways to guide Club Pilots.
 - **How long it takes:** The Club Coach course runs over a weekend (two days). The BHPA's current list runs to March 2027.
-- **Cost:** £35 a person, or £25 for a retake (BHPA, 2026). Registering as a Club Coach is free.
+- **Cost:** £35 a person, or £25 for a retake (BHPA, 2026). There's no charge to register as a Club Coach.
 - **What's next:** Coaching track: Senior Coach. Teaching track: [Instructor](https://www.extremesportspromotions.com/guides/bhpa-paragliding-instructor-uk), which needs the Pilot rating. Pilot track: [Advanced Pilot](https://www.extremesportspromotions.com/guides/advanced-pilot-paragliding-uk), which needs a Club Coach course.
 
 Love your club and want to give back? Club coaches help newly qualified pilots build skills and progress safely. Club Coach and Senior Coach licences aren't tied to one discipline.

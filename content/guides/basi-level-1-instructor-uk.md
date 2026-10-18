@@ -23,7 +23,7 @@ BASI is the British Association of Snowsport Instructors, and its system runs fr
 
 ## Before the course
 
-Complete BASI's online learning modules in your Member Area. They cover its core teaching and technical principles.
+Complete BASI's online learning modules in your Member Area.
 
 ## On the course
 

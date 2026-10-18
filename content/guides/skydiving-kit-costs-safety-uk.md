@@ -13,11 +13,7 @@ featured: false
 draft: false
 ---
 
-- **What it is:** The rules, costs and kit basics behind every stage of the pathway.
 - **What you need first:** Nothing. Read this before you book.
-- **What you'll learn:** Who can jump, what it costs and when to think about your own kit.
-- **How long it takes:** A few minutes.
-- **Cost:** See the What it costs box below.
 - **What's next:** Head back to the [Skydiving hub](/guides/hub/skydiving) to pick your next step.
 
 Skydiving runs on rules, and they're the reason it stays fun. Every affiliated UK centre trains to British Skydiving's rules.

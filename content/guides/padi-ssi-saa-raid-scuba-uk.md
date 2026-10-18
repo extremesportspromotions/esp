@@ -13,10 +13,7 @@ heroPosition: "66% 50%"
 draft: false
 ---
 
-- **What it is:** The other diving agencies the HSE approves, how their grades line up with BSAC, and the law on paid dives.
 - **What you need first:** Nothing.
-- **What you'll learn:** Who's approved, how grades compare, and what a paid dive must include.
-- **How long it takes:** A few minutes to read.
 - **Cost:** A PADI or SSI Open Water course at a UK centre is usually £445 to £900. A try dive is usually £55 to £160.
 - **What's next:** Crossing over? Try [BSAC Sports Diver](https://www.extremesportspromotions.com/guides/bsac-sports-diver-uk). Going pro? PADI below, or [BSAC instructor grades](https://www.extremesportspromotions.com/guides/bsac-instructor-grades-uk).
 

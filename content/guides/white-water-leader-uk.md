@@ -15,7 +15,6 @@ draft: false
 
 - **What it is:** The award for leading groups of white water boats on grade 2(3) rivers.
 - **What you need first:** Membership, a 2-day first aid award, safeguarding training, and a white water safety award. Minimum age 16.
-- **What you'll learn:** Group-focused leadership, plus personal paddling and rescue skills.
 - **How long it takes:** Optional training (normally 2 to 5 days), then a 1 to 2 day assessment.
 - **Cost:** Training plus assessment can reach about £500.
 - **What's next:** Leading track: Advanced White Water Leader (18 or over, with Advanced White Water Safety). Coaching track: [Coach Award](https://www.extremesportspromotions.com/guides/coach-award-paddlesport-uk).
@@ -38,7 +37,7 @@ It's your ticket to leading safe, quality, enjoyable river trips, built around w
 - Rescue skills.
 - Background knowledge, understanding and experience.
 
-Training is optional. Awarding Body training courses usually run over 2 to 5 days, or you can shadow other leaders, get private tuition or train at work, using the assessment guidance, checklist and self-analysis tool. There's also a logbook and free Leadership eLearning to support you.
+Training is optional. Awarding Body training courses usually run over 2 to 5 days, or you can shadow other leaders, get private tuition or train at work, using the assessment guidance, checklist and self-analysis tool. There's also a logbook and Leadership eLearning at no cost to support you.
 
 > [!SAFETY]
 > In trouble at the coast? Call 999 or 112 and ask for the coastguard. Inland, on a river or lake, ask for Fire and Rescue. That's the [RNLI's advice](https://rnli.org/water-safety/how-to-call-for-help-at-sea).

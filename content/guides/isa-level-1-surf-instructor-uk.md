@@ -34,10 +34,8 @@ The ISA is the world governing body for surfing, recognised by the IOC. Scottish
 ## Where you'll find it in the UK
 
 - **Scotland:** Scottish Surfing runs ISA Level 1 courses. In 2026 they're at no cost to members of Scottish Surfing affiliated surf clubs.
-- **Wales:** the Welsh Surfing Federation is the governing body for surfing in Wales. Ask it about ISA courses there.
+- **Wales:** the Welsh Surfing Federation is the governing body for surfing in Wales.
 - **England:** Surfing England recognises ISA Level 1 through Recognised Prior Learning. You get its Surf Instructor: Recreation award (SE1). It also says that from 2028 it can no longer accept international and foreign surf coach certificates.
-
-Coaching in England on an ISA award? Recognised Prior Learning is how you switch.
 
 > [!SAFETY]
 > Caught in a rip? Don't swim against it. Stay with your board, or Float to Live if you don't have one. If you can stand, wade, don't swim. Wade or swim parallel to the shore until you're free, then head for shore. Raise your hand and shout for help. See someone else in trouble? Alert the lifeguards or call 999 or 112 and ask for the coastguard. That's the [RNLI's advice](https://rnli.org/safety/know-the-risks/rip-currents).

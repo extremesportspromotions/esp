@@ -29,7 +29,7 @@ draft: false
 - Grade 3/4: Advanced White Water Safety, Advanced White Water Safety and Rescue Training, or Rescue 3 WRT Pro.
 - Aged 16 or over at assessment.
 
-Training is optional (Awarding Body courses usually run 2 to 5 days), and there's free Leadership eLearning.
+Training is optional (Awarding Body courses usually run 2 to 5 days), and there's Leadership eLearning at no cost.
 
 The Stadium Raft Guide covers man-made white water courses, with the same membership, first aid and safeguarding prerequisites. Raft Trip Leaders need a 3-day first aid award, an advanced white water safety award and a Raft Guide award: Grade 3 or 4 to lead Grade 3 trips, Grade 4 to lead Grade 4.
 

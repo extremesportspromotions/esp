@@ -12,10 +12,7 @@ featured: false
 draft: false
 ---
 
-- **What it is:** The highest British Skydiving licence.
 - **What you need first:** A C Licence and at least 1,000 jumps.
-- **What you'll learn:** Whatever your discipline demands. By now you're the experienced one on the load.
-- **How long it takes:** The minimum is 1,000 jumps.
 - **Cost:** There's no course price. You get here jump by jump.
 - **What's next:** [Disciplines and grades](https://www.extremesportspromotions.com/guides/skydiving-disciplines-and-grades-uk)
 

@@ -15,9 +15,6 @@ draft: false
 
 - **What it is:** Snowsport England's coaching qualifications for competitive and freestyle snowsports.
 - **What you need first:** Snowsport England publishes the entry requirements on each course listing.
-- **What you'll learn:** Coaching racers, or park, pipe and moguls riders, from club level to elite development.
-- **How long it takes:** It depends on the pathway and level.
-- **Cost:** Set by Snowsport England. Check the course listing when you book.
 - **What's next:** [Competitions](https://www.extremesportspromotions.com/guides/snowsport-competitions-uk).
 
 Some riders want gates. Some want rails and kickers. These pathways train the coaches who get them there.

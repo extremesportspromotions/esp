@@ -13,11 +13,7 @@ heroPosition: "59% 50%"
 draft: false
 ---
 
-- **What it is:** BKSA's British Championship Series at home, and the GKA Kite World Tour abroad.
 - **What you need first:** BKSA membership for British events. The GKA's minimum age is 14.
-- **What you'll learn:** Heats, judging and riding under pressure.
-- **How long it takes:** The 2026 British series ran from April to October.
-- **Cost:** GKA World Cup entry is €125 a discipline, plus GKA membership.
 - **What's next:** The GKA Kite World Tour.
 
 ## At home

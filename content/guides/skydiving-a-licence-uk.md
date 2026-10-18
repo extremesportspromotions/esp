@@ -28,8 +28,6 @@ This is the moment it gets real. Consolidation jumps turn what you learned on yo
 - After AFF, make at least 10 consolidation jumps.
 - Pass the Canopy Training written exam.
 
-Then you're eligible for your A Licence and cleared to jump on your own or with a coach.
-
 ## What it opens up
 
 With an A Licence you can take part in solo and group jumps and start your first discipline sticker, such as FS1 or CT1. See [disciplines and grades](https://www.extremesportspromotions.com/guides/skydiving-disciplines-and-grades-uk).

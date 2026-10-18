@@ -19,7 +19,7 @@ draft: false
 - **Cost:** Registration is £69 for Foundation and Development Coach, and £103 for Performance Coach. Course prices are set by providers.
 - **What's next:** [Climbing competitions](https://www.extremesportspromotions.com/guides/climbing-competitions-uk) (climbing track)
 
-Instructors keep people safe. Coaches make them better. Mountain Training has three coaching levels: Foundation Coach, Development Coach and Performance Coach.
+Instructors keep people safe. Coaches make them better.
 
 ## Foundation Coach
 

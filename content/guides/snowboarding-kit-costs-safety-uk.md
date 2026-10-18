@@ -13,11 +13,7 @@ featured: false
 draft: false
 ---
 
-- **What it is:** The costs, bodies and slope rules behind the pathway.
 - **What you need first:** Nothing. Read this before you book.
-- **What you'll learn:** What things typically cost, who's in charge of what, and the code every skier and snowboarder follows.
-- **How long it takes:** A few minutes.
-- **Cost:** See the What it costs box below.
 - **What's next:** You've reached the end of both tracks.
 
 Good kit and good habits keep you riding all season.

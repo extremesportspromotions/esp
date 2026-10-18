@@ -17,7 +17,6 @@ draft: false
 - **What you need first:** Level 1 in the same discipline, or a recognised equivalent. The minimum age is 16.
 - **What you'll learn:** Teaching from beginner to advanced, structured lessons, and observing riders and giving feedback.
 - **How long it takes:** Two days (14 hours) of training and a formal one-day assessment.
-- **Cost:** Set by Snowsport England. Check the course listing when you book.
 - **What's next:** Skiers: [Ski Development Coach (Levels 3 and 4)](https://www.extremesportspromotions.com/guides/snowsport-england-ski-development-coach-uk). Snowboarders: [coaching pathways](https://www.extremesportspromotions.com/guides/snowsport-coaching-pathways-uk) or [the BASI track](https://www.extremesportspromotions.com/guides/basi-level-1-instructor-uk).
 
 This is where you stop assisting and start running the show.

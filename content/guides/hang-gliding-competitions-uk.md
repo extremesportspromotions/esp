@@ -12,10 +12,7 @@ heroAlt: "Yellow hang glider racing past a forested mountainside"
 draft: false
 ---
 
-- **What it is:** Cross-country racing and leagues for hang glider pilots, run under the BHPA's hang gliding competitions panel.
-- **What you need first:** Normally the Pilot rating, because that's what lets you fly cross-country under BHPA rules. At BHPA-sanctioned events, Club Pilots can fly limited corridor tasks after a documented briefing. Each event sets its own entry rules.
-- **What you'll learn:** Task flying, retrieves and how your flying stacks up against other pilots.
-- **How long it takes:** British Open Series rounds run for about eight days, with part-week entry options.
+- **What you need first:** Normally the Pilot rating, because that's what lets you fly cross-country under BHPA rules. At BHPA-sanctioned events, Club Pilots can fly limited corridor tasks after a documented briefing.
 - **Cost:** The panel prices each round, with a lower early-bird fee and part-week options. Prices come out with each round's information.
 - **What's next:** Pilot track: international events such as the Class 1 Worlds. Coaching track: [Club Coach](https://www.extremesportspromotions.com/guides/hang-gliding-coaches-instructors-uk).
 

@@ -14,9 +14,7 @@ draft: false
 
 - **What it is:** Surfing England's accreditation for surf schools that meet or beat industry best practice.
 - **What you need first:** Qualified instructors, insurance, risk assessments, a safeguarding policy and DBS checks.
-- **What you'll learn:** What an accredited school runs to, and why it matters on the beach.
 - **How long it takes:** An in-person inspection before approval, then a visit every year or two.
-- **Cost:** A two-hour group lesson with kit usually costs £45 to £70.
 - **What's next:** Learners: [How to start surfing](https://www.extremesportspromotions.com/guides/surfing-for-beginners-uk). Instructors: [Surf Instructor: Recreation](https://www.extremesportspromotions.com/guides/surf-instructor-recreation-award-uk).
 
 Accreditation is Surfing England's independent stamp for councils, beach owners, insurers and customers. It also says working to industry best practice is a requirement to operate on many beaches.

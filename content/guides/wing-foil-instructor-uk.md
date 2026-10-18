@@ -17,7 +17,6 @@ draft: false
 - **What you need first:** RYA Improve Your Wingsurfing, first aid, Powerboat Level 2, Safe and Fun, and RYA membership. Minimum age 16.
 - **What you'll learn:** Teaching the RYA Wing Scheme, from beginners up.
 - **How long it takes:** Two days for Wingsurfing Instructor. Two to four days for Wingfoiling Instructor.
-- **Cost:** Not listed on the RYA page. The training centre sets it.
 - **What's next:** Wingfoiling Instructor, then Wingsurfing Trainer.
 
 Want to teach people to fly? Wing foiling is the new kid on the beach, and the RYA has a clear instructor route. BKSA also runs its own wing instructor course (Easyriders, Poole, 29 March to 2 April 2027), but its site doesn't list separate wing prerequisites.

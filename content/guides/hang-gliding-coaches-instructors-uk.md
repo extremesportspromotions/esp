@@ -12,10 +12,7 @@ heroAlt: "Hang glider pilot launching a red wing while helpers watch from the hi
 draft: false
 ---
 
-- **What it is:** Club coaching, the hang gliding tow, aerotow and power coach licences, and the school Instructor licences.
 - **What you need first:** Club Coach: CP with 10 hours (hill) or 50 flights (tow) logged since CP. Each route below lists its own.
-- **What you'll learn:** Helping club pilots, running tow or aerotow operations, converting pilots to new launch methods, or teaching beginners in a school.
-- **How long it takes:** Set by logged hours, flights and days, as listed below.
 - **Cost:** BHPA fees from 1 April 2026: Club Coach course £35 (£25 retake), Instructor course £450, Senior Coach course £450, Senior Instructor course £200. Trainee Instructor registration is £40 and the Instructor exam is £50. Costs can vary by location.
 - **What's next:** Coaching track: Club Coach > Tow, Aerotow or Power Coach > the senior coach licences. Teaching track: Trainee Instructor > Instructor > Senior Instructor. Pilot track: [Advanced Pilot](https://www.extremesportspromotions.com/guides/pilot-advanced-pilot-hang-gliding-uk), which needs the Club Coach course anyway.
 

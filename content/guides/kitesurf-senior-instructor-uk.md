@@ -16,10 +16,9 @@ draft: false
 - **What you need first:** Level 2 is designed for experienced Level 1 instructors, and Senior for experienced Level 2 instructors. BKSA doesn't publish a fixed entry list for either.
 - **What you'll learn:** How to run a school at Senior level, and advanced coaching as a BKSA Coach.
 - **How long it takes:** BKSA doesn't publish course lengths for these levels. Each ends with a completion certificate and a post-course action plan.
-- **Cost:** Not listed on BKSA's training page. Ask when you book.
 - **What's next:** BKSA Coach or Trainer Examiner.
 
-From your first students to running the whole beach. Here's where the BKSA ladder goes after Level 1.
+From your first students to running the whole beach.
 
 ## The ladder
 
@@ -28,8 +27,6 @@ From your first students to running the whole beach. Here's where the BKSA ladde
 - **BKSA Coach:** teach advanced techniques in your discipline, work independently of schools and run clinics abroad.
 - **Trainer Examiner:** run instructor training courses.
 - **Head of Training:** can change the training pathway and its rules.
-
-Coach, Trainer Examiner and Head of Training are the next steps for Senior Instructors.
 
 ## Keep it current
 

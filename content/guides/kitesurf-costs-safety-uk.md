@@ -13,14 +13,10 @@ heroPosition: "35% 50%"
 draft: false
 ---
 
-- **What it is:** Prices, the bodies in charge, and staying safe.
 - **What you need first:** Nothing. Start here.
-- **What you'll learn:** What lessons cost, who sets the rules, and the safety basics.
-- **How long it takes:** A five-minute read.
-- **Cost:** A school taster or intro day is usually £130 to £199 with kit.
 - **What's next:** [How to start kiteboarding](https://www.extremesportspromotions.com/guides/kiteboarding-for-beginners-uk).
 
-BKSA says most people can be up and riding after a 3-day course at an approved school. Here's what it costs and how to stay safe while you get there.
+BKSA says most people can be up and riding after a 3-day course at an approved school.
 
 ## Prices
 

@@ -13,11 +13,7 @@ heroPosition: "13% 50%"
 draft: false
 ---
 
-- **What it is:** The costs, bodies and safety basics behind the pathway.
 - **What you need first:** Nothing. Read this before you book.
-- **What you'll learn:** What things typically cost and who's in charge of what.
-- **How long it takes:** A few minutes.
-- **Cost:** See Typical UK prices below.
 - **What's next:** Head back to the [Mountain biking hub](/guides/hub/mountain-biking) to pick your next step.
 
 A tuned bike, a good helmet and honest decisions. That's most of it.

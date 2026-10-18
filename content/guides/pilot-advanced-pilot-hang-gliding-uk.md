@@ -16,8 +16,7 @@ draft: false
 - **What it is:** Pilot is the BHPA's 'fully qualified' rating. Advanced Pilot is for the above-average pilot who has mastered their glider.
 - **What you need first:** Club Pilot (Novice) for Pilot. The Pilot rating for Advanced Pilot.
 - **What you'll learn:** Thermalling, landing accuracy, air law, navigation and weather, then cross-country flying.
-- **How long it takes:** Pilot needs at least 25 hours and 50 flights for hill pilots, or 75 flights for tow pilots. Advanced Pilot needs 100 logged hours.
-- **Cost:** £20 for each rating (BHPA fees from 1 April 2026). The online mock exams are free.
+- **Cost:** £20 for each rating (BHPA fees from 1 April 2026). The online mock exams are at no cost.
 - **What's next:** Pilot track: [competitions](https://www.extremesportspromotions.com/guides/hang-gliding-competitions-uk), then FAI Delta badges. Passenger track: [Dual Pilot](https://www.extremesportspromotions.com/guides/hang-gliding-dual-pilot-uk). Coaching and teaching track: [coaches and instructors](https://www.extremesportspromotions.com/guides/hang-gliding-coaches-instructors-uk) (Instructor needs Pilot plus 25 launches in the environment).
 
 ## Pilot (P)
@@ -43,7 +42,7 @@ This is the BHPA's 'fully qualified' rating, and it's your ticket to cross-count
 - 3 thermal climbs of over 1,000ft.
 - Fly safely with others, keep a good look-out and follow the Rules of the Air.
 
-**The exam:** sit it once your flying tasks are done, with a Coach or Instructor who holds the rating as invigilator. Hill pilots can take five short online papers (meteorology, air law, principles of flight in a hang gliding version, human factors and airmanship, and navigation), with 75% needed on each. The other option is one paper of 1 hour 45 minutes, with 70% needed in each section, and that's the only option for tow pilots. Pilots with a motor (self-propelled hang gliders) usually sit the Pilot (Power) paper. The BHPA's free mock exams online show you the level.
+**The exam:** sit it once your flying tasks are done, with a Coach or Instructor who holds the rating as invigilator. Hill pilots can take five short online papers (meteorology, air law, principles of flight in a hang gliding version, human factors and airmanship, and navigation), with 75% needed on each. The other option is one paper of 1 hour 45 minutes, with 70% needed in each section, and that's the only option for tow pilots. Pilots with a motor (self-propelled hang gliders) usually sit the Pilot (Power) paper. The BHPA's no-cost mock exams online show you the level.
 
 Without Pilot, you can't fly cross-country under BHPA rules and its insurance won't cover you. The only exceptions are briefed corridor tasks at BHPA-sanctioned events, or one set up for you by an Instructor or Senior Coach.
 

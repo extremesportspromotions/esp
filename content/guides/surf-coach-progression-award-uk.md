@@ -16,7 +16,6 @@ draft: false
 - **What it is:** Surfing England's award (SE2) for coaching improver and intermediate surfers on unbroken waves, deeper than waist depth.
 - **What you need first:** A Level 1 instructor award, a year teaching beginners, the full NVBLQ beach lifeguard award and safeguarding training.
 - **What you'll learn:** Getting out back, positioning, wave selection, take-offs, turns and feedback.
-- **How long it takes:** A 2-day course, 20 logged lessons (30 to 40 hours), then a final assessed lesson. You have up to a year.
 - **Cost:** Surfing England lists £375 (checked October 2026), plus coach membership.
 - **What's next:** Surf Coach: Performance (SE3), launching in 2027.
 

@@ -15,7 +15,6 @@ draft: false
 - **What it is:** The UK's personal paddling awards, from your first go to discipline skills.
 - **What you need first:** Nothing. No prerequisites, and they're open to all ages.
 - **What you'll learn:** Confidence on sheltered water, then skills and decisions in the craft you choose.
-- **How long it takes:** No set time. It depends on how you develop.
 - **Cost:** A lake taster or half-day guided paddle usually costs £35 to £90.
 - **What's next:** Skills track: [Safety and rescue](https://www.extremesportspromotions.com/guides/paddlesport-safety-rescue-uk). Teaching track: [Paddlesport Instructor](https://www.extremesportspromotions.com/guides/paddlesport-instructor-uk).
 

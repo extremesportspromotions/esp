@@ -15,8 +15,6 @@ draft: false
 - **What it is:** Two-day Mountain Training skills courses that help you become an independent hill walker.
 - **What you need first:** Nothing for Hill Skills. Mountain Skills asks for some hill walking experience and a reasonable level of fitness. The minimum age for both is 10.
 - **What you'll learn:** Planning a route, what to pack, navigation, common hazards and what to do in an emergency. Mountain Skills adds simple scrambling.
-- **How long it takes:** 2 days for each course.
-- **Cost:** Set by each provider. Ask when you book.
 - **What's next:** Walking track: [Lowland Leader and Hill and Moorland Leader](https://www.extremesportspromotions.com/guides/walking-group-leader-awards-uk). Climbing track: [Rock Skills courses](https://www.extremesportspromotions.com/guides/rock-skills-courses-uk)
 
 Map in hand, ridge ahead, and nobody telling you which way to go. That's the goal of these two courses.

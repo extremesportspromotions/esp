@@ -13,11 +13,7 @@ heroPosition: "60% 50%"
 draft: false
 ---
 
-- **What it is:** Prices, the bodies in charge, and how to stay safe in the surf.
 - **What you need first:** Nothing. Start here.
-- **What you'll learn:** What lessons cost, who sets the rules, and rip-current basics.
-- **How long it takes:** A five-minute read.
-- **Cost:** A two-hour group lesson with kit usually costs £45 to £70.
 - **What's next:** [How to start surfing](https://www.extremesportspromotions.com/guides/surfing-for-beginners-uk).
 
 ## Prices
