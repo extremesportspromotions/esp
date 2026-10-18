@@ -18,6 +18,8 @@ export type Sport = {
   notice?: string;
   /** Optional wider label (map filters, cards and popups, guide filters, enquiry form) instead of `name` */
   mapLabel?: string;
+  /** Set false to keep a sport off the homepage carousel (it still appears on the map, guides and enquiry form) */
+  carousel?: boolean;
 };
 
 export const sports: Sport[] = [
@@ -133,9 +135,19 @@ export const sports: Sport[] = [
     video: "/carousel-clips/carousel-10-skateboarding.mp4",
     credit: "blackmarketmusic, Pixabay Content License, https://pixabay.com/videos/id-275498/",
     name: "Skateboarding",
-    mapLabel: "Skateboarding & BMX",
     description:
       "Learn park and street basics on a skateboard or a BMX, or refine technical lines, with coaches who know the scene.",
+    image: "/sports/skateboarding.jpg",
+    alt: "Skateboarder mid-air grab at a skatepark against a sunset sky",
+    imagePosition: "50% 32%",
+  },
+  {
+    id: "bmx",
+    carousel: false,
+    guide: "/guides/skateboarding-for-beginners-uk",
+    name: "BMX",
+    description:
+      "Try BMX racing or freestyle at a club or track, with coaches who teach bike handling, gate starts and park skills.",
     image: "/sports/skateboarding.jpg",
     alt: "Skateboarder mid-air grab at a skatepark against a sunset sky",
     imagePosition: "50% 32%",
@@ -201,3 +213,6 @@ export const sports: Sport[] = [
     imagePosition: "50% 45%",
   },
 ];
+
+/** The homepage carousel's sports (exactly 15). BMX and any other carousel: false sport are left out. */
+export const carouselSports: Sport[] = sports.filter((s) => s.carousel !== false);

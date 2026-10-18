@@ -117,7 +117,7 @@ Contact: [events@britishcycling.org.uk](mailto:events@britishcycling.org.uk) or 
 - **Spring to autumn, dates TBC.** [National Series](https://www.britishcycling.org.uk/nationalmtbseries) for cross-country and downhill.
 - **Summer, dates TBC.** National Championships, including [BMX Race](https://www.britishcycling.org.uk/nationalbmxchampionships). In 2026 the BMX British Championships ran in late August.
 
-**To enter:** You need a British Cycling race licence. For the National Championships you also need Silver or Gold membership and UK citizenship, and your licence must show GBR and be issued at least 28 days before. BMX Championship places have gone first to the top-ranked riders in the National Series.
+**To enter:** You need a British Cycling race licence. For the National Championships you also need British Cycling membership and UK citizenship, and your licence must show GBR and be issued at least 28 days before. BMX Championship places have gone first to the top-ranked riders in the National Series.
 
 **To win:** Series titles go to the most points over the rounds. A championship goes to the fastest rider on the day.
 

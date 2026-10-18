@@ -2778,7 +2778,7 @@
   {
     "id": "skateboarding-cornwall-bmx-racing-club-84213106",
     "name": "Cornwall BMX Racing Club",
-    "sportId": "skateboarding",
+    "sportId": "bmx",
     "subActivity": "bmx",
     "town": "Blackwater",
     "region": "United Kingdom",
@@ -2790,7 +2790,7 @@
   {
     "id": "skateboarding-lee-valley-velopark-bmx-48947970",
     "name": "Lee Valley VeloPark (BMX)",
-    "sportId": "skateboarding",
+    "sportId": "bmx",
     "subActivity": "bmx",
     "town": "London",
     "region": "United Kingdom",
@@ -2803,7 +2803,7 @@
   {
     "id": "skateboarding-national-cycling-centre-bmx-platt-fields-98313018",
     "name": "National Cycling Centre BMX (Platt Fields)",
-    "sportId": "skateboarding",
+    "sportId": "bmx",
     "subActivity": "bmx",
     "town": "Manchester",
     "region": "United Kingdom",
@@ -2816,7 +2816,7 @@
   {
     "id": "skateboarding-peckham-bmx-club-64447104",
     "name": "Peckham BMX Club",
-    "sportId": "skateboarding",
+    "sportId": "bmx",
     "subActivity": "bmx",
     "town": "London",
     "region": "United Kingdom",
@@ -2829,7 +2829,7 @@
   {
     "id": "skateboarding-bruntwood-park-bmx-club-17806220",
     "name": "Bruntwood Park BMX Club",
-    "sportId": "skateboarding",
+    "sportId": "bmx",
     "subActivity": "bmx",
     "town": "Cheadle",
     "region": "United Kingdom",
@@ -2840,7 +2840,7 @@
   {
     "id": "skateboarding-llynfi-bmx-racing-club-11112314",
     "name": "Llynfi BMX Racing Club",
-    "sportId": "skateboarding",
+    "sportId": "bmx",
     "subActivity": "bmx",
     "town": "Maesteg",
     "region": "United Kingdom",

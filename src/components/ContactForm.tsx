@@ -618,7 +618,7 @@ export default function ContactForm() {
                       Which sport?
                     </legend>
                     <p className="mb-4 text-sm text-[#1C1917]/60">
-                      Pick the sport you want to train in. Related activities sit under the closest sport, for example skiing under snowboarding, BMX under skateboarding and indoor skydiving under skydiving.
+                      Pick the sport you want to train in. Related activities sit under the closest sport, for example skiing under snowboarding and indoor skydiving under skydiving.
                     </p>
                     <div
                       className="grid grid-cols-2 gap-2 sm:grid-cols-3"

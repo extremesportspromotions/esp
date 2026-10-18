@@ -9,8 +9,10 @@
  * - Three rows: experience day, "Become qualified" (always that label), then hourly (or per dive, per coached
  *   jump or per day where the notes say so). Every value starts "Typical UK price:" (BASE: "Typical price abroad:"), with the course name
  *   in short brackets. If the notes have no range, leave the row out.
- * - Related activities (skiing, BMX, rafting, coasteering, rock climbing, indoor
+ * - Related activities (skiing, rafting, coasteering, rock climbing, indoor
  *   skydiving) share the parent sport's box.
+ * - BMX has its own sport id but no entry: the price file has no BMX figures of its own
+ *   (it says to use the skateboarding ones, which are for a board and pads), so BMX pages show no box.
  * - These are what a club, school or coach charges. Never mention the ESP match fee here.
  */
 

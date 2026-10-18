@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { sports } from "@/data/sports";
+import { carouselSports as sports } from "@/data/sports";
 
 const SWIPE_THRESHOLD = 50;
 

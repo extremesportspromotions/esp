@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import GuidesHeader from "@/components/guides/GuidesHeader";
 import GuidesBrowser, { GuidesBrowserView } from "@/components/guides/GuidesBrowser";
 import { getAllGuides, getFeaturedGuide } from "@/lib/guides";
-import { sports } from "@/data/sports";
+import { carouselSports as sports } from "@/data/sports";
 import HubTiles from "@/components/guides/HubTiles";
 import { getHubSummaries } from "@/lib/hubs";
 
