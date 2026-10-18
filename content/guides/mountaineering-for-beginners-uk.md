@@ -7,8 +7,8 @@ category: Getting started
 author: Matthew Thornton
 date: 2026-10-03
 updated: 2026-10-11
-heroAlt: "A person with a blue backpack, seen from behind, sitting on a grassy ridge above a cloud-filled valley"
-heroImage: "/sports/mountaineering.jpg"
+heroAlt: "A woman rock climbing on a sunlit cliff face above a calm blue sea"
+heroImage: "/guides/mountaineering-for-beginners-uk-hero.jpg"
 featured: false
 draft: false
 ---

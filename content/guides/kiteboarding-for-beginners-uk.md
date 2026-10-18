@@ -6,8 +6,8 @@ sport: kiteboarding
 category: Getting started
 author: ESP Editorial
 date: 2026-10-03
-heroAlt: "A rider on a board, pulled by a large blue kite, crossing green water with hills on the horizon"
-heroImage: "https://images.unsplash.com/photo-1768639400733-45d6cead226a?auto=format&fit=crop&w=2000&q=80"
+heroAlt: "A kitesurfer riding across choppy turquoise sea, spray behind the board"
+heroImage: "/guides/kiteboarding-for-beginners-uk-hero.jpg"
 featured: false
 draft: false
 ---
