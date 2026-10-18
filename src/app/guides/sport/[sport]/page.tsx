@@ -54,8 +54,8 @@ export default async function SportGuidesPage({ params }: PageProps<"/guides/spo
           intro={sport.description}
           image={{ src: sport.image, alt: sport.alt, position: sport.imagePosition }}
         >
-          <nav aria-label="Breadcrumb" className="mt-6 text-sm text-[#1C1917]/70">
-            <Link href="/guides" className="hover:text-[#1C1917] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
+          <nav aria-label="Breadcrumb" className="mt-6 text-sm font-medium text-white">
+            <Link href="/guides" className="underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
               ← All guides
             </Link>
           </nav>

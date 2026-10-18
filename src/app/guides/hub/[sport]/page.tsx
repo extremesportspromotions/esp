@@ -71,16 +71,16 @@ export default async function SportHubPage({ params }: PageProps<"/guides/hub/[s
           image={{ src: hub.firstGuide.heroImage, alt: "", position: hub.firstGuide.heroPosition }}
           compact
         >
-          <nav aria-label="Breadcrumb" className="mt-6 text-sm text-[#1C1917]/70">
+          <nav aria-label="Breadcrumb" className="mt-6 text-sm font-medium text-white">
             <ol className="flex flex-wrap items-center gap-2">
               <li>
-                <Link href="/guides" className={`hover:text-[#1C1917] ${focus}`}>
+                <Link href="/guides" className={`underline-offset-4 hover:underline ${focus}`}>
                   Guides
                 </Link>
               </li>
               <li aria-hidden>/</li>
               <li>
-                <Link href={`/guides/sport/${hub.sport}`} className={`hover:text-[#1C1917] ${focus}`}>
+                <Link href={`/guides/sport/${hub.sport}`} className={`underline-offset-4 hover:underline ${focus}`}>
                   {hub.sportName}
                 </Link>
               </li>

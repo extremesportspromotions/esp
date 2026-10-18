@@ -72,10 +72,21 @@ export function getHubSports(): string[] {
 }
 
 /** Basic hub info (no anchor checks) for links from the Guides page and articles. */
-export function getHubSummaries(): { sport: string; title: string; href: string; stepCount: number; slugs: string[] }[] {
+export function getHubSummaries(): {
+  sport: string;
+  title: string;
+  href: string;
+  stepCount: number;
+  slugs: string[];
+  image?: { src: string; alt: string; position?: string };
+}[] {
+  const guides = getAllGuides();
   return readHubFiles().map(({ data }) => {
     const slugs = data.sections.flatMap((s) => s.items.map((i) => i.slug));
-    return { sport: data.sport, title: data.title, href: hubHref(data.sport), stepCount: slugs.length, slugs };
+    // Tile photo = the hub's first guide (the beginner's guide) hero.
+    const first = guides.find((g) => g.slug === slugs[0]);
+    const image = first ? { src: first.heroImage, alt: first.heroAlt, position: first.heroPosition } : undefined;
+    return { sport: data.sport, title: data.title, href: hubHref(data.sport), stepCount: slugs.length, slugs, image };
   });
 }
 

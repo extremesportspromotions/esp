@@ -2,7 +2,11 @@
  * Pings Matthew on Telegram when an enquiry lands. The enquiry itself still
  * goes through FormSubmit; this is only the alert.
  */
+import { sports } from "@/data/sports";
+
 export const runtime = "nodejs";
+
+const EMAIL_RE = /^[^\s@<>"]{1,64}@[^\s@<>"]{1,190}\.[a-z]{2,24}$/i;
 
 const ALLOWED_HOSTS = new Set([
   "www.extremesportspromotions.com",
@@ -47,6 +51,15 @@ export async function POST(req: Request): Promise<Response> {
     return Response.json({ ok: false }, { status: 400 });
   }
   if (typeof body._honey === "string" && body._honey.trim()) return Response.json({ ok: true });
+
+  // Only alert for a real enquiry: name, valid email and a known sport.
+  const name = textOf(body.name, 100);
+  const email = textOf(body.email, 200);
+  const sport = textOf(body.sport, 60);
+  const knownSport = sports.some((s) => s.name === sport || s.mapLabel === sport);
+  if (!name || !EMAIL_RE.test(email) || !knownSport) {
+    return Response.json({ ok: false }, { status: 400 });
+  }
 
   const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim() || "unknown";
   if (limited(`ip:${ip}`, 5, 10 * 60_000)) return Response.json({ ok: false }, { status: 429 });

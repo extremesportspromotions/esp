@@ -42,6 +42,7 @@ export default function GuidesIndexPage() {
           eyebrow="Information centre"
           title="ESP Guides"
           tagline="Learn extreme sports the right way — properly taught, safely progressed, right here in the UK."
+          image={{ src: "/sports/paragliding.jpg", alt: "Paraglider over a mountain valley" }}
           intro={`Straight-talking guides to getting started, staying safe and choosing the right instruction: ${sports.length} sports, plus how matching works. No hype, no shortcuts — just what you need to know before your first session.`}
         />
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">

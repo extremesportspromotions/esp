@@ -119,7 +119,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-transparent" aria-hidden />
             <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/60 to-transparent" aria-hidden />
             <div className="relative mx-auto w-full max-w-7xl px-4 pb-10 pt-24 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16">
-              <nav aria-label="Breadcrumb" className="mb-5 text-sm text-white/75">
+              <nav aria-label="Breadcrumb" className="mb-5 text-sm font-medium text-white">
                 <ol className="flex flex-wrap items-center gap-2">
                   <li>
                     <Link href="/guides" className="hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
@@ -145,8 +145,8 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
               <h1 className="font-display mt-4 max-w-4xl text-4xl font-black leading-[1.05] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)] sm:text-5xl lg:text-6xl">
                 {guide.title}
               </h1>
-              <p className="mt-4 max-w-3xl text-lg leading-relaxed text-white/85 sm:text-xl">{guide.description}</p>
-              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/75">
+              <p className="mt-4 max-w-3xl text-lg leading-relaxed text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)] sm:text-xl">{guide.description}</p>
+              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white">
                 <span>
                   By <span className="font-semibold text-white">{guide.author}</span>
                 </span>
