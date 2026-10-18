@@ -34,14 +34,11 @@ Love your club and want to give back? Club coaches help newly qualified pilots b
 - Successfully attend a Club Coach course.
 - Be recommended by your club (Chief Coach and Chair sign).
 
-Upcoming Club Coach courses on the BHPA list, each hosted by a club:
+Club Coach courses are hosted by clubs around the country. For current dates and contact details, see the [BHPA Courses](https://www.bhpa.co.uk/safety/courses) page. Further ahead, its list includes:
 
-- 5–6 December 2026: Suffolk HG.
 - 16–17 January 2027: Devon & Somerset.
 - 27–28 February 2027: Dales HG & PG.
 - 20–21 March 2027: Dunstable.
-
-Contact details are on the [BHPA Courses](https://www.bhpa.co.uk/safety/courses) page.
 
 ## Senior Coach prerequisites
 
