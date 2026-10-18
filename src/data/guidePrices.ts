@@ -58,6 +58,7 @@ export const GUIDE_PRICES: Record<string, GuidePriceRow[]> = {
     { label: "Experience day", text: "Typical UK price: £189 to £350 per person (bike and kit included)" },
     { label: "Become qualified", text: "Typical UK price: £425 to £560 (one-to-one development day)" },
     { label: "Hourly", text: "Typical UK price: £70 to £140 an hour (coached track time with a bike)" },
+    { label: "ACU race licence", text: "£98 a year (ACU's own 2026 fee, checked October 2026)" },
   ],
   "kiteboarding": [
     { label: "Experience day", text: "Typical UK price: £130 to £199 per person" },

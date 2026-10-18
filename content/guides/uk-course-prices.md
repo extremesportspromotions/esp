@@ -57,6 +57,7 @@ We searched course prices at clubs and schools across the UK, so you know what t
 - **Experience day:** Typical UK price: £189 to £350 per person (bike and kit included)
 - **Become qualified:** Typical UK price: £425 to £560 (one-to-one development day)
 - **Hourly:** Typical UK price: £70 to £140 an hour (coached track time with a bike)
+- **ACU race licence:** £98 a year (ACU's own 2026 fee, checked October 2026)
 
 ## [Kiteboarding](https://www.extremesportspromotions.com/guides/kiteboarding-for-beginners-uk)
 
