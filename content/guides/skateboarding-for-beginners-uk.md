@@ -46,4 +46,6 @@ British Cycling says full-face helmets are compulsory in BMX racing, and full-fi
 
 Skateboarding: [Skateboard GB](https://skateboardgb.org) describes itself as the national governing body and runs the coaching course, so it's the place to find out more. BMX: [British Cycling](https://www.britishcycling.org.uk) sets the UK safety standards and training awards.
 
-The [club map](https://www.extremesportspromotions.com/?sport=skateboarding#find-a-club) lists some of the UK clubs for this sport, and BMX clubs are on the [BMX club map](https://www.extremesportspromotions.com/?sport=bmx#find-a-club). It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).
+BMX clubs have their own [BMX club map](https://www.extremesportspromotions.com/?sport=bmx#find-a-club).
+
+The [club map](https://www.extremesportspromotions.com/?sport=skateboarding#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).
