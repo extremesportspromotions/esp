@@ -1,0 +1,97 @@
+{
+  "sport": "hang-gliding",
+  "title": "Hang gliding: from first flight to instructor",
+  "intro": "Start with your first flights at a BHPA school, then work up the pilot ratings and add launch methods. From there you can fly passengers, coach, teach or fly competitions. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: hang gliding",
+      "coursePricesAnchor": "hang-gliding",
+      "guides": [
+        "hang-gliding-kit-costs-safety-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "British Hang Gliding and Paragliding Association (BHPA)",
+          "href": "https://www.bhpa.co.uk"
+        }
+      ],
+      "governingBodiesAnchor": "15-hang-gliding",
+      "qualificationsAnchor": "15-hang-gliding"
+    },
+    "competitions": {
+      "guides": [
+        "hang-gliding-competitions-uk"
+      ],
+      "competitions2027Anchor": "paragliding-and-hang-gliding",
+      "competitions2027Label": "British competitions 2027: hang gliding"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "hang-gliding-for-beginners-uk",
+          "summary": "How to start hang gliding in the UK. Then work up the ratings."
+        }
+      ]
+    },
+    {
+      "title": "Pilot ratings track",
+      "items": [
+        {
+          "slug": "club-pilot-hang-gliding-uk",
+          "summary": "Hang gliding Elementary Pilot and Club Pilot: your school course."
+        },
+        {
+          "slug": "pilot-advanced-pilot-hang-gliding-uk",
+          "summary": "Hang gliding Pilot and Advanced Pilot ratings: what the BHPA asks for."
+        },
+        {
+          "slug": "hang-gliding-launch-environments-uk",
+          "summary": "Hill, winch, aerotow and power: adding hang gliding launch methods."
+        }
+      ]
+    },
+    {
+      "title": "Passenger track",
+      "intro": "Needs the Pilot rating (step 3).",
+      "items": [
+        {
+          "slug": "hang-gliding-dual-pilot-uk",
+          "summary": "BHPA Dual Pilot for hang gliders: flying with a passenger."
+        }
+      ]
+    },
+    {
+      "title": "Coaching and teaching track",
+      "intro": "Club Coach needs Club Pilot (step 2) plus 10 hours on the hill or 50 tow flights. The other coach awards need the Pilot rating (step 3). Instructor training needs the Pilot rating plus 25 launches.",
+      "items": [
+        {
+          "slug": "hang-gliding-coaches-instructors-uk",
+          "summary": "Hang gliding coaches and instructors: BHPA Tow, Aerotow and Instructor routes."
+        }
+      ]
+    },
+    {
+      "title": "Competition track",
+      "items": [
+        {
+          "slug": "hang-gliding-competitions-uk",
+          "summary": "Hang gliding competitions in the UK: the British Open Series and XC League."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "hang-gliding-kit-costs-safety-uk",
+          "summary": "Hang gliding in the UK: kit, prices, who's in charge and safety."
+        }
+      ]
+    }
+  ]
+}

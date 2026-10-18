@@ -144,3 +144,17 @@ All under the Pexels licence (free for commercial use, no attribution required).
 | `public/guides/scuba-medical-costs-safety-uk-hero.jpg` | Scuba medicals, costs and safety guide hero (top 38% cropped) | Harvey Clements | [Pexels](https://www.pexels.com/photo/15763632/) |
 
 All under the Pexels licence (free for commercial use, no attribution required). Downloaded at full size and saved as 2000px-wide JPEGs, quality 80, EXIF removed, on 18 October 2026.
+
+## Hang gliding hub
+
+| File | Used on | Photographer | Source |
+| --- | --- | --- | --- |
+| `public/guides/club-pilot-hang-gliding-uk-hero.jpg` | Elementary Pilot and Club Pilot guide hero (top 30% cropped) | Rémi Berger | [Pexels](https://www.pexels.com/photo/8390421/) |
+| `public/guides/pilot-advanced-pilot-hang-gliding-uk-hero.jpg` | Pilot and Advanced Pilot guide hero (top 40% cropped) | Rémi Berger | [Pexels](https://www.pexels.com/photo/person-hang-gliding-above-mountains-under-blue-sky-8390443/) |
+| `public/guides/hang-gliding-launch-environments-uk-hero.jpg` | Launch methods guide hero (top 32% cropped) | Rémi Berger | [Pexels](https://www.pexels.com/photo/person-hang-gliding-8390447/) |
+| `public/guides/hang-gliding-dual-pilot-uk-hero.jpg` | Dual Pilot guide hero (top 38% cropped) | Rémi Berger | [Pexels](https://www.pexels.com/photo/8390426/) |
+| `public/guides/hang-gliding-coaches-instructors-uk-hero.jpg` | Hang gliding coaches and instructors guide hero (top 37% cropped) | Rémi Berger | [Pexels](https://www.pexels.com/photo/8390418/) |
+| `public/guides/hang-gliding-competitions-uk-hero.jpg` | Hang gliding competitions guide hero (top 30% cropped) | Rémi Berger | [Pexels](https://www.pexels.com/photo/8390439/) |
+| `public/guides/hang-gliding-kit-costs-safety-uk-hero.jpg` | Hang gliding kit, costs and safety guide hero (top 26% cropped) | Rémi Berger | [Pexels](https://www.pexels.com/photo/8390411/) |
+
+All under the Pexels licence (free for commercial use, no attribution required). Downloaded at full size and saved as 2000px-wide JPEGs, quality 80, EXIF removed, on 18 October 2026.
