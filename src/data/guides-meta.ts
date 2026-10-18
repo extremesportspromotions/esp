@@ -37,6 +37,18 @@ export function getSport(id: string) {
   return sports.find((s) => s.id === id);
 }
 
+/** Credit line for a hero photo: Photo: "title" by author[, cropped], licence, via source. */
+export type HeroCredit = {
+  title: string;
+  author: string;
+  licence: string;
+  licenceUrl: string;
+  source: string;
+  sourceUrl: string;
+  /** Set true if the photo was cropped, so the credit says "cropped". */
+  cropped?: boolean;
+};
+
 /** Summary of a guide, safe to pass to client components. */
 export type GuideSummary = {
   slug: string;
@@ -51,6 +63,8 @@ export type GuideSummary = {
   heroImage: string;
   heroAlt: string;
   heroPosition?: string;
+  /** Optional photo credit shown under the hero (needed for CC BY / CC BY-SA photos). */
+  heroCredit?: HeroCredit;
   featured: boolean;
   draft: boolean;
   readingMinutes: number;

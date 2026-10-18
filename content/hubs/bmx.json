@@ -1,0 +1,56 @@
+{
+  "sport": "bmx",
+  "title": "BMX: from first ride to coach",
+  "intro": "Start at a club taster or track session, then follow the racing, freestyle or coaching track. Every step is here in order, with the UK bodies that run each one.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: skateboarding and BMX",
+      "coursePricesAnchor": "skateboarding-and-bmx",
+      "guides": ["bmx-costs-safety-uk"]
+    },
+    "governingBody": {
+      "links": [{ "label": "British Cycling", "href": "https://www.britishcycling.org.uk" }],
+      "governingBodiesAnchor": "10-skateboarding-and-bmx",
+      "qualificationsAnchor": "10-skateboarding-and-bmx"
+    },
+    "competitions": {
+      "guides": ["bmx-racing-competitions-uk"],
+      "competitions2027Anchor": "mountain-biking-and-bmx",
+      "competitions2027Label": "British competitions 2027: mountain biking and BMX"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        { "slug": "bmx-for-beginners-uk", "summary": "Try BMX at a club taster with a hired bike, pick race or freestyle, then join British Cycling." }
+      ]
+    },
+    {
+      "title": "Racing track",
+      "items": [
+        { "slug": "bmx-race-licence-uk", "summary": "BMX race licences in the UK: provisional and full." },
+        { "slug": "bmx-racing-competitions-uk", "summary": "BMX racing in the UK: motos, leagues and the National Series." }
+      ]
+    },
+    {
+      "title": "Freestyle track",
+      "items": [
+        { "slug": "bmx-freestyle-uk", "summary": "BMX freestyle in the UK: park, street and flatland." }
+      ]
+    },
+    {
+      "title": "Coaching track",
+      "intro": "Start with Introduction to Coaching (BMX Race or Freestyle), then Coaching in Context.",
+      "items": [
+        { "slug": "british-cycling-bmx-coach-uk", "summary": "Coaching BMX with British Cycling: Activity Coach to Coach Award." }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        { "slug": "bmx-costs-safety-uk", "summary": "BMX costs, kit, safety and who's in charge in the UK." }
+      ]
+    }
+  ]
+}

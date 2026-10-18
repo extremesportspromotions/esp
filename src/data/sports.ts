@@ -124,7 +124,7 @@ export const sports: Sport[] = [
     credit: "Ace_NoOne, CC BY-SA 2.0",
     name: "Wingsuit Flying",
     description:
-      "Advance from BASE/sky foundations into proximity flying with elite wingsuit mentors and safety protocols.",
+      "Fly a wingsuit from a plane once you're an experienced skydiver, trained by British Skydiving instructors at UK drop zones.",
     image:
       "https://images.unsplash.com/photo-1753010840134-45b2b059a7d5?auto=format&fit=crop&w=2000&q=80",
     alt: "Wingsuit flyer in a blue suit perched on a cliff edge above a mountain valley",
@@ -144,13 +144,12 @@ export const sports: Sport[] = [
   {
     id: "bmx",
     carousel: false,
-    guide: "/guides/skateboarding-for-beginners-uk",
+    guide: "/guides/bmx-for-beginners-uk",
     name: "BMX",
     description:
       "Try BMX racing or freestyle at a club or track, with coaches who teach bike handling, gate starts and park skills.",
-    image: "/sports/skateboarding.jpg",
-    alt: "Skateboarder mid-air grab at a skatepark against a sunset sky",
-    imagePosition: "50% 32%",
+    image: "/sports/bmx.jpg",
+    alt: "BMX rider in a helmet flying a trick over a skatepark rail under a bright sky",
   },
   {
     id: "surfing",

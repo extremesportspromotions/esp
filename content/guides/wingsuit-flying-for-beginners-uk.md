@@ -6,8 +6,15 @@ sport: wingsuit-flying
 category: Getting started
 author: ESP Editorial
 date: 2026-10-03
-heroAlt: "A person in a black helmet and a blue and black wingsuit, leaning out from a rocky cliff above a green valley"
-heroImage: "https://images.unsplash.com/photo-1753010840134-45b2b059a7d5?auto=format&fit=crop&w=2000&q=80"
+heroAlt: "Wingsuit flyer in a helmet gliding away from a helicopter high above snowy mountains"
+heroImage: "/guides/wingsuit-flying-for-beginners-uk-hero.jpg"
+heroCredit:
+  title: "Coaching wingsuit, Freefly Rob, Verbier, Alpskydive"
+  author: "Alpskydive"
+  licence: "CC BY-SA 4.0"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  source: "Wikimedia Commons"
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Coaching_wingsuit,_Freefly_Rob,_Verbier,_Alpskydive.jpg"
 featured: false
 draft: false
 ---

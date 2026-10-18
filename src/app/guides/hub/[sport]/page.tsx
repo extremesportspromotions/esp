@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import GuidesHeader from "@/components/guides/GuidesHeader";
+import HeroCredit from "@/components/guides/HeroCredit";
 import { getHub, getHubSports } from "@/lib/hubs";
 import { absoluteUrl } from "@/lib/site";
 
@@ -87,6 +88,11 @@ export default async function SportHubPage({ params }: PageProps<"/guides/hub/[s
             </ol>
           </nav>
         </GuidesHeader>
+        {hub.firstGuide.heroCredit ? (
+          <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8">
+            <HeroCredit credit={hub.firstGuide.heroCredit} />
+          </div>
+        ) : null}
 
         <div className="mx-auto max-w-7xl space-y-14 px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <section aria-labelledby="quick-links-heading">

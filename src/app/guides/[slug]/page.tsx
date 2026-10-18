@@ -10,6 +10,7 @@ import GuideNextSteps from "@/components/guides/GuideNextSteps";
 import ShareLinks from "@/components/guides/ShareLinks";
 import TableOfContents from "@/components/guides/TableOfContents";
 import HubBanner from "@/components/guides/HubBanner";
+import HeroCredit from "@/components/guides/HeroCredit";
 import { getHubForGuide } from "@/lib/hubs";
 import { getAllGuides, getGuideBySlug, getRelatedGuides } from "@/lib/guides";
 import { GENERAL_SPORT, formatGuideDate } from "@/data/guides-meta";
@@ -168,6 +169,11 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
               </div>
             </div>
           </header>
+          {guide.heroCredit ? (
+            <div className="mx-auto max-w-7xl px-4 pt-3 sm:px-6 lg:px-8">
+              <HeroCredit credit={guide.heroCredit} />
+            </div>
+          ) : null}
 
           <div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[minmax(0,1fr)_17rem] lg:px-8">
             <div className="min-w-0">

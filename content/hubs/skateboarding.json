@@ -1,0 +1,87 @@
+{
+  "sport": "skateboarding",
+  "title": "Skateboarding: from first push to coach",
+  "intro": "Start with your first sessions, then take the Cruiser Award. From there you can coach with Skateboard GB or enter competitions. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: skateboarding and BMX",
+      "coursePricesAnchor": "skateboarding-and-bmx",
+      "guides": [
+        "skateboarding-costs-safety-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "Skateboard GB",
+          "href": "https://skateboardgb.org"
+        },
+        {
+          "label": "Skateboard Scotland",
+          "href": "https://www.skateboardscotland.com"
+        }
+      ],
+      "governingBodiesAnchor": "10-skateboarding-and-bmx",
+      "qualificationsAnchor": "skateboarding"
+    },
+    "competitions": {
+      "guides": [
+        "skateboarding-competitions-uk"
+      ],
+      "competitions2027Anchor": "skateboarding",
+      "competitions2027Label": "British competitions 2027: skateboarding"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "skateboarding-for-beginners-uk",
+          "summary": "How to start skateboarding and BMX in the UK."
+        }
+      ]
+    },
+    {
+      "title": "Riding track",
+      "items": [
+        {
+          "slug": "skateboard-gb-cruiser-award-uk",
+          "summary": "The Skateboard GB Cruiser Award: your first six skills."
+        }
+      ]
+    },
+    {
+      "title": "Coaching track",
+      "intro": "Coaching Skills needs Get Rolling (step 3) plus 200 teaching hours.",
+      "items": [
+        {
+          "slug": "skateboard-gb-get-rolling-coach-uk",
+          "summary": "Get Rolling: Skateboard GB's first coaching course."
+        },
+        {
+          "slug": "skateboard-gb-coaching-skills-uk",
+          "summary": "Skateboard GB Coaching Skills and working as a coach."
+        }
+      ]
+    },
+    {
+      "title": "Competition track",
+      "items": [
+        {
+          "slug": "skateboarding-competitions-uk",
+          "summary": "Skateboarding competitions in the UK: juniors to Nationals."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "skateboarding-costs-safety-uk",
+          "summary": "Skateboarding costs, safety and who's in charge in the UK."
+        }
+      ]
+    }
+  ]
+}

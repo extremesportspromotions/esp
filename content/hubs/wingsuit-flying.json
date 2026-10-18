@@ -1,0 +1,68 @@
+{
+  "sport": "wingsuit-flying",
+  "title": "Wingsuit flying: from first flight to competition",
+  "intro": "Wingsuit flying starts once you're an experienced skydiver. Take the First Flight Course, then work up the wingsuit grades and, if you like, compete. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: wingsuit flying",
+      "coursePricesAnchor": "wingsuit-flying",
+      "guides": [
+        "wingsuit-kit-safety-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "British Skydiving",
+          "href": "https://britishskydiving.org"
+        }
+      ],
+      "governingBodiesAnchor": "9-wingsuit-flying",
+      "qualificationsAnchor": "9-wingsuit-flying"
+    },
+    "competitions": {
+      "guides": [
+        "wingsuit-competitions-uk"
+      ],
+      "competitions2027Label": "British competitions 2027 (all sports)"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "wingsuit-flying-for-beginners-uk",
+          "summary": "How to start wingsuit flying in the UK."
+        }
+      ]
+    },
+    {
+      "title": "Wingsuit grades",
+      "items": [
+        {
+          "slug": "wingsuit-ws1-ws2-uk",
+          "summary": "Wingsuit grades in the UK: WS1, WS2 and the First Flight Course."
+        }
+      ]
+    },
+    {
+      "title": "Competition track",
+      "items": [
+        {
+          "slug": "wingsuit-competitions-uk",
+          "summary": "Wingsuit competitions in the UK."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "wingsuit-kit-safety-uk",
+          "summary": "Wingsuit kit, costs and safety in the UK."
+        }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatGuideDate, type GuideSummary } from "@/data/guides-meta";
 import GuideTags from "./GuideTags";
+import HeroCredit from "./HeroCredit";
 
 export function GuideMeta({ guide, className = "" }: { guide: GuideSummary; className?: string }) {
   return (
@@ -32,6 +33,7 @@ export default function GuideCard({ guide, headingLevel = 3 }: { guide: GuideSum
           style={{ objectPosition: guide.heroPosition ?? "50% 50%" }}
         />
       </div>
+      {guide.heroCredit ? <HeroCredit credit={guide.heroCredit} className="px-5 pt-3 sm:px-6" /> : null}
       <div className="flex flex-1 flex-col p-5 sm:p-6">
         <GuideTags sport={guide.sport} sportName={guide.sportName} category={guide.category} />
         <Heading className="font-display mt-3 text-xl font-bold leading-snug text-[#1C1917]">
@@ -67,6 +69,7 @@ export function FeaturedGuideCard({ guide }: { guide: GuideSummary }) {
         </span>
       </div>
       <div className="flex flex-col justify-center p-6 sm:p-8 lg:col-span-2 lg:p-10">
+        {guide.heroCredit ? <HeroCredit credit={guide.heroCredit} className="mb-4" /> : null}
         <GuideTags sport={guide.sport} sportName={guide.sportName} category={guide.category} />
         <h2 className="font-display mt-4 text-2xl font-bold leading-tight text-[#1C1917] sm:text-3xl lg:text-4xl">
           <Link

@@ -158,3 +158,77 @@ All under the Pexels licence (free for commercial use, no attribution required).
 | `public/guides/hang-gliding-kit-costs-safety-uk-hero.jpg` | Hang gliding kit, costs and safety guide hero (top 26% cropped) | Rémi Berger | [Pexels](https://www.pexels.com/photo/8390411/) |
 
 All under the Pexels licence (free for commercial use, no attribution required). Downloaded at full size and saved as 2000px-wide JPEGs, quality 80, EXIF removed, on 18 October 2026.
+
+
+## Wakeboarding hub
+
+| File | Used on | Photographer | Source |
+| --- | --- | --- | --- |
+| `public/guides/progressive-edge-wakeboard-awards-uk-hero.jpg` | Progressive Edge guide hero | Ron Lach | [Pexels](https://www.pexels.com/photo/9967369/) |
+| `public/guides/bwsw-cable-instructor-coach-uk-hero.jpg` | Cable Instructor and Coach guide hero | Ron Lach | [Pexels](https://www.pexels.com/photo/9967368/) |
+| `public/guides/bwsw-cable-operator-uk-hero.jpg` | Cable operator guide hero | Ron Lach | [Pexels](https://www.pexels.com/photo/9967365/) |
+| `public/guides/bwsw-boat-coach-level-1-2-uk-hero.jpg` | Level 1&2 boat coach guide hero | Ron Lach | [Pexels](https://www.pexels.com/photo/9951440/) |
+| `public/guides/bwsw-ski-boat-driver-uk-hero.jpg` | Ski Boat Driver guide hero | Ron Lach | [Pexels](https://www.pexels.com/photo/9953825/) |
+| `public/guides/wakeboard-competitions-uk-hero.jpg` | Wakeboard competitions guide hero | Ron Lach | [Pexels](https://www.pexels.com/photo/9967367/) |
+| `public/guides/wakeboarding-costs-safety-uk-hero.jpg` | Wakeboarding costs and safety guide hero | Sergey Savage | [Pexels](https://www.pexels.com/photo/18979390/) |
+
+All under the Pexels licence (free for commercial use, no attribution required). Downloaded at full size and saved as 2000px-wide JPEGs (the sport photo 2400px), quality 80, EXIF removed, on 18 October 2026. Not cropped.
+
+## Skateboarding hub
+
+| File | Used on | Photographer | Source |
+| --- | --- | --- | --- |
+| `public/guides/skateboard-gb-cruiser-award-uk-hero.jpg` | Cruiser Award guide hero | RICARDO MAYORAL | [Pexels](https://www.pexels.com/photo/37541005/) |
+| `public/guides/skateboard-gb-get-rolling-coach-uk-hero.jpg` | Get Rolling guide hero | Renan Rezende | [Pexels](https://www.pexels.com/photo/9273029/) |
+| `public/guides/skateboard-gb-coaching-skills-uk-hero.jpg` | Coaching Skills guide hero | Sean Gallagher | [Pexels](https://www.pexels.com/photo/20522301/) |
+| `public/guides/skateboarding-competitions-uk-hero.jpg` | Skateboarding competitions guide hero | Jan Kopřiva | [Pexels](https://www.pexels.com/photo/10427488/) |
+| `public/guides/skateboarding-costs-safety-uk-hero.jpg` | Skateboarding costs and safety guide hero | Ant Armada | [Pexels](https://www.pexels.com/photo/27642172/) |
+
+All under the Pexels licence (free for commercial use, no attribution required). Downloaded at full size and saved as 2000px-wide JPEGs (the sport photo 2400px), quality 80, EXIF removed, on 18 October 2026. Not cropped.
+
+## Motocross hub
+
+| File | Used on | Photographer | Source |
+| --- | --- | --- | --- |
+| `public/guides/acu-motocross-licence-uk-hero.jpg` | ACU licence guide hero | Joey Cedé | [Pexels](https://www.pexels.com/photo/33384084/) |
+| `public/guides/motocross-youth-classes-uk-hero.jpg` | Youth classes guide hero | Stiven Rivera | [Pexels](https://www.pexels.com/photo/13975599/) |
+| `public/guides/acu-motocross-coach-uk-hero.jpg` | ACU coach guide hero | Joey Cedé | [Pexels](https://www.pexels.com/photo/33638956/) |
+| `public/guides/motocross-officials-marshal-uk-hero.jpg` | Marshals and officials guide hero | Joey Cedé | [Pexels](https://www.pexels.com/photo/33639499/) |
+| `public/guides/motocross-competitions-uk-hero.jpg` | Motocross competitions guide hero | Sinan KRIYA | [Pexels](https://www.pexels.com/photo/38460131/) |
+| `public/guides/motocross-costs-safety-uk-hero.jpg` | Motocross costs and safety guide hero | Stiven Rivera | [Pexels](https://www.pexels.com/photo/13975602/) |
+
+All under the Pexels licence (free for commercial use, no attribution required). Downloaded at full size and saved as 2000px-wide JPEGs (the sport photo 2400px), quality 80, EXIF removed, on 18 October 2026. Not cropped.
+
+## BMX hub
+
+| File | Used on | Photographer | Source |
+| --- | --- | --- | --- |
+| `public/guides/bmx-for-beginners-uk-hero.jpg` | BMX beginner guide hero | Martin Magnemyr | [Pexels](https://www.pexels.com/photo/5145889/) |
+| `public/guides/bmx-race-licence-uk-hero.jpg` | BMX race licence guide hero | Martin Magnemyr | [Pexels](https://www.pexels.com/photo/5108354/) |
+| `public/guides/bmx-racing-competitions-uk-hero.jpg` | BMX racing guide hero | Martin Magnemyr | [Pexels](https://www.pexels.com/photo/5145890/) |
+| `public/guides/bmx-freestyle-uk-hero.jpg` | BMX freestyle guide hero | Jan Kopřiva | [Pexels](https://www.pexels.com/photo/3281020/) |
+| `public/guides/british-cycling-bmx-coach-uk-hero.jpg` | BMX coach guide hero | Viktor Smith | [Pexels](https://www.pexels.com/photo/1379533/) |
+| `public/guides/bmx-costs-safety-uk-hero.jpg` | BMX costs and safety guide hero | Rodolfo Cora | [Pexels](https://www.pexels.com/photo/38149198/) |
+| `public/sports/bmx.jpg` | BMX sport photo (fallback, replaces the skateboarding photo) | Rodolfo Cora | [Pexels](https://www.pexels.com/photo/38149200/) |
+
+All under the Pexels licence (free for commercial use, no attribution required). Downloaded at full size and saved as 2000px-wide JPEGs (the sport photo 2400px), quality 80, EXIF removed, on 18 October 2026. Not cropped.
+
+## BASE jumping hub
+
+| File | Used on | Photographer | Source |
+| --- | --- | --- | --- |
+| `public/guides/base-jumping-skydiving-route-uk-hero.jpg` | Skydiving route guide hero | Tom Fisk | [Pexels](https://www.pexels.com/photo/11114520/) |
+| `public/guides/base-jumping-law-safety-uk-hero.jpg` | Law and safety guide hero | Enrique | [Pexels](https://www.pexels.com/photo/14299032/) |
+
+All under the Pexels licence (free for commercial use, no attribution required). Downloaded at full size and saved as 2000px-wide JPEGs (the sport photo 2400px), quality 80, EXIF removed, on 18 October 2026. Not cropped.
+
+## Wingsuit flying (Wikimedia Commons, CC BY-SA and CC BY: credit shown under each photo)
+
+| File | Used on | Author | Licence | Source |
+| --- | --- | --- | --- | --- |
+| `public/guides/wingsuit-flying-for-beginners-uk-hero.jpg` | Wingsuit beginner guide hero, wingsuit hub header and hub tile | Alpskydive | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Coaching wingsuit, Freefly Rob, Verbier, Alpskydive](https://commons.wikimedia.org/wiki/File:Coaching_wingsuit,_Freefly_Rob,_Verbier,_Alpskydive.jpg) |
+| `public/guides/wingsuit-ws1-ws2-uk-hero.jpg` | WS1 and WS2 guide hero | Wingsuiting | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Wingsuit Flying over Langar Airfield UK](https://commons.wikimedia.org/wiki/File:Wingsuit_Flying_over_Langar_Airfield_UK.jpg) |
+| `public/guides/wingsuit-competitions-uk-hero.jpg` | Wingsuit competitions guide hero | Gsmcenter | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Wingsuit Performace Dawid Winczewski](https://commons.wikimedia.org/wiki/File:Wingsuit_Performace_Dawid_Winczewski.jpg) |
+| `public/guides/wingsuit-kit-safety-uk-hero.jpg` | Wingsuit kit, costs and safety guide hero | Richard Schneider | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | [Dubai Wingsuit Flying Trip (7623578306)](https://commons.wikimedia.org/wiki/File:Dubai_Wingsuit_Flying_Trip_(7623578306).jpg) |
+
+Resized only (2000px wide, or the 1920px and 1500px originals for Verbier and Dubai, not upscaled), quality 80, EXIF removed, not cropped, so the credits don't say "cropped". Each credit is set in the guide's `heroCredit` frontmatter and shows under the hero and on guide cards. If a file is ever cropped, add `cropped: true`.

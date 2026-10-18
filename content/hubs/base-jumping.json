@@ -1,0 +1,53 @@
+{
+  "sport": "base-jumping",
+  "title": "BASE jumping: the skydiving route",
+  "intro": "There's no UK course or governing body for BASE. Every route starts with skydiving experience. These guides cover that route and the law and safety.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: BASE jumping",
+      "coursePricesAnchor": "base-jumping",
+      "guides": [
+        "base-jumping-skydiving-route-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "British Skydiving",
+          "href": "https://britishskydiving.org"
+        }
+      ],
+      "governingBodiesAnchor": "12-base-jumping",
+      "qualificationsAnchor": "12-base-jumping"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "base-jumping-for-beginners-uk",
+          "summary": "How BASE jumping works in the UK."
+        }
+      ]
+    },
+    {
+      "title": "The route",
+      "items": [
+        {
+          "slug": "base-jumping-skydiving-route-uk",
+          "summary": "The skydiving route to BASE jumping in the UK."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "base-jumping-law-safety-uk",
+          "summary": "BASE jumping in the UK: the law and safety."
+        }
+      ]
+    }
+  ]
+}

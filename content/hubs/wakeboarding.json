@@ -1,0 +1,96 @@
+{
+  "sport": "wakeboarding",
+  "title": "Wakeboarding: from first ride to coach",
+  "intro": "Start with your first ride on a cable or behind a boat, then work up the Progressive Edge awards. From there you can run a cable, drive the boat, coach or compete. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: wakeboarding",
+      "coursePricesAnchor": "wakeboarding",
+      "guides": [
+        "wakeboarding-costs-safety-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "British Water Ski & Wakeboard (BWSW)",
+          "href": "https://www.bwsw.org.uk"
+        }
+      ],
+      "governingBodiesAnchor": "5-wakeboarding",
+      "qualificationsAnchor": "5-wakeboarding"
+    },
+    "competitions": {
+      "guides": [
+        "wakeboard-competitions-uk"
+      ],
+      "competitions2027Anchor": "wakeboarding",
+      "competitions2027Label": "British competitions 2027: wakeboarding"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "wakeboarding-for-beginners-uk",
+          "summary": "How to start wakeboarding in the UK."
+        }
+      ]
+    },
+    {
+      "title": "Riding track",
+      "items": [
+        {
+          "slug": "progressive-edge-wakeboard-awards-uk",
+          "summary": "BWSW Progressive Edge: the wakeboard rider awards, from Bronze to Platinum."
+        }
+      ]
+    },
+    {
+      "title": "Cable track",
+      "items": [
+        {
+          "slug": "bwsw-cable-operator-uk",
+          "summary": "BWSW cable operator qualifications: straight-line and full cable."
+        },
+        {
+          "slug": "bwsw-cable-instructor-coach-uk",
+          "summary": "BWSW Cable Instructor and Cable Coach Levels 1 and 2."
+        }
+      ]
+    },
+    {
+      "title": "Boat track",
+      "intro": "The Level 1&2 boat coach course needs Ski Boat Driver 2 plus 10 hours' driving.",
+      "items": [
+        {
+          "slug": "bwsw-ski-boat-driver-uk",
+          "summary": "BWSW Ski Boat Driver 1, 2 and 3, and the ICC."
+        },
+        {
+          "slug": "bwsw-boat-coach-level-1-2-uk",
+          "summary": "BWSW Level 1&2 boat coach: coaching water skiing and wakeboarding."
+        }
+      ]
+    },
+    {
+      "title": "Competition track",
+      "items": [
+        {
+          "slug": "wakeboard-competitions-uk",
+          "summary": "Wakeboard competitions in the UK: the Nationals, licences and judging."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "wakeboarding-costs-safety-uk",
+          "summary": "Wakeboarding in the UK: prices, who's in charge and staying safe."
+        }
+      ]
+    }
+  ]
+}

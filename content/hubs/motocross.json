@@ -1,0 +1,90 @@
+{
+  "sport": "motocross",
+  "title": "Motocross: from first ride to coach",
+  "intro": "Start with some coaching or track days, then get your ACU licence. From there you can race, coach or help run events as a marshal or official. Every step is here in order.",
+  "quickLinks": {
+    "prices": {
+      "coursePricesLabel": "UK course prices: motocross",
+      "coursePricesAnchor": "motocross",
+      "guides": [
+        "motocross-costs-safety-uk"
+      ]
+    },
+    "governingBody": {
+      "links": [
+        {
+          "label": "Auto-Cycle Union (ACU)",
+          "href": "https://www.acu.org.uk"
+        },
+        {
+          "label": "Scottish Auto Cycle Union (SACU)",
+          "href": "https://www.sacu.co.uk"
+        }
+      ],
+      "governingBodiesAnchor": "7-motocross",
+      "qualificationsAnchor": "7-motocross"
+    },
+    "competitions": {
+      "guides": [
+        "motocross-competitions-uk"
+      ],
+      "competitions2027Anchor": "motocross",
+      "competitions2027Label": "British competitions 2027: motocross"
+    }
+  },
+  "sections": [
+    {
+      "title": "Start here",
+      "items": [
+        {
+          "slug": "motocross-for-beginners-uk",
+          "summary": "How to start motocross in the UK."
+        }
+      ]
+    },
+    {
+      "title": "Riding track",
+      "items": [
+        {
+          "slug": "acu-motocross-licence-uk",
+          "summary": "Your ACU motocross licence: practice, one-event and annual."
+        },
+        {
+          "slug": "motocross-youth-classes-uk",
+          "summary": "Youth motocross in the UK: classes, ages and who runs it."
+        },
+        {
+          "slug": "motocross-competitions-uk",
+          "summary": "Motocross competitions in the UK: from club racing to MXGB."
+        }
+      ]
+    },
+    {
+      "title": "Coaching track",
+      "items": [
+        {
+          "slug": "acu-motocross-coach-uk",
+          "summary": "Becoming an ACU motocross coach: Club, Project and Commercial."
+        }
+      ]
+    },
+    {
+      "title": "Officials track",
+      "items": [
+        {
+          "slug": "motocross-officials-marshal-uk",
+          "summary": "Motocross marshals and officials in the UK."
+        }
+      ]
+    },
+    {
+      "title": "For everyone",
+      "items": [
+        {
+          "slug": "motocross-costs-safety-uk",
+          "summary": "Motocross costs, kit, safety and the law in the UK."
+        }
+      ]
+    }
+  ]
+}

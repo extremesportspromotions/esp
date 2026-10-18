@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { HeroCredit as HeroCreditData } from "@/data/guides-meta";
+import HeroCredit from "./HeroCredit";
 
 type HubTile = {
   sport: string;
@@ -7,6 +9,7 @@ type HubTile = {
   href: string;
   stepCount: number;
   image?: { src: string; alt: string; position?: string };
+  imageCredit?: HeroCreditData;
 };
 
 /** Guides page: one tile per sport hub, in the normal guide card style, with the beginner guide's photo. */
@@ -19,10 +22,10 @@ export default function HubTiles({ hubs }: { hubs: HubTile[] }) {
       </h2>
       <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
         {hubs.map((h, i) => (
-          <li key={h.sport}>
+          <li key={h.sport} className="flex flex-col">
             <Link
               href={h.href}
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#1C1917]/10 bg-surface shadow-xl shadow-black/10 transition hover:-translate-y-0.5 hover:border-[#1C1917]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="group flex flex-1 flex-col overflow-hidden rounded-2xl border border-[#1C1917]/10 bg-surface shadow-xl shadow-black/10 transition hover:-translate-y-0.5 hover:border-[#1C1917]/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {h.image ? (
                 <span className="relative block aspect-[4/3] overflow-hidden bg-ink sm:aspect-[16/10]">
@@ -45,6 +48,7 @@ export default function HubTiles({ hubs }: { hubs: HubTile[] }) {
                 </span>
               </span>
             </Link>
+            {h.image && h.imageCredit ? <HeroCredit credit={h.imageCredit} className="mt-1.5 px-1 text-[11px]" /> : null}
           </li>
         ))}
       </ul>

@@ -21,6 +21,7 @@ import {
   sportName,
   type GuideCategory,
   type GuideSummary,
+  type HeroCredit,
 } from "@/data/guides-meta";
 
 const GUIDES_DIR = path.join(process.cwd(), "content", "guides");
@@ -59,6 +60,33 @@ function requiredString(data: Record<string, unknown>, key: string, file: string
   const v = data[key];
   if (typeof v !== "string" || !v.trim()) fail(file, `"${key}" is required.`);
   return v.trim();
+}
+
+function parseHeroCredit(value: unknown, file: string): HeroCredit | undefined {
+  if (value === undefined || value === null || value === "") return undefined;
+  if (typeof value !== "object" || Array.isArray(value)) {
+    fail(file, `"heroCredit" must have title, author, licence, licenceUrl, source and sourceUrl.`);
+  }
+  const v = value as Record<string, unknown>;
+  const str = (key: string) => {
+    const x = v[key];
+    if (typeof x !== "string" || !x.trim()) fail(file, `"heroCredit.${key}" is required.`);
+    return x.trim();
+  };
+  const url = (key: string) => {
+    const x = str(key);
+    if (!/^https:\/\//.test(x)) fail(file, `"heroCredit.${key}" must be a full https:// link.`);
+    return x;
+  };
+  return {
+    title: str("title"),
+    author: str("author"),
+    licence: str("licence"),
+    licenceUrl: url("licenceUrl"),
+    source: str("source"),
+    sourceUrl: url("sourceUrl"),
+    cropped: v.cropped === true ? true : undefined,
+  };
 }
 
 function countWords(markdown: string): number {
@@ -138,6 +166,7 @@ function parseFile(file: string): RawGuide {
         : customImage
           ? undefined
           : sportData?.imagePosition,
+    heroCredit: customImage ? parseHeroCredit(data.heroCredit, file) : undefined,
     featured: data.featured === true,
     draft: data.draft === true,
     readingMinutes: readingMinutes(wordCount),

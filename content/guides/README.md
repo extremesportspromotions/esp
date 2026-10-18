@@ -33,6 +33,7 @@ message saying which file and field to fix.
 | `heroImage`   | No       | Path to a photo in `public/guides/`, e.g. `/guides/surf-school-hero.jpg`. Leave out to use the sport's photo. |
 | `heroAlt`     | Yes      | A short description of what the hero photo shows (alt text). Required whenever you set `heroImage`. |
 | `heroPosition` | No      | Which part of the hero photo stays in view when it is cropped, as CSS object-position, e.g. `"50% 20%"`. Defaults to the centre. |
+| `heroCredit`  | No       | Photo credit shown in small type under the hero (and on guide cards). Needed for CC BY / CC BY-SA photos. Give `title`, `author`, `licence` (e.g. `CC BY-SA 4.0`), `licenceUrl` (the licence deed), `source` (e.g. `Wikimedia Commons`) and `sourceUrl` (the file page), plus `cropped: true` if the photo was cropped. |
 | `featured`    | No       | `true` to feature at the top of `/guides`. Keep only one article featured at a time.               |
 | `draft`       | No       | `true` hides the article from the live site. Set to `false` to publish.                             |
 

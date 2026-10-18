@@ -4,7 +4,7 @@ import path from "node:path";
 import { getAllGuides, getGuideBySlug } from "@/lib/guides";
 import { GUIDE_PRICES, GUIDE_PRICES_NOTE, GUIDE_PRICES_TITLE, type GuidePriceRow } from "@/data/guidePrices";
 import { SPORT_IDS, sportName } from "@/data/guides-meta";
-import type { GuideSummary } from "@/data/guides-meta";
+import type { GuideSummary, HeroCredit } from "@/data/guides-meta";
 
 /**
  * Sport hubs: one JSON file per sport in content/hubs/<sport>.json.
@@ -79,6 +79,7 @@ export function getHubSummaries(): {
   stepCount: number;
   slugs: string[];
   image?: { src: string; alt: string; position?: string };
+  imageCredit?: HeroCredit;
 }[] {
   const guides = getAllGuides();
   return readHubFiles().map(({ data }) => {
@@ -86,7 +87,7 @@ export function getHubSummaries(): {
     // Tile photo = the hub's first guide (the beginner's guide) hero.
     const first = guides.find((g) => g.slug === slugs[0]);
     const image = first ? { src: first.heroImage, alt: first.heroAlt, position: first.heroPosition } : undefined;
-    return { sport: data.sport, title: data.title, href: hubHref(data.sport), stepCount: slugs.length, slugs, image };
+    return { sport: data.sport, title: data.title, href: hubHref(data.sport), stepCount: slugs.length, slugs, image, imageCredit: first?.heroCredit };
   });
 }
 
