@@ -9,43 +9,85 @@ export const metadata: Metadata = {
 };
 
 const wrap = "mx-auto max-w-[1000px] px-[18px] sm:px-6";
-const section = "border-b border-[#2a2a3a] py-[34px] sm:py-11";
-const h2 = "mb-1.5 text-[25px] font-bold tracking-[-0.02em] text-white sm:text-[28px]";
-const card = "flex flex-col overflow-hidden rounded-[14px] border border-[#2a2a3a] bg-[#14141c]";
+const section = "border-b border-[#1C1917]/10 py-[34px] sm:py-11";
+const h2 = "mb-1.5 text-[25px] font-display font-bold tracking-[-0.02em] text-[#1C1917] sm:text-[28px]";
+const card = "flex flex-col overflow-hidden rounded-2xl border border-[#1C1917]/10 bg-surface";
 const btn = "mt-auto block rounded-full px-4 py-3 text-center text-sm font-bold uppercase tracking-[0.04em]";
 
 const kit = [
-  { name: "Tee", price: "£28", note: "Black crew neck. Mark on the sleeve.", img: "/shop/tee.jpg", alt: "Black tee, silver mountain mark", pos: "50% 55%" },
-  { name: "Hoodie", price: "£48", note: "Black pullover. Mark on the left chest.", img: "/shop/hoodie.svg", alt: "Black hoodie, silver mountain mark", pos: "50% 50%" },
-  { name: "Cap", price: "£22", note: "Black six-panel. Mark on the front.", img: "/shop/cap.jpg", alt: "Black cap, silver mountain mark", pos: "50% 45%" },
+  { name: "Tee", price: "£28", note: "Black crewneck tee. Small matte mountain + ESP on the left chest.", img: "/shop/tee.jpg", alt: "Black tee, silver mountain mark", pos: "50% 55%" },
+  { name: "Hoodie", price: "£48", note: "Heavyweight black hoodie. Logo above the pocket.", img: "/shop/hoodie.svg", alt: "Black hoodie, silver mountain mark", pos: "50% 50%" },
+  { name: "Cap", price: "£22", note: "Black cap. Clean front logo.", img: "/shop/cap.jpg", alt: "Black cap, silver mountain mark", pos: "50% 45%" },
+  { name: "Tote", price: "", note: "Black tote.", img: "/shop/tote.svg", alt: "Black tote, silver mountain mark", pos: "50% 50%" },
 ];
 
-const gear = [
-  { name: "Helmet", icon: "helmet", note: "Buy one made for your sport. A ski helmet is not a climbing helmet." },
-  { name: "Wetsuit", icon: "wetsuit", note: "3/2 mm for summer. 5/4 mm for UK water in winter." },
-  { name: "Gloves", icon: "gloves", note: "Full-finger pair for grip and cold UK mornings." },
-  { name: "Base layer", icon: "base-layer", note: "Merino or synthetic. Skip cotton, it stays wet." },
-  { name: "Rucksack", icon: "rucksack", note: "20 to 30 litres covers most day sessions." },
-  { name: "Headtorch", icon: "headtorch", note: "For early starts and late finishes. Pack spare batteries." },
+type Item = { name: string; note: string };
+const gearSections: { id: string; title: string; intro: string; items: Item[]; coachNote?: boolean }[] = [
+  {
+    id: "climbing",
+    title: "Climbing and mountaineering",
+    intro: "Core kit for rock climbing, mountaineering and coasteering.",
+    coachNote: true,
+    items: [
+      { name: "Climbing harness", note: "An all-round harness with adjustable legs and gear loops, such as the Black Diamond Momentum. Suits indoor walls, sport routes and multi-pitch." },
+      { name: "Climbing helmet", note: "UIAA/CE certified, with vents and headtorch clips. It should not rock when you nod." },
+      { name: "Dynamic rope", note: "A single rope of about 9.5 to 10.2 mm, 60 to 70 m long, UIAA certified. Check the length you need for your local crags." },
+      { name: "Belay device and locking karabiners", note: "A tube or assisted-braking device with HMS locking karabiners. Practise lowering with a coach before you use it." },
+    ],
+  },
+  {
+    id: "snow",
+    title: "Snow",
+    intro: "For skiing and snowboarding progression. Buy the clothing first and hire boards, skis and boots to begin with.",
+    items: [
+      { name: "Waterproof ski or snowboard jacket", note: "Look for a 10K+ waterproof rating, a hood that fits over a helmet, adjustable cuffs and a lift pass pocket." },
+      { name: "Goggles", note: "Dual lens, anti-fog and UV400. Mirrored lenses for sun, rose or gold for flat light. Check they fit with your helmet." },
+      { name: "Ski or snowboard helmet", note: "MIPS if you can. It should fit with your goggles without a gap. Essential for beginners." },
+    ],
+  },
+  {
+    id: "cameras",
+    title: "Action cameras",
+    intro: "For filming club sessions, jumps and mountain days.",
+    items: [
+      { name: "GoPro HERO series", note: "Strong stabilisation, tough build and plenty of mounts. Good for climbing, snow and skydiving footage." },
+      { name: "DJI Osmo Action series", note: "Good in low light, with two screens, magnetic mounts and long battery life." },
+      { name: "Insta360 X series", note: "Films all the way round, so you can choose the framing afterwards. Handy when you can't aim the camera mid-run." },
+    ],
+  },
+  {
+    id: "safety",
+    title: "Safety",
+    intro: "Useful across every sport we cover.",
+    items: [
+      { name: "Headtorch", note: "Around 200 to 400 lumens, with a red light mode and a waterproof rating of IPX4 or better. For early starts, late finishes and emergencies." },
+      { name: "Dry bag and first aid kit", note: "A roll-top dry bag, plus blister care, dressings, tape, pain relief and any personal medication." },
+      { name: "Other essentials", note: "A whistle, map and compass (or offline maps and a power bank), spare layers and an emergency shelter for the hills." },
+    ],
+  },
 ];
 
 export default function ShopPage() {
   return (
     <>
       <TopBar active="shop" />
-      <main id="main" className="flex-1 bg-[#0a0a0f] text-white">
-        <header className="border-b border-[#2a2a3a] pt-8 pb-7 text-center sm:pt-11 sm:pb-9">
+      <main id="main" className="flex-1 bg-[#EEF4FA] text-[#1C1917]">
+        <header className="border-b border-[#1C1917]/10 pt-8 pb-7 text-center sm:pt-11 sm:pb-9">
           <div className={wrap}>
-            <Image src="/promotions/esp-logo-silver.png" alt="ESP Extreme Sports Promotions logo" width={682} height={542} priority sizes="240px" className="mx-auto mb-[22px] block h-auto w-[70%] max-w-[240px]" />
-            <h1 className="text-[38px] font-extrabold leading-[1.1] tracking-[-0.02em] text-white sm:text-[44px]">Shop</h1>
-            <p className="mt-2.5 text-[17px] text-white sm:text-lg">ESP kit and the gear we&apos;d start with.</p>
+            <Image src="/logo.png" alt="Extreme Sports Promotions" width={1328} height={944} priority sizes="320px" className="mx-auto mb-[22px] block h-auto w-[80%] max-w-[320px]" />
+            <h1 className="text-[38px] font-display font-extrabold leading-[1.1] tracking-[-0.02em] text-[#1C1917] sm:text-[44px]">Shop</h1>
+            <p className="mt-2.5 text-[17px] text-[#1C1917] sm:text-lg">Subtle kit for coaches, students and athletes.</p>
+            <nav aria-label="On this page" className="mt-5 flex justify-center gap-3">
+              <a href="#apparel" className="rounded-full border border-[#1C1917]/25 bg-[#1C1917]/5 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#1C1917] transition hover:border-accent hover:text-accent-soft">Apparel</a>
+              <a href="#gear" className="rounded-full border border-[#1C1917]/25 bg-[#1C1917]/5 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#1C1917] transition hover:border-accent hover:text-accent-soft">Gear</a>
+            </nav>
           </div>
         </header>
 
-        <section className={section}>
+        <section id="apparel" className={`${section} scroll-mt-24`}>
           <div className={wrap}>
-            <h2 className={h2}>ESP kit</h2>
-            <p className="mb-[22px] text-white">Black, with a small matte silver mountain mark.</p>
+            <h2 className={h2}>Apparel</h2>
+            <p className="mb-[22px] text-[#1C1917]">Black, with a small matte silver mountain mark.</p>
             <div className="grid gap-[18px] [grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))]">
               {kit.map((k) => (
                 <div key={k.name} className={card}>
@@ -54,12 +96,12 @@ export default function ShopPage() {
                   </div>
                   <div className="flex flex-1 flex-col gap-1.5 px-5 pt-[18px] pb-5">
                     <div className="flex items-baseline justify-between gap-3">
-                      <h3 className="text-lg font-semibold text-white">{k.name}</h3>
-                      <span className="text-lg font-bold text-white">{k.price}</span>
+                      <h3 className="text-lg font-semibold text-[#1C1917]">{k.name}</h3>
+                      {k.price && <span className="text-lg font-bold text-[#1C1917]">{k.price}</span>}
                     </div>
-                    <p className="mb-2.5 text-[15px] leading-normal text-white">{k.note}</p>
+                    <p className="mb-2.5 text-[15px] leading-normal text-[#1C1917]/65">{k.note}</p>
                     {/* No checkout or Printful yet: disabled until Matthew approves */}
-                    <button type="button" disabled aria-disabled="true" className={`${btn} cursor-not-allowed border border-[#c0c0c0] text-white`}>
+                    <button type="button" disabled aria-disabled="true" className={`${btn} cursor-not-allowed border border-[#1C1917]/25 bg-[#1C1917]/5 text-[#1C1917]/60`}>
                       Coming soon
                     </button>
                   </div>
@@ -69,31 +111,37 @@ export default function ShopPage() {
           </div>
         </section>
 
-        <section className={section}>
+        <section id="gear" className={`${section} scroll-mt-24`}>
           <div className={wrap}>
-            <h2 className={h2}>Starter gear</h2>
-            <p className="mb-[22px] text-white">Kit we&apos;d start with across the sports.</p>
-            <div className="grid grid-cols-2 gap-3 sm:gap-[18px] sm:[grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))]">
-              {gear.map((g) => (
-                <div key={g.name} className={card}>
-                  <div className="flex flex-1 flex-col gap-1.5 p-3.5 sm:px-5 sm:pt-[18px] sm:pb-5">
-                    <div className="mb-1.5 flex h-11 w-11 items-center justify-center rounded-[10px] bg-[#1f1f2a]">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={`/shop/${g.icon}.svg`} alt="" width={26} height={26} />
-                    </div>
-                    <h3 className="text-base font-semibold text-white sm:text-lg">{g.name}</h3>
-                    <p className="mb-3 text-sm leading-normal text-white sm:text-[15px]">{g.note}</p>
-                    {/* Affiliate links not set up yet: disabled until Matthew approves */}
-                    <button type="button" disabled aria-disabled="true" className={`${btn} cursor-not-allowed border border-[#c0c0c0] text-white`}>
-                      Coming soon
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="mt-6 rounded-r-[10px] border-l-[3px] border-[#c0c0c0] bg-[#14141c] px-[18px] py-3.5 font-semibold text-white">
-              Ropes, harnesses and belay kit: ask your coach before you buy.
+            <h2 className={h2}>Gear</h2>
+            <p className="mb-[22px] text-[#1C1917]">Kit we&apos;d start with across the sports.</p>
+            <p className="mb-8 rounded-r-[10px] border-l-[3px] border-accent bg-surface px-[18px] py-3.5 font-semibold text-[#1C1917]">
+              Always buy UIAA/CE certified kit, and train with a qualified coach before using it.
             </p>
+            {gearSections.map((sec) => (
+              <div key={sec.id} id={sec.id} className="mb-10 scroll-mt-24 last:mb-0">
+                <h3 className="mb-1.5 text-xl font-bold text-[#1C1917] sm:text-[22px]">{sec.title}</h3>
+                <p className="mb-4 text-[#1C1917]">{sec.intro}</p>
+                <div className="grid gap-3 sm:gap-[18px] [grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))]">
+                  {sec.items.map((g) => (
+                    <div key={g.name} className={card}>
+                      <div className="flex flex-1 flex-col gap-1.5 p-4 sm:px-5 sm:pt-[18px] sm:pb-5">
+                        <h4 className="text-base font-semibold text-[#1C1917] sm:text-lg">{g.name}</h4>
+                        <p className="mb-3 text-sm leading-normal text-[#1C1917]/65 sm:text-[15px]">{g.note}</p>
+                        <button type="button" disabled aria-disabled="true" className={`${btn} cursor-not-allowed border border-[#1C1917]/25 bg-[#1C1917]/5 text-[#1C1917]/60`}>
+                          Coming soon
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {sec.coachNote && (
+                  <p className="mt-4 rounded-r-[10px] border-l-[3px] border-accent bg-surface px-[18px] py-3.5 font-semibold text-[#1C1917]">
+                    Ropes, harnesses and belay kit: ask your coach before you buy.
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
         </section>
       </main>
