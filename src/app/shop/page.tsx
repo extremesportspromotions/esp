@@ -74,7 +74,10 @@ export default function ShopPage() {
       <main id="main" className="flex-1 bg-[#EEF4FA] text-[#1C1917]">
         <header className="border-b border-[#1C1917]/10 pt-8 pb-7 text-center sm:pt-11 sm:pb-9">
           <div className={wrap}>
-            <Image src="/logo.png" alt="Extreme Sports Promotions" width={1328} height={944} priority sizes="320px" className="mx-auto mb-[22px] block h-auto w-[80%] max-w-[320px]" />
+            {/* logo.png has a 64px pale strip baked into its top edge; crop it off here (1328x944 -> 1328x880 window). */}
+            <div className="relative mx-auto mb-[22px] aspect-[1328/880] w-[80%] max-w-[320px] overflow-hidden">
+              <Image src="/logo.png" alt="Extreme Sports Promotions" fill priority sizes="320px" className="object-cover object-bottom" />
+            </div>
             <h1 className="text-[38px] font-display font-extrabold leading-[1.1] tracking-[-0.02em] text-[#1C1917] sm:text-[44px]">Shop</h1>
             <p className="mt-2.5 text-[17px] text-[#1C1917] sm:text-lg">Subtle kit for coaches, students and athletes.</p>
             <nav aria-label="On this page" className="mt-5 flex justify-center gap-3">
@@ -87,7 +90,7 @@ export default function ShopPage() {
         <section id="apparel" className={`${section} scroll-mt-24`}>
           <div className={wrap}>
             <h2 className={h2}>Apparel</h2>
-            <p className="mb-[22px] text-[#1C1917]">Black, with a small matte silver mountain mark.</p>
+            <p className="mb-[22px] text-[#1C1917]">Black, with a small matte silver mountain and ESP logo.</p>
             <div className="grid gap-[18px] [grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))]">
               {kit.map((k) => (
                 <div key={k.name} className={card}>
