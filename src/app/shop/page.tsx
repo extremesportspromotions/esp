@@ -16,9 +16,9 @@ const btn = "mt-auto block rounded-full px-4 py-3 text-center text-sm font-bold 
 
 const kit = [
   { name: "Tee", price: "£28", note: "Black crewneck tee. Small matte mountain + ESP on the left chest.", img: "/shop/tee.jpg", alt: "Black tee, silver mountain mark", pos: "50% 55%" },
-  { name: "Hoodie", price: "£48", note: "Heavyweight black hoodie. Logo above the pocket.", img: "/shop/hoodie.svg", alt: "Black hoodie, silver mountain mark", pos: "50% 50%" },
+  { name: "Polo", price: "", note: "Black polo. Small matte logo on the left chest.", img: "/shop/polo.jpg", alt: "Black polo, small matte mountain mark", pos: "50% 40%" },
   { name: "Cap", price: "£22", note: "Black cap. Clean front logo.", img: "/shop/cap.jpg", alt: "Black cap, silver mountain mark", pos: "50% 45%" },
-  { name: "Tote", price: "", note: "Black tote.", img: "/shop/tote.svg", alt: "Black tote, silver mountain mark", pos: "50% 50%" },
+  { name: "Shirt", price: "", note: "Black button-down shirt. Small matte logo on the left chest.", img: "/shop/shirt.jpg", alt: "Black button-down shirt, small matte mountain mark", pos: "50% 40%" },
 ];
 
 type Item = { name: string; note: string };
