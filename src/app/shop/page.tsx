@@ -3,11 +3,9 @@ import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 
-// HIDDEN PREVIEW PAGE: not in nav, footer or sitemap; noindex/nofollow. Do not link to it until Matthew approves.
 export const metadata: Metadata = {
   title: "Shop | Extreme Sports Promotions",
   description: "ESP kit and the gear we'd start with.",
-  robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
 };
 
 const wrap = "mx-auto max-w-[1000px] px-[18px] sm:px-6";
@@ -34,7 +32,7 @@ const gear = [
 export default function ShopPage() {
   return (
     <>
-      <TopBar />
+      <TopBar active="shop" />
       <main id="main" className="flex-1 bg-[#0a0a0f] text-white">
         <header className="border-b border-[#2a2a3a] pt-8 pb-7 text-center sm:pt-11 sm:pb-9">
           <div className={wrap}>
@@ -75,10 +73,6 @@ export default function ShopPage() {
           <div className={wrap}>
             <h2 className={h2}>Starter gear</h2>
             <p className="mb-[22px] text-white">Kit we&apos;d start with across the sports.</p>
-            <p className="mb-5 inline-block rounded-md border border-[#c0c0c0] px-2.5 py-1.5 text-[13px] leading-snug text-white">
-              <b className="mr-1.5 rounded-[3px] bg-[#c0c0c0] px-[5px] text-black">Ad</b>
-              We may earn a small commission if you buy through these links.
-            </p>
             <div className="grid grid-cols-2 gap-3 sm:gap-[18px] sm:[grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))]">
               {gear.map((g) => (
                 <div key={g.name} className={card}>
@@ -89,10 +83,10 @@ export default function ShopPage() {
                     </div>
                     <h3 className="text-base font-semibold text-white sm:text-lg">{g.name}</h3>
                     <p className="mb-3 text-sm leading-normal text-white sm:text-[15px]">{g.note}</p>
-                    {/* TODO: placeholder link. Replace with Awin / Go Outdoors affiliate link once Matthew has joined. */}
-                    <a href="#" data-placeholder="affiliate-link-todo" rel="sponsored nofollow" className={`${btn} bg-[#c0c0c0] px-2 py-2.5 text-xs tracking-[0.02em] text-black sm:px-4 sm:py-3 sm:text-sm sm:tracking-[0.04em]`}>
-                      See latest price
-                    </a>
+                    {/* Affiliate links not set up yet: disabled until Matthew approves */}
+                    <button type="button" disabled aria-disabled="true" className={`${btn} cursor-not-allowed border border-[#c0c0c0] text-white`}>
+                      Coming soon
+                    </button>
                   </div>
                 </div>
               ))}

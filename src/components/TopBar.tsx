@@ -33,6 +33,7 @@ const pageLinks = [
   { label: "Guides", href: "/guides", key: "guides" },
   { label: "Price", href: "/guides/uk-course-prices", key: "price" },
   { label: "Promotions", href: "/promotions", key: "promotions" },
+  { label: "Shop", href: "/shop", key: "shop" },
   { label: "Find a club", href: "/#find-a-club", key: "find-a-club" },
   { label: "How it works", href: "/#how-it-works", key: "how-it-works" },
   { label: "Enquire", href: "/#enquire", key: "enquire" },
