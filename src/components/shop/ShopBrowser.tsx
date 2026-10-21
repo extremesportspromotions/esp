@@ -2,18 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import MountainMark from "./MountainMark";
 import { categories, products, type Category, type Product } from "./products";
 
 type Filter = Category | "all";
-
-function MountainMark({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 120 60" className={className} aria-hidden>
-      <path d="M2 58 L30 22 L36 30 L44 18 L52 26 L62 6 L70 20 L76 14 L82 24 L90 18 L118 58" fill="none" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" />
-      <path d="M62 6 L58 22 L63 20 L60 34 M44 18 L41 30 M90 18 L88 30 L92 28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 const gearIcons: Record<string, string> = {
   Climbing: "M8 3h8a4 4 0 0 1 0 8H9v6a4 4 0 0 1-8 0 M8 3a4 4 0 0 0 0 8",
@@ -42,7 +34,7 @@ function Tile({ p }: { p: Product }) {
   }
   return (
     <div className="flex h-full w-full items-center justify-center bg-[#1C1917]">
-      <MountainMark className="w-1/3 text-[#9c9ca3]" />
+      <MountainMark sizes="(max-width: 1024px) 110px, 180px" />
     </div>
   );
 }

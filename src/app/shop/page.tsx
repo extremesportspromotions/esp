@@ -3,6 +3,7 @@ import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import ShopBrowser from "@/components/shop/ShopBrowser";
+import MountainMark from "@/components/shop/MountainMark";
 
 export const metadata: Metadata = {
   title: "Shop | Extreme Sports Promotions",
@@ -10,19 +11,11 @@ export const metadata: Metadata = {
 };
 
 const tiles = [
-  { href: "#apparel", label: "Apparel", img: "/shop/tee.jpg", pos: "50% 55%" },
-  { href: "#bags", label: "Bags", img: null },
-  { href: "#outerwear", label: "Outerwear & more", img: null },
-  { href: "#gear", label: "Gear", img: null },
+  { href: "#apparel", label: "Apparel" },
+  { href: "#bags", label: "Bags" },
+  { href: "#outerwear", label: "Outerwear & more" },
+  { href: "#gear", label: "Gear" },
 ];
-
-function Mark() {
-  return (
-    <svg viewBox="0 0 120 60" className="w-2/5 text-[#9c9ca3]" aria-hidden>
-      <path d="M2 58 L30 22 L36 30 L44 18 L52 26 L62 6 L70 20 L76 14 L82 24 L90 18 L118 58" fill="none" stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 export default function ShopPage() {
   return (
@@ -45,11 +38,7 @@ export default function ShopPage() {
           <div className="grid grid-cols-4 gap-2 sm:gap-4">
             {tiles.map((t) => (
               <a key={t.href} href={t.href} className="group relative block aspect-square overflow-hidden rounded-xl bg-[#1C1917] sm:aspect-[4/3]">
-                {t.img ? (
-                  <Image src={t.img} alt="" fill sizes="25vw" className="object-cover opacity-80 transition group-hover:opacity-100" style={{ objectPosition: t.pos }} />
-                ) : (
-                  <span className="absolute inset-0 flex items-center justify-center"><Mark /></span>
-                )}
+                <span className="absolute inset-0 flex items-center justify-center pb-[18%]"><MountainMark sizes="(max-width: 640px) 60px, 180px" /></span>
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-2 pt-6 pb-2 text-[11px] font-bold leading-tight text-white sm:text-sm">
                   {t.label}
                 </span>
