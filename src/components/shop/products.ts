@@ -14,7 +14,7 @@ export type Product = {
 export const categories: { id: Category; label: string; short: string; subs: string[] }[] = [
   { id: "apparel", label: "Apparel", short: "Apparel", subs: ["Tops", "Hoodies", "Headwear", "Bottoms"] },
   { id: "bags", label: "Bags and day packs", short: "Bags", subs: [] },
-  { id: "outerwear", label: "Outerwear and accessories", short: "Outerwear and accessories", subs: [] },
+  { id: "outerwear", label: "Outerwear and accessories", short: "Outerwear & more", subs: [] },
   { id: "gear", label: "Recommended gear", short: "Gear", subs: ["Climbing", "Snow", "Cameras", "Outdoor", "Water and air", "Training", "Safety"] },
 ];
 

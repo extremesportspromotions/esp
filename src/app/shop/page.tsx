@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const tiles = [
   { href: "#apparel", label: "Apparel", img: "/shop/tee.jpg", pos: "50% 55%" },
   { href: "#bags", label: "Bags", img: null },
-  { href: "#outerwear", label: "Outerwear and accessories", img: null },
+  { href: "#outerwear", label: "Outerwear & more", img: null },
   { href: "#gear", label: "Gear", img: null },
 ];
 
@@ -36,7 +36,7 @@ export default function ShopPage() {
           </div>
           <div>
             <h1 className="font-display text-2xl font-extrabold leading-tight text-[#1C1917] sm:text-3xl">Shop</h1>
-            <p className="text-sm text-[#1C1917] sm:text-base">Subtle kit for coaches, students and athletes. Everything is coming soon.</p>
+            <p className="text-sm text-[#1C1917] sm:text-base">Subtle kit for coaches, students and athletes.</p>
           </div>
         </header>
 
