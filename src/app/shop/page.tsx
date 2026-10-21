@@ -15,7 +15,7 @@ const card = "flex flex-col overflow-hidden rounded-2xl border border-[#1C1917]/
 const btn = "mt-auto block rounded-full px-4 py-3 text-center text-sm font-bold uppercase tracking-[0.04em]";
 
 const kit = [
-  { name: "Tee", price: "£28", note: "Black crewneck tee. Small matte mountain logo on the left chest.", img: "/shop/tee.jpg", alt: "Black tee, silver mountain mark", pos: "50% 55%" },
+  { name: "Tee", price: "£28", note: "Black crewneck tee. Small matte mountain logo on the sleeve.", img: "/shop/tee.jpg", alt: "Black tee, silver mountain mark", pos: "50% 55%" },
   { name: "Polo", price: "", note: "Black polo. Small matte logo on the left chest.", img: "/shop/polo.jpg", alt: "Black polo, small matte mountain mark", pos: "50% 40%" },
   { name: "Cap", price: "£22", note: "Black cap. Clean front mountain logo.", img: "/shop/cap.jpg", alt: "Black cap, silver mountain mark", pos: "50% 45%" },
   { name: "Shirt", price: "", note: "Black button-down shirt. Small matte logo on the left chest.", img: "/shop/shirt.jpg", alt: "Black button-down shirt, small matte mountain mark", pos: "50% 40%" },
