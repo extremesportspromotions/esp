@@ -4,7 +4,7 @@ import { merch, type Merch, type MerchVariant } from "@/components/shop/merch";
 /** Server-side helpers for the ESP kit shop: prices, delivery rates and fulfilment orders. */
 
 const PF = "https://api.printful.com";
-export const STORE_ID = process.env.PRINTFUL_STORE_ID || "18943759";
+export const STORE_ID = process.env.PRINTFUL_STORE_ID || "18950600";
 
 const byId = new Map<number, { p: Merch; v: MerchVariant }>();
 for (const p of merch) for (const v of p.variants) byId.set(v.id, { p, v });
