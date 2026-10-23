@@ -1,6 +1,6 @@
 // Generated from the shop's product catalogue (scripts/pf-sync.py). Prices in pence, GBP.
 // id = sync variant id (used for orders); vid = catalogue variant id (used for delivery rates).
-export type MerchVariant = { id: number; vid: number; label: string; pence: number };
+export type MerchVariant = { id: number; vid: number; label: string; pence: number; oos?: boolean };
 export type Merch = { pid: number; name: string; cat: "apparel" | "bags" | "outerwear"; sub?: string; img: string; variants: MerchVariant[] };
 
 export const merch: Merch[] = [

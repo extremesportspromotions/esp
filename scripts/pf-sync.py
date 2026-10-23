@@ -33,6 +33,8 @@ for m in cur:
         sv=byvid[v['vid']]; p=round(float(sv['retail_price'])*100)
         if p!=v['pence']: changes+=1
         v['id']=sv['id']; v['pence']=p
+        if sv.get('availability_status') not in (None,'active'): v['oos']=True
+        else: v.pop('oos',None)
 assert len(cur)==37==len(new)
 open(path,'w').write(src[:a]+json.dumps(cur,indent=1,ensure_ascii=False)+src[b:])
 print('store',S,'products',len(cur),'price changes',changes)

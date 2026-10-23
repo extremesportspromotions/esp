@@ -19,7 +19,7 @@ export function cleanLines(raw: unknown): Line[] | null {
   for (const r of raw) {
     const id = Number((r as Line)?.id);
     const qty = Math.floor(Number((r as Line)?.qty));
-    if (!byId.has(id) || !(qty >= 1 && qty <= 10)) return null;
+    if (!byId.has(id) || byId.get(id)!.v.oos || !(qty >= 1 && qty <= 10)) return null;
     out.set(id, Math.min(10, (out.get(id) ?? 0) + qty));
   }
   return [...out].map(([id, qty]) => ({ id, qty }));

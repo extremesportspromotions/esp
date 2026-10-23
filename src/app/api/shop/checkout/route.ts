@@ -37,7 +37,7 @@ export async function POST(req: Request): Promise<Response> {
 
   const body = (await req.json().catch(() => null)) as { items?: unknown } | null;
   const lines = cleanLines(body?.items);
-  if (!lines) return Response.json({ ok: false }, { status: 400 });
+  if (!lines) return Response.json({ ok: false, reason: "items" }, { status: 400 });
 
   const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim() || "unknown";
   if (limited(`shop:${ip}`, 12, 10 * 60_000)) return Response.json({ ok: false }, { status: 429 });

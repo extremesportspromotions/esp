@@ -16,7 +16,7 @@ export default function LatestGuides() {
               Never leap alone.
             </h2>
             <p className="mt-3 text-base leading-relaxed text-[#1C1917]/70 sm:text-lg">
-              Let's find the right coach for you.
+              Let&apos;s find the right coach for you.
             </p>
           </div>
           <Link

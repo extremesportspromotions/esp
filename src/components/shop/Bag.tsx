@@ -48,9 +48,11 @@ function useBag(): BagCtx {
 
 export function MerchCard({ p }: { p: Merch }) {
   const { add } = useBag();
-  const [vid, setVid] = useState(p.variants.length === 1 ? p.variants[0].id : 0);
+  const soldOut = p.variants.every((v) => v.oos);
+  const [vid, setVid] = useState(p.variants.length === 1 && !p.variants[0].oos ? p.variants[0].id : 0);
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
+  const [needSize, setNeedSize] = useState(false);
   const prices = p.variants.map((v) => v.pence);
   const min = Math.min(...prices);
   const chosen = p.variants.find((v) => v.id === vid);
@@ -61,18 +63,22 @@ export function MerchCard({ p }: { p: Merch }) {
   return (
     <li className="flex flex-col overflow-hidden rounded-xl border border-[#1C1917]/10 bg-white">
       <div className="relative aspect-square overflow-hidden bg-[#F4F6F8]">
-        <Image src={p.img} alt={`ESP ${p.name}, black, with the mountain logo`} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-contain p-2" />
+        <Image src={p.img} alt={`ESP ${p.name}, black, with the mountain logo`} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px" loading="lazy" className="object-contain p-2" />
       </div>
       <div className="flex flex-1 flex-col gap-2 p-3">
-        <div className="flex items-baseline justify-between gap-2">
-          <h3 className="text-sm font-semibold leading-snug text-[#1C1917] sm:text-[15px]">{p.name}</h3>
-          <span className="shrink-0 text-sm font-bold text-[#1C1917] sm:text-[15px]">{price}</span>
+        <div className="flex flex-col gap-0.5">
+          <h3 className="line-clamp-2 min-h-[2.5em] text-sm font-semibold leading-tight text-[#1C1917] sm:text-[15px]">{p.name}</h3>
+          <span className="text-sm font-bold text-[#1C1917] sm:text-[15px]">{price}</span>
         </div>
         <form
           className="mt-auto flex flex-col gap-2"
           onSubmit={(e) => {
             e.preventDefault();
-            if (!vid) return;
+            if (!vid) {
+              setNeedSize(true);
+              (e.currentTarget.querySelector("select") as HTMLSelectElement | null)?.focus();
+              return;
+            }
             add(vid, qty);
             setAdded(true);
             setTimeout(() => setAdded(false), 1800);
@@ -82,10 +88,10 @@ export function MerchCard({ p }: { p: Merch }) {
             {single ? (
               <span className="flex-1 self-center text-[13px] text-[#1C1917]">{p.variants[0].label}</span>
             ) : (
-              <select aria-label={`${p.name} option`} className={`${field} min-w-0 flex-1`} value={vid} onChange={(e) => setVid(Number(e.target.value))} required>
-                <option value={0} disabled>Choose…</option>
+              <select aria-label={`${p.name} option`} className={`${field} min-w-0 flex-1`} value={vid} onChange={(e) => { setVid(Number(e.target.value)); setNeedSize(false); }} aria-invalid={needSize || undefined}>
+                <option value={0} disabled>{/[0-9]XL|^[SML]$|^XS$/.test(p.variants[0].label) ? "Size" : "Option"}</option>
                 {p.variants.map((v) => (
-                  <option key={v.id} value={v.id}>{v.label}</option>
+                  <option key={v.id} value={v.id} disabled={v.oos}>{v.oos ? `${v.label} (out of stock)` : v.label}</option>
                 ))}
               </select>
             )}
@@ -93,8 +99,9 @@ export function MerchCard({ p }: { p: Merch }) {
               {Array.from({ length: MAX_QTY }, (_, i) => i + 1).map((n) => <option key={n} value={n}>{n}</option>)}
             </select>
           </div>
-          <button type="submit" disabled={!vid} className="rounded-md bg-[#1C1917] px-3 py-2 text-sm font-semibold text-white transition hover:bg-black disabled:opacity-40">
-            {added ? "Added to bag" : "Add to bag"}
+          {needSize && <p role="alert" className="-mt-1 text-[12px] font-medium text-red-700">Choose an option first.</p>}
+          <button type="submit" disabled={soldOut} className="rounded-md bg-[#1C1917] px-3 py-2 text-sm font-semibold text-white transition hover:bg-black disabled:opacity-40">
+            {soldOut ? "Out of stock" : added ? "Added to bag" : "Add to bag"}
           </button>
         </form>
       </div>
@@ -106,13 +113,29 @@ export function BagButton() {
   const { lines, set } = useBag();
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
-  const [err, setErr] = useState("");
+  const [errState, setErrState] = useState({ key: "", msg: "" });
   const count = lines.reduce((n, l) => n + l.qty, 0);
   const items = lines.flatMap((l) => {
     const m = byId.get(l.id);
     return m ? [{ ...l, ...m }] : [];
   });
   const subtotal = items.reduce((n, i) => n + i.v.pence * i.qty, 0);
+  const [rate, setRate] = useState<{ key: string; pence?: number; failed?: boolean } | null>(null);
+  const key = JSON.stringify(lines);
+  useEffect(() => {
+    if (!open || lines.length === 0) return;
+    let live = true;
+    fetch("/api/shop/rates", { method: "POST", headers: { "Content-Type": "application/json" }, body: `{"items":${key}}` })
+      .then((r) => r.json())
+      .then((d: { ok?: boolean; pence?: number }) => live && setRate(d.ok && typeof d.pence === "number" ? { key, pence: d.pence } : { key, failed: true }))
+      .catch(() => live && setRate({ key, failed: true }));
+    return () => {
+      live = false;
+    };
+  }, [open, key, lines.length]);
+  const quote = rate?.key === key ? rate : null;
+  const err = errState.key === key ? errState.msg : "";
+  const setErr = (msg: string) => setErrState({ key, msg });
 
   async function checkout() {
     setBusy(true);
@@ -123,19 +146,28 @@ export function BagButton() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ items: lines }),
       });
-      const data = (await res.json().catch(() => null)) as { url?: string } | null;
+      const data = (await res.json().catch(() => null)) as { url?: string; reason?: string } | null;
       if (res.ok && data?.url?.startsWith("https://checkout.stripe.com/")) {
         window.location.assign(data.url);
         return;
       }
-      setErr("Checkout isn't available right now. Please try again shortly, or email enquiries@extremesportspromotions.com.");
+      setErr(
+        data?.reason === "not-configured"
+          ? "Online payment isn't switched on yet. Please email enquiries@extremesportspromotions.com to order."
+          : data?.reason === "delivery"
+            ? "We couldn't work out UK delivery just now. Please try again in a minute."
+            : data?.reason === "items"
+              ? "One of the items in your bag is no longer available. Please remove it and try again."
+              : res.status === 429
+                ? "Too many attempts. Please wait a few minutes and try again."
+                : "Checkout isn't available right now. Please try again shortly, or email enquiries@extremesportspromotions.com.",
+      );
     } catch {
       setErr("Checkout isn't available right now. Please try again shortly.");
     }
     setBusy(false);
   }
 
-  if (count === 0 && !open) return null;
   return (
     <>
       <button type="button" onClick={() => setOpen(true)} className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-[#1C1917] px-4 py-3 text-sm font-semibold text-white shadow-lg">
@@ -150,7 +182,14 @@ export function BagButton() {
               <button type="button" onClick={() => setOpen(false)} className="text-sm font-semibold underline">Close</button>
             </div>
             <ul className="flex-1 divide-y divide-[#1C1917]/10 overflow-y-auto px-4">
-              {items.length === 0 && <li className="py-6 text-sm">Your bag is empty.</li>}
+              {items.length === 0 && (
+                <li className="flex flex-col items-center gap-3 py-12 text-center">
+                  <svg viewBox="0 0 24 24" className="h-10 w-10 text-[#1C1917]/40" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden><path d="M5 8h14l-1 13H6z M9 8V6a3 3 0 0 1 6 0v2" /></svg>
+                  <p className="text-base font-semibold">Your bag is empty</p>
+                  <p className="text-sm">Pick a size and tap Add to bag.</p>
+                  <button type="button" onClick={() => setOpen(false)} className="mt-1 rounded-md border border-[#1C1917] px-4 py-2 text-sm font-semibold">Keep shopping</button>
+                </li>
+              )}
               {items.map((i) => (
                 <li key={i.id} className="flex gap-3 py-3">
                   <div className="relative h-16 w-16 shrink-0 rounded bg-[#F4F6F8]"><Image src={i.p.img} alt="" fill sizes="64px" className="object-contain p-1" /></div>
@@ -160,7 +199,7 @@ export function BagButton() {
                     <div className="mt-1 flex items-center gap-2">
                       <button type="button" aria-label="One fewer" className="h-7 w-7 rounded border border-[#1C1917]/25" onClick={() => set(i.id, i.qty - 1)}>−</button>
                       <span className="w-5 text-center">{i.qty}</span>
-                      <button type="button" aria-label="One more" className="h-7 w-7 rounded border border-[#1C1917]/25" onClick={() => set(i.id, i.qty + 1)}>+</button>
+                      <button type="button" aria-label="One more" disabled={i.qty >= MAX_QTY} className="h-7 w-7 rounded border border-[#1C1917]/25 disabled:opacity-30" onClick={() => set(i.id, i.qty + 1)}>+</button>
                       <button type="button" className="ml-auto text-[13px] underline" onClick={() => set(i.id, 0)}>Remove</button>
                     </div>
                   </div>
@@ -168,14 +207,22 @@ export function BagButton() {
                 </li>
               ))}
             </ul>
-            <div className="border-t border-[#1C1917]/10 p-4">
+            {items.length > 0 && <div className="border-t border-[#1C1917]/10 p-4">
               <div className="flex justify-between text-sm font-semibold"><span>Subtotal</span><span>{gbp(subtotal)}</span></div>
-              <p className="mt-1 text-[13px]">UK delivery is added at checkout. Each item is made to order for you.</p>
+              {items.length > 0 && (
+                <div className="mt-1 flex justify-between text-sm">
+                  <span>UK delivery</span>
+                  <span>{quote?.pence != null ? gbp(quote.pence) : quote?.failed ? "Shown at checkout" : "Working out…"}</span>
+                </div>
+              )}
+              {quote?.pence != null && <div className="mt-1 flex justify-between text-sm font-bold"><span>Total</span><span>{gbp(subtotal + quote.pence)}</span></div>}
+              {quote?.failed && <p className="mt-2 text-[13px] text-red-700">We couldn&apos;t get a delivery price just now. It will be shown at checkout.</p>}
+              <p className="mt-2 text-[13px]">UK delivery only. Each item is made to order for you.</p>
               {err && <p className="mt-2 text-[13px] text-red-700">{err}</p>}
               <button type="button" disabled={busy || items.length === 0} onClick={checkout} className="mt-3 w-full rounded-md bg-[#1C1917] px-4 py-3 text-sm font-semibold text-white disabled:opacity-40">
                 {busy ? "Opening checkout…" : "Checkout"}
               </button>
-            </div>
+            </div>}
           </aside>
         </div>
       )}
