@@ -12,42 +12,16 @@ export type Product = {
 };
 
 export const categories: { id: Category; label: string; short: string; subs: string[] }[] = [
-  { id: "apparel", label: "Apparel", short: "Apparel", subs: ["Tops", "Hoodies", "Headwear", "Bottoms"] },
+  { id: "apparel", label: "Apparel", short: "Apparel", subs: ["Tops", "Hoodies", "Headwear", "Kids"] },
   { id: "bags", label: "Bags and day packs", short: "Bags", subs: [] },
   { id: "outerwear", label: "Outerwear and accessories", short: "Outerwear & more", subs: [] },
   { id: "gear", label: "Recommended gear", short: "Gear", subs: ["Climbing", "Snow", "Cameras", "Outdoor", "Water and air", "Training", "Safety"] },
 ];
 
-const a = (name: string, sub: string, note: string, extra: Partial<Product> = {}): Product => ({ name, note, cat: "apparel", sub, ...extra });
 const g = (sub: string, name: string, note: string): Product => ({ name, note, cat: "gear", sub });
 
+/** Recommended gear (affiliate). ESP kit lives in merch.ts. */
 export const products: Product[] = [
-  a("Tee", "Tops", "Black crewneck tee. Small matte mountain logo on the sleeve.", { price: "£28", img: "/shop/tee.jpg", alt: "Black tee, silver mountain mark", pos: "50% 55%" }),
-  a("Polo", "Tops", "Black polo. Small matte logo on the left chest.", { img: "/shop/polo.jpg", alt: "Black polo, small matte mountain mark", pos: "50% 40%" }),
-  a("Cap", "Headwear", "Black cap. Clean front mountain logo.", { price: "£22", img: "/shop/cap.jpg", alt: "Black cap, silver mountain mark", pos: "50% 45%" }),
-  a("Shirt", "Tops", "Black button-down shirt. Small matte logo on the left chest.", { img: "/shop/shirt.jpg", alt: "Black button-down shirt, small matte mountain mark", pos: "50% 40%" }),
-  a("Hoodie", "Hoodies", "Black pullover hoodie. Small matte mountain logo on the left chest."),
-  a("Zip hoodie", "Hoodies", "Black zip-up hoodie. Small matte mountain logo on the left chest."),
-  a("Beanie", "Headwear", "Black knitted beanie. Small mountain logo on the front."),
-  a("Long-sleeve performance top", "Tops", "Black, light and quick-drying. Small mountain logo on the left chest."),
-  a("Leggings", "Bottoms", "Black stretch leggings. Small mountain logo on the hip."),
-  a("Shorts", "Bottoms", "Black training shorts. Small mountain logo on the leg."),
-  a("Joggers", "Bottoms", "Black joggers. Small mountain logo on the hip."),
-  a("Tank top", "Tops", "Black training vest. Small mountain logo on the chest."),
-
-  { cat: "bags", name: "Backpack", note: "About 15 L and water-resistant. Small mountain logo." },
-  { cat: "bags", name: "Utility backpack", note: "Simple everyday pack for sessions and travel. Small mountain logo." },
-  { cat: "bags", name: "Duffle / gym bag", note: "Room for a change of kit and a towel. Small mountain logo." },
-  { cat: "bags", name: "Belt bag", note: "Keeps keys, phone and cards close. Small mountain logo." },
-
-  { cat: "outerwear", name: "Packable anorak", note: "Light over-the-head shell that folds into its own pocket. Small mountain logo." },
-  { cat: "outerwear", name: "Windbreaker", note: "Light layer for breezy days. Small mountain logo on the left chest." },
-  { cat: "outerwear", name: "Quarter-zip", note: "Black quarter-zip top. Small mountain logo on the left chest." },
-  { cat: "outerwear", name: "Socks", note: "Black socks with a small mountain logo." },
-  { cat: "outerwear", name: "Stickers", note: "Mountain logo stickers." },
-  { cat: "outerwear", name: "Water bottle", note: "Reusable bottle with the mountain logo." },
-  { cat: "outerwear", name: "Phone case", note: "Black case with the mountain logo." },
-
   g("Climbing", "Climbing harness", "An all-round harness with adjustable legs and gear loops, such as the Black Diamond Momentum."),
   g("Climbing", "Climbing helmet", "UIAA/CE certified, with vents and headtorch clips. It should not rock when you nod."),
   g("Climbing", "Dynamic rope", "A single rope of about 9.5 to 10.2 mm, 60 to 70 m long, UIAA certified."),

@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import MountainMark from "./MountainMark";
 import { categories, products, type Category, type Product } from "./products";
+import { merch } from "./merch";
+import { BagProvider, BagButton, MerchCard } from "./Bag";
 
 type Filter = Category | "all";
 
@@ -104,6 +106,7 @@ export default function ShopBrowser() {
     `shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-[13px] font-medium transition ${on ? "border-[#1C1917] bg-[#1C1917] text-white" : "border-[#1C1917]/25 bg-white text-[#1C1917] hover:border-[#1C1917]"}`;
 
   return (
+    <BagProvider>
     <div id="products">
       <div className="sticky top-[101px] z-40 border-b border-[#1C1917]/10 bg-[#EEF4FA]/95 backdrop-blur-md lg:top-[61px]">
         <div className="mx-auto max-w-7xl px-3 sm:px-6">
@@ -129,20 +132,24 @@ export default function ShopBrowser() {
       <div className="mx-auto max-w-7xl px-3 py-6 sm:px-6">
         {shown.map((c) => {
           const items = products.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
+          const kit = merch.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
           return (
             <section key={c.id} id={c.id} aria-labelledby={`h-${c.id}`} className="mb-10 scroll-mt-[220px] lg:scroll-mt-[170px] last:mb-0">
               <div className="mb-3 flex items-baseline justify-between">
                 <h2 id={`h-${c.id}`} className="font-display text-xl font-bold text-[#1C1917] sm:text-2xl">{c.label}</h2>
-                <span className="text-sm text-[#1C1917]">{items.length} items</span>
+                <span className="text-sm text-[#1C1917]">{items.length + kit.length} items</span>
               </div>
               {c.id === "gear" && <GearBanner />}
               <ul className={grid}>
+                {kit.map((p) => <MerchCard key={p.pid} p={p} />)}
                 {items.map((p) => <Card key={`${p.cat}-${p.name}`} p={p} />)}
               </ul>
             </section>
           );
         })}
       </div>
+      <BagButton />
     </div>
+    </BagProvider>
   );
 }
