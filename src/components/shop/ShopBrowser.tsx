@@ -129,7 +129,7 @@ export default function ShopBrowser() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-3 py-6 sm:px-6">
+      <div className="mx-auto max-w-7xl px-3 pb-24 pt-6 sm:px-6 lg:pb-20">
         {shown.map((c) => {
           const items = products.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
           const kit = merch.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));

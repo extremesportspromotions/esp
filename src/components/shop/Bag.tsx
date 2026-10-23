@@ -71,12 +71,15 @@ export function MerchCard({ p }: { p: Merch }) {
           <span className="text-sm font-bold text-[#1C1917] sm:text-[15px]">{price}</span>
         </div>
         <form
-          className="mt-auto flex flex-col gap-2"
+          className="mt-auto flex scroll-mb-24 scroll-mt-48 flex-col gap-2 lg:scroll-mb-20 lg:scroll-mt-40"
           onSubmit={(e) => {
             e.preventDefault();
             if (!vid) {
               setNeedSize(true);
-              (e.currentTarget.querySelector("select") as HTMLSelectElement | null)?.focus();
+              const form = e.currentTarget;
+              (form.querySelector("select") as HTMLSelectElement | null)?.focus({ preventScroll: true });
+              // Keep the picker and message clear of the floating Bag button.
+              requestAnimationFrame(() => form.scrollIntoView({ block: "nearest", behavior: "smooth" }));
               return;
             }
             add(vid, qty);
