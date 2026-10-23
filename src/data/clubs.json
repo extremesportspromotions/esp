@@ -3281,5 +3281,16 @@
     "lng": -3.19919,
     "url": "http://www.valleysparagliding.co.uk",
     "email": "chief-flying-instructor@valleysparagliding.co.uk"
+  },
+  {
+    "id": "scuba-diving-york-sub-aqua-club",
+    "name": "York Sub Aqua Club (York Diving)",
+    "sportId": "scuba-diving",
+    "town": "York",
+    "region": "United Kingdom",
+    "lat": 53.998764,
+    "lng": -1.055189,
+    "url": "https://york-diving.co.uk/",
+    "email": "yorksubaquaclub@gmail.com"
   }
 ]
