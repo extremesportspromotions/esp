@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import Image from "next/image";
-import { type Merch } from "./merch";
+import { type Merch, type MerchPhoto } from "./merch";
 import { gbp, MAX_QTY, OPEN_BAG, useBag } from "./Bag";
 
 const field = "rounded-md border border-[#1C1917]/25 bg-white px-2 py-1.5 text-[13px] text-[#1C1917]";
@@ -43,14 +43,30 @@ function closeView() {
 type Pick = ReturnType<typeof usePick>;
 function usePick(p: Merch) {
   const { add } = useBag();
-  const soldOut = p.variants.every((v) => v.oos);
-  const [vid, setVid] = useState(p.variants.length === 1 && !p.variants[0].oos ? p.variants[0].id : 0);
+  const colors = p.colors ?? [];
+  const [color, setColorRaw] = useState(colors[0]?.name);
+  const variants = colors.length > 1 ? p.variants.filter((v) => v.color === color) : p.variants;
+  const soldOut = variants.every((v) => v.oos);
+  const only = (vs: typeof variants) => (vs.length === 1 && !vs[0].oos ? vs[0].id : 0);
+  const [vid, setVid] = useState(only(variants));
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
   const [needSize, setNeedSize] = useState(false);
-  const prices = p.variants.map((v) => v.pence);
+  const prices = variants.map((v) => v.pence);
   const min = Math.min(...prices);
-  const chosen = p.variants.find((v) => v.id === vid);
+  const chosen = variants.find((v) => v.id === vid);
+  const setColor = (name: string) => {
+    if (name === color) return;
+    const next = p.variants.filter((v) => v.color === name);
+    // Keep the chosen size when the new colour has it.
+    const same = next.find((v) => !v.oos && v.label === chosen?.label);
+    setColorRaw(name);
+    setVid(same ? same.id : only(next));
+    setNeedSize(false);
+    setAdded(false);
+  };
+  const colorObj = colors.find((c) => c.name === color);
+  const photos: MerchPhoto[] = colorObj && colorObj !== colors[0] && colorObj.gallery.length ? colorObj.gallery : p.gallery?.length ? p.gallery : [{ src: p.img, alt: `ESP ${p.name}` }];
   const price = chosen ? gbp(chosen.pence) : min === Math.max(...prices) ? gbp(min) : `From ${gbp(min)}`;
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const addNow = () => {
@@ -59,15 +75,15 @@ function usePick(p: Merch) {
     clearTimeout(timer.current);
     timer.current = setTimeout(() => setAdded(false), 2500);
   };
-  return { p, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, price, addNow };
+  return { p, variants, colors, color, setColor, photos, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, price, addNow };
 }
 
 const isSize = (label: string) => /^(XS|S|M|L|XL|[2-5]XL)$/.test(label);
 
 function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => void }) {
-  const { p, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, addNow } = k;
-  const single = p.variants.length === 1;
-  const sizeWord = isSize(p.variants[0].label) ? "Size" : "Option";
+  const { p, variants, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, addNow } = k;
+  const single = variants.length === 1;
+  const sizeWord = isSize(variants[0].label) ? "Size" : "Option";
   const f = big ? "rounded-md border border-[#1C1917]/25 bg-white px-3 py-2.5 text-[15px] text-[#1C1917]" : field;
   return (
     <form
@@ -89,7 +105,7 @@ function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => 
       {big && !single && <label htmlFor={`pv-opt-${p.pid}`} className={`-mb-1 text-sm font-semibold ${ink}`}>{sizeWord}</label>}
       <div className="flex min-w-0 gap-2">
         {single ? (
-          <span className={`flex-1 self-center ${big ? "text-[15px]" : "text-[13px]"} ${ink}`}>{p.variants[0].label}</span>
+          <span className={`flex-1 self-center ${big ? "text-[15px]" : "text-[13px]"} ${ink}`}>{variants[0].label}</span>
         ) : (
           <select
             id={big ? `pv-opt-${p.pid}` : undefined}
@@ -103,7 +119,7 @@ function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => 
             aria-invalid={needSize || undefined}
           >
             <option value={0} disabled>{big ? `Choose ${sizeWord.toLowerCase()}` : sizeWord}</option>
-            {p.variants.map((v) => (
+            {variants.map((v) => (
               <option key={v.id} value={v.id} disabled={v.oos}>{v.oos ? `${v.label} (out of stock)` : v.label}</option>
             ))}
           </select>
@@ -128,8 +144,11 @@ export function MerchCard({ p }: { p: Merch }) {
   return (
     <li className="flex flex-col overflow-hidden rounded-xl border border-[#1C1917]/10 bg-white">
       <button type="button" onClick={() => openView(p)} aria-label={`View ${p.name}: photos and details`} className="group relative block aspect-square overflow-hidden bg-[#F4F6F8] text-left focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1C1917]">
-        <Image src={p.img} alt={`ESP ${p.name}, black, with the mountain logo`} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px" loading="lazy" className="object-contain p-2 transition duration-300 group-hover:scale-[1.03]" />
-        {(p.gallery?.length ?? 0) > 1 && (
+        <Image src={k.colors.length > 1 && k.color !== k.colors[0].name ? k.photos[0].src : p.img} alt={`ESP ${p.name}, ${(k.color ?? "black").toLowerCase()}, with the mountain logo`} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px" loading="lazy" className="object-contain p-2 transition duration-300 group-hover:scale-[1.03]" />
+        {k.colors.length > 1 && (
+          <span className="absolute bottom-2 left-2 rounded-full bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-[#1C1917] shadow-sm">{k.colors.length} colours</span>
+        )}
+        {(p.gallery?.length ?? 0) > 1 && k.colors.length <= 1 && (
           <span className="absolute bottom-2 right-2 rounded-full bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-[#1C1917] shadow-sm">{p.gallery!.length} photos</span>
         )}
       </button>
@@ -170,7 +189,6 @@ function ProductView({ k }: { k: Pick }) {
     };
   }, []);
 
-  const photos = p.gallery?.length ? p.gallery : [{ src: p.img, alt: `ESP ${p.name}` }];
 
   return (
     <div className="fixed inset-0 z-[70] flex items-stretch justify-center bg-black/50 lg:items-center lg:p-6" onClick={closeView}>
@@ -192,7 +210,7 @@ function ProductView({ k }: { k: Pick }) {
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M6 6l12 12M18 6L6 18" /></svg>
         </button>
 
-        <Gallery photos={photos} name={p.name} />
+        <Gallery key={k.color ?? ""} photos={k.photos} name={k.color && k.colors.length > 1 ? `${p.name}, ${k.color}` : p.name} />
 
         <div className="flex flex-col gap-4 p-5 pb-8 lg:overflow-y-auto lg:p-8">
           <div>
@@ -206,6 +224,7 @@ function ProductView({ k }: { k: Pick }) {
               ))}
             </ul>
           ) : null}
+          {k.colors.length > 1 && <Swatches k={k} />}
           <BuyForm k={k} big onAdded={() => setJustAdded(true)} />
           {justAdded && (
             <div className="flex items-center justify-between gap-3 rounded-lg bg-[#EEF4FA] px-3 py-2.5 text-sm text-[#1C1917]" role="status">
@@ -226,6 +245,35 @@ function ProductView({ k }: { k: Pick }) {
         </div>
       </div>
     </div>
+  );
+}
+
+/* ---------- colour picker ---------- */
+
+function Swatches({ k }: { k: Pick }) {
+  return (
+    <fieldset className="flex flex-col gap-2">
+      <legend className={`mb-2 text-sm font-semibold ${ink}`}>
+        Colour: <span className="font-normal">{k.color}</span>
+      </legend>
+      <div className="flex flex-wrap gap-2">
+        {k.colors.map((c) => {
+          const on = c.name === k.color;
+          return (
+            <button
+              key={c.name}
+              type="button"
+              aria-pressed={on}
+              onClick={() => k.setColor(c.name)}
+              className={`flex items-center gap-2 rounded-full border py-1.5 pl-1.5 pr-3 text-[13px] ${ink} ${on ? "border-[#1C1917] ring-1 ring-[#1C1917]" : "border-[#1C1917]/20 hover:border-[#1C1917]/50"}`}
+            >
+              <span aria-hidden className="h-6 w-6 rounded-full ring-1 ring-inset ring-black/15" style={{ backgroundColor: c.hex }} />
+              {c.name}
+            </button>
+          );
+        })}
+      </div>
+    </fieldset>
   );
 }
 

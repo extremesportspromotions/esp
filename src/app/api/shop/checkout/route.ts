@@ -1,3 +1,4 @@
+import { variantImg, variantName } from "@/components/shop/merch";
 import { cleanLines, lookup, packLines, ukDelivery } from "@/lib/shop";
 
 /**
@@ -67,8 +68,8 @@ export async function POST(req: Request): Promise<Response> {
     form.set(`line_items[${i}][quantity]`, String(l.qty));
     form.set(`line_items[${i}][price_data][currency]`, "gbp");
     form.set(`line_items[${i}][price_data][unit_amount]`, String(v.pence));
-    form.set(`line_items[${i}][price_data][product_data][name]`, `ESP ${p.name}${p.variants.length > 1 ? ` (${v.label})` : ""}`);
-    form.set(`line_items[${i}][price_data][product_data][images][0]`, `https://www.extremesportspromotions.com${p.img}`);
+    form.set(`line_items[${i}][price_data][product_data][name]`, `ESP ${p.name}${variantName(p, v) ? ` (${variantName(p, v)})` : ""}`);
+    form.set(`line_items[${i}][price_data][product_data][images][0]`, `https://www.extremesportspromotions.com${variantImg(p, v)}`);
   });
 
   const res = await fetch("https://api.stripe.com/v1/checkout/sessions", {

@@ -103,6 +103,16 @@ export default function PrivacyPage() {
               unless the law requires us to.
             </p>
 
+            <h2 id="affiliate-links">Affiliate links</h2>
+            <p>
+              Some links on our shop page are affiliate links. If you buy through them, ESP may earn a
+              small commission at no extra cost to you. We only link to gear we&apos;d recommend.
+            </p>
+            <p>
+              Awin, our affiliate network, may set cookies when you click an affiliate link so the
+              purchase can be tracked.
+            </p>
+
             <h2>How long we keep it</h2>
             <p>
               We keep enquiry details for up to 12 months after your last contact with us, then

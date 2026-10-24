@@ -141,6 +141,7 @@ export default function ShopBrowser() {
                 <span className="text-sm text-[#1C1917]">{items.length + kit.length} items</span>
               </div>
               {c.id === "gear" && <GearBanner />}
+              {c.id === "gear" && <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">Some links on this page are affiliate links. If you buy through them, ESP may earn a small commission at no extra cost to you. We only link to gear we&apos;d recommend.</p>}
               <ul className={grid}>
                 {kit.map((p) => <MerchCard key={p.pid} p={p} />)}
                 {items.map((p) => <Card key={`${p.cat}-${p.name}`} p={p} />)}

@@ -11,6 +11,11 @@ changed and no order is created.
 
   PRINTFUL_EXTREME_TOKEN=... python3 scripts/pf-mockups.py            # generate + build
   python3 scripts/pf-mockups.py --build-only                          # reuse cached tasks
+  python3 scripts/pf-mockups.py --colours [--build-only]              # photos for the extra colours
+
+--colours makes one task per product with one variant of each extra colour (from the
+`colors` list that pf-colours.py writes) and saves up to 3 photos per colour (main view,
+model view, one more) to public/shop/pf/{pid}-{colour}-{n}.webp.
 
 Env: PRINTFUL_EXTREME_TOKEN (or PRINTFUL_API_TOKEN), PF_STORE_ID (default 18950600).
 The token is only ever sent in the Authorization header; it is never printed.
@@ -141,7 +146,7 @@ def generate(pid):
     return r
 
 
-def pick(r):
+def pick(r, max_photos=MAX_PHOTOS):
     """Main design view first, then model shots, then back/side views. Returns [(url, kind, view)]."""
     mk = r["mockups"][0]
     extra = [e for x in r["mockups"] for e in x.get("extra", [])]
@@ -165,9 +170,9 @@ def pick(r):
             if sum(k == "model" for _, k, _ in got) >= 2: break
             if e["option_group"] == model: add(model, e["option"], "model")
     for v in ["Back", "Left Front", "Right Front", "Left", "Right", "Left Side", "Front 2", "Handle on Left", "Handle on Right", "Front"]:
-        if len(got) >= MAX_PHOTOS: break
+        if len(got) >= max_photos: break
         add(plain, v, "plain")
-    return got[:MAX_PHOTOS]
+    return got[:max_photos]
 
 
 def webp(url, dest):
@@ -178,19 +183,77 @@ def webp(url, dest):
     im.save(dest, "WEBP", quality=78, method=6)
 
 
-def alt_for(name, kind, view, group):
+def alt_for(name, kind, view, group, colour="black"):
     v = {"Front": "front", "Back": "back", "Left": "left side", "Right": "right side", "Left Front": "three-quarter view",
          "Right Front": "three-quarter view", "Left Side": "side", "Front 2": "front", "Handle on Left": "handle on the left",
          "Handle on Right": "handle on the right", "default": "front", "Default": "front"}.get(view, "")
     if kind == "layers":
-        return f"ESP {name} in black with the mountain logo, showing the case's layers"
+        return f"ESP {name} in {colour.lower()} with the mountain logo, showing the case's layers"
     how = ("worn" if group and "Lifestyle" not in group and group not in ("Beach",) else "in use") if kind == "model" else ""
     bits = ", ".join(x for x in (how, v) if x) or "front"
-    return f"ESP {name} in black with the mountain logo, {bits}"
+    return f"ESP {name} in {colour.lower()} with the mountain logo, {bits}"
+
+
+COLOUR_PHOTOS = 3
+
+
+def slug(x):
+    return re.sub(r"[^a-z0-9]+", "-", x.lower()).strip("-")
+
+
+def colours(build_only):
+    s, a, b, items = load_merch()
+    total = 0
+    for p in items:
+        cols = (p.get("colors") or [])[1:]
+        if not cols:
+            continue
+        pid = p["pid"]
+        out = os.path.join(CACHE, f"mock-{pid}-colours.json")
+        want = {c["name"]: next(v["vid"] for v in p["variants"] if v.get("color") == c["name"]) for c in cols}
+        r = json.load(open(out)) if os.path.exists(out) else None
+        have = {vid for m in (r or {}).get("mockups", []) for vid in m["variant_ids"]}
+        if not build_only and (r is None or not all(any(v["vid"] in have for v in p["variants"] if v.get("color") == n) for n in want)):
+            m = meta_for(pid)
+            body, info = plan(m)
+            body["variant_ids"] = list(want.values())
+            key = api("POST", f"/mockup-generator/create-task/{m['product_id']}", body)["task_key"]
+            for _ in range(80):
+                time.sleep(8)
+                r = api("GET", f"/mockup-generator/task?task_key={key}")
+                if r["status"] != "pending":
+                    break
+            if r["status"] != "completed":
+                print(f"{pid} {p['name']}: task {r['status']}", flush=True); continue
+            r["_info"] = info
+            json.dump(r, open(out, "w"))
+        if r is None:
+            print(f"{pid} {p['name']}: no cached colour task", flush=True); continue
+        byvid = {v["vid"]: v.get("color") for v in p["variants"]}
+        for c in cols:
+            mk = next((m for m in r["mockups"] if any(byvid.get(x) == c["name"] for x in m["variant_ids"])), None)
+            if not mk:
+                print(f"  {p['name']} {c['name']}: no mockup", flush=True); continue
+            photos = pick({"mockups": [mk], "_info": r.get("_info")}, COLOUR_PHOTOS)
+            gal = []
+            for n, (url, kind, view) in enumerate(photos, 1):
+                name = f"{pid}-{slug(c['name'])}-{n}.webp"
+                dest = os.path.join(OUT, name)
+                if not os.path.exists(dest):
+                    webp(url, dest)
+                gal.append({"src": f"/shop/pf/{name}", "alt": alt_for(p["name"], kind, view, r["_info"][1], c["name"])})
+            c["gallery"] = gal
+            total += 1
+            print(f"{pid} {p['name']} {c['name']}: {len(gal)} photos, model={any(k == 'model' for _, k, _ in photos)}", flush=True)
+    open(MERCH, "w").write(s[:a] + json.dumps(items, indent=1, ensure_ascii=False) + s[b:])
+    print(f"{total} colour galleries")
 
 
 def main():
     build_only = "--build-only" in sys.argv
+    if "--colours" in sys.argv:
+        os.makedirs(CACHE, exist_ok=True)
+        return colours(build_only)
     os.makedirs(CACHE, exist_ok=True)
     s, a, b, items = load_merch()
     details = json.load(open(DETAILS))

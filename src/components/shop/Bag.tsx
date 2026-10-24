@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import Image from "next/image";
-import { merch, type Merch, type MerchVariant } from "./merch";
+import { merch, variantImg, variantName, type Merch, type MerchVariant } from "./merch";
 
 /** Other components open the bag drawer with this event. */
 export const OPEN_BAG = "esp-open-bag";
@@ -142,10 +142,10 @@ export function BagButton() {
               )}
               {items.map((i) => (
                 <li key={i.id} className="flex gap-3 py-3">
-                  <div className="relative h-16 w-16 shrink-0 rounded bg-[#F4F6F8]"><Image src={i.p.img} alt="" fill sizes="64px" className="object-contain p-1" /></div>
+                  <div className="relative h-16 w-16 shrink-0 rounded bg-[#F4F6F8]"><Image src={variantImg(i.p, i.v)} alt="" fill sizes="64px" className="object-contain p-1" /></div>
                   <div className="flex flex-1 flex-col text-sm">
                     <span className="font-semibold">{i.p.name}</span>
-                    {i.p.variants.length > 1 && <span className="text-[13px]">{i.v.label}</span>}
+                    {variantName(i.p, i.v) && <span className="text-[13px]">{variantName(i.p, i.v)}</span>}
                     <div className="mt-1 flex items-center gap-2">
                       <button type="button" aria-label="One fewer" className="h-7 w-7 rounded border border-[#1C1917]/25" onClick={() => set(i.id, i.qty - 1)}>−</button>
                       <span className="w-5 text-center">{i.qty}</span>
