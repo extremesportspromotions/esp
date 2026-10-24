@@ -5,7 +5,8 @@ import Image from "next/image";
 import MountainMark from "./MountainMark";
 import { categories, products, type Category, type Product } from "./products";
 import { merch } from "./merch";
-import { BagProvider, BagButton, MerchCard } from "./Bag";
+import { BagProvider, BagButton } from "./Bag";
+import { MerchCard } from "./MerchCard";
 
 type Filter = Category | "all";
 

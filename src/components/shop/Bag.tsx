@@ -4,6 +4,9 @@ import { createContext, useContext, useEffect, useMemo, useState, type ReactNode
 import Image from "next/image";
 import { merch, type Merch, type MerchVariant } from "./merch";
 
+/** Other components open the bag drawer with this event. */
+export const OPEN_BAG = "esp-open-bag";
+
 export type Line = { id: number; qty: number };
 type BagCtx = { lines: Line[]; add: (id: number, qty: number) => void; set: (id: number, qty: number) => void };
 
@@ -40,81 +43,25 @@ export function BagProvider({ children }: { children: ReactNode }) {
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 
-function useBag(): BagCtx {
+export function useBag(): BagCtx {
   const c = useContext(Ctx);
   if (!c) throw new Error("BagProvider missing");
   return c;
 }
 
-export function MerchCard({ p }: { p: Merch }) {
-  const { add } = useBag();
-  const soldOut = p.variants.every((v) => v.oos);
-  const [vid, setVid] = useState(p.variants.length === 1 && !p.variants[0].oos ? p.variants[0].id : 0);
-  const [qty, setQty] = useState(1);
-  const [added, setAdded] = useState(false);
-  const [needSize, setNeedSize] = useState(false);
-  const prices = p.variants.map((v) => v.pence);
-  const min = Math.min(...prices);
-  const chosen = p.variants.find((v) => v.id === vid);
-  const price = chosen ? gbp(chosen.pence) : min === Math.max(...prices) ? gbp(min) : `From ${gbp(min)}`;
-  const single = p.variants.length === 1;
-  const field = "rounded-md border border-[#1C1917]/25 bg-white px-2 py-1.5 text-[13px] text-[#1C1917]";
-
-  return (
-    <li className="flex flex-col overflow-hidden rounded-xl border border-[#1C1917]/10 bg-white">
-      <div className="relative aspect-square overflow-hidden bg-[#F4F6F8]">
-        <Image src={p.img} alt={`ESP ${p.name}, black, with the mountain logo`} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px" loading="lazy" className="object-contain p-2" />
-      </div>
-      <div className="flex flex-1 flex-col gap-2 p-3">
-        <div className="flex flex-col gap-0.5">
-          <h3 className="line-clamp-2 min-h-[2.5em] text-sm font-semibold leading-tight text-[#1C1917] sm:text-[15px]">{p.name}</h3>
-          <span className="text-sm font-bold text-[#1C1917] sm:text-[15px]">{price}</span>
-        </div>
-        <form
-          className="mt-auto flex scroll-mb-24 scroll-mt-48 flex-col gap-2 lg:scroll-mb-20 lg:scroll-mt-40"
-          onSubmit={(e) => {
-            e.preventDefault();
-            if (!vid) {
-              setNeedSize(true);
-              const form = e.currentTarget;
-              (form.querySelector("select") as HTMLSelectElement | null)?.focus({ preventScroll: true });
-              // Keep the picker and message clear of the floating Bag button.
-              requestAnimationFrame(() => form.scrollIntoView({ block: "nearest", behavior: "smooth" }));
-              return;
-            }
-            add(vid, qty);
-            setAdded(true);
-            setTimeout(() => setAdded(false), 1800);
-          }}
-        >
-          <div className="flex min-w-0 gap-2">
-            {single ? (
-              <span className="flex-1 self-center text-[13px] text-[#1C1917]">{p.variants[0].label}</span>
-            ) : (
-              <select aria-label={`${p.name} option`} className={`${field} min-w-0 flex-1`} value={vid} onChange={(e) => { setVid(Number(e.target.value)); setNeedSize(false); }} aria-invalid={needSize || undefined}>
-                <option value={0} disabled>{/[0-9]XL|^[SML]$|^XS$/.test(p.variants[0].label) ? "Size" : "Option"}</option>
-                {p.variants.map((v) => (
-                  <option key={v.id} value={v.id} disabled={v.oos}>{v.oos ? `${v.label} (out of stock)` : v.label}</option>
-                ))}
-              </select>
-            )}
-            <select aria-label={`${p.name} quantity`} className={`${field} w-16 shrink-0`} value={qty} onChange={(e) => setQty(Number(e.target.value))}>
-              {Array.from({ length: MAX_QTY }, (_, i) => i + 1).map((n) => <option key={n} value={n}>{n}</option>)}
-            </select>
-          </div>
-          {needSize && <p role="alert" className="-mt-1 text-[12px] font-medium text-red-700">Choose an option first.</p>}
-          <button type="submit" disabled={soldOut} className="rounded-md bg-[#1C1917] px-3 py-2 text-sm font-semibold text-white transition hover:bg-black disabled:opacity-40">
-            {soldOut ? "Out of stock" : added ? "Added to bag" : "Add to bag"}
-          </button>
-        </form>
-      </div>
-    </li>
-  );
-}
-
 export function BagButton() {
   const { lines, set } = useBag();
   const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const show = () => setOpen(true);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && !document.querySelector("[data-product-view]") && setOpen(false);
+    window.addEventListener(OPEN_BAG, show);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener(OPEN_BAG, show);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, []);
   const [busy, setBusy] = useState(false);
   const [errState, setErrState] = useState({ key: "", msg: "" });
   const count = lines.reduce((n, l) => n + l.qty, 0);
