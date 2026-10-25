@@ -2,7 +2,8 @@
 
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import Image from "next/image";
-import { merch, variantImg, variantName, type Merch, type MerchVariant } from "./merch";
+import { variantImg, variantName, type Merch, type MerchVariant } from "./merch";
+import { catalogue as merch } from "./catalogue";
 
 /** Other components open the bag drawer with this event. */
 export const OPEN_BAG = "esp-open-bag";
@@ -70,14 +71,14 @@ export function BagButton() {
     return m ? [{ ...l, ...m }] : [];
   });
   const subtotal = items.reduce((n, i) => n + i.v.pence * i.qty, 0);
-  const [rate, setRate] = useState<{ key: string; pence?: number; failed?: boolean } | null>(null);
+  const [rate, setRate] = useState<{ key: string; pence?: number; made?: number; parcels?: number; failed?: boolean } | null>(null);
   const key = JSON.stringify(lines);
   useEffect(() => {
     if (!open || lines.length === 0) return;
     let live = true;
     fetch("/api/shop/rates", { method: "POST", headers: { "Content-Type": "application/json" }, body: `{"items":${key}}` })
       .then((r) => r.json())
-      .then((d: { ok?: boolean; pence?: number }) => live && setRate(d.ok && typeof d.pence === "number" ? { key, pence: d.pence } : { key, failed: true }))
+      .then((d: { ok?: boolean; pence?: number; made?: number; parcels?: number }) => live && setRate(d.ok && typeof d.pence === "number" ? { key, pence: d.pence, made: d.made, parcels: d.parcels } : { key, failed: true }))
       .catch(() => live && setRate({ key, failed: true }));
     return () => {
       live = false;
@@ -166,6 +167,9 @@ export function BagButton() {
                 </div>
               )}
               {quote?.pence != null && <div className="mt-1 flex justify-between text-sm font-bold"><span>Total</span><span>{gbp(subtotal + quote.pence)}</span></div>}
+              {quote?.parcels === 2 && quote.made != null && (
+                <p data-two-parcels className="mt-2 text-[13px]">Your order comes in two parcels. Smart casual pieces are made separately (£{(quote.made / 100).toFixed(2)} of the delivery) and are usually ready in about 5 working days plus delivery.</p>
+              )}
               {quote?.failed && <p className="mt-2 text-[13px] text-red-700">We couldn&apos;t get a delivery price just now. It will be shown at checkout.</p>}
               <p className="mt-2 text-[13px]">UK delivery only. Each item is made to order for you.</p>
               {err && <p className="mt-2 text-[13px] text-red-700">{err}</p>}

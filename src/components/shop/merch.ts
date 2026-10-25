@@ -2,8 +2,10 @@
 // id = sync variant id (used for orders); vid = catalogue variant id (used for delivery rates).
 export type MerchVariant = { id: number; vid: number; label: string; pence: number; oos?: boolean; color?: string };
 export type MerchPhoto = { src: string; alt: string };
-export type MerchColor = { name: string; hex: string; gallery: MerchPhoto[] };
-export type Merch = { pid: number; name: string; cat: "apparel" | "bags" | "outerwear"; sub?: string; img: string; gallery?: MerchPhoto[]; details?: string[]; colors?: MerchColor[]; variants: MerchVariant[] };
+/** `light`: a light colour, made with the dark logo (black thread, dark-grey print). */
+export type MerchColor = { name: string; hex: string; gallery: MerchPhoto[]; light?: boolean };
+/** `made`: smart casual, made to order and fulfilled by hand (never by the automatic partner). */
+export type Merch = { pid: number; name: string; cat: "apparel" | "bags" | "outerwear" | "smartcasual"; made?: boolean; sub?: string; img: string; gallery?: MerchPhoto[]; details?: string[]; colors?: MerchColor[]; variants: MerchVariant[] };
 
 /** "Navy / M", "Navy", "M" or "" for the bag, checkout and order names. */
 export function variantName(p: Merch, v: MerchVariant): string {

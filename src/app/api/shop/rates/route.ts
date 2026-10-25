@@ -9,5 +9,5 @@ export async function POST(req: Request): Promise<Response> {
   if (!lines) return Response.json({ ok: false, reason: "items" }, { status: 400 });
   const d = await ukDelivery(lines);
   if (!d) return Response.json({ ok: false, reason: "delivery" }, { status: 502 });
-  return Response.json({ ok: true, pence: d.pence, name: d.name });
+  return Response.json({ ok: true, pence: d.pence, name: d.name, auto: d.autoPence, made: d.madePence, parcels: d.parcels });
 }

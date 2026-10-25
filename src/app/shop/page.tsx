@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 const tiles = [
   { href: "#apparel", label: "Apparel" },
+  { href: "#smartcasual", label: "Smart casual" },
   { href: "#bags", label: "Bags" },
   { href: "#outerwear", label: "Outerwear & more" },
   { href: "#gear", label: "Gear" },
@@ -35,7 +36,7 @@ export default function ShopPage() {
 
         <section aria-label="Shop by category" className="mx-auto max-w-7xl px-3 pb-5 sm:px-6">
           <h2 className="mb-2.5 text-sm font-bold uppercase tracking-wide text-[#1C1917]">Shop by category</h2>
-          <div className="grid grid-cols-4 gap-2 sm:gap-4">
+          <div className="grid grid-cols-5 gap-2 sm:gap-4">
             {tiles.map((t) => (
               <a key={t.href} href={t.href} className="group relative block aspect-square overflow-hidden rounded-xl bg-[#1C1917] sm:aspect-[4/3]">
                 <span className="absolute inset-0 flex items-center justify-center pb-[18%]"><MountainMark sizes="(max-width: 640px) 60px, 180px" /></span>

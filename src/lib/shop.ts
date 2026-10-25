@@ -1,5 +1,7 @@
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
-import { merch, type Merch, type MerchVariant } from "@/components/shop/merch";
+import { type Merch, type MerchVariant } from "@/components/shop/merch";
+import { catalogue } from "@/components/shop/catalogue";
+import { MADE_DELIVERY_PENCE } from "@/components/shop/smartCasual";
 
 /** Server-side helpers for the ESP kit shop: prices, delivery rates and fulfilment orders. */
 
@@ -7,10 +9,16 @@ const PF = "https://api.printful.com";
 export const STORE_ID = process.env.PRINTFUL_STORE_ID || "18950600";
 
 const byId = new Map<number, { p: Merch; v: MerchVariant }>();
-for (const p of merch) for (const v of p.variants) byId.set(v.id, { p, v });
+for (const p of catalogue) for (const v of p.variants) byId.set(v.id, { p, v });
 export const lookup = (id: number) => byId.get(id);
 
 export type Line = { id: number; qty: number };
+
+/** Smart casual lines are made to order by hand: they must never go to the automatic partner. */
+export const isMade = (id: number) => byId.get(id)?.p.made === true;
+export function splitLines(lines: Line[]): { auto: Line[]; made: Line[] } {
+  return { auto: lines.filter((l) => !isMade(l.id)), made: lines.filter((l) => isMade(l.id)) };
+}
 
 /** Validates a cart from the browser. Prices are never taken from the browser. */
 export function cleanLines(raw: unknown): Line[] | null {
@@ -44,8 +52,8 @@ async function pf(path: string, init: RequestInit = {}): Promise<{ ok: boolean; 
   return { ok: res.ok, status: res.status, data };
 }
 
-/** Cheapest UK delivery rate for the cart, in pence. */
-export async function ukDelivery(lines: Line[]): Promise<{ pence: number; name: string; id: string } | null> {
+/** Cheapest UK delivery rate from the partner for its own lines, in pence. */
+async function partnerDelivery(lines: Line[]): Promise<{ pence: number; name: string; id: string } | null> {
   const items = lines.map((l) => ({ variant_id: byId.get(l.id)!.v.vid, quantity: l.qty }));
   const r = await pf("/shipping/rates", {
     method: "POST",
@@ -61,6 +69,28 @@ export async function ukDelivery(lines: Line[]): Promise<{ pence: number; name: 
   return { pence: Math.round(Number(best.rate) * 100), name: best.name, id: best.id };
 }
 
+export type Delivery = {
+  pence: number; // total delivery charged
+  name: string;
+  id: string; // partner shipping method id ("" when there are no partner lines)
+  autoPence: number; // partner part (live rate)
+  madePence: number; // flat made-to-order part
+  parcels: number;
+};
+
+/**
+ * UK delivery for the cart, in pence. Partner lines get the partner's live rate;
+ * any smart casual lines add one flat MADE_DELIVERY_PENCE and travel as a second parcel.
+ */
+export async function ukDelivery(lines: Line[]): Promise<Delivery | null> {
+  const { auto, made } = splitLines(lines);
+  const madePence = made.length ? MADE_DELIVERY_PENCE : 0;
+  if (auto.length === 0) return { pence: madePence, name: "UK delivery", id: "", autoPence: 0, madePence, parcels: 1 };
+  const d = await partnerDelivery(auto);
+  if (!d) return null;
+  return { pence: d.pence + madePence, name: d.name, id: d.id, autoPence: d.pence, madePence, parcels: made.length ? 2 : 1 };
+}
+
 /** Printful external_id: up to 32 chars, so a stable hash of the Stripe session id. */
 export const externalId = (sessionId: string) => createHash("sha256").update(sessionId).digest("hex").slice(0, 32);
 
@@ -70,12 +100,15 @@ export type Recipient = {
 
 /** Creates the fulfilment order. Draft unless PRINTFUL_CONFIRM_ORDERS=true. */
 export async function createOrder(opts: { sessionId: string; recipient: Recipient; lines: Line[]; shippingId?: string; shippingPence?: number }) {
+  // Safety net: smart casual lines are fulfilled by hand and must never reach the partner.
+  const lines = opts.lines.filter((l) => !isMade(l.id));
+  if (lines.length === 0) return { ok: false, status: 400, data: { error: { message: "no partner lines" } } };
   const confirm = process.env.PRINTFUL_CONFIRM_ORDERS === "true";
   const body = {
     external_id: externalId(opts.sessionId),
     shipping: opts.shippingId ?? "STANDARD",
     recipient: opts.recipient,
-    items: opts.lines.map((l) => ({ sync_variant_id: l.id, quantity: l.qty, retail_price: (byId.get(l.id)!.v.pence / 100).toFixed(2) })),
+    items: lines.map((l) => ({ sync_variant_id: l.id, quantity: l.qty, retail_price: (byId.get(l.id)!.v.pence / 100).toFixed(2) })),
     retail_costs: opts.shippingPence != null ? { currency: "GBP", shipping: (opts.shippingPence / 100).toFixed(2) } : undefined,
   };
   return pf(`/orders?confirm=${confirm ? "true" : "false"}`, { method: "POST", body: JSON.stringify(body) });

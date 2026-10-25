@@ -1,5 +1,6 @@
 import { variantImg, variantName } from "@/components/shop/merch";
-import { cleanLines, lookup, packLines, ukDelivery } from "@/lib/shop";
+import { cleanLines, isMade, lookup, packLines, ukDelivery } from "@/lib/shop";
+import { madeInfo } from "@/lib/madeDesigns";
 
 /**
  * Creates a Stripe Checkout Session for ESP kit. Prices come from merch.ts and
@@ -54,13 +55,15 @@ export async function POST(req: Request): Promise<Response> {
     "shipping_address_collection[allowed_countries][0]": "GB",
     "phone_number_collection[enabled]": "true",
     "shipping_options[0][shipping_rate_data][type]": "fixed_amount",
-    "shipping_options[0][shipping_rate_data][display_name]": "UK delivery",
+    "shipping_options[0][shipping_rate_data][display_name]": delivery.parcels > 1 ? "UK delivery (2 parcels)" : "UK delivery",
     "shipping_options[0][shipping_rate_data][fixed_amount][amount]": String(delivery.pence),
     "shipping_options[0][shipping_rate_data][fixed_amount][currency]": "gbp",
     "metadata[kind]": "shop",
     "metadata[items]": packLines(lines),
+    // shipping_* = the partner's part only (passed to its order); made_pence = flat made-to-order part.
     "metadata[shipping_id]": delivery.id,
-    "metadata[shipping_pence]": String(delivery.pence),
+    "metadata[shipping_pence]": String(delivery.autoPence),
+    "metadata[made_pence]": String(delivery.madePence),
     "payment_intent_data[description]": "ESP kit order",
   });
   lines.forEach((l, i) => {
@@ -70,6 +73,16 @@ export async function POST(req: Request): Promise<Response> {
     form.set(`line_items[${i}][price_data][unit_amount]`, String(v.pence));
     form.set(`line_items[${i}][price_data][product_data][name]`, `ESP ${p.name}${variantName(p, v) ? ` (${variantName(p, v)})` : ""}`);
     form.set(`line_items[${i}][price_data][product_data][images][0]`, `https://www.extremesportspromotions.com${variantImg(p, v)}`);
+    // Enough on each line to rebuild the order without our catalogue (500 chars per value).
+    form.set(`line_items[${i}][price_data][product_data][metadata][variant_id]`, String(v.id));
+    form.set(`line_items[${i}][price_data][product_data][metadata][colour]`, v.color ?? "");
+    form.set(`line_items[${i}][price_data][product_data][metadata][size]`, v.label);
+    const m = isMade(v.id) ? madeInfo(v.id) : undefined;
+    form.set(`line_items[${i}][price_data][product_data][metadata][fulfilment]`, m ? "manual" : "auto");
+    if (m) {
+      form.set(`line_items[${i}][price_data][product_data][metadata][design_id]`, String(m.design));
+      form.set(`line_items[${i}][price_data][product_data][metadata][garment]`, m.garment);
+    }
   });
 
   const res = await fetch("https://api.stripe.com/v1/checkout/sessions", {

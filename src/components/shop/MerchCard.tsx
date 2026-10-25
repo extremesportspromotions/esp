@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type Re
 import Image from "next/image";
 import { type Merch, type MerchPhoto } from "./merch";
 import { gbp, MAX_QTY, OPEN_BAG, useBag } from "./Bag";
+import { MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
 
 const field = "rounded-md border border-[#1C1917]/25 bg-white px-2 py-1.5 text-[13px] text-[#1C1917]";
 const ink = "text-[#1C1917]";
@@ -78,7 +79,7 @@ function usePick(p: Merch) {
   return { p, variants, colors, color, setColor, photos, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, price, addNow };
 }
 
-const isSize = (label: string) => /^(XS|S|M|L|XL|[2-5]XL)$/.test(label);
+const isSize = (label: string) => /^(XS|S|M|L|XL|[2-5]XL)$|^W\d\d /.test(label);
 
 function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => void }) {
   const { p, variants, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, addNow } = k;
@@ -241,7 +242,14 @@ function ProductView({ k }: { k: Pick }) {
               </button>
             </div>
           )}
-          <p className={`text-[13px] ${ink}`}>UK delivery only. Each item is made to order for you, and delivery is worked out in your bag.</p>
+          {p.made ? (
+            <div data-made-terms className={`flex flex-col gap-1.5 text-[13px] ${ink}`}>
+              <p>{MADE_LEAD} UK delivery only, £{(MADE_DELIVERY_PENCE / 100).toFixed(2)} per order. With other kit, it comes as a separate parcel.</p>
+              <p>You can cancel within 14 days of receiving your order. For returns, please contact us first at <a className="underline" href="mailto:enquiries@extremesportspromotions.com">enquiries@extremesportspromotions.com</a>.</p>
+            </div>
+          ) : (
+            <p className={`text-[13px] ${ink}`}>UK delivery only. Each item is made to order for you, and delivery is worked out in your bag.</p>
+          )}
         </div>
       </div>
     </div>

@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import MountainMark from "./MountainMark";
 import { categories, products, type Category, type Product } from "./products";
-import { merch } from "./merch";
+import { catalogue as merch } from "./catalogue";
+import { MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
 import { BagProvider, BagButton } from "./Bag";
 import { MerchCard } from "./MerchCard";
 
@@ -140,6 +141,11 @@ export default function ShopBrowser() {
                 <h2 id={`h-${c.id}`} className="font-display text-xl font-bold text-[#1C1917] sm:text-2xl">{c.label}</h2>
                 <span className="text-sm text-[#1C1917]">{items.length + kit.length} items</span>
               </div>
+              {c.id === "smartcasual" && (
+                <p data-made-note className="-mt-1 mb-4 rounded-lg border-l-[3px] border-[#1C1917] bg-white px-4 py-2.5 text-sm text-[#1C1917]">
+                  {MADE_LEAD} UK delivery £{(MADE_DELIVERY_PENCE / 100).toFixed(2)} per order. With other kit, these come as a separate parcel.
+                </p>
+              )}
               {c.id === "gear" && <GearBanner />}
               {c.id === "gear" && <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">Some links on this page are affiliate links. If you buy through them, ESP may earn a small commission at no extra cost to you. We only link to gear we&apos;d recommend.</p>}
               <ul className={grid}>
