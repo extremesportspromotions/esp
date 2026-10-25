@@ -5,14 +5,20 @@ import Footer from "@/components/Footer";
 import { health, type InlinePart, type LeadItem } from "@/content/health";
 import { healthThemeVars } from "@/content/health-theme";
 
-// Preview only: kept out of search engines, the top bar, the footer and the sitemap
-// until Matthew gives his go. Colours come from src/content/health-theme.ts and are
+// Indexed by search engines and listed in the sitemap (Matthew, 25 Oct). Not in the footer.
+// Colours come from src/content/health-theme.ts and are
 // scoped to this page's wrapper only (CSS variables --h-*).
 export const metadata: Metadata = {
   title: { absolute: health.title },
   description: health.description,
-  alternates: { canonical: "/health" },
-  robots: { index: false, follow: false },
+  alternates: { canonical: "https://www.extremesportspromotions.com/health" },
+  openGraph: {
+    title: health.title,
+    description: health.description,
+    type: "website",
+    url: "https://www.extremesportspromotions.com/health",
+    images: [{ url: "/health/xspeaks-health-banner.webp", alt: "Xspeaks mental health and fitness" }],
+  },
 };
 
 // Inline links: py adds a ~44px tall tap area without changing line spacing.
@@ -134,14 +140,6 @@ export default function HealthPage() {
 
           <SubHeading>{mental.tipsHeading}</SubHeading>
           <TipList items={mental.tips} />
-
-          <SubHeading>{mental.storiesHeading}</SubHeading>
-          <div className="mt-4 rounded-2xl border-2 border-dashed border-[var(--h-fern)] bg-[var(--h-cream)] p-5 sm:p-6">
-            <span className="inline-block rounded bg-[var(--h-sage)] px-2 py-0.5 text-xs font-bold uppercase tracking-wide">
-              Example
-            </span>
-            <p className="mt-3 text-base italic leading-relaxed">{mental.storyPlaceholder}</p>
-          </div>
         </Band>
 
         <Band tone="cream" label="fitness-health">

@@ -31,9 +31,6 @@ export type HealthContent = {
     talk: LeadItem;
     tipsHeading: string;
     tips: LeadItem[];
-    storiesHeading: string;
-    /** Marked as an example placeholder on the page until a real, consented story arrives. */
-    storyPlaceholder: string;
   };
   fitness: {
     heading: string;
@@ -52,7 +49,7 @@ export type HealthContent = {
 export const health: HealthContent = {
   title: "Xspeaks health",
   description:
-    "Xspeaks is about speaking up: mental health awareness, simple ways to get moving, and where to get support.",
+    "Xspeaks is about speaking up. Simple ways to look after your mental health, easy ways to start moving, and where to get support if you\u2019re struggling.",
   intro:
     "Xspeaks is about speaking up. Speaking openly about how we feel, and making it normal to ask \u201chow are you, really?\u201d We believe in the simple things: getting outdoors, moving your body, and spending time with people who\u2019ve got your back.",
   disclaimer:
@@ -71,9 +68,6 @@ export const health: HealthContent = {
       { lead: "Find your people.", text: "Join a club, a group walk or a local meetup. Friendships often start with turning up." },
       { lead: "Listen.", text: "Sometimes the best thing you can do for someone is to let them speak." },
     ],
-    storiesHeading: "Real stories",
-    storyPlaceholder:
-      "Placeholder for a real story shared with written consent. Remove before going live unless a consented story is in place.",
   },
   fitness: {
     heading: "2. Fitness health",
