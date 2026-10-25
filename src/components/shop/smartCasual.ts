@@ -6,6 +6,7 @@ import type { Merch, MerchVariant } from "./merch";
  * saved design id, and he reorders that design and ships it to the customer.
  *
  * PLACEHOLDER PRICES: Matthew sets the final prices after buying samples. Change them here only (pence, GBP).
+ * One price per product for every size: no 2XL+ upcharge.
  */
 export const SMART_CASUAL_PRICES = {
   oxford: 7500,

@@ -10,7 +10,7 @@ const DESIGNS: Record<number, { garment: string; colours: Record<string, [design
   9100002: { garment: "Premier PR695 quarter-zip knit", colours: { Black: [6571283, "silver"], Charcoal: [6571285, "silver"], Navy: [6571290, "silver"] } },
   9100003: { garment: "Henbury H722 V-neck cardigan", colours: { Black: [6571301, "silver"], Navy: [6571303, "black"] } },
   9100004: {
-    garment: "Russell 141M softshell gilet",
+    garment: "Russell 141M softshell gilet (Clothes2order code J141M)",
     colours: { Black: [6571304, "silver"], Titanium: [6571308, "silver"], "French Navy": [6571310, "silver"], Azure: [6571312, "black"], "Classic Red": [6571315, "black"] },
   },
   9100005: {
