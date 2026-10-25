@@ -11,7 +11,7 @@ import { isMade, lookup, type Line } from "@/lib/shop";
  * Nothing here names the suppliers to the customer; the internal alerts do, on purpose.
  */
 
-export const BRAND = "Xspeaks";
+export const BRAND = "SXPeaks";
 const ENQUIRIES = "enquiries@extremesportspromotions.com";
 const RECORD_FROM = `ESP Shop <${ENQUIRIES}>`;
 /** Customer email sender. Any address on the Resend-verified domain works; falls back to enquiries@ if refused. */

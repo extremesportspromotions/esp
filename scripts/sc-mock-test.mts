@@ -85,7 +85,7 @@ for (const [name, items] of Object.entries(cases)) {
     const expectStatus = scenario === "printful down" && hasKit ? 502 : 200;
     const toRecord = mails.filter((m) => m.to === "enquiries@extremesportspromotions.com" || (Array.isArray(m.to) && m.to.includes("enquiries@extremesportspromotions.com")));
     const toCustomer = mails.filter((m) => JSON.stringify(m.to).includes("jo@example.com"));
-    if (toCustomer[0] && !String(toCustomer[0].from).startsWith("Xspeaks <")) check(`${name}: customer from-name`, false, toCustomer[0].from);
+    if (toCustomer[0] && !String(toCustomer[0].from).startsWith("SXPeaks <")) check(`${name}: customer from-name`, false, toCustomer[0].from);
     const wantCustomer = expectStatus === 200 ? 1 : 0;
     check(`${name}: webhook (${scenario})`, res.status === expectStatus && okOrder && tg === 1 && toRecord.length === 1 && toCustomer.length === wantCustomer,
       `status ${res.status}, printful orders ${orders.length} (items ${pfItems}), telegram ${tg}, record email ${toRecord.length}, customer email ${toCustomer.length}`);
@@ -100,7 +100,7 @@ for (const [name, items] of Object.entries(cases)) {
       writeFileSync(`${out}/${name}-customer.html`, cu.html);
       const all = JSON.stringify([telegramText(order), rec, cu]);
       check(`${name}: no secrets in output`, !/dummy/.test(all));
-      check(`${name}: brand spelt Xspeaks`, !/XSPeaks|XSPEAKS/.test(all) && telegramText(order).startsWith("🛍 Xspeaks order #") && rec.subject.startsWith("Xspeaks order #") && cu.subject.startsWith("Thanks for your Xspeaks order #"));
+      check(`${name}: brand spelt SXPeaks`, !/XSPeaks|XSPEAKS|Xspeaks/.test(all) && telegramText(order).startsWith("🛍 SXPeaks order #") && rec.subject.startsWith("SXPeaks order #") && cu.subject.startsWith("Thanks for your SXPeaks order #"));
       check(`${name}: customer copy clean`, !/printful|clothes2order|free\b|dropship/i.test(cu.text + cu.html), "");
     }
   }
