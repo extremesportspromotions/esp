@@ -34,6 +34,7 @@ const CHINO_SIZES = [30, 32, 34, 36, 38, 40].flatMap((w) => [`W${w} Regular`, `W
 
 /**
  * PHOTOS (v2, 25 Oct 2026, AI illustrations from SXPeaks Fashion, to be replaced by real sample photos).
+ * These are the final thread renders: dark grey thread on light colours, silver-grey on the rest, no black.
  * Files live in public/shop/sc/v2/<photo>-<file>.webp, where <photo> is the colour's photo name in `defs`
  * and <file> is front | back | side | detail (close-up) | model. Every colour has front, back, side and
  * close-up; the one colour per style that has a model shot is marked with `model` in `d(...)`.

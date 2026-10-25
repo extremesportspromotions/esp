@@ -149,12 +149,12 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-3 pb-24 pt-6 sm:px-6 lg:pb-20">
+      <div className="mx-auto max-w-7xl px-3 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 sm:px-6 lg:pb-20">
         {shown.map((c) => {
           const items = products.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
           const kit = merch.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
           return (
-            <section key={c.id} id={c.id} aria-labelledby={`h-${c.id}`} className="mb-10 scroll-mt-[220px] lg:scroll-mt-[170px] last:mb-0">
+            <section key={c.id} id={c.id} aria-labelledby={`h-${c.id}`} className="mb-4 scroll-mt-[220px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:mb-10 lg:scroll-mt-[170px] lg:pb-0 lg:last:mb-0">
               <div className="mb-3 flex items-baseline justify-between">
                 <h2 id={`h-${c.id}`} className="font-display text-xl font-bold text-[#1C1917] sm:text-2xl">{c.label}</h2>
                 <span className="text-sm text-[#1C1917]">{items.length + kit.length} items</span>
