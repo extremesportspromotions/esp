@@ -29,6 +29,21 @@ const DESIGNS: Record<number, { garment: string; colours: Record<string, [design
 // 9100009 Zip-Through Cardigan (H718) · 9100010 Crew Neck Jumper (HB725) · 9100011 Softshell Jacket (140M)
 // 9100012 Chino Shorts (AQ051)
 
+/**
+ * HELD: saved designs that must NOT be sold. These 6 were saved with BLACK thread, but the
+ * approved light-colour logo is DARK GREY thread (25 Oct 2026). They stay listed above for the
+ * record; a held design is treated exactly like a missing one ("Not available to order yet",
+ * checkout refuses it). To release one, re-save it in dark grey, update its number, and remove it here.
+ */
+export const HELD = new Set<number>([
+  6571279, // Oxford White
+  6571296, // Oxford Blue
+  6571327, // Chinos Natural
+  6571312, // Gilet Azure
+  6571315, // Gilet Classic Red
+  6571303, // V-Cardigan Navy
+]);
+
 export type MadeInfo = { design: number; garment: string; logo: string };
 const byVariant = new Map<number, MadeInfo>();
 const notYet: { key: string; name: string; colour: string }[] = [];
@@ -37,7 +52,7 @@ for (const p of smartCasual) {
   const seen = new Set<string>();
   for (const v of p.variants) {
     const c = d?.colours[v.color ?? ""];
-    if (d && c) byVariant.set(v.id, { design: c[0], garment: d.garment, logo: c[1] });
+    if (d && c && !HELD.has(c[0])) byVariant.set(v.id, { design: c[0], garment: d.garment, logo: c[1] });
     else if (!seen.has(v.color ?? "")) {
       seen.add(v.color ?? "");
       notYet.push({ key: scKey(p.pid, v.color), name: p.name, colour: v.color ?? "" });

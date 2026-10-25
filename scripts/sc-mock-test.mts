@@ -1,7 +1,7 @@
 /* Mocked end-to-end checks for the smart casual split. No real network: global fetch is stubbed. */
 import { writeFileSync, mkdirSync } from "node:fs";
 import { merch } from "@/components/shop/merch";
-import { smartCasual } from "@/components/shop/smartCasual";
+import { scKey, smartCasual } from "@/components/shop/smartCasual";
 import { POST as checkout } from "@/app/api/shop/checkout/route";
 import { POST as rates } from "@/app/api/shop/rates/route";
 import { handleEvent } from "@/lib/shopWebhook";
@@ -32,8 +32,8 @@ globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
 const kit = merch.find((p) => p.cat === "apparel")!;
 const kitV = kit.variants.find((v) => !v.oos)!;
 const shirt = smartCasual[0], gilet = smartCasual[3];
-const shirtV = shirt.variants.find((v) => v.color === "Blue" && v.label === "L")!;
-const giletV = gilet.variants.find((v) => v.color === "Azure" && v.label === "M")!;
+const shirtV = shirt.variants.find((v) => v.color === "Black" && v.label === "L")!;
+const giletV = gilet.variants.find((v) => v.color === "Black" && v.label === "M")!;
 const cases = {
   "smart-casual-only": [{ id: shirtV.id, qty: 1 }, { id: giletV.id, qty: 2 }],
   "printful-only": [{ id: kitV.id, qty: 1 }],
@@ -120,6 +120,23 @@ for (const [name, items] of Object.entries(cases)) {
     const r = await rates(new Request("http://x/api/shop/rates", { method: "POST", body: JSON.stringify({ items }) }));
     check(`not-yet: checkout refuses ${label}`, c.status === 400 && !calls.some((x) => x.url.includes("stripe")), `checkout ${c.status}, rates ${r.status}`);
     check(`not-yet: rates refuse ${label}`, r.status >= 400, `rates ${r.status}`);
+  }
+  {
+    const { HELD } = await import("@/lib/madeDesigns");
+    const H: [number, string][] = [[9100001, "White"], [9100001, "Blue"], [9100005, "Natural"], [9100004, "Azure"], [9100004, "Classic Red"], [9100003, "Navy"]];
+    check("held: exactly the 6 black-thread designs", HELD.size === 6 && [6571279, 6571296, 6571327, 6571312, 6571315, 6571303].every((x) => HELD.has(x)));
+    const keys = new Set(ny.map((x) => x.key));
+    for (const [pid, col] of H) {
+      const vs = all.filter((v) => Math.floor(v.id / 1000) === pid && v.color === col);
+      check(`held: ${pid} ${col} shown as not-yet`, vs.length > 0 && keys.has(scKey(pid, col)) && vs.every((v) => !madeInfo(v.id)));
+      calls = [];
+      const items = [{ id: vs[0].id, qty: 1 }];
+      const c = await checkout(new Request("http://x/api/shop/checkout", { method: "POST", headers: { origin: "https://esp-lemon.vercel.app", "x-forwarded-for": "held-" + pid + col }, body: JSON.stringify({ items }) }));
+      check(`held: checkout refuses ${pid} ${col}`, c.status === 400 && !calls.some((x) => x.url.includes("stripe")), `${c.status}`);
+    }
+    const buy = [...new Set(all.filter((v) => madeInfo(v.id)).map((v) => `${smartCasual.find((p) => p.pid === Math.floor(v.id / 1000))!.name} ${v.color}`))].sort();
+    writeFileSync(`${out}/buyable.txt`, buy.join("\n") + "\n");
+    check("held: 12 buyable colours", buy.length === 12, buy.join(", "));
   }
   const ok = all.filter((v) => madeInfo(v.id));
   check("not-yet: existing designs still orderable", ok.length > 0 && ok.every((v) => Math.floor(v.id / 1000) <= 9100005), `${ok.length} variants`);
