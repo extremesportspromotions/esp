@@ -1,7 +1,9 @@
 // Generated from the shop's product catalogue (scripts/pf-sync.py). Prices in pence, GBP.
 // id = sync variant id (used for orders); vid = catalogue variant id (used for delivery rates).
 export type MerchVariant = { id: number; vid: number; label: string; pence: number; oos?: boolean; color?: string };
-export type MerchPhoto = { src: string; alt: string };
+/** `view`: which view the photo shows (shown as a label in the gallery and enlarged viewer). */
+export type PhotoView = "front" | "back" | "side" | "model";
+export type MerchPhoto = { src: string; alt: string; view?: PhotoView };
 /** `light`: a light colour, made with the dark logo (black thread, dark-grey print). */
 export type MerchColor = { name: string; hex: string; gallery: MerchPhoto[]; light?: boolean };
 /** `made`: smart casual, made to order and fulfilled by hand (never by the automatic partner). */

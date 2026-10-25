@@ -1,4 +1,4 @@
-import type { Merch, MerchVariant } from "./merch";
+import type { Merch, MerchPhoto, MerchVariant, PhotoView } from "./merch";
 
 /**
  * Smart casual range: made to order and fulfilled BY HAND (never sent to the
@@ -23,6 +23,15 @@ export const MADE_LEAD = "Made to order, usually ready in about 5 working days p
 /** Sizes as listed on the supplier's product pages (25 Oct 2026). 2XL+ surcharges not yet checked. */
 const TOPS_XS_4XL = ["XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL"];
 const CHINO_SIZES = [30, 32, 34, 36, 38, 40].flatMap((w) => [`W${w} Regular`, `W${w} Long`]);
+
+/**
+ * EXTRA PHOTOS for the smart casual gallery, in display order after the main (front) photo.
+ * Key = the design's photo name (as in `d(...)` below). Drop the file into public/shop/sc/<file>.webp
+ * and add one line here, e.g.
+ *   "oxford-shirt-white": [{ view: "back", file: "oxford-shirt-white-back" }, { view: "model", file: "oxford-shirt-white-model" }],
+ * `view` is one of front | back | side | model. New colours/products go in `defs` below as usual.
+ */
+export const SC_EXTRA_PHOTOS: Record<string, { view: PhotoView; file: string }[]> = {};
 
 type Design = { colour: string; hex: string; light?: boolean; logo: "silver" | "black"; photo: string };
 type Def = {
@@ -100,15 +109,20 @@ export const smartCasual: Merch[] = defs.map((p) => {
   const variants: MerchVariant[] = p.designs.flatMap((c, ci) =>
     p.sizes.map((label, i) => ({ id: p.pid * 1000 + ci * 20 + i + 1, vid: 0, label, pence: SMART_CASUAL_PRICES[p.key], color: c.colour })),
   );
-  const photo = (c: Design) => ({ src: `/shop/sc/${c.photo}.webp`, alt: `ESP ${p.name} in ${c.colour.toLowerCase()} with the embroidered mountain logo` });
+  const photo = (c: Design): MerchPhoto => ({ src: `/shop/sc/${c.photo}.webp`, alt: `ESP ${p.name} in ${c.colour.toLowerCase()} with the embroidered mountain logo`, view: "front" });
+  const viewAlt = { front: "front", back: "back", side: "side view", model: "worn by a model" } as const;
+  const photos = (c: Design): MerchPhoto[] => [
+    photo(c),
+    ...(SC_EXTRA_PHOTOS[c.photo] ?? []).map((x) => ({ src: `/shop/sc/${x.file}.webp`, alt: `ESP ${p.name} in ${c.colour.toLowerCase()}, ${viewAlt[x.view]}`, view: x.view })),
+  ];
   return {
     pid: p.pid,
     name: p.name,
     cat: "smartcasual",
     img: photo(p.designs[0]).src,
-    gallery: [photo(p.designs[0])],
+    gallery: photos(p.designs[0]),
     details: p.details,
-    colors: p.designs.map((c) => ({ name: c.colour, hex: c.hex, light: c.light || undefined, gallery: [photo(c)] })),
+    colors: p.designs.map((c) => ({ name: c.colour, hex: c.hex, light: c.light || undefined, gallery: photos(c) })),
     variants,
     made: true,
   };

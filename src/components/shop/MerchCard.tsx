@@ -5,6 +5,7 @@ import Image from "next/image";
 import { type Merch, type MerchPhoto } from "./merch";
 import { gbp, MAX_QTY, OPEN_BAG, useBag } from "./Bag";
 import { MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
+import { Lightbox, viewWord } from "./Lightbox";
 
 const field = "rounded-md border border-[#1C1917]/25 bg-white px-2 py-1.5 text-[13px] text-[#1C1917]";
 const ink = "text-[#1C1917]";
@@ -285,19 +286,22 @@ function Swatches({ k }: { k: Pick }) {
   );
 }
 
-/* ---------- gallery: swipe on phones, thumbnails and arrows on desktop, tap to zoom ---------- */
+/* ---------- gallery: swipe on phones, thumbnails and arrows on desktop, tap to enlarge ---------- */
 
-function Gallery({ photos, name }: { photos: { src: string; alt: string }[]; name: string }) {
+function Gallery({ photos, name }: { photos: MerchPhoto[]; name: string }) {
   const track = useRef<HTMLDivElement>(null);
   const [i, setI] = useState(0);
-  const [zoom, setZoom] = useState<{ x: number; y: number } | null>(null);
-  const go = useCallback((n: number) => {
+  const [big, setBig] = useState<number | null>(null);
+  const go = useCallback((n: number, smooth = true) => {
     const el = track.current;
     if (!el) return;
     const t = Math.max(0, Math.min(photos.length - 1, n));
-    setZoom(null);
-    el.scrollTo({ left: t * el.clientWidth, behavior: "smooth" });
+    el.scrollTo({ left: t * el.clientWidth, behavior: smooth ? "smooth" : "instant" });
   }, [photos.length]);
+  const closeBig = useCallback((last: number) => {
+    setBig(null);
+    go(last, false);
+  }, [go]);
   const many = photos.length > 1;
 
   return (
@@ -305,20 +309,17 @@ function Gallery({ photos, name }: { photos: { src: string; alt: string }[]; nam
       <div className="relative">
         <div
           ref={track}
-          className={`flex aspect-square w-full snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${zoom ? "overflow-hidden" : "overflow-x-auto"}`}
+          className="flex aspect-square w-full snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           onScroll={(e) => {
             const el = e.currentTarget;
             const n = Math.round(el.scrollLeft / el.clientWidth);
-            if (n !== i) {
-              setI(n);
-              setZoom(null);
-            }
+            if (n !== i) setI(n);
           }}
           aria-roledescription="carousel"
           aria-label={`${name} photos`}
         >
           {photos.map((ph, n) => (
-            <Slide key={ph.src} n={n} total={photos.length} ph={ph} eager={n === 0} zoom={n === i ? zoom : null} setZoom={setZoom} />
+            <Slide key={ph.src} n={n} total={photos.length} ph={ph} eager={n === 0} onOpen={() => setBig(n)} />
           ))}
         </div>
         {many && (
@@ -332,49 +333,31 @@ function Gallery({ photos, name }: { photos: { src: string; alt: string }[]; nam
             </div>
           </>
         )}
+        <span aria-hidden className="pointer-events-none absolute left-3 top-3 flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[12px] font-semibold text-[#1C1917] shadow-sm ring-1 ring-[#1C1917]/10">
+          <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg>
+          {many ? `${i + 1} / ${photos.length}` : "Tap to enlarge"}{viewWord(photos[i]) ? ` \u00b7 ${viewWord(photos[i])}` : ""}
+        </span>
       </div>
       {many && (
-        <div className="hidden gap-2 overflow-x-auto bg-white p-3 lg:flex">
+        <div className="flex gap-2 overflow-x-auto bg-white p-3">
           {photos.map((ph, n) => (
-            <button key={ph.src} type="button" onClick={() => go(n)} aria-label={`Photo ${n + 1} of ${photos.length}`} aria-current={n === i || undefined}
-              className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-md bg-white ring-1 ring-inset ${n === i ? "ring-2 ring-[#1C1917]" : "ring-[#1C1917]/15 hover:ring-[#1C1917]/40"}`}>
+            <button key={ph.src} type="button" onClick={() => go(n)} aria-label={`Show photo ${n + 1} of ${photos.length}${viewWord(ph) ? `, ${viewWord(ph)!.toLowerCase()}` : ""}`} aria-current={n === i || undefined}
+              className={`relative h-14 w-14 shrink-0 overflow-hidden rounded-md bg-white ring-1 ring-inset lg:h-16 lg:w-16 ${n === i ? "ring-2 ring-[#1C1917]" : "ring-[#1C1917]/15 hover:ring-[#1C1917]/40"}`}>
               <Image src={ph.src} alt="" fill sizes="64px" className="object-contain" />
             </button>
           ))}
         </div>
       )}
+      {big !== null && <Lightbox photos={photos} start={big} name={name} onClose={closeBig} />}
     </div>
   );
 }
 
-function Slide({ n, total, ph, eager, zoom, setZoom }: { n: number; total: number; ph: { src: string; alt: string }; eager: boolean; zoom: { x: number; y: number } | null; setZoom: (z: { x: number; y: number } | null) => void }) {
+function Slide({ n, total, ph, eager, onOpen }: { n: number; total: number; ph: MerchPhoto; eager: boolean; onOpen: () => void }) {
   return (
     <div className="relative h-full w-full shrink-0 snap-center overflow-hidden" role="group" aria-roledescription="slide" aria-label={`${n + 1} of ${total}`}>
-      <button
-        type="button"
-        aria-label={zoom ? "Zoom out" : "Zoom in"}
-        className={`absolute inset-0 ${zoom ? "cursor-zoom-out" : "cursor-zoom-in"}`}
-        onClick={(e) => {
-          if (zoom) return setZoom(null);
-          const r = e.currentTarget.getBoundingClientRect();
-          setZoom({ x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 });
-        }}
-        onMouseMove={(e) => {
-          if (!zoom) return;
-          const r = e.currentTarget.getBoundingClientRect();
-          setZoom({ x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100 });
-        }}
-      >
-        <Image
-          src={ph.src}
-          alt={ph.alt}
-          fill
-          sizes="(max-width: 1024px) 100vw, 560px"
-          priority={eager}
-          loading={eager ? undefined : "lazy"}
-          className="object-contain transition-transform duration-200"
-          style={zoom ? { transform: "scale(2.2)", transformOrigin: `${zoom.x}% ${zoom.y}%` } : undefined}
-        />
+      <button type="button" aria-label={`Enlarge photo ${n + 1} of ${total}`} className="absolute inset-0 cursor-zoom-in" onClick={onOpen}>
+        <Image src={ph.src} alt={ph.alt} fill sizes="(max-width: 1024px) 100vw, 560px" priority={eager} loading={eager ? undefined : "lazy"} className="object-contain" />
       </button>
     </div>
   );
