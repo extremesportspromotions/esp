@@ -5,7 +5,7 @@ import type { Merch, MerchVariant } from "./merch";
  * automatic fulfilment partner). Each sale sends Matthew an order alert with the
  * saved design id, and he reorders that design and ships it to the customer.
  *
- * PRICES ARE SUGGESTED, NOT CONFIRMED BY MATTHEW. Change them here only (pence, GBP).
+ * PLACEHOLDER PRICES: Matthew sets the final prices after buying samples. Change them here only (pence, GBP).
  */
 export const SMART_CASUAL_PRICES = {
   oxford: 7500,

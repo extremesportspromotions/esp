@@ -11,7 +11,7 @@ import { isMade, lookup, type Line } from "@/lib/shop";
  * Nothing here names the suppliers to the customer; the internal alerts do, on purpose.
  */
 
-export const BRAND = "XSPeaks";
+export const BRAND = "Xspeaks";
 const ENQUIRIES = "enquiries@extremesportspromotions.com";
 const RECORD_FROM = `ESP Shop <${ENQUIRIES}>`;
 /** Customer email sender. Any address on the Resend-verified domain works; falls back to enquiries@ if refused. */
@@ -178,7 +178,7 @@ export function customerEmail(o: OrderInfo, origin: string) {
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:100%;max-width:600px;background:#ffffff;border:1px solid #e7e5e4;font-family:Arial,Helvetica,sans-serif">
 <tr><td align="center" style="padding:28px 24px 12px">
 <img src="${origin}/shop/email-mark.png" width="96" height="54" alt="" style="display:block;border:0;width:96px;height:auto">
-<div style="margin-top:10px;font-size:22px;font-weight:bold;letter-spacing:2px;color:#1C1917">${BRAND.toUpperCase()}</div>
+<div style="margin-top:10px;font-size:22px;font-weight:bold;letter-spacing:0.5px;color:#1C1917">${BRAND}</div>
 <div style="margin-top:2px;font-size:12px;color:#78716c">from Extreme Sports Promotions</div>
 </td></tr>
 <tr><td style="padding:12px 28px 28px">
