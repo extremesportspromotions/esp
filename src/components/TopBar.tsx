@@ -37,6 +37,7 @@ const pageLinks = [
   { label: "Find a club", href: "/#find-a-club", key: "find-a-club" },
   { label: "How it works", href: "/#how-it-works", key: "how-it-works" },
   { label: "Enquire", href: "/#enquire", key: "enquire" },
+  { label: "Health", href: "/health", key: "health" },
 ] as const;
 
 type TopBarProps = {

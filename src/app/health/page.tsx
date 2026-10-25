@@ -1,0 +1,187 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import TopBar from "@/components/TopBar";
+import Footer from "@/components/Footer";
+import { health, type InlinePart, type LeadItem } from "@/content/health";
+import { healthThemeVars } from "@/content/health-theme";
+
+// Preview only: kept out of search engines, the top bar, the footer and the sitemap
+// until Matthew gives his go. Colours come from src/content/health-theme.ts and are
+// scoped to this page's wrapper only (CSS variables --h-*).
+export const metadata: Metadata = {
+  title: { absolute: health.title },
+  description: health.description,
+  alternates: { canonical: "/health" },
+  robots: { index: false, follow: false },
+};
+
+// Inline links: py adds a ~44px tall tap area without changing line spacing.
+const linkClass =
+  "rounded py-3 font-semibold text-[var(--h-forest)] underline decoration-2 underline-offset-4 hover:decoration-[var(--h-fern)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--h-forest)]";
+
+function isExternal(href: string) {
+  return href.startsWith("http");
+}
+
+function A({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      className={linkClass}
+      {...(isExternal(href) ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
+      {children}
+    </a>
+  );
+}
+
+function Inline({ parts }: { parts: InlinePart[] }) {
+  return (
+    <>
+      {parts.map((p, i) => {
+        if (typeof p === "string") return <span key={i}>{p}</span>;
+        const inner = p.bold ? <strong>{p.text}</strong> : p.text;
+        if (!p.href) return <span key={i}>{inner}</span>;
+        return (
+          <A key={i} href={p.href}>
+            {inner}
+          </A>
+        );
+      })}
+    </>
+  );
+}
+
+function SubHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="font-display mt-10 text-xl font-bold text-[var(--h-forest)] sm:text-2xl">{children}</h3>
+  );
+}
+
+function TipList({ items }: { items: LeadItem[] }) {
+  return (
+    <ul className="mt-4 space-y-3">
+      {items.map((t) => (
+        <li key={t.lead} className="flex gap-3 text-base leading-relaxed sm:text-lg">
+          <span className="mt-[0.6em] h-2 w-2 flex-none rounded-full bg-[var(--h-fern)]" aria-hidden />
+          <span>
+            <strong>{t.lead}</strong> {t.text}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Note({ children }: { children: React.ReactNode }) {
+  return <p className="mt-4 max-w-2xl text-sm italic leading-relaxed">{children}</p>;
+}
+
+function Band({ tone, children, label }: { tone: "mist" | "cream"; children: React.ReactNode; label?: string }) {
+  return (
+    <section
+      aria-labelledby={label}
+      className={`border-t border-[var(--h-fern)]/40 ${tone === "mist" ? "bg-[var(--h-mist)]" : "bg-[var(--h-cream)]"}`}
+    >
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="max-w-3xl">{children}</div>
+      </div>
+    </section>
+  );
+}
+
+function SectionHeading({ id, children }: { id: string; children: React.ReactNode }) {
+  return (
+    <h2 id={id} className="font-display text-3xl font-bold text-[var(--h-forest)] sm:text-4xl">
+      {children}
+    </h2>
+  );
+}
+
+export default function HealthPage() {
+  const { mental, fitness, support } = health;
+  return (
+    <>
+      <TopBar />
+      <main id="main" className="flex-1 bg-[var(--h-mist)] text-[var(--h-text)]" style={healthThemeVars}>
+        {/* Hero banner: full supplied JPG logo (leafy sage background), unedited, WebP at 1024x576.
+            Natural 16:9, object-contain so no text is cut off on phones; max 1024px, rounded on desktop. */}
+        <div className="bg-[var(--h-mist)] sm:px-6 sm:pt-6">
+          <Image
+            src="/health/xspeaks-health-banner.webp"
+            alt="SXPeaks mental health and fitness"
+            width={1024}
+            height={576}
+            priority
+            sizes="(max-width: 1072px) 100vw, 1024px"
+            className="mx-auto aspect-video h-auto w-full max-w-[1024px] object-contain sm:rounded-2xl"
+          />
+        </div>
+
+        <Band tone="cream" label="health-title">
+          <h1 id="health-title" className="font-display text-3xl font-black text-[var(--h-forest)] sm:text-4xl">
+            {health.title}
+          </h1>
+          <p className="mt-4 text-base leading-relaxed sm:text-lg">{health.intro}</p>
+          <Note>{health.disclaimer}</Note>
+        </Band>
+
+        <Band tone="mist" label="mental-health">
+          <SectionHeading id="mental-health">{mental.heading}</SectionHeading>
+          <p className="mt-5 text-base leading-relaxed sm:text-lg">
+            <strong>{mental.talk.lead}</strong> {mental.talk.text}
+          </p>
+
+          <SubHeading>{mental.tipsHeading}</SubHeading>
+          <TipList items={mental.tips} />
+
+          <SubHeading>{mental.storiesHeading}</SubHeading>
+          <div className="mt-4 rounded-2xl border-2 border-dashed border-[var(--h-fern)] bg-[var(--h-cream)] p-5 sm:p-6">
+            <span className="inline-block rounded bg-[var(--h-sage)] px-2 py-0.5 text-xs font-bold uppercase tracking-wide">
+              Example
+            </span>
+            <p className="mt-3 text-base italic leading-relaxed">{mental.storyPlaceholder}</p>
+          </div>
+        </Band>
+
+        <Band tone="cream" label="fitness-health">
+          <SectionHeading id="fitness-health">{fitness.heading}</SectionHeading>
+          <p className="mt-5 text-base leading-relaxed sm:text-lg">{fitness.intro}</p>
+          <Note>{fitness.disclaimer}</Note>
+
+          <SubHeading>{fitness.tipsHeading}</SubHeading>
+          <TipList items={fitness.tips} />
+        </Band>
+
+        <Band tone="mist" label="support-now">
+          <div className="rounded-3xl border-2 border-[var(--h-forest)] bg-[var(--h-cream)] p-5 sm:p-8">
+            <h2 id="support-now" className="font-display text-2xl font-bold text-[var(--h-forest)] sm:text-3xl">
+              {support.heading}
+            </h2>
+            <p className="mt-3 text-base leading-relaxed sm:text-lg">{support.intro}</p>
+            <ul className="mt-6 space-y-3">
+              {support.entries.map((e, i) => (
+                <li
+                  key={e.name || i}
+                  className={`flex min-h-14 items-center rounded-2xl border border-[var(--h-fern)]/50 bg-[var(--h-mist)] px-5 py-3 text-base leading-relaxed sm:text-lg ${
+                    e.bold ? "font-bold" : ""
+                  }`}
+                >
+                  <span>
+                    {e.name ? (
+                      <>
+                        <strong>{e.url ? <A href={e.url}>{e.name}</A> : e.name}:</strong>{" "}
+                      </>
+                    ) : null}
+                    <Inline parts={e.parts} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Band>
+      </main>
+      <Footer />
+    </>
+  );
+}
