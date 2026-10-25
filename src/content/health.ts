@@ -1,7 +1,7 @@
 /**
- * Copy for the SXPeaks health page (/health).
- * Approved copy from SXPeaks Health, 25 Oct 2026. Edit the words here; the page layout
- * lives in src/app/health/page.tsx. Brand is always written "SXPeaks".
+ * Copy for the Xspeaks health page (/health).
+ * Approved copy from Xspeaks Health, 25 Oct 2026. Edit the words here; the page layout
+ * lives in src/app/health/page.tsx. Brand is always written "Xspeaks".
  *
  * Inline text is a list of parts: a plain string, or { text, href } for a link,
  * or { text, bold: true } for bold text.
@@ -50,15 +50,15 @@ export type HealthContent = {
 };
 
 export const health: HealthContent = {
-  title: "SXPeaks health",
+  title: "Xspeaks health",
   description:
-    "SXPeaks is about speaking up: mental health awareness, simple ways to get moving, and where to get support.",
+    "Xspeaks is about speaking up: mental health awareness, simple ways to get moving, and where to get support.",
   intro:
-    "SXPeaks is about speaking up. Speaking openly about how we feel, and making it normal to ask \u201chow are you, really?\u201d We believe in the simple things: getting outdoors, moving your body, and spending time with people who\u2019ve got your back.",
+    "Xspeaks is about speaking up. Speaking openly about how we feel, and making it normal to ask \u201chow are you, really?\u201d We believe in the simple things: getting outdoors, moving your body, and spending time with people who\u2019ve got your back.",
   disclaimer:
     "This page shares general information only. It isn\u2019t medical advice and doesn\u2019t replace advice from your GP or another health professional.",
   mental: {
-    heading: "Mental health awareness",
+    heading: "1. Mental health awareness",
     talk: {
       lead: "It\u2019s OK to talk.",
       text: "Everyone has ups and downs, and talking about them is a sign of strength. Saying it out loud to a friend, family member or someone you trust can make a hard day feel a little lighter.",
@@ -72,10 +72,11 @@ export const health: HealthContent = {
       { lead: "Listen.", text: "Sometimes the best thing you can do for someone is to let them speak." },
     ],
     storiesHeading: "Real stories",
-    storyPlaceholder: "Space for a real story shared with written consent. No story goes live without one.",
+    storyPlaceholder:
+      "Placeholder for a real story shared with written consent. Remove before going live unless a consented story is in place.",
   },
   fitness: {
-    heading: "Fitness health",
+    heading: "2. Fitness health",
     intro: "You don\u2019t need a gym or fancy kit to get started. Small, regular bits of movement add up.",
     disclaimer:
       "If you have a health condition, an injury, or you\u2019re unsure whether exercise is right for you, check with your GP before starting.",

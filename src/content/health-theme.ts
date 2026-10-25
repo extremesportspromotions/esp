@@ -1,7 +1,7 @@
 import type { CSSProperties } from "react";
 
 /**
- * Colour theme for the SXPeaks health page (/health) ONLY.
+ * Colour theme for the Xspeaks health page (/health) ONLY.
  * Applied as CSS variables on the page wrapper, so the rest of the site's
  * global colours are untouched. To try another palette from
  * agent-data/shared/esp/health-2026-10/xspeaks-health-colour-theme.md,

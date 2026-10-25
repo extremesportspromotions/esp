@@ -109,7 +109,7 @@ export default function HealthPage() {
         <div className="bg-[var(--h-mist)] sm:px-6 sm:pt-6">
           <Image
             src="/health/xspeaks-health-banner.webp"
-            alt="SXPeaks mental health and fitness"
+            alt="Xspeaks mental health and fitness"
             width={1024}
             height={576}
             priority
