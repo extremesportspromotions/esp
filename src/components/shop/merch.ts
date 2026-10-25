@@ -2,8 +2,9 @@
 // id = sync variant id (used for orders); vid = catalogue variant id (used for delivery rates).
 export type MerchVariant = { id: number; vid: number; label: string; pence: number; oos?: boolean; color?: string };
 /** `view`: which view the photo shows (shown as a label in the gallery and enlarged viewer). */
-export type PhotoView = "front" | "back" | "side" | "model";
-export type MerchPhoto = { src: string; alt: string; view?: PhotoView };
+export type PhotoView = "front" | "back" | "side" | "close-up" | "model";
+/** `note`: small caption shown under the photo (e.g. on AI model illustrations). */
+export type MerchPhoto = { src: string; alt: string; view?: PhotoView; note?: string };
 /** `light`: a light colour, made with the dark logo (black thread, dark-grey print). */
 export type MerchColor = { name: string; hex: string; gallery: MerchPhoto[]; light?: boolean };
 /** `made`: smart casual, made to order and fulfilled by hand (never by the automatic partner). */

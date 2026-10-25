@@ -1,10 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import Image from "next/image";
 import { type Merch, type MerchPhoto } from "./merch";
 import { gbp, MAX_QTY, OPEN_BAG, useBag } from "./Bag";
-import { MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
+import { MADE_DELIVERY_PENCE, MADE_LEAD, scKey } from "./smartCasual";
 import { Lightbox, viewWord } from "./Lightbox";
 
 const field = "rounded-md border border-[#1C1917]/25 bg-white px-2 py-1.5 text-[13px] text-[#1C1917]";
@@ -40,6 +40,10 @@ function closeView() {
   }
 }
 
+/** "pid:Colour" keys of smart casual colours that can't be ordered yet (set by the server page). */
+export const NotYetContext = createContext<Set<string>>(new Set());
+export const NOT_YET = "Not available to order yet";
+
 /* ---------- shared picker state for the card and the product view ---------- */
 
 type Pick = ReturnType<typeof usePick>;
@@ -48,6 +52,10 @@ function usePick(p: Merch) {
   const colors = p.colors ?? [];
   const [color, setColorRaw] = useState(colors[0]?.name);
   const variants = colors.length > 1 ? p.variants.filter((v) => v.color === color) : p.variants;
+  const notYetSet = useContext(NotYetContext);
+  const notYet = !!p.made && notYetSet.has(scKey(p.pid, colors.length ? color : undefined));
+  const allNotYet = !!p.made && colors.length > 0 && colors.every((c) => notYetSet.has(scKey(p.pid, c.name)));
+  const someNotYet = !!p.made && colors.some((c) => notYetSet.has(scKey(p.pid, c.name)));
   const soldOut = variants.every((v) => v.oos);
   const only = (vs: typeof variants) => (vs.length === 1 && !vs[0].oos ? vs[0].id : 0);
   const [vid, setVid] = useState(only(variants));
@@ -72,18 +80,19 @@ function usePick(p: Merch) {
   const price = chosen ? gbp(chosen.pence) : min === Math.max(...prices) ? gbp(min) : `From ${gbp(min)}`;
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const addNow = () => {
+    if (notYet) return;
     add(vid, qty);
     setAdded(true);
     clearTimeout(timer.current);
     timer.current = setTimeout(() => setAdded(false), 2500);
   };
-  return { p, variants, colors, color, setColor, photos, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, price, addNow };
+  return { p, variants, colors, color, setColor, photos, notYet, allNotYet, someNotYet, notYetSet, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, price, addNow };
 }
 
 const isSize = (label: string) => /^(XS|S|M|L|XL|[2-5]XL)$|^W\d\d /.test(label);
 
 function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => void }) {
-  const { p, variants, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, addNow } = k;
+  const { p, variants, soldOut, notYet, vid, setVid, qty, setQty, added, needSize, setNeedSize, addNow } = k;
   const single = variants.length === 1;
   const sizeWord = isSize(variants[0].label) ? "Size" : "Option";
   const f = big ? "rounded-md border border-[#1C1917]/25 bg-white px-3 py-2.5 text-[15px] text-[#1C1917]" : field;
@@ -92,6 +101,7 @@ function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => 
       className={big ? "flex flex-col gap-3" : "mt-auto flex scroll-mb-24 scroll-mt-48 flex-col gap-2 lg:scroll-mb-20 lg:scroll-mt-40"}
       onSubmit={(e) => {
         e.preventDefault();
+        if (notYet) return;
         if (!vid) {
           setNeedSize(true);
           const form = e.currentTarget;
@@ -131,8 +141,8 @@ function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => 
         </select>
       </div>
       {needSize && <p role="alert" className={`-mt-1 ${big ? "text-sm" : "text-[12px]"} font-medium text-red-700`}>Choose an option first.</p>}
-      <button type="submit" disabled={soldOut} className={`rounded-md bg-[#1C1917] font-semibold text-white transition hover:bg-black disabled:opacity-40 ${big ? "px-4 py-3 text-[15px]" : "px-3 py-2 text-sm"}`}>
-        {soldOut ? "Out of stock" : added ? "Added to bag" : "Add to bag"}
+      <button type="submit" disabled={soldOut || notYet} data-notyet={notYet || undefined} className={`rounded-md bg-[#1C1917] font-semibold text-white transition hover:bg-black disabled:opacity-40 ${big ? "px-4 py-3 text-[15px]" : "px-3 py-2 text-sm"}`}>
+        {notYet ? NOT_YET : soldOut ? "Out of stock" : added ? "Added to bag" : "Add to bag"}
       </button>
     </form>
   );
@@ -147,6 +157,9 @@ export function MerchCard({ p }: { p: Merch }) {
     <li className="flex flex-col overflow-hidden rounded-xl border border-[#1C1917]/10 bg-white">
       <button type="button" onClick={() => openView(p)} aria-label={`View ${p.name}: photos and details`} className="group relative block aspect-square overflow-hidden bg-[#F4F6F8] text-left focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1C1917]">
         <Image src={k.colors.length > 1 && k.color !== k.colors[0].name ? k.photos[0].src : p.img} alt={`ESP ${p.name}, ${(k.color ?? "black").toLowerCase()}, with the mountain logo`} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px" loading="lazy" className="object-contain p-2 transition duration-300 group-hover:scale-[1.03]" />
+        {(k.allNotYet || k.notYet) && (
+          <span data-notyet-badge className="absolute left-2 top-2 rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-900 shadow-sm ring-1 ring-amber-700/30">{NOT_YET}</span>
+        )}
         {k.colors.length > 1 && (
           <span className="absolute bottom-2 left-2 rounded-full bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-[#1C1917] shadow-sm">{k.colors.length} colours</span>
         )}
@@ -218,6 +231,11 @@ function ProductView({ k }: { k: Pick }) {
           <div>
             <h2 id={`pv-h-${p.pid}`} className={`font-display text-2xl font-bold leading-tight ${ink}`}>{p.name}</h2>
             <p className={`mt-1 text-xl font-bold ${ink}`}>{k.price}</p>
+            {k.notYet && (
+              <p data-notyet-label role="status" className="mt-2 inline-block rounded-md bg-amber-100 px-2.5 py-1 text-sm font-bold text-amber-900 ring-1 ring-amber-700/30">
+                {NOT_YET}{k.color && k.colors.length > 1 ? ` in ${k.color}` : ""}
+              </p>
+            )}
           </div>
           {p.details?.length ? (
             <ul className={`flex flex-col gap-1.5 text-[15px] leading-snug ${ink}`}>
@@ -278,6 +296,7 @@ function Swatches({ k }: { k: Pick }) {
             >
               <span aria-hidden className="h-6 w-6 rounded-full ring-1 ring-inset ring-black/15" style={{ backgroundColor: c.hex }} />
               {c.name}
+              {k.notYetSet.has(scKey(k.p.pid, c.name)) && k.p.made && <span className="text-[11px] font-semibold text-amber-800">(not yet)</span>}
             </button>
           );
         })}
@@ -338,6 +357,9 @@ function Gallery({ photos, name }: { photos: MerchPhoto[]; name: string }) {
           {many ? `${i + 1} / ${photos.length}` : "Tap to enlarge"}{viewWord(photos[i]) ? ` \u00b7 ${viewWord(photos[i])}` : ""}
         </span>
       </div>
+      <p data-photo-note className={`min-h-[1.5rem] px-3 pt-1.5 text-[12px] italic text-[#1C1917]/75 ${photos.some((x) => x.note) ? "" : "hidden"}`} aria-live="polite">
+        {photos[i]?.note ?? ""}
+      </p>
       {many && (
         <div className="flex gap-2 overflow-x-auto bg-white p-3">
           {photos.map((ph, n) => (

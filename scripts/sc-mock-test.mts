@@ -105,6 +105,25 @@ for (const [name, items] of Object.entries(cases)) {
     }
   }
 }
+// Not-yet-orderable smart casual colours (no saved supplier design) must be refused by the server.
+{
+  const { smartCasual } = await import("@/components/shop/smartCasual");
+  const { madeInfo, notYetOrderable } = await import("@/lib/madeDesigns");
+  const all = smartCasual.flatMap((p) => p.variants);
+  const blocked = all.filter((v) => !madeInfo(v.id));
+  const ny = notYetOrderable();
+  check("not-yet: list matches variants without a design", blocked.length > 0 && ny.length === new Set(blocked.map((v) => `${Math.floor(v.id / 1000)}:${v.color}`)).size, `${ny.length} colours, ${blocked.length} variants`);
+  check("not-yet: no design ids leak into the browser list", !/\d{7}/.test(JSON.stringify(ny.map((x) => [x.name, x.colour]))));
+  for (const [label, items] of [["new style alone", [{ id: blocked[blocked.length - 1].id, qty: 1 }]], ["new colour of an existing style", [{ id: blocked.find((v) => Math.floor(v.id / 1000) === 9100003)!.id, qty: 1 }]], ["mixed with an orderable item", [{ id: shirtV.id, qty: 1 }, { id: blocked[0].id, qty: 1 }]]] as const) {
+    calls = [];
+    const c = await checkout(new Request("http://x/api/shop/checkout", { method: "POST", headers: { origin: "https://esp-lemon.vercel.app", "x-forwarded-for": "ny-" + label }, body: JSON.stringify({ items }) }));
+    const r = await rates(new Request("http://x/api/shop/rates", { method: "POST", body: JSON.stringify({ items }) }));
+    check(`not-yet: checkout refuses ${label}`, c.status === 400 && !calls.some((x) => x.url.includes("stripe")), `checkout ${c.status}, rates ${r.status}`);
+    check(`not-yet: rates refuse ${label}`, r.status >= 400, `rates ${r.status}`);
+  }
+  const ok = all.filter((v) => madeInfo(v.id));
+  check("not-yet: existing designs still orderable", ok.length > 0 && ok.every((v) => Math.floor(v.id / 1000) <= 9100005), `${ok.length} variants`);
+}
 console.log(results.join("\n"));
 writeFileSync(`${out}/results.txt`, results.join("\n") + "\n");
 process.exit(failures ? 1 : 0);

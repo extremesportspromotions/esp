@@ -7,7 +7,7 @@ import { categories, products, type Category, type Product } from "./products";
 import { catalogue as merch } from "./catalogue";
 import { MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
 import { BagProvider, BagButton } from "./Bag";
-import { MerchCard } from "./MerchCard";
+import { MerchCard, NotYetContext } from "./MerchCard";
 
 type Filter = Category | "all";
 
@@ -73,7 +73,24 @@ function GearBanner() {
   );
 }
 
-export default function ShopBrowser() {
+type NotYet = { key: string; name: string; colour: string }[];
+
+/** Preview-only list of smart casual colours that can't be ordered yet (no saved supplier design). */
+function NotYetBanner({ list }: { list: NotYet }) {
+  const by = new Map<string, string[]>();
+  for (const x of list) by.set(x.name, [...(by.get(x.name) ?? []), x.colour]);
+  return (
+    <div data-notyet-banner role="note" className="mb-4 rounded-lg border-2 border-dashed border-amber-600 bg-amber-50 px-4 py-3 text-sm text-[#1C1917]">
+      <p className="font-bold">Preview only: {list.length} smart casual colours are not available to order yet</p>
+      <p className="mt-0.5 text-[13px]">They have no saved supplier design, so they can&apos;t be added to the bag and checkout refuses them. This box never shows on the live site.</p>
+      <ul className="mt-2 grid gap-x-6 gap-y-0.5 text-[13px] sm:grid-cols-2">
+        {[...by].map(([n, cs]) => <li key={n}><b>{n}:</b> {cs.join(", ")}</li>)}
+      </ul>
+    </div>
+  );
+}
+
+export default function ShopBrowser({ notYet = [], preview = false }: { notYet?: NotYet; preview?: boolean }) {
   const [cat, setCat] = useState<Filter>("all");
   const [sub, setSub] = useState<string | null>(null);
 
@@ -108,6 +125,7 @@ export default function ShopBrowser() {
     `shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-[13px] font-medium transition ${on ? "border-[#1C1917] bg-[#1C1917] text-white" : "border-[#1C1917]/25 bg-white text-[#1C1917] hover:border-[#1C1917]"}`;
 
   return (
+    <NotYetContext.Provider value={new Set(notYet.map((x) => x.key))}>
     <BagProvider>
     <div id="products">
       <div className="sticky top-[101px] z-40 border-b border-[#1C1917]/10 bg-[#EEF4FA]/95 backdrop-blur-md lg:top-[61px]">
@@ -146,6 +164,7 @@ export default function ShopBrowser() {
                   {MADE_LEAD} UK delivery £{(MADE_DELIVERY_PENCE / 100).toFixed(2)} per order. With other kit, these come as a separate parcel.
                 </p>
               )}
+              {c.id === "smartcasual" && preview && notYet.length > 0 && <NotYetBanner list={notYet} />}
               {c.id === "gear" && <GearBanner />}
               {c.id === "gear" && <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">Some links on this page are affiliate links. If you buy through them, ESP may earn a small commission at no extra cost to you. We only link to gear we&apos;d recommend.</p>}
               <ul className={grid}>
@@ -159,5 +178,6 @@ export default function ShopBrowser() {
       <BagButton />
     </div>
     </BagProvider>
+    </NotYetContext.Provider>
   );
 }

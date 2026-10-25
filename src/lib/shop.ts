@@ -2,6 +2,7 @@ import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import { type Merch, type MerchVariant } from "@/components/shop/merch";
 import { catalogue } from "@/components/shop/catalogue";
 import { MADE_DELIVERY_PENCE } from "@/components/shop/smartCasual";
+import { madeInfo } from "@/lib/madeDesigns";
 
 /** Server-side helpers for the ESP kit shop: prices, delivery rates and fulfilment orders. */
 
@@ -20,6 +21,9 @@ export function splitLines(lines: Line[]): { auto: Line[]; made: Line[] } {
   return { auto: lines.filter((l) => !isMade(l.id)), made: lines.filter((l) => isMade(l.id)) };
 }
 
+/** A smart casual variant whose colour has no saved supplier design yet: never sellable. */
+export const notYetOrderable = (id: number) => isMade(id) && !madeInfo(id);
+
 /** Validates a cart from the browser. Prices are never taken from the browser. */
 export function cleanLines(raw: unknown): Line[] | null {
   if (!Array.isArray(raw) || raw.length === 0 || raw.length > 30) return null;
@@ -27,7 +31,7 @@ export function cleanLines(raw: unknown): Line[] | null {
   for (const r of raw) {
     const id = Number((r as Line)?.id);
     const qty = Math.floor(Number((r as Line)?.qty));
-    if (!byId.has(id) || byId.get(id)!.v.oos || !(qty >= 1 && qty <= 10)) return null;
+    if (!byId.has(id) || byId.get(id)!.v.oos || notYetOrderable(id) || !(qty >= 1 && qty <= 10)) return null;
     out.set(id, Math.min(10, (out.get(id) ?? 0) + qty));
   }
   return [...out].map(([id, qty]) => ({ id, qty }));

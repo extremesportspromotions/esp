@@ -4,6 +4,7 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import ShopBrowser from "@/components/shop/ShopBrowser";
 import MountainMark from "@/components/shop/MountainMark";
+import { notYetOrderable } from "@/lib/madeDesigns";
 
 export const metadata: Metadata = {
   title: "Shop | Extreme Sports Promotions",
@@ -54,7 +55,7 @@ export default function ShopPage() {
           </span>
         </p>
 
-        <ShopBrowser />
+        <ShopBrowser notYet={notYetOrderable()} preview={process.env.VERCEL_ENV !== "production"} />
       </main>
       <Footer />
     </>

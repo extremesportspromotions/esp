@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import type { MerchPhoto } from "./merch";
 
-const VIEW_WORD = { front: "Front", back: "Back", side: "Side", model: "On model" } as const;
+const VIEW_WORD = { front: "Front", back: "Back", side: "Side", "close-up": "Close-up", model: "On model" } as const;
 export const viewWord = (ph: MerchPhoto) => (ph.view ? VIEW_WORD[ph.view] : undefined);
 
 /**
@@ -98,6 +98,7 @@ export function Lightbox({ photos, start, name, onClose }: { photos: MerchPhoto[
         <p className="min-w-0 truncate pl-2 text-[15px] font-semibold" aria-live="polite">
           <span data-lb-counter>{i + 1} / {n}</span>
           {label && <span className="ml-2 font-normal text-white/75">{label}</span>}
+          {ph.note && <span data-lb-note className="block text-[12px] font-normal italic text-white/80">{ph.note}</span>}
         </p>
         <button type="button" data-lb-close onClick={() => onClose(i)} aria-label="Close enlarged photo" className={btn}>
           <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M6 6l12 12M18 6L6 18" /></svg>
