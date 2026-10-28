@@ -7,7 +7,8 @@ import GuidesBrowser, { GuidesBrowserView } from "@/components/guides/GuidesBrow
 import { getAllGuides, getFeaturedGuide } from "@/lib/guides";
 import { carouselSports as sports } from "@/data/sports";
 import HubTiles from "@/components/guides/HubTiles";
-import { getHubSummaries } from "@/lib/hubs";
+import { getHubSummaries, COURSE_PRICES_SLUG } from "@/lib/hubs";
+import PricesGuideCard from "@/components/guides/PricesGuideCard";
 
 const title = "ESP Guides — learn extreme sports the right way";
 const description =
@@ -34,6 +35,7 @@ export default function GuidesIndexPage() {
   const guides = getAllGuides();
   const featured = getFeaturedGuide();
   const hubs = getHubSummaries();
+  const prices = guides.find((g) => g.slug === COURSE_PRICES_SLUG);
   return (
     <>
       <TopBar active="guides" />
@@ -46,6 +48,7 @@ export default function GuidesIndexPage() {
           intro={`Straight-talking guides to getting started, staying safe and choosing the right instruction: ${sports.length} sports, plus how matching works. No hype, no shortcuts — just what you need to know before your first session.`}
         />
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+          {prices ? <PricesGuideCard guide={prices} /> : null}
           <HubTiles hubs={hubs} />
           <Suspense
             fallback={

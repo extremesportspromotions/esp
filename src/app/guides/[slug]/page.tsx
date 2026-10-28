@@ -98,7 +98,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
 
   return (
     <>
-      <TopBar active={guide.slug === "uk-course-prices" ? "price" : "guides"} />
+      <TopBar active="guides" />
       <main id="main" className="flex-1">
         <script
           type="application/ld+json"
