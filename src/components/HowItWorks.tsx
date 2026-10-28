@@ -56,7 +56,7 @@ export default function HowItWorks() {
               </span>
               <h3 className="mt-3 text-lg font-semibold text-[#1C1917]">{s.title}</h3>
               {s.feeTable && (
-                <div className="guide-prose prose prose-sm mt-3 max-w-none">
+                <div className="mt-3">
                   <MatchFeeTable />
                 </div>
               )}

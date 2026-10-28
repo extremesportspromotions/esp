@@ -29,13 +29,12 @@ const socials = [
 
 // Absolute paths (/#…) so the links also work from sub-pages such as /guides.
 const pageLinks = [
-  { label: "Sports", href: "/#sports", key: "sports" },
+  // "Enquire" opens How it works, which sits just above the enquiry form on the homepage.
+  { label: "Enquire", href: "/#how-it-works", key: "enquire" },
   { label: "Guides", href: "/guides", key: "guides" },
-  { label: "Promotions", href: "/promotions", key: "promotions" },
   { label: "Shop", href: "/shop", key: "shop" },
+  { label: "Promotions", href: "/promotions", key: "promotions" },
   { label: "Find a club", href: "/#find-a-club", key: "find-a-club" },
-  { label: "How it works", href: "/#how-it-works", key: "how-it-works" },
-  { label: "Enquire", href: "/#enquire", key: "enquire" },
   { label: "Health", href: "/health", key: "health" },
 ] as const;
 

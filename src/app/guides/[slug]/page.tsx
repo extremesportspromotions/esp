@@ -6,7 +6,7 @@ import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import GuideTags from "@/components/guides/GuideTags";
 import GuideCard from "@/components/guides/GuideCard";
-import GuideNextSteps from "@/components/guides/GuideNextSteps";
+import GuideClosingLine from "@/components/guides/GuideClosingLine";
 import ShareLinks from "@/components/guides/ShareLinks";
 import TableOfContents from "@/components/guides/TableOfContents";
 import HubBanner from "@/components/guides/HubBanner";
@@ -190,6 +190,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
                 className="guide-prose prose sm:prose-lg"
                 dangerouslySetInnerHTML={{ __html: guide.html }}
               />
+              <GuideClosingLine />
               <div className="mt-12 max-w-[70ch] border-t border-[#1C1917]/10 pt-8">
                 <ShareLinks url={url} title={guide.title} />
               </div>
@@ -209,8 +210,6 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
         </article>
 
         <div className="mx-auto max-w-7xl space-y-16 px-4 pb-20 sm:px-6 lg:px-8">
-          <GuideNextSteps sport={guide.sport} sportName={guide.sportName} />
-
           {related.length > 0 ? (
             <section aria-labelledby="related-heading">
               <div className="mb-6 flex flex-wrap items-end justify-between gap-3">

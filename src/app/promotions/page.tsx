@@ -72,11 +72,11 @@ export default function PromotionsPage() {
 
         <section className={section}>
           <div className={wrap}>
-            <h2 className={h2}>What your club gets now</h2>
+            <h2 className={h2}>What your club will get</h2>
             <div className={grid}>
               <Card
                 heading="Your club on YouTube"
-                body="I visit your club, train with your coaches and film a short review episode for the ESP series. We tag you, so viewers can find you."
+                body="I'll visit your club, train with your coaches and film a short review episode for the ESP series. We'll tag you, so viewers can find you."
               />
               <Card
                 heading="Students sent your way"
@@ -90,16 +90,16 @@ export default function PromotionsPage() {
           <div className={wrap}>
             <h2 className={h2}>Next: club vs club challenges</h2>
             <p className={p}>
-              Friendly competition makes great videos. We organise episodes with several clubs, built around real
+              Friendly competition makes great videos. We&apos;ll organise episodes with several clubs, built around real
               challenges, light rivalry and fun.
             </p>
             <div className={grid}>
-              <Card heading="Real rivalry" body="Clubs compete on camera. Viewers pick sides." />
+              <Card heading="Real rivalry" body="Clubs will compete on camera. Viewers pick sides." />
               <Card heading="Entertainment first" body="Short, punchy episodes people finish and share." />
-              <Card heading="Everyone wins" body="Every club gets exposure and content." />
+              <Card heading="Everyone wins" body="Every club will get exposure and content." />
             </div>
             <p className="mt-6 font-semibold text-white">
-              Safety first. Every challenge runs within your club&apos;s own safety rules, with your qualified coaches.
+              Safety first. Every challenge will run within your club&apos;s own safety rules, with your qualified coaches.
             </p>
           </div>
         </section>
@@ -108,7 +108,7 @@ export default function PromotionsPage() {
           <div className={wrap}>
             <h2 className={h2}>Videographers and splitting the bill</h2>
             <p className={p}>
-              We organise professional videographers. Several clubs share one shoot, so each pays a share. We&apos;ll
+              We&apos;ll organise professional videographers. Several clubs will share one shoot, so each pays a share. We&apos;ll
               quote each shoot up front.
             </p>
             <p className="mt-6 mb-3.5 font-semibold text-white">Typical UK videographer rates (2026):</p>
@@ -145,7 +145,7 @@ export default function PromotionsPage() {
             <ul className="my-4 ml-5 list-disc space-y-1 text-white">
               <li>Tagging each other sends viewers between clubs.</li>
               <li>Shared episodes get more views.</li>
-              <li>We get to know you and your coaches personally.</li>
+              <li>We&apos;ll get to know you and your coaches personally.</li>
             </ul>
           </div>
         </section>
@@ -157,7 +157,7 @@ export default function PromotionsPage() {
             <div className={grid}>
               <Card
                 heading="Filmed at your club."
-                body="Your coaches show key skills step by step, in short clips we film on the day."
+                body="Your coaches show key skills step by step, in short clips we'll film on the day."
               />
               <Card
                 heading="A written lesson."
@@ -165,7 +165,7 @@ export default function PromotionsPage() {
               />
               <Card
                 heading="Then the video."
-                body="Each lesson links to the matching video, so students can read it, then watch it done properly."
+                body="Each lesson will link to the matching video, so students can read it, then watch it done properly."
               />
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function PromotionsPage() {
             <div className={grid}>
               <Card
                 heading="2027 is our groundwork year."
-                body="I'll visit and review clubs across the UK, meet coaches and learn how each venue runs. That way the 2028 episodes are properly planned, not rushed. Clubs can still make short videos with us now."
+                body="I'll visit and review clubs across the UK, meet coaches and learn how each venue runs. That way the 2028 episodes are properly planned, not rushed. If your club would like to make a short video with us before then, get in touch."
               />
               <Card
                 heading="One headquarters per sport."
@@ -193,7 +193,7 @@ export default function PromotionsPage() {
         </section>
 
         <div className="px-6 py-16 text-center sm:py-[70px]">
-          <h2 className={h2}>Ready to be in the next episode?</h2>
+          <h2 className={h2}>Want to be in one of the first episodes?</h2>
           <a
             href="mailto:enquiries@extremesportspromotions.com"
             className="mt-3 inline-block rounded-full bg-[#c0c0c0] px-8 py-3.5 font-bold text-black hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"

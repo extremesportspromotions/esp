@@ -50,3 +50,22 @@ export const DUAL_FLYING_NOTE = "Hang gliding & paragliding";
 export function isDualFlyingClub(c: Club): boolean {
   return FLYING.has(c.sportId) && dualFlyingNames.has(flyingKey(c));
 }
+
+/**
+ * Every club once. A club teaching both hang gliding and paragliding has one
+ * entry per sport in clubs.json (one pin per sport); here it counts once.
+ * Use this, and CLUB_COUNT, wherever the site says how many clubs there are.
+ */
+export const uniqueClubs: Club[] = (() => {
+  const seen = new Set<string>();
+  return clubs.filter((c) => {
+    if (!isDualFlyingClub(c)) return true;
+    const key = flyingKey(c);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+})();
+
+/** The real number of clubs on the map, counted from clubs.json. */
+export const CLUB_COUNT = uniqueClubs.length;

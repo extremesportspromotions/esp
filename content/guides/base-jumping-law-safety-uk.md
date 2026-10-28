@@ -13,7 +13,7 @@ draft: false
 ---
 
 - **What you need first:** A solid skydiving background first. See [the skydiving route](https://www.extremesportspromotions.com/guides/base-jumping-skydiving-route-uk).
-- **How long it takes:** A short read. Get legal advice for your own case.
+- **How long it takes:** A short read.
 - **What's next:** Skydiving track: [first course](https://www.extremesportspromotions.com/guides/skydiving-aff-course-uk). Licence track: [A licence](https://www.extremesportspromotions.com/guides/skydiving-a-licence-uk). Safety track: [skydiving kit, costs and safety](https://www.extremesportspromotions.com/guides/skydiving-kit-costs-safety-uk).
 
 > [!SAFETY]
@@ -23,12 +23,11 @@ draft: false
 
 We looked at GOV.UK, the CAA, legislation.gov.uk and British Skydiving. None of the pages we read talk about BASE jumping by name. So we won't tell you it's legal, or illegal, in any one place.
 
-## What the CAA covers
+## What the law covers
 
-- **Jumps from aircraft:** the CAA says "all parachute dropping carried out from civil registered aircraft over the UK is regulated by the CAA". Article 90(1) of the Air Navigation Order 2016 says, subject to its paragraphs (9) to (11), "a person must not drop, be dropped or be permitted to drop to the surface or jump from an aircraft flying over the United Kingdom except under and in accordance with the terms of either a police air operator's certificate or a parachuting permission granted by the CAA".
-- **Parachutes themselves:** article 23(1) of the same Order lists "any parachute including a parascending parachute". Article 23(2) says that, subject to paragraphs (3) and (4), "nothing in this Order applies to or in relation to" those aircraft. Paragraph (3) then lists the articles that do still apply.
+In short, the Air Navigation Order 2016 says you can't jump or be dropped from an aircraft over the UK without a parachuting permission from the CAA (or under a police air operator's certificate). The CAA regulates all parachuting from civil registered aircraft over the UK. The Order counts a parachute as an aircraft, but most of its rules don't apply to parachutes themselves.
 
-We haven't found official guidance on how these rules apply to a jump from a building, bridge or cliff. Don't assume either way.
+We haven't found official guidance on how this applies to a jump from a building, bridge or cliff, so don't assume either way, and get legal advice for your own case. Read the rules yourself: the Air Navigation Order 2016, [article 90](https://www.legislation.gov.uk/uksi/2016/765/article/90) and [article 23](https://www.legislation.gov.uk/uksi/2016/765/article/23), on legislation.gov.uk, and the CAA's [Parachuting](https://www.caa.co.uk/general-aviation/ga-flight-operations/parachuting/) page.
 
 ## Land and structures
 

@@ -30,12 +30,12 @@ Prefer email? Write to enquiries@extremesportspromotions.com.
 
 You pay the match fee up front, when you enquire. The coach or club then bills the training. We do not book the session.
 
-| | What you want | ESP match fee |
-| --- | --- | --- |
-| 1 | Experience day — one person, one day | £19 |
-| 2 | Become qualified — one person, one club, full course | £49 |
-| 3 | Group experience day — a party, one taster day | £49 |
-| 4 | Group qualification — team building, become qualified | £99 |
+ESP match fee:
+
+- Experience day — one person, one day: **£19**
+- Become qualified — one person, one club, full course: **£49**
+- Group experience day — a party, one taster day: **£49**
+- Group qualification — team building, become qualified: **£99**
 
 If we cannot find you a coach within 14 days of your payment, we refund the fee in full. We also refund it if your health means you cannot train.
 

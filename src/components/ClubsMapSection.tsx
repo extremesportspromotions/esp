@@ -4,9 +4,11 @@ import dynamic from "next/dynamic";
 import { useDeferredValue, useEffect, useId, useMemo, useState } from "react";
 import {
   clubs,
+  CLUB_COUNT,
   clubCountsBySport,
   DUAL_FLYING_NOTE,
   isDualFlyingClub,
+  uniqueClubs,
   type Club,
 } from "@/data/clubs";
 import { sports } from "@/data/sports";
@@ -59,7 +61,8 @@ export default function ClubsMapSection() {
   };
 
   const bySport: Club[] = useMemo(() => {
-    if (sportFilter === ALL) return clubs;
+    // All sports: each club once (dual hang gliding / paragliding clubs aren't doubled).
+    if (sportFilter === ALL) return uniqueClubs;
     return clubs.filter((c) => c.sportId === sportFilter);
   }, [sportFilter]);
 
@@ -70,7 +73,7 @@ export default function ClubsMapSection() {
     return bySport.filter((c) => {
       const sport = sports.find((s) => s.id === c.sportId);
       const hay = norm(
-        [c.name, c.town, c.region, sport?.name, sport?.mapLabel, c.subActivity?.replace(/-/g, " ")]
+        [c.name, c.town, c.region, sport?.name, sport?.mapLabel, c.subActivity?.replace(/-/g, " "), isDualFlyingClub(c) ? DUAL_FLYING_NOTE : undefined]
           .filter(Boolean)
           .join(" "),
       );
@@ -107,7 +110,7 @@ export default function ClubsMapSection() {
             Find a club
           </h2>
           <p className="mt-3 text-base leading-relaxed text-[#1C1917]/70 sm:text-lg">
-            Explore {clubs.length.toLocaleString()} UK clubs, centres, and schools
+            Explore {CLUB_COUNT.toLocaleString()} UK clubs, centres, and schools
             that offer coaching, lessons, or courses. Every venue listed has a
             website. Filter by sport to focus the
             map, then open a pin for the website, phone, or email.
@@ -137,7 +140,7 @@ export default function ClubsMapSection() {
                 : "bg-[#1C1917]/10 text-[#1C1917]/80 hover:bg-[#1C1917]/15"
             }`}
           >
-            All{" "}<span className="opacity-70">{clubs.length}</span>
+            All{" "}<span className="opacity-70">{CLUB_COUNT}</span>
           </button>
           {sports.map((s) => {
             const n = counts[s.id] ?? 0;
@@ -221,7 +224,7 @@ export default function ClubsMapSection() {
                 onClick={() => chooseSport(ALL)}
                 className="rounded-full border border-[#1C1917]/20 px-4 py-2 text-sm font-semibold text-[#1C1917] transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                Show all {clubs.length} in a list
+                Show all {CLUB_COUNT} in a list
               </button>
             </div>
           ) : (

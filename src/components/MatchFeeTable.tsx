@@ -5,26 +5,22 @@ export const MATCH_FEE_ROWS = [
   { want: "Group qualification — team building, become qualified", fee: "£99" },
 ] as const;
 
-/** Same table as the "What you pay ESP" block at the end of every guide. */
+/** The match fees as clean, easy-to-read lines: what you want on the left, the fee on the right. */
 export default function MatchFeeTable() {
   return (
-    <table className="my-0">
-      <thead>
-        <tr>
-          <th></th>
-          <th>What you want</th>
-          <th>ESP match fee</th>
-        </tr>
-      </thead>
-      <tbody>
-        {MATCH_FEE_ROWS.map((r, i) => (
-          <tr key={r.want}>
-            <td>{i + 1}</td>
-            <td>{r.want}</td>
-            <td className="whitespace-nowrap">{r.fee}</td>
-          </tr>
+    <div className="not-prose">
+      <p className="flex justify-between gap-4 border-b border-[#1C1917]/15 pb-1.5 text-[11px] font-semibold uppercase tracking-wide text-[#1C1917]/55">
+        <span>What you want</span>
+        <span>ESP match fee</span>
+      </p>
+      <ul className="divide-y divide-[#1C1917]/10">
+        {MATCH_FEE_ROWS.map((r) => (
+          <li key={r.want} className="flex items-baseline justify-between gap-4 py-2 text-sm leading-snug text-[#1C1917]/80">
+            <span>{r.want}</span>
+            <span className="shrink-0 font-semibold text-[#1C1917]">{r.fee}</span>
+          </li>
         ))}
-      </tbody>
-    </table>
+      </ul>
+    </div>
   );
 }

@@ -353,6 +353,24 @@ function rehypePriceBox(sport: string, file: string) {
   };
 }
 
+/**
+ * The standard closing club map / enquiry paragraph is replaced on the page by
+ * one shared closing line (GuideClosingLine), so drop it from the article body.
+ * Runs after rehypePriceBox, which uses it to place the "What it costs" box.
+ */
+function rehypeDropClosingLine() {
+  return (tree: HastRoot) => {
+    tree.children = tree.children.filter(
+      (node) =>
+        !(
+          node.type === "element" &&
+          node.tagName === "p" &&
+          hastToString(node).trim().startsWith(CLOSING_LINE_START)
+        ),
+    );
+  };
+}
+
 async function renderMarkdown(markdown: string, sport: string, sourceFile: string) {
   const toc: TocItem[] = [];
   const file = await unified()
@@ -363,6 +381,7 @@ async function renderMarkdown(markdown: string, sport: string, sourceFile: strin
     .use(rehypeSlug)
     .use(rehypeHeadingsAndLinks(toc))
     .use(rehypePriceBox(sport, sourceFile))
+    .use(rehypeDropClosingLine)
     .use(rehypeStringify)
     .process(markdown);
   return { html: String(file), toc };

@@ -112,12 +112,10 @@ You pay these prices to the club or coach. Our match fee is separate and paid on
 
 ## Our match fee
 
-| What you want | Match fee |
-| --- | --- |
-| Experience day (one person, one day) | £19 |
-| Become qualified (one person, one club, full course) | £49 |
-| Group experience day (a party, one taster day) | £49 |
-| Group qualification (team building, become qualified) | £99 |
+- Experience day (one person, one day): **£19**
+- Become qualified (one person, one club, full course): **£49**
+- Group experience day (a party, one taster day): **£49**
+- Group qualification (team building, become qualified): **£99**
 
 You pay it when you enquire. Full refund if we can't find you a coach within 14 days, or if your health stops you training. We check every coach's qualifications, insurance and references.
 
