@@ -37,13 +37,13 @@ export default function PromotionsPage() {
         <header className="border-b border-[#2a2a3a] pt-12 pb-10 text-center">
           <div className={wrap}>
             <Image
-              src="/promotions/esp-logo-silver.png"
+              src="/promotions/esp-logo-portrait.webp"
               alt="ESP Extreme Sports Promotions logo"
-              width={682}
-              height={542}
+              width={784}
+              height={1108}
               priority
-              sizes="300px"
-              className="mx-auto mb-6 block h-auto w-4/5 max-w-[300px]"
+              sizes="(max-width: 640px) 260px, 300px"
+              className="mx-auto mb-6 block h-auto max-h-[42svh] w-auto max-w-[260px] sm:max-w-[300px] [mask-image:radial-gradient(ellipse_at_center,black_62%,transparent_100%)]"
             />
             <p className="mb-4 inline-block rounded-full bg-[#c0c0c0] px-3.5 py-1.5 text-xs font-bold uppercase tracking-[1.5px] text-black">
               For club owners and coaches
