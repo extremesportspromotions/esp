@@ -32,6 +32,13 @@ const DESIGNS: Record<number, { garment: string; colours: Record<string, [design
     garment: "Asquith & Fox AQ051 chino shorts (stag by left front pocket)",
     colours: { Black: [6577687, "silver"], Slate: [6577689, "silver"], White: [6577691, "dark grey"], Natural: [6577692, "dark grey"], Navy: [6577693, "silver"] },
   },
+  // Denim (31 Oct 2026): stag in dark grey on the RIGHT back pocket (wearer's right).
+  9100013: { garment: "SD001 Leo Straight jeans (stag on RIGHT back pocket)", colours: { Black: [6577729, "dark grey"] } },
+  9100014: { garment: "SD001 Leo Straight jeans (stag on RIGHT back pocket)", colours: { "Dark Blue Wash": [6577730, "dark grey"] } },
+  9100015: { garment: "SD004 Max Slim jeans (stag on RIGHT back pocket)", colours: { Black: [6577731, "dark grey"] } },
+  9100016: { garment: "SD004 Max Slim jeans (stag on RIGHT back pocket)", colours: { "Dark Blue Wash": [6577732, "dark grey"] } },
+  9100017: { garment: "SD011 Women's Katy Straight jeans (stag on RIGHT back pocket)", colours: { "Dark Blue Wash": [6577733, "dark grey"] } },
+  9100018: { garment: "SD014 Women's Lara Skinny jeans (stag on RIGHT back pocket)", colours: { Black: [6577734, "dark grey"] } },
 };
 
 // v2 styles (25 Oct 2026): only the stag-only colours above are saved (31 Oct); other colours need design numbers. Add e.g.
@@ -39,7 +46,7 @@ const DESIGNS: Record<number, { garment: string; colours: Record<string, [design
 // 9100006 Short Sleeve Oxford (HB517) · 9100007 Mercerised Polo (AQ101) · 9100008 Long Sleeve Polo (AQ030)
 // 9100009 Zip-Through Cardigan (H718) · 9100010 Crew Neck Jumper (HB725) · 9100011 Softshell Jacket (140M)
 // 9100012 Chino Shorts (AQ051)
-// DENIM (31 Oct 2026), stag embroidered on the RIGHT back pocket (wearer's right), all "needs design number". Add one entry per pid, e.g.
+// DENIM (31 Oct 2026), stag embroidered on the RIGHT back pocket (wearer's right), design numbers saved 31 Oct (see DESIGNS above). Template, e.g.
 //   9100013: { garment: "SD001 Leo Straight jeans (stag on RIGHT back pocket)", colours: { Black: [1234567, "dark grey"] } },
 // 9100013 Leo Straight Black (SD001) · 9100014 Leo Straight Dark Blue Wash (SD001)
 // 9100015 Max Slim Black (SD004) · 9100016 Max Slim Dark Blue Wash (SD004)
