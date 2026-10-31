@@ -48,7 +48,11 @@ const STANDARD_VIEWS: { view: PhotoView; file: string }[] = [
   { view: "close-up", file: "detail" },
 ];
 export const MODEL_NOTE = "Illustration, colour may vary slightly";
-export const SC_EXTRA_PHOTOS: Record<string, { view: PhotoView; file: string }[]> = {};
+export const SC_EXTRA_PHOTOS: Record<string, { view: PhotoView; file: string }[]> = {
+  // Devonshire v6 (31 Oct 2026): second model shot
+  "oxford-ls-white": [{ view: "model", file: "model2" }],
+  "softshell-french-navy": [{ view: "model", file: "model2" }],
+};
 
 /** `thread`: embroidery thread on the photos/design record (dark grey on light colours, silver-grey otherwise). */
 type Design = { colour: string; hex: string; light?: boolean; thread: "silver-grey" | "dark grey"; photo: string; model?: boolean };
@@ -88,7 +92,7 @@ const defs: Def[] = [
     details: ["Knitted quarter-zip jumper, 55% cotton and 45% acrylic", "Fine knit with ribbed collar, cuffs and hem", "Embroidered silver mountain logo on the left chest"],
     designs: [
       d("Black", "#161616", SG, "quarterzip-black"),
-      d("Charcoal", "#38383D", SG, "quarterzip-charcoal"),
+      d("Charcoal", "#38383D", SG, "quarterzip-charcoal", { model: true }),
       d("Navy", "#1C2338", SG, "quarterzip-navy", { model: true }),
     ],
   },
@@ -99,7 +103,7 @@ const defs: Def[] = [
     designs: [
       d("Black", "#161616", SG, "vcardigan-black"),
       d("Navy", "#1C2338", SG, "vcardigan-navy", { model: true }),
-      d("Grey Marl", "#3D3C39", SG, "vcardigan-grey-marl"),
+      d("Grey Marl", "#3D3C39", SG, "vcardigan-grey-marl", { model: true }),
     ],
   },
   {
@@ -144,7 +148,7 @@ const defs: Def[] = [
     designs: [
       d("White", "#F2F2F0", DG, "polo-ss-white", { light: true }),
       d("Heather Grey", "#ADACAA", DG, "polo-ss-heather-grey", { light: true, model: true }),
-      d("Navy", "#1C2338", SG, "polo-ss-navy"),
+      d("Navy", "#1C2338", SG, "polo-ss-navy", { model: true }),
       d("Black", "#1B1B1B", SG, "polo-ss-black"),
     ],
   },
@@ -165,7 +169,7 @@ const defs: Def[] = [
     details: ["Zip-through cardigan, unisex", CHEST],
     designs: [
       d("Black", "#161616", SG, "zipcardigan-black"),
-      d("Navy", "#1C2338", SG, "zipcardigan-navy"),
+      d("Navy", "#1C2338", SG, "zipcardigan-navy", { model: true }),
       d("Grey Marl", "#3D3C39", SG, "zipcardigan-grey-marl", { model: true }),
     ],
   },
@@ -175,7 +179,7 @@ const defs: Def[] = [
     details: ["Crew neck jumper", CHEST],
     designs: [
       d("Black", "#161616", SG, "crewknit-black", { model: true }),
-      d("Navy", "#1C2338", SG, "crewknit-navy"),
+      d("Navy", "#1C2338", SG, "crewknit-navy", { model: true }),
       d("Grey Marl", "#3D3C39", SG, "crewknit-grey-marl"),
     ],
   },
@@ -185,7 +189,7 @@ const defs: Def[] = [
     details: ["Men's softshell jacket", CHEST],
     designs: [
       d("Black", "#1B1B1B", SG, "softshell-black", { model: true }),
-      d("French Navy", "#16223C", SG, "softshell-french-navy"),
+      d("French Navy", "#16223C", SG, "softshell-french-navy", { model: true }),
       d("Azure", "#0A62A8", SG, "softshell-azure"),
     ],
   },
@@ -223,9 +227,10 @@ export const smartCasual: Merch[] = defs.map((p) => {
     view,
     ...(view === "model" ? { note: MODEL_NOTE } : {}),
   });
+  // Devonshire v6 (31 Oct 2026): the model photo (if any) is shown first.
   const photos = (c: Design): MerchPhoto[] => [
-    ...STANDARD_VIEWS.map((x) => ph(c, x.view, x.file)),
     ...(c.model ? [ph(c, "model", "model")] : []),
+    ...STANDARD_VIEWS.map((x) => ph(c, x.view, x.file)),
     ...(SC_EXTRA_PHOTOS[c.photo] ?? []).map((x) => ph(c, x.view, x.file)),
   ];
   return {
