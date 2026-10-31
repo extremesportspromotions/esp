@@ -276,3 +276,8 @@ html { scroll-padding-top: 5rem; }
   font-size: 0.85em;
   color: rgb(28 25 23 / 0.65);
 }
+
+/* Mountain biking slide: centre the rider on phones (desktop unchanged). */
+@media (max-width: 640px) {
+  .mtb-mobile-frame { object-position: 22% 55% !important; }
+}
