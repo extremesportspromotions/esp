@@ -281,4 +281,5 @@ html { scroll-padding-top: 5rem; }
 @media (max-width: 640px) {
   .mtb-mobile-frame { object-position: 22% 55% !important; }
   .surf-mobile-frame { object-position: 26% 50% !important; }
+  .wingsuit-mobile-frame { object-position: 71% 50% !important; }
 }
