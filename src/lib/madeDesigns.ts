@@ -10,12 +10,12 @@ import { scKey, smartCasual } from "@/components/shop/smartCasual";
  * used in the order alerts and Stripe line metadata, never shown to customers.
  */
 const DESIGNS: Record<number, { garment: string; colours: Record<string, [design: number, logo: "silver" | "black" | "dark grey"]> }> = {
-  9100001: { garment: "Henbury HB512 Oxford (regular fit)", colours: { Black: [6571277, "silver"], White: [6571279, "black"], Blue: [6571296, "black"] } },
-  9100002: { garment: "Premier PR695 quarter-zip knit", colours: { Black: [6571283, "silver"], Charcoal: [6571285, "silver"], Navy: [6571290, "silver"] } },
-  9100003: { garment: "Henbury H722 V-neck cardigan", colours: { Black: [6571301, "silver"], Navy: [6571303, "black"] /* Grey Marl: needs design number */ } },
+  9100001: { garment: "Henbury HB512 Oxford (regular fit)", colours: { Black: [6577525, "silver"], White: [6577544, "dark grey"], Blue: [6577545, "dark grey"] } },
+  9100002: { garment: "Premier PR695 quarter-zip knit", colours: { Black: [6577546, "silver"], Charcoal: [6577547, "silver"], Navy: [6577548, "silver"] } },
+  9100003: { garment: "Henbury H722 V-neck cardigan", colours: { Black: [6577549, "silver"], Navy: [6577551, "silver"] /* Grey Marl: needs design number */ } },
   9100004: {
     garment: "Russell 141M softshell gilet (Clothes2order code J141M)",
-    colours: { Black: [6571304, "silver"], Titanium: [6571308, "silver"], "French Navy": [6571310, "silver"], Azure: [6571312, "black"], "Classic Red": [6571315, "black"] },
+    colours: { Black: [6577552, "silver"], Titanium: [6577553, "silver"], "French Navy": [6577555, "silver"], Azure: [6577556, "silver"], "Classic Red": [6577557, "silver"] },
   },
   9100005: {
     garment: "Asquith & Fox AQ050 chinos (logo by left front pocket)",
@@ -36,12 +36,7 @@ const DESIGNS: Record<number, { garment: string; colours: Record<string, [design
  * checkout refuses it). To release one, re-save it in dark grey, update its number, and remove it here.
  */
 export const HELD = new Set<number>([
-  6571279, // Oxford White
-  6571296, // Oxford Blue
   6571327, // Chinos Natural
-  6571312, // Gilet Azure
-  6571315, // Gilet Classic Red
-  6571303, // V-Cardigan Navy
 ]);
 
 export type MadeInfo = { design: number; garment: string; logo: string };
