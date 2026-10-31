@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Get trained by a pro. We find you the right UK coach across 15 extreme sports, from skydiving to surfing.",
     type: "website",
-    images: [{ url: "/logo.png", alt: "Extreme Sports Promotions" }],
+    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Extreme Sports Promotions stag logo" }],
   },
 };
 
