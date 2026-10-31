@@ -221,37 +221,37 @@ const defs: Def[] = [
     pid: 9100013, key: "denim", name: "Devonshire Leo Straight Jeans, Black", code: "", sub: "Denim",
     sizes: ["W28 R (leg 31in)", "W28 L (leg 33in)", "W30 R (leg 31in)", "W30 L (leg 33in)", "W32 R (leg 31in)", "W32 L (leg 33in)", "W34 R (leg 31in)", "W34 L (leg 33in)", "W36 R (leg 31in)", "W36 L (leg 33in)", "W38 R (leg 31in)", "W38 L (leg 33in)", "W40 R (leg 31in)", "W40 L (leg 33in)"],
     details: ["A straight-leg jean in deep black stretch denim, finished with the Devonshire stag stitched tone-on-tone on the right back pocket. Stretch denim with 5-pocket styling, self-fabric belt loops, a shank button and zip fly, metal rivets at the pocket corners and twin-needle stitching. Fabric: 73% cotton, 25% polyester, 2% elastane; 11oz. Fit: straight fit. Made to order."],
-    designs: [d("Black", "#1A1A1C", DG, "denim/leo-straight-black", { img: "/shop/denim/leo-straight-black-back.webp", alt: "Back view of a model wearing Devonshire Leo Straight Jeans in Black, with a small dark grey stag embroidered on the right back pocket.", oos: [] })],
+    designs: [d("Black", "#1A1A1C", DG, "denim/leo-straight-black", { img: "/shop/denim/v9/leo-straight-black-back.webp", alt: "Back view of a model wearing Devonshire Leo Straight Jeans in Black, with a small dark grey stag embroidered on the right back pocket.", oos: [] })],
   },
   {
     pid: 9100014, key: "denim", name: "Devonshire Leo Straight Jeans, Dark Blue Wash", code: "", sub: "Denim",
     sizes: ["W28 R (leg 31in)", "W28 L (leg 33in)", "W30 R (leg 31in)", "W30 L (leg 33in)", "W32 R (leg 31in)", "W32 L (leg 33in)", "W34 R (leg 31in)", "W34 L (leg 33in)", "W36 R (leg 31in)", "W36 L (leg 33in)", "W38 R (leg 31in)", "W38 L (leg 33in)", "W40 R (leg 31in)", "W40 L (leg 33in)"],
     details: ["A straight-leg jean in dark blue wash stretch denim, finished with the Devonshire stag stitched tone-on-tone on the right back pocket. Stretch denim with 5-pocket styling, self-fabric belt loops, a shank button and zip fly, metal rivets at the pocket corners and twin-needle stitching. Fabric: 99% cotton, 1% elastane; 10.5oz. Fit: straight fit; light blasting and whiskering. Made to order."],
-    designs: [d("Dark Blue Wash", "#1F2A44", DG, "denim/leo-straight-dark-blue-wash", { img: "/shop/denim/leo-straight-dark-blue-wash-back.webp", alt: "Back view of a model wearing Devonshire Leo Straight Jeans in Dark Blue Wash, with a small dark grey stag embroidered on the right back pocket.", oos: ["W36 L (leg 33in)"] })],
+    designs: [d("Dark Blue Wash", "#1F2A44", DG, "denim/leo-straight-dark-blue-wash", { img: "/shop/denim/v9/leo-straight-dark-blue-wash-back.webp", alt: "Back view of a model wearing Devonshire Leo Straight Jeans in Dark Blue Wash, with a small dark grey stag embroidered on the right back pocket.", oos: ["W36 L (leg 33in)"] })],
   },
   {
     pid: 9100015, key: "denim", name: "Devonshire Max Slim Jeans, Black", code: "", sub: "Denim",
     sizes: ["W28 R (leg 31in)", "W28 L (leg 33in)", "W30 R (leg 31in)", "W30 L (leg 33in)", "W32 R (leg 31in)", "W32 L (leg 33in)", "W34 R (leg 31in)", "W34 L (leg 33in)", "W36 R (leg 31in)", "W36 L (leg 33in)", "W38 R (leg 31in)", "W38 L (leg 33in)", "W40 R (leg 31in)", "W40 L (leg 33in)"],
     details: ["A slim-fit jean in deep black stretch denim, finished with the Devonshire stag stitched tone-on-tone on the right back pocket. Stretch denim with 5-pocket styling, self-fabric belt loops, a shank button and zip fly, metal rivets at the pocket corners and twin-needle stitching. Fabric: 73% cotton, 25% polyester, 2% elastane; 10.5oz. Fit: slim fit. Made to order."],
-    designs: [d("Black", "#1A1A1C", DG, "denim/max-slim-black", { img: "/shop/denim/max-slim-black-back.webp", alt: "Back view of a model wearing Devonshire Max Slim Jeans in Black, with a small dark grey stag embroidered on the right back pocket.", oos: [] })],
+    designs: [d("Black", "#1A1A1C", DG, "denim/max-slim-black", { img: "/shop/denim/v9/max-slim-black-back.webp", alt: "Back view of a model wearing Devonshire Max Slim Jeans in Black, with a small dark grey stag embroidered on the right back pocket.", oos: [] })],
   },
   {
     pid: 9100016, key: "denim", name: "Devonshire Max Slim Jeans, Dark Blue Wash", code: "", sub: "Denim",
     sizes: ["W28 R (leg 31in)", "W28 L (leg 33in)", "W30 R (leg 31in)", "W30 L (leg 33in)", "W32 R (leg 31in)", "W32 L (leg 33in)", "W34 R (leg 31in)", "W34 L (leg 33in)", "W36 R (leg 31in)", "W36 L (leg 33in)", "W38 R (leg 31in)", "W38 L (leg 33in)", "W40 R (leg 31in)", "W40 L (leg 33in)"],
     details: ["A slim-fit jean in dark blue wash stretch denim, finished with the Devonshire stag stitched tone-on-tone on the right back pocket. Stretch denim with 5-pocket styling, self-fabric belt loops, a shank button and zip fly, metal rivets at the pocket corners and twin-needle stitching. Fabric: 99% cotton, 1% elastane; 10.5oz. Fit: slim fit; light blasting and whiskering. Made to order."],
-    designs: [d("Dark Blue Wash", "#1F2A44", DG, "denim/max-slim-dark-blue-wash", { img: "/shop/denim/max-slim-dark-blue-wash-back.webp", alt: "Back view of a model wearing Devonshire Max Slim Jeans in Dark Blue Wash, with a small dark grey stag embroidered on the right back pocket.", oos: ["W36 R (leg 31in)"] })],
+    designs: [d("Dark Blue Wash", "#1F2A44", DG, "denim/max-slim-dark-blue-wash", { img: "/shop/denim/v9/max-slim-dark-blue-wash-back.webp", alt: "Back view of a model wearing Devonshire Max Slim Jeans in Dark Blue Wash, with a small dark grey stag embroidered on the right back pocket.", oos: ["W36 R (leg 31in)"] })],
   },
   {
     pid: 9100017, key: "denim", name: "Devonshire Women's Katy Straight Jeans, Dark Blue Wash", code: "", sub: "Denim",
     sizes: ["UK 6 R (leg 30in)", "UK 6 L (leg 32in)", "UK 8 R (leg 30in)", "UK 8 L (leg 32in)", "UK 10 R (leg 30in)", "UK 10 L (leg 32in)", "UK 12 R (leg 30in)", "UK 12 L (leg 32in)", "UK 14 R (leg 30in)", "UK 14 L (leg 32in)", "UK 16 R (leg 30in)", "UK 16 L (leg 32in)", "UK 18 R (leg 30in)", "UK 18 L (leg 32in)"],
     details: ["A straight-leg jean in dark blue wash stretch denim, finished with the Devonshire stag stitched tone-on-tone on the right back pocket. Stretch denim with 5-pocket styling, self-fabric belt loops, a shank button and zip fly, metal rivets at the pocket corners and twin-needle stitching. Fabric: 99% cotton, 1% elastane; 9oz. Fit: straight fit; light blasting and whiskering. Made to order."],
-    designs: [d("Dark Blue Wash", "#1F2A44", DG, "denim/womens-katy-straight-dark-blue-wash", { img: "/shop/denim/womens-katy-straight-dark-blue-wash-back.webp", alt: "Back view of a model wearing Devonshire Women's Katy Straight Jeans in Dark Blue Wash, with a small dark grey stag embroidered on the right back pocket.", oos: [] })],
+    designs: [d("Dark Blue Wash", "#1F2A44", DG, "denim/womens-katy-straight-dark-blue-wash", { img: "/shop/denim/v9/womens-katy-straight-dark-blue-wash-back.webp", alt: "Back view of a model wearing Devonshire Women's Katy Straight Jeans in Dark Blue Wash, with a small dark grey stag embroidered on the right back pocket.", oos: [] })],
   },
   {
     pid: 9100018, key: "denim", name: "Devonshire Women's Lara Skinny Jeans, Black", code: "", sub: "Denim",
     sizes: ["UK 6 S (leg 28in)", "UK 6 R (leg 30in)", "UK 6 L (leg 32in)", "UK 8 S (leg 28in)", "UK 8 R (leg 30in)", "UK 8 L (leg 32in)", "UK 10 S (leg 28in)", "UK 10 R (leg 30in)", "UK 10 L (leg 32in)", "UK 12 S (leg 28in)", "UK 12 R (leg 30in)", "UK 12 L (leg 32in)", "UK 14 S (leg 28in)", "UK 14 R (leg 30in)", "UK 14 L (leg 32in)", "UK 16 S (leg 28in)", "UK 16 R (leg 30in)", "UK 16 L (leg 32in)", "UK 18 S (leg 28in)", "UK 18 R (leg 30in)", "UK 18 L (leg 32in)"],
     details: ["A mid-rise skinny jean in deep black stretch denim, finished with the Devonshire stag stitched tone-on-tone on the right back pocket. Stretch denim with 5-pocket styling, self-fabric belt loops, a shank button and zip fly, metal rivets at the pocket corners and twin-needle stitching. Fabric: 77% cotton, 21% polyester, 2% elastane; 9oz. Fit: skinny fit, mid rise. Made to order."],
-    designs: [d("Black", "#1A1A1C", DG, "denim/womens-lara-skinny-black", { img: "/shop/denim/womens-lara-skinny-black-back.webp", alt: "Back view of a model wearing Devonshire Women's Lara Skinny Jeans in Black, with a small dark grey stag embroidered on the right back pocket.", oos: [] })],
+    designs: [d("Black", "#1A1A1C", DG, "denim/womens-lara-skinny-black", { img: "/shop/denim/v9/womens-lara-skinny-black-back.webp", alt: "Back view of a model wearing Devonshire Women's Lara Skinny Jeans in Black, with a small dark grey stag embroidered on the right back pocket.", oos: [] })],
   },
 ];
 
@@ -271,10 +271,11 @@ export const smartCasual: Merch[] = defs.map((p) => {
     return `ESP ${it}, ${view === "front" ? `front, with the ${logo}` : view === "side" ? "side view" : "back"}`;
   };
   const ph = (c: Design, view: PhotoView, file: string): MerchPhoto => ({
-    src: view === "model" && file === "model" && V7_MODEL.has(c.photo) ? `/shop/v8e/sc-${c.photo.replace(/^shorts-/, "chinoshorts-")}-v8e.webp` : `/shop/sc/v2/${c.photo}-${file}.webp`,
+    src: view === "model" && file === "model" && V7_MODEL.has(c.photo) ? `/shop/v9/sc-${c.photo.replace(/^shorts-/, "chinoshorts-")}-v9.webp` : `/shop/sc/v2/${c.photo}-${file}.webp`,
     alt: alt(c, view),
     view,
-    ...(view === "model" ? { note: MODEL_NOTE } : {}),
+    // v9: model photos carry their own caption in the image.
+    ...(view === "model" && !V7_MODEL.has(c.photo) ? { note: MODEL_NOTE } : {}),
   });
   // Devonshire v6 (31 Oct 2026): the model photo (if any) is shown first.
   // v8e (31 Oct 2026): chinos and chino shorts now have stag-only photos too. They stay hidden from the shop
@@ -287,6 +288,7 @@ export const smartCasual: Merch[] = defs.map((p) => {
     ? [...(c.model ? [ph(c, "model", "model")] : []), ...STANDARD_VIEWS.map((x) => ph(c, x.view, x.file))]
     : [
         ...(c.model || V7_MODEL.has(c.photo) ? [ph(c, "model", "model")] : []),
+        ...(/^(chinos|shorts)-/.test(c.photo) ? [{ src: `/shop/v9/sc-${c.photo.replace(/^shorts-/, "chinoshorts-")}-back-v9.webp`, alt: `${alt(c, "back")}, with the embroidered Devonshire stag on the right back pocket`, view: "back" as PhotoView }] : []),
         ...(SC_EXTRA_PHOTOS[c.photo] ?? []).map((x) => ph(c, x.view, x.file)),
       ];
   const shownDesigns = p.designs.filter((c) => photos(c).length);

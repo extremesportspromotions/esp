@@ -5,7 +5,7 @@ import Image from "next/image";
 import StagMark from "./StagMark";
 import { categories, products, type Category, type Product } from "./products";
 import { catalogue as merch } from "./catalogue";
-import { DENIM_PIDS, MADE_DELIVERY_PENCE, MADE_LEAD, MODEL_NOTE } from "./smartCasual";
+import { DENIM_PIDS, MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
 import { BagProvider, BagButton } from "./Bag";
 import { MerchCard, NotYetContext } from "./MerchCard";
 
@@ -196,7 +196,6 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
               {kit.some((p) => p.sub === "Denim") && (
                 <div id="denim" data-denim className="mt-8 scroll-mt-[170px] lg:scroll-mt-[130px]">
                   <h3 id="h-denim" className="scroll-mt-[170px] lg:scroll-mt-[130px] font-display mb-1 text-lg font-bold text-[#1C1917] sm:text-xl">Denim</h3>
-                  <p className="mb-3 text-[13px] italic text-[#1C1917]/75">{MODEL_NOTE}</p>
                   <ul className={grid}>
                     {kit.filter((p) => p.sub === "Denim").map((p) => <MerchCard key={p.pid} p={p} />)}
                   </ul>
