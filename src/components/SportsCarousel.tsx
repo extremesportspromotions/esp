@@ -113,7 +113,7 @@ export default function SportsCarousel() {
                 preload={active ? "metadata" : "none"}
                 aria-label={s.alt}
                 style={s.videoPosition ? { objectPosition: s.videoPosition } : undefined}
-                className="absolute inset-0 h-full w-full object-cover"
+                className={`absolute inset-0 h-full w-full object-cover${s.id === "mountain-biking" ? " mtb-mobile-frame" : s.id === "surfing" ? " surf-mobile-frame" : ""}`}
               />
               </>
             ) : (
