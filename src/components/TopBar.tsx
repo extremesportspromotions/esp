@@ -81,7 +81,9 @@ export default function TopBar({ active }: TopBarProps = {}) {
             <Image src="/brand/stag-navy.jpg" alt="" width={34} height={45} priority className="h-11 w-auto" />
             <span className="flex flex-col leading-none">
               <span className="font-serif text-[1.7rem] font-semibold tracking-[0.08em] text-[#C9A96A]">ESP</span>
-              <span className="mt-0.5 hidden text-[9px] tracking-[0.18em] text-[#F6EFE3]/70 sm:block">EXTREME SPORTS PROMOTIONS</span>
+              <span className="mt-1 border-t border-[#C9A96A]/40 pt-1 text-[10px] font-medium leading-[1.2] tracking-[0.14em] text-[#E6E1D6] sm:text-[11px] sm:tracking-[0.16em]">
+                EXTREME SPORTS<br className="sm:hidden" /> PROMOTIONS
+              </span>
             </span>
           </Link>
           <span className="hidden h-8 w-px bg-[#C9A96A]/40 lg:block" aria-hidden />
