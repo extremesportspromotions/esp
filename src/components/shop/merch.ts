@@ -357,29 +357,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535439-1.webp",
-    "alt": "ESP Tee in black with the mountain logo, front"
+    "alt": "ESP Tee in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535439-2.webp",
-    "alt": "ESP Tee in black with the mountain logo, worn, front"
+    "alt": "ESP Tee in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535439-3.webp",
-    "alt": "ESP Tee in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Tee in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484535439-4.webp",
-    "alt": "ESP Tee in black with the mountain logo, back"
+    "alt": "ESP Tee in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535439-5.webp",
-    "alt": "ESP Tee in black with the mountain logo, left side"
+    "alt": "ESP Tee in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Crew-neck T-shirt, unisex fit",
    "100% combed ring-spun cotton, 142 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -393,15 +393,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535439-black-heather-1.webp",
-      "alt": "ESP Tee in black heather with the mountain logo, front"
+      "alt": "ESP Tee in black heather with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535439-black-heather-2.webp",
-      "alt": "ESP Tee in black heather with the mountain logo, worn, front"
+      "alt": "ESP Tee in black heather with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535439-black-heather-3.webp",
-      "alt": "ESP Tee in black heather with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Tee in black heather with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -411,15 +411,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535439-navy-1.webp",
-      "alt": "ESP Tee in navy with the mountain logo, front"
+      "alt": "ESP Tee in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535439-navy-2.webp",
-      "alt": "ESP Tee in navy with the mountain logo, worn, front"
+      "alt": "ESP Tee in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535439-navy-3.webp",
-      "alt": "ESP Tee in navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Tee in navy with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -429,15 +429,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535439-brown-1.webp",
-      "alt": "ESP Tee in brown with the mountain logo, front"
+      "alt": "ESP Tee in brown with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535439-brown-2.webp",
-      "alt": "ESP Tee in brown with the mountain logo, worn, front"
+      "alt": "ESP Tee in brown with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535439-brown-3.webp",
-      "alt": "ESP Tee in brown with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Tee in brown with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -447,15 +447,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535439-heather-midnight-navy-1.webp",
-      "alt": "ESP Tee in heather midnight navy with the mountain logo, front"
+      "alt": "ESP Tee in heather midnight navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535439-heather-midnight-navy-2.webp",
-      "alt": "ESP Tee in heather midnight navy with the mountain logo, worn, front"
+      "alt": "ESP Tee in heather midnight navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535439-heather-midnight-navy-3.webp",
-      "alt": "ESP Tee in heather midnight navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Tee in heather midnight navy with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -465,15 +465,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535439-forest-1.webp",
-      "alt": "ESP Tee in forest with the mountain logo, front"
+      "alt": "ESP Tee in forest with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535439-forest-2.webp",
-      "alt": "ESP Tee in forest with the mountain logo, worn, front"
+      "alt": "ESP Tee in forest with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535439-forest-3.webp",
-      "alt": "ESP Tee in forest with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Tee in forest with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -483,15 +483,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535439-dark-grey-heather-1.webp",
-      "alt": "ESP Tee in dark grey heather with the mountain logo, front"
+      "alt": "ESP Tee in dark grey heather with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535439-dark-grey-heather-2.webp",
-      "alt": "ESP Tee in dark grey heather with the mountain logo, worn, front"
+      "alt": "ESP Tee in dark grey heather with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535439-dark-grey-heather-3.webp",
-      "alt": "ESP Tee in dark grey heather with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Tee in dark grey heather with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -501,15 +501,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535439-maroon-1.webp",
-      "alt": "ESP Tee in maroon with the mountain logo, front"
+      "alt": "ESP Tee in maroon with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535439-maroon-2.webp",
-      "alt": "ESP Tee in maroon with the mountain logo, worn, front"
+      "alt": "ESP Tee in maroon with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535439-maroon-3.webp",
-      "alt": "ESP Tee in maroon with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Tee in maroon with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    }
@@ -631,29 +631,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534678-1.webp",
-    "alt": "ESP Women's Relaxed Tee in black with the mountain logo, front"
+    "alt": "ESP Women's Relaxed Tee in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534678-2.webp",
-    "alt": "ESP Women's Relaxed Tee in black with the mountain logo, worn, front"
+    "alt": "ESP Women's Relaxed Tee in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484534678-3.webp",
-    "alt": "ESP Women's Relaxed Tee in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Women's Relaxed Tee in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484534678-4.webp",
-    "alt": "ESP Women's Relaxed Tee in black with the mountain logo, back"
+    "alt": "ESP Women's Relaxed Tee in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484534678-5.webp",
-    "alt": "ESP Women's Relaxed Tee in black with the mountain logo, left side"
+    "alt": "ESP Women's Relaxed Tee in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Women's T-shirt, relaxed fit",
    "100% combed ring-spun cotton",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -667,15 +667,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484534678-navy-1.webp",
-      "alt": "ESP Women's Relaxed Tee in navy with the mountain logo, front"
+      "alt": "ESP Women's Relaxed Tee in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484534678-navy-2.webp",
-      "alt": "ESP Women's Relaxed Tee in navy with the mountain logo, worn, front"
+      "alt": "ESP Women's Relaxed Tee in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484534678-navy-3.webp",
-      "alt": "ESP Women's Relaxed Tee in navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Women's Relaxed Tee in navy with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -685,15 +685,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484534678-dark-grey-heather-1.webp",
-      "alt": "ESP Women's Relaxed Tee in dark grey heather with the mountain logo, front"
+      "alt": "ESP Women's Relaxed Tee in dark grey heather with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484534678-dark-grey-heather-2.webp",
-      "alt": "ESP Women's Relaxed Tee in dark grey heather with the mountain logo, worn, front"
+      "alt": "ESP Women's Relaxed Tee in dark grey heather with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484534678-dark-grey-heather-3.webp",
-      "alt": "ESP Women's Relaxed Tee in dark grey heather with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Women's Relaxed Tee in dark grey heather with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    }
@@ -740,25 +740,25 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534615-1.webp",
-    "alt": "ESP Women's Polo in black with the mountain logo, front"
+    "alt": "ESP Women's Polo in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534615-2.webp",
-    "alt": "ESP Women's Polo in black with the mountain logo, worn, back"
+    "alt": "ESP Women's Polo in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484534615-3.webp",
-    "alt": "ESP Women's Polo in black with the mountain logo, worn, front"
+    "alt": "ESP Women's Polo in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484534615-4.webp",
-    "alt": "ESP Women's Polo in black with the mountain logo, back"
+    "alt": "ESP Women's Polo in black with the Devonshire stag logo, back"
    }
   ],
   "details": [
    "Women's polo shirt, semi-fitted",
    "100% ring-spun cotton, 176 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ]
  },
  {
@@ -870,29 +870,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535459-1.webp",
-    "alt": "ESP Polo in black with the mountain logo, front"
+    "alt": "ESP Polo in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535459-2.webp",
-    "alt": "ESP Polo in black with the mountain logo, worn, front"
+    "alt": "ESP Polo in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535459-3.webp",
-    "alt": "ESP Polo in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Polo in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484535459-4.webp",
-    "alt": "ESP Polo in black with the mountain logo, back"
+    "alt": "ESP Polo in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535459-5.webp",
-    "alt": "ESP Polo in black with the mountain logo, three-quarter view"
+    "alt": "ESP Polo in black with the Devonshire stag logo, three-quarter view"
    }
   ],
   "details": [
    "Polo shirt, semi-fitted",
    "100% ring-spun cotton, 176 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -906,15 +906,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535459-navy-1.webp",
-      "alt": "ESP Polo in navy with the mountain logo, front"
+      "alt": "ESP Polo in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535459-navy-2.webp",
-      "alt": "ESP Polo in navy with the mountain logo, worn, front"
+      "alt": "ESP Polo in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535459-navy-3.webp",
-      "alt": "ESP Polo in navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Polo in navy with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    }
@@ -973,29 +973,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534703-1.webp",
-    "alt": "ESP Oversized Faded Tee in black with the mountain logo, front"
+    "alt": "ESP Oversized Faded Tee in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534703-2.webp",
-    "alt": "ESP Oversized Faded Tee in black with the mountain logo, worn, front"
+    "alt": "ESP Oversized Faded Tee in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484534703-3.webp",
-    "alt": "ESP Oversized Faded Tee in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Oversized Faded Tee in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484534703-4.webp",
-    "alt": "ESP Oversized Faded Tee in black with the mountain logo, back"
+    "alt": "ESP Oversized Faded Tee in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484534703-5.webp",
-    "alt": "ESP Oversized Faded Tee in black with the mountain logo, left side"
+    "alt": "ESP Oversized Faded Tee in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Heavyweight oversized T-shirt, boxy fit, garment-dyed faded look",
    "100% cotton, 240 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ]
  },
  {
@@ -1093,25 +1093,25 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535407-1.webp",
-    "alt": "ESP Long Sleeve Tee in black with the mountain logo, front"
+    "alt": "ESP Long Sleeve Tee in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535407-2.webp",
-    "alt": "ESP Long Sleeve Tee in black with the mountain logo, worn, front"
+    "alt": "ESP Long Sleeve Tee in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535407-3.webp",
-    "alt": "ESP Long Sleeve Tee in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Long Sleeve Tee in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484535407-4.webp",
-    "alt": "ESP Long Sleeve Tee in black with the mountain logo, left side"
+    "alt": "ESP Long Sleeve Tee in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Heavyweight long-sleeve T-shirt, relaxed fit",
    "100% cotton, 278 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -1125,15 +1125,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535407-midnight-blue-1.webp",
-      "alt": "ESP Long Sleeve Tee in midnight blue with the mountain logo, front"
+      "alt": "ESP Long Sleeve Tee in midnight blue with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535407-midnight-blue-2.webp",
-      "alt": "ESP Long Sleeve Tee in midnight blue with the mountain logo, worn, front"
+      "alt": "ESP Long Sleeve Tee in midnight blue with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535407-midnight-blue-3.webp",
-      "alt": "ESP Long Sleeve Tee in midnight blue with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Long Sleeve Tee in midnight blue with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    }
@@ -1325,29 +1325,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535360-1.webp",
-    "alt": "ESP Sweatshirt in black with the mountain logo, front"
+    "alt": "ESP Sweatshirt in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535360-2.webp",
-    "alt": "ESP Sweatshirt in black with the mountain logo, worn, front"
+    "alt": "ESP Sweatshirt in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535360-3.webp",
-    "alt": "ESP Sweatshirt in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Sweatshirt in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484535360-4.webp",
-    "alt": "ESP Sweatshirt in black with the mountain logo, back"
+    "alt": "ESP Sweatshirt in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535360-5.webp",
-    "alt": "ESP Sweatshirt in black with the mountain logo, left side"
+    "alt": "ESP Sweatshirt in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Crew-neck sweatshirt, classic fit",
    "50% cotton, 50% polyester",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -1361,15 +1361,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535360-navy-1.webp",
-      "alt": "ESP Sweatshirt in navy with the mountain logo, front"
+      "alt": "ESP Sweatshirt in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535360-navy-2.webp",
-      "alt": "ESP Sweatshirt in navy with the mountain logo, worn, front"
+      "alt": "ESP Sweatshirt in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535360-navy-3.webp",
-      "alt": "ESP Sweatshirt in navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Sweatshirt in navy with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -1379,15 +1379,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535360-forest-green-1.webp",
-      "alt": "ESP Sweatshirt in forest green with the mountain logo, front"
+      "alt": "ESP Sweatshirt in forest green with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535360-forest-green-2.webp",
-      "alt": "ESP Sweatshirt in forest green with the mountain logo, worn, front"
+      "alt": "ESP Sweatshirt in forest green with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535360-forest-green-3.webp",
-      "alt": "ESP Sweatshirt in forest green with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Sweatshirt in forest green with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -1397,15 +1397,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535360-maroon-1.webp",
-      "alt": "ESP Sweatshirt in maroon with the mountain logo, front"
+      "alt": "ESP Sweatshirt in maroon with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535360-maroon-2.webp",
-      "alt": "ESP Sweatshirt in maroon with the mountain logo, worn, front"
+      "alt": "ESP Sweatshirt in maroon with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535360-maroon-3.webp",
-      "alt": "ESP Sweatshirt in maroon with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Sweatshirt in maroon with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    }
@@ -1604,29 +1604,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535394-1.webp",
-    "alt": "ESP Hoodie in black with the mountain logo, front"
+    "alt": "ESP Hoodie in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535394-2.webp",
-    "alt": "ESP Hoodie in black with the mountain logo, worn, front"
+    "alt": "ESP Hoodie in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535394-3.webp",
-    "alt": "ESP Hoodie in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Hoodie in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484535394-4.webp",
-    "alt": "ESP Hoodie in black with the mountain logo, back"
+    "alt": "ESP Hoodie in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535394-5.webp",
-    "alt": "ESP Hoodie in black with the mountain logo, left side"
+    "alt": "ESP Hoodie in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Pullover hoodie with a lined hood and drawcord",
    "50% cotton, 50% polyester, 271 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -1640,15 +1640,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535394-navy-1.webp",
-      "alt": "ESP Hoodie in navy with the mountain logo, front"
+      "alt": "ESP Hoodie in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535394-navy-2.webp",
-      "alt": "ESP Hoodie in navy with the mountain logo, worn, front"
+      "alt": "ESP Hoodie in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535394-navy-3.webp",
-      "alt": "ESP Hoodie in navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Hoodie in navy with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -1658,15 +1658,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535394-maroon-1.webp",
-      "alt": "ESP Hoodie in maroon with the mountain logo, front"
+      "alt": "ESP Hoodie in maroon with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535394-maroon-2.webp",
-      "alt": "ESP Hoodie in maroon with the mountain logo, worn, front"
+      "alt": "ESP Hoodie in maroon with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535394-maroon-3.webp",
-      "alt": "ESP Hoodie in maroon with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Hoodie in maroon with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    },
@@ -1676,15 +1676,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535394-dark-chocolate-1.webp",
-      "alt": "ESP Hoodie in dark chocolate with the mountain logo, front"
+      "alt": "ESP Hoodie in dark chocolate with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535394-dark-chocolate-2.webp",
-      "alt": "ESP Hoodie in dark chocolate with the mountain logo, worn, front"
+      "alt": "ESP Hoodie in dark chocolate with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535394-dark-chocolate-3.webp",
-      "alt": "ESP Hoodie in dark chocolate with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Hoodie in dark chocolate with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    }
@@ -1813,29 +1813,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534699-1.webp",
-    "alt": "ESP Premium Hoodie in black with the mountain logo, front"
+    "alt": "ESP Premium Hoodie in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534699-2.webp",
-    "alt": "ESP Premium Hoodie in black with the mountain logo, worn, front"
+    "alt": "ESP Premium Hoodie in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484534699-3.webp",
-    "alt": "ESP Premium Hoodie in black with the mountain logo, worn, back"
+    "alt": "ESP Premium Hoodie in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484534699-4.webp",
-    "alt": "ESP Premium Hoodie in black with the mountain logo, back"
+    "alt": "ESP Premium Hoodie in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484534699-5.webp",
-    "alt": "ESP Premium Hoodie in black with the mountain logo, left side"
+    "alt": "ESP Premium Hoodie in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Premium pullover hoodie with a front pouch pocket",
    "Cotton face, ring-spun cotton and polyester blend",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -1849,15 +1849,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484534699-navy-blazer-1.webp",
-      "alt": "ESP Premium Hoodie in navy blazer with the mountain logo, front"
+      "alt": "ESP Premium Hoodie in navy blazer with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484534699-navy-blazer-2.webp",
-      "alt": "ESP Premium Hoodie in navy blazer with the mountain logo, worn, front"
+      "alt": "ESP Premium Hoodie in navy blazer with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484534699-navy-blazer-3.webp",
-      "alt": "ESP Premium Hoodie in navy blazer with the mountain logo, worn, back"
+      "alt": "ESP Premium Hoodie in navy blazer with the Devonshire stag logo, worn, back"
      }
     ]
    },
@@ -1867,15 +1867,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484534699-charcoal-heather-1.webp",
-      "alt": "ESP Premium Hoodie in charcoal heather with the mountain logo, front"
+      "alt": "ESP Premium Hoodie in charcoal heather with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484534699-charcoal-heather-2.webp",
-      "alt": "ESP Premium Hoodie in charcoal heather with the mountain logo, worn, front"
+      "alt": "ESP Premium Hoodie in charcoal heather with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484534699-charcoal-heather-3.webp",
-      "alt": "ESP Premium Hoodie in charcoal heather with the mountain logo, worn, back"
+      "alt": "ESP Premium Hoodie in charcoal heather with the Devonshire stag logo, worn, back"
      }
     ]
    }
@@ -1928,29 +1928,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534647-1.webp",
-    "alt": "ESP Women's Hoodie in black with the mountain logo, front"
+    "alt": "ESP Women's Hoodie in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534647-2.webp",
-    "alt": "ESP Women's Hoodie in black with the mountain logo, worn, front"
+    "alt": "ESP Women's Hoodie in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484534647-3.webp",
-    "alt": "ESP Women's Hoodie in black with the mountain logo, worn, back"
+    "alt": "ESP Women's Hoodie in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484534647-4.webp",
-    "alt": "ESP Women's Hoodie in black with the mountain logo, back"
+    "alt": "ESP Women's Hoodie in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484534647-5.webp",
-    "alt": "ESP Women's Hoodie in black with the mountain logo, left side"
+    "alt": "ESP Women's Hoodie in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Women's hoodie, relaxed fit",
    "80% cotton, 20% recycled polyester, 319 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ]
  },
  {
@@ -2076,29 +2076,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535367-1.webp",
-    "alt": "ESP Zip Hoodie in black with the mountain logo, front"
+    "alt": "ESP Zip Hoodie in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535367-2.webp",
-    "alt": "ESP Zip Hoodie in black with the mountain logo, worn, front"
+    "alt": "ESP Zip Hoodie in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535367-3.webp",
-    "alt": "ESP Zip Hoodie in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Zip Hoodie in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484535367-4.webp",
-    "alt": "ESP Zip Hoodie in black with the mountain logo, back"
+    "alt": "ESP Zip Hoodie in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535367-5.webp",
-    "alt": "ESP Zip Hoodie in black with the mountain logo, left side"
+    "alt": "ESP Zip Hoodie in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Full-zip hoodie, fleece inside",
    "50% cotton, 50% polyester, 271 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -2112,15 +2112,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535367-navy-1.webp",
-      "alt": "ESP Zip Hoodie in navy with the mountain logo, front"
+      "alt": "ESP Zip Hoodie in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535367-navy-2.webp",
-      "alt": "ESP Zip Hoodie in navy with the mountain logo, worn, front"
+      "alt": "ESP Zip Hoodie in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535367-navy-3.webp",
-      "alt": "ESP Zip Hoodie in navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Zip Hoodie in navy with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    }
@@ -2172,17 +2172,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535676-1.webp",
-    "alt": "ESP Cuffed Beanie in black with the mountain logo, front"
+    "alt": "ESP Cuffed Beanie in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535676-2.webp",
-    "alt": "ESP Cuffed Beanie in black with the mountain logo, in use, front"
+    "alt": "ESP Cuffed Beanie in black with the Devonshire stag logo, in use, front"
    }
   ],
   "details": [
    "Cuffed knit beanie, 30 cm long",
    "100% acrylic",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ],
   "colors": [
    {
@@ -2196,11 +2196,11 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535676-brown-1.webp",
-      "alt": "ESP Cuffed Beanie in brown with the mountain logo, front"
+      "alt": "ESP Cuffed Beanie in brown with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535676-brown-2.webp",
-      "alt": "ESP Cuffed Beanie in brown with the mountain logo, in use, front"
+      "alt": "ESP Cuffed Beanie in brown with the Devonshire stag logo, in use, front"
      }
     ]
    },
@@ -2210,11 +2210,11 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535676-navy-1.webp",
-      "alt": "ESP Cuffed Beanie in navy with the mountain logo, front"
+      "alt": "ESP Cuffed Beanie in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535676-navy-2.webp",
-      "alt": "ESP Cuffed Beanie in navy with the mountain logo, in use, front"
+      "alt": "ESP Cuffed Beanie in navy with the Devonshire stag logo, in use, front"
      }
     ]
    },
@@ -2224,11 +2224,11 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535676-dark-grey-1.webp",
-      "alt": "ESP Cuffed Beanie in dark grey with the mountain logo, front"
+      "alt": "ESP Cuffed Beanie in dark grey with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535676-dark-grey-2.webp",
-      "alt": "ESP Cuffed Beanie in dark grey with the mountain logo, in use, front"
+      "alt": "ESP Cuffed Beanie in dark grey with the Devonshire stag logo, in use, front"
      }
     ]
    },
@@ -2238,11 +2238,11 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535676-olive-1.webp",
-      "alt": "ESP Cuffed Beanie in olive with the mountain logo, front"
+      "alt": "ESP Cuffed Beanie in olive with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535676-olive-2.webp",
-      "alt": "ESP Cuffed Beanie in olive with the mountain logo, in use, front"
+      "alt": "ESP Cuffed Beanie in olive with the Devonshire stag logo, in use, front"
      }
     ]
    }
@@ -2280,17 +2280,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535781-1.webp",
-    "alt": "ESP Pom-Pom Beanie in black with the mountain logo, front"
+    "alt": "ESP Pom-Pom Beanie in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535781-2.webp",
-    "alt": "ESP Pom-Pom Beanie in black with the mountain logo, worn, front"
+    "alt": "ESP Pom-Pom Beanie in black with the Devonshire stag logo, worn, front"
    }
   ],
   "details": [
    "Cuffed beanie with a pom-pom, double-layer knit",
    "100% soft-touch acrylic",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ],
   "colors": [
    {
@@ -2304,11 +2304,11 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535781-french-navy-1.webp",
-      "alt": "ESP Pom-Pom Beanie in french navy with the mountain logo, front"
+      "alt": "ESP Pom-Pom Beanie in french navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535781-french-navy-2.webp",
-      "alt": "ESP Pom-Pom Beanie in french navy with the mountain logo, worn, front"
+      "alt": "ESP Pom-Pom Beanie in french navy with the Devonshire stag logo, worn, front"
      }
     ]
    },
@@ -2318,11 +2318,11 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535781-burgundy-1.webp",
-      "alt": "ESP Pom-Pom Beanie in burgundy with the mountain logo, front"
+      "alt": "ESP Pom-Pom Beanie in burgundy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535781-burgundy-2.webp",
-      "alt": "ESP Pom-Pom Beanie in burgundy with the mountain logo, worn, front"
+      "alt": "ESP Pom-Pom Beanie in burgundy with the Devonshire stag logo, worn, front"
      }
     ]
    }
@@ -2345,21 +2345,21 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535744-1.webp",
-    "alt": "ESP Fisherman Beanie in black with the mountain logo, front"
+    "alt": "ESP Fisherman Beanie in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535744-2.webp",
-    "alt": "ESP Fisherman Beanie in black with the mountain logo, worn, front"
+    "alt": "ESP Fisherman Beanie in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535744-3.webp",
-    "alt": "ESP Fisherman Beanie in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Fisherman Beanie in black with the Devonshire stag logo, worn, three-quarter view"
    }
   ],
   "details": [
    "Fisherman beanie, wide ribbed knit, snug fit",
    "100% acrylic",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ]
  },
  {
@@ -2379,25 +2379,25 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535747-1.webp",
-    "alt": "ESP Visor in black with the mountain logo, front"
+    "alt": "ESP Visor in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535747-2.webp",
-    "alt": "ESP Visor in black with the mountain logo, in use, front"
+    "alt": "ESP Visor in black with the Devonshire stag logo, in use, front"
    },
    {
     "src": "/shop/pf/484535747-3.webp",
-    "alt": "ESP Visor in black with the mountain logo, back"
+    "alt": "ESP Visor in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535747-4.webp",
-    "alt": "ESP Visor in black with the mountain logo, three-quarter view"
+    "alt": "ESP Visor in black with the Devonshire stag logo, three-quarter view"
    }
   ],
   "details": [
    "Sports visor, low profile",
    "97% polyester, 3% elastane",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ]
  },
  {
@@ -2417,25 +2417,25 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534981-1.webp",
-    "alt": "ESP Trucker Cap in black with the mountain logo, front"
+    "alt": "ESP Trucker Cap in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534981-2.webp",
-    "alt": "ESP Trucker Cap in black with the mountain logo, worn, front"
+    "alt": "ESP Trucker Cap in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484534981-3.webp",
-    "alt": "ESP Trucker Cap in black with the mountain logo, back"
+    "alt": "ESP Trucker Cap in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484534981-4.webp",
-    "alt": "ESP Trucker Cap in black with the mountain logo, three-quarter view"
+    "alt": "ESP Trucker Cap in black with the Devonshire stag logo, three-quarter view"
    }
   ],
   "details": [
    "Trucker cap with a mesh back, mid profile",
    "Polyester and cotton",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ]
  },
  {
@@ -2477,29 +2477,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535816-1.webp",
-    "alt": "ESP Snapback in black with the mountain logo, left side"
+    "alt": "ESP Snapback in black with the Devonshire stag logo, left side"
    },
    {
     "src": "/shop/pf/484535816-2.webp",
-    "alt": "ESP Snapback in black with the mountain logo, worn, front"
+    "alt": "ESP Snapback in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535816-3.webp",
-    "alt": "ESP Snapback in black with the mountain logo, worn, back"
+    "alt": "ESP Snapback in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484535816-4.webp",
-    "alt": "ESP Snapback in black with the mountain logo, back"
+    "alt": "ESP Snapback in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535816-5.webp",
-    "alt": "ESP Snapback in black with the mountain logo, three-quarter view"
+    "alt": "ESP Snapback in black with the Devonshire stag logo, three-quarter view"
    }
   ],
   "details": [
    "Structured six-panel snapback, high profile",
    "Acrylic and wool blend",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ],
   "colors": [
    {
@@ -2513,15 +2513,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535816-dark-navy-1.webp",
-      "alt": "ESP Snapback in dark navy with the mountain logo, left side"
+      "alt": "ESP Snapback in dark navy with the Devonshire stag logo, left side"
      },
      {
       "src": "/shop/pf/484535816-dark-navy-2.webp",
-      "alt": "ESP Snapback in dark navy with the mountain logo, worn, front"
+      "alt": "ESP Snapback in dark navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535816-dark-navy-3.webp",
-      "alt": "ESP Snapback in dark navy with the mountain logo, worn, back"
+      "alt": "ESP Snapback in dark navy with the Devonshire stag logo, worn, back"
      }
     ]
    },
@@ -2531,15 +2531,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535816-navy-1.webp",
-      "alt": "ESP Snapback in navy with the mountain logo, left side"
+      "alt": "ESP Snapback in navy with the Devonshire stag logo, left side"
      },
      {
       "src": "/shop/pf/484535816-navy-2.webp",
-      "alt": "ESP Snapback in navy with the mountain logo, worn, front"
+      "alt": "ESP Snapback in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535816-navy-3.webp",
-      "alt": "ESP Snapback in navy with the mountain logo, worn, back"
+      "alt": "ESP Snapback in navy with the Devonshire stag logo, worn, back"
      }
     ]
    },
@@ -2549,15 +2549,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535816-spruce-1.webp",
-      "alt": "ESP Snapback in spruce with the mountain logo, left side"
+      "alt": "ESP Snapback in spruce with the Devonshire stag logo, left side"
      },
      {
       "src": "/shop/pf/484535816-spruce-2.webp",
-      "alt": "ESP Snapback in spruce with the mountain logo, worn, front"
+      "alt": "ESP Snapback in spruce with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535816-spruce-3.webp",
-      "alt": "ESP Snapback in spruce with the mountain logo, worn, back"
+      "alt": "ESP Snapback in spruce with the Devonshire stag logo, worn, back"
      }
     ]
    }
@@ -2602,29 +2602,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535849-1.webp",
-    "alt": "ESP Structured Cap in black with the mountain logo, left side"
+    "alt": "ESP Structured Cap in black with the Devonshire stag logo, left side"
    },
    {
     "src": "/shop/pf/484535849-2.webp",
-    "alt": "ESP Structured Cap in black with the mountain logo, worn, left side"
+    "alt": "ESP Structured Cap in black with the Devonshire stag logo, worn, left side"
    },
    {
     "src": "/shop/pf/484535849-3.webp",
-    "alt": "ESP Structured Cap in black with the mountain logo, worn, front"
+    "alt": "ESP Structured Cap in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535849-4.webp",
-    "alt": "ESP Structured Cap in black with the mountain logo, back"
+    "alt": "ESP Structured Cap in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535849-5.webp",
-    "alt": "ESP Structured Cap in black with the mountain logo, three-quarter view"
+    "alt": "ESP Structured Cap in black with the Devonshire stag logo, three-quarter view"
    }
   ],
   "details": [
    "Structured six-panel cap, mid profile",
    "Polyester and cotton twill with a little stretch",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ],
   "colors": [
    {
@@ -2638,15 +2638,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535849-dark-navy-1.webp",
-      "alt": "ESP Structured Cap in dark navy with the mountain logo, left side"
+      "alt": "ESP Structured Cap in dark navy with the Devonshire stag logo, left side"
      },
      {
       "src": "/shop/pf/484535849-dark-navy-2.webp",
-      "alt": "ESP Structured Cap in dark navy with the mountain logo, worn, left side"
+      "alt": "ESP Structured Cap in dark navy with the Devonshire stag logo, worn, left side"
      },
      {
       "src": "/shop/pf/484535849-dark-navy-3.webp",
-      "alt": "ESP Structured Cap in dark navy with the mountain logo, worn, front"
+      "alt": "ESP Structured Cap in dark navy with the Devonshire stag logo, worn, front"
      }
     ]
    }
@@ -2669,25 +2669,25 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535801-1.webp",
-    "alt": "ESP Low Profile Cap in black with the mountain logo, left side"
+    "alt": "ESP Low Profile Cap in black with the Devonshire stag logo, left side"
    },
    {
     "src": "/shop/pf/484535801-2.webp",
-    "alt": "ESP Low Profile Cap in black with the mountain logo, back"
+    "alt": "ESP Low Profile Cap in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535801-3.webp",
-    "alt": "ESP Low Profile Cap in black with the mountain logo, three-quarter view"
+    "alt": "ESP Low Profile Cap in black with the Devonshire stag logo, three-quarter view"
    },
    {
     "src": "/shop/pf/484535801-4.webp",
-    "alt": "ESP Low Profile Cap in black with the mountain logo, front"
+    "alt": "ESP Low Profile Cap in black with the Devonshire stag logo, front"
    }
   ],
   "details": [
    "Unstructured six-panel cap, low profile, hook-and-loop strap",
    "100% cotton twill",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ]
  },
  {
@@ -2722,29 +2722,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535845-1.webp",
-    "alt": "ESP Dad Hat in black with the mountain logo, left side"
+    "alt": "ESP Dad Hat in black with the Devonshire stag logo, left side"
    },
    {
     "src": "/shop/pf/484535845-2.webp",
-    "alt": "ESP Dad Hat in black with the mountain logo, worn, front"
+    "alt": "ESP Dad Hat in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535845-3.webp",
-    "alt": "ESP Dad Hat in black with the mountain logo, worn, back"
+    "alt": "ESP Dad Hat in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484535845-4.webp",
-    "alt": "ESP Dad Hat in black with the mountain logo, back"
+    "alt": "ESP Dad Hat in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484535845-5.webp",
-    "alt": "ESP Dad Hat in black with the mountain logo, three-quarter view"
+    "alt": "ESP Dad Hat in black with the Devonshire stag logo, three-quarter view"
    }
   ],
   "details": [
    "Unstructured six-panel cap, low profile, adjustable strap",
    "100% cotton chino twill",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ],
   "colors": [
    {
@@ -2758,15 +2758,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535845-navy-1.webp",
-      "alt": "ESP Dad Hat in navy with the mountain logo, left side"
+      "alt": "ESP Dad Hat in navy with the Devonshire stag logo, left side"
      },
      {
       "src": "/shop/pf/484535845-navy-2.webp",
-      "alt": "ESP Dad Hat in navy with the mountain logo, worn, front"
+      "alt": "ESP Dad Hat in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535845-navy-3.webp",
-      "alt": "ESP Dad Hat in navy with the mountain logo, worn, back"
+      "alt": "ESP Dad Hat in navy with the Devonshire stag logo, worn, back"
      }
     ]
    },
@@ -2776,15 +2776,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535845-dark-grey-1.webp",
-      "alt": "ESP Dad Hat in dark grey with the mountain logo, left side"
+      "alt": "ESP Dad Hat in dark grey with the Devonshire stag logo, left side"
      },
      {
       "src": "/shop/pf/484535845-dark-grey-2.webp",
-      "alt": "ESP Dad Hat in dark grey with the mountain logo, worn, front"
+      "alt": "ESP Dad Hat in dark grey with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535845-dark-grey-3.webp",
-      "alt": "ESP Dad Hat in dark grey with the mountain logo, worn, back"
+      "alt": "ESP Dad Hat in dark grey with the Devonshire stag logo, worn, back"
      }
     ]
    }
@@ -2815,21 +2815,21 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535771-1.webp",
-    "alt": "ESP Bucket Hat in black with the mountain logo, front"
+    "alt": "ESP Bucket Hat in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535771-2.webp",
-    "alt": "ESP Bucket Hat in black with the mountain logo, worn, front"
+    "alt": "ESP Bucket Hat in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535771-3.webp",
-    "alt": "ESP Bucket Hat in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Bucket Hat in black with the Devonshire stag logo, worn, three-quarter view"
    }
   ],
   "details": [
    "Bucket hat, mid profile",
    "98% cotton, 2% elastane",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ],
   "colors": [
    {
@@ -2843,15 +2843,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535771-navy-1.webp",
-      "alt": "ESP Bucket Hat in navy with the mountain logo, front"
+      "alt": "ESP Bucket Hat in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535771-navy-2.webp",
-      "alt": "ESP Bucket Hat in navy with the mountain logo, worn, front"
+      "alt": "ESP Bucket Hat in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535771-navy-3.webp",
-      "alt": "ESP Bucket Hat in navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Bucket Hat in navy with the Devonshire stag logo, worn, three-quarter view"
      }
     ]
    }
@@ -2938,25 +2938,25 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534578-1.webp",
-    "alt": "ESP Kids Tee in black with the mountain logo, front"
+    "alt": "ESP Kids Tee in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534578-2.webp",
-    "alt": "ESP Kids Tee in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Kids Tee in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484534578-3.webp",
-    "alt": "ESP Kids Tee in black with the mountain logo, worn, back"
+    "alt": "ESP Kids Tee in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484534578-4.webp",
-    "alt": "ESP Kids Tee in black with the mountain logo, back"
+    "alt": "ESP Kids Tee in black with the Devonshire stag logo, back"
    }
   ],
   "details": [
    "Children's T-shirt",
    "100% cotton, 180 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -2970,15 +2970,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484534578-navy-1.webp",
-      "alt": "ESP Kids Tee in navy with the mountain logo, front"
+      "alt": "ESP Kids Tee in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484534578-navy-2.webp",
-      "alt": "ESP Kids Tee in navy with the mountain logo, worn, three-quarter view"
+      "alt": "ESP Kids Tee in navy with the Devonshire stag logo, worn, three-quarter view"
      },
      {
       "src": "/shop/pf/484534578-navy-3.webp",
-      "alt": "ESP Kids Tee in navy with the mountain logo, worn, back"
+      "alt": "ESP Kids Tee in navy with the Devonshire stag logo, worn, back"
      }
     ]
    }
@@ -3025,25 +3025,25 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534566-1.webp",
-    "alt": "ESP Kids Hoodie in black with the mountain logo, front"
+    "alt": "ESP Kids Hoodie in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534566-2.webp",
-    "alt": "ESP Kids Hoodie in black with the mountain logo, worn, three-quarter view"
+    "alt": "ESP Kids Hoodie in black with the Devonshire stag logo, worn, three-quarter view"
    },
    {
     "src": "/shop/pf/484534566-3.webp",
-    "alt": "ESP Kids Hoodie in black with the mountain logo, worn, back"
+    "alt": "ESP Kids Hoodie in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484534566-4.webp",
-    "alt": "ESP Kids Hoodie in black with the mountain logo, back"
+    "alt": "ESP Kids Hoodie in black with the Devonshire stag logo, back"
    }
   ],
   "details": [
    "Children's hoodie",
    "50% cotton, 50% polyester, 271 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ]
  },
  {
@@ -3062,17 +3062,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534315-1.webp",
-    "alt": "ESP Tote Bag in black with the mountain logo, front"
+    "alt": "ESP Tote Bag in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534315-2.webp",
-    "alt": "ESP Tote Bag in black with the mountain logo, worn, front"
+    "alt": "ESP Tote Bag in black with the Devonshire stag logo, worn, front"
    }
   ],
   "details": [
    "Everyday tote bag, about 41 × 36 × 13 cm",
    "100% organic cotton twill",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ]
  },
  {
@@ -3091,13 +3091,13 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484536929-1.webp",
-    "alt": "ESP Crossbody Bag in black with the mountain logo, front"
+    "alt": "ESP Crossbody Bag in black with the Devonshire stag logo, front"
    }
   ],
   "details": [
    "Crossbody bag, about 45 × 22 × 12 cm, 12 litres",
    "100% recycled polyester, water-repellent",
-   "Embroidered mountain logo"
+   "Embroidered Devonshire stag logo"
   ]
  },
  {
@@ -3122,17 +3122,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534335-1.webp",
-    "alt": "ESP Bum Bag in black with the mountain logo, front"
+    "alt": "ESP Bum Bag in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534335-2.webp",
-    "alt": "ESP Bum Bag in black with the mountain logo, worn, front"
+    "alt": "ESP Bum Bag in black with the Devonshire stag logo, worn, front"
    }
   ],
   "details": [
    "Bum bag, about 33 × 16 cm, 1.4 litres, adjustable strap",
    "100% polyester",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  },
  {
@@ -3151,29 +3151,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534986-1.webp",
-    "alt": "ESP Utility Backpack in black with the mountain logo, front"
+    "alt": "ESP Utility Backpack in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534986-2.webp",
-    "alt": "ESP Utility Backpack in black with the mountain logo, worn, front"
+    "alt": "ESP Utility Backpack in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484534986-3.webp",
-    "alt": "ESP Utility Backpack in black with the mountain logo, worn, back"
+    "alt": "ESP Utility Backpack in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484534986-4.webp",
-    "alt": "ESP Utility Backpack in black with the mountain logo, back"
+    "alt": "ESP Utility Backpack in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484534986-5.webp",
-    "alt": "ESP Utility Backpack in black with the mountain logo, three-quarter view"
+    "alt": "ESP Utility Backpack in black with the Devonshire stag logo, three-quarter view"
    }
   ],
   "details": [
    "Utility backpack, 16 litres, holds up to 5 kg",
    "100% polyester, 330 g/m²",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  },
  {
@@ -3192,17 +3192,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534334-1.webp",
-    "alt": "ESP Gym Bag in black with the mountain logo, front"
+    "alt": "ESP Gym Bag in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534334-2.webp",
-    "alt": "ESP Gym Bag in black with the mountain logo, in use, three-quarter view"
+    "alt": "ESP Gym Bag in black with the Devonshire stag logo, in use, three-quarter view"
    }
   ],
   "details": [
    "Gym bag, 30 litres, water-resistant",
    "100% polyester",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  },
  {
@@ -3239,21 +3239,21 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534990-1.webp",
-    "alt": "ESP Sticker in black with the mountain logo, front"
+    "alt": "ESP Sticker in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534990-2.webp",
-    "alt": "ESP Sticker in black with the mountain logo, in use"
+    "alt": "ESP Sticker in black with the Devonshire stag logo, in use"
    },
    {
     "src": "/shop/pf/484534990-3.webp",
-    "alt": "ESP Sticker in black with the mountain logo, in use"
+    "alt": "ESP Sticker in black with the Devonshire stag logo, in use"
    }
   ],
   "details": [
    "Kiss-cut vinyl sticker",
    "Durable, opaque vinyl that goes on without bubbles",
-   "Mountain logo"
+   "Devonshire stag logo"
   ]
  },
  {
@@ -3296,17 +3296,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534422-1.webp",
-    "alt": "ESP Embroidered Patch in black with the mountain logo, front"
+    "alt": "ESP Embroidered Patch in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534422-2.webp",
-    "alt": "ESP Embroidered Patch in black with the mountain logo, in use, front"
+    "alt": "ESP Embroidered Patch in black with the Devonshire stag logo, in use, front"
    }
   ],
   "details": [
    "Embroidered patch, iron-on or sew-on",
    "Cotton and polyester",
-   "Mountain logo"
+   "Devonshire stag logo"
   ]
  },
  {
@@ -3331,21 +3331,21 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534381-1.webp",
-    "alt": "ESP Mug in black with the mountain logo, front"
+    "alt": "ESP Mug in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534381-2.webp",
-    "alt": "ESP Mug in black with the mountain logo, in use, handle on the right"
+    "alt": "ESP Mug in black with the Devonshire stag logo, in use, handle on the right"
    },
    {
     "src": "/shop/pf/484534381-3.webp",
-    "alt": "ESP Mug in black with the mountain logo, handle on the right"
+    "alt": "ESP Mug in black with the Devonshire stag logo, handle on the right"
    }
   ],
   "details": [
    "Glossy mug",
    "Black ceramic",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  },
  {
@@ -3706,17 +3706,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534359-1.webp",
-    "alt": "ESP iPhone Tough Case in black with the mountain logo, front"
+    "alt": "ESP iPhone Tough Case in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534359-2.webp",
-    "alt": "ESP iPhone Tough Case in black with the mountain logo, showing the case's layers"
+    "alt": "ESP iPhone Tough Case in black with the Devonshire stag logo, showing the case's layers"
    }
   ],
   "details": [
    "Dual-layer tough phone case for iPhone",
    "Polycarbonate shell with a flexible inner liner",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  },
  {
@@ -4005,17 +4005,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534364-1.webp",
-    "alt": "ESP Samsung Tough Case in black with the mountain logo, front"
+    "alt": "ESP Samsung Tough Case in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534364-2.webp",
-    "alt": "ESP Samsung Tough Case in black with the mountain logo, showing the case's layers"
+    "alt": "ESP Samsung Tough Case in black with the Devonshire stag logo, showing the case's layers"
    }
   ],
   "details": [
    "Dual-layer tough phone case for Samsung Galaxy",
    "Polycarbonate shell with a flexible inner liner, works with wireless charging",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  },
  {
@@ -4133,25 +4133,25 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484535343-1.webp",
-    "alt": "ESP Windbreaker in black with the mountain logo, front"
+    "alt": "ESP Windbreaker in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484535343-2.webp",
-    "alt": "ESP Windbreaker in black with the mountain logo, worn, front"
+    "alt": "ESP Windbreaker in black with the Devonshire stag logo, worn, front"
    },
    {
     "src": "/shop/pf/484535343-3.webp",
-    "alt": "ESP Windbreaker in black with the mountain logo, worn, back"
+    "alt": "ESP Windbreaker in black with the Devonshire stag logo, worn, back"
    },
    {
     "src": "/shop/pf/484535343-4.webp",
-    "alt": "ESP Windbreaker in black with the mountain logo, back"
+    "alt": "ESP Windbreaker in black with the Devonshire stag logo, back"
    }
   ],
   "details": [
    "Water-repellent windbreaker with a hood, regular fit",
    "100% polyamide, 202 g/m²",
-   "Embroidered mountain logo on the left chest"
+   "Embroidered Devonshire stag logo on the left chest"
   ],
   "colors": [
    {
@@ -4165,15 +4165,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535343-navy-1.webp",
-      "alt": "ESP Windbreaker in navy with the mountain logo, front"
+      "alt": "ESP Windbreaker in navy with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535343-navy-2.webp",
-      "alt": "ESP Windbreaker in navy with the mountain logo, worn, front"
+      "alt": "ESP Windbreaker in navy with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535343-navy-3.webp",
-      "alt": "ESP Windbreaker in navy with the mountain logo, worn, back"
+      "alt": "ESP Windbreaker in navy with the Devonshire stag logo, worn, back"
      }
     ]
    },
@@ -4183,15 +4183,15 @@ export const merch: Merch[] = [
     "gallery": [
      {
       "src": "/shop/pf/484535343-forest-green-1.webp",
-      "alt": "ESP Windbreaker in forest green with the mountain logo, front"
+      "alt": "ESP Windbreaker in forest green with the Devonshire stag logo, front"
      },
      {
       "src": "/shop/pf/484535343-forest-green-2.webp",
-      "alt": "ESP Windbreaker in forest green with the mountain logo, worn, front"
+      "alt": "ESP Windbreaker in forest green with the Devonshire stag logo, worn, front"
      },
      {
       "src": "/shop/pf/484535343-forest-green-3.webp",
-      "alt": "ESP Windbreaker in forest green with the mountain logo, worn, back"
+      "alt": "ESP Windbreaker in forest green with the Devonshire stag logo, worn, back"
      }
     ]
    }
@@ -4213,29 +4213,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534418-1.webp",
-    "alt": "ESP Water Bottle in black with the mountain logo, front"
+    "alt": "ESP Water Bottle in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534418-2.webp",
-    "alt": "ESP Water Bottle in black with the mountain logo, in use, front"
+    "alt": "ESP Water Bottle in black with the Devonshire stag logo, in use, front"
    },
    {
     "src": "/shop/pf/484534418-3.webp",
-    "alt": "ESP Water Bottle in black with the mountain logo, in use, back"
+    "alt": "ESP Water Bottle in black with the Devonshire stag logo, in use, back"
    },
    {
     "src": "/shop/pf/484534418-4.webp",
-    "alt": "ESP Water Bottle in black with the mountain logo, back"
+    "alt": "ESP Water Bottle in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484534418-5.webp",
-    "alt": "ESP Water Bottle in black with the mountain logo, left side"
+    "alt": "ESP Water Bottle in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Insulated water bottle, 500 ml",
    "Stainless steel, vacuum-insulated",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  },
  {
@@ -4254,29 +4254,29 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534414-1.webp",
-    "alt": "ESP Tumbler in black with the mountain logo, front"
+    "alt": "ESP Tumbler in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534414-2.webp",
-    "alt": "ESP Tumbler in black with the mountain logo, in use, front"
+    "alt": "ESP Tumbler in black with the Devonshire stag logo, in use, front"
    },
    {
     "src": "/shop/pf/484534414-3.webp",
-    "alt": "ESP Tumbler in black with the mountain logo, in use, back"
+    "alt": "ESP Tumbler in black with the Devonshire stag logo, in use, back"
    },
    {
     "src": "/shop/pf/484534414-4.webp",
-    "alt": "ESP Tumbler in black with the mountain logo, back"
+    "alt": "ESP Tumbler in black with the Devonshire stag logo, back"
    },
    {
     "src": "/shop/pf/484534414-5.webp",
-    "alt": "ESP Tumbler in black with the mountain logo, left side"
+    "alt": "ESP Tumbler in black with the Devonshire stag logo, left side"
    }
   ],
   "details": [
    "Insulated tumbler, 600 ml, with lid and straw",
    "Stainless steel",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  },
  {
@@ -4301,17 +4301,17 @@ export const merch: Merch[] = [
   "gallery": [
    {
     "src": "/shop/pf/484534340-1.webp",
-    "alt": "ESP Beach Towel in black with the mountain logo, front"
+    "alt": "ESP Beach Towel in black with the Devonshire stag logo, front"
    },
    {
     "src": "/shop/pf/484534340-2.webp",
-    "alt": "ESP Beach Towel in black with the mountain logo, in use"
+    "alt": "ESP Beach Towel in black with the Devonshire stag logo, in use"
    }
   ],
   "details": [
    "Beach towel",
    "Cotton and polyester blend, soft on one side",
-   "Printed mountain logo"
+   "Printed Devonshire stag logo"
   ]
  }
 ];

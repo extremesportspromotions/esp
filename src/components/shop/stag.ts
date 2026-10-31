@@ -4,357 +4,39 @@ import type { Merch, MerchPhoto } from "./merch";
  * Devonshire stag mockups (31 Oct 2026) for partner-made products, shown first for the matching colour
  * until model photos exist. Files: public/shop/pf-stag/<file>.webp. Caps show the logo on the front; the visor shows the stag only.
  */
-const STAG: Record<number, [colour: string, file: string][]> = {
- "484536929": [
-  [
-   "Black",
-   "crossbody-bag-black"
-  ],
-  [
-   "Fresh Pink",
-   "crossbody-bag-fresh-pink"
-  ]
- ],
- "484535849": [
-  [
-   "Dark Navy",
-   "structured-cap-dark-navy"
-  ],
-  [
-   "White",
-   "structured-cap-white"
-  ]
- ],
- "484535845": [
-  [
-   "Black",
-   "dad-hat-black"
-  ],
-  [
-   "White",
-   "dad-hat-white"
-  ]
- ],
- "484535816": [
-  [
-   "Dark Navy",
-   "snapback-dark-navy"
-  ],
-  [
-   "Heather Grey",
-   "snapback-heather-grey"
-  ]
- ],
- "484535801": [
-  [
-   "Black",
-   "low-profile-cap-black"
-  ]
- ],
- "484535781": [
-  [
-   "Black",
-   "pom-pom-beanie-black"
-  ],
-  [
-   "White",
-   "pom-pom-beanie-white"
-  ]
- ],
- "484535771": [
-  [
-   "Black",
-   "bucket-hat-black"
-  ],
-  [
-   "White",
-   "bucket-hat-white"
-  ]
- ],
- "484535747": [
-  [
-   "Black",
-   "visor-black"
-  ]
- ],
- "484535744": [
-  [
-   "Black",
-   "fisherman-beanie-black"
-  ],
-  [
-   "Ecru",
-   "fisherman-beanie-ecru"
-  ]
- ],
- "484535676": [
-  [
-   "Black",
-   "cuffed-beanie-black"
-  ],
-  [
-   "White",
-   "cuffed-beanie-white"
-  ]
- ],
- "484535459": [
-  [
-   "Black",
-   "polo-black"
-  ],
-  [
-   "White",
-   "polo-white"
-  ]
- ],
- "484535439": [
-  [
-   "Black Heather",
-   "tee-black-heather"
-  ],
-  [
-   "White",
-   "tee-white"
-  ]
- ],
- "484535407": [
-  [
-   "Black",
-   "long-sleeve-tee-black"
-  ],
-  [
-   "Ecru",
-   "long-sleeve-tee-ecru"
-  ]
- ],
- "484535394": [
-  [
-   "Black",
-   "hoodie-black"
-  ],
-  [
-   "White",
-   "hoodie-white"
-  ]
- ],
- "484535367": [
-  [
-   "Black",
-   "zip-hoodie-black"
-  ],
-  [
-   "White",
-   "zip-hoodie-white"
-  ]
- ],
- "484535360": [
-  [
-   "Black",
-   "sweatshirt-black"
-  ],
-  [
-   "White",
-   "sweatshirt-white"
-  ]
- ],
- "484535343": [
-  [
-   "Black",
-   "windbreaker-black"
-  ]
- ],
- "484534990": [
-  [
-   "White",
-   "sticker-white"
-  ]
- ],
- "484534986": [
-  [
-   "Black",
-   "utility-backpack-black"
-  ]
- ],
- "484534981": [
-  [
-   "Black",
-   "trucker-cap-black"
-  ]
- ],
- "484534703": [
-  [
-   "Faded Black",
-   "oversized-faded-tee-faded-black"
-  ],
-  [
-   "Faded White",
-   "oversized-faded-tee-faded-white"
-  ]
- ],
- "484534699": [
-  [
-   "Black",
-   "premium-hoodie-black"
-  ],
-  [
-   "White",
-   "premium-hoodie-white"
-  ]
- ],
- "484534678": [
-  [
-   "Navy",
-   "women-s-relaxed-tee-navy"
-  ],
-  [
-   "White",
-   "women-s-relaxed-tee-white"
-  ]
- ],
- "484534647": [
-  [
-   "Black",
-   "women-s-hoodie-black"
-  ],
-  [
-   "Athletic Heather",
-   "women-s-hoodie-athletic-heather"
-  ]
- ],
- "484534615": [
-  [
-   "Black",
-   "women-s-polo-black"
-  ],
-  [
-   "White",
-   "women-s-polo-white"
-  ]
- ],
- "484534578": [
-  [
-   "Black",
-   "kids-tee-black"
-  ],
-  [
-   "White",
-   "kids-tee-white"
-  ]
- ],
- "484534566": [
-  [
-   "Black",
-   "kids-hoodie-black"
-  ],
-  [
-   "White",
-   "kids-hoodie-white"
-  ]
- ],
- "484534422": [
-  [
-   "Black",
-   "embroidered-patch-black"
-  ],
-  [
-   "White",
-   "embroidered-patch-white"
-  ]
- ],
- "484534418": [
-  [
-   "Black",
-   "water-bottle-black"
-  ],
-  [
-   "White",
-   "water-bottle-white"
-  ]
- ],
- "484534414": [
-  [
-   "Black",
-   "tumbler-black"
-  ],
-  [
-   "White",
-   "tumbler-white"
-  ]
- ],
- "484534381": [
-  [
-   "Black",
-   "mug-black"
-  ]
- ],
- "484534364": [
-  [
-   "Glossy",
-   "samsung-tough-case-glossy"
-  ]
- ],
- "484534359": [
-  [
-   "Glossy",
-   "iphone-tough-case-glossy"
-  ]
- ],
- "484534340": [
-  [
-   "White",
-   "beach-towel-white"
-  ]
- ],
- "484534335": [
-  [
-   "White",
-   "bum-bag-white"
-  ]
- ],
- "484534334": [
-  [
-   "White",
-   "gym-bag-white"
-  ]
- ],
- "484534315": [
-  [
-   "Black",
-   "tote-bag-black"
-  ],
-  [
-   "Oyster",
-   "tote-bag-oyster"
-  ]
- ]
-};
+/** Stag mockup files available (public/shop/pf-stag/<slug(product)>-<slug(colour)>.webp). */
+const FILES = new Set<string>(["beach-towel-white", "bucket-hat-black", "bucket-hat-khaki", "bucket-hat-navy", "bucket-hat-white", "bum-bag-white", "crossbody-bag-black", "crossbody-bag-fresh-green", "crossbody-bag-fresh-pink", "crossbody-bag-natural-stone", "cuffed-beanie-baby-pink", "cuffed-beanie-black", "cuffed-beanie-brown", "cuffed-beanie-dark-grey", "cuffed-beanie-gold", "cuffed-beanie-heather-grey", "cuffed-beanie-navy", "cuffed-beanie-olive", "cuffed-beanie-white", "dad-hat-black", "dad-hat-dark-grey", "dad-hat-khaki", "dad-hat-light-blue", "dad-hat-navy", "dad-hat-pink", "dad-hat-stone", "dad-hat-white", "embroidered-patch-black", "embroidered-patch-white", "fisherman-beanie-athletic-heather", "fisherman-beanie-black", "fisherman-beanie-ecru", "fisherman-beanie-gold", "fisherman-beanie-petrol-blue", "gym-bag-white", "hoodie-black", "hoodie-dark-chocolate", "hoodie-light-blue", "hoodie-light-pink", "hoodie-maroon", "hoodie-navy", "hoodie-sport-grey", "hoodie-white", "iphone-tough-case-glossy", "iphone-tough-case-matte", "kids-hoodie-black", "kids-hoodie-navy", "kids-hoodie-white", "kids-tee-azalea", "kids-tee-black", "kids-tee-gold", "kids-tee-natural", "kids-tee-navy", "kids-tee-sport-grey", "kids-tee-white", "long-sleeve-tee-black", "long-sleeve-tee-butter", "long-sleeve-tee-ecru", "long-sleeve-tee-midnight-blue", "low-profile-cap-black", "low-profile-cap-dark-green", "low-profile-cap-dark-navy", "low-profile-cap-khaki", "mug-black", "oversized-faded-tee-faded-black", "oversized-faded-tee-faded-bone", "oversized-faded-tee-faded-eucalyptus", "oversized-faded-tee-faded-khaki", "oversized-faded-tee-faded-white", "polo-black", "polo-navy", "polo-sport-grey", "polo-white", "pom-pom-beanie-black", "pom-pom-beanie-burgundy", "pom-pom-beanie-french-navy", "pom-pom-beanie-white", "premium-hoodie-black", "premium-hoodie-carbon-grey", "premium-hoodie-charcoal-heather", "premium-hoodie-navy-blazer", "premium-hoodie-white", "samsung-tough-case-glossy", "samsung-tough-case-matte", "snapback-black", "snapback-dark-navy", "snapback-heather-grey", "snapback-navy", "snapback-silver", "snapback-spruce", "sticker-white", "structured-cap-black", "structured-cap-dark-navy", "structured-cap-white", "sweatshirt-black", "sweatshirt-forest-green", "sweatshirt-light-blue", "sweatshirt-light-pink", "sweatshirt-maroon", "sweatshirt-navy", "sweatshirt-sand", "sweatshirt-sport-grey", "sweatshirt-white", "tee-ash", "tee-black", "tee-black-heather", "tee-brown", "tee-dark-grey-heather", "tee-forest", "tee-heather-dust", "tee-heather-midnight-navy", "tee-heather-mint", "tee-heather-prism-ice-blue", "tee-maroon", "tee-navy", "tee-ocean-blue", "tee-silver", "tee-soft-cream", "tee-white", "tee-yellow", "tote-bag-black", "tote-bag-oyster", "trucker-cap-black", "tumbler-black", "tumbler-white", "utility-backpack-black", "visor-black", "visor-navy", "water-bottle-black", "water-bottle-white", "windbreaker-black", "windbreaker-forest-green", "windbreaker-navy", "women-s-hoodie-athletic-heather", "women-s-hoodie-black", "women-s-hoodie-charity-pink", "women-s-hoodie-hazy-pink", "women-s-polo-black", "women-s-polo-navy", "women-s-polo-sport-grey", "women-s-polo-white", "women-s-relaxed-tee-black", "women-s-relaxed-tee-dark-grey-heather", "women-s-relaxed-tee-navy", "women-s-relaxed-tee-pink", "women-s-relaxed-tee-white", "zip-hoodie-black", "zip-hoodie-carolina-blue", "zip-hoodie-navy", "zip-hoodie-sport-grey", "zip-hoodie-white"]);
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-const fix = (s: string) => s.replace(/(silver )?mountain logo/gi, (_m, sil) => `${sil ? "silver " : ""}Devonshire stag logo`);
-const fixPhotos = (g?: MerchPhoto[]) => g?.map((x) => ({ ...x, alt: fix(x.alt) }));
 
-/** Adds stag mockups, Devonshire stag wording, and varies the colour each card opens on (alternate cards open on the second mocked colour). */
+/** Colours hidden because no stag mockup could be made yet ("pid:Colour"). */
+export const HIDDEN: string[] = [];
+
+/**
+ * Only the stag mockup is shown for each colour (old photos removed); colours without one are hidden.
+ * Alternate cards open on their second colour so the grid doesn't all start on the same one.
+ */
 export function withStag(list: Merch[]): Merch[] {
   let n = 0;
   return list.map((p) => {
-    const mocks = STAG[p.pid];
-    const name = p.name;
-    let gallery = fixPhotos(p.gallery);
-    let colors = p.colors?.map((c, i) => ({ ...c, gallery: fixPhotos(i === 0 && !c.gallery.length ? p.gallery : c.gallery) ?? [] }));
-    const details = p.details?.map(fix);
-    if (!mocks) return { ...p, gallery, colors, details };
-    const mk = (colour: string, file: string): MerchPhoto => ({ src: `/shop/pf-stag/${file}.webp`, alt: `ESP ${name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`, view: "front", note: "Mockup, colour may vary slightly" });
-    if (colors?.length) {
-      colors = colors.map((c) => {
-        const m = mocks.find(([col]) => col.toLowerCase() === c.name.toLowerCase());
-        return m ? { ...c, gallery: [mk(m[0], m[1]), ...c.gallery] } : c;
-      });
-      const mocked = colors.filter((c) => mocks.some(([col]) => col.toLowerCase() === c.name.toLowerCase()));
-      const pick = mocked.length > 1 && n++ % 2 === 1 ? mocked[1] : mocked[0];
-      if (pick) colors = [pick, ...colors.filter((c) => c !== pick)];
-      gallery = colors[0].gallery;
-    } else {
-      gallery = [mk(mocks[0][0], mocks[0][1]), ...(gallery ?? [])];
+    const mk = (colour: string): MerchPhoto[] => {
+      const f = `${slug(p.name)}-${slug(colour)}`;
+      return FILES.has(f) ? [{ src: `/shop/pf-stag/${f}.webp`, alt: `ESP ${p.name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`, view: "front", note: "Mockup, colour may vary slightly" }] : [];
+    };
+    const details = p.details;
+    if (!p.colors?.length) {
+      const one: Record<string, string> = { "oversized-faded-tee": "faded-black", "bum-bag": "white", "gym-bag": "white", sticker: "white", "beach-towel": "white", "iphone-tough-case": "glossy", "samsung-tough-case": "glossy" };
+      const f = `${slug(p.name)}-${one[slug(p.name)] ?? "black"}`;
+      const own = FILES.has(f) ? f : undefined;
+      const gallery: MerchPhoto[] = own ? [{ src: `/shop/pf-stag/${own}.webp`, alt: `ESP ${p.name} with the Devonshire stag logo`, view: "front", note: "Mockup, colour may vary slightly" }] : [];
+      if (!own) HIDDEN.push(`${p.pid}:`);
+      return { ...p, img: gallery[0]?.src ?? p.img, gallery, details };
     }
-    return { ...p, img: gallery?.[0]?.src ?? p.img, gallery, colors, details };
+    let colors = p.colors.map((c) => ({ ...c, gallery: mk(c.name) }));
+    for (const c of colors) if (!c.gallery.length) HIDDEN.push(`${p.pid}:${c.name}`);
+    colors = colors.filter((c) => c.gallery.length);
+    const variants = p.variants.filter((v) => !v.color || colors.some((c) => c.name === v.color));
+    if (colors.length > 1 && n++ % 2 === 1) colors = [colors[1], colors[0], ...colors.slice(2)];
+    return { ...p, img: colors[0]?.gallery[0].src ?? p.img, gallery: colors[0]?.gallery ?? [], colors, variants, details };
   });
 }

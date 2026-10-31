@@ -3,7 +3,7 @@ import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import ShopBrowser from "@/components/shop/ShopBrowser";
-import MountainMark from "@/components/shop/MountainMark";
+import StagMark from "@/components/shop/StagMark";
 import { notYetOrderable } from "@/lib/madeDesigns";
 
 export const metadata: Metadata = {
@@ -44,7 +44,7 @@ export default function ShopPage() {
           <div className="grid grid-cols-5 gap-2 sm:gap-4">
             {tiles.map((t) => (
               <a key={t.href} href={t.href} className="group relative block aspect-square overflow-hidden rounded-xl bg-[#0E2141] sm:aspect-[4/3]">
-                <span className="absolute inset-0 flex items-center justify-center pb-[18%]"><MountainMark sizes="(max-width: 640px) 60px, 180px" /></span>
+                <span className="absolute inset-0 flex items-center justify-center pb-[18%]"><StagMark sizes="(max-width: 640px) 60px, 180px" /></span>
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-2 pt-6 pb-2 font-serif text-[13px] leading-tight sm:text-lg text-white sm:text-sm">
                   {t.label}
                 </span>

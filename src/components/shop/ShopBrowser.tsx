@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import MountainMark from "./MountainMark";
+import StagMark from "./StagMark";
 import { categories, products, type Category, type Product } from "./products";
 import { catalogue as merch } from "./catalogue";
 import { MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
@@ -38,7 +38,7 @@ function Tile({ p }: { p: Product }) {
   }
   return (
     <div className="flex h-full w-full items-center justify-center bg-[#0E2141]">
-      <MountainMark sizes="(max-width: 1024px) 110px, 180px" />
+      <StagMark sizes="(max-width: 1024px) 110px, 180px" />
     </div>
   );
 }
