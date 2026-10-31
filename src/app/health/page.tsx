@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import { health, type InlinePart, type LeadItem } from "@/content/health";
@@ -110,17 +109,28 @@ export default function HealthPage() {
     <>
       <TopBar />
       <main id="main" className="flex-1 bg-[var(--h-mist)] text-[var(--h-text)]" style={healthThemeVars}>
-        {/* Hero banner: full supplied JPG logo (leafy sage background), unedited, WebP at 1024x576.
-            Natural 16:9, object-contain so no text is cut off on phones; max 1024px, rounded on desktop. */}
+        {/* Hero: muted looping video (no audio track), poster shown if it can't play. */}
         <div className="bg-[var(--h-mist)] sm:px-6 sm:pt-6">
-          <Image
-            src="/health/xspeaks-health-banner.webp"
-            alt="Xspeaks mental health and fitness"
-            width={1024}
-            height={576}
-            priority
-            sizes="(max-width: 1072px) 100vw, 1024px"
-            className="mx-auto aspect-video h-auto w-full max-w-[1024px] object-contain sm:rounded-2xl"
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/health/xspeaks-health-poster.webp"
+            aria-label="Red deer grazing in a misty valley at sunrise"
+            className="mx-auto aspect-[3/2] w-full max-w-[1024px] object-cover motion-reduce:hidden sm:rounded-2xl"
+          >
+            <source src="/health/xspeaks-health.mp4" type="video/mp4" />
+          </video>
+          {/* Reduced motion: poster only */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/health/xspeaks-health-poster.webp"
+            alt="Red deer grazing in a misty valley at sunrise"
+            width={672}
+            height={448}
+            className="mx-auto hidden aspect-[3/2] w-full max-w-[1024px] object-cover motion-reduce:block sm:rounded-2xl"
           />
         </div>
 
