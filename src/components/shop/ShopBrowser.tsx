@@ -90,9 +90,28 @@ function NotYetBanner({ list }: { list: NotYet }) {
   );
 }
 
+/**
+ * Hides anything that can't be ordered right now (no saved supplier design, held, or out of stock).
+ * Data stays in the catalogue: switch a colour on in madeDesigns.ts and it reappears here.
+ */
+function orderable(list: typeof merch, hidden: Set<string>) {
+  const out: typeof merch = [];
+  for (const p of list) {
+    const ok = (c?: string) => !(p.made && hidden.has(`${p.pid}:${c ?? ""}`));
+    const variants = p.variants.filter((v) => !v.oos && ok(v.color));
+    if (variants.length === 0) continue;
+    const live = new Set(variants.map((v) => v.color));
+    const colors = p.colors?.filter((c) => live.has(c.name));
+    const img = colors && colors.length && p.colors && colors[0] !== p.colors[0] ? colors[0].gallery[0]?.src ?? p.img : p.img;
+    out.push({ ...p, variants, colors, img });
+  }
+  return out;
+}
+
 export default function ShopBrowser({ notYet = [], preview = false }: { notYet?: NotYet; preview?: boolean }) {
   const [cat, setCat] = useState<Filter>("all");
   const [sub, setSub] = useState<string | null>(null);
+  const kitAll = orderable(merch, new Set(notYet.map((x) => x.key)));
 
   // Tabs and category tiles are plain #hash links, so they jump to the section without JS.
   // With JS, the hash selects the tab and filters the grid.
@@ -152,7 +171,7 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
       <div className="mx-auto max-w-7xl px-3 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 sm:px-6 lg:pb-20">
         {shown.map((c) => {
           const items = products.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
-          const kit = merch.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
+          const kit = kitAll.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
           return (
             <section key={c.id} id={c.id} aria-labelledby={`h-${c.id}`} className="mb-4 scroll-mt-[220px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:mb-10 lg:scroll-mt-[170px] lg:pb-0 lg:last:mb-0">
               <div className="mb-3 flex items-baseline justify-between">
