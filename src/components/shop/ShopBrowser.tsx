@@ -100,6 +100,8 @@ function orderable(list: typeof merch, hidden: Set<string>) {
     const ok = (c?: string) => !(p.made && hidden.has(`${p.pid}:${c ?? ""}`));
     const variants = p.variants.filter((v) => !v.oos && ok(v.color));
     if (variants.length === 0) continue;
+    // Denim: keep out-of-stock sizes in the list, shown as "(out of stock)" and not selectable.
+    if (p.sub === "Denim") variants.splice(0, variants.length, ...p.variants.filter((v) => ok(v.color)));
     const live = new Set(variants.map((v) => v.color));
     const colors = p.colors?.filter((c) => live.has(c.name));
     const img = colors && colors.length && p.colors && colors[0] !== p.colors[0] ? colors[0].gallery[0]?.src ?? p.img : p.img;
