@@ -24,7 +24,7 @@ export default function TermsPage() {
   return (
     <>
       <TopBar />
-      <main id="main" className="flex-1 bg-[#EEF4FA]">
+      <main id="main" className="flex-1 bg-[#F6EFE3]">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">How it works</p>
           <h1 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">Terms</h1>

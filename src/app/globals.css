@@ -4,16 +4,19 @@
 :root {
   /* Cool soft off-white page, dark writing, brighter blue accents.
      --ink stays the dark scrim behind guide photos and the map popup text. */
-  --background: #EEF4FA;
+  --background: #F6EFE3;
   --foreground: #1C1917;
-  --ink: #4A433C;
-  --surface: #E4EBF3;
-  --accent: #1E8CFF;
+  --ink: #13233F;
+  --surface: #EDE4D3;
+  --accent: #4E6B4F;
   /* Same clear blue for small accent text. Not a washed tint. */
-  --accent-soft: #1E8CFF;
+  --accent-soft: #4E6B4F;
   /* Form validation only. Not a brand accent. */
   --flame: #e24a3b;
-  --navy: #1a3a6b;
+  --navy: #0E2141;
+  --gold: #C9A96A;
+  --cream: #F6EFE3;
+  --sage: #8FA382;
 }
 
 @theme inline {
@@ -25,8 +28,12 @@
   --color-accent-soft: var(--accent-soft);
   --color-flame: var(--flame);
   --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --color-sage: var(--sage);
   --font-sans: var(--font-geist-sans);
-  --font-display: var(--font-geist-sans);
+  --font-display: var(--font-serif);
+  --font-serif: var(--font-serif-face);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -41,9 +48,13 @@ body {
 }
 
 .font-display {
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  letter-spacing: -0.02em;
+  font-family: var(--font-serif-face), Georgia, serif;
+  letter-spacing: -0.005em;
+  font-weight: 500 !important;
 }
+.font-serif { font-family: var(--font-serif-face), Georgia, serif; }
+html { scroll-padding-top: 5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 ::selection {
   background: color-mix(in srgb, var(--accent) 70%, transparent);
@@ -204,7 +215,7 @@ body {
 
 .guide-prose .callout-tip .callout-title,
 .guide-prose .callout-note .callout-title {
-  color: #1E8CFF;
+  color: #0E2141;
 }
 
 /* "What it costs" box in sport guides (src/data/guidePrices.ts) */

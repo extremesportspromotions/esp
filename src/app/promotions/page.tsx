@@ -48,7 +48,7 @@ export default function PromotionsPage() {
             <p className="mb-4 inline-block rounded-full bg-[#c0c0c0] px-3.5 py-1.5 text-xs font-bold uppercase tracking-[1.5px] text-black">
               For club owners and coaches
             </p>
-            <h1 className="mb-3 text-[2.5rem] font-extrabold leading-tight text-white sm:text-5xl">Promotions</h1>
+            <h1 className="font-display mb-3 text-[2.75rem] leading-tight text-white sm:text-6xl">Promotions</h1>
             <p className="mx-auto max-w-[650px] text-lg text-white sm:text-[1.2rem]">
               How we&apos;ll put your club in front of more people, together.
             </p>

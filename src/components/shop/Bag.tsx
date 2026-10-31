@@ -121,7 +121,7 @@ export function BagButton() {
 
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-4 z-50 flex items-center gap-2 rounded-full bg-[#1C1917] px-4 py-3 text-sm font-semibold text-white shadow-lg">
+      <button type="button" onClick={() => setOpen(true)} className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-4 z-50 flex items-center gap-2 rounded-full bg-[#0E2141] px-4 py-3 text-sm font-semibold text-white shadow-lg">
         <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden><path d="M5 8h14l-1 13H6z M9 8V6a3 3 0 0 1 6 0v2" /></svg>
         Bag ({count})
       </button>
@@ -173,7 +173,7 @@ export function BagButton() {
               {quote?.failed && <p className="mt-2 text-[13px] text-red-700">We couldn&apos;t get a delivery price just now. It will be shown at checkout.</p>}
               <p className="mt-2 text-[13px]">UK delivery only. Each item is made to order for you.</p>
               {err && <p className="mt-2 text-[13px] text-red-700">{err}</p>}
-              <button type="button" disabled={busy || items.length === 0} onClick={checkout} className="mt-3 w-full rounded-md bg-[#1C1917] px-4 py-3 text-sm font-semibold text-white disabled:opacity-40">
+              <button type="button" disabled={busy || items.length === 0} onClick={checkout} className="mt-3 w-full rounded-md bg-[#0E2141] px-4 py-3 text-sm font-semibold text-white disabled:opacity-40">
                 {busy ? "Opening checkout…" : "Checkout"}
               </button>
             </div>}

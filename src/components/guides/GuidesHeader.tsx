@@ -23,9 +23,9 @@ export default function GuidesHeader({ eyebrow, title, tagline, intro, image, ch
 
   if (!image) {
     return (
-      <section className="relative overflow-hidden border-b border-[#1C1917]/10 bg-[#EEF4FA]">
+      <section className="relative overflow-hidden border-b border-[#1C1917]/10 bg-[#F6EFE3]">
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(30,140,255,0.18),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(26,58,107,0.4),_transparent_50%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(143,163,130,0.22),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(201,169,106,0.18),_transparent_50%)]"
           aria-hidden
         />
         <div className="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">

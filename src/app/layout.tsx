@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
@@ -8,13 +8,19 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const serif = Cormorant_Garamond({
+  variable: "--font-serif-face",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 export const viewport: Viewport = {
-  themeColor: "#1E8CFF",
+  themeColor: "#0E2141",
 };
 
 export const metadata: Metadata = {
@@ -40,9 +46,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en-GB"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${serif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#EEF4FA] text-foreground">
+      <body className="min-h-full flex flex-col bg-[#F6EFE3] text-foreground">
         {children}
       </body>
     </html>

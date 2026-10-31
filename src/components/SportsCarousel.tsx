@@ -1,60 +1,57 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { carouselSports as sports } from "@/data/sports";
 
-const SWIPE_THRESHOLD = 50;
+/**
+ * Full-screen home hero: crossfades sport to sport every 5.5 s.
+ * Existing clips and photos only. object-cover gives a portrait crop on phones.
+ * Pauses for prefers-reduced-motion, on hover/focus and when the tab is hidden.
+ */
+const INTERVAL = 5500;
+const SWIPE = 50;
+
+function poster(s: (typeof sports)[number]) {
+  if (s.image) return s.image;
+  if (s.video) return s.video.replace("/carousel-clips/", "/carousel-clips/posters/").replace(/\.mp4$/, ".jpg");
+  return undefined;
+}
 
 export default function SportsCarousel() {
   const [index, setIndex] = useState(0);
-  const touchStartX = useRef<number | null>(null);
-  const touchDeltaX = useRef(0);
-  const suppressClick = useRef(false);
-  const [dragOffset, setDragOffset] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
+  const [reduced, setReduced] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const startX = useRef<number | null>(null);
+  const videos = useRef<(HTMLVideoElement | null)[]>([]);
 
-  const goTo = useCallback((i: number) => {
-    setIndex(((i % sports.length) + sports.length) % sports.length);
-  }, []);
-
-  const prev = useCallback(() => goTo(index - 1), [goTo, index]);
-  const next = useCallback(() => goTo(index + 1), [goTo, index]);
+  const goTo = useCallback((i: number) => setIndex(((i % sports.length) + sports.length) % sports.length), []);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") prev();
-      if (e.key === "ArrowRight") next();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [prev, next]);
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const set = () => setReduced(mq.matches);
+    set();
+    mq.addEventListener("change", set);
+    return () => mq.removeEventListener("change", set);
+  }, []);
 
-  const onPointerDown = (e: React.PointerEvent) => {
-    touchStartX.current = e.clientX;
-    touchDeltaX.current = 0;
-    setIsDragging(true);
-    (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
-  };
+  useEffect(() => {
+    if (reduced || paused) return;
+    const t = setTimeout(() => goTo(index + 1), INTERVAL);
+    return () => clearTimeout(t);
+  }, [index, reduced, paused, goTo]);
 
-  const onPointerMove = (e: React.PointerEvent) => {
-    if (touchStartX.current === null) return;
-    touchDeltaX.current = e.clientX - touchStartX.current;
-    setDragOffset(touchDeltaX.current);
-  };
-
-  const endDrag = () => {
-    if (touchStartX.current === null) return;
-    const dx = touchDeltaX.current;
-    touchStartX.current = null;
-    touchDeltaX.current = 0;
-    setIsDragging(false);
-    setDragOffset(0);
-    suppressClick.current = Math.abs(dx) > 10;
-    if (dx > SWIPE_THRESHOLD) prev();
-    else if (dx < -SWIPE_THRESHOLD) next();
-  };
+  // Only the visible clip plays; the rest stay paused (saves data on phones).
+  useEffect(() => {
+    videos.current.forEach((v, i) => {
+      if (!v) return;
+      if (i === index && !reduced) {
+        v.play().catch(() => {});
+      } else {
+        v.pause();
+      }
+    });
+  }, [index, reduced]);
 
   const sport = sports[index];
 
@@ -63,161 +60,98 @@ export default function SportsCarousel() {
       id="sports"
       aria-roledescription="carousel"
       aria-label="Extreme sports"
-      className="relative bg-[#EEF4FA]"
+      className="relative h-[calc(100svh-6.5rem)] min-h-[30rem] w-full touch-pan-y select-none overflow-hidden bg-[#0E2141] lg:h-[calc(100svh-4.5rem)]"
+      onPointerDown={(e) => { startX.current = e.clientX; }}
+      onPointerUp={(e) => {
+        if (startX.current === null) return;
+        const dx = e.clientX - startX.current;
+        startX.current = null;
+        if (dx > SWIPE) goTo(index - 1);
+        else if (dx < -SWIPE) goTo(index + 1);
+      }}
+      onPointerCancel={() => { startX.current = null; }}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
     >
-      <div className="mx-auto max-w-7xl px-3 pt-2 pb-12 sm:px-6 sm:pt-2 sm:pb-16 lg:px-8 lg:pt-2 lg:max-w-[90rem]">
-        <div className="mb-7 flex flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent">
-              Featured sports
-            </p>
-            <h2 className="font-display mt-1 text-3xl font-bold text-[#1C1917] sm:text-5xl">
-              Your next adventure starts here
-            </h2>
-          </div>
-          <p className="text-sm text-[#1C1917]/60 sm:text-base" aria-live="polite">
-            {index + 1} / {sports.length}
-          </p>
-        </div>
-
-        <div
-          className="relative touch-pan-y select-none rounded-2xl border border-[#1C1917]/10 bg-surface shadow-2xl shadow-black/40 sm:rounded-3xl"
-          onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={endDrag}
-          onPointerCancel={endDrag}
-          role="group"
-          aria-roledescription="slide"
-          aria-label={`${sport.name}: ${sport.description}${sport.notice ? ` ${sport.notice}` : ""}`}
-        >
+      {sports.map((s, i) => {
+        const active = i === index;
+        const near = active || i === (index + 1) % sports.length;
+        return (
           <div
-            className="relative w-full"
-            style={{
-              transform: `translateX(${dragOffset * 0.35}px)`,
-              transition: isDragging ? "none" : "transform 280ms ease-out",
-            }}
+            key={s.id}
+            aria-hidden={!active}
+            className={`absolute inset-0 transition-opacity duration-[1400ms] ease-in-out motion-reduce:transition-none ${active ? "opacity-100" : "opacity-0"}`}
           >
-            <Link
-              href={sport.guide}
-              aria-label={`Read the ${sport.name} guide`}
-              className="block"
-              draggable={false}
-              onClick={(e) => {
-                if (suppressClick.current) {
-                  e.preventDefault();
-                  suppressClick.current = false;
-                }
-              }}
-            >
-              <div className="relative aspect-[16/9] w-full">
-                {sport.video ? (
-                  <video
-                    src={sport.video}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    aria-label={sport.alt}
-                    style={sport.videoPosition ? { objectPosition: sport.videoPosition } : undefined}
-                    className="absolute inset-0 block h-full w-full object-contain brightness-[1.1] contrast-[1.02] saturate-[1.04]"
-                  />
-                ) : (
-                  <Image
-                    src={sport.image}
-                    alt={sport.alt}
-                    fill
-                    priority
-                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 100vw, 1440px"
-                    className="object-cover brightness-[1.1] contrast-[1.02] saturate-[1.04]"
-                    draggable={false}
-                  />
-                )}
-                {/* Minimal bottom scrim — photos stay close to originals */}
-                <div
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[32%] bg-gradient-to-t from-black/40 via-black/12 to-transparent"
-                  aria-hidden
-                />
-              </div>
-              <div className="bg-surface px-6 py-5 sm:px-10 sm:py-7 lg:px-12">
-                <h3 className="font-display text-3xl font-bold text-[#1C1917] sm:text-5xl lg:text-6xl">
-                  {sport.name}
-                </h3>
-                <p className="mt-3 max-w-3xl text-base leading-relaxed text-[#1C1917] sm:text-lg lg:text-xl">
-                  {sport.description}
-                </p>
-                {sport.notice ? (
-                  <p className="mt-3 max-w-3xl rounded-lg border border-[#1C1917]/15 bg-white/70 px-3 py-2 text-sm font-medium text-[#1C1917] sm:text-base">
-                    {sport.notice}
-                  </p>
-                ) : null}
-                <p className="mt-3 text-sm font-semibold text-[#1C1917] underline decoration-[#1C1917]/70 underline-offset-4 sm:text-base">
-                  Read the guide
-                </p>
-                {sport.credit ? (
-                  <p className="mt-3 text-xs text-[#1C1917]/65 sm:text-sm">
-                    Credit: {sport.credit}
-                  </p>
-                ) : null}
-              </div>
-            </Link>
+            {s.video ? (
+              <video
+                ref={(el) => { videos.current[i] = el; }}
+                src={near ? s.video : undefined}
+                poster={poster(s)}
+                muted
+                loop
+                playsInline
+                autoPlay={i === 0}
+                preload={active ? "auto" : "none"}
+                aria-label={s.alt}
+                style={s.videoPosition ? { objectPosition: s.videoPosition } : undefined}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={s.image}
+                alt={s.alt}
+                loading={i === 0 ? "eager" : "lazy"}
+                style={s.imagePosition ? { objectPosition: s.imagePosition } : undefined}
+                className="absolute inset-0 h-full w-full object-cover"
+                draggable={false}
+              />
+            )}
           </div>
+        );
+      })}
 
-          <button
-            type="button"
-            onClick={prev}
-            aria-label="Previous sport"
-            className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur transition hover:bg-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:left-5 sm:h-14 sm:w-14"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path
-                d="M15 18l-6-6 6-6"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            aria-label="Next sport"
-            className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/55 text-white backdrop-blur transition hover:bg-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:right-5 sm:h-14 sm:w-14"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path
-                d="M9 18l6-6-6-6"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0E2141]/85 via-[#0E2141]/25 to-[#0E2141]/30" aria-hidden />
 
-        <div
-          className="mt-6 flex flex-wrap justify-center gap-2.5"
-          role="tablist"
-          aria-label="Choose a sport"
-        >
-          {sports.map((s, i) => (
-            <button
-              key={s.id}
-              type="button"
-              role="tab"
-              aria-selected={i === index}
-              aria-label={`Show ${s.name}`}
-              onClick={() => goTo(i)}
-              className={`h-2.5 rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
-                i === index
-                  ? "w-9 bg-accent"
-                  : "w-2.5 bg-[#1C1917]/30 hover:bg-[#1C1917]/55"
-              }`}
-            />
-          ))}
+      <div className="absolute inset-x-0 bottom-0 mx-auto max-w-7xl px-5 pb-16 sm:px-8 sm:pb-20 lg:px-10">
+        <p className="text-xs tracking-[0.3em] text-[#E3CD98] sm:text-sm">EXTREME SPORTS COACHING, UK-WIDE</p>
+        <span className="mt-3 block h-px w-16 bg-[#C9A96A]" aria-hidden />
+        <h1 className="sr-only">Extreme Sports Promotions</h1>
+        <h2 key={sport.id} className="font-serif mt-4 text-5xl font-medium leading-[1.02] text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.45)] sm:text-7xl lg:text-8xl" aria-live="polite">
+          {sport.name}
+        </h2>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">{sport.description}</p>
+        {sport.notice ? (
+          <p className="mt-3 max-w-2xl rounded-md border border-white/25 bg-black/25 px-3 py-2 text-sm text-white">{sport.notice}</p>
+        ) : null}
+        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <Link
+            href="/#how-it-works"
+            className="inline-flex items-center gap-3 border border-white/80 px-6 py-3 text-sm tracking-[0.2em] text-white transition hover:bg-white hover:text-[#0E2141] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C9A96A]"
+          >
+            Find a coach <span aria-hidden>→</span>
+          </Link>
+          <Link href={sport.guide} className="text-sm text-white/90 underline decoration-white/50 underline-offset-4 hover:text-[#E3CD98]">
+            Read the {sport.name} guide
+          </Link>
         </div>
+        {sport.credit ? <p className="mt-3 text-xs text-white/60">Credit: {sport.credit}</p> : null}
+      </div>
+
+      <div className="absolute inset-x-0 bottom-5 flex justify-center gap-2 px-4" role="tablist" aria-label="Choose a sport">
+        {sports.map((s, i) => (
+          <button
+            key={s.id}
+            type="button"
+            role="tab"
+            aria-selected={i === index}
+            aria-label={`Show ${s.name}`}
+            onClick={() => goTo(i)}
+            className={`h-2 rounded-full transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C9A96A] ${i === index ? "w-7 bg-[#C9A96A]" : "w-2 bg-white/50 hover:bg-white/80"}`}
+          />
+        ))}
       </div>
     </section>
   );

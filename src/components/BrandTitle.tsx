@@ -7,12 +7,12 @@ import Link from "next/link";
 const showLogo = true;
 
 const sectionClass =
-  "relative overflow-hidden border-b border-[#1C1917]/10 bg-[#EEF4FA]";
+  "relative overflow-hidden border-b border-[#1C1917]/10 bg-[#F6EFE3]";
 
 function Backdrop() {
   return (
     <div
-      className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(30,140,255,0.18),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(26,58,107,0.35),_transparent_50%)]"
+      className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(143,163,130,0.22),_transparent_60%),radial-gradient(ellipse_at_top_right,_rgba(201,169,106,0.18),_transparent_50%)]"
       aria-hidden
     />
   );
@@ -56,29 +56,47 @@ export function BrandLogo() {
   );
 }
 
+const icons = [
+  { title: "UK-wide", text: "Coaches and clubs across the country.", d: "M2 20 8 9l4 6 3-4 7 9z M15 6a2 2 0 1 0 0-.01" },
+  { title: "Expert coaches", text: "Matched to your sport and level.", d: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M4 21c0-4 3.6-7 8-7s8 3 8 7" },
+  { title: "Practical guides", text: "Plain advice for every level.", d: "M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z M12 6v14" },
+];
+
 export function BrandPickLine() {
   return (
-    <section aria-label="Get matched with a coach" className={sectionClass}>
-      <Backdrop />
-      <div className="relative mx-auto max-w-[90rem] px-3 py-8 text-center sm:px-4 sm:py-12 lg:px-6 lg:py-14">
-        <p className="mx-auto mt-5 max-w-xl text-base text-[#1C1917]/70 sm:text-lg">
-          Pick a sport → enquire → get matched with a coach.
-        </p>
-        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+    <section aria-label="Get matched with a coach" className="border-b border-[#1C1917]/10 bg-[#F6EFE3]">
+      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
+        <ul className="grid gap-8 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#C9A96A]/40">
+          {icons.map((i) => (
+            <li key={i.title} className="flex items-start gap-4 sm:justify-center sm:px-6">
+              <svg viewBox="0 0 24 24" className="h-9 w-9 flex-none text-[#4E6B4F]" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d={i.d} />
+              </svg>
+              <span>
+                <span className="block text-xs tracking-[0.22em] text-[#0E2141]">{i.title.toUpperCase()}</span>
+                <span className="font-serif mt-1 block text-lg text-[#1C1917]/80">{i.text}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-14 text-center">
+          <p className="font-serif mx-auto max-w-xl text-2xl text-[#0E2141] sm:text-3xl">
+            Pick a sport → enquire → get matched with a coach.
+          </p>
           <Link
             href="/#how-it-works"
-            className="inline-flex items-center justify-center rounded-full bg-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg shadow-accent/30 transition hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="mt-7 inline-flex items-center justify-center bg-[#0E2141] px-8 py-3.5 text-sm tracking-[0.2em] text-[#F6EFE3] transition hover:bg-[#4E6B4F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C9A96A]"
           >
             How it works
           </Link>
+          <p className="mx-auto mt-5 max-w-lg text-sm text-[#1C1917]/60">
+            Looking for somewhere to train near you?{" "}
+            <Link href="/#find-a-club" className="text-[#1C1917]/80 underline underline-offset-2 hover:text-[#4E6B4F]">
+              Find a club
+            </Link>{" "}
+            on the map.
+          </p>
         </div>
-        <p className="mx-auto mt-4 max-w-lg text-xs text-[#1C1917]/45 sm:text-sm">
-          Looking for somewhere to train near you?{" "}
-          <Link href="/#find-a-club" className="text-[#1C1917]/70 underline-offset-2 hover:text-accent hover:underline">
-            Find a club
-          </Link>{" "}
-          on the map.
-        </p>
       </div>
     </section>
   );

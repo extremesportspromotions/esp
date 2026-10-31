@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import TopBar from "@/components/TopBar";
 import SportsCarousel from "@/components/SportsCarousel";
-import { BrandLogo, BrandPickLine } from "@/components/BrandTitle";
+import { BrandPickLine } from "@/components/BrandTitle";
 import ClubsMapSection from "@/components/ClubsMapSection";
 import ValueProposition from "@/components/ValueProposition";
 import HowItWorks from "@/components/HowItWorks";
@@ -19,7 +19,6 @@ export default function Home() {
     <>
       <TopBar />
       <main className="flex-1">
-        <BrandLogo />
         <SportsCarousel />
         <BrandPickLine />
         <ClubsMapSection />

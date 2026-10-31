@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-/** Mountain logo cut from the cap photo (public/shop/mountain-mark.png, 320x163, transparent). */
+/** Devonshire stag mark (public/brand/stag-navy.jpg, background matches the #0E2141 tiles). */
 export default function MountainMark({ sizes = "160px" }: { sizes?: string }) {
-  return <Image src="/shop/mountain-mark.png" alt="" width={320} height={163} sizes={sizes} className="h-auto w-[55%] select-none" draggable={false} />;
+  return <Image src="/brand/stag-navy.jpg" alt="" width={200} height={262} sizes={sizes} className="h-auto w-[34%] select-none" draggable={false} />;
 }

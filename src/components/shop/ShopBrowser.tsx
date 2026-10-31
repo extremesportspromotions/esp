@@ -29,7 +29,7 @@ function Tile({ p }: { p: Product }) {
   }
   if (p.cat === "gear" && p.sub && gearIcons[p.sub]) {
     return (
-      <div className="flex h-full w-full items-center justify-center bg-[#E4EBF3]">
+      <div className="flex h-full w-full items-center justify-center bg-[#EDE4D3]">
         <svg viewBox="0 0 24 24" className="h-12 w-12 text-[#1C1917]/55" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d={gearIcons[p.sub]} />
         </svg>
@@ -37,7 +37,7 @@ function Tile({ p }: { p: Product }) {
     );
   }
   return (
-    <div className="flex h-full w-full items-center justify-center bg-[#1C1917]">
+    <div className="flex h-full w-full items-center justify-center bg-[#0E2141]">
       <MountainMark sizes="(max-width: 1024px) 110px, 180px" />
     </div>
   );
@@ -120,15 +120,15 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
   const shown = cat === "all" ? categories : categories.filter((c) => c.id === cat);
   const active = categories.find((c) => c.id === cat);
   const tab = (on: boolean) =>
-    `shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${on ? "bg-[#1C1917] text-white" : "text-[#1C1917] hover:bg-[#1C1917]/10"}`;
+    `shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${on ? "bg-[#0E2141] text-white" : "text-[#1C1917] hover:bg-[#0E2141]/10"}`;
   const chip = (on: boolean) =>
-    `shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-[13px] font-medium transition ${on ? "border-[#1C1917] bg-[#1C1917] text-white" : "border-[#1C1917]/25 bg-white text-[#1C1917] hover:border-[#1C1917]"}`;
+    `shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-[13px] font-medium transition ${on ? "border-[#0E2141] bg-[#0E2141] text-white" : "border-[#1C1917]/25 bg-white text-[#1C1917] hover:border-[#1C1917]"}`;
 
   return (
     <NotYetContext.Provider value={new Set(notYet.map((x) => x.key))}>
     <BagProvider>
     <div id="products">
-      <div className="sticky top-[101px] z-40 border-b border-[#1C1917]/10 bg-[#EEF4FA]/95 backdrop-blur-md lg:top-[61px]">
+      <div className="sticky top-[101px] z-40 border-b border-[#1C1917]/10 bg-[#F6EFE3]/95 backdrop-blur-md lg:top-[61px]">
         <div className="mx-auto max-w-7xl px-3 sm:px-6">
           <nav aria-label="Shop categories" className="flex gap-1 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <a href="#all" className={tab(cat === "all")} aria-current={cat === "all" ? "true" : undefined}>All</a>

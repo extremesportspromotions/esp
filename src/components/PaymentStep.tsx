@@ -7,7 +7,7 @@ import { PAYMENT_NOTE } from "@/lib/payment";
  */
 export default function PaymentStep({ feeLabel }: { feeLabel: string }) {
   return (
-    <div id="payment-step" className="rounded-xl border border-[#1C1917]/10 bg-[#EEF4FA] p-4">
+    <div id="payment-step" className="rounded-xl border border-[#1C1917]/10 bg-[#F6EFE3] p-4">
       <p className="text-xs font-bold uppercase tracking-wide text-[#1C1917]/55">Your match fee</p>
       <p className="mt-1 font-semibold text-[#1C1917]">{feeLabel || "Not chosen yet"}</p>
       <p className="mt-2 text-sm leading-relaxed text-[#1C1917]/75">{PAYMENT_NOTE}</p>

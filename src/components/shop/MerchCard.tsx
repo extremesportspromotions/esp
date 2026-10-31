@@ -141,7 +141,7 @@ function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => 
         </select>
       </div>
       {needSize && <p role="alert" className={`-mt-1 ${big ? "text-sm" : "text-[12px]"} font-medium text-red-700`}>Choose an option first.</p>}
-      <button type="submit" disabled={soldOut || notYet} data-notyet={notYet || undefined} className={`rounded-md bg-[#1C1917] font-semibold text-white transition hover:bg-black disabled:opacity-40 ${big ? "px-4 py-3 text-[15px]" : "px-3 py-2 text-sm"}`}>
+      <button type="submit" disabled={soldOut || notYet} data-notyet={notYet || undefined} className={`rounded-md bg-[#0E2141] font-semibold text-white transition hover:bg-[#4E6B4F] disabled:opacity-40 ${big ? "px-4 py-3 text-[15px]" : "px-3 py-2 text-sm"}`}>
         {notYet ? NOT_YET : soldOut ? "Out of stock" : added ? "Added to bag" : "Add to bag"}
       </button>
     </form>
@@ -240,14 +240,14 @@ function ProductView({ k }: { k: Pick }) {
           {p.details?.length ? (
             <ul className={`flex flex-col gap-1.5 text-[15px] leading-snug ${ink}`}>
               {p.details.map((d) => (
-                <li key={d} className="flex gap-2"><span aria-hidden className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#1C1917]/60" />{d}</li>
+                <li key={d} className="flex gap-2"><span aria-hidden className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#0E2141]/60" />{d}</li>
               ))}
             </ul>
           ) : null}
           {k.colors.length > 1 && <Swatches k={k} />}
           <BuyForm k={k} big onAdded={() => setJustAdded(true)} />
           {justAdded && (
-            <div className="flex items-center justify-between gap-3 rounded-lg bg-[#EEF4FA] px-3 py-2.5 text-sm text-[#1C1917]" role="status">
+            <div className="flex items-center justify-between gap-3 rounded-lg bg-[#F6EFE3] px-3 py-2.5 text-sm text-[#1C1917]" role="status">
               <span>Added to your bag.</span>
               <button
                 type="button"
@@ -347,7 +347,7 @@ function Gallery({ photos, name }: { photos: MerchPhoto[]; name: string }) {
             <Arrow dir={1} hidden={i === photos.length - 1} onClick={() => go(i + 1)} />
             <div className="pointer-events-none absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 lg:hidden" aria-hidden>
               {photos.map((ph, n) => (
-                <span key={ph.src} className={`h-2 rounded-full transition-all ${n === i ? "w-5 bg-[#1C1917]" : "w-2 bg-[#1C1917]/30"}`} />
+                <span key={ph.src} className={`h-2 rounded-full transition-all ${n === i ? "w-5 bg-[#0E2141]" : "w-2 bg-[#0E2141]/30"}`} />
               ))}
             </div>
           </>
