@@ -41,22 +41,34 @@ export default function SportsCarousel() {
     return () => clearTimeout(t);
   }, [index, reduced, paused, goTo]);
 
+  // Only play once the carousel is on screen.
+  const section = useRef<HTMLElement | null>(null);
+  const [onScreen, setOnScreen] = useState(false);
+  useEffect(() => {
+    const el = section.current;
+    if (!el || typeof IntersectionObserver === "undefined") { setOnScreen(true); return; }
+    const io = new IntersectionObserver(([e]) => setOnScreen(e.isIntersecting), { threshold: 0.25 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   // Only the visible clip plays; the rest stay paused (saves data on phones).
   useEffect(() => {
     videos.current.forEach((v, i) => {
       if (!v) return;
-      if (i === index && !reduced) {
+      if (i === index && !reduced && onScreen) {
         v.play().catch(() => {});
       } else {
         v.pause();
       }
     });
-  }, [index, reduced]);
+  }, [index, reduced, onScreen]);
 
   const sport = sports[index];
 
   return (
     <section
+      ref={section}
       id="sports"
       aria-roledescription="carousel"
       aria-label="Extreme sports"
@@ -85,25 +97,32 @@ export default function SportsCarousel() {
             className={`absolute inset-0 transition-opacity duration-[1400ms] ease-in-out motion-reduce:transition-none ${active ? "opacity-100" : "opacity-0"}`}
           >
             {s.video ? (
+              <>
+              {i === 0 && poster(s) ? (
+                // Slide 1 poster as a high-priority image so it paints first.
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={poster(s)} alt="" fetchPriority="high" loading="eager" aria-hidden style={s.imagePosition ? { objectPosition: s.imagePosition } : undefined} className="absolute inset-0 h-full w-full object-cover" draggable={false} />
+              ) : null}
               <video
                 ref={(el) => { videos.current[i] = el; }}
                 src={near ? s.video : undefined}
-                poster={poster(s)}
+                poster={i === 0 || near ? poster(s) : undefined}
                 muted
                 loop
                 playsInline
-                autoPlay={i === 0}
-                preload={active ? "auto" : "none"}
+                preload={active ? "metadata" : "none"}
                 aria-label={s.alt}
                 style={s.videoPosition ? { objectPosition: s.videoPosition } : undefined}
                 className="absolute inset-0 h-full w-full object-cover"
               />
+              </>
             ) : (
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={s.image}
                 alt={s.alt}
                 loading={i === 0 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "low"}
                 style={s.imagePosition ? { objectPosition: s.imagePosition } : undefined}
                 className="absolute inset-0 h-full w-full object-cover"
                 draggable={false}

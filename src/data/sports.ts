@@ -26,13 +26,13 @@ export const sports: Sport[] = [
   {
     id: "mountaineering",
     guide: "/guides/mountaineering-for-beginners-uk",
-    video: "/carousel-clips/carousel-01-mountaineering-v2.mp4",
+    video: "/carousel-clips/carousel-01-mountaineering-v3-720.mp4",
     videoPosition: "50% 35%",
     name: "Mountaineering",
     mapLabel: "Mountaineering, climbing & coasteering",
     description:
       "Scale peaks, learn to rock climb or try coasteering with qualified guides who teach rope work, route finding and safety on rock and sea cliffs.",
-    image: "/sports/mountaineering.jpg",
+    image: "/sports/mountaineering-carousel-v1.webp",
     alt: "Hiker on a mountain ridge looking out over a cloud inversion",
     imagePosition: "62% 58%",
   },
@@ -54,7 +54,7 @@ export const sports: Sport[] = [
     name: "Paragliding",
     description:
       "Launch into thermal soaring with instructors who coach launches, turns, and landing technique from day one.",
-    image: "/sports/paragliding.jpg",
+    image: "/sports/paragliding-carousel-v1.webp",
     alt: "Paraglider with a white, cyan and yellow wing over a mountain valley",
     imagePosition: "50% 36%",
   },
@@ -67,7 +67,7 @@ export const sports: Sport[] = [
     description:
       "Rip trails with coaches who dial in bike setup, cornering, and descending skills for every terrain level.",
     image:
-      "https://images.unsplash.com/photo-1761225155424-d6bfed504284?auto=format&fit=crop&w=2000&q=80",
+      "/sports/mountain-biking-carousel-v1.webp",
     alt: "Mountain biker jumping a dirt trail through a sunlit forest",
   },
   {
@@ -126,7 +126,7 @@ export const sports: Sport[] = [
     description:
       "Fly a wingsuit from a plane once you're an experienced skydiver, trained by British Skydiving instructors at UK drop zones.",
     image:
-      "https://images.unsplash.com/photo-1753010840134-45b2b059a7d5?auto=format&fit=crop&w=2000&q=80",
+      "/sports/wingsuit-flying-carousel-v1.webp",
     alt: "Wingsuit flyer in a blue suit perched on a cliff edge above a mountain valley",
   },
   {

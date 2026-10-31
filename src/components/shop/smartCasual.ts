@@ -230,7 +230,7 @@ export const smartCasual: Merch[] = defs.map((p) => {
     return `ESP ${it}, ${view === "front" ? `front, with the ${logo}` : view === "side" ? "side view" : "back"}`;
   };
   const ph = (c: Design, view: PhotoView, file: string): MerchPhoto => ({
-    src: `/shop/sc/v2/${c.photo}-${file}.webp`,
+    src: view === "model" && file === "model" && V7_MODEL.has(c.photo) && !(p.key === "chinos" || p.key === "chinoShorts") ? `/shop/v8b/sc-${c.photo}-v8b.webp` : `/shop/sc/v2/${c.photo}-${file}.webp`,
     alt: alt(c, view),
     view,
     ...(view === "model" ? { note: MODEL_NOTE } : {}),
