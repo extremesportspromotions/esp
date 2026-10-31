@@ -28,7 +28,7 @@ export default function ShopPage() {
           <Image src="/sports/mountaineering.jpg" alt="" fill priority sizes="100vw" className="-z-10 object-cover" style={{ objectPosition: "55% 60%" }} />
           <div className="absolute inset-0 -z-10 bg-[#F6EFE3]/55" aria-hidden />
           <div className="px-5 py-16">
-            <Image src="/brand/stag-cream.jpg" alt="" width={300} height={393} priority className="mx-auto h-24 w-auto mix-blend-multiply sm:h-32" />
+            <Image src="/brand/stag.png" alt="" width={300} height={393} priority className="mx-auto h-24 w-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)] sm:h-32" />
             <h1 className="font-serif mt-3 text-[4.2rem] font-medium leading-none text-[#0E2141] sm:text-8xl lg:text-9xl">Devonshire</h1>
             <p className="mt-4 flex items-center justify-center gap-3 text-xs tracking-[0.3em] text-[#0E2141] sm:text-sm">
               <span className="h-px w-8 bg-[#0E2141]/60 sm:w-16" aria-hidden />
