@@ -280,4 +280,5 @@ html { scroll-padding-top: 5rem; }
 /* Mountain biking slide: centre the rider on phones (desktop unchanged). */
 @media (max-width: 640px) {
   .mtb-mobile-frame { object-position: 22% 55% !important; }
+  .surf-mobile-frame { object-position: 26% 50% !important; }
 }
