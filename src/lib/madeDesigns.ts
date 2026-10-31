@@ -10,20 +10,31 @@ import { scKey, smartCasual } from "@/components/shop/smartCasual";
  * used in the order alerts and Stripe line metadata, never shown to customers.
  */
 const DESIGNS: Record<number, { garment: string; colours: Record<string, [design: number, logo: "silver" | "black" | "dark grey"]> }> = {
-  9100001: { garment: "Henbury HB512 Oxford (regular fit)", colours: { Black: [6577525, "silver"], White: [6577544, "dark grey"], Blue: [6577545, "dark grey"] } },
-  9100002: { garment: "Premier PR695 quarter-zip knit", colours: { Black: [6577546, "silver"], Charcoal: [6577547, "silver"], Navy: [6577548, "silver"] } },
-  9100003: { garment: "Henbury H722 V-neck cardigan", colours: { Black: [6577549, "silver"], Navy: [6577551, "silver"] /* Grey Marl: needs design number */ } },
+  // 31 Oct 2026: "stag" = stag-only design (Devonshire v8e mark list); others are the full logo.
+  9100001: { garment: "Henbury HB512 Oxford (regular fit)", colours: { Black: [6577525, "silver"], White: [6577544, "dark grey"], Blue: [6577696, "dark grey"] /* stag */ } },
+  9100002: { garment: "Premier PR695 quarter-zip knit", colours: { Black: [6577546, "silver"], Charcoal: [6577547, "silver"], Navy: [6577703, "silver"] /* stag */ } },
+  9100003: { garment: "Henbury H722 V-neck cardigan", colours: { Black: [6577681, "silver"] /* stag */, Navy: [6577551, "silver"] /* Grey Marl: needs design number */ } },
   9100004: {
     garment: "Russell 141M softshell gilet (Clothes2order code J141M)",
-    colours: { Black: [6577552, "silver"], Titanium: [6577553, "silver"], "French Navy": [6577555, "silver"], Azure: [6577556, "silver"], "Classic Red": [6577557, "silver"] },
+    colours: { Black: [6577552, "silver"], Titanium: [6577697, "silver"] /* stag */, "French Navy": [6577555, "silver"], Azure: [6577556, "silver"], "Classic Red": [6577699, "silver"] /* stag */ },
   },
   9100005: {
-    garment: "Asquith & Fox AQ050 chinos (logo by left front pocket)",
-    colours: { Black: [6571317, "silver"], Slate: [6571322, "silver"], Royal: [6571332, "silver"], Navy: [6571335, "silver"], Natural: [6571327, "black"] },
+    garment: "Asquith & Fox AQ050 chinos (stag by left front pocket)",
+    colours: { Black: [6577682, "silver"], Slate: [6577683, "silver"], Royal: [6577684, "silver"], Navy: [6577685, "silver"], Natural: [6577686, "dark grey"] },
+  },
+  9100006: { garment: "Henbury HB517 short sleeve Oxford", colours: { Black: [6577694, "silver"] /* stag */ } },
+  9100007: { garment: "Asquith & Fox AQ101 mercerised polo", colours: { "Heather Grey": [6577700, "dark grey"] /* stag */ } },
+  9100008: { garment: "Asquith & Fox AQ030 long sleeve polo", colours: { Black: [6577695, "silver"] /* stag */ } },
+  9100009: { garment: "Henbury H718 zip-through cardigan", colours: { "Grey Marl": [6577701, "silver"] /* stag */ } },
+  9100010: { garment: "Henbury HB725 crew neck jumper", colours: { Navy: [6577704, "silver"] /* stag */ } },
+  9100011: { garment: "Result 140M softshell jacket", colours: { Azure: [6577702, "silver"] /* stag */ } },
+  9100012: {
+    garment: "Asquith & Fox AQ051 chino shorts (stag by left front pocket)",
+    colours: { Black: [6577687, "silver"], Slate: [6577689, "silver"], White: [6577691, "dark grey"], Natural: [6577692, "dark grey"], Navy: [6577693, "silver"] },
   },
 };
 
-// v2 styles, all "needs design number" (25 Oct 2026). Add e.g.
+// v2 styles (25 Oct 2026): only the stag-only colours above are saved (31 Oct); other colours need design numbers. Add e.g.
 //   9100006: { garment: "Henbury HB517 short sleeve Oxford", colours: { White: [1234567, "dark grey"] } },
 // 9100006 Short Sleeve Oxford (HB517) · 9100007 Mercerised Polo (AQ101) · 9100008 Long Sleeve Polo (AQ030)
 // 9100009 Zip-Through Cardigan (H718) · 9100010 Crew Neck Jumper (HB725) · 9100011 Softshell Jacket (140M)
@@ -41,9 +52,7 @@ const DESIGNS: Record<number, { garment: string; colours: Record<string, [design
  * checkout refuses it). To release one, re-save it in dark grey, update its number, and remove it here.
  */
 export const HELD = new Set<number>([
-  6571327, // Chinos Natural
-  // Chinos: all colours still stitch the old mountain logo (31 Oct 2026). Remove these once re-saved with the stag.
-  6571317, 6571322, 6571332, 6571335,
+  // 31 Oct 2026: chinos re-saved stag-only (incl. Natural in dark grey), so nothing is held.
 ]);
 
 export type MadeInfo = { design: number; garment: string; logo: string };
