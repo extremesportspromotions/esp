@@ -49,7 +49,7 @@ const STANDARD_VIEWS: { view: PhotoView; file: string }[] = [
 ];
 export const MODEL_NOTE = "Illustration, colour may vary slightly";
 /** Devonshire v7 (31 Oct 2026): colours with a front-on-model photo (<photo>-model.webp). */
-const V7_MODEL = new Set("crewknit-black crewknit-grey-marl gilet-azure gilet-black gilet-classic-red gilet-titanium oxford-ls-black oxford-ls-blue oxford-ss-black oxford-ss-blue oxford-ss-white polo-ls-black polo-ls-charcoal polo-ls-navy polo-ls-white polo-ss-black polo-ss-heather-grey polo-ss-white quarterzip-black softshell-azure softshell-black vcardigan-black vcardigan-navy zipcardigan-black zipcardigan-grey-marl".split(" "));
+const V7_MODEL = new Set("crewknit-black crewknit-grey-marl crewknit-navy gilet-azure gilet-black gilet-classic-red gilet-french-navy gilet-titanium oxford-ls-black oxford-ls-blue oxford-ls-white oxford-ss-black oxford-ss-blue oxford-ss-white polo-ls-black polo-ls-charcoal polo-ls-navy polo-ls-white polo-ss-black polo-ss-heather-grey polo-ss-navy polo-ss-white quarterzip-black quarterzip-charcoal quarterzip-navy softshell-azure softshell-black softshell-french-navy vcardigan-black vcardigan-grey-marl vcardigan-navy zipcardigan-black zipcardigan-grey-marl zipcardigan-navy".split(" "));
 /** Colour each card opens on (display order only; variant ids still follow `designs`). */
 const OPEN: Partial<Record<keyof typeof SMART_CASUAL_PRICES, string>> = {
   oxford: "Black", quarterZip: "Charcoal", cardigan: "Black", gilet: "Titanium", chinos: "Royal", ssOxford: "Blue",
@@ -230,7 +230,7 @@ export const smartCasual: Merch[] = defs.map((p) => {
     return `ESP ${it}, ${view === "front" ? `front, with the ${logo}` : view === "side" ? "side view" : "back"}`;
   };
   const ph = (c: Design, view: PhotoView, file: string): MerchPhoto => ({
-    src: view === "model" && file === "model" && V7_MODEL.has(c.photo) && !(p.key === "chinos" || p.key === "chinoShorts") ? `/shop/v8b/sc-${c.photo}-v8b.webp` : `/shop/sc/v2/${c.photo}-${file}.webp`,
+    src: view === "model" && file === "model" && V7_MODEL.has(c.photo) && !(p.key === "chinos" || p.key === "chinoShorts") ? `/shop/v8c/sc-${c.photo}-v8c.webp` : `/shop/sc/v2/${c.photo}-${file}.webp`,
     alt: alt(c, view),
     view,
     ...(view === "model" ? { note: MODEL_NOTE } : {}),

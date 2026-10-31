@@ -37,6 +37,8 @@ const DESIGNS: Record<number, { garment: string; colours: Record<string, [design
  */
 export const HELD = new Set<number>([
   6571327, // Chinos Natural
+  // Chinos: all colours still stitch the old mountain logo (31 Oct 2026). Remove these once re-saved with the stag.
+  6571317, 6571322, 6571332, 6571335,
 ]);
 
 export type MadeInfo = { design: number; garment: string; logo: string };
