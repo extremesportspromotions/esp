@@ -156,7 +156,7 @@ export function MerchCard({ p }: { p: Merch }) {
   return (
     <li className="flex flex-col overflow-hidden rounded-xl border border-[#1C1917]/10 bg-white">
       <button type="button" onClick={() => openView(p)} aria-label={`View ${p.name}: photos and details`} className="group relative block aspect-square overflow-hidden bg-[#F4F6F8] text-left focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1C1917]">
-        <Image src={k.colors.length > 1 && k.color !== k.colors[0].name ? k.photos[0].src : p.img} alt={`ESP ${p.name}, ${(k.color ?? "black").toLowerCase()}, with the mountain logo`} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px" loading="lazy" className="object-contain p-2 transition duration-300 group-hover:scale-[1.03]" />
+        <Image src={k.colors.length > 1 && k.color !== k.colors[0].name ? k.photos[0].src : p.img} alt={`ESP ${p.name}, ${(k.color ?? "black").toLowerCase()}, with the Devonshire stag logo`} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px" loading="lazy" className="object-contain p-2 transition duration-300 group-hover:scale-[1.03]" />
         {(k.allNotYet || k.notYet) && (
           <span data-notyet-badge className="absolute left-2 top-2 rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-900 shadow-sm ring-1 ring-amber-700/30">{NOT_YET}</span>
         )}

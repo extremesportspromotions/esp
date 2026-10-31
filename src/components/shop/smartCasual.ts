@@ -48,6 +48,13 @@ const STANDARD_VIEWS: { view: PhotoView; file: string }[] = [
   { view: "close-up", file: "detail" },
 ];
 export const MODEL_NOTE = "Illustration, colour may vary slightly";
+/** Devonshire v7 (31 Oct 2026): colours with a front-on-model photo (<photo>-model.webp). */
+const V7_MODEL = new Set("chinos-black chinos-natural chinos-navy chinos-royal chinos-slate shorts-black shorts-natural shorts-navy shorts-slate shorts-white crewknit-black crewknit-grey-marl gilet-azure gilet-black gilet-classic-red gilet-titanium oxford-ls-black oxford-ls-blue oxford-ss-black oxford-ss-blue oxford-ss-white polo-ls-black polo-ls-charcoal polo-ls-navy polo-ls-white polo-ss-black polo-ss-heather-grey polo-ss-white quarterzip-black softshell-azure softshell-black vcardigan-black vcardigan-navy zipcardigan-black zipcardigan-grey-marl".split(" "));
+/** Colour each card opens on (display order only; variant ids still follow `designs`). */
+const OPEN: Partial<Record<keyof typeof SMART_CASUAL_PRICES, string>> = {
+  oxford: "Black", quarterZip: "Charcoal", cardigan: "Black", gilet: "Titanium", chinos: "Royal", ssOxford: "Blue",
+  mercPolo: "Heather Grey", lsPolo: "White", zipCardigan: "Grey Marl", crewJumper: "Navy", softshellJacket: "Azure", chinoShorts: "Natural",
+};
 export const SC_EXTRA_PHOTOS: Record<string, { view: PhotoView; file: string }[]> = {
   // Devonshire v6 (31 Oct 2026): second model shot
   "oxford-ls-white": [{ view: "model", file: "model2" }],
@@ -69,7 +76,7 @@ type Def = {
 const SG = "silver-grey" as const;
 const DG = "dark grey" as const;
 const d = (colour: string, hex: string, thread: Design["thread"], photo: string, o: { light?: boolean; model?: boolean } = {}): Design => ({ colour, hex, thread, photo, ...o });
-const CHEST = "Embroidered mountain logo on the left chest";
+const CHEST = "Embroidered Devonshire stag logo on the left chest";
 
 /**
  * NEVER reorder or remove existing colours (the variant ids depend on the position): add new colours at the end.
@@ -89,7 +96,7 @@ const defs: Def[] = [
   {
     pid: 9100002, key: "quarterZip", name: "Quarter-Zip Knit", code: "PR695",
     sizes: TOPS_XS_4XL,
-    details: ["Knitted quarter-zip jumper, 55% cotton and 45% acrylic", "Fine knit with ribbed collar, cuffs and hem", "Embroidered silver mountain logo on the left chest"],
+    details: ["Knitted quarter-zip jumper, 55% cotton and 45% acrylic", "Fine knit with ribbed collar, cuffs and hem", "Embroidered silver Devonshire stag logo on the left chest"],
     designs: [
       d("Black", "#161616", SG, "quarterzip-black"),
       d("Charcoal", "#38383D", SG, "quarterzip-charcoal", { model: true }),
@@ -218,8 +225,8 @@ export const smartCasual: Merch[] = defs.map((p) => {
   const alt = (c: Design, view: PhotoView) => {
     const it = `${p.name} in ${c.colour.toLowerCase()}`;
     if (view === "model") return `Illustration of a model wearing the ESP ${it}`;
-    if (view === "close-up") return `Close-up of the embroidered mountain logo on the ESP ${it}`;
-    return `ESP ${it}, ${view === "front" ? "front, with the embroidered mountain logo" : view === "side" ? "side view" : "back"}`;
+    if (view === "close-up") return `Close-up of the embroidered Devonshire stag logo on the ESP ${it}`;
+    return `ESP ${it}, ${view === "front" ? "front, with the embroidered Devonshire stag logo" : view === "side" ? "side view" : "back"}`;
   };
   const ph = (c: Design, view: PhotoView, file: string): MerchPhoto => ({
     src: `/shop/sc/v2/${c.photo}-${file}.webp`,
@@ -229,18 +236,20 @@ export const smartCasual: Merch[] = defs.map((p) => {
   });
   // Devonshire v6 (31 Oct 2026): the model photo (if any) is shown first.
   const photos = (c: Design): MerchPhoto[] => [
-    ...(c.model ? [ph(c, "model", "model")] : []),
+    ...(c.model || V7_MODEL.has(c.photo) ? [ph(c, "model", "model")] : []),
     ...STANDARD_VIEWS.map((x) => ph(c, x.view, x.file)),
     ...(SC_EXTRA_PHOTOS[c.photo] ?? []).map((x) => ph(c, x.view, x.file)),
   ];
+  const first = p.designs.find((c) => c.colour === OPEN[p.key]) ?? p.designs[0];
+  const shown = [first, ...p.designs.filter((c) => c !== first)];
   return {
     pid: p.pid,
     name: p.name,
     cat: "smartcasual",
-    img: photos(p.designs[0])[0].src,
-    gallery: photos(p.designs[0]),
+    img: photos(first)[0].src,
+    gallery: photos(first),
     details: p.details,
-    colors: p.designs.map((c) => ({ name: c.colour, hex: c.hex, light: c.light || undefined, gallery: photos(c) })),
+    colors: shown.map((c) => ({ name: c.colour, hex: c.hex, light: c.light || undefined, gallery: photos(c) })),
     variants,
     made: true,
   };
