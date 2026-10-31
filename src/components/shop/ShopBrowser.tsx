@@ -5,7 +5,7 @@ import Image from "next/image";
 import StagMark from "./StagMark";
 import { categories, products, type Category, type Product } from "./products";
 import { catalogue as merch } from "./catalogue";
-import { MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
+import { DENIM_PIDS, MADE_DELIVERY_PENCE, MADE_LEAD, MODEL_NOTE } from "./smartCasual";
 import { BagProvider, BagButton } from "./Bag";
 import { MerchCard, NotYetContext } from "./MerchCard";
 
@@ -111,7 +111,8 @@ function orderable(list: typeof merch, hidden: Set<string>) {
 export default function ShopBrowser({ notYet = [], preview = false }: { notYet?: NotYet; preview?: boolean }) {
   const [cat, setCat] = useState<Filter>("all");
   const [sub, setSub] = useState<string | null>(null);
-  const kitAll = orderable(merch, new Set(notYet.map((x) => x.key)));
+  // Preview only: denim shows (not orderable) so reviewers can see it; the live site hides it until its designs exist.
+  const kitAll = orderable(merch, new Set(notYet.filter((x) => !(preview && DENIM_PIDS.has(Number(x.key.split(":")[0])))).map((x) => x.key)));
 
   // Tabs and category tiles are plain #hash links, so they jump to the section without JS.
   // With JS, the hash selects the tab and filters the grid.
@@ -187,9 +188,18 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
               {c.id === "gear" && <GearBanner />}
               {c.id === "gear" && <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">Some links on this page are affiliate links. If you buy through them, ESP may earn a small commission at no extra cost to you. We only link to gear we&apos;d recommend.</p>}
               <ul className={grid}>
-                {kit.map((p) => <MerchCard key={p.pid} p={p} />)}
+                {kit.filter((p) => p.sub !== "Denim").map((p) => <MerchCard key={p.pid} p={p} />)}
                 {items.map((p) => <Card key={`${p.cat}-${p.name}`} p={p} />)}
               </ul>
+              {kit.some((p) => p.sub === "Denim") && (
+                <div id="denim" data-denim className="mt-8 scroll-mt-[220px] lg:scroll-mt-[170px]">
+                  <h3 className="font-display mb-1 text-lg font-bold text-[#1C1917] sm:text-xl">Denim</h3>
+                  <p className="mb-3 text-[13px] italic text-[#1C1917]/75">{MODEL_NOTE}</p>
+                  <ul className={grid}>
+                    {kit.filter((p) => p.sub === "Denim").map((p) => <MerchCard key={p.pid} p={p} />)}
+                  </ul>
+                </div>
+              )}
             </section>
           );
         })}

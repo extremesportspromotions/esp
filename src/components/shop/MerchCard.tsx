@@ -89,7 +89,7 @@ function usePick(p: Merch) {
   return { p, variants, colors, color, setColor, photos, notYet, allNotYet, someNotYet, notYetSet, soldOut, vid, setVid, qty, setQty, added, needSize, setNeedSize, price, addNow };
 }
 
-const isSize = (label: string) => /^(XS|S|M|L|XL|[2-5]XL)$|^W\d\d /.test(label);
+const isSize = (label: string) => /^(XS|S|M|L|XL|[2-5]XL)$|^W\d\d |^UK \d/.test(label);
 
 function BuyForm({ k, big, onAdded }: { k: Pick; big?: boolean; onAdded?: () => void }) {
   const { p, variants, soldOut, notYet, vid, setVid, qty, setQty, added, needSize, setNeedSize, addNow } = k;
