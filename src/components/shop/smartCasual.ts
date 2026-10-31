@@ -49,7 +49,7 @@ const STANDARD_VIEWS: { view: PhotoView; file: string }[] = [
 ];
 export const MODEL_NOTE = "Illustration, colour may vary slightly";
 /** Devonshire v7 (31 Oct 2026): colours with a front-on-model photo (<photo>-model.webp). */
-const V7_MODEL = new Set("crewknit-black crewknit-grey-marl crewknit-navy gilet-azure gilet-black gilet-classic-red gilet-french-navy gilet-titanium oxford-ls-black oxford-ls-blue oxford-ls-white oxford-ss-black oxford-ss-blue oxford-ss-white polo-ls-black polo-ls-charcoal polo-ls-navy polo-ls-white polo-ss-black polo-ss-heather-grey polo-ss-navy polo-ss-white quarterzip-black quarterzip-charcoal quarterzip-navy softshell-azure softshell-black softshell-french-navy vcardigan-black vcardigan-grey-marl vcardigan-navy zipcardigan-black zipcardigan-grey-marl zipcardigan-navy".split(" "));
+const V7_MODEL = new Set("chinos-black chinos-slate chinos-royal chinos-navy chinos-natural shorts-white shorts-natural shorts-slate shorts-navy shorts-black crewknit-black crewknit-grey-marl crewknit-navy gilet-azure gilet-black gilet-classic-red gilet-french-navy gilet-titanium oxford-ls-black oxford-ls-blue oxford-ls-white oxford-ss-black oxford-ss-blue oxford-ss-white polo-ls-black polo-ls-charcoal polo-ls-navy polo-ls-white polo-ss-black polo-ss-heather-grey polo-ss-navy polo-ss-white quarterzip-black quarterzip-charcoal quarterzip-navy softshell-azure softshell-black softshell-french-navy vcardigan-black vcardigan-grey-marl vcardigan-navy zipcardigan-black zipcardigan-grey-marl zipcardigan-navy".split(" "));
 /** Colour each card opens on (display order only; variant ids still follow `designs`). */
 const OPEN: Partial<Record<keyof typeof SMART_CASUAL_PRICES, string>> = {
   oxford: "Black", quarterZip: "Charcoal", cardigan: "Black", gilet: "Titanium", chinos: "Royal", ssOxford: "Blue",
@@ -222,7 +222,7 @@ export const smartCasual: Merch[] = defs.map((p) => {
   const variants: MerchVariant[] = p.designs.flatMap((c, ci) =>
     p.sizes.map((label, i) => ({ id: p.pid * 1000 + ci * 20 + i + 1, vid: 0, label, pence: SMART_CASUAL_PRICES[p.key], color: c.colour })),
   );
-  const logo = p.key === "chinos" || p.key === "chinoShorts" ? "embroidered logo" : "embroidered Devonshire stag logo";
+  const logo = "embroidered Devonshire stag logo";
   const alt = (c: Design, view: PhotoView) => {
     const it = `${p.name} in ${c.colour.toLowerCase()}`;
     if (view === "model") return `Illustration of a model wearing the ESP ${it}`;
@@ -230,14 +230,15 @@ export const smartCasual: Merch[] = defs.map((p) => {
     return `ESP ${it}, ${view === "front" ? `front, with the ${logo}` : view === "side" ? "side view" : "back"}`;
   };
   const ph = (c: Design, view: PhotoView, file: string): MerchPhoto => ({
-    src: view === "model" && file === "model" && V7_MODEL.has(c.photo) && !(p.key === "chinos" || p.key === "chinoShorts") ? `/shop/v8c/sc-${c.photo}-v8c.webp` : `/shop/sc/v2/${c.photo}-${file}.webp`,
+    src: view === "model" && file === "model" && V7_MODEL.has(c.photo) ? `/shop/v8e/sc-${c.photo.replace(/^shorts-/, "chinoshorts-")}-v8e.webp` : `/shop/sc/v2/${c.photo}-${file}.webp`,
     alt: alt(c, view),
     view,
     ...(view === "model" ? { note: MODEL_NOTE } : {}),
   });
   // Devonshire v6 (31 Oct 2026): the model photo (if any) is shown first.
-  // Chinos and shorts still carry the old logo (not decided yet), so they keep their existing photos.
-  const oldLogo = p.key === "chinos" || p.key === "chinoShorts";
+  // v8e (31 Oct 2026): chinos and chino shorts now have stag-only photos too. They stay hidden from the shop
+  // until their stag Clothes2order designs are saved (see HELD / DESIGNS in src/lib/madeDesigns.ts).
+  const oldLogo = false;
   // Everything else shows only the Devonshire stag model photos (old logo photos removed).
   const photos = (c: Design): MerchPhoto[] => oldLogo
     ? [...(c.model ? [ph(c, "model", "model")] : []), ...STANDARD_VIEWS.map((x) => ph(c, x.view, x.file))]
