@@ -28,8 +28,8 @@ const DESIGNS: Record<number, { garment: string; colours: Record<string, [design
 // 9100006 Short Sleeve Oxford (HB517) · 9100007 Mercerised Polo (AQ101) · 9100008 Long Sleeve Polo (AQ030)
 // 9100009 Zip-Through Cardigan (H718) · 9100010 Crew Neck Jumper (HB725) · 9100011 Softshell Jacket (140M)
 // 9100012 Chino Shorts (AQ051)
-// DENIM (31 Oct 2026), stag on the right back pocket, all "needs design number". Add one entry per pid, e.g.
-//   9100013: { garment: "SD001 Leo Straight jeans (stag right back pocket)", colours: { Black: [1234567, "dark grey"] } },
+// DENIM (31 Oct 2026), stag embroidered on the RIGHT back pocket (wearer's right), all "needs design number". Add one entry per pid, e.g.
+//   9100013: { garment: "SD001 Leo Straight jeans (stag on RIGHT back pocket)", colours: { Black: [1234567, "dark grey"] } },
 // 9100013 Leo Straight Black (SD001) · 9100014 Leo Straight Dark Blue Wash (SD001)
 // 9100015 Max Slim Black (SD004) · 9100016 Max Slim Dark Blue Wash (SD004)
 // 9100017 Women's Katy Straight Dark Blue Wash (SD011) · 9100018 Women's Lara Skinny Black (SD014)

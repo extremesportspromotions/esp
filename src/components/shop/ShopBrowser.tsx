@@ -194,8 +194,8 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
                 {items.map((p) => <Card key={`${p.cat}-${p.name}`} p={p} />)}
               </ul>
               {kit.some((p) => p.sub === "Denim") && (
-                <div id="denim" data-denim className="mt-8 scroll-mt-[220px] lg:scroll-mt-[170px]">
-                  <h3 className="font-display mb-1 text-lg font-bold text-[#1C1917] sm:text-xl">Denim</h3>
+                <div id="denim" data-denim className="mt-8 scroll-mt-[170px] lg:scroll-mt-[130px]">
+                  <h3 id="h-denim" className="scroll-mt-[170px] lg:scroll-mt-[130px] font-display mb-1 text-lg font-bold text-[#1C1917] sm:text-xl">Denim</h3>
                   <p className="mb-3 text-[13px] italic text-[#1C1917]/75">{MODEL_NOTE}</p>
                   <ul className={grid}>
                     {kit.filter((p) => p.sub === "Denim").map((p) => <MerchCard key={p.pid} p={p} />)}
