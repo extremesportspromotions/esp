@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LaunchSignup } from "./SiteForms";
 export default function Footer() {
   return (
     <footer className="border-t border-[#1C1917]/10 bg-[#F6EFE3]">
@@ -10,7 +11,7 @@ export default function Footer() {
           </p>
           <nav aria-label="Footer" className="flex flex-wrap gap-4">
             <Link
-              href="/#about"
+              href="/about"
               className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               About
@@ -51,7 +52,17 @@ export default function Footer() {
             >
               Terms
             </Link>
+            <Link
+              href="/refunds"
+              className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Refunds
+            </Link>
           </nav>
+        </div>
+        <div className="max-w-md">
+          <p className="mb-2 font-semibold text-[#1C1917]/70">Notify me at launch</p>
+          <LaunchSignup compact />
         </div>
         <p>We don&apos;t use advertising or tracking cookies.</p>
       </div>

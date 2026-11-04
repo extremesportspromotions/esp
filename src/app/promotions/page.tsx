@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ClubInterestForm } from "@/components/SiteForms";
 import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
@@ -194,12 +195,8 @@ export default function PromotionsPage() {
 
         <div className="px-6 py-16 text-center sm:py-[70px]">
           <h2 className={h2}>Want to be in one of the first episodes?</h2>
-          <a
-            href="mailto:enquiries@extremesportspromotions.com"
-            className="mt-3 inline-block rounded-full bg-[#c0c0c0] px-8 py-3.5 font-bold text-black hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-          >
-            Get in touch
-          </a>
+          <p className="mx-auto mt-3 max-w-xl text-white/75">Tell us about your club and we&apos;ll get back to you.</p>
+          <ClubInterestForm />
         </div>
       </main>
       <Footer />

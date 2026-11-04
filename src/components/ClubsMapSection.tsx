@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { ClubRequest } from "./SiteForms";
 import { useDeferredValue, useEffect, useId, useMemo, useState } from "react";
 import {
   clubs,
@@ -128,6 +129,7 @@ export default function ClubsMapSection() {
             </a>
             .
           </p>
+          <ClubRequest />
         </div>
 
         <div className="mb-5 flex flex-wrap gap-2" role="tablist" aria-label="Filter clubs by sport">

@@ -1,5 +1,4 @@
 import MatchFeeTable from "./MatchFeeTable";
-import { REFUND_LINE } from "@/lib/payment";
 
 type Step = {
   step: string;
@@ -18,7 +17,6 @@ const steps: Step[] = [
     step: "02",
     title: "Pay the match fee",
     feeTable: true,
-    body: REFUND_LINE,
   },
   {
     step: "03",

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 import { sports } from "@/data/sports";
 import {
   GENERAL_SPORT,
@@ -71,13 +72,16 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
     return acc;
   }, {});
 
+  const [query, setQuery] = useState("");
+  const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
   const filtered = guides.filter(
     (g) =>
       (activeSport === ALL || g.sport === activeSport) &&
-      (!categoryName || g.category === categoryName),
+      (!categoryName || g.category === categoryName) &&
+      terms.every((t) => `${g.title} ${g.sportName} ${g.sport.replace(/-/g, " ")}`.toLowerCase().includes(t)),
   );
 
-  const unfiltered = activeSport === ALL && activeCategory === ALL;
+  const unfiltered = activeSport === ALL && activeCategory === ALL && terms.length === 0;
   const featured = unfiltered ? guides.find((g) => g.slug === featuredSlug) : undefined;
   const rest = featured ? filtered.filter((g) => g.slug !== featured.slug) : filtered;
 
@@ -90,6 +94,19 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
       ) : null}
 
       <div id="browse" className="scroll-mt-24 space-y-4 rounded-2xl border border-[#1C1917]/10 bg-surface/60 p-4 sm:p-5">
+        <div role="search">
+          <label htmlFor="guide-search" className="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-[#1C1917]/55">
+            Search guides
+          </label>
+          <input
+            id="guide-search"
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search by title or sport, e.g. surfing"
+            className="w-full rounded-full border border-[#1C1917]/20 bg-white px-4 py-2.5 text-base text-[#1C1917] placeholder:text-[#1C1917]/40 focus:border-accent focus:outline-none"
+          />
+        </div>
         <div>
           <p id="filter-sport-label" className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1C1917]/55">
             Sport
@@ -132,7 +149,7 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
         <h2 className="font-display text-2xl font-bold text-[#1C1917] sm:text-3xl">
           {unfiltered
             ? "Latest guides"
-            : [activeSport !== ALL ? sportName(activeSport) : null, categoryName].filter(Boolean).join(" · ")}
+            : [activeSport !== ALL ? sportName(activeSport) : null, categoryName, terms.length ? `“${query.trim()}”` : null].filter(Boolean).join(" · ")}
         </h2>
         <p className="text-sm text-[#1C1917]/60" aria-live="polite">
           {filtered.length} {filtered.length === 1 ? "guide" : "guides"}
@@ -151,6 +168,8 @@ export function GuidesBrowserView({ guides, featuredSlug, sport, category }: Vie
               </li>
             ))}
           </ul>
+        ) : filtered.length === 0 && terms.length ? (
+          <p data-no-results className="text-[#1C1917]/60">No guides match that search. Try another word, or clear the search.</p>
         ) : filtered.length === 0 ? (
           <GuidesComingSoon
             sport={activeSport !== ALL && !countsBySport[activeSport] ? activeSport : undefined}

@@ -147,10 +147,10 @@ export default function SportsCarousel() {
         ) : null}
         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
           <Link
-            href="/#how-it-works"
-            className="inline-flex items-center gap-3 border border-white/80 px-6 py-3 text-sm tracking-[0.2em] text-white transition hover:bg-white hover:text-[#0E2141] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C9A96A]"
+            href="/#enquire"
+            className="hidden lg:inline-flex items-center gap-3 border border-white/80 px-6 py-3 text-sm tracking-[0.2em] text-white transition hover:bg-white hover:text-[#0E2141] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C9A96A]"
           >
-            Find a coach <span aria-hidden>→</span>
+            Get matched with a coach <span aria-hidden>→</span>
           </Link>
           <Link href={sport.guide} className="text-sm text-white/90 underline decoration-white/50 underline-offset-4 hover:text-[#E3CD98]">
             Read the {sport.name} guide

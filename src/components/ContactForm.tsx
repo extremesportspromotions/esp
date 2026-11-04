@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FormEvent, useEffect, useId, useMemo, useState } from "react";
 import { sports } from "@/data/sports";
 import { ENQUIRY_EMAIL, ENQUIRY_ENDPOINT } from "@/lib/site";
-import { paymentStatusLabel, startPayment } from "@/lib/payment";
+import { paymentStatusLabel, startPayment, REFUND_LINE, FEE_COVERS } from "@/lib/payment";
 import PaymentStep from "@/components/PaymentStep";
 
 const TOTAL_STEPS = 6;
@@ -498,6 +498,9 @@ export default function ContactForm() {
             Answer a few quick questions so we can match you with the right
             coach. Takes about a minute.
           </p>
+          <p data-qualified className="mt-3 text-sm font-semibold text-[#1C1917]">
+            Qualified coaches only. We check every coach&apos;s qualifications, insurance and references before we introduce you.
+          </p>
           <p className="mt-3 rounded-lg border border-accent/25 bg-accent/10 px-4 py-3 text-sm text-[#1C1917]/75">
             <span className="font-semibold text-accent">Find a coach</span>{" "}
             = send an enquiry below, then get matched. Not looking
@@ -620,6 +623,10 @@ export default function ContactForm() {
                     <p className="mb-4 text-sm text-[#1C1917]/60">
                       Pick the sport you want to train in. Related activities sit under the closest sport, for example skiing under snowboarding and indoor skydiving under skydiving.
                     </p>
+                    <div data-step1-refund className="mb-4 rounded-lg border border-accent/25 bg-accent/10 px-3 py-2 text-sm text-[#1C1917]/80">
+                      <p className="font-semibold text-[#1C1917]">{REFUND_LINE}</p>
+                      <p className="mt-1">{FEE_COVERS} Qualified coaches only.</p>
+                    </div>
                     <div
                       className="grid grid-cols-2 gap-2 sm:grid-cols-3"
                       role="radiogroup"

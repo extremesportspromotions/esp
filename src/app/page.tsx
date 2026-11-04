@@ -8,6 +8,8 @@ import HowItWorks from "@/components/HowItWorks";
 import LatestGuides from "@/components/LatestGuides";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import HomeHero from "@/components/HomeHero";
+import { LaunchSignupSection } from "@/components/SiteForms";
 
 // Only the canonical is set here; title, description and openGraph come from the root layout.
 export const metadata: Metadata = {
@@ -19,6 +21,7 @@ export default function Home() {
     <>
       <TopBar />
       <main className="flex-1">
+        <HomeHero />
         <SportsCarousel />
         <BrandPickLine />
         <ClubsMapSection />
@@ -26,6 +29,7 @@ export default function Home() {
         <ValueProposition />
         <HowItWorks />
         <ContactForm />
+        <LaunchSignupSection />
       </main>
       <Footer />
     </>

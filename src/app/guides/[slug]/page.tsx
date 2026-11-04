@@ -191,6 +191,16 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
                 dangerouslySetInnerHTML={{ __html: guide.html }}
               />
               <GuideClosingLine />
+              <div data-guide-cta className="mt-10 max-w-[70ch] rounded-2xl border border-[#1C1917]/10 bg-surface p-6">
+                <p className="font-display text-xl font-bold text-[#1C1917]">Ready to start{guide.sport !== GENERAL_SPORT ? ` ${guide.sportName.toLowerCase()}` : ""}?</p>
+                <p className="mt-1 text-sm text-[#1C1917]/70">We match you with a qualified UK coach. Qualified coaches only.</p>
+                <a
+                  href={guide.sport !== GENERAL_SPORT ? `/?sport=${guide.sport}#enquire` : "/#enquire"}
+                  className="mt-4 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-bold text-white shadow-lg shadow-accent/30 transition hover:bg-[#0E2141] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  Get matched with a coach
+                </a>
+              </div>
               <div className="mt-12 max-w-[70ch] border-t border-[#1C1917]/10 pt-8">
                 <ShareLinks url={url} title={guide.title} />
               </div>

@@ -1,3 +1,5 @@
+import { REFUND_LINE, FEE_COVERS } from "@/lib/payment";
+
 export const MATCH_FEE_ROWS = [
   { want: "Experience day — one person, one day", fee: "£19" },
   { want: "Become qualified — one person, one club, full course", fee: "£49" },
@@ -21,6 +23,8 @@ export default function MatchFeeTable() {
           </li>
         ))}
       </ul>
+      <p data-refund-line className="mt-2 rounded-md bg-accent/10 px-3 py-2 text-sm font-semibold text-[#1C1917]">{REFUND_LINE}</p>
+      <p className="mt-2 text-xs leading-relaxed text-[#1C1917]/65">{FEE_COVERS}</p>
     </div>
   );
 }

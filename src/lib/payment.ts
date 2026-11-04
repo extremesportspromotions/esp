@@ -18,7 +18,11 @@ export const PAYMENT_MODE: PaymentMode = process.env.NEXT_PUBLIC_STRIPE_PUBLISHA
   ? "stripe-checkout"
   : "email-link";
 
-export const REFUND_LINE = "Full refund if we can't find you a coach within 14 days.";
+export const REFUND_LINE = "Full refund if we can't match you within 14 days.";
+
+/** What the match fee pays for (shown with the fee table and on enquiry step 1). */
+export const FEE_COVERS =
+  "The match fee pays for our work: researching coaches near you, checking their qualifications, insurance and references, matching you with the right one and making the introduction.";
 
 export const PAYMENT_NOTE =
   PAYMENT_MODE === "stripe-checkout"
