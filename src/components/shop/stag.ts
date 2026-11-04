@@ -1,4 +1,5 @@
 import type { Merch, MerchPhoto } from "./merch";
+import { v10Gallery } from "./v10";
 
 /**
  * Devonshire stag mockups (31 Oct 2026) for partner-made products, shown first for the matching colour
@@ -38,7 +39,7 @@ export function withStag(list: Merch[]): Merch[] {
   return list.map((p) => {
     const mk = (colour: string): MerchPhoto[] => {
       const f = `${slug(p.name)}-${slug(colour)}`;
-      if (MODELS.has(f)) return [{ src: `/shop/v9/pp-${f}-v9.webp`, alt: `Model wearing the ESP ${p.name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`, view: "model" }];
+      if (MODELS.has(f)) return v10Gallery(`pp-${f}`, `Model wearing the ESP ${p.name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`);
       return FILES.has(f) ? [{ src: `/shop/pf-stag/${f}.webp`, alt: `ESP ${p.name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`, view: "front" }] : [];
     };
     const details = p.details;
@@ -47,7 +48,7 @@ export function withStag(list: Merch[]): Merch[] {
       const f = `${slug(p.name)}-${one[slug(p.name)] ?? "black"}`;
       const own = FILES.has(f) ? f : undefined;
       const mod = MODELS.has(f) ? f : [...MODELS].find((m) => m.startsWith(slug(p.name) + "-"));
-      const gallery: MerchPhoto[] = mod ? [{ src: `/shop/v9/pp-${mod}-v9.webp`, alt: `ESP ${p.name} with the embroidered Devonshire stag logo`, view: "model" }] : own ? [{ src: `/shop/pf-stag/${own}.webp`, alt: `ESP ${p.name} with the Devonshire stag logo`, view: "front" }] : [];
+      const gallery: MerchPhoto[] = mod ? v10Gallery(`pp-${mod}`, `ESP ${p.name} with the embroidered Devonshire stag logo`) : own ? [{ src: `/shop/pf-stag/${own}.webp`, alt: `ESP ${p.name} with the Devonshire stag logo`, view: "front" }] : [];
       if (!own) HIDDEN.push(`${p.pid}:`);
       return { ...p, img: gallery[0]?.src ?? p.img, gallery, details };
     }
