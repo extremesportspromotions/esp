@@ -9,7 +9,7 @@ import {
   useMap,
 } from "react-leaflet";
 import L from "leaflet";
-import { DUAL_FLYING_NOTE, isDualFlyingClub, type Club } from "@/data/clubs";
+import { DUAL_FLYING_NOTE, INDOOR_SKYDIVING, isDualFlyingClub, isIndoorSkydiving, type Club } from "@/data/clubs";
 import { formatUkPhone, ukPhoneHref } from "@/lib/phone";
 import { sports } from "@/data/sports";
 import "leaflet/dist/leaflet.css";
@@ -78,12 +78,14 @@ export default function ClubsMapInner({ clubs }: { clubs: Club[] }) {
             <div className="min-w-[160px] text-sm text-ink">
               <p className="font-semibold">{c.name}</p>
               <p className="mt-0.5 text-xs opacity-80">{sportName(c.sportId)}</p>
+              {isIndoorSkydiving(c) ? <p data-indoor className="mt-0.5 text-[11px] font-semibold text-blue-800">{INDOOR_SKYDIVING}</p> : null}
               {isDualFlyingClub(c) ? (
                 <p className="mt-0.5 text-[11px] font-semibold text-blue-800">{DUAL_FLYING_NOTE}</p>
               ) : null}
               <p className="text-xs opacity-70">
                 {c.town}
                 {c.region ? `, ${c.region}` : ""}
+                {c.postcode ? ` ${c.postcode}` : ""}
               </p>
               <div className="mt-1 flex flex-col gap-0.5">
                 {c.url ? (

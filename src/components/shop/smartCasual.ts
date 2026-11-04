@@ -48,7 +48,6 @@ const STANDARD_VIEWS: { view: PhotoView; file: string }[] = [
   { view: "side", file: "side" },
   { view: "close-up", file: "detail" },
 ];
-export const MODEL_NOTE = "Illustration, colour may vary slightly";
 /** Devonshire v7 (31 Oct 2026): colours with a front-on-model photo (<photo>-model.webp). */
 const V7_MODEL = new Set("chinos-black chinos-slate chinos-royal chinos-navy chinos-natural shorts-white shorts-natural shorts-slate shorts-navy shorts-black crewknit-black crewknit-grey-marl crewknit-navy gilet-azure gilet-black gilet-classic-red gilet-french-navy gilet-titanium oxford-ls-black oxford-ls-blue oxford-ls-white oxford-ss-black oxford-ss-blue oxford-ss-white polo-ls-black polo-ls-charcoal polo-ls-navy polo-ls-white polo-ss-black polo-ss-heather-grey polo-ss-navy polo-ss-white quarterzip-black quarterzip-charcoal quarterzip-navy softshell-azure softshell-black softshell-french-navy vcardigan-black vcardigan-grey-marl vcardigan-navy zipcardigan-black zipcardigan-grey-marl zipcardigan-navy".split(" "));
 /** Colour each card opens on (display order only; variant ids still follow `designs`). */
@@ -275,7 +274,6 @@ export const smartCasual: Merch[] = defs.map((p) => {
     alt: alt(c, view),
     view,
     // v9: model photos carry their own caption in the image.
-    ...(view === "model" && !V7_MODEL.has(c.photo) ? { note: MODEL_NOTE } : {}),
   });
   // Devonshire v6 (31 Oct 2026): the model photo (if any) is shown first.
   // v8e (31 Oct 2026): chinos and chino shorts now have stag-only photos too. They stay hidden from the shop

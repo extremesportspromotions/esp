@@ -13,7 +13,12 @@ export type Club = {
   email?: string;
   /** Scout's activity tag within the widened sport, e.g. coasteering, bmx, wind-tunnel */
   subActivity?: string;
+  postcode?: string;
 };
+
+/** Label shown on the club list and map pin for indoor wind-tunnel venues. */
+export const INDOOR_SKYDIVING = "Indoor skydiving (wind tunnel)";
+export const isIndoorSkydiving = (c: Club) => c.subActivity === "wind-tunnel";
 
 export const clubs = clubsData as Club[];
 

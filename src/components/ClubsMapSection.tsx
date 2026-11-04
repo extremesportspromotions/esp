@@ -7,7 +7,9 @@ import {
   CLUB_COUNT,
   clubCountsBySport,
   DUAL_FLYING_NOTE,
+  INDOOR_SKYDIVING,
   isDualFlyingClub,
+  isIndoorSkydiving,
   uniqueClubs,
   type Club,
 } from "@/data/clubs";
@@ -73,7 +75,7 @@ export default function ClubsMapSection() {
     return bySport.filter((c) => {
       const sport = sports.find((s) => s.id === c.sportId);
       const hay = norm(
-        [c.name, c.town, c.region, sport?.name, sport?.mapLabel, c.subActivity?.replace(/-/g, " "), isDualFlyingClub(c) ? DUAL_FLYING_NOTE : undefined]
+        [c.name, c.town, c.region, sport?.name, sport?.mapLabel, c.subActivity?.replace(/-/g, " "), isIndoorSkydiving(c) ? `${INDOOR_SKYDIVING} indoor` : undefined, c.postcode, isDualFlyingClub(c) ? DUAL_FLYING_NOTE : undefined]
           .filter(Boolean)
           .join(" "),
       );
@@ -259,7 +261,8 @@ export default function ClubsMapSection() {
                     >
                       <p className="text-sm font-medium text-[#1C1917]">{c.name}</p>
                       <p className="text-xs text-accent/90">{sportLabel(c.sportId)}</p>
-                      {isDualFlyingClub(c) ? (
+                      {isIndoorSkydiving(c) ? <p data-indoor className="mt-0.5 inline-block rounded bg-accent/10 px-1.5 py-0.5 text-[11px] font-semibold text-accent">{INDOOR_SKYDIVING}</p> : null}
+              {isDualFlyingClub(c) ? (
                         <p className="mt-0.5 inline-block rounded bg-[#1C1917]/5 px-1.5 py-0.5 text-[11px] font-semibold text-[#1C1917]/75">
                           {DUAL_FLYING_NOTE}
                         </p>
@@ -267,6 +270,7 @@ export default function ClubsMapSection() {
                       <p className="text-xs text-[#1C1917]/55">
                         {c.town}
                         {c.region ? ` · ${c.region}` : ""}
+                {c.postcode ? ` ${c.postcode}` : ""}
                       </p>
                       <span className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5">
                         {c.url ? (

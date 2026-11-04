@@ -6,6 +6,7 @@ import { type Merch, type MerchPhoto } from "./merch";
 import { gbp, MAX_QTY, OPEN_BAG, useBag } from "./Bag";
 import { MADE_DELIVERY_PENCE, MADE_LEAD, scKey } from "./smartCasual";
 import { Lightbox, viewWord } from "./Lightbox";
+import { lockScroll } from "./scrollLock";
 
 const field = "rounded-md border border-[#1C1917]/25 bg-white px-2 py-1.5 text-[13px] text-[#1C1917]";
 const ink = "text-[#1C1917]";
@@ -189,8 +190,7 @@ function ProductView({ k }: { k: Pick }) {
   const [justAdded, setJustAdded] = useState(false);
 
   useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const unlock = lockScroll();
     const opener = document.activeElement as HTMLElement | null;
     closeRef.current?.focus({ preventScroll: true });
     const onKey = (e: KeyboardEvent) => {
@@ -198,7 +198,7 @@ function ProductView({ k }: { k: Pick }) {
     };
     window.addEventListener("keydown", onKey);
     return () => {
-      document.body.style.overflow = prev;
+      unlock();
       window.removeEventListener("keydown", onKey);
       opener?.focus?.({ preventScroll: true });
     };

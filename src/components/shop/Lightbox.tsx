@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import type { MerchPhoto } from "./merch";
+import { lockScroll } from "./scrollLock";
 
 const VIEW_WORD = { front: "Front", back: "Back", side: "Side", "close-up": "Close-up", model: "On model" } as const;
 export const viewWord = (ph: MerchPhoto) => (ph.view ? VIEW_WORD[ph.view] : undefined);
@@ -23,11 +24,7 @@ export function Lightbox({ photos, start, name, onClose }: { photos: MerchPhoto[
 
   useEffect(() => {
     const el = box.current!;
-    const prevOverflow = document.body.style.overflow;
-    const prevPad = document.body.style.paddingRight;
-    const bar = window.innerWidth - document.documentElement.clientWidth;
-    document.body.style.overflow = "hidden";
-    if (bar > 0) document.body.style.paddingRight = `${bar}px`; // no layout shift on desktop
+    const unlock = lockScroll();
     const opener = document.activeElement as HTMLElement | null;
     el.querySelector<HTMLElement>("[data-lb-close]")?.focus({ preventScroll: true });
     const onKey = (e: KeyboardEvent) => {
@@ -57,8 +54,7 @@ export function Lightbox({ photos, start, name, onClose }: { photos: MerchPhoto[
     window.addEventListener("keydown", onKey, true);
     return () => {
       window.removeEventListener("keydown", onKey, true);
-      document.body.style.overflow = prevOverflow;
-      document.body.style.paddingRight = prevPad;
+      unlock();
       opener?.focus?.({ preventScroll: true });
     };
   }, [n, onClose]);

@@ -2000,11 +2000,12 @@
     "url": "https://www.iflyworld.co.uk/locations/ifly-manchester/",
     "phone": "0161 359 7040",
     "email": "support@iflyworld.co.uk",
-    "subActivity": "wind-tunnel"
+    "subActivity": "wind-tunnel",
+    "postcode": "M41 7JA"
   },
   {
     "id": "skydiving-ifly-birmingham-nec-17268169",
-    "name": "iFLY Birmingham (NEC)",
+    "name": "iFLY Birmingham",
     "sportId": "skydiving",
     "town": "Birmingham",
     "region": "England",
@@ -2013,7 +2014,8 @@
     "url": "https://www.iflyworld.co.uk/locations/ifly-birmingham/",
     "phone": "0161 359 7040",
     "email": "support@iflyworld.co.uk",
-    "subActivity": "wind-tunnel"
+    "subActivity": "wind-tunnel",
+    "postcode": "B40 1NT"
   },
   {
     "id": "skydiving-ifly-milton-keynes-50638000",
@@ -2026,7 +2028,8 @@
     "url": "https://www.iflyworld.co.uk/locations/ifly-milton-keynes/",
     "phone": "0161 359 7040",
     "email": "support@iflyworld.co.uk",
-    "subActivity": "wind-tunnel"
+    "subActivity": "wind-tunnel",
+    "postcode": "MK9 3XA"
   },
   {
     "id": "skydiving-ifly-london-at-the-o2-62727462",
@@ -2039,7 +2042,8 @@
     "url": "https://www.iflyworld.co.uk/locations/ifly-london-at-the-o2/",
     "phone": "0161 359 7040",
     "email": "support@iflyworld.co.uk",
-    "subActivity": "wind-tunnel"
+    "subActivity": "wind-tunnel",
+    "postcode": "SE10 0DX"
   },
   {
     "id": "skydiving-ifly-basingstoke-46832605",
@@ -2052,7 +2056,8 @@
     "url": "https://www.iflyworld.co.uk/locations/ifly-basingstoke/",
     "phone": "0161 359 7040",
     "email": "support@iflyworld.co.uk",
-    "subActivity": "wind-tunnel"
+    "subActivity": "wind-tunnel",
+    "postcode": "RG22 6PG"
   },
   {
     "id": "kayaking-lee-valley-white-water-centre-rafting",
