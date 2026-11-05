@@ -354,6 +354,14 @@ export default function ContactForm() {
       setValues((v) => (v.sport ? v : { ...v, sport: requested }));
     }
   }, []);
+  // /?type=corporate#enquire (Corporate and Teams page) shows a group heading.
+  const [corporate, setCorporate] = useState(false);
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get("type") === "corporate") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setCorporate(true);
+    }
+  }, []);
   const [status, setStatus] = useState<SendStatus>("idle");
   // True once the browser is on its way to Stripe Checkout.
   const [payRedirect, setPayRedirect] = useState(false);
@@ -497,8 +505,13 @@ export default function ContactForm() {
             Enquire
           </p>
           <h2 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">
-            Ready to train with a pro?
+            {corporate ? "Tell us about your team" : "Ready to train with a pro?"}
           </h2>
+          {corporate && (
+            <p className="mt-3 inline-block rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-sm font-semibold text-accent">
+              Enquiry type: Group / corporate
+            </p>
+          )}
           <p className="mt-4 text-base leading-relaxed text-[#1C1917]/75">
             Answer a few quick questions so we can match you with the right
             coach. Takes about a minute.

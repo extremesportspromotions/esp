@@ -74,7 +74,7 @@ export default function CorporateTeamsPage() {
                 <tr className="border-b border-[#1C1917]/10"><td className="py-2 pr-3">ESP match fee (1 group of up to 5, teams, clubs and groups rate)</td><td className="py-2 pr-3">ESP</td><td className="py-2">£99</td></tr>
                 <tr className="border-b border-[#1C1917]/10"><td className="py-2 pr-3">Club activity, two days</td><td className="py-2 pr-3">The club, directly</td><td className="py-2">£1,000</td></tr>
                 <tr className="border-b border-[#1C1917]/10"><td className="py-2 pr-3">Hotel, 5 rooms x 2 nights at £80–£110 per room per night</td><td className="py-2 pr-3">The hotel or booking site, directly</td><td className="py-2">£800–£1,100</td></tr>
-                <tr><td className="py-2 pr-3 font-bold">Example total</td><td /><td className="py-2 font-bold">£1,899–£2,199</td></tr>
+                <tr><td className="py-2 pr-3 font-bold">Example total</td><td className="py-2 pr-3">ESP, the club and the hotel</td><td className="py-2 font-bold">£1,899–£2,199</td></tr>
               </tbody>
             </table>
           </div>
