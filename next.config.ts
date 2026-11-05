@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
       headers: immutable,
     }));
   },
-  async redirects() {
-    return [{ source: "/about", destination: "/#about", permanent: false }];
-  },
   images: {
     remotePatterns: [
       {
