@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Corporate and Teams Programmes | Extreme Sports Promotions",
   description:
-    "Team days and weekends in UK extreme sports with qualified, insured clubs and coaches. £99 match fee per group of up to 5 people.",
+    "Weekdays, away days and weekends in UK extreme sports with qualified, insured clubs and coaches. Match fee from £99 per group of up to 5 people.",
   alternates: { canonical: "/corporate-teams" },
 };
 
@@ -46,8 +46,9 @@ export default function CorporateTeamsPage() {
             <h2>What our match fee covers</h2>
           </div>
           <div className="mt-4 rounded-2xl border border-accent/30 bg-white p-5 shadow-sm sm:p-6">
-            <p className="font-display text-2xl font-bold text-[#1C1917]">£99 <span className="text-base font-semibold text-[#1C1917]/70">per group of up to 5 people</span></p>
-            <p className="mt-2 text-[#1C1917]/80">Bigger team? It&apos;s £99 for each group of up to 5, so a team of 10 is £198 and a team of 12 is £297.</p>
+            <p className="font-display text-xl font-bold text-[#1C1917]">Teams, clubs and groups: £99 <span className="text-base font-semibold text-[#1C1917]/70">per group of up to 5 people</span></p>
+            <p className="font-display mt-2 text-xl font-bold text-[#1C1917]">Companies: £199 <span className="text-base font-semibold text-[#1C1917]/70">per group of up to 5 people, with one named contact and an invoice for your accounts.</span></p>
+            <p className="mt-3 text-[#1C1917]/80">Bigger team? The fee is for each group of up to 5, so for a team of 10 the match fee is £198 for a team, club or group, or £398 for a company.</p>
             <ul className="mt-4 list-disc space-y-1 pl-5 text-[#1C1917]/80">
               <li>Finding and checking the right club for your group and sport</li>
               <li>Checking the club&apos;s and coaches&apos; qualifications, insurance and references before we introduce you, and confirming the right coach-to-participant ratios</li>
@@ -70,7 +71,7 @@ export default function CorporateTeamsPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-[#1C1917]/10"><td className="py-2 pr-3">ESP match fee (1 group of up to 5)</td><td className="py-2 pr-3">ESP</td><td className="py-2">£99</td></tr>
+                <tr className="border-b border-[#1C1917]/10"><td className="py-2 pr-3">ESP match fee (1 group of up to 5, teams, clubs and groups rate)</td><td className="py-2 pr-3">ESP</td><td className="py-2">£99</td></tr>
                 <tr className="border-b border-[#1C1917]/10"><td className="py-2 pr-3">Club activity, two days</td><td className="py-2 pr-3">The club, directly</td><td className="py-2">£1,000</td></tr>
                 <tr className="border-b border-[#1C1917]/10"><td className="py-2 pr-3">Hotel, 5 rooms x 2 nights at £80–£110 per room per night</td><td className="py-2 pr-3">The hotel or booking site, directly</td><td className="py-2">£800–£1,100</td></tr>
                 <tr><td className="py-2 pr-3 font-bold">Example total</td><td /><td className="py-2 font-bold">£1,899–£2,199</td></tr>
@@ -78,6 +79,7 @@ export default function CorporateTeamsPage() {
             </table>
           </div>
           <div className="guide-prose prose mt-4">
+            <p>For a company, the ESP match fee in this example is £199, making the example total £1,999–£2,299.</p>
             <p>Your hotel is booked separately by you, at the hotel&apos;s normal price. We don&apos;t sell activities and accommodation together as one package.</p>
 
             <h2>Optional extras</h2>
@@ -86,7 +88,7 @@ export default function CorporateTeamsPage() {
           </div>
           <section aria-label="Places to stay" className="mt-6 rounded-2xl border border-[#1C1917]/15 bg-[#EDE4D3] p-5 sm:p-6">
             <h3 className="font-display text-xl font-bold text-[#1C1917]">Places to stay</h3>
-            <p className="mt-1 text-sm font-semibold text-[#1C1917]/70">Not included in the £99 match fee.</p>
+            <p className="mt-1 text-sm font-semibold text-[#1C1917]/70">Not included in the match fee.</p>
             <p className="mt-3 text-[#1C1917]/80">We can point you to hotels near the venue through Holiday Inn (IHG) and Booking.com. You book and pay the hotel directly at its normal price.</p>
             <p className="mt-3 text-sm text-[#1C1917]/70">Once your club and dates are confirmed, we can send a short list of nearby hotels. We may earn a small commission if you book through those links.</p>
           </section>
