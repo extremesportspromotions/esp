@@ -154,8 +154,13 @@ function buildPayload(values: QuizState, honey: string) {
   const sportName = sport ? (sport.mapLabel ?? sport.name) : values.sport;
   const pageUrl = typeof window === "undefined" ? "" : window.location.href;
   const under18 = values.ageBand === UNDER_18;
+  // /?type=corporate#enquire (from the Corporate and Teams page) marks the enquiry.
+  const corporate =
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).get("type") === "corporate";
   return {
-    _subject: enquirySubject(values.sport),
+    _subject: (corporate ? "[Group / corporate] " : "") + enquirySubject(values.sport),
+    "Enquiry type": corporate ? "Group / corporate" : "Individual",
     _replyto: values.email.trim(),
     _template: "table",
     _captcha: "false",

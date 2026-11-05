@@ -23,6 +23,12 @@ export default function Footer() {
               Guides
             </Link>
             <Link
+              href="/corporate-teams"
+              className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              Corporate and Teams
+            </Link>
+            <Link
               href="/#find-a-club"
               className="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
