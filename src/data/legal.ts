@@ -8,7 +8,7 @@ export type LegalDoc = { slug: string; title: string; eyebrow: string; intro: st
 
 const EMAIL = "enquiries@extremesportspromotions.com";
 const WHO =
-  "Extreme Sports Promotions (\"ESP\", \"we\", \"us\") is run by Matthew Thornton, trading as [trading status, e.g. sole trader or limited company name]. [Company number, if a limited company]. Our address is [registered business address]. You can contact us at " +
+  "Extreme Sports Promotions (\"ESP\", \"we\", \"us\") is run by Matthew Thornton, trading as Extreme Sports Promotions (sole trader). Our address is [business address – a business address service will be used; no home address]. You can contact us at " +
   EMAIL +
   ".";
 
@@ -37,7 +37,7 @@ export const TERMS: LegalDoc = {
           "Group experience day (a party, one taster day): £49",
           "Group qualification (team building, become qualified): £99",
         ],
-        "Prices include any VAT that applies. [Confirm whether ESP is VAT registered.]",
+        "ESP is not VAT registered, so prices do not include VAT.",
         "Card payments are taken by Stripe, our payment provider. We never see or store your full card details.",
         "Full refund if we can't match you within 14 days of your payment. See our Refund policy for the details.",
       ],
