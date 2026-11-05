@@ -226,7 +226,7 @@ All under the Pexels licence (free for commercial use, no attribution required).
 
 | File | Used on | Author | Licence | Source |
 | --- | --- | --- | --- | --- |
-| `public/guides/wingsuit-flying-for-beginners-uk-hero.jpg` | Wingsuit beginner guide hero, wingsuit hub header and hub tile | Alpskydive | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Coaching wingsuit, Freefly Rob, Verbier, Alpskydive](https://commons.wikimedia.org/wiki/File:Coaching_wingsuit,_Freefly_Rob,_Verbier,_Alpskydive.jpg) |
+| `public/guides/wingsuit-flying-for-beginners-uk-hero.jpg` | Wingsuit beginner guide hero, wingsuit hub header and hub tile | Marc Brunet | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Wingsuit Flyer Marc Brunet](https://commons.wikimedia.org/wiki/File:Wingsuit_Flyer_Marc_Brunet.jpg) |
 | `public/guides/wingsuit-ws1-ws2-uk-hero.jpg` | WS1 and WS2 guide hero | Wingsuiting | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Wingsuit Flying over Langar Airfield UK](https://commons.wikimedia.org/wiki/File:Wingsuit_Flying_over_Langar_Airfield_UK.jpg) |
 | `public/guides/wingsuit-competitions-uk-hero.jpg` | Wingsuit competitions guide hero | Gsmcenter | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [Wingsuit Performace Dawid Winczewski](https://commons.wikimedia.org/wiki/File:Wingsuit_Performace_Dawid_Winczewski.jpg) |
 | `public/guides/wingsuit-kit-safety-uk-hero.jpg` | Wingsuit kit, costs and safety guide hero | Richard Schneider | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | [Dubai Wingsuit Flying Trip (7623578306)](https://commons.wikimedia.org/wiki/File:Dubai_Wingsuit_Flying_Trip_(7623578306).jpg) |

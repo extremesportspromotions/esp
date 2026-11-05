@@ -6,15 +6,15 @@ sport: wingsuit-flying
 category: Getting started
 author: ESP Editorial
 date: 2026-10-03
-heroAlt: "Wingsuit flyer in a helmet gliding away from a helicopter high above snowy mountains"
+heroAlt: "Wingsuit flyer Marc Brunet in freefall, arms and legs outstretched"
 heroImage: "/guides/wingsuit-flying-for-beginners-uk-hero.jpg"
 heroCredit:
-  title: "Coaching wingsuit, Freefly Rob, Verbier, Alpskydive"
-  author: "Alpskydive"
-  licence: "CC BY-SA 4.0"
-  licenceUrl: "https://creativecommons.org/licenses/by-sa/4.0/"
+  title: "Wingsuit Flyer Marc Brunet"
+  author: "Marc Brunet"
+  licence: "CC BY-SA 3.0"
+  licenceUrl: "https://creativecommons.org/licenses/by-sa/3.0/"
   source: "Wikimedia Commons"
-  sourceUrl: "https://commons.wikimedia.org/wiki/File:Coaching_wingsuit,_Freefly_Rob,_Verbier,_Alpskydive.jpg"
+  sourceUrl: "https://commons.wikimedia.org/wiki/File:Wingsuit_Flyer_Marc_Brunet.jpg"
 featured: false
 draft: false
 ---

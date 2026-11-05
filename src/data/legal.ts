@@ -17,7 +17,7 @@ export const TERMS: LegalDoc = {
   title: "Terms",
   eyebrow: "Draft terms",
   intro:
-    "These terms explain how Extreme Sports Promotions works: our coach matching service, the match fee, and buying Devonshire clothing from our shop. Please read them before you pay. Last updated: [date these terms take effect].",
+    "These terms explain how Extreme Sports Promotions works: our coach matching service, the match fee, and buying Devonshire clothing from our shop. Please read them before you pay. Last updated: 5 November 2026.",
   sections: [
     { h: "Who we are", body: [WHO] },
     {
@@ -101,7 +101,7 @@ export const REFUNDS: LegalDoc = {
   slug: "refunds",
   title: "Refund policy",
   eyebrow: "Draft refund policy",
-  intro: "How refunds work for the match fee and for Devonshire shop orders. Last updated: [date this policy takes effect].",
+  intro: "How refunds work for the match fee and for Devonshire shop orders. Last updated: 5 November 2026.",
   sections: [
     {
       h: "Match fee: our 14-day promise",
@@ -145,7 +145,7 @@ export const PRIVACY: LegalDoc = {
   title: "Privacy notice",
   eyebrow: "Your privacy",
   intro:
-    "This notice explains what personal details ESP collects, why, who we share them with, how long we keep them and your rights under UK data protection law (the UK GDPR and the Data Protection Act 2018). Last updated: [date this notice takes effect].",
+    "This notice explains what personal details ESP collects, why, who we share them with, how long we keep them and your rights under UK data protection law (the UK GDPR and the Data Protection Act 2018). Last updated: 5 November 2026.",
   sections: [
     {
       h: "Who we are",
