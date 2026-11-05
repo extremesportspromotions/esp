@@ -50,11 +50,12 @@ export default function CorporateTeamsPage() {
             <p className="mt-2 text-[#1C1917]/80">Bigger team? It&apos;s £99 for each group of up to 5, so a team of 10 is £198 and a team of 12 is £297.</p>
             <ul className="mt-4 list-disc space-y-1 pl-5 text-[#1C1917]/80">
               <li>Finding and checking the right club for your group and sport</li>
-              <li>Confirming qualified coaches and the right coach-to-participant ratios</li>
+              <li>Checking the club&apos;s and coaches&apos; qualifications, insurance and references before we introduce you, and confirming the right coach-to-participant ratios</li>
               <li>Agreeing dates and timings</li>
               <li>Preparing the venue and the plan for the day</li>
               <li>One point of contact from first enquiry to the day itself</li>
             </ul>
+            <p className="mt-4 text-sm text-[#1C1917]/70">We do these checks for you. That checking is part of what the match fee pays for.</p>
           </div>
 
           <div className="guide-prose prose mt-10">
@@ -87,6 +88,7 @@ export default function CorporateTeamsPage() {
             <h3 className="font-display text-xl font-bold text-[#1C1917]">Places to stay</h3>
             <p className="mt-1 text-sm font-semibold text-[#1C1917]/70">Not included in the £99 match fee.</p>
             <p className="mt-3 text-[#1C1917]/80">We can point you to hotels near the venue through Holiday Inn (IHG) and Booking.com. You book and pay the hotel directly at its normal price.</p>
+            <p className="mt-3 text-sm text-[#1C1917]/70">Once your club and dates are confirmed, we can send a short list of nearby hotels. We may earn a small commission if you book through those links.</p>
           </section>
           <div className="guide-prose prose mt-6">
             <h3>Insurance</h3>
@@ -101,7 +103,6 @@ export default function CorporateTeamsPage() {
           <Link href={ENQUIRE} className="mt-6 inline-block w-full rounded-full bg-accent px-6 py-3 text-center font-semibold text-white shadow-md shadow-accent/20 hover:opacity-90 sm:w-auto">
             Send us an enquiry
           </Link>
-          <p className="mt-10 border-t border-[#1C1917]/10 pt-4 text-sm italic text-[#1C1917]/60">Some links on this page are affiliate links. If you book through them, ESP may earn a small commission. You pay the same price.</p>
         </div>
       </main>
       <Footer />
