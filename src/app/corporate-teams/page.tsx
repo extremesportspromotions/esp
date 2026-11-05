@@ -22,7 +22,7 @@ export default function CorporateTeamsPage() {
           <h1 className="font-display mt-2 text-3xl font-bold text-[#1C1917] sm:text-4xl">Corporate and Teams Programmes</h1>
           <p className="mt-4 text-lg font-semibold text-[#1C1917]">We organise. The club delivers.</p>
           <div className="guide-prose prose mt-8">
-            <p>Take your team off the spreadsheet and onto the water, the mountain or the trail. Extreme Sports Promotions sets up team days and weekends in UK extreme sports with qualified, insured clubs and coaches. You turn up, the club gets you going, and everyone goes home with a story.</p>
+            <p>Take your team off the spreadsheet and onto the water, the mountain or the trail. Extreme Sports Promotions sets up single weekdays, team away days and weekends in UK extreme sports with qualified, insured clubs and coaches. You turn up, the club gets you going, and everyone goes home with a story.</p>
 
             <h2>Who it&apos;s for</h2>
             <ul>
@@ -37,7 +37,7 @@ export default function CorporateTeamsPage() {
 
             <h2>How it works</h2>
             <ol>
-              <li><strong>Tell us about your group.</strong> Numbers, dates, location, the sport you fancy and how adventurous you&apos;re feeling.</li>
+              <li><strong>Tell us about your group.</strong> Numbers, whether you want a weekday, an away day or a weekend, dates, location, the sport you fancy and how adventurous you&apos;re feeling.</li>
               <li><strong>We match you with a club.</strong> We find a qualified UK club ready for your group, confirm coaches and ratios, and prepare the venue and timings.</li>
               <li><strong>You book the club.</strong> You book and pay the club directly, so you know exactly what you&apos;re paying for.</li>
               <li><strong>The club delivers.</strong> You arrive, kit up and get stuck in. We&apos;re your one point of contact from start to finish.</li>
