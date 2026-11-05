@@ -70,7 +70,7 @@ export const TERMS: LegalDoc = {
         "Devonshire is the clothing brand of Extreme Sports Promotions. Each item is made to order for you once you pay, so please allow time for making and UK delivery. Delivery costs and estimated times are shown in your bag before you pay.",
         "We deliver to UK addresses only. Payment is taken by Stripe at checkout. Our contract for goods starts when we email you to confirm your order.",
         "Product photos show how items look, but colours can vary slightly between screens.",
-        "You can cancel a shop order within 14 days of receiving it. See our Refund policy for how returns and refunds work.",
+        "You can cancel a shop order within 14 days of receiving it. Change-of-mind returns must be unworn with the tags attached, and you pay the return postage. Faulty, damaged or wrong items are replaced or refunded at ESP's cost, including return postage. See our Refund policy for the full details.",
       ],
     },
     {
@@ -121,20 +121,22 @@ export const REFUNDS: LegalDoc = {
       h: "Shop orders: changing your mind",
       body: [
         "Under the Consumer Contracts Regulations 2013, you can cancel a shop order within 14 days of the day you receive it. Email " + EMAIL + " with your order details to tell us. Please contact us before sending anything back.",
-        "Once you've told us, you have a further 14 days to return the item. Items must be unworn, unwashed and in the condition you received them. [Confirm who pays the return postage. The usual approach is that the customer pays unless the item is faulty.]",
-        "We refund the item price and the standard delivery cost within 14 days of receiving the item back, or proof that you've posted it. If an item has been worn or handled more than needed to check it, we may reduce the refund.",
+        "Once you've told us, you have a further 14 days to return the item. Change-of-mind returns must be unworn, with the tags still attached, and in the condition you received them. You pay the return postage on a change-of-mind return.",
+        "We refund the item price and the standard delivery cost to your original payment method within 14 days of receiving the return. If an item has been worn, washed, or handled more than needed to check it, or the tags have been removed, we may reduce the refund.",
       ],
     },
     {
-      h: "Shop orders: faulty or wrong items",
+      h: "Shop orders: faulty, damaged or wrong items",
       body: [
-        "Under the Consumer Rights Act 2015, goods must be as described, of satisfactory quality and fit for purpose. If an item is faulty or not as described, tell us within 30 days of delivery for a full refund, including return postage. After 30 days, you're entitled to a repair or replacement, and a refund if that doesn't fix the problem.",
-        "Please email a photo of the problem to " + EMAIL + " so we can sort it quickly.",
+        "Under the Consumer Rights Act 2015, goods must be as described, of satisfactory quality and fit for purpose. If a Devonshire item arrives faulty, damaged or wrong, email " + EMAIL + " with a photo of the problem and we will replace it or refund you at ESP's cost, including the return postage.",
+        "Tell us within 30 days of delivery for a full refund or a replacement. After 30 days, you're entitled to a repair or replacement, and a refund if that doesn't fix the problem. ESP still covers the return postage when the item is faulty, damaged or wrong.",
       ],
     },
     {
       h: "How refunds are paid",
-      body: ["Refunds go back to the card you paid with, through Stripe. Your bank may take a few working days to show the money."],
+      body: [
+        "Refunds go back to your original payment method, through Stripe, within 14 days of us receiving the return. Your bank may take a few working days after that to show the money.",
+      ],
     },
     { h: "Contact", body: [WHO] },
   ],
