@@ -33,6 +33,7 @@ const pageLinks = [
   // "Enquire" opens How it works, which sits just above the enquiry form on the homepage.
   { label: "Enquire", href: "/#how-it-works", key: "enquire" },
   { label: "Guides", href: "/guides", key: "guides" },
+  { label: "Corporate & Teams", href: "/corporate-teams", key: "corporate-teams" },
   { label: "Shop", href: "/shop", key: "shop" },
   { label: "Promotions", href: "/promotions", key: "promotions" },
   { label: "Find a club", href: "/#find-a-club", key: "find-a-club" },
@@ -87,7 +88,7 @@ export default function TopBar({ active }: TopBarProps = {}) {
             </span>
           </Link>
           <span className="hidden h-8 w-px bg-[#C9A96A]/40 lg:block" aria-hidden />
-          <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex lg:gap-2">
+          <nav aria-label="Primary" className="hidden items-center gap-0.5 lg:flex lg:gap-1">
             <NavLinks active={active} />
           </nav>
         </div>
