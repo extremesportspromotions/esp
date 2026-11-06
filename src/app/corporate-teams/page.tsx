@@ -15,7 +15,7 @@ const ENQUIRE = "/?type=corporate#enquire";
 export default function CorporateTeamsPage() {
   return (
     <>
-      <TopBar />
+      <TopBar active="corporate-teams" />
       <main id="main" className="flex-1 bg-[#F6EFE3]">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">Corporate and Teams</p>
