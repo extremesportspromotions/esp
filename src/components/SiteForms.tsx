@@ -100,63 +100,140 @@ export function LaunchSignupSection() {
 
 const darkInput = "w-full rounded-lg border border-white/25 bg-white/10 px-3 py-2.5 text-base text-white placeholder:text-white/45 focus:border-white focus:outline-none aria-[invalid=true]:border-red-400";
 
-function Field({ label, children, dark }: { label: string; children: ReactNode; dark?: boolean }) {
+function Field({ label, children, dark }: { label: ReactNode; children: ReactNode; dark?: boolean }) {
   return (
     <label className={`flex flex-col gap-1 text-left text-sm font-semibold ${dark ? "text-white/85" : "text-[#1C1917]/80"}`}>
-      {label}
+      <span>{label}</span>
       {children}
     </label>
   );
 }
 
-/** Promotions page: club interest form (dark page). */
-export function ClubInterestForm() {
+const URL_RE = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,24}(:\d{1,5})?(\/[^\s]*)?$/i;
+const PHONE_RE = /^[+\d][\d\s()-]{7,20}$/;
+const FACILITIES = ["Centre", "Club venue", "Outdoor site", "Mobile / instructor only"];
+
+function Req() {
+  return <span className="font-normal text-white/55"> (required)</span>;
+}
+function Opt() {
+  return <span className="font-normal text-white/55"> (optional)</span>;
+}
+function FieldError({ show, children }: { show: boolean; children: ReactNode }) {
+  return show ? <span className="text-xs font-normal text-red-300">{children}</span> : null;
+}
+
+/** Promotions page: club and coach application form (dark page). Matthew reviews each one by hand. */
+export function ClubApplicationForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [bad, setBad] = useState<string[]>([]);
-  const [method, setMethod] = useState("Email");
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const v = fd(e);
+    const t = (k: string) => (v[k] ?? "").trim();
     const errs: string[] = [];
-    for (const k of ["name", "club", "sport", "location"]) if (!(v[k] ?? "").trim()) errs.push(k);
-    const c = (v.contact ?? "").trim();
-    if (method === "Email" ? !EMAIL_RE.test(c) : !/^[+\d][\d\s()-]{7,20}$/.test(c)) errs.push("contact");
+    for (const k of ["club", "name", "sport", "location"]) if (!t(k)) errs.push(k);
+    if (!EMAIL_RE.test(t("email"))) errs.push("email");
+    if (!URL_RE.test(t("website"))) errs.push("website");
+    if (t("phone") && !PHONE_RE.test(t("phone"))) errs.push("phone");
+    if (v.authorised !== "on") errs.push("authorised");
+    if (v.consent !== "on") errs.push("consent");
     setBad(errs);
     if (errs.length) return setStatus("invalid");
     setStatus("sending");
-    const r = await send({ kind: "club-interest", name: v.name, club: v.club, sport: v.sport, location: v.location, method, contact: c, _honey: v._honey ?? "" });
+    const r = await send({
+      kind: "club-application",
+      club: t("club"),
+      name: t("name"),
+      email: t("email"),
+      sport: t("sport"),
+      location: t("location"),
+      website: t("website"),
+      phone: t("phone"),
+      qualification: t("qualification"),
+      facility: t("facility"),
+      message: t("message"),
+      authorised: true,
+      consent: true,
+      _honey: v._honey ?? "",
+    });
     if (r.errors) setBad(r.errors);
     setStatus(r.ok ? "sent" : r.errors ? "invalid" : "error");
   }
-  if (status === "sent") return <Message dark status="sent" sent="Thanks, we've got your details. We'll be in touch soon." />;
+  if (status === "sent")
+    return (
+      <div className="mx-auto mt-6 max-w-xl rounded-[14px] border border-[#2a2a3a] bg-[#14141c] p-6">
+        <Message dark status="sent" sent="Thanks, we've got your application. We'll read it and be in touch." />
+      </div>
+    );
+  const has = (k: string) => bad.includes(k);
   return (
-    <form noValidate onSubmit={onSubmit} data-form="club-interest" className="relative mx-auto mt-6 grid max-w-xl gap-4 sm:grid-cols-2">
+    <form noValidate onSubmit={onSubmit} data-form="club-application" className="relative mx-auto mt-6 grid max-w-xl gap-4 text-left sm:grid-cols-2">
       <Honeypot />
-      <Field dark label="Your name"><input name="name" autoComplete="name" aria-invalid={bad.includes("name")} className={darkInput} /></Field>
-      <Field dark label="Club or venue"><input name="club" autoComplete="organization" aria-invalid={bad.includes("club")} className={darkInput} /></Field>
-      <Field dark label="Sport">
-        <select name="sport" defaultValue="" aria-invalid={bad.includes("sport")} className={darkInput}>
+      <Field dark label={<>Club or coach name<Req /></>}>
+        <input name="club" autoComplete="organization" required aria-invalid={has("club")} className={darkInput} />
+        <FieldError show={has("club")}>Please add the club or coach name.</FieldError>
+      </Field>
+      <Field dark label={<>Contact name<Req /></>}>
+        <input name="name" autoComplete="name" required aria-invalid={has("name")} className={darkInput} />
+        <FieldError show={has("name")}>Please add a contact name.</FieldError>
+      </Field>
+      <Field dark label={<>Email<Req /></>}>
+        <input name="email" type="email" autoComplete="email" required aria-invalid={has("email")} className={darkInput} />
+        <FieldError show={has("email")}>Please add a valid email address.</FieldError>
+      </Field>
+      <Field dark label={<>Sport<Req /></>}>
+        <select name="sport" defaultValue="" required aria-invalid={has("sport")} className={darkInput}>
           <option value="" disabled className="text-black">Choose a sport</option>
           {sports.map((s) => <option key={s.id} value={s.mapLabel ?? s.name} className="text-black">{s.mapLabel ?? s.name}</option>)}
           <option value="Other" className="text-black">Other</option>
         </select>
+        <FieldError show={has("sport")}>Please choose a sport.</FieldError>
       </Field>
-      <Field dark label="Town or city"><input name="location" autoComplete="address-level2" aria-invalid={bad.includes("location")} className={darkInput} /></Field>
-      <fieldset className="sm:col-span-2 text-left">
-        <legend className="text-sm font-semibold text-white/85">How should we contact you?</legend>
-        <div className="mt-1 flex gap-4 text-sm text-white/85">
-          {["Email", "Phone"].map((m) => (
-            <label key={m} className="flex items-center gap-1.5">
-              <input type="radio" name="method" value={m} checked={method === m} onChange={() => setMethod(m)} /> {m}
-            </label>
-          ))}
-        </div>
-        <input name="contact" type={method === "Email" ? "email" : "tel"} placeholder={method === "Email" ? "Your email address" : "Your phone number"} aria-label={method === "Email" ? "Email address" : "Phone number"} aria-invalid={bad.includes("contact")} className={`${darkInput} mt-2`} />
-      </fieldset>
-      <p className="sm:col-span-2 text-left text-xs text-white/60">We only use these details to reply about promotions. See our <Link href="/privacy" className="underline">privacy notice</Link>.</p>
+      <Field dark label={<>Town or region<Req /></>}>
+        <input name="location" autoComplete="address-level2" required aria-invalid={has("location")} className={darkInput} />
+        <FieldError show={has("location")}>Please add your town or region.</FieldError>
+      </Field>
+      <Field dark label={<>Website<Req /></>}>
+        <input name="website" type="url" inputMode="url" autoComplete="url" placeholder="www.yourclub.co.uk" required aria-invalid={has("website")} className={darkInput} />
+        <FieldError show={has("website")}>Please add a website address, like www.yourclub.co.uk.</FieldError>
+      </Field>
+      <Field dark label={<>Phone<Opt /></>}>
+        <input name="phone" type="tel" autoComplete="tel" aria-invalid={has("phone")} className={darkInput} />
+        <FieldError show={has("phone")}>Please check the phone number.</FieldError>
+      </Field>
+      <Field dark label={<>Facility type<Opt /></>}>
+        <select name="facility" defaultValue="" className={darkInput}>
+          <option value="" className="text-black">Choose one</option>
+          {FACILITIES.map((f) => <option key={f} value={f} className="text-black">{f}</option>)}
+        </select>
+      </Field>
+      <div className="sm:col-span-2">
+        <Field dark label={<>Governing body membership or coaching qualification<Opt /></>}>
+          <input name="qualification" placeholder="e.g. BHPA, BSAC, BASI or British Canoeing" className={darkInput} />
+        </Field>
+      </div>
+      <div className="sm:col-span-2">
+        <Field dark label={<>Short message<Opt /></>}>
+          <textarea name="message" rows={4} maxLength={1500} placeholder="Tell us a little about your club or coaching, and whether you'd like to be listed, appear in a video, or both." className={darkInput} />
+        </Field>
+      </div>
+      <div className="sm:col-span-2 flex flex-col gap-3 text-sm text-white/85">
+        <label className={`flex items-start gap-2 ${has("authorised") ? "text-red-300" : ""}`}>
+          <input type="checkbox" name="authorised" required className="mt-1" aria-invalid={has("authorised")} />
+          <span>I&apos;m authorised to apply for this club. <Req /></span>
+        </label>
+        <label className={`flex items-start gap-2 ${has("consent") ? "text-red-300" : ""}`}>
+          <input type="checkbox" name="consent" required className="mt-1" aria-invalid={has("consent")} />
+          <span>
+            I agree to ESP using these details as set out in the{" "}
+            <Link href="/privacy" className="underline underline-offset-2">privacy notice</Link>. <Req />
+          </span>
+        </label>
+      </div>
       <div className="sm:col-span-2 flex flex-col items-center gap-2">
         <button type="submit" disabled={status === "sending"} className="rounded-full bg-[#c0c0c0] px-8 py-3.5 font-bold text-black hover:bg-white disabled:opacity-60">
-          {status === "sending" ? "Sending…" : "Register your club's interest"}
+          {status === "sending" ? "Sending…" : "Send application"}
         </button>
         <Message dark status={status} sent="" />
       </div>

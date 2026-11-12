@@ -1,5 +1,5 @@
 /**
- * Small site forms (club interest, launch sign-up, request a club) email
+ * Small site forms (club application, launch sign-up, request a club) email
  * enquiries@ through Resend. Server-side validation, honeypot and rate limit.
  * Set ESP_MAIL_DRY_RUN=1 to validate without sending (local tests).
  */
@@ -9,6 +9,9 @@ export const runtime = "nodejs";
 
 const FROM = "Extreme Sports Promotions <enquiries@extremesportspromotions.com>";
 const EMAIL_RE = /^[^\s@<>"]{1,64}@[^\s@<>"]{1,190}\.[a-z]{2,24}$/i;
+const URL_RE = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,24}(:\d{1,5})?(\/[^\s]*)?$/i;
+const PHONE_RE = /^[+\d][\d\s()-]{7,20}$/;
+const FACILITIES = ["Centre", "Club venue", "Outdoor site", "Mobile / instructor only"];
 const ALLOWED_HOSTS = new Set([
   "www.extremesportspromotions.com",
   "extremesportspromotions.com",
@@ -38,8 +41,9 @@ function esc(s: string) {
   return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 }
 
-type Kind = "club-interest" | "launch" | "club-request";
+type Kind = "club-application" | "club-interest" | "launch" | "club-request";
 const SUBJECT: Record<Kind, string> = {
+  "club-application": "Club / coach application (Promotions)",
   "club-interest": "Promotions: club interest",
   launch: "Notify me at launch",
   "club-request": "Request a club be added",
@@ -70,6 +74,35 @@ export async function POST(req: Request): Promise<Response> {
     if (!EMAIL_RE.test(email)) errors.push("email");
     if (b.consent !== true) errors.push("consent");
     fields.push(["Email", email]);
+  } else if (kind === "club-application") {
+    const club = text(b.club, 120), name = text(b.name, 100), sport = text(b.sport, 60);
+    const location = text(b.location, 120), website = text(b.website, 200), phone = text(b.phone, 30);
+    const qualification = text(b.qualification, 200), facility = text(b.facility, 40);
+    const message = typeof b.message === "string" ? b.message.replace(/\r/g, "").trim().slice(0, 1500) : "";
+    if (!club) errors.push("club");
+    if (!name) errors.push("name");
+    if (!EMAIL_RE.test(email)) errors.push("email");
+    if (!sport) errors.push("sport");
+    if (!location) errors.push("location");
+    if (!URL_RE.test(website)) errors.push("website");
+    if (phone && !PHONE_RE.test(phone)) errors.push("phone");
+    if (facility && !FACILITIES.includes(facility)) errors.push("facility");
+    if (b.authorised !== true) errors.push("authorised");
+    if (b.consent !== true) errors.push("consent");
+    fields.push(
+      ["Club or coach", club],
+      ["Contact name", name],
+      ["Email", email],
+      ["Phone", phone],
+      ["Sport", sport],
+      ["Town or region", location],
+      ["Website", website],
+      ["Governing body / qualification", qualification],
+      ["Facility type", facility],
+      ["Message", message],
+      ["Authorised to apply", "Yes"],
+      ["Agreed to privacy notice", "Yes"],
+    );
   } else if (kind === "club-interest") {
     const name = text(b.name, 100), club = text(b.club, 120), sport = text(b.sport, 60);
     const location = text(b.location, 120), contact = text(b.contact, 200);

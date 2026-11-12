@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClubInterestForm } from "@/components/SiteForms";
+import { ClubApplicationForm } from "@/components/SiteForms";
 import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
@@ -193,11 +193,14 @@ export default function PromotionsPage() {
           </div>
         </section>
 
-        <div className="px-6 py-16 text-center sm:py-[70px]">
-          <h2 className={h2}>Want to be in one of the first episodes?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-white/75">Tell us about your club and we&apos;ll get back to you.</p>
-          <ClubInterestForm />
-        </div>
+        <section id="apply" aria-labelledby="apply-heading" className="scroll-mt-28 px-6 py-16 text-center sm:py-[70px]">
+          <h2 id="apply-heading" className={h2}>Clubs and coaches: apply to join ESP</h2>
+          <p className="mx-auto mt-3 max-w-xl text-white/75">
+            Run a UK club or coach an extreme sport? Apply here to be listed on ESP or to take part in our promotions videos. We check every
+            application by hand, and nothing goes on the site until we have. We&apos;ll be in touch.
+          </p>
+          <ClubApplicationForm />
+        </section>
       </main>
       <Footer />
     </>
