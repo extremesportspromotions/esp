@@ -4,6 +4,7 @@
  * Set ESP_MAIL_DRY_RUN=1 to validate without sending (local tests).
  */
 import { ENQUIRY_EMAIL } from "@/lib/site";
+import { checkEvidence } from "@/lib/clubUploads";
 
 export const runtime = "nodejs";
 
@@ -77,8 +78,16 @@ export async function POST(req: Request): Promise<Response> {
   } else if (kind === "club-application") {
     const club = text(b.club, 120), name = text(b.name, 100), sport = text(b.sport, 60);
     const location = text(b.location, 120), website = text(b.website, 200), phone = text(b.phone, 30);
-    const qualification = text(b.qualification, 200), facility = text(b.facility, 40);
-    const message = typeof b.message === "string" ? b.message.replace(/\r/g, "").trim().slice(0, 1500) : "";
+    const facility = text(b.facility, 40), insurance = text(b.insurance, 3), insurer = text(b.insurer, 120);
+    const yearsRaw = text(b.years, 3);
+    const long = (v: unknown, max: number) => (typeof v === "string" ? v.replace(/\r/g, "").trim().slice(0, max) : "");
+    const message = long(b.message, 1500), achievements = long(b.achievements, 1500);
+    const rows = (v: unknown, keys: string[]) =>
+      (Array.isArray(v) ? v.slice(0, 10) : [])
+        .map((r) => keys.map((k) => text((r as Record<string, unknown>)?.[k], 120)))
+        .filter((r) => r.some(Boolean));
+    const quals = rows(b.qualifications, ["name", "body", "level", "expiry"]);
+    const results = rows(b.results, ["event", "year", "result"]);
     if (!club) errors.push("club");
     if (!name) errors.push("name");
     if (!EMAIL_RE.test(email)) errors.push("email");
@@ -87,6 +96,8 @@ export async function POST(req: Request): Promise<Response> {
     if (!URL_RE.test(website)) errors.push("website");
     if (phone && !PHONE_RE.test(phone)) errors.push("phone");
     if (facility && !FACILITIES.includes(facility)) errors.push("facility");
+    if (!["Yes", "No"].includes(insurance)) errors.push("insurance");
+    if (yearsRaw && !/^\d{1,2}$/.test(yearsRaw)) errors.push("years");
     if (b.authorised !== true) errors.push("authorised");
     if (b.consent !== true) errors.push("consent");
     fields.push(
@@ -97,8 +108,13 @@ export async function POST(req: Request): Promise<Response> {
       ["Sport", sport],
       ["Town or region", location],
       ["Website", website],
-      ["Governing body / qualification", qualification],
       ["Facility type", facility],
+      ["Years coaching", yearsRaw],
+      ...quals.map(([q, by, lv, ex], i): [string, string] => [`Qualification ${i + 1}`, [q, by && `awarded by ${by}`, lv && `level ${lv}`, ex && `expires ${ex}`].filter(Boolean).join(", ")]),
+      ["Competitions and achievements", achievements],
+      ...results.map(([ev, yr, res], i): [string, string] => [`Result ${i + 1}`, [ev, yr, res].filter(Boolean).join(", ")]),
+      ["Public liability insurance", insurance],
+      ["Insurance provider", insurer],
       ["Message", message],
       ["Authorised to apply", "Yes"],
       ["Agreed to privacy notice", "Yes"],
@@ -127,6 +143,12 @@ export async function POST(req: Request): Promise<Response> {
 
   const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim() || "unknown";
   if (limited(`ip:${ip}`, 5, 10 * 60_000)) return Response.json({ ok: false }, { status: 429 });
+
+  if (kind === "club-application") {
+    const ev = await checkEvidence(b.files);
+    if (!ev.ok) return Response.json({ ok: false, errors: ["files"] }, { status: 400 });
+    fields.push(...ev.links.map(([k, v]): [string, string] => [`Evidence: ${k}, private link valid 7 days`, v]));
+  }
 
   if (process.env.ESP_MAIL_DRY_RUN === "1") return Response.json({ ok: true, dryRun: true });
 

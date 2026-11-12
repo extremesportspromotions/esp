@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ClubApplicationForm } from "@/components/SiteForms";
+import { uploadsEnabled } from "@/lib/clubUploads";
 import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
@@ -199,7 +200,7 @@ export default function PromotionsPage() {
             Run a UK club or coach an extreme sport? Apply here to be listed on ESP or to take part in our promotions videos. We check every
             application by hand, and nothing goes on the site until we have. We&apos;ll be in touch.
           </p>
-          <ClubApplicationForm />
+          <ClubApplicationForm uploads={uploadsEnabled()} />
         </section>
       </main>
       <Footer />

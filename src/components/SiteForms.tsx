@@ -123,10 +123,43 @@ function FieldError({ show, children }: { show: boolean; children: ReactNode }) 
   return show ? <span className="text-xs font-normal text-red-300">{children}</span> : null;
 }
 
+type QualRow = { name: string; body: string; level: string; expiry: string };
+type ResultRow = { event: string; year: string; result: string };
+const MAX_FILES = 5;
+const MAX_BYTES = 10 * 1024 * 1024;
+const EXT: Record<string, string> = { "application/pdf": "pdf", "image/jpeg": "jpg", "image/png": "png" };
+
+/** Reads a file's first bytes: only real PDF, JPEG or PNG files pass (the server checks again). */
+async function sniffFile(f: File): Promise<string | null> {
+  const b = new Uint8Array(await f.slice(0, 8).arrayBuffer());
+  if (b[0] === 0x25 && b[1] === 0x50 && b[2] === 0x44 && b[3] === 0x46 && b[4] === 0x2d) return "application/pdf";
+  if (b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff) return "image/jpeg";
+  if ([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a].every((v, i) => b[i] === v)) return "image/png";
+  return null;
+}
+
+const smallBtn = "rounded-full border border-white/30 px-3 py-1.5 text-xs font-semibold text-white/85 hover:border-white hover:text-white";
+
 /** Promotions page: club and coach application form (dark page). Matthew reviews each one by hand. */
-export function ClubApplicationForm() {
+export function ClubApplicationForm({ uploads = false }: { uploads?: boolean }) {
   const [status, setStatus] = useState<Status>("idle");
   const [bad, setBad] = useState<string[]>([]);
+  const [quals, setQuals] = useState<QualRow[]>([{ name: "", body: "", level: "", expiry: "" }]);
+  const [results, setResults] = useState<ResultRow[]>([]);
+  const [files, setFiles] = useState<File[]>([]);
+  const [fileError, setFileError] = useState("");
+  const setQ = (i: number, k: keyof QualRow, val: string) => setQuals((q) => q.map((r, j) => (j === i ? { ...r, [k]: val } : r)));
+  const setR = (i: number, k: keyof ResultRow, val: string) => setResults((q) => q.map((r, j) => (j === i ? { ...r, [k]: val } : r)));
+  async function pickFiles(list: FileList | null) {
+    const next = [...files, ...Array.from(list ?? [])];
+    if (next.length > MAX_FILES) return setFileError(`You can upload up to ${MAX_FILES} files.`);
+    for (const f of next) {
+      if (f.size > MAX_BYTES) return setFileError(`"${f.name}" is over 10 MB.`);
+      if (!(await sniffFile(f))) return setFileError(`"${f.name}" isn't a PDF, JPG or PNG file.`);
+    }
+    setFileError("");
+    setFiles(next);
+  }
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const v = fd(e);
@@ -136,11 +169,33 @@ export function ClubApplicationForm() {
     if (!EMAIL_RE.test(t("email"))) errs.push("email");
     if (!URL_RE.test(t("website"))) errs.push("website");
     if (t("phone") && !PHONE_RE.test(t("phone"))) errs.push("phone");
+    if (!["Yes", "No"].includes(t("insurance"))) errs.push("insurance");
+    if (t("years") && !/^\d{1,2}$/.test(t("years"))) errs.push("years");
     if (v.authorised !== "on") errs.push("authorised");
     if (v.consent !== "on") errs.push("consent");
     setBad(errs);
     if (errs.length) return setStatus("invalid");
     setStatus("sending");
+    let fileUrls: string[] = [];
+    if (uploads && files.length) {
+      try {
+        const { uploadPresigned } = await import("@vercel/blob/client");
+        fileUrls = await Promise.all(
+          files.map(async (f) => {
+            const type = (await sniffFile(f))!;
+            const res = await uploadPresigned(`club-applications/${crypto.randomUUID()}.${EXT[type]}`, f, {
+              access: "private",
+              handleUploadUrl: "/api/club-upload",
+              contentType: type,
+            });
+            return res.url;
+          }),
+        );
+      } catch {
+        setFileError("Sorry, the files didn't upload. Please try again, or send the form without them.");
+        return setStatus("error");
+      }
+    }
     const r = await send({
       kind: "club-application",
       club: t("club"),
@@ -150,8 +205,14 @@ export function ClubApplicationForm() {
       location: t("location"),
       website: t("website"),
       phone: t("phone"),
-      qualification: t("qualification"),
       facility: t("facility"),
+      years: t("years"),
+      qualifications: quals,
+      achievements: t("achievements"),
+      results,
+      insurance: t("insurance"),
+      insurer: t("insurer"),
+      files: fileUrls,
       message: t("message"),
       authorised: true,
       consent: true,
@@ -208,11 +269,80 @@ export function ClubApplicationForm() {
           {FACILITIES.map((f) => <option key={f} value={f} className="text-black">{f}</option>)}
         </select>
       </Field>
-      <div className="sm:col-span-2">
-        <Field dark label={<>Governing body membership or coaching qualification<Opt /></>}>
-          <input name="qualification" placeholder="e.g. BHPA, BSAC, BASI or British Canoeing" className={darkInput} />
+      <fieldset className="sm:col-span-2 mt-2 grid gap-4 rounded-[14px] border border-[#2a2a3a] bg-[#14141c] p-4 sm:grid-cols-2 sm:p-5">
+        <legend className="px-1 text-base font-bold text-white">Qualifications and experience</legend>
+        <div className="sm:col-span-2 flex flex-col gap-3">
+          <p className="text-sm font-semibold text-white/85">Coaching qualifications<Opt /></p>
+          {quals.map((q, i) => (
+            <div key={i} className="grid gap-3 rounded-lg border border-white/10 p-3 sm:grid-cols-2" data-row="qualification">
+              <Field dark label="Qualification name"><input value={q.name} onChange={(e) => setQ(i, "name", e.target.value)} maxLength={120} className={darkInput} /></Field>
+              <Field dark label="Awarding body"><input value={q.body} onChange={(e) => setQ(i, "body", e.target.value)} maxLength={120} placeholder="e.g. BHPA, BSAC, BASI, British Canoeing, Mountain Training" className={darkInput} /></Field>
+              <Field dark label="Level"><input value={q.level} onChange={(e) => setQ(i, "level", e.target.value)} maxLength={60} className={darkInput} /></Field>
+              <Field dark label={<>Expiry date<Opt /></>}><input type="date" value={q.expiry} onChange={(e) => setQ(i, "expiry", e.target.value)} className={`${darkInput} [color-scheme:dark]`} /></Field>
+              {quals.length > 1 && (
+                <button type="button" onClick={() => setQuals((x) => x.filter((_, j) => j !== i))} className={`${smallBtn} justify-self-start`}>Remove this qualification</button>
+              )}
+            </div>
+          ))}
+          {quals.length < 10 && (
+            <button type="button" onClick={() => setQuals((x) => [...x, { name: "", body: "", level: "", expiry: "" }])} className={`${smallBtn} self-start`}>+ Add another qualification</button>
+          )}
+        </div>
+        <div className="sm:col-span-2">
+          <Field dark label={<>Competitions and achievements<Opt /></>}>
+            <textarea name="achievements" rows={3} maxLength={1500} className={darkInput} />
+          </Field>
+        </div>
+        <div className="sm:col-span-2 flex flex-col gap-3">
+          {results.map((r, i) => (
+            <div key={i} className="grid gap-3 rounded-lg border border-white/10 p-3 sm:grid-cols-[2fr_1fr_1.5fr]" data-row="result">
+              <Field dark label="Event"><input value={r.event} onChange={(e) => setR(i, "event", e.target.value)} maxLength={120} className={darkInput} /></Field>
+              <Field dark label="Year"><input value={r.year} onChange={(e) => setR(i, "year", e.target.value)} inputMode="numeric" maxLength={4} className={darkInput} /></Field>
+              <Field dark label="Result"><input value={r.result} onChange={(e) => setR(i, "result", e.target.value)} maxLength={120} className={darkInput} /></Field>
+              <button type="button" onClick={() => setResults((x) => x.filter((_, j) => j !== i))} className={`${smallBtn} justify-self-start`}>Remove this result</button>
+            </div>
+          ))}
+          {results.length < 10 && (
+            <button type="button" onClick={() => setResults((x) => [...x, { event: "", year: "", result: "" }])} className={`${smallBtn} self-start`}>+ Add a competition result</button>
+          )}
+        </div>
+        <fieldset className="text-sm text-white/85">
+          <legend className={`font-semibold ${has("insurance") ? "text-red-300" : ""}`}>Do you hold public liability insurance?<Req /></legend>
+          <div className="mt-2 flex gap-5">
+            {["Yes", "No"].map((o) => (
+              <label key={o} className="flex items-center gap-1.5"><input type="radio" name="insurance" value={o} aria-invalid={has("insurance")} /> {o}</label>
+            ))}
+          </div>
+          <FieldError show={has("insurance")}>Please choose yes or no.</FieldError>
+        </fieldset>
+        <Field dark label={<>Insurance provider<Opt /></>}><input name="insurer" maxLength={120} className={darkInput} /></Field>
+        <Field dark label={<>Years coaching<Opt /></>}>
+          <input name="years" type="number" min={0} max={80} inputMode="numeric" aria-invalid={has("years")} className={darkInput} />
+          <FieldError show={has("years")}>Please enter a number of years.</FieldError>
         </Field>
-      </div>
+        {uploads && (
+          <div className="sm:col-span-2 flex flex-col gap-2 text-sm text-white/85" data-uploads>
+            <p className="font-semibold">Evidence<Opt /></p>
+            <p className="text-white/70">
+              Uploading is optional, but evidence such as qualification certificates, insurance or competition results helps us review your application sooner. PDF,
+              JPG or PNG, up to 5 files, 10 MB each. Only ESP can see them.
+            </p>
+            <p className="text-white/70">ESP checks all evidence by hand. Uploading it doesn&apos;t mean your club is approved or endorsed.</p>
+            <input type="file" multiple accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" onChange={(e) => { pickFiles(e.target.files); e.target.value = ""; }} className="text-sm file:mr-3 file:rounded-full file:border-0 file:bg-[#c0c0c0] file:px-4 file:py-2 file:font-semibold file:text-black" />
+            {files.length > 0 && (
+              <ul className="flex flex-col gap-1">
+                {files.map((f, i) => (
+                  <li key={i} className="flex items-center justify-between gap-2 rounded border border-white/10 px-2 py-1">
+                    <span className="truncate">{f.name} ({(f.size / 1024 / 1024).toFixed(1)} MB)</span>
+                    <button type="button" onClick={() => setFiles((x) => x.filter((_, j) => j !== i))} className="text-xs underline">Remove</button>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <FieldError show={!!fileError || has("files")}>{fileError || "One of the files couldn't be accepted. Please check it's a PDF, JPG or PNG under 10 MB."}</FieldError>
+          </div>
+        )}
+      </fieldset>
       <div className="sm:col-span-2">
         <Field dark label={<>Short message<Opt /></>}>
           <textarea name="message" rows={4} maxLength={1500} placeholder="Tell us a little about your club or coaching, and whether you'd like to be listed, appear in a video, or both." className={darkInput} />
