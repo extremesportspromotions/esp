@@ -70,7 +70,11 @@ export default function Footer() {
           <p className="mb-2 font-semibold text-[#1C1917]/70">Notify me at launch</p>
           <LaunchSignup compact />
         </div>
-        <p>We don&apos;t use advertising or tracking cookies.</p>
+        <p>
+          We don&apos;t use advertising or tracking cookies on this site. See our{" "}
+          <Link href="/privacy" className="hover:text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">privacy notice</Link>{" "}
+          for cookies on payment or affiliate pages.
+        </p>
       </div>
     </footer>
   );

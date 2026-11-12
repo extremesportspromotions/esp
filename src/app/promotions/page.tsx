@@ -162,7 +162,7 @@ export default function PromotionsPage() {
               />
               <Card
                 heading="A written lesson."
-                body="Every guide we publish is a detailed written lesson, so students know what to expect."
+                body="Many of our guides are written as step-by-step lessons, so students know what to expect. Some are shorter overviews."
               />
               <Card
                 heading="Then the video."

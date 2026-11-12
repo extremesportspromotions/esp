@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Corporate and Teams Programmes | Extreme Sports Promotions",
   description:
-    "Weekdays, away days and weekends in UK extreme sports with qualified, insured clubs and coaches. Match fee from £99 per group of up to 5 people.",
+    "Weekdays, away days and weekends in UK extreme sports with qualified, insured clubs and coaches. Larger groups, teams and companies: match fees from £99 per group of up to 5. A private group of up to 5 uses the private group fees.",
   alternates: { canonical: "/corporate-teams" },
 };
 
@@ -26,10 +26,10 @@ export default function CorporateTeamsPage() {
 
             <h2>Who it&apos;s for</h2>
             <ul>
-              <li><strong>Companies:</strong> team building, away days, rewards and client days</li>
-              <li><strong>Sports teams:</strong> pre-season bonding and something different from the usual training</li>
-              <li><strong>Stag and hen groups:</strong> a weekend people will actually talk about</li>
-              <li><strong>Charities:</strong> challenge events and supporter days</li>
+              <li><strong>Companies:</strong> team building, away days, rewards and client days. Company bookings use the company match fee, whatever the group size.</li>
+              <li><strong>Sports teams:</strong> pre-season bonding and something different from the usual training. These use the teams, clubs and groups rate.</li>
+              <li><strong>Stag and hen groups of 6 or more:</strong> a weekend people will actually talk about. These use the teams, clubs and groups rate. A private stag or hen party of up to 5 people uses the private group fees instead (£49 for a taster day, or £99 to become qualified).</li>
+              <li><strong>Charities:</strong> challenge events and supporter days. Get in touch and we will tell you which fee applies.</li>
             </ul>
 
             <h2>Why it works</h2>
@@ -48,7 +48,9 @@ export default function CorporateTeamsPage() {
           <div className="mt-4 rounded-2xl border border-accent/30 bg-white p-5 shadow-sm sm:p-6">
             <p className="font-display text-xl font-bold text-[#1C1917]">Teams, clubs and groups: £99 <span className="text-base font-semibold text-[#1C1917]/70">per group of up to 5 people</span></p>
             <p className="font-display mt-2 text-xl font-bold text-[#1C1917]">Companies: £199 <span className="text-base font-semibold text-[#1C1917]/70">per group of up to 5 people, with one named contact and an invoice for your accounts.</span></p>
-            <p className="mt-3 text-[#1C1917]/80">Bigger team? The fee is for each group of up to 5, so for a team of 10 the match fee is £198 for a team, club or group, or £398 for a company.</p>
+            <p className="mt-3 text-[#1C1917]/80">These Corporate and Teams fees apply to groups of 6 or more, and to all company, team-building and corporate bookings, including sports teams and clubs. ESP arranges weekdays, away days and weekends.</p>
+            <p className="mt-3 text-[#1C1917]/80">A private group of up to 5 people, including a private stag or hen party of that size, uses the private group match fees instead: £49 for a taster day, or £99 to become qualified. Those fees are listed on the homepage and in our Terms.</p>
+            <p className="mt-3 text-[#1C1917]/80">Bigger team? The fee is for each group of up to 5, so for a team of 10 the match fee is £198 for a team, club or group, or £398 for a company. You book and pay the club directly for the activity.</p>
             <ul className="mt-4 list-disc space-y-1 pl-5 text-[#1C1917]/80">
               <li>Finding and checking the right club for your group and sport</li>
               <li>Checking the club&apos;s and coaches&apos; qualifications, insurance and references before we introduce you, and confirming the right coach-to-participant ratios</li>
@@ -80,6 +82,7 @@ export default function CorporateTeamsPage() {
           </div>
           <div className="guide-prose prose mt-4">
             <p>For a company, the ESP match fee in this example is £199, making the example total £1,999–£2,299.</p>
+            <p>A private stag or hen party of 8 would use this same teams, clubs and groups rate, so the ESP match fee in this style of weekend would be £198 (two groups of up to 5), not the £49 or £99 private-group fee.</p>
             <p>Your hotel is booked separately by you, at the hotel&apos;s normal price. We don&apos;t sell activities and accommodation together as one package.</p>
 
             <h2>Optional extras</h2>
@@ -89,8 +92,8 @@ export default function CorporateTeamsPage() {
           <section aria-label="Places to stay" className="mt-6 rounded-2xl border border-[#1C1917]/15 bg-[#EDE4D3] p-5 sm:p-6">
             <h3 className="font-display text-xl font-bold text-[#1C1917]">Places to stay</h3>
             <p className="mt-1 text-sm font-semibold text-[#1C1917]/70">Not included in the match fee.</p>
-            <p className="mt-3 text-[#1C1917]/80">We can point you to hotels near the venue through Holiday Inn (IHG) and Booking.com. You book and pay the hotel directly at its normal price.</p>
-            <p className="mt-3 text-sm text-[#1C1917]/70">Once your club and dates are confirmed, we can send a short list of nearby hotels. We may earn a small commission if you book through those links.</p>
+            <p className="mt-3 text-[#1C1917]/80">We can point you to hotels near the venue. You book and pay the hotel directly at its normal price, on the hotel&apos;s own site or a booking site.</p>
+            <p className="mt-3 text-sm text-[#1C1917]/70">Once your club and dates are confirmed, we can send a short list of nearby hotels.</p>
           </section>
           <div className="guide-prose prose mt-6">
             <h3>Insurance</h3>

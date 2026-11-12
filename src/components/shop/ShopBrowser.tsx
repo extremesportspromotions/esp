@@ -188,7 +188,7 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
               )}
               {c.id === "smartcasual" && preview && notYet.length > 0 && <NotYetBanner list={notYet} />}
               {c.id === "gear" && <GearBanner />}
-              {c.id === "gear" && <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">Some links on this page are affiliate links. If you buy through them, ESP may earn a small commission at no extra cost to you. We only link to gear we&apos;d recommend.</p>}
+              {c.id === "gear" && <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">These gear notes are recommendations only. They are marked Coming soon and are not purchase links yet. When we add purchase links, we will say clearly if any of them are affiliate links.</p>}
               <ul className={grid}>
                 {kit.filter((p) => p.sub !== "Denim").map((p) => <MerchCard key={p.pid} p={p} />)}
                 {items.map((p) => <Card key={`${p.cat}-${p.name}`} p={p} />)}

@@ -17,7 +17,7 @@ export const TERMS: LegalDoc = {
   title: "Terms",
   eyebrow: "Draft terms",
   intro:
-    "These terms explain how Extreme Sports Promotions works: our coach matching service, the match fee, and buying Devonshire clothing from our shop. Please read them before you pay. Last updated: 5 November 2026.",
+    "These terms explain how Extreme Sports Promotions works: our coach matching service, the match fee, and buying Devonshire clothing from our shop. Please read them before you pay. Last updated: 12 November 2026.",
   sections: [
     { h: "Who we are", body: [WHO] },
     {
@@ -34,9 +34,17 @@ export const TERMS: LegalDoc = {
         [
           "Experience day (one person, one day): £19",
           "Become qualified (one person, one club, full course): £49",
-          "Group experience day (a party, one taster day): £49",
-          "Group qualification (team building, become qualified): £99",
+          "Group experience day (a private group of up to 5, one taster day): £49",
+          "Group qualification (a private group of up to 5, become qualified): £99",
         ],
+        "The group experience day and group qualification fees are for private groups of up to 5 people, including a private stag or hen party of that size.",
+        "Groups of 6 or more, and all company, team-building and corporate bookings, use our Corporate and Teams fees:",
+        [
+          "Teams, clubs and groups: £99 per group of up to 5 people",
+          "Companies: £199 per group of up to 5 people, with one named contact and an invoice for your accounts",
+        ],
+        "The Corporate and Teams fee is for each group of up to 5, so for 10 people the match fee is £198 for a team, club or group, or £398 for a company. ESP arranges weekdays, away days and weekends. More detail is on our Corporate and Teams page.",
+        "Your training is a separate agreement between you and the coach or club, on their terms, and they bill you for it directly. The match fee is paid to ESP on top of that.",
         "ESP is not VAT registered, so prices do not include VAT.",
         "Card payments are taken by Stripe, our payment provider. We never see or store your full card details.",
         "Full refund if we can't match you within 14 days of your payment. See our Refund policy for the details.",
@@ -70,7 +78,7 @@ export const TERMS: LegalDoc = {
         "Devonshire is the clothing brand of Extreme Sports Promotions. Each item is made to order for you once you pay, so please allow time for making and UK delivery. Delivery costs and estimated times are shown in your bag before you pay.",
         "We deliver to UK addresses only. Payment is taken by Stripe at checkout. Our contract for goods starts when we email you to confirm your order.",
         "Product photos show how items look, but colours can vary slightly between screens.",
-        "You can cancel a shop order within 14 days of receiving it. Change-of-mind returns must be unworn with the tags attached, and you pay the return postage. Faulty, damaged or wrong items are replaced or refunded at ESP's cost, including return postage. See our Refund policy for the full details.",
+        "You can cancel a shop order within 14 days of the day you receive it. Change-of-mind returns must be unworn, with the tags still attached, and in the condition you received them, and you pay the return postage. If an item has been worn, washed, or handled more than needed to check it, or the tags have been removed, we may reduce the refund. Faulty, damaged or wrong items are replaced or refunded at ESP's cost, including return postage. See our Refund policy for the full details.",
       ],
     },
     {
@@ -101,7 +109,7 @@ export const REFUNDS: LegalDoc = {
   slug: "refunds",
   title: "Refund policy",
   eyebrow: "Draft refund policy",
-  intro: "How refunds work for the match fee and for Devonshire shop orders. Last updated: 5 November 2026.",
+  intro: "How refunds work for the match fee and for Devonshire shop orders. Last updated: 12 November 2026.",
   sections: [
     {
       h: "Match fee: our 14-day promise",
@@ -113,7 +121,7 @@ export const REFUNDS: LegalDoc = {
     {
       h: "Match fee: cancelling within 14 days",
       body: [
-        "You can cancel within 14 days of paying. If we haven't started work, you get a full refund. If we have started but not yet introduced you, we may keep a fair amount for the work done. Once we have introduced you to a coach, the matching service is complete.",
+        "You can cancel within 14 days of the contract starting, which is when your payment goes through and we confirm your enquiry by email. If we haven't started work, you get a full refund. If we have started but not yet introduced you, we may keep a fair amount for the work done. Once we have introduced you to a coach, the matching service is complete.",
         "The training itself is paid to the coach or club. Ask them about their own cancellation and refund rules.",
       ],
     },
@@ -135,7 +143,8 @@ export const REFUNDS: LegalDoc = {
     {
       h: "How refunds are paid",
       body: [
-        "Refunds go back to your original payment method, through Stripe, within 14 days of us receiving the return. Your bank may take a few working days after that to show the money.",
+        "Match fee refunds go back to the card you paid with. If we cannot match you within 14 days, you don't need to ask: we refund the full match fee.",
+        "For shop orders, refunds go back to your original payment method, through Stripe, within 14 days of us receiving the return. Your bank may take a few working days after that to show the money.",
       ],
     },
     { h: "Contact", body: [WHO] },
@@ -147,7 +156,7 @@ export const PRIVACY: LegalDoc = {
   title: "Privacy notice",
   eyebrow: "Your privacy",
   intro:
-    "This notice explains what personal details ESP collects, why, who we share them with, how long we keep them and your rights under UK data protection law (the UK GDPR and the Data Protection Act 2018). Last updated: 5 November 2026.",
+    "This notice explains what personal details ESP collects, why, who we share them with, how long we keep them and your rights under UK data protection law (the UK GDPR and the Data Protection Act 2018). Last updated: 12 November 2026.",
   sections: [
     {
       h: "Who we are",
@@ -157,7 +166,7 @@ export const PRIVACY: LegalDoc = {
       h: "What we collect",
       body: [
         [
-          "Coach enquiries: your name, email, phone number, best time to call, sport, level and goal, age band, town or city and how far you'll travel, the type of booking, and that you understand the risks of the sport.",
+          "Coach enquiries: your name, email, phone number, best time to call, sport, level and goal, age band, town or city and how far you'll travel, the type of booking, the match fee option you choose, the web page you sent the enquiry from, and that you understand the risks of the sport.",
           "If you're under 18: your parent or guardian's name and phone number and confirmation of their consent.",
           "Health: any injury or health condition you choose to tell us about. This is optional.",
           "Match fee payments: Stripe tells us whether you paid, the amount and your email. We never see your full card details.",

@@ -5,6 +5,13 @@ import { FormEvent, useEffect, useId, useMemo, useState } from "react";
 import { sports } from "@/data/sports";
 import { ENQUIRY_EMAIL, ENQUIRY_ENDPOINT } from "@/lib/site";
 import { paymentStatusLabel, startPayment, REFUND_LINE, FEE_COVERS } from "@/lib/payment";
+import {
+  MATCH_FEE_PRICES,
+  MAX_CORPORATE_GROUPS,
+  corporateFeeKey,
+  groupsForPeople,
+  type CorporateBand,
+} from "@/lib/matchFees";
 import PaymentStep from "@/components/PaymentStep";
 
 const TOTAL_STEPS = 6;
@@ -58,12 +65,47 @@ function normaliseUkPhone(raw: string): string | null {
 
 const isUkPhone = (raw: string) => normaliseUkPhone(raw) !== null;
 
-const MATCH_FEES = [
-  { value: "experience-day", label: "Experience day — one person, one day — £19" },
-  { value: "become-qualified", label: "Become qualified — one person, one club, full course — £49" },
-  { value: "group-experience-day", label: "Group experience day — a party, one taster day — £49" },
-  { value: "group-qualification", label: "Group qualification — team building, become qualified — £99" },
+const PRIVATE_MATCH_FEES = [
+  { value: "experience-day", label: "Experience day - one person, one day - £19" },
+  { value: "become-qualified", label: "Become qualified - one person, one club, full course - £49" },
+  { value: "group-experience-day", label: "Group experience day - a private group of up to 5, one taster day - £49" },
+  { value: "group-qualification", label: "Group qualification - a private group of up to 5, become qualified - £99" },
 ] as const;
+
+const CORPORATE_MATCH_FEES = [
+  { value: "corporate-teams", label: "Teams, clubs and groups - £99 per group of up to 5" },
+  { value: "corporate-company", label: "Companies - £199 per group of up to 5, with one named contact and an invoice for your accounts" },
+] as const;
+
+const PRIVATE_FEE_VALUES = new Set<string>(PRIVATE_MATCH_FEES.map((f) => f.value));
+
+function parseGroupSize(raw: string): number {
+  const n = Number.parseInt(raw, 10);
+  return Number.isInteger(n) && n >= 1 && n <= 50 ? n : 0;
+}
+
+function resolvedFeeBand(values: QuizState, corporate: boolean): string {
+  if (!corporate) return values.matchFee;
+  if (values.matchFee !== "corporate-teams" && values.matchFee !== "corporate-company") return "";
+  const people = parseGroupSize(values.groupSize);
+  if (!people) return "";
+  const groups = groupsForPeople(people);
+  if (groups < 1 || groups > MAX_CORPORATE_GROUPS) return "";
+  return corporateFeeKey(values.matchFee as CorporateBand, groups);
+}
+
+function feeLabelFor(values: QuizState, corporate: boolean): string {
+  const band = resolvedFeeBand(values, corporate);
+  const priced = band ? MATCH_FEE_PRICES[band]?.name : "";
+  if (priced) {
+    const people = corporate ? parseGroupSize(values.groupSize) : 0;
+    if (people) return `${priced}, for ${people} people`;
+    return priced;
+  }
+  return corporate
+    ? labelFor(CORPORATE_MATCH_FEES, values.matchFee)
+    : labelFor(PRIVATE_MATCH_FEES, values.matchFee);
+}
 
 type QuizState = {
   sport: string;
@@ -74,6 +116,7 @@ type QuizState = {
   location: string;
   travel: string;
   matchFee: string;
+  groupSize: string;
   riskAck: boolean;
   guardianConsent: boolean;
   guardianName: string;
@@ -93,6 +136,7 @@ const initial: QuizState = {
   location: "",
   travel: "anywhere-uk",
   matchFee: "",
+  groupSize: "",
   riskAck: false,
   guardianConsent: false,
   guardianName: "",
@@ -186,7 +230,8 @@ function buildPayload(values: QuizState, honey: string) {
     "Injuries or conditions": values.healthNote.trim() || "—",
     "Town / city": values.location.trim(),
     "How far they will travel": labelFor(TRAVEL_OPTIONS, values.travel),
-    "Match fee band": labelFor(MATCH_FEES, values.matchFee),
+    "Match fee band": feeLabelFor(values, corporate),
+    "Group size": corporate && values.groupSize.trim() ? values.groupSize.trim() : "",
     Payment: paymentStatusLabel(),
     "Understands the risks": values.riskAck ? "Yes" : "No",
     "Sent from": pageUrl,
@@ -219,7 +264,10 @@ function isStepValid(step: number, values: QuizState): boolean {
     case 4:
       return Boolean(values.location.trim() && values.travel);
     case 5:
-      return Boolean(values.matchFee);
+      if (values.matchFee === "corporate-teams" || values.matchFee === "corporate-company") {
+        return Boolean(resolvedFeeBand(values, true));
+      }
+      return Boolean(values.matchFee) && PRIVATE_FEE_VALUES.has(values.matchFee);
     case 6:
       return (
         values.riskAck &&
@@ -360,6 +408,7 @@ export default function ContactForm() {
     if (new URLSearchParams(window.location.search).get("type") === "corporate") {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setCorporate(true);
+      setValues((v) => (PRIVATE_FEE_VALUES.has(v.matchFee) ? { ...v, matchFee: "" } : v));
     }
   }, []);
   const [status, setStatus] = useState<SendStatus>("idle");
@@ -459,7 +508,7 @@ export default function ContactForm() {
             sport: sportName,
             location: values.location,
             travel: labelFor(TRAVEL_OPTIONS, values.travel),
-            matchFee: labelFor(MATCH_FEES, values.matchFee),
+            matchFee: feeLabelFor(values, corporate),
             age: labelFor(AGE_BANDS, values.ageBand),
             guardianName: under18 ? values.guardianName : "",
             guardianPhone: under18 ? values.guardianPhone : "",
@@ -471,7 +520,7 @@ export default function ContactForm() {
       if (delivered) {
         // Send the student to Stripe Checkout; if that isn't possible, we email a payment link.
         const picked = sports.find((s) => s.id === values.sport);
-        const redirecting = await startPayment(values.matchFee, {
+        const redirecting = await startPayment(resolvedFeeBand(values, corporate) || values.matchFee, {
           name: values.name,
           email: values.email,
           phone: values.phone,
@@ -545,6 +594,11 @@ export default function ContactForm() {
         <div className="flex flex-col gap-4">
           <p className="text-base leading-relaxed text-[#1C1917]/75">
             You pay the match fee up front, when you enquire.
+          </p>
+          <p className="text-sm leading-relaxed text-[#1C1917]/70">
+            You choose the exact match fee later in this form. Individual and private-group fees are listed in How it works above. Larger groups and company bookings use{" "}
+            <Link href="/corporate-teams" className="font-semibold text-accent underline-offset-2 hover:underline">Corporate and Teams</Link>{" "}
+            fees.
           </p>
           <div className="rounded-2xl border border-[#1C1917]/10 bg-white p-6 shadow-xl shadow-black/30 backdrop-blur sm:p-8">
           {submitted ? (
@@ -887,10 +941,50 @@ export default function ContactForm() {
                     <ChipGroup
                       legend="What are you looking for?"
                       name="matchFee"
-                      options={MATCH_FEES}
+                      options={corporate ? CORPORATE_MATCH_FEES : PRIVATE_MATCH_FEES}
                       value={values.matchFee}
                       onChange={(v) => setField("matchFee", v)}
                     />
+                    {!corporate && (
+                    <p className="text-sm leading-relaxed text-[#1C1917]/70">
+                      The group fees are for a private group of up to 5 people, including a private stag or hen party of that size. If your group is larger than 5, or this is a company, team-building or corporate booking, please use our Corporate and Teams fees instead: £99 per group of up to 5 for teams, clubs and groups, or £199 per group of up to 5 for companies. See{" "}
+                      <Link href="/corporate-teams" className="font-semibold text-accent underline-offset-2 hover:underline">Corporate and Teams</Link>.
+                    </p>
+                    )}
+                    {corporate && (
+                    <p className="text-sm leading-relaxed text-[#1C1917]/70">
+                      These are the Corporate and Teams fees: £99 per group of up to 5 for teams, clubs and groups, or £199 per group of up to 5 for companies. The fee is for each group of up to 5. See{" "}
+                      <Link href="/corporate-teams" className="font-semibold text-accent underline-offset-2 hover:underline">Corporate and Teams</Link>.
+                    </p>
+                    )}
+                    {corporate && (
+                      <div>
+                        <label htmlFor="groupSize" className="mb-1 block text-sm font-semibold text-[#1C1917]">
+                          How many people?
+                        </label>
+                        <input
+                          id="groupSize"
+                          name="groupSize"
+                          type="number"
+                          inputMode="numeric"
+                          min={1}
+                          max={50}
+                          value={values.groupSize}
+                          onChange={(e) => setField("groupSize", e.target.value)}
+                          className={fieldClass}
+                        />
+                        {parseGroupSize(values.groupSize) > 0 && values.matchFee && resolvedFeeBand(values, true) ? (
+                          <p className="mt-2 text-sm text-[#1C1917]/80">
+                            For {parseGroupSize(values.groupSize)} people that is {groupsForPeople(parseGroupSize(values.groupSize))} group{groupsForPeople(parseGroupSize(values.groupSize)) === 1 ? "" : "s"} of up to 5, so the ESP match fee is £{(MATCH_FEE_PRICES[resolvedFeeBand(values, true)].pence / 100)}.
+                          </p>
+                        ) : null}
+                        {parseGroupSize(values.groupSize) > 0 && groupsForPeople(parseGroupSize(values.groupSize)) > MAX_CORPORATE_GROUPS ? (
+                          <p className="mt-2 text-sm text-[#1C1917]/80">
+                            For a group this size, please email us and we will confirm the fee.
+                          </p>
+                        ) : null}
+                      </div>
+                    )}
                     <p className="text-xs leading-relaxed text-[#1C1917]/55">
                       The coach or club bills you separately for the training.
                     </p>
@@ -1030,7 +1124,7 @@ export default function ContactForm() {
                       </select>
                     </div>
 
-                    <PaymentStep feeLabel={labelFor(MATCH_FEES, values.matchFee)} />
+                    <PaymentStep feeLabel={feeLabelFor(values, corporate)} />
 
                     <div id="fee-note" className="space-y-2 text-sm text-[#1C1917]/55">
                       <p>All our coaches are UK-based.</p>

@@ -12,9 +12,11 @@ featured: false
 draft: false
 ---
 
-We searched course prices at clubs and schools across the UK, so you know what to expect. Typical ranges, checked October 2026. Each club or coach sets its own price.
+We searched published course prices at clubs and schools across the UK, so you know what to expect. The figures are typical ranges, not a quote, and were checked in October 2026. Each club or coach sets its own price, and you should confirm the current price with them. We have not listed every provider we looked at on this page.
 
 **We don't take payment for any of these courses.** You book and pay the club or coach directly. [Our match fee](#our-match-fee) pays for our know-how: we find you the right qualified coach for your sport, so you save time and learn from the pros.
+
+On this page, "Become qualified" is a shorthand for the typical next course or award in that sport. That might be a learner qualification, a competence certificate or a coaching award, as the course title in each line already shows. These are not all the same thing, and ESP does not guarantee you will pass or become qualified.
 
 ## [Mountaineering, coasteering and rock climbing](https://www.extremesportspromotions.com/guides/mountaineering-for-beginners-uk)
 
@@ -71,6 +73,8 @@ We searched course prices at clubs and schools across the UK, so you know what t
 - **Become qualified:** Typical UK price: £6,000 to £12,000 from no jumps (AFF, a C Licence, TR1, 500 jumps or 200 in the last 18 months, a first-flight course and a wingsuit)
 - **Per coached jump:** Typical UK price: £40 to £100 a coached jump
 
+A wingsuit first-flight course is only for experienced skydivers who already meet the entry rules. The match fee does not buy that whole path. If you enquire about wingsuit flying and you are not yet at that point, we introduce you to a suitable qualified coach or club for the right next step, which for many people is a UK skydiving progression course.
+
 ## [Skateboarding and BMX](https://www.extremesportspromotions.com/guides/skateboarding-for-beginners-uk)
 
 - **Experience day:** Typical UK price: £32 to £60 per person (one-hour private lesson with board and pads)
@@ -85,10 +89,10 @@ We searched course prices at clubs and schools across the UK, so you know what t
 
 ## [BASE jumping](https://www.extremesportspromotions.com/guides/base-jumping-for-beginners-uk)
 
-- **Become qualified:** Typical price abroad: £1,250 to £2,500 (the first BASE course is the entry step; there is no UK qualification)
-- **Per day:** Typical price abroad: £200 to £400 a day for coaching
+- **Become qualified:** Indicative price abroad: £1,250 to £2,500 (the first BASE course is the entry step; there is no UK qualification)
+- **Per day:** Indicative price abroad: £200 to £400 a day for coaching
 
-BASE is for experienced skydivers only. No official UK source sets a minimum number of skydives, so ask any course provider abroad for its entry rules in writing.
+These BASE figures are indicative only. We have not found an official dated list of UK or governing-body BASE course fees. BASE is for experienced skydivers only. No official UK source sets a minimum number of skydives, so ask any course provider abroad for its entry rules and prices in writing.
 
 ## [Snowboarding and skiing](https://www.extremesportspromotions.com/guides/beginners-guide-to-snowboarding-uk)
 
@@ -114,9 +118,11 @@ You pay these prices to the club or coach. Our match fee is separate and paid on
 
 - Experience day (one person, one day): **£19**
 - Become qualified (one person, one club, full course): **£49**
-- Group experience day (a party, one taster day): **£49**
-- Group qualification (team building, become qualified): **£99**
+- Group experience day (a private group of up to 5, one taster day): **£49**
+- Group qualification (a private group of up to 5, become qualified): **£99**
 
-You pay it when you enquire. Full refund if we can't find you a coach within 14 days, or if your health stops you training. We check every coach's qualifications, insurance and references.
+The group fees above are for private groups of up to 5 people, including a private stag or hen party of that size. Groups of 6 or more, and all company, team-building and corporate bookings, use our [Corporate and Teams](/corporate-teams) fees: £99 per group of up to 5 for teams, clubs and groups, or £199 per group of up to 5 for companies. ESP arranges weekdays, away days and weekends.
+
+You pay the match fee when you enquire. Full refund if we can't find you a coach within 14 days, or if your health stops you training. We check every coach's qualifications, insurance and references.
 
 [Send an enquiry](https://www.extremesportspromotions.com/#enquire)

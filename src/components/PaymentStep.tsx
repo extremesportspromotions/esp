@@ -10,6 +10,9 @@ export default function PaymentStep({ feeLabel }: { feeLabel: string }) {
     <div id="payment-step" className="rounded-xl border border-[#1C1917]/10 bg-[#F6EFE3] p-4">
       <p className="text-xs font-bold uppercase tracking-wide text-[#1C1917]/55">Your match fee</p>
       <p className="mt-1 font-semibold text-[#1C1917]">{feeLabel || "Not chosen yet"}</p>
+      <p className="mt-2 text-sm leading-relaxed text-[#1C1917]/75">
+        This is the ESP match fee, paid up front. The coach or club bills you separately for the training. Full refund if we can&apos;t match you within 14 days.
+      </p>
       <p className="mt-2 text-sm leading-relaxed text-[#1C1917]/75">{PAYMENT_NOTE}</p>
     </div>
   );

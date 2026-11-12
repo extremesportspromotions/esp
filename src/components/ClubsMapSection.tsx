@@ -325,15 +325,23 @@ export default function ClubsMapSection() {
           )}
         </div>
 
-        <p className="mt-4 text-xs leading-relaxed text-[#1C1917]/40">
-          Club locations are compiled from OpenStreetMap (Overpass), BHPA training-school
-          listings, British Skydiving drop-zone directories, public wake-park
-          guides, and other publicly listed centres. The map only shows venues
-          that offer coaching or lessons and publish contact details. Shops and
-          venues without a working website are left out. Last checked October
-          2026. Coordinates are approximate. Always confirm details with the
-          club before travelling.
-        </p>
+        <div className="mt-4 space-y-2 text-xs leading-relaxed text-[#1C1917]/40">
+          <p>
+            Club locations are compiled from OpenStreetMap (Overpass), BHPA training-school
+            listings, British Skydiving drop-zone directories, public wake-park
+            guides, and other publicly listed centres. The map only shows venues
+            that offer coaching or lessons and publish contact details. Shops and
+            venues without a working website are left out. Last checked October
+            2026. Coordinates are approximate. Always confirm details with the
+            club before travelling.
+          </p>
+          <p>
+            The map is a directory of publicly listed venues, not a list of checked partners. We have not checked the venues on the map in the same way we check a coach before an introduction. A venue having a website is not the same as the qualification, insurance and reference checks we do for a match. If you want a coach we have checked for you, send an enquiry.
+          </p>
+          <p>
+            There are no BASE jumping venues on the map. There is no official UK BASE qualification, and BASE courses are typically held abroad. See our BASE guides for the skydiving route and for the UK law and safety position.
+          </p>
+        </div>
       </div>
     </section>
   );

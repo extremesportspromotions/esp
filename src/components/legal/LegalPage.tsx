@@ -6,13 +6,14 @@ import type { LegalDoc } from "@/data/legal";
 const EMAIL = "enquiries@extremesportspromotions.com";
 const LINKS: [RegExp, string][] = [
   [/Refund policy/, "/refunds"],
+  [/Corporate and Teams page/, "/corporate-teams"],
   [/enquiries@extremesportspromotions\.com/, `mailto:${EMAIL}`],
   [/ico\.org\.uk/, "https://ico.org.uk/make-a-complaint/"],
 ];
 
 /** Turns known phrases into links and highlights [placeholders]. */
 function Rich({ text }: { text: string }) {
-  const re = /(Refund policy|enquiries@extremesportspromotions\.com|ico\.org\.uk|\[[^\]]+\])/g;
+  const re = /(Refund policy|Corporate and Teams page|enquiries@extremesportspromotions\.com|ico\.org\.uk|\[[^\]]+\])/g;
   return (
     <>
       {text.split(re).map((part, i) => {
