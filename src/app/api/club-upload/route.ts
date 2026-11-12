@@ -32,9 +32,13 @@ export async function POST(req: Request): Promise<Response> {
   const { handleUploadPresigned } = await import("@vercel/blob/client");
   try {
     const body = await req.json();
+    // We only hand out upload URLs; there is no upload-completed callback (the
+    // files are checked in /api/contact instead), so no webhook key is needed.
+    if (body?.type !== "blob.generate-presigned-url") throw new Error("Not allowed");
     const json = await handleUploadPresigned({
       body,
       request: req,
+      webhookPublicKey: process.env.BLOB_WEBHOOK_PUBLIC_KEY || "not-used-no-callbacks",
       getSignedToken: async (pathname, _payload, multipart) => {
         if (multipart || !PATH_RE.test(pathname)) throw new Error("Not allowed");
         const validUntil = Date.now() + 10 * 60_000;
@@ -46,7 +50,8 @@ export async function POST(req: Request): Promise<Response> {
       },
     });
     return Response.json(json);
-  } catch {
+  } catch (e) {
+    console.error("club-upload refused:", e instanceof Error ? e.message.slice(0, 120) : "unknown");
     return Response.json({ error: "Upload refused" }, { status: 400 });
   }
 }
