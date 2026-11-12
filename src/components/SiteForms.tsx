@@ -276,7 +276,7 @@ export function ClubApplicationForm({ uploads = false }: { uploads?: boolean }) 
           {quals.map((q, i) => (
             <div key={i} className="grid gap-3 rounded-lg border border-white/10 p-3 sm:grid-cols-2" data-row="qualification">
               <Field dark label="Qualification name"><input value={q.name} onChange={(e) => setQ(i, "name", e.target.value)} maxLength={120} className={darkInput} /></Field>
-              <Field dark label="Awarding body"><input value={q.body} onChange={(e) => setQ(i, "body", e.target.value)} maxLength={120} placeholder="e.g. BHPA, BSAC, BASI, British Canoeing, Mountain Training" className={darkInput} /></Field>
+              <Field dark label="Awarding body"><input value={q.body} onChange={(e) => setQ(i, "body", e.target.value)} maxLength={120} placeholder="e.g. BHPA, BSAC, BASI" className={darkInput} /></Field>
               <Field dark label="Level"><input value={q.level} onChange={(e) => setQ(i, "level", e.target.value)} maxLength={60} className={darkInput} /></Field>
               <Field dark label={<>Expiry date<Opt /></>}><input type="date" value={q.expiry} onChange={(e) => setQ(i, "expiry", e.target.value)} className={`${darkInput} [color-scheme:dark]`} /></Field>
               {quals.length > 1 && (
