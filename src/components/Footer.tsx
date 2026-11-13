@@ -67,7 +67,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="max-w-md">
-          <p className="mb-2 font-semibold text-[#1C1917]/70">Notify me at launch</p>
+          <p className="mb-2 font-semibold text-[#1C1917]/70">Notify me at launch (March 2027)</p>
           <LaunchSignup compact />
         </div>
         <p>

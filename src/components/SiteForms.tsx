@@ -62,7 +62,7 @@ export function LaunchSignup({ compact }: { compact?: boolean }) {
     const r = await send({ kind: "launch", email: v.email.trim(), consent: true, _honey: v._honey ?? "" });
     setStatus(r.ok ? "sent" : r.errors ? "invalid" : "error");
   }
-  if (status === "sent") return <Message status="sent" sent="Thanks, you're on the list. We'll email you when we launch." />;
+  if (status === "sent") return <Message status="sent" sent="Thanks, you're on the list. We'll email you when we launch in March 2027." />;
   return (
     <form noValidate onSubmit={onSubmit} data-form="launch" className="relative flex flex-col gap-2">
       <Honeypot />
@@ -76,7 +76,7 @@ export function LaunchSignup({ compact }: { compact?: boolean }) {
       <label className={`flex items-start gap-2 text-xs leading-relaxed text-[#1C1917]/70 ${bad.includes("consent") ? "text-red-700" : ""}`}>
         <input type="checkbox" name="consent" className="mt-0.5" aria-invalid={bad.includes("consent")} />
         <span>
-          Email me when ESP launches. I can unsubscribe at any time. See our{" "}
+          Email me when ESP launches in March 2027. I can unsubscribe at any time. See our{" "}
           <Link href="/privacy" className="underline underline-offset-2">privacy notice</Link>.
         </span>
       </label>
@@ -90,7 +90,7 @@ export function LaunchSignupSection() {
   return (
     <section id="launch" className="border-t border-[#1C1917]/10 bg-[#F6EFE3]">
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-        <h2 className="font-display text-2xl font-bold text-[#1C1917] sm:text-3xl">Be first to hear when we launch</h2>
+        <h2 className="font-display text-2xl font-bold text-[#1C1917] sm:text-3xl">Be first to hear when we launch in March 2027</h2>
         <p className="mt-2 text-base text-[#1C1917]/75">Leave your email and we&apos;ll tell you when coach matching opens. One email, no spam.</p>
         <div className="mt-5"><LaunchSignup /></div>
       </div>
