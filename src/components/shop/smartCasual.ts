@@ -1,4 +1,4 @@
-import { v10Gallery } from "./v10";
+import { v10Gallery, v10MensGallery } from "./v10";
 import type { Merch, MerchPhoto, MerchVariant, PhotoView } from "./merch";
 
 /**
@@ -61,6 +61,21 @@ export const SC_EXTRA_PHOTOS: Record<string, { view: PhotoView; file: string }[]
   "oxford-ls-white": [{ view: "model", file: "model2" }],
   "softshell-french-navy": [{ view: "model", file: "model2" }],
 };
+
+/** Outfits left off both tabs for now (woman-modelled men's-cut photos, no approved men's set). */
+const HIDE_V10_PHOTOS = new Set([
+  "gilet-azure", // 014: orderable, but both the woman set and the men's reshoot stay off
+  "crewknit-black", "polo-ls-navy", "polo-ls-white", "polo-ss-black",
+  "softshell-french-navy", "vcardigan-grey-marl",
+]);
+
+/** Design.photo keys with an approved men's reshoot; the original woman-modelled v10 set stays on Women's. */
+const MENS_RESHOOT = new Set([
+  "chinos-black", "chinos-natural", "chinos-royal",
+  "shorts-black", "shorts-natural", "shorts-navy",
+  "gilet-black", "oxford-ls-blue", "oxford-ss-black",
+  "polo-ss-heather-grey", "softshell-azure",
+]);
 
 /** `thread`: embroidery thread on the photos/design record (dark grey on light colours, silver-grey otherwise). */
 type Design = { colour: string; hex: string; light?: boolean; thread: "silver-grey" | "dark grey"; photo: string; model?: boolean; img?: string; alt?: string; oos?: string[] };
@@ -266,9 +281,9 @@ export const smartCasual: Merch[] = defs.map((p) => {
   const logo = "embroidered Devonshire stag logo";
   const alt = (c: Design, view: PhotoView) => {
     const it = `${p.name} in ${c.colour.toLowerCase()}`;
-    if (view === "model") return `Model wearing the ESP ${it}`;
-    if (view === "close-up") return `Close-up of the ${logo} on the ESP ${it}`;
-    return `ESP ${it}, ${view === "front" ? `front, with the ${logo}` : view === "side" ? "side view" : "back"}`;
+    if (view === "model") return `Model wearing the Devonshire ${it}`;
+    if (view === "close-up") return `Close-up of the ${logo} on the Devonshire ${it}`;
+    return `Devonshire ${it}, ${view === "front" ? `front, with the ${logo}` : view === "side" ? "side view" : "back"}`;
   };
   const ph = (c: Design, view: PhotoView, file: string): MerchPhoto => ({
     src: `/shop/sc/v2/${c.photo}-${file}.webp`,
@@ -280,28 +295,41 @@ export const smartCasual: Merch[] = defs.map((p) => {
   // until their stag Clothes2order designs are saved (see HELD / DESIGNS in src/lib/madeDesigns.ts).
   const oldLogo = false;
   // Everything else shows only the Devonshire stag model photos (old logo photos removed).
-  const photos = (c: Design): MerchPhoto[] => c.img
+  const v10Key = (c: Design) => `sc-${c.photo.replace(/^shorts-/, "chinoshorts-")}`;
+  const v10Alt = (c: Design) => `Model wearing the Devonshire ${p.name} in ${c.colour.toLowerCase()}`;
+  const v10Back = (c: Design) => /^(chinos|shorts)-/.test(c.photo) ? ", with the embroidered Devonshire stag on the right back pocket" : "";
+  const photos = (c: Design): MerchPhoto[] => {
+    if (HIDE_V10_PHOTOS.has(c.photo)) return [];
+    return c.img
     ? [{ src: c.img, alt: c.alt ?? alt(c, "back"), view: "back" }] // caption shown once, under the Denim heading
     : oldLogo
     ? [...(c.model ? [ph(c, "model", "model")] : []), ...STANDARD_VIEWS.map((x) => ph(c, x.view, x.file))]
     : [
         ...(V7_MODEL.has(c.photo)
-          ? v10Gallery(`sc-${c.photo.replace(/^shorts-/, "chinoshorts-")}`, `Model wearing the ESP ${p.name} in ${c.colour.toLowerCase()}`, /^(chinos|shorts)-/.test(c.photo) ? ", with the embroidered Devonshire stag on the right back pocket" : "")
+          ? v10Gallery(v10Key(c), v10Alt(c), v10Back(c))
           : c.model ? [ph(c, "model", "model")] : []),
         ...(SC_EXTRA_PHOTOS[c.photo] ?? []).map((x) => ph(c, x.view, x.file)),
       ];
-  const shownDesigns = p.designs.filter((c) => photos(c).length);
+  };
+  const colorEntry = (c: Design) => {
+    const gallery = photos(c);
+    const mens = MENS_RESHOOT.has(c.photo) ? v10MensGallery(v10Key(c), v10Alt(c), v10Back(c)) : [];
+    const galleries = mens.length && gallery.length ? { male: mens, female: gallery } : undefined;
+    return { name: c.colour, hex: c.hex, light: c.light || undefined, gallery, ...(galleries ? { galleries } : {}) };
+  };
+  const shownDesigns = p.designs.filter((c) => photos(c).length || MENS_RESHOOT.has(c.photo));
   const first = shownDesigns.find((c) => c.colour === OPEN[p.key]) ?? shownDesigns[0];
   const shown = [first, ...shownDesigns.filter((c) => c !== first)];
+  const firstEntry = colorEntry(first);
   return {
     pid: p.pid,
     name: p.name,
     cat: "smartcasual",
     ...(p.sub ? { sub: p.sub } : {}),
-    img: photos(first)[0].src,
-    gallery: photos(first),
+    img: firstEntry.gallery[0]?.src ?? firstEntry.galleries?.male?.[0]?.src ?? "",
+    gallery: firstEntry.gallery.length ? firstEntry.gallery : firstEntry.galleries?.male,
     details: p.details,
-    colors: shown.map((c) => ({ name: c.colour, hex: c.hex, light: c.light || undefined, gallery: photos(c) })),
+    colors: shown.map((c) => colorEntry(c)),
     variants: variants.filter((v) => shown.some((c) => c.colour === v.color)),
     made: true,
   };

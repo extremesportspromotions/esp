@@ -137,3 +137,27 @@ export function v10Gallery(key: string, alt: string, backExtra = ""): MerchPhoto
     view,
   }));
 }
+
+/** Men's reshoot (13 Nov 2026) for outfits first photographed on women. public/shop/v10/mens/<key>-<view>.webp */
+export const V10_MENS: Record<string, PhotoView[]> = {
+  "sc-chinos-black": ["front", "side", "back"],
+  "sc-chinos-natural": ["front", "side", "back"],
+  "sc-chinos-royal": ["front", "side", "back"],
+  "sc-chinoshorts-black": ["front", "side", "back"],
+  "sc-chinoshorts-natural": ["front", "side", "back"],
+  "sc-chinoshorts-navy": ["front", "side", "back"],
+  "sc-gilet-black": ["front", "side", "back"],
+  "sc-oxford-ls-blue": ["front", "side", "back"],
+  "sc-oxford-ss-black": ["front", "side", "back"],
+  "sc-polo-ss-heather-grey": ["front", "side", "back"],
+  "sc-softshell-azure": ["front", "side", "back"],
+};
+
+/** Front, side and back gallery for a men's reshoot key. */
+export function v10MensGallery(key: string, alt: string, backExtra = ""): MerchPhoto[] {
+  return (V10_MENS[key] ?? []).map((view) => ({
+    src: `/shop/v10/mens/${key}-${view}.webp`,
+    alt: `${alt}, ${VIEW_TEXT[view]}${view === "back" ? backExtra : ""}`,
+    view,
+  }));
+}

@@ -1,4 +1,4 @@
-import type { Merch } from "./merch";
+import type { Merch, MerchColor } from "./merch";
 
 /**
  * Model gender in each shop photo, from viewing the actual image files (13 Nov 2026),
@@ -99,6 +99,7 @@ const PHOTO_GENDER: Record<string, PhotoGender> = {
 
 export function photoGender(src?: string): PhotoGender | undefined {
   if (!src) return undefined;
+  if (src.includes("/shop/v10/mens/")) return "male";
   if (PHOTO_GENDER[src]) return PHOTO_GENDER[src];
   // Same model as the front, if a side or back of a model set is passed.
   if (!src.includes("/denim-")) {
@@ -107,22 +108,32 @@ export function photoGender(src?: string): PhotoGender | undefined {
   return undefined;
 }
 
+function colorGalleryFor(c: MerchColor, gender: PhotoGender) {
+  const fromSet = c.galleries?.[gender];
+  if (fromSet && fromSet.length > 0) return fromSet;
+  return photoGender(c.gallery[0]?.src) === gender ? c.gallery : undefined;
+}
+
 export function hasGenderPhoto(p: Merch, gender: PhotoGender): boolean {
   if (p.colors && p.colors.length > 0) {
-    return p.colors.some((c) => photoGender(c.gallery[0]?.src) === gender);
+    return p.colors.some((c) => (colorGalleryFor(c, gender)?.length ?? 0) > 0);
   }
   return photoGender(p.img) === gender;
 }
 
 /**
  * A copy of the product for one clothing tab: only colours whose photo matches that tab,
- * with the card and default detail image set to the first matching colour.
+ * with the card, default detail image and gallery set to that tab's photos.
  */
 export function forTab(p: Merch, tab: "mens" | "womens" | "equipment"): Merch | null {
   if (tab === "equipment") return p;
   const want: PhotoGender = tab === "mens" ? "male" : "female";
   if (p.colors && p.colors.length > 0) {
-    const colors = p.colors.filter((c) => photoGender(c.gallery[0]?.src) === want);
+    const colors = p.colors.flatMap((c) => {
+      const gallery = colorGalleryFor(c, want);
+      if (!gallery?.length) return [];
+      return [{ ...c, gallery, galleries: undefined }];
+    });
     if (colors.length === 0) return null;
     const first = colors[0];
     const variants = p.variants.filter((v) => !v.color || colors.some((c) => c.name === v.color));

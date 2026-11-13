@@ -6,7 +6,7 @@ export type PhotoView = "front" | "back" | "side" | "close-up" | "model";
 /** `note`: small caption shown under the photo (e.g. on AI model illustrations). */
 export type MerchPhoto = { src: string; alt: string; view?: PhotoView; note?: string };
 /** `light`: a light colour, made with the dark logo (dark grey thread on smart casual; black thread is never used). */
-export type MerchColor = { name: string; hex: string; gallery: MerchPhoto[]; light?: boolean };
+export type MerchColor = { name: string; hex: string; gallery: MerchPhoto[]; light?: boolean; galleries?: { male?: MerchPhoto[]; female?: MerchPhoto[] } };
 /** `made`: smart casual, made to order and fulfilled by hand (never by the automatic partner). */
 export type Merch = { pid: number; name: string; cat: "apparel" | "bags" | "outerwear" | "smartcasual"; made?: boolean; sub?: string; img: string; gallery?: MerchPhoto[]; details?: string[]; colors?: MerchColor[]; variants: MerchVariant[] };
 

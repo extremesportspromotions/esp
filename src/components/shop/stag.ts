@@ -39,8 +39,8 @@ export function withStag(list: Merch[]): Merch[] {
   return list.map((p) => {
     const mk = (colour: string): MerchPhoto[] => {
       const f = `${slug(p.name)}-${slug(colour)}`;
-      if (MODELS.has(f)) return v10Gallery(`pp-${f}`, `Model wearing the ESP ${p.name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`);
-      return FILES.has(f) ? [{ src: `/shop/pf-stag/${f}.webp`, alt: `ESP ${p.name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`, view: "front" }] : [];
+      if (MODELS.has(f)) return v10Gallery(`pp-${f}`, `Model wearing the Devonshire ${p.name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`);
+      return FILES.has(f) ? [{ src: `/shop/pf-stag/${f}.webp`, alt: `Devonshire ${p.name} in ${colour.toLowerCase()} with the embroidered Devonshire stag logo`, view: "front" }] : [];
     };
     const details = p.details;
     if (!p.colors?.length) {
@@ -48,7 +48,7 @@ export function withStag(list: Merch[]): Merch[] {
       const f = `${slug(p.name)}-${one[slug(p.name)] ?? "black"}`;
       const own = FILES.has(f) ? f : undefined;
       const mod = MODELS.has(f) ? f : [...MODELS].find((m) => m.startsWith(slug(p.name) + "-"));
-      const gallery: MerchPhoto[] = mod ? v10Gallery(`pp-${mod}`, `ESP ${p.name} with the embroidered Devonshire stag logo`) : own ? [{ src: `/shop/pf-stag/${own}.webp`, alt: `ESP ${p.name} with the Devonshire stag logo`, view: "front" }] : [];
+      const gallery: MerchPhoto[] = mod ? v10Gallery(`pp-${mod}`, `Devonshire ${p.name} with the embroidered Devonshire stag logo`) : own ? [{ src: `/shop/pf-stag/${own}.webp`, alt: `Devonshire ${p.name} with the Devonshire stag logo`, view: "front" }] : [];
       if (!own) HIDDEN.push(`${p.pid}:`);
       return { ...p, img: gallery[0]?.src ?? p.img, gallery, details };
     }
