@@ -3,7 +3,6 @@ import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import ShopBrowser from "@/components/shop/ShopBrowser";
-import { notYetOrderable } from "@/lib/madeDesigns";
 
 export const metadata: Metadata = {
   title: "Devonshire | Extreme Sports Promotions",
@@ -26,12 +25,10 @@ export default function ShopPage() {
               OUTDOOR CLOTHING
               <span className="h-px w-8 bg-[#0E2141]/60 sm:w-16" aria-hidden />
             </p>
-            <p className="font-serif mx-auto mt-4 max-w-md text-lg text-[#1C1917]/85 sm:text-xl">Subtle kit for coaches, students and athletes.</p>
-            <p data-brand-line className="mx-auto mt-3 max-w-md text-sm text-[#1C1917]/75">Devonshire is the clothing brand of Extreme Sports Promotions (ESP).</p>
           </div>
         </header>
 
-        <ShopBrowser notYet={notYetOrderable()} />
+        <ShopBrowser />
       </main>
       <Footer />
     </>

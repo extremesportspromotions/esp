@@ -18,6 +18,7 @@ import { catalogue as merch } from "./catalogue";
 import { BagProvider, BagButton } from "./Bag";
 import { MerchCard, NotYetContext } from "./MerchCard";
 import type { Merch } from "./merch";
+import { hiddenColours } from "./hiddenFromShop";
 import { forTab } from "./photoGender";
 
 const kitIcons: Record<string, string> = {
@@ -70,8 +71,6 @@ function Card({ p }: { p: Product }) {
 }
 
 const grid = "grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4";
-
-type NotYet = { key: string; name: string; colour: string }[];
 
 /**
  * Hides anything that can't be ordered right now (no saved supplier design, held, or out of stock).
@@ -129,12 +128,12 @@ function readIntent(): { tab: TabId; sub: string | null; anchor?: string } | nul
   return null;
 }
 
-export default function ShopBrowser({ notYet = [] }: { notYet?: NotYet }) {
+export default function ShopBrowser() {
   const [tab, setTab] = useState<TabId>("mens");
   const [sub, setSub] = useState<string | null>(null);
   // Without JS, all three sections stay visible so old #hashes still jump. After hydration we show one tab.
   const [ready, setReady] = useState(false);
-  const kitAll = orderable(merch, new Set(notYet.map((x) => x.key)));
+  const kitAll = orderable(merch, new Set(hiddenColours.map((x) => x.key)));
 
   useEffect(() => {
     const apply = () => {
@@ -167,7 +166,7 @@ export default function ShopBrowser({ notYet = [] }: { notYet?: NotYet }) {
     `shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-[13px] font-medium transition ${on ? "border-[#0E2141] bg-[#0E2141] text-white" : "border-[#1C1917]/25 bg-white text-[#1C1917] hover:border-[#1C1917]"}`;
 
   return (
-    <NotYetContext.Provider value={new Set(notYet.map((x) => x.key))}>
+    <NotYetContext.Provider value={new Set(hiddenColours.map((x) => x.key))}>
     <BagProvider>
     <div id="products">
       <div className="sticky top-[101px] z-40 border-b border-[#1C1917]/10 bg-[#F6EFE3]/95 backdrop-blur-md lg:top-[61px]">
