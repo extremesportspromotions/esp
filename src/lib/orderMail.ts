@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { madeInfo } from "@/lib/madeDesigns";
 import { isMade, lookup, type Line } from "@/lib/shop";
-import { emailHeading, emailLayout, emailPanel, emailPara, emailRows, EMAIL_COLOURS } from "@/lib/emailLayout";
+import { emailHeading, emailLayout, emailPanel, emailPara, emailRows, EMAIL_COLOURS, DEVONSHIRE_MARK_URL } from "@/lib/emailLayout";
 
 /**
  * Shop order messages, used by the Stripe webhook for EVERY paid shop order:
@@ -170,7 +170,7 @@ export function customerEmail(o: OrderInfo, origin: string) {
     "Your rights", rights, "",
     `Questions? Email ${ENQUIRIES} and quote #${o.shortNo}.`,
   ].join("\n");
-  void origin; // images now load from the live site via ESP_LOGO_URL
+  void origin; // images now load from the live site via DEVONSHIRE_MARK_URL
   const muted = `color:${EMAIL_COLOURS.muted}`;
   const itemRows = o.items.map((i) => ({
     label: `<b>${esc(i.name)}</b>${opt(i) ? `<br><span style="${muted}">${esc(opt(i))}</span>` : ""}<br><span style="${muted}">Qty ${i.qty}</span>`,
@@ -198,6 +198,8 @@ export function customerEmail(o: OrderInfo, origin: string) {
     subtitle: "from Extreme Sports Promotions",
     body,
     footer: `${BRAND} · Extreme Sports Promotions`,
+    logoUrl: DEVONSHIRE_MARK_URL,
+    logoAlt: BRAND,
   });
   return { subject, text, html };
 }

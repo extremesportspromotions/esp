@@ -19,6 +19,9 @@ export const EMAIL_COLOURS = {
 /** ESP logo (stag over "ESP" on navy). Absolute PNG URL so it loads in mail clients. */
 export const ESP_LOGO_URL = "https://www.extremesportspromotions.com/icon-512.png";
 
+/** Light/silver Devonshire stag for shop customer emails. Shows clearly on the navy header. */
+export const DEVONSHIRE_MARK_URL = "https://www.extremesportspromotions.com/shop/email-mark-light.png";
+
 const C = EMAIL_COLOURS;
 const SANS = "Arial,Helvetica,sans-serif";
 const SERIF = "Georgia,'Times New Roman',Times,serif";
@@ -65,15 +68,21 @@ export function emailLayout(o: {
   body: string;
   footer: string;
   logoAlt?: string;
+  logoUrl?: string;
+  logoWidth?: number;
+  logoHeight?: number;
 }): string {
   const kicker = o.kicker ?? "EXTREME SPORTS PROMOTIONS";
+  const logoUrl = o.logoUrl ?? ESP_LOGO_URL;
+  const logoW = o.logoWidth ?? 64;
+  const logoH = o.logoHeight ?? 64;
   return `<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>${emailEsc(o.title)}</title></head>
 <body style="margin:0;padding:0;background:${C.page};-webkit-text-size-adjust:100%">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${C.page}" style="background:${C.page}"><tr><td align="center" style="padding:20px 10px">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:100%;max-width:600px;background:#ffffff;border-collapse:collapse">
 <tr><td bgcolor="${C.navy}" style="background:${C.navy};padding:18px 20px">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-<td width="64" valign="middle" style="width:64px;padding:0 14px 0 0"><img src="${ESP_LOGO_URL}" width="64" height="64" alt="${emailEsc(o.logoAlt ?? "ESP – Extreme Sports Promotions")}" style="display:block;border:0;outline:none;width:64px;height:64px;color:#ffffff;font-family:${SANS};font-size:11px"></td>
+<td width="${logoW}" valign="middle" style="width:${logoW}px;padding:0 14px 0 0"><img src="${logoUrl}" width="${logoW}" height="${logoH}" alt="${emailEsc(o.logoAlt ?? "ESP – Extreme Sports Promotions")}" style="display:block;border:0;outline:none;width:${logoW}px;height:${logoH}px;color:#ffffff;font-family:${SANS};font-size:11px"></td>
 <td valign="middle" style="font-family:${SANS}">
 ${kicker ? `<div style="font-size:11px;line-height:1.4;font-weight:bold;letter-spacing:1.2px;color:${C.goldLight}">${emailEsc(kicker)}</div>` : ""}
 <div style="margin-top:${kicker ? 3 : 0}px;font-family:${SERIF};font-size:21px;line-height:1.25;color:#ffffff">${emailEsc(o.title)}</div>
