@@ -1,3 +1,6 @@
+import type { Merch } from "./merch";
+import { hasGenderPhoto } from "./photoGender";
+
 export type TabId = "mens" | "womens" | "equipment";
 
 export type Product = {
@@ -12,7 +15,7 @@ export type Product = {
 
 export const tabs: { id: TabId; label: string; short: string; subs: string[] }[] = [
   { id: "mens", label: "Men's", short: "Men's", subs: ["Tops", "Hoodies", "Smart casual", "Kids"] },
-  { id: "womens", label: "Women's", short: "Women's", subs: ["Tops", "Hoodies", "Kids"] },
+  { id: "womens", label: "Women's", short: "Women's", subs: ["Tops", "Hoodies", "Smart casual", "Kids"] },
   { id: "equipment", label: "Equipment", short: "Equipment", subs: ["Headwear", "Bags", "Climbing", "Snow", "Cameras", "Outdoor", "Water and air", "Training", "Safety"] },
 ];
 
@@ -41,24 +44,16 @@ export function isBrandedAccessory(p: { cat: string; sub?: string; name: string 
   return false;
 }
 
-export function isWomensItem(p: { name: string }): boolean {
-  return /women'?s/i.test(p.name);
+/** Clothing whose photos show a male model (or a boy, for kids). Not branded accessories. */
+export function showOnMens(p: Merch): boolean {
+  if (isBrandedAccessory(p)) return false;
+  return hasGenderPhoto(p, "male");
 }
 
-/** Men's clothing, unisex clothing, kids, and men's smart casual. Not branded accessories or women's-only pieces. */
-export function showOnMens(p: { cat: string; sub?: string; name: string }): boolean {
+/** Clothing whose photos show a female model (or a girl, for kids). Not branded accessories. */
+export function showOnWomens(p: Merch): boolean {
   if (isBrandedAccessory(p)) return false;
-  if (isWomensItem(p)) return false;
-  return true;
-}
-
-/** Women's pieces, unisex clothing and kids. Men's-cut smart casual stays on the Men's tab. */
-export function showOnWomens(p: { cat: string; sub?: string; name: string }): boolean {
-  if (isBrandedAccessory(p)) return false;
-  if (isWomensItem(p)) return true;
-  if (p.cat === "smartcasual") return false;
-  if (p.sub === "Kids") return true;
-  return p.cat === "apparel" || p.name === "Windbreaker";
+  return hasGenderPhoto(p, "female");
 }
 
 /** Chip label for a sold item, or undefined if it only appears under All. */

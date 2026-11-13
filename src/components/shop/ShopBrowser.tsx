@@ -18,6 +18,7 @@ import { catalogue as merch } from "./catalogue";
 import { BagProvider, BagButton } from "./Bag";
 import { MerchCard, NotYetContext } from "./MerchCard";
 import type { Merch } from "./merch";
+import { forTab } from "./photoGender";
 
 const kitIcons: Record<string, string> = {
   Climbing: "M8 3h8a4 4 0 0 1 0 8H9v6a4 4 0 0 1-8 0 M8 3a4 4 0 0 0 0 8",
@@ -192,7 +193,11 @@ export default function ShopBrowser({ notYet = [] }: { notYet?: NotYet }) {
       <div className="mx-auto max-w-7xl px-3 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 sm:px-6 lg:pb-20">
         {tabs.map((t) => {
           if (ready && t.id !== tab) return null;
-          const kit = kitAll.filter((p) => inTab(p, t.id) && (!sub || merchChip(p) === sub || (sub === "Smart casual" && merchChip(p) === "Denim")));
+          const kit = kitAll
+            .filter((p) => inTab(p, t.id))
+            .map((p) => (t.id === "equipment" ? p : forTab(p, t.id)))
+            .filter((p): p is Merch => p != null)
+            .filter((p) => !sub || merchChip(p) === sub || (sub === "Smart casual" && merchChip(p) === "Denim"));
           const recs = t.id === "equipment" ? products.filter((p) => !sub || p.sub === sub) : [];
           const clothing = kit.filter((p) => p.sub !== "Denim");
           const denim = kit.filter((p) => p.sub === "Denim");
@@ -208,13 +213,13 @@ export default function ShopBrowser({ notYet = [] }: { notYet?: NotYet }) {
               {t.id !== "equipment" && (
                 <>
                   <ul className={grid}>
-                    {clothing.map((p) => <MerchCard key={p.pid} p={p} />)}
+                    {clothing.map((p) => <MerchCard key={`${p.pid}-${t.id}`} p={p} />)}
                   </ul>
                   {denim.length > 0 && (
                     <div id={t.id === "mens" ? "denim" : "denim-womens"} data-denim={t.id === "mens" ? true : undefined} className="mt-8 scroll-mt-[170px] lg:scroll-mt-[130px]">
                       <h3 id={t.id === "mens" ? "h-denim" : "h-denim-womens"} className="scroll-mt-[170px] lg:scroll-mt-[130px] font-display mb-1 text-lg font-bold text-[#1C1917] sm:text-xl">Denim</h3>
                       <ul className={grid}>
-                        {denim.map((p) => <MerchCard key={p.pid} p={p} />)}
+                        {denim.map((p) => <MerchCard key={`${p.pid}-${t.id}`} p={p} />)}
                       </ul>
                     </div>
                   )}
@@ -226,7 +231,7 @@ export default function ShopBrowser({ notYet = [] }: { notYet?: NotYet }) {
                     <div id="accessories" className="scroll-mt-[220px] lg:scroll-mt-[170px]">
                       <h3 className="font-display mb-3 text-lg font-bold text-[#1C1917] sm:text-xl">From Devonshire</h3>
                       <ul className={grid}>
-                        {branded.map((p) => <MerchCard key={p.pid} p={p} />)}
+                        {branded.map((p) => <MerchCard key={`${p.pid}-${t.id}`} p={p} />)}
                       </ul>
                     </div>
                   )}
