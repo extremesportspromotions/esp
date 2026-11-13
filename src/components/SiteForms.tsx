@@ -1,5 +1,7 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
 import Link from "next/link";
 import { useState, type FormEvent, type ReactNode } from "react";
 import { sports } from "@/data/sports";
@@ -417,6 +419,18 @@ export function ClubRequest() {
           <div className="sm:col-span-2"><Message status={status} sent="" /></div>
         </form>
       ))}
+    </div>
+  );
+}
+
+/** Footer launch sign-up. Hidden on the homepage, which has its own launch section. */
+export function FooterLaunchSignup() {
+  const pathname = usePathname();
+  if (pathname === "/") return null;
+  return (
+    <div className="max-w-md">
+      <p className="mb-2 font-semibold text-[#1C1917]/70">Notify me at launch (March 2027)</p>
+      <LaunchSignup compact />
     </div>
   );
 }

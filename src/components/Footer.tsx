@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LaunchSignup } from "./SiteForms";
+import { FooterLaunchSignup } from "./SiteForms";
 export default function Footer() {
   return (
     <footer className="border-t border-[#1C1917]/10 bg-[#F6EFE3]">
@@ -66,10 +66,7 @@ export default function Footer() {
             </Link>
           </nav>
         </div>
-        <div className="max-w-md">
-          <p className="mb-2 font-semibold text-[#1C1917]/70">Notify me at launch (March 2027)</p>
-          <LaunchSignup compact />
-        </div>
+        <FooterLaunchSignup />
         <p>
           We don&apos;t use advertising or tracking cookies on this site. See our{" "}
           <Link href="/privacy" className="hover:text-accent underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">privacy notice</Link>{" "}
