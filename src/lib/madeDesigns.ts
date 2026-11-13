@@ -3,8 +3,7 @@ import { scKey, smartCasual } from "@/components/shop/smartCasual";
 
 /**
  * TO SWITCH A COLOUR ON: add its saved Clothes2order design number below (product pid -> colours).
- * A smart casual colour WITHOUT an entry here is "not available to order yet": the shop shows it
- * but can't add it to the bag, and checkout refuses it.
+ * A smart casual colour WITHOUT an entry here is hidden from the shop and checkout refuses it.
  *
  * Supplier (Clothes2order) saved design ids for the smart casual range. Server only:
  * used in the order alerts and Stripe line metadata, never shown to customers.

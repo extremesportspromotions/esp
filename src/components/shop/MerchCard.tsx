@@ -245,6 +245,11 @@ function ProductView({ k }: { k: Pick }) {
             </ul>
           ) : null}
           {k.colors.length > 1 && <Swatches k={k} />}
+          {p.made ? (
+            <p data-made-terms className={`text-[13px] leading-snug ${ink}`}>{MADE_LEAD} UK delivery £{(MADE_DELIVERY_PENCE / 100).toFixed(2)} per order. With other kit, it comes as a separate parcel.</p>
+          ) : (
+            <p className={`text-[13px] leading-snug ${ink}`}>UK delivery only. Each item is made to order for you, and delivery is worked out in your bag.</p>
+          )}
           <BuyForm k={k} big onAdded={() => setJustAdded(true)} />
           {justAdded && (
             <div className="flex items-center justify-between gap-3 rounded-lg bg-[#F6EFE3] px-3 py-2.5 text-sm text-[#1C1917]" role="status">
@@ -261,13 +266,8 @@ function ProductView({ k }: { k: Pick }) {
               </button>
             </div>
           )}
-          {p.made ? (
-            <div data-made-terms className={`flex flex-col gap-1.5 text-[13px] ${ink}`}>
-              <p>{MADE_LEAD} UK delivery only, £{(MADE_DELIVERY_PENCE / 100).toFixed(2)} per order. With other kit, it comes as a separate parcel.</p>
-              <p>You can cancel within 14 days of receiving your order. For returns, please contact us first at <a className="underline" href="mailto:enquiries@extremesportspromotions.com">enquiries@extremesportspromotions.com</a>.</p>
-            </div>
-          ) : (
-            <p className={`text-[13px] ${ink}`}>UK delivery only. Each item is made to order for you, and delivery is worked out in your bag.</p>
+          {p.made && (
+            <p className={`text-[13px] leading-snug ${ink}`}>You can cancel within 14 days of receiving your order. For returns, please contact us first at <a className="underline" href="mailto:enquiries@extremesportspromotions.com">enquiries@extremesportspromotions.com</a>.</p>
           )}
         </div>
       </div>

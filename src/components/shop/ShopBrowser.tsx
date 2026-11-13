@@ -15,7 +15,6 @@ import {
   type TabId,
 } from "./products";
 import { catalogue as merch } from "./catalogue";
-import { DENIM_PIDS, MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
 import { BagProvider, BagButton } from "./Bag";
 import { MerchCard, NotYetContext } from "./MerchCard";
 import type { Merch } from "./merch";
@@ -71,30 +70,7 @@ function Card({ p }: { p: Product }) {
 
 const grid = "grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4";
 
-function SafetyBanner() {
-  return (
-    <p className="mb-4 rounded-lg border-l-[3px] border-accent bg-white px-4 py-2.5 text-sm font-semibold text-[#1C1917]">
-      Always buy UIAA/CE certified kit and train with a qualified coach before using it. Ropes, harnesses and belay kit: ask your coach before you buy.
-    </p>
-  );
-}
-
 type NotYet = { key: string; name: string; colour: string }[];
-
-/** Preview-only list of smart casual colours that can't be ordered yet (no saved supplier design). */
-function NotYetBanner({ list }: { list: NotYet }) {
-  const by = new Map<string, string[]>();
-  for (const x of list) by.set(x.name, [...(by.get(x.name) ?? []), x.colour]);
-  return (
-    <div data-notyet-banner role="note" className="mb-4 rounded-lg border-2 border-dashed border-amber-600 bg-amber-50 px-4 py-3 text-sm text-[#1C1917]">
-      <p className="font-bold">Preview only: {list.length} smart casual colours are not available to order yet</p>
-      <p className="mt-0.5 text-[13px]">They have no saved supplier design, so they can&apos;t be added to the bag and checkout refuses them. This box never shows on the live site.</p>
-      <ul className="mt-2 grid gap-x-6 gap-y-0.5 text-[13px] sm:grid-cols-2">
-        {[...by].map(([n, cs]) => <li key={n}><b>{n}:</b> {cs.join(", ")}</li>)}
-      </ul>
-    </div>
-  );
-}
 
 /**
  * Hides anything that can't be ordered right now (no saved supplier design, held, or out of stock).
@@ -152,13 +128,12 @@ function readIntent(): { tab: TabId; sub: string | null; anchor?: string } | nul
   return null;
 }
 
-export default function ShopBrowser({ notYet = [], preview = false }: { notYet?: NotYet; preview?: boolean }) {
+export default function ShopBrowser({ notYet = [] }: { notYet?: NotYet }) {
   const [tab, setTab] = useState<TabId>("mens");
   const [sub, setSub] = useState<string | null>(null);
   // Without JS, all three sections stay visible so old #hashes still jump. After hydration we show one tab.
   const [ready, setReady] = useState(false);
-  // Preview only: denim shows (not orderable) so reviewers can see it; the live site hides it until its designs exist.
-  const kitAll = orderable(merch, new Set(notYet.filter((x) => !(preview && DENIM_PIDS.has(Number(x.key.split(":")[0])))).map((x) => x.key)));
+  const kitAll = orderable(merch, new Set(notYet.map((x) => x.key)));
 
   useEffect(() => {
     const apply = () => {
@@ -224,23 +199,12 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
           const branded = t.id === "equipment" ? kit : [];
           const showRecs = recs.length > 0;
           const count = t.id === "equipment" ? branded.length + recs.length : clothing.length + denim.length;
-          const showMade = t.id !== "equipment" && kit.some((p) => p.cat === "smartcasual" && p.sub !== "Denim");
-          const tabNotYet = notYet.filter((x) => {
-            const p = kitAll.find((m) => String(m.pid) === x.key.split(":")[0]);
-            return p && inTab(p, t.id);
-          });
           return (
             <section key={t.id} id={t.id} aria-labelledby={`h-${t.id}`} className="mb-4 scroll-mt-[220px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:mb-10 lg:scroll-mt-[170px] lg:pb-0 lg:last:mb-0">
               <div className="mb-3 flex items-baseline justify-between">
                 <h2 id={`h-${t.id}`} className="font-display text-xl font-bold text-[#1C1917] sm:text-2xl">{t.label}</h2>
                 <span className="text-sm text-[#1C1917]">{count} items</span>
               </div>
-              {showMade && (
-                <p data-made-note className="-mt-1 mb-4 rounded-lg border-l-[3px] border-[#1C1917] bg-white px-4 py-2.5 text-sm text-[#1C1917]">
-                  {MADE_LEAD} UK delivery £{(MADE_DELIVERY_PENCE / 100).toFixed(2)} per order. With other kit, these come as a separate parcel.
-                </p>
-              )}
-              {t.id !== "equipment" && preview && tabNotYet.length > 0 && <NotYetBanner list={tabNotYet} />}
               {t.id !== "equipment" && (
                 <>
                   <ul className={grid}>
@@ -270,8 +234,7 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
                     <div id="recommended" className={`${branded.length > 0 ? "mt-8" : ""} scroll-mt-[220px] lg:scroll-mt-[170px]`}>
                       <span id="gear" className="sr-only" />
                       <h3 className="font-display mb-3 text-lg font-bold text-[#1C1917] sm:text-xl">Recommended equipment</h3>
-                      <SafetyBanner />
-                      <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">These are recommendations only and are not purchase links yet. When we add purchase links, we will say clearly if any of them are affiliate links.</p>
+                      <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">These are recommendations only and are not purchase links yet. We will say clearly if any we add are affiliate links.</p>
                       <ul className={grid}>
                         {recs.map((p) => <Card key={`${p.sub}-${p.name}`} p={p} />)}
                       </ul>

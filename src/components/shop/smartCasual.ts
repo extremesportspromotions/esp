@@ -310,5 +310,5 @@ export const smartCasual: Merch[] = defs.map((p) => {
 /** "pid:Colour" key for a smart casual colourway (used for the not-yet-orderable list; no supplier data). */
 export const scKey = (pid: number, colour?: string) => `${pid}:${colour ?? ""}`;
 
-/** Devonshire denim product ids (shown in the Denim group; preview shows them even before their designs exist). */
+/** Devonshire denim product ids (shown in the Denim group). */
 export const DENIM_PIDS = new Set(defs.filter((p) => p.sub === "Denim").map((p) => p.pid));

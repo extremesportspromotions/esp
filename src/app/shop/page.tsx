@@ -31,7 +31,7 @@ export default function ShopPage() {
           </div>
         </header>
 
-        <ShopBrowser notYet={notYetOrderable()} preview={process.env.VERCEL_ENV !== "production"} />
+        <ShopBrowser notYet={notYetOrderable()} />
       </main>
       <Footer />
     </>

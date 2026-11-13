@@ -4,6 +4,7 @@ import { createContext, useContext, useEffect, useMemo, useState, type ReactNode
 import Image from "next/image";
 import { variantImg, variantName, type Merch, type MerchVariant } from "./merch";
 import { catalogue as merch } from "./catalogue";
+import { MADE_LEAD } from "./smartCasual";
 
 /** Other components open the bag drawer with this event. */
 export const OPEN_BAG = "esp-open-bag";
@@ -167,9 +168,11 @@ export function BagButton() {
                 </div>
               )}
               {quote?.pence != null && <div className="mt-1 flex justify-between text-sm font-bold"><span>Total</span><span>{gbp(subtotal + quote.pence)}</span></div>}
-              {quote?.parcels === 2 && quote.made != null && (
+              {quote?.parcels === 2 && quote.made != null ? (
                 <p data-two-parcels className="mt-2 text-[13px]">Your order comes in two parcels. Smart casual pieces are made separately (£{(quote.made / 100).toFixed(2)} of the delivery) and are usually ready in about 5 working days plus delivery.</p>
-              )}
+              ) : items.some((i) => i.p.made) ? (
+                <p data-made-lead className="mt-2 text-[13px]">{MADE_LEAD}</p>
+              ) : null}
               {quote?.failed && <p className="mt-2 text-[13px] text-red-700">We couldn&apos;t get a delivery price just now. It will be shown at checkout.</p>}
               <p className="mt-2 text-[13px]">UK delivery only. Each item is made to order for you.</p>
               {err && <p className="mt-2 text-[13px] text-red-700">{err}</p>}
