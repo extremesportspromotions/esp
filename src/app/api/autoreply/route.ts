@@ -1,5 +1,5 @@
 import { sports } from "@/data/sports";
-import { PAYMENT_MODE } from "@/lib/payment";
+import { autoreplyEmail } from "@/lib/autoreplyMail";
 
 /**
  * Sends the student an instant confirmation email via Resend after the
@@ -30,12 +30,6 @@ function limited(key: string, max: number, windowMs: number): boolean {
   recent.push(now);
   hits.set(key, recent);
   return false;
-}
-
-function escapeHtml(s: string): string {
-  return s.replace(/[&<>"']/g, (c) =>
-    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!,
-  );
 }
 
 export async function POST(req: Request): Promise<Response> {
@@ -69,23 +63,7 @@ export async function POST(req: Request): Promise<Response> {
   const firstName = rawName.split(/\s+/)[0]?.replace(/[^\p{L}\p{M}'-]/gu, "").slice(0, 40) ?? "";
   const match = sports.find((s) => s.name === body.sport || s.mapLabel === body.sport);
   const sportName = match ? (match.mapLabel ?? match.name) : "";
-  const sportLower = sportName.toLowerCase();
-
-  const greeting = firstName ? `Hi ${firstName},` : "Hi,";
-  const about = sportName ? ` about ${sportLower}` : "";
-  const lines = [
-    greeting,
-    `Thanks for your enquiry${about} with Extreme Sports Promotions. We have your details.`,
-    PAYMENT_MODE === "stripe-checkout"
-      ? "We start finding your UK coach as soon as your match fee is paid. If you didn't finish paying, we'll email you a secure payment link. You get a full refund if we can't find you a coach within 14 days. The coach or club bills you separately for the training."
-      : "Next, we'll email you a secure payment link for your match fee. We start finding your UK coach as soon as it's paid, and you get a full refund if we can't find you a coach within 14 days. The coach or club bills you separately for the training.",
-    "Any questions, just reply to this email or write to enquiries@extremesportspromotions.com.",
-    "Matthew\nExtreme Sports Promotions\nhttps://www.extremesportspromotions.com",
-  ];
-  const text = lines.join("\n\n");
-  const html = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1C1917">${lines
-    .map((l) => `<p>${escapeHtml(l).replace(/\n/g, "<br>").replace("https://www.extremesportspromotions.com", '<a href="https://www.extremesportspromotions.com">www.extremesportspromotions.com</a>')}</p>`)
-    .join("")}</div>`;
+  const { subject, text, html } = autoreplyEmail(firstName, sportName);
 
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -94,7 +72,7 @@ export async function POST(req: Request): Promise<Response> {
       from: FROM,
       to: [email],
       reply_to: REPLY_TO,
-      subject: "We've got your ESP enquiry",
+      subject,
       text,
       html,
     }),

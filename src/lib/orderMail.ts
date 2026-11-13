@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { madeInfo } from "@/lib/madeDesigns";
 import { isMade, lookup, type Line } from "@/lib/shop";
+import { emailHeading, emailLayout, emailPanel, emailPara, emailRows, EMAIL_COLOURS } from "@/lib/emailLayout";
 
 /**
  * Shop order messages, used by the Stripe webhook for EVERY paid shop order:
@@ -169,36 +170,35 @@ export function customerEmail(o: OrderInfo, origin: string) {
     "Your rights", rights, "",
     `Questions? Email ${ENQUIRIES} and quote #${o.shortNo}.`,
   ].join("\n");
-  const cell = "padding:10px 0;border-bottom:1px solid #e7e5e4;font-size:14px;color:#1C1917";
-  const itemRows = o.items.map((i) => `<tr><td style="${cell}"><b>${esc(i.name)}</b>${opt(i) ? `<br><span style="color:#57534e">${esc(opt(i))}</span>` : ""}<br><span style="color:#57534e">Qty ${i.qty}</span></td><td align="right" style="${cell};white-space:nowrap">${money(i.unitPence * i.qty)}</td></tr>`).join("");
-  const p = 'style="margin:0 0 12px;font-size:14px;line-height:1.55;color:#1C1917"';
-  const h = 'style="margin:20px 0 8px;font-size:15px;color:#1C1917"';
-  const html = `<!DOCTYPE html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>${esc(subject)}</title></head>
-<body style="margin:0;padding:0;background:#f5f5f4">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f5f5f4" style="background:#f5f5f4"><tr><td align="center" style="padding:24px 12px">
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="width:100%;max-width:600px;background:#ffffff;border:1px solid #e7e5e4;font-family:Arial,Helvetica,sans-serif">
-<tr><td align="center" style="padding:28px 24px 12px">
-<img src="${origin}/shop/email-mark.png" width="96" height="54" alt="" style="display:block;border:0;width:96px;height:auto">
-<div style="margin-top:10px;font-size:22px;font-weight:bold;letter-spacing:0.5px;color:#1C1917">${BRAND}</div>
-<div style="margin-top:2px;font-size:12px;color:#78716c">from Extreme Sports Promotions</div>
-</td></tr>
-<tr><td style="padding:12px 28px 28px">
-<p ${p}>Hi${first ? ` ${esc(first)}` : ""},</p>
-<p ${p}>Thank you for your order. Your order number is <b>#${o.shortNo}</b>.</p>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;border-top:1px solid #e7e5e4">${itemRows}
-<tr><td style="${cell}">Delivery</td><td align="right" style="${cell}">${money(o.deliveryPence)}</td></tr>
-<tr><td style="padding:10px 0;font-size:15px;font-weight:bold;color:#1C1917">Total paid</td><td align="right" style="padding:10px 0;font-size:15px;font-weight:bold;color:#1C1917">${money(o.totalPence)}</td></tr>
-</table>
-<h3 ${h}>Delivering to</h3>
-<p ${p}>${[o.name, ...o.address].map(esc).join("<br>")}</p>
-<h3 ${h}>How delivery works</h3>
-${delivery.map((d) => `<p ${p}>${esc(d)}</p>`).join("")}
-<h3 ${h}>Your rights</h3>
-<p ${p}>${esc(rights)}</p>
-<p style="margin:20px 0 0;font-size:14px;line-height:1.55;color:#1C1917">Questions? Email <a href="mailto:${ENQUIRIES}" style="color:#1C1917">${ENQUIRIES}</a> and quote #${o.shortNo}.</p>
-</td></tr>
-<tr><td align="center" style="padding:14px 24px;border-top:1px solid #e7e5e4;font-size:12px;color:#78716c">${BRAND} · Extreme Sports Promotions</td></tr>
-</table></td></tr></table></body></html>`;
+  void origin; // images now load from the live site via ESP_LOGO_URL
+  const muted = `color:${EMAIL_COLOURS.muted}`;
+  const itemRows = o.items.map((i) => ({
+    label: `<b>${esc(i.name)}</b>${opt(i) ? `<br><span style="${muted}">${esc(opt(i))}</span>` : ""}<br><span style="${muted}">Qty ${i.qty}</span>`,
+    value: money(i.unitPence * i.qty),
+  }));
+  const body = [
+    emailPara(`Hi${first ? ` ${esc(first)}` : ""},`),
+    emailPara(`Thank you for your order. Your order number is <b>#${o.shortNo}</b>.`),
+    emailRows([
+      ...itemRows,
+      { label: "Delivery", value: money(o.deliveryPence) },
+      { label: "Total paid", value: money(o.totalPence), strong: true },
+    ]),
+    emailHeading("Delivering to"),
+    emailPara([o.name, ...o.address].map(esc).join("<br>")),
+    emailHeading("How delivery works"),
+    delivery.map((d) => emailPara(esc(d))).join(""),
+    emailHeading("Your rights"),
+    emailPara(esc(rights)),
+    emailPanel(emailPara(`Questions? Email <a href="mailto:${ENQUIRIES}" style="color:${EMAIL_COLOURS.navy}">${ENQUIRIES}</a> and quote #${o.shortNo}.`, "margin:0")),
+  ].join("");
+  const html = emailLayout({
+    kicker: "",
+    title: BRAND,
+    subtitle: "from Extreme Sports Promotions",
+    body,
+    footer: `${BRAND} · Extreme Sports Promotions`,
+  });
   return { subject, text, html };
 }
 
