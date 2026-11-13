@@ -13,7 +13,8 @@ import { isMade, lookup, type Line } from "@/lib/shop";
 
 export const BRAND = "Devonshire";
 const ENQUIRIES = "enquiries@extremesportspromotions.com";
-const RECORD_FROM = `ESP Shop <${ENQUIRIES}>`;
+/** Record copies go to enquiries@, so they come from notifications@ (a self-sent message looks like spam to Gmail). */
+const RECORD_FROM = "ESP Shop <notifications@extremesportspromotions.com>";
 /** Customer email sender. Any address on the Resend-verified domain works; falls back to enquiries@ if refused. */
 const CUSTOMER_FROM = process.env.SHOP_EMAIL_FROM || `${BRAND} <orders@extremesportspromotions.com>`;
 const CUSTOMER_FROM_FALLBACK = `${BRAND} <${ENQUIRIES}>`;

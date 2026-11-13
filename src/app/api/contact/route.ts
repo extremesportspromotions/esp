@@ -1,6 +1,6 @@
 /**
  * Small site forms (club application, launch sign-up, request a club) email
- * enquiries@ through Resend. Server-side validation, honeypot and rate limit.
+ * enquiries@ through Resend, sent from notifications@ (not a self-send). Server-side validation, honeypot and rate limit.
  * Set ESP_MAIL_DRY_RUN=1 to validate without sending (local tests).
  */
 import { ENQUIRY_EMAIL } from "@/lib/site";
@@ -8,7 +8,7 @@ import { checkEvidence } from "@/lib/clubUploads";
 
 export const runtime = "nodejs";
 
-const FROM = "Extreme Sports Promotions <enquiries@extremesportspromotions.com>";
+const FROM = "Extreme Sports Promotions <notifications@extremesportspromotions.com>";
 const EMAIL_RE = /^[^\s@<>"]{1,64}@[^\s@<>"]{1,190}\.[a-z]{2,24}$/i;
 const URL_RE = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,24}(:\d{1,5})?(\/[^\s]*)?$/i;
 const PHONE_RE = /^[+\d][\d\s()-]{7,20}$/;
