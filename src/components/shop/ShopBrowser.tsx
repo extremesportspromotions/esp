@@ -3,15 +3,24 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import StagMark from "./StagMark";
-import { categories, products, type Category, type Product } from "./products";
+import {
+  isBrandedAccessory,
+  merchChip,
+  products,
+  showOnMens,
+  showOnWomens,
+  tabAliases,
+  tabs,
+  type Product,
+  type TabId,
+} from "./products";
 import { catalogue as merch } from "./catalogue";
 import { DENIM_PIDS, MADE_DELIVERY_PENCE, MADE_LEAD } from "./smartCasual";
 import { BagProvider, BagButton } from "./Bag";
 import { MerchCard, NotYetContext } from "./MerchCard";
+import type { Merch } from "./merch";
 
-type Filter = Category | "all";
-
-const gearIcons: Record<string, string> = {
+const kitIcons: Record<string, string> = {
   Climbing: "M8 3h8a4 4 0 0 1 0 8H9v6a4 4 0 0 1-8 0 M8 3a4 4 0 0 0 0 8",
   Snow: "M12 2v20 M3.3 7l17.4 10 M3.3 17l17.4-10 M9 3.5 12 6l3-2.5 M9 20.5 12 18l3 2.5",
   Cameras: "M3 7h4l2-3h6l2 3h4v12H3z M12 10a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7",
@@ -27,11 +36,11 @@ function Tile({ p }: { p: Product }) {
       <Image src={p.img} alt={p.alt ?? p.name} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" style={{ objectPosition: p.pos }} />
     );
   }
-  if (p.cat === "gear" && p.sub && gearIcons[p.sub]) {
+  if (p.sub && kitIcons[p.sub]) {
     return (
       <div className="flex h-full w-full items-center justify-center bg-[#EDE4D3]">
         <svg viewBox="0 0 24 24" className="h-12 w-12 text-[#1C1917]/55" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-          <path d={gearIcons[p.sub]} />
+          <path d={kitIcons[p.sub]} />
         </svg>
       </div>
     );
@@ -48,9 +57,6 @@ function Card({ p }: { p: Product }) {
     <li className="group flex flex-col overflow-hidden rounded-xl border border-[#1C1917]/10 bg-white">
       <div className="relative aspect-square overflow-hidden">
         <Tile p={p} />
-        <span className="absolute left-2 top-2 rounded-full bg-white/95 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[#1C1917] shadow-sm">
-          Coming soon
-        </span>
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3">
         <div className="flex items-baseline justify-between gap-2">
@@ -65,7 +71,7 @@ function Card({ p }: { p: Product }) {
 
 const grid = "grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4";
 
-function GearBanner() {
+function SafetyBanner() {
   return (
     <p className="mb-4 rounded-lg border-l-[3px] border-accent bg-white px-4 py-2.5 text-sm font-semibold text-[#1C1917]">
       Always buy UIAA/CE certified kit and train with a qualified coach before using it. Ropes, harnesses and belay kit: ask your coach before you buy.
@@ -110,38 +116,76 @@ function orderable(list: typeof merch, hidden: Set<string>) {
   return out;
 }
 
+function inTab(p: Merch, tab: TabId): boolean {
+  if (tab === "mens") return showOnMens(p);
+  if (tab === "womens") return showOnWomens(p);
+  return isBrandedAccessory(p);
+}
+
+const HASH_INTENT: Record<string, { tab: TabId; sub: string | null; anchor?: string }> = {
+  bags: { tab: "equipment", sub: "Bags" },
+  headwear: { tab: "equipment", sub: "Headwear" },
+  climbing: { tab: "equipment", sub: "Climbing" },
+  snow: { tab: "equipment", sub: "Snow" },
+  cameras: { tab: "equipment", sub: "Cameras" },
+  outdoor: { tab: "equipment", sub: "Outdoor" },
+  "water-and-air": { tab: "equipment", sub: "Water and air" },
+  "water and air": { tab: "equipment", sub: "Water and air" },
+  training: { tab: "equipment", sub: "Training" },
+  safety: { tab: "equipment", sub: "Safety" },
+  smartcasual: { tab: "mens", sub: "Smart casual" },
+  denim: { tab: "mens", sub: null, anchor: "denim" },
+  accessories: { tab: "equipment", sub: null, anchor: "accessories" },
+  gear: { tab: "equipment", sub: null, anchor: "recommended" },
+  outerwear: { tab: "equipment", sub: null, anchor: "accessories" },
+};
+
+function readIntent(): { tab: TabId; sub: string | null; anchor?: string } | null {
+  const hash = window.location.hash.slice(1);
+  if (/^p-/i.test(hash)) return null;
+  const query = new URLSearchParams(window.location.search).get("tab") ?? "";
+  const raw = (hash || query).toLowerCase();
+  if (!raw) return null;
+  if (HASH_INTENT[raw]) return HASH_INTENT[raw];
+  const tab = tabAliases[raw];
+  if (tab) return { tab, sub: null };
+  return null;
+}
+
 export default function ShopBrowser({ notYet = [], preview = false }: { notYet?: NotYet; preview?: boolean }) {
-  const [cat, setCat] = useState<Filter>("all");
+  const [tab, setTab] = useState<TabId>("mens");
   const [sub, setSub] = useState<string | null>(null);
+  // Without JS, all three sections stay visible so old #hashes still jump. After hydration we show one tab.
+  const [ready, setReady] = useState(false);
   // Preview only: denim shows (not orderable) so reviewers can see it; the live site hides it until its designs exist.
   const kitAll = orderable(merch, new Set(notYet.filter((x) => !(preview && DENIM_PIDS.has(Number(x.key.split(":")[0])))).map((x) => x.key)));
 
-  // Tabs and category tiles are plain #hash links, so they jump to the section without JS.
-  // With JS, the hash selects the tab and filters the grid.
   useEffect(() => {
-    const read = () => {
-      const h = window.location.hash.slice(1);
-      if (h === "all" || categories.some((c) => c.id === h)) {
-        setCat(h as Filter);
-        setSub(null);
-      }
+    const apply = () => {
+      const intent = readIntent();
+      if (!intent) return;
+      setTab(intent.tab);
+      setSub(intent.sub);
     };
-    read();
-    window.addEventListener("hashchange", read);
-    return () => window.removeEventListener("hashchange", read);
+    apply();
+    setReady(true);
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
   }, []);
 
   useEffect(() => {
-    const bar = document.querySelector<HTMLElement>('[aria-label="Shop categories"]');
+    if (!ready) return;
+    const bar = document.querySelector<HTMLElement>('[aria-label="Shop sections"]');
     const on = bar?.querySelector<HTMLElement>('[aria-current="true"]');
     if (bar && on) bar.scrollLeft = on.offsetLeft - (bar.clientWidth - on.clientWidth) / 2;
-    // Re-align after the grid has been filtered, as the browser's hash jump ran before.
-    if (cat !== "all") document.getElementById(cat)?.scrollIntoView({ block: "start" });
-  }, [cat]);
+    // Only jump when a hash or ?tab= asked for a section, not on the default Men's view.
+    const intent = readIntent();
+    if (!intent) return;
+    document.getElementById(intent.anchor ?? intent.tab)?.scrollIntoView({ block: "start" });
+  }, [tab, sub, ready]);
 
-  const shown = cat === "all" ? categories : categories.filter((c) => c.id === cat);
-  const active = categories.find((c) => c.id === cat);
-  const tab = (on: boolean) =>
+  const active = tabs.find((t) => t.id === tab);
+  const tabClass = (on: boolean) =>
     `shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${on ? "bg-[#0E2141] text-white" : "text-[#1C1917] hover:bg-[#0E2141]/10"}`;
   const chip = (on: boolean) =>
     `shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-[13px] font-medium transition ${on ? "border-[#0E2141] bg-[#0E2141] text-white" : "border-[#1C1917]/25 bg-white text-[#1C1917] hover:border-[#1C1917]"}`;
@@ -152,17 +196,16 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
     <div id="products">
       <div className="sticky top-[101px] z-40 border-b border-[#1C1917]/10 bg-[#F6EFE3]/95 backdrop-blur-md lg:top-[61px]">
         <div className="mx-auto max-w-7xl px-3 sm:px-6">
-          <nav aria-label="Shop categories" className="flex gap-1 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <a href="#all" className={tab(cat === "all")} aria-current={cat === "all" ? "true" : undefined}>All</a>
-            {categories.map((c) => (
-              <a key={c.id} href={`#${c.id}`} className={tab(cat === c.id)} aria-current={cat === c.id ? "true" : undefined}>
-                {c.short}
+          <nav aria-label="Shop sections" className="flex gap-1 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {tabs.map((t) => (
+              <a key={t.id} href={`#${t.id}`} className={tabClass(tab === t.id)} aria-current={tab === t.id ? "true" : undefined}>
+                {t.short}
               </a>
             ))}
           </nav>
           {active && active.subs.length > 0 && (
             <div className="flex gap-1.5 overflow-x-auto pb-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <button type="button" className={chip(sub === null)} onClick={() => setSub(null)}>All {active.short.toLowerCase()}</button>
+              <button type="button" className={chip(sub === null)} onClick={() => setSub(null)}>All</button>
               {active.subs.map((s) => (
                 <button key={s} type="button" className={chip(sub === s)} aria-pressed={sub === s} onClick={() => setSub(s)}>{s}</button>
               ))}
@@ -172,34 +215,69 @@ export default function ShopBrowser({ notYet = [], preview = false }: { notYet?:
       </div>
 
       <div className="mx-auto max-w-7xl px-3 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 sm:px-6 lg:pb-20">
-        {shown.map((c) => {
-          const items = products.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
-          const kit = kitAll.filter((p) => p.cat === c.id && (!sub || cat === "all" || p.sub === sub));
+        {tabs.map((t) => {
+          if (ready && t.id !== tab) return null;
+          const kit = kitAll.filter((p) => inTab(p, t.id) && (!sub || merchChip(p) === sub || (sub === "Smart casual" && merchChip(p) === "Denim")));
+          const recs = t.id === "equipment" ? products.filter((p) => !sub || p.sub === sub) : [];
+          const clothing = kit.filter((p) => p.sub !== "Denim");
+          const denim = kit.filter((p) => p.sub === "Denim");
+          const branded = t.id === "equipment" ? kit : [];
+          const showRecs = recs.length > 0;
+          const count = t.id === "equipment" ? branded.length + recs.length : clothing.length + denim.length;
+          const showMade = t.id !== "equipment" && kit.some((p) => p.cat === "smartcasual" && p.sub !== "Denim");
+          const tabNotYet = notYet.filter((x) => {
+            const p = kitAll.find((m) => String(m.pid) === x.key.split(":")[0]);
+            return p && inTab(p, t.id);
+          });
           return (
-            <section key={c.id} id={c.id} aria-labelledby={`h-${c.id}`} className="mb-4 scroll-mt-[220px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:mb-10 lg:scroll-mt-[170px] lg:pb-0 lg:last:mb-0">
+            <section key={t.id} id={t.id} aria-labelledby={`h-${t.id}`} className="mb-4 scroll-mt-[220px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:mb-10 lg:scroll-mt-[170px] lg:pb-0 lg:last:mb-0">
               <div className="mb-3 flex items-baseline justify-between">
-                <h2 id={`h-${c.id}`} className="font-display text-xl font-bold text-[#1C1917] sm:text-2xl">{c.label}</h2>
-                <span className="text-sm text-[#1C1917]">{items.length + kit.length} items</span>
+                <h2 id={`h-${t.id}`} className="font-display text-xl font-bold text-[#1C1917] sm:text-2xl">{t.label}</h2>
+                <span className="text-sm text-[#1C1917]">{count} items</span>
               </div>
-              {c.id === "smartcasual" && (
+              {showMade && (
                 <p data-made-note className="-mt-1 mb-4 rounded-lg border-l-[3px] border-[#1C1917] bg-white px-4 py-2.5 text-sm text-[#1C1917]">
                   {MADE_LEAD} UK delivery £{(MADE_DELIVERY_PENCE / 100).toFixed(2)} per order. With other kit, these come as a separate parcel.
                 </p>
               )}
-              {c.id === "smartcasual" && preview && notYet.length > 0 && <NotYetBanner list={notYet} />}
-              {c.id === "gear" && <GearBanner />}
-              {c.id === "gear" && <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">These gear notes are recommendations only. They are marked Coming soon and are not purchase links yet. When we add purchase links, we will say clearly if any of them are affiliate links.</p>}
-              <ul className={grid}>
-                {kit.filter((p) => p.sub !== "Denim").map((p) => <MerchCard key={p.pid} p={p} />)}
-                {items.map((p) => <Card key={`${p.cat}-${p.name}`} p={p} />)}
-              </ul>
-              {kit.some((p) => p.sub === "Denim") && (
-                <div id="denim" data-denim className="mt-8 scroll-mt-[170px] lg:scroll-mt-[130px]">
-                  <h3 id="h-denim" className="scroll-mt-[170px] lg:scroll-mt-[130px] font-display mb-1 text-lg font-bold text-[#1C1917] sm:text-xl">Denim</h3>
+              {t.id !== "equipment" && preview && tabNotYet.length > 0 && <NotYetBanner list={tabNotYet} />}
+              {t.id !== "equipment" && (
+                <>
                   <ul className={grid}>
-                    {kit.filter((p) => p.sub === "Denim").map((p) => <MerchCard key={p.pid} p={p} />)}
+                    {clothing.map((p) => <MerchCard key={p.pid} p={p} />)}
                   </ul>
-                </div>
+                  {denim.length > 0 && (
+                    <div id={t.id === "mens" ? "denim" : "denim-womens"} data-denim={t.id === "mens" ? true : undefined} className="mt-8 scroll-mt-[170px] lg:scroll-mt-[130px]">
+                      <h3 id={t.id === "mens" ? "h-denim" : "h-denim-womens"} className="scroll-mt-[170px] lg:scroll-mt-[130px] font-display mb-1 text-lg font-bold text-[#1C1917] sm:text-xl">Denim</h3>
+                      <ul className={grid}>
+                        {denim.map((p) => <MerchCard key={p.pid} p={p} />)}
+                      </ul>
+                    </div>
+                  )}
+                </>
+              )}
+              {t.id === "equipment" && (
+                <>
+                  {branded.length > 0 && (
+                    <div id="accessories" className="scroll-mt-[220px] lg:scroll-mt-[170px]">
+                      <h3 className="font-display mb-3 text-lg font-bold text-[#1C1917] sm:text-xl">From Devonshire</h3>
+                      <ul className={grid}>
+                        {branded.map((p) => <MerchCard key={p.pid} p={p} />)}
+                      </ul>
+                    </div>
+                  )}
+                  {showRecs && (
+                    <div id="recommended" className={`${branded.length > 0 ? "mt-8" : ""} scroll-mt-[220px] lg:scroll-mt-[170px]`}>
+                      <span id="gear" className="sr-only" />
+                      <h3 className="font-display mb-3 text-lg font-bold text-[#1C1917] sm:text-xl">Recommended equipment</h3>
+                      <SafetyBanner />
+                      <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">These are recommendations only and are not purchase links yet. When we add purchase links, we will say clearly if any of them are affiliate links.</p>
+                      <ul className={grid}>
+                        {recs.map((p) => <Card key={`${p.sub}-${p.name}`} p={p} />)}
+                      </ul>
+                    </div>
+                  )}
+                </>
               )}
             </section>
           );

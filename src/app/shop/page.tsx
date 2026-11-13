@@ -3,21 +3,12 @@ import Image from "next/image";
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
 import ShopBrowser from "@/components/shop/ShopBrowser";
-import StagMark from "@/components/shop/StagMark";
 import { notYetOrderable } from "@/lib/madeDesigns";
 
 export const metadata: Metadata = {
   title: "Devonshire | Extreme Sports Promotions",
-  description: "Devonshire outdoor clothing, and the gear we'd start with.",
+  description: "Devonshire outdoor clothing, and the equipment we'd start with.",
 };
-
-const tiles = [
-  { href: "#apparel", label: "Apparel" },
-  { href: "#smartcasual", label: "Smart casual" },
-  { href: "#bags", label: "Bags" },
-  { href: "#outerwear", label: "Outerwear & more" },
-  { href: "#gear", label: "Gear" },
-];
 
 export default function ShopPage() {
   return (
@@ -39,26 +30,6 @@ export default function ShopPage() {
             <p data-brand-line className="mx-auto mt-3 max-w-md text-sm text-[#1C1917]/75">Devonshire is the clothing brand of Extreme Sports Promotions (ESP).</p>
           </div>
         </header>
-
-        <section aria-label="Shop by category" className="mx-auto max-w-7xl px-3 pt-10 pb-6 sm:px-6">
-          <h2 className="font-serif mb-4 text-center text-3xl text-[#0E2141] sm:text-4xl">Shop by category</h2>
-          <div className="grid grid-cols-5 gap-2 sm:gap-4">
-            {tiles.map((t) => (
-              <a key={t.href} href={t.href} className="group relative block aspect-square overflow-hidden rounded-xl bg-[#0E2141] sm:aspect-[4/3]">
-                <span className="absolute inset-0 flex items-center justify-center pb-[18%]"><StagMark sizes="(max-width: 640px) 60px, 180px" /></span>
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-2 pt-6 pb-2 font-serif text-[13px] leading-tight sm:text-lg text-white sm:text-sm">
-                  {t.label}
-                </span>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        <p className="mx-auto mb-1 max-w-7xl px-3 sm:px-6">
-          <span className="block rounded-lg border border-[#1C1917]/15 bg-white px-4 py-2.5 text-sm text-[#1C1917]">
-            <b>Coming soon:</b> sport-specific designs for climbing, skydiving, snowboarding and hang gliding, and limited community drops tied to our YouTube series.
-          </span>
-        </p>
 
         <ShopBrowser notYet={notYetOrderable()} preview={process.env.VERCEL_ENV !== "production"} />
       </main>
