@@ -33,26 +33,26 @@ export default function ShopPage() {
           />
           {/* Soft gradient only behind the wordmark at the top, so faces and clothing stay clear. */}
           <div
-            className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[9.5rem] bg-gradient-to-b from-[#F6EFE3]/80 via-[#F6EFE3]/40 to-transparent sm:h-[10.5rem] 2xl:h-[9.5rem]"
+            className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[10.5rem] bg-gradient-to-b from-[#F6EFE3]/80 via-[#F6EFE3]/40 to-transparent sm:h-[12rem] 2xl:h-[10rem]"
             aria-hidden
           />
-          <div className="px-5 pb-8 pt-5 sm:pt-6 2xl:pt-5">
+          <div className="px-5 pb-8 pt-5 sm:pt-6 2xl:pt-4">
             <Image
               src="/brand/stag.png"
               alt=""
               width={98}
               height={128}
               priority
-              sizes="56px"
-              className="mx-auto h-12 w-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)] sm:h-14 2xl:h-12"
+              sizes="73px"
+              className="mx-auto h-[62px] w-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.18)] sm:h-[73px] 2xl:h-[62px]"
             />
             <h1 className="font-serif mt-1.5 text-5xl font-medium leading-none text-[#0E2141] sm:text-6xl 2xl:text-5xl">
               Devonshire
             </h1>
-            <p className="mt-2 flex items-center justify-center gap-3 text-[11px] tracking-[0.35em] text-[#C9A96A] sm:text-sm 2xl:text-[11px]">
-              <span className="h-px w-8 bg-[#C9A96A]/80 sm:w-16" aria-hidden />
+            <p className="mt-1 flex items-center justify-center gap-3 text-base leading-none tracking-[0.22em] text-[#0E2141] sm:text-lg sm:tracking-[0.25em] 2xl:text-base 2xl:tracking-[0.22em]">
+              <span className="h-px w-8 bg-[#0E2141] sm:w-16" aria-hidden />
               OUTDOOR CLOTHING
-              <span className="h-px w-8 bg-[#C9A96A]/80 sm:w-16" aria-hidden />
+              <span className="h-px w-8 bg-[#0E2141] sm:w-16" aria-hidden />
             </p>
           </div>
         </header>
