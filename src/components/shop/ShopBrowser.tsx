@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import StagMark from "./StagMark";
 import {
   isBrandedAccessory,
@@ -20,6 +22,7 @@ import { MerchCard, NotYetContext } from "./MerchCard";
 import type { Merch } from "./merch";
 import { hiddenColours } from "./hiddenFromShop";
 import { forTab } from "./photoGender";
+import { PAGE_TITLE, sectionPath } from "./shopRoutes";
 
 const kitIcons: Record<string, string> = {
   Climbing: "M8 3h8a4 4 0 0 1 0 8H9v6a4 4 0 0 1-8 0 M8 3a4 4 0 0 0 0 8",
@@ -128,24 +131,86 @@ function readIntent(): { tab: TabId; sub: string | null; anchor?: string } | nul
   return null;
 }
 
-const SECTION_CARDS: { id: TabId; label: string; img: string; pos: string }[] = [
-  { id: "mens", label: "Men's", img: "/shop/r1/mens/M1-front.webp", pos: "50% 18%" },
-  { id: "womens", label: "Women's", img: "/shop/r1/womens/W1-front.webp", pos: "50% 18%" },
-  { id: "equipment", label: "Accessories", img: "/shop/r1/E2-front.webp", pos: "50% 20%" },
+function tabForProductHash(): TabId | null {
+  const m = /^p-(\d+)$/i.exec(window.location.hash.slice(1));
+  if (!m) return null;
+  const p = merch.find((item) => item.pid === Number(m[1]));
+  if (!p) return "mens";
+  if (isBrandedAccessory(p)) return "equipment";
+  if (showOnMens(p)) return "mens";
+  if (showOnWomens(p)) return "womens";
+  return "mens";
+}
+
+const SECTION_CARDS: { id: TabId; href: string; label: string; img: string; pos: string }[] = [
+  { id: "mens", href: "/shop/mens", label: "Men's", img: "/shop/r1/mens/M1-front.webp", pos: "50% 18%" },
+  { id: "womens", href: "/shop/womens", label: "Women's", img: "/shop/r1/womens/W1-front.webp", pos: "50% 18%" },
+  { id: "equipment", href: "/shop/accessories", label: "Accessories", img: "/shop/r1/E2-front.webp", pos: "50% 20%" },
 ];
 
-export default function ShopBrowser() {
+function LandingCards() {
+  const router = useRouter();
 
-  const [tab, setTab] = useState<TabId>("mens");
-  const [sub, setSub] = useState<string | null>(null);
-  // Without JS, all three sections stay visible so old #hashes still jump. After hydration we show one tab.
+  useEffect(() => {
+    const productTab = tabForProductHash();
+    const intent = readIntent();
+    const tab = productTab ?? intent?.tab;
+    if (!tab) return;
+    const url = new URL(window.location.href);
+    url.searchParams.delete("tab");
+    const dest = sectionPath(tab);
+    const search = url.searchParams.toString();
+    const hash = window.location.hash;
+    router.replace(`${dest}${search ? `?${search}` : ""}${hash}`);
+  }, [router]);
+
+  return (
+    <nav aria-label="Shop sections">
+      <ul className="flex flex-col gap-3 sm:gap-4">
+        {SECTION_CARDS.map((c) => (
+          <li key={c.id}>
+            <Link
+              href={c.href}
+              className="relative block aspect-[4/5] w-full overflow-hidden sm:aspect-[16/9] lg:aspect-[2/1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E2141]"
+            >
+              <Image src={c.img} alt="" fill sizes="100vw" className="object-cover" style={{ objectPosition: c.pos }} priority={c.id === "mens"} />
+              <div className="absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[#0E2141]/80 to-transparent" aria-hidden />
+              <span className="font-serif absolute inset-x-0 bottom-6 text-center text-4xl font-medium leading-none tracking-wide text-[#F6EFE3] sm:bottom-8 sm:text-5xl lg:text-6xl">{c.label}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+export default function ShopBrowser({
+  section,
+  initialSub = null,
+  initialAnchor,
+}: {
+  section?: TabId;
+  initialSub?: string | null;
+  initialAnchor?: string;
+}) {
+  const router = useRouter();
+  const [tab, setTab] = useState<TabId>(section ?? "mens");
+  const [sub, setSub] = useState<string | null>(initialSub);
   const [ready, setReady] = useState(false);
   const kitAll = orderable(merch, new Set(hiddenColours.map((x) => x.key)));
 
   useEffect(() => {
+    if (!section) return;
     const apply = () => {
       const intent = readIntent();
       if (!intent) return;
+      if (intent.tab !== section) {
+        const url = new URL(window.location.href);
+        url.searchParams.delete("tab");
+        const search = url.searchParams.toString();
+        router.replace(`${sectionPath(intent.tab)}${search ? `?${search}` : ""}${window.location.hash}`);
+        return;
+      }
       setTab(intent.tab);
       setSub(intent.sub);
     };
@@ -153,42 +218,65 @@ export default function ShopBrowser() {
     setReady(true);
     window.addEventListener("hashchange", apply);
     return () => window.removeEventListener("hashchange", apply);
-  }, []);
+  }, [section, router]);
 
   useEffect(() => {
+    if (!section) {
+      setReady(true);
+      return;
+    }
     if (!ready) return;
-    const bar = document.querySelector<HTMLElement>('[aria-label="Shop sections"]');
-    const on = bar?.querySelector<HTMLElement>('[aria-current="true"]');
-    if (bar && on) bar.scrollLeft = on.offsetLeft - (bar.clientWidth - on.clientWidth) / 2;
-    // Only jump when a hash or ?tab= asked for a section, not on the default Men's view.
     const intent = readIntent();
-    if (!intent) return;
-    document.getElementById(intent.anchor ?? intent.tab)?.scrollIntoView({ block: "start" });
-  }, [tab, sub, ready]);
+    const anchor = intent?.anchor ?? initialAnchor;
+    if (!anchor) return;
+    document.getElementById(anchor)?.scrollIntoView({ block: "start" });
+  }, [section, tab, sub, ready, initialAnchor]);
 
   const active = tabs.find((t) => t.id === tab);
   const chip = (on: boolean) =>
     `shrink-0 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-[13px] font-medium tracking-wide transition ${on ? "border-[#0E2141] bg-[#0E2141] text-white" : "border-[#1C1917]/20 bg-transparent text-[#1C1917] hover:border-[#1C1917]"}`;
 
+  if (!section) {
+    return (
+      <NotYetContext.Provider value={new Set(hiddenColours.map((x) => x.key))}>
+        <BagProvider>
+          <div id="products">
+            <LandingCards />
+            <BagButton />
+          </div>
+        </BagProvider>
+      </NotYetContext.Provider>
+    );
+  }
+
+  const title = PAGE_TITLE[tab];
+  const kit = kitAll
+    .filter((p) => inTab(p, tab))
+    .map((p) => (tab === "equipment" ? p : forTab(p, tab)))
+    .filter((p): p is Merch => p != null)
+    .filter((p) => !sub || merchChip(p) === sub || (sub === "Smart casual" && merchChip(p) === "Denim"));
+  const recs = tab === "equipment" ? products.filter((p) => !sub || p.sub === sub) : [];
+  const clothing = kit.filter((p) => p.sub !== "Denim");
+  const denim = kit.filter((p) => p.sub === "Denim");
+  const branded = tab === "equipment" ? kit : [];
+  const showRecs = recs.length > 0;
+  const count = tab === "equipment" ? branded.length + recs.length : clothing.length + denim.length;
+
   return (
     <NotYetContext.Provider value={new Set(hiddenColours.map((x) => x.key))}>
     <BagProvider>
     <div id="products">
-      <div className="mx-auto max-w-7xl pt-8 sm:pt-12 sm:px-6 lg:pt-16">
-        <nav aria-label="Shop sections" className="flex gap-4 overflow-x-auto px-4 pb-2 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:pb-0">
-          {SECTION_CARDS.map((c) => (
-            <a
-              key={c.id}
-              href={`#${c.id}`}
-              aria-current={tab === c.id ? "true" : undefined}
-              className={`relative block aspect-[3/4] w-[78%] shrink-0 snap-center overflow-hidden sm:w-[55%] lg:w-auto focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E2141] ${tab === c.id ? "ring-1 ring-[#C9A96A]" : ""}`}
-            >
-              <Image src={c.img} alt="" fill sizes="(max-width: 1024px) 80vw, 33vw" className="object-cover" style={{ objectPosition: c.pos }} />
-              <div className="absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[#0E2141]/80 to-transparent" aria-hidden />
-              <span className="font-serif absolute inset-x-0 bottom-5 text-center text-[1.65rem] font-medium leading-none tracking-wide text-[#F6EFE3] sm:bottom-6 sm:text-3xl">{c.label}</span>
-            </a>
-          ))}
-        </nav>
+      <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6 sm:pt-8">
+        <Link href="/shop" className="inline-flex items-center gap-1.5 text-sm text-[#0E2141] hover:underline">
+          <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+            <path d="M15 6 9 12l6 6" />
+          </svg>
+          Back to the shop
+        </Link>
+        <div className="mt-5 mb-2 flex items-baseline justify-between sm:mt-6">
+          <h1 id={`h-${tab}`} className="font-display text-3xl font-medium tracking-tight text-[#0E2141] sm:text-4xl">{title}</h1>
+          <span className="text-sm text-[#1C1917]">{count} items</span>
+        </div>
       </div>
 
       {active && active.subs.length > 0 && (
@@ -202,66 +290,46 @@ export default function ShopBrowser() {
         </div>
       )}
 
-      <div className="mx-auto max-w-7xl px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-8 sm:px-6 sm:pt-10 lg:pb-24 lg:pt-12">
-        {tabs.map((t) => {
-          if (ready && t.id !== tab) return null;
-          const kit = kitAll
-            .filter((p) => inTab(p, t.id))
-            .map((p) => (t.id === "equipment" ? p : forTab(p, t.id)))
-            .filter((p): p is Merch => p != null)
-            .filter((p) => !sub || merchChip(p) === sub || (sub === "Smart casual" && merchChip(p) === "Denim"));
-          const recs = t.id === "equipment" ? products.filter((p) => !sub || p.sub === sub) : [];
-          const clothing = kit.filter((p) => p.sub !== "Denim");
-          const denim = kit.filter((p) => p.sub === "Denim");
-          const branded = t.id === "equipment" ? kit : [];
-          const showRecs = recs.length > 0;
-          const count = t.id === "equipment" ? branded.length + recs.length : clothing.length + denim.length;
-          return (
-            <section key={t.id} id={t.id} aria-labelledby={`h-${t.id}`} className="mb-6 scroll-mt-[180px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:mb-14 lg:scroll-mt-[140px] lg:pb-0 lg:last:mb-0">
-              <div className="mb-6 flex items-baseline justify-between sm:mb-8">
-                <h2 id={`h-${t.id}`} className="font-display text-2xl font-medium tracking-tight text-[#0E2141] sm:text-3xl">{t.label}</h2>
-                <span className="text-sm text-[#1C1917]">{count} items</span>
-              </div>
-              {t.id !== "equipment" && (
-                <>
+      <div className="mx-auto max-w-7xl px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 sm:px-6 sm:pt-8 lg:pb-24">
+        <section id={tab} aria-labelledby={`h-${tab}`} className="scroll-mt-[180px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:scroll-mt-[140px] lg:pb-0">
+          {tab !== "equipment" && (
+            <>
+              <ul className={grid}>
+                {clothing.map((p) => <MerchCard key={`${p.pid}-${tab}`} p={p} />)}
+              </ul>
+              {denim.length > 0 && (
+                <div id={tab === "mens" ? "denim" : "denim-womens"} data-denim={tab === "mens" ? true : undefined} className="mt-8 scroll-mt-[170px] lg:scroll-mt-[130px]">
+                  <h2 id={tab === "mens" ? "h-denim" : "h-denim-womens"} className="scroll-mt-[170px] lg:scroll-mt-[130px] font-display mb-1 text-lg font-medium text-[#0E2141] sm:text-xl">Denim</h2>
                   <ul className={grid}>
-                    {clothing.map((p) => <MerchCard key={`${p.pid}-${t.id}`} p={p} />)}
+                    {denim.map((p) => <MerchCard key={`${p.pid}-${tab}`} p={p} />)}
                   </ul>
-                  {denim.length > 0 && (
-                    <div id={t.id === "mens" ? "denim" : "denim-womens"} data-denim={t.id === "mens" ? true : undefined} className="mt-8 scroll-mt-[170px] lg:scroll-mt-[130px]">
-                      <h3 id={t.id === "mens" ? "h-denim" : "h-denim-womens"} className="scroll-mt-[170px] lg:scroll-mt-[130px] font-display mb-1 text-lg font-bold text-[#1C1917] sm:text-xl">Denim</h3>
-                      <ul className={grid}>
-                        {denim.map((p) => <MerchCard key={`${p.pid}-${t.id}`} p={p} />)}
-                      </ul>
-                    </div>
-                  )}
-                </>
+                </div>
               )}
-              {t.id === "equipment" && (
-                <>
-                  {branded.length > 0 && (
-                    <div id="accessories" className="scroll-mt-[220px] lg:scroll-mt-[170px]">
-                      <h3 className="font-display mb-3 text-lg font-bold text-[#1C1917] sm:text-xl">From Devonshire</h3>
-                      <ul className={grid}>
-                        {branded.map((p) => <MerchCard key={`${p.pid}-${t.id}`} p={p} />)}
-                      </ul>
-                    </div>
-                  )}
-                  {showRecs && (
-                    <div id="recommended" className={`${branded.length > 0 ? "mt-8" : ""} scroll-mt-[220px] lg:scroll-mt-[170px]`}>
-                      <span id="gear" className="sr-only" />
-                      <h3 className="font-display mb-3 text-lg font-bold text-[#1C1917] sm:text-xl">Recommended equipment</h3>
-                      <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">These are recommendations only and are not purchase links yet. We will say clearly if any we add are affiliate links.</p>
-                      <ul className={grid}>
-                        {recs.map((p) => <Card key={`${p.sub}-${p.name}`} p={p} />)}
-                      </ul>
-                    </div>
-                  )}
-                </>
+            </>
+          )}
+          {tab === "equipment" && (
+            <>
+              {branded.length > 0 && (
+                <div id="accessories" className="scroll-mt-[220px] lg:scroll-mt-[170px]">
+                  <h2 className="font-display mb-3 text-lg font-medium text-[#0E2141] sm:text-xl">From Devonshire</h2>
+                  <ul className={grid}>
+                    {branded.map((p) => <MerchCard key={`${p.pid}-${tab}`} p={p} />)}
+                  </ul>
+                </div>
               )}
-            </section>
-          );
-        })}
+              {showRecs && (
+                <div id="recommended" className={`${branded.length > 0 ? "mt-8" : ""} scroll-mt-[220px] lg:scroll-mt-[170px]`}>
+                  <span id="gear" className="sr-only" />
+                  <h2 className="font-display mb-3 text-lg font-medium text-[#0E2141] sm:text-xl">Recommended equipment</h2>
+                  <p data-affiliate-note className="-mt-1 mb-4 text-[13px] leading-snug text-[#1C1917]/70">These are recommendations only and are not purchase links yet. We will say clearly if any we add are affiliate links.</p>
+                  <ul className={grid}>
+                    {recs.map((p) => <Card key={`${p.sub}-${p.name}`} p={p} />)}
+                  </ul>
+                </div>
+              )}
+            </>
+          )}
+        </section>
       </div>
       <BagButton />
     </div>
