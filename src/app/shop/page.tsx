@@ -48,12 +48,20 @@ export default function ShopPage() {
 
           <div className="relative h-[min(62svh,36rem)] min-h-[22rem] w-full lg:absolute lg:inset-0 lg:-z-10 lg:h-auto lg:min-h-full">
             <Image
+              src="/shop/r1/hero-mobile.webp"
+              alt="A man and a woman wearing Devonshire clothing in the British countryside"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center lg:hidden"
+            />
+            <Image
               src="/shop/r1/hero-phone.webp"
               alt="A man and a woman wearing Devonshire clothing in the British countryside"
               fill
               priority
               sizes="100vw"
-              className="object-cover object-center lg:object-top 2xl:hidden"
+              className="hidden object-cover object-[center_12%] lg:block 2xl:hidden"
             />
             <Image
               src="/shop/r1/hero.webp"
