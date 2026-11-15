@@ -81,7 +81,7 @@ function usePick(p: Merch) {
   const price = chosen ? gbp(chosen.pence) : min === Math.max(...prices) ? gbp(min) : `From ${gbp(min)}`;
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const addNow = () => {
-    if (notYet) return;
+    if (notYet || p.browseOnly) return;
     add(vid, qty);
     setAdded(true);
     clearTimeout(timer.current);
@@ -158,7 +158,7 @@ export function MerchCard({ p }: { p: Merch }) {
     <li className="flex flex-col overflow-hidden rounded-xl border border-[#1C1917]/10 bg-white">
       <button type="button" onClick={() => openView(p)} aria-label={`View ${p.name}: photos and details`} className="group relative block aspect-square overflow-hidden bg-[#F4F6F8] text-left focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1C1917]">
         <Image src={k.colors.length > 1 && k.color !== k.colors[0].name ? k.photos[0].src : p.img} alt={`ESP ${p.name}, ${(k.color ?? "black").toLowerCase()}, with the Devonshire stag logo`} fill sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 300px" loading="lazy" className="object-contain p-2 transition duration-300 group-hover:scale-[1.03]" />
-        {(k.allNotYet || k.notYet) && (
+        {!p.browseOnly && (k.allNotYet || k.notYet) && (
           <span data-notyet-badge className="absolute left-2 top-2 rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-900 shadow-sm ring-1 ring-amber-700/30">{NOT_YET}</span>
         )}
         {k.colors.length > 1 && (
@@ -175,7 +175,7 @@ export function MerchCard({ p }: { p: Merch }) {
           </h3>
           <span className={`text-sm font-bold sm:text-[15px] ${ink}`}>{k.price}</span>
         </div>
-        <BuyForm k={k} />
+        {!p.browseOnly && <BuyForm k={k} />}
       </div>
       {open && <ProductView k={k} />}
     </li>
@@ -231,7 +231,7 @@ function ProductView({ k }: { k: Pick }) {
           <div>
             <h2 id={`pv-h-${p.pid}`} className={`font-display text-2xl font-bold leading-tight ${ink}`}>{p.name}</h2>
             <p className={`mt-1 text-xl font-bold ${ink}`}>{k.price}</p>
-            {k.notYet && (
+            {!p.browseOnly && k.notYet && (
               <p data-notyet-label role="status" className="mt-2 inline-block rounded-md bg-amber-100 px-2.5 py-1 text-sm font-bold text-amber-900 ring-1 ring-amber-700/30">
                 {NOT_YET}{k.color && k.colors.length > 1 ? ` in ${k.color}` : ""}
               </p>
@@ -245,13 +245,13 @@ function ProductView({ k }: { k: Pick }) {
             </ul>
           ) : null}
           {k.colors.length > 1 && <Swatches k={k} />}
-          {p.made ? (
+          {!p.browseOnly && (p.made ? (
             <p data-made-terms className={`text-[13px] leading-snug ${ink}`}>{MADE_LEAD} UK delivery £{(MADE_DELIVERY_PENCE / 100).toFixed(2)} per order. With other kit, it comes as a separate parcel.</p>
           ) : (
             <p className={`text-[13px] leading-snug ${ink}`}>UK delivery only. Each item is made to order for you, and delivery is worked out in your bag.</p>
-          )}
-          <BuyForm k={k} big onAdded={() => setJustAdded(true)} />
-          {justAdded && (
+          ))}
+          {!p.browseOnly && <BuyForm k={k} big onAdded={() => setJustAdded(true)} />}
+          {!p.browseOnly && justAdded && (
             <div className="flex items-center justify-between gap-3 rounded-lg bg-[#F6EFE3] px-3 py-2.5 text-sm text-[#1C1917]" role="status">
               <span>Added to your bag.</span>
               <button
@@ -266,7 +266,7 @@ function ProductView({ k }: { k: Pick }) {
               </button>
             </div>
           )}
-          {p.made && (
+          {!p.browseOnly && p.made && (
             <p className={`text-[13px] leading-snug ${ink}`}>You can cancel within 14 days of receiving your order. For returns, please contact us first at <a className="underline" href="mailto:enquiries@extremesportspromotions.com">enquiries@extremesportspromotions.com</a>.</p>
           )}
         </div>

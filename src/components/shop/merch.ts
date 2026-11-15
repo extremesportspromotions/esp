@@ -8,7 +8,8 @@ export type MerchPhoto = { src: string; alt: string; view?: PhotoView; note?: st
 /** `light`: a light colour, made with the dark logo (dark grey thread on smart casual; black thread is never used). */
 export type MerchColor = { name: string; hex: string; gallery: MerchPhoto[]; light?: boolean; galleries?: { male?: MerchPhoto[]; female?: MerchPhoto[] } };
 /** `made`: smart casual, made to order and fulfilled by hand (never by the automatic partner). */
-export type Merch = { pid: number; name: string; cat: "apparel" | "bags" | "outerwear" | "smartcasual"; made?: boolean; sub?: string; img: string; gallery?: MerchPhoto[]; details?: string[]; colors?: MerchColor[]; variants: MerchVariant[] };
+/** `browseOnly`: shown in the shop but cannot be added to the bag or checked out. */
+export type Merch = { pid: number; name: string; cat: "apparel" | "bags" | "outerwear" | "smartcasual"; made?: boolean; browseOnly?: boolean; sub?: string; img: string; gallery?: MerchPhoto[]; details?: string[]; colors?: MerchColor[]; variants: MerchVariant[] };
 
 /** "Navy / M", "Navy", "M" or "" for the bag, checkout and order names. */
 export function variantName(p: Merch, v: MerchVariant): string {

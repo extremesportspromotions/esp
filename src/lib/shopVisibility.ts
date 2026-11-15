@@ -18,6 +18,8 @@ export function hiddenFromCheckout(): { colours: HiddenColour[]; products: { pid
   const colours: HiddenColour[] = [];
   const products: { pid: number; name: string }[] = [];
   for (const p of catalogue) {
+    // Shown in the shop even though checkout refuses them (range round 1, 15 Nov 2026).
+    if (p.browseOnly) continue;
     const byColour = new Map<string, number[]>();
     for (const v of p.variants) {
       const colour = v.color ?? "";

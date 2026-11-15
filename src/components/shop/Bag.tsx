@@ -27,7 +27,7 @@ export function BagProvider({ children }: { children: ReactNode }) {
     try {
       const saved = JSON.parse(localStorage.getItem(KEY) ?? "[]") as Line[];
       // eslint-disable-next-line react-hooks/set-state-in-effect -- read saved bag after hydration
-      setLines(saved.filter((l) => byId.has(l.id) && l.qty > 0));
+      setLines(saved.filter((l) => byId.has(l.id) && l.qty > 0 && !byId.get(l.id)!.p.browseOnly));
     } catch {}
   }, []);
   const save = (next: Line[]) => {
@@ -37,10 +37,15 @@ export function BagProvider({ children }: { children: ReactNode }) {
   const value = useMemo<BagCtx>(() => ({
     lines,
     add: (id, qty) => {
+      const rec = byId.get(id);
+      if (!rec || rec.p.browseOnly || rec.v.oos) return;
       const cur = lines.find((l) => l.id === id);
       save(cur ? lines.map((l) => (l.id === id ? { id, qty: Math.min(MAX_QTY, l.qty + qty) } : l)) : [...lines, { id, qty }].slice(-30));
     },
-    set: (id, qty) => save(qty <= 0 ? lines.filter((l) => l.id !== id) : lines.map((l) => (l.id === id ? { id, qty: Math.min(MAX_QTY, qty) } : l))),
+    set: (id, qty) => {
+      if (qty > 0 && byId.get(id)?.p.browseOnly) return;
+      save(qty <= 0 ? lines.filter((l) => l.id !== id) : lines.map((l) => (l.id === id ? { id, qty: Math.min(MAX_QTY, qty) } : l)));
+    },
   }), [lines]);
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

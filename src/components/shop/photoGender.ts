@@ -99,7 +99,8 @@ const PHOTO_GENDER: Record<string, PhotoGender> = {
 
 export function photoGender(src?: string): PhotoGender | undefined {
   if (!src) return undefined;
-  if (src.includes("/shop/v10/mens/")) return "male";
+  if (src.includes("/shop/v10/mens/") || src.includes("/shop/r1/mens/")) return "male";
+  if (src.includes("/shop/r1/womens/")) return "female";
   if (PHOTO_GENDER[src]) return PHOTO_GENDER[src];
   // Same model as the front, if a side or back of a model set is passed.
   if (!src.includes("/denim-")) {

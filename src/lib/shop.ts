@@ -24,6 +24,9 @@ export function splitLines(lines: Line[]): { auto: Line[]; made: Line[] } {
 /** A smart casual variant whose colour has no saved supplier design yet: never sellable. */
 export const notYetOrderable = (id: number) => isMade(id) && !madeInfo(id);
 
+/** Range round 1 and any other item shown but not yet for sale. */
+export const isBrowseOnly = (id: number) => byId.get(id)?.p.browseOnly === true;
+
 /** Validates a cart from the browser. Prices are never taken from the browser. */
 export function cleanLines(raw: unknown): Line[] | null {
   if (!Array.isArray(raw) || raw.length === 0 || raw.length > 30) return null;
@@ -31,7 +34,7 @@ export function cleanLines(raw: unknown): Line[] | null {
   for (const r of raw) {
     const id = Number((r as Line)?.id);
     const qty = Math.floor(Number((r as Line)?.qty));
-    if (!byId.has(id) || byId.get(id)!.v.oos || notYetOrderable(id) || !(qty >= 1 && qty <= 10)) return null;
+    if (!byId.has(id) || byId.get(id)!.v.oos || isBrowseOnly(id) || notYetOrderable(id) || !(qty >= 1 && qty <= 10)) return null;
     out.set(id, Math.min(10, (out.get(id) ?? 0) + qty));
   }
   return [...out].map(([id, qty]) => ({ id, qty }));
