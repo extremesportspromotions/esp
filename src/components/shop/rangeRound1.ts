@@ -139,8 +139,8 @@ const defs: Def[] = [
       "Classic regular-fit chinos in 275gsm cotton twill, with a zip fly, button waist and two buttoned back pockets. Available in regular (32in) and long (34in) leg.",
       "Fabric and fit: 100% cotton twill, 275gsm. Regular fit.",
       "Sizes: Waist 30–44 in; Regular 32 in or Long 34 in leg (42 and 44 have an unfinished hem)",
-      "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY_CLOTHING,
+      "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting.",
+      "Delivery: each pair is ordered in for you. UK mainland delivery usually takes 7–10 working days; please allow a little longer in busy periods.",
     ],
   },
   {
@@ -242,7 +242,7 @@ const defs: Def[] = [
     details: [
       "A three-layer softshell with a bonded microfleece lining, supplier-rated 5000mm water resistance and a shell the supplier rates as windproof. Full zip with inner storm flap, adjustable cuffs, a bungee hem and a dropped back; a small tonal stag on the left chest.",
       "Fabric and fit: 92% polyester, 8% elastane three-layer softshell with bonded microfleece lining, 340gsm. Feminine fit.",
-      "Sizes: XS–4XL (UK 8 upward; see size guide)",
+      "Sizes: XS–4XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
       DELIVERY_CLOTHING,
     ],
@@ -261,8 +261,8 @@ const defs: Def[] = [
       "Women's chinos in a 275gsm cotton twill with a touch of stretch, cut slim and slightly tailored to lengthen the leg. Zip fly with button waist, belt loops and two swing pockets.",
       "Fabric and fit: 98% cotton, 2% elastane twill, 275gsm. Slim, slightly tailored fit.",
       "Sizes: XS, S, M, L, XL, 2XL",
-      "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY_CLOTHING,
+      "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting.",
+      "Delivery: each pair is ordered in for you. UK mainland delivery usually takes 7–10 working days; please allow a little longer in busy periods.",
     ],
   },
   {
