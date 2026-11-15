@@ -2,8 +2,7 @@ import type { Merch, MerchColor, MerchPhoto, PhotoView } from "./merch";
 
 /**
  * Devonshire range round 1 (15 Nov 2026 lookbook). Shown in the shop, but not
- * purchasable until the supplier designs are saved (browseOnly). M5 (chore
- * jacket) is held back until its photos are fixed.
+ * purchasable until the supplier designs are saved (browseOnly).
  */
 const VIEWS: PhotoView[] = ["front", "side", "back"];
 const VIEW_TEXT: Record<string, string> = {
@@ -15,7 +14,7 @@ const VIEW_TEXT: Record<string, string> = {
 type Tab = "mens" | "womens" | "equipment";
 
 type Def = {
-  code: "M1" | "M2" | "M3" | "M4" | "M6" | "M7" | "W1" | "W2" | "W3" | "W4" | "W5" | "W6" | "W7" | "E1" | "E2";
+  code: "M1" | "M2" | "M3" | "M4" | "M5" | "M6" | "M7" | "W1" | "W2" | "W3" | "W4" | "W5" | "W6" | "W7" | "E1" | "E2";
   pid: number;
   name: string;
   tab: Tab;
@@ -34,8 +33,10 @@ const fromTo = (start: string, end: string, extra: string[] = []): string[] => {
 };
 const chinoWaist = [30, 32, 34, 36, 38, 40, 42, 44].flatMap((w) => [`W${w} Regular`, `W${w} Long`]);
 
-const DELIVERY =
-  "Delivery: each piece is embroidered to order. Please allow up to 10 working days for dispatch; UK delivery options and charges are shown at checkout.";
+const DELIVERY_CLOTHING =
+  "Delivery: each piece is embroidered to order for you. UK mainland delivery usually takes 7–10 working days; please allow a little longer in busy periods.";
+const DELIVERY_HATS =
+  "Delivery: each piece is embroidered to order for you. UK delivery usually takes 7–12 working days; please allow a little longer in busy periods.";
 
 const defs: Def[] = [
   {
@@ -52,7 +53,7 @@ const defs: Def[] = [
       "Fabric and fit: 100% ringspun combed cotton (Navy, White, Khaki); Charcoal is 60% cotton, 40% polyester, 200gsm. Classic (regular) fit.",
       "Sizes: S, M, L, XL, 2XL, 3XL, 4XL, 5XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -70,7 +71,7 @@ const defs: Def[] = [
       "Fabric and fit: 70% cotton, 30% polyester lightweight Oxford weave, 150gsm. Regular fit.",
       "Sizes: S, M, L, XL, 2XL, 3XL, 4XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -87,7 +88,7 @@ const defs: Def[] = [
       "Fabric and fit: 50% cotton, 50% acrylic, 12 gauge fine knit. Slim fit.",
       "Sizes: S, M, L, XL, 2XL, 3XL, 4XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -104,7 +105,24 @@ const defs: Def[] = [
       "Fabric and fit: 100% polyester outer with water-repellent (DWR) finish, polyester padding, 66gsm outer. Regular fit.",
       "Sizes: S, M, L, XL, 2XL, 3XL, 4XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
+    ],
+  },
+  {
+    code: "M5",
+    pid: 9100105,
+    name: "The Chore Jacket",
+    tab: "mens",
+    colour: "Olive",
+    hex: "#5A5C3A",
+    pence: 9900,
+    sizes: fromTo("XS", "4XL"),
+    details: [
+      "A relaxed chore jacket in a 240gsm cotton-rich twill, with a point collar, button front, one chest patch pocket and two deep lower patch pockets. A small tonal stag is embroidered on the left chest.",
+      "Fabric and fit: 60% cotton, 40% polyester, 240gsm. Relaxed fit.",
+      "Sizes: XS, S, M, L, XL, 2XL, 3XL, 4XL",
+      "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -122,7 +140,7 @@ const defs: Def[] = [
       "Fabric and fit: 100% cotton twill, 275gsm. Regular fit.",
       "Sizes: Waist 30–44 in; Regular 32 in or Long 34 in leg (42 and 44 have an unfinished hem)",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -139,7 +157,7 @@ const defs: Def[] = [
       "Fabric and fit: 100% polyester pongee outer; 100% polyester quilted twill lining, 220gsm outer, 40gsm lining. Regular fit.",
       "Sizes: S, M, L, XL, 2XL, 3XL, 4XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -156,7 +174,7 @@ const defs: Def[] = [
       "Fabric and fit: 100% ringspun combed cotton (Charcoal is 60% cotton, 40% polyester), 200gsm. Tailored women's fit.",
       "Sizes: XS, S, M, L, XL, 2XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -174,7 +192,7 @@ const defs: Def[] = [
       "Fabric and fit: 70% cotton, 30% polyester lightweight Oxford weave, 150gsm. Modern fitted.",
       "Sizes: XS, S, M, L, XL, 2XL, 3XL, 4XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -192,7 +210,7 @@ const defs: Def[] = [
       "Fabric and fit: 50% cotton, 50% acrylic, 12 gauge fine knit. Slim, shaped at the waist.",
       "Sizes: XXS–4XL (UK 6–22)",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -209,7 +227,7 @@ const defs: Def[] = [
       "Fabric and fit: Nylon outer and lining, polyester fill, 250gsm fill. Slim fit.",
       "Sizes: XS, S, M, L, XL, 2XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -222,11 +240,11 @@ const defs: Def[] = [
     pence: 13900,
     sizes: fromTo("XS", "4XL"),
     details: [
-      "A three-layer softshell with a bonded microfleece lining, water resistant to 5000mm and windproof. Full zip with inner storm flap, adjustable cuffs, a bungee hem and a dropped back; a small tonal stag on the left chest.",
+      "A three-layer softshell with a bonded microfleece lining, supplier-rated 5000mm water resistance and a shell the supplier rates as windproof. Full zip with inner storm flap, adjustable cuffs, a bungee hem and a dropped back; a small tonal stag on the left chest.",
       "Fabric and fit: 92% polyester, 8% elastane three-layer softshell with bonded microfleece lining, 340gsm. Feminine fit.",
       "Sizes: XS–4XL (UK 8 upward; see size guide)",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -244,7 +262,7 @@ const defs: Def[] = [
       "Fabric and fit: 98% cotton, 2% elastane twill, 275gsm. Slim, slightly tailored fit.",
       "Sizes: XS, S, M, L, XL, 2XL",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -261,7 +279,7 @@ const defs: Def[] = [
       "Fabric and fit: 100% polyester pongee outer; 100% polyester quilted twill lining, 220gsm outer, 40gsm lining. Regular fit.",
       "Sizes: XS–2XL (UK 8–18)",
       "Care: Wash at 30°C inside out with similar colours. Do not bleach, tumble dry or dry clean. Iron on the reverse at a low setting, never over the embroidery.",
-      DELIVERY,
+      DELIVERY_CLOTHING,
     ],
   },
   {
@@ -278,7 +296,7 @@ const defs: Def[] = [
       "Fabric and fit: 100% acrylic, 12in (30cm) length, one size, hand wash",
       "Sizes: One size",
       "Care: Hand wash.",
-      DELIVERY,
+      DELIVERY_HATS,
     ],
   },
   {
@@ -296,7 +314,7 @@ const defs: Def[] = [
       "Fabric and fit: 100% cotton chino twill, unstructured six-panel low profile, adjustable strap with buckle, one size",
       "Sizes: One size",
       "Care: See the care label.",
-      DELIVERY,
+      DELIVERY_HATS,
     ],
   },
 ];

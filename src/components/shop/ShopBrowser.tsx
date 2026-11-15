@@ -70,7 +70,7 @@ function Card({ p }: { p: Product }) {
   );
 }
 
-const grid = "grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4";
+const grid = "grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4";
 
 /**
  * Hides anything that can't be ordered right now (no saved supplier design, held, or out of stock).
@@ -128,7 +128,14 @@ function readIntent(): { tab: TabId; sub: string | null; anchor?: string } | nul
   return null;
 }
 
+const SECTION_CARDS: { id: TabId; label: string; img: string; pos: string }[] = [
+  { id: "mens", label: "Men's", img: "/shop/r1/mens/M1-front.webp", pos: "50% 18%" },
+  { id: "womens", label: "Women's", img: "/shop/r1/womens/W1-front.webp", pos: "50% 18%" },
+  { id: "equipment", label: "Accessories", img: "/shop/r1/E2-front.webp", pos: "50% 20%" },
+];
+
 export default function ShopBrowser() {
+
   const [tab, setTab] = useState<TabId>("mens");
   const [sub, setSub] = useState<string | null>(null);
   // Without JS, all three sections stay visible so old #hashes still jump. After hydration we show one tab.
@@ -160,36 +167,42 @@ export default function ShopBrowser() {
   }, [tab, sub, ready]);
 
   const active = tabs.find((t) => t.id === tab);
-  const tabClass = (on: boolean) =>
-    `shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${on ? "bg-[#0E2141] text-white" : "text-[#1C1917] hover:bg-[#0E2141]/10"}`;
   const chip = (on: boolean) =>
-    `shrink-0 whitespace-nowrap rounded-full border px-3 py-1 text-[13px] font-medium transition ${on ? "border-[#0E2141] bg-[#0E2141] text-white" : "border-[#1C1917]/25 bg-white text-[#1C1917] hover:border-[#1C1917]"}`;
+    `shrink-0 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-[13px] font-medium tracking-wide transition ${on ? "border-[#0E2141] bg-[#0E2141] text-white" : "border-[#1C1917]/20 bg-transparent text-[#1C1917] hover:border-[#1C1917]"}`;
 
   return (
     <NotYetContext.Provider value={new Set(hiddenColours.map((x) => x.key))}>
     <BagProvider>
     <div id="products">
-      <div className="sticky top-[101px] z-40 border-b border-[#1C1917]/10 bg-[#F6EFE3]/95 backdrop-blur-md lg:top-[61px]">
-        <div className="mx-auto max-w-7xl px-3 sm:px-6">
-          <nav aria-label="Shop sections" className="flex gap-1 overflow-x-auto py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {tabs.map((t) => (
-              <a key={t.id} href={`#${t.id}`} className={tabClass(tab === t.id)} aria-current={tab === t.id ? "true" : undefined}>
-                {t.short}
-              </a>
-            ))}
-          </nav>
-          {active && active.subs.length > 0 && (
-            <div className="flex gap-1.5 overflow-x-auto pb-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <button type="button" className={chip(sub === null)} onClick={() => setSub(null)}>All</button>
-              {active.subs.map((s) => (
-                <button key={s} type="button" className={chip(sub === s)} aria-pressed={sub === s} onClick={() => setSub(s)}>{s}</button>
-              ))}
-            </div>
-          )}
-        </div>
+      <div className="mx-auto max-w-7xl pt-8 sm:pt-12 sm:px-6 lg:pt-16">
+        <nav aria-label="Shop sections" className="flex gap-4 overflow-x-auto px-4 pb-2 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-0 lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:pb-0">
+          {SECTION_CARDS.map((c) => (
+            <a
+              key={c.id}
+              href={`#${c.id}`}
+              aria-current={tab === c.id ? "true" : undefined}
+              className={`relative block aspect-[3/4] w-[78%] shrink-0 snap-center overflow-hidden sm:w-[55%] lg:w-auto focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0E2141] ${tab === c.id ? "ring-1 ring-[#C9A96A]" : ""}`}
+            >
+              <Image src={c.img} alt="" fill sizes="(max-width: 1024px) 80vw, 33vw" className="object-cover" style={{ objectPosition: c.pos }} />
+              <div className="absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[#0E2141]/80 to-transparent" aria-hidden />
+              <span className="font-serif absolute inset-x-0 bottom-5 text-center text-[1.65rem] font-medium leading-none tracking-wide text-[#F6EFE3] sm:bottom-6 sm:text-3xl">{c.label}</span>
+            </a>
+          ))}
+        </nav>
       </div>
 
-      <div className="mx-auto max-w-7xl px-3 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 sm:px-6 lg:pb-20">
+      {active && active.subs.length > 0 && (
+        <div className="sticky top-[101px] z-40 border-b border-[#1C1917]/10 bg-[#F6EFE3]/95 backdrop-blur-md lg:top-[61px]">
+          <div className="mx-auto flex max-w-7xl gap-1.5 overflow-x-auto px-4 py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-6">
+            <button type="button" className={chip(sub === null)} onClick={() => setSub(null)}>All</button>
+            {active.subs.map((s) => (
+              <button key={s} type="button" className={chip(sub === s)} aria-pressed={sub === s} onClick={() => setSub(s)}>{s}</button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="mx-auto max-w-7xl px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-8 sm:px-6 sm:pt-10 lg:pb-24 lg:pt-12">
         {tabs.map((t) => {
           if (ready && t.id !== tab) return null;
           const kit = kitAll
@@ -204,9 +217,9 @@ export default function ShopBrowser() {
           const showRecs = recs.length > 0;
           const count = t.id === "equipment" ? branded.length + recs.length : clothing.length + denim.length;
           return (
-            <section key={t.id} id={t.id} aria-labelledby={`h-${t.id}`} className="mb-4 scroll-mt-[220px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:mb-10 lg:scroll-mt-[170px] lg:pb-0 lg:last:mb-0">
-              <div className="mb-3 flex items-baseline justify-between">
-                <h2 id={`h-${t.id}`} className="font-display text-xl font-bold text-[#1C1917] sm:text-2xl">{t.label}</h2>
+            <section key={t.id} id={t.id} aria-labelledby={`h-${t.id}`} className="mb-6 scroll-mt-[180px] pb-[calc(5rem+env(safe-area-inset-bottom))] lg:mb-14 lg:scroll-mt-[140px] lg:pb-0 lg:last:mb-0">
+              <div className="mb-6 flex items-baseline justify-between sm:mb-8">
+                <h2 id={`h-${t.id}`} className="font-display text-2xl font-medium tracking-tight text-[#0E2141] sm:text-3xl">{t.label}</h2>
                 <span className="text-sm text-[#1C1917]">{count} items</span>
               </div>
               {t.id !== "equipment" && (
