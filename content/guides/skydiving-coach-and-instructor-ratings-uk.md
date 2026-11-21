@@ -6,6 +6,7 @@ sport: skydiving
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/skydiving-coach-and-instructor-ratings-uk-hero.jpg"
 heroAlt: "Tandem instructor and student under a red and black canopy in a blue sky"
 featured: false
@@ -38,9 +39,9 @@ All three need a packing certificate and two years in the sport. If you'll be ta
 Our advice: the second course is a test, not a lesson. If you fail the closed-book Operations Manual exam, you go home on day one.
 
 > [!SAFETY]
-> As an instructor, you may be the one who decides whether someone jumps. Ground them when in doubt. In an emergency, call 999.
+> As an instructor, you may be the one who decides whether someone jumps. Ground them when in doubt. In an emergency, call 999: the NHS says 999 is for life-threatening emergencies.
 
-Source: [Be a Coach](https://britishskydiving.org/be-a-coach/), [Be an Instructor](https://britishskydiving.org/be-an-instructor/), [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
+Source: [Be a Coach](https://britishskydiving.org/be-a-coach/), [Be an Instructor](https://britishskydiving.org/be-an-instructor/), [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, and [When to call 999](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-call-999/), NHS, checked November 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

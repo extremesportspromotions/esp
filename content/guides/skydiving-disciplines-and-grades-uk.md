@@ -6,6 +6,7 @@ sport: skydiving
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/skydiving-disciplines-and-grades-uk-hero.jpg"
 heroAlt: "Freeflyer in a sit position in freefall, with the sun low on the horizon"
 heroPosition: "92% 50%"
@@ -34,9 +35,9 @@ This is where skydiving gets playful. British Skydiving says many new skydivers 
 Most centres have coaches who can introduce you to these disciplines. British Skydiving also runs development events for non-seniors.
 
 > [!SAFETY]
-> Every discipline has its own break-off and separation rules. Learn them from a coach before you try it with friends. In an emergency, call 999.
+> Every discipline has its own break-off and separation rules. Learn them from a coach before you try it with friends. In an emergency, call 999: the NHS says 999 is for life-threatening emergencies.
 
-Source: [Disciplines](https://britishskydiving.org/disciplines/), [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
+Source: [Disciplines](https://britishskydiving.org/disciplines/), [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, and [When to call 999](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-call-999/), NHS, checked November 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

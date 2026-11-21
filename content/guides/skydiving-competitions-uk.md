@@ -6,6 +6,7 @@ sport: skydiving
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/skydiving-competitions-uk-hero.jpg"
 heroAlt: "Skydiver under a red and white canopy coming in over a busy drop zone with tents and spectators"
 heroPosition: "60% 50%"
@@ -24,14 +25,14 @@ Competition skydiving is fast, technical and great fun. You don't have to be a c
 - **UKSL and Grand Prix:** a series of meets at centres around the UK. The Formation Skydiving series is the British Skydiving UKSL, linked to the European Skydiving League. British Skydiving calls these meets the perfect place to gain competition experience.
 - **Skills Coaching Roadshows:** many meets include them. Top UK skydivers coach you, and you just cover the cost of your jumps.
 - **British National Championships:** the annual championships in formation skydiving, freefly, freestyle, canopy piloting and more.
-- **World Cups and World Championships:** international events run under the FAI.
+- **World Cups and World Championships:** international events run under the FAI. For international events and records, your name must be on the FAI Sporting Licence database. British Skydiving asks you to send Form 110 straight to its HQ at least four weeks before the event.
 
 For dates, see our [British competitions 2027](https://www.extremesportspromotions.com/guides/british-competitions-2027) guide and British Skydiving's diary of events.
 
 > [!SAFETY]
-> Competition is not the place to try something new. Train it first, then compete it. In an emergency, call 999.
+> Competition is not the place to try something new. Train it first, then compete it. In an emergency, call 999: the NHS says 999 is for life-threatening emergencies.
 
-Source: [Competitions](https://britishskydiving.org/competitions/), British Skydiving, checked October 2026.
+Source: [Competitions](https://britishskydiving.org/competitions/), British Skydiving, and [When to call 999](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-call-999/), NHS, checked November 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

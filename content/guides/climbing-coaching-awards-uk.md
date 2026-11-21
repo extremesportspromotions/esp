@@ -6,6 +6,7 @@ sport: mountaineering
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/climbing-coaching-awards-uk-hero.jpg"
 heroAlt: "Climber training on an indoor bouldering wall"
 featured: false
@@ -23,7 +24,7 @@ Instructors keep people safe. Coaches make them better.
 
 ## Foundation Coach
 
-A Foundation Coach helps new and improving climbers with the fundamentals of movement, usually with groups and sometimes under a more experienced Development Coach. It suits wall staff, outdoor instructors and young people who've completed NICAS Level 4 or 5.
+A Foundation Coach helps new and improving climbers with the fundamentals of movement, coaching groups on climbing walls. It suits wall staff, outdoor instructors and young people who've completed NICAS Level 4 or 5.
 
 - Before training: Mountain Training strongly recommends the FUNdamentals of Climbing 1 workshop.
 - Before assessment: the FUNdamentals of Climbing 1 workshop, at least 15 coaching sessions logged since training, reflective notes on at least five of them, and lesson plans ready to show the assessor.
@@ -47,8 +48,8 @@ The top level, for experienced coaches helping climbers reach mid to long-term g
 > [!SAFETY]
 > Good coaching starts with a safe session. Don't push a climber's movement before their ropework is solid.
 
-Source: [Foundation Coach](https://www.mountain-training.org/qualifications/climbing/foundation-coach/), [Development Coach](https://www.mountain-training.org/qualifications/climbing/development-coach/), [Performance Coach](https://www.mountain-training.org/qualifications/climbing/performance-coach/) and [Qualifications](https://www.mountain-training.org/qualifications/), Mountain Training, checked October 2026.
+Source: [Foundation Coach](https://www.mountain-training.org/qualifications/climbing/foundation-coach/), [Development Coach](https://www.mountain-training.org/qualifications/climbing/development-coach/) and [Performance Coach](https://www.mountain-training.org/qualifications/climbing/performance-coach/), Mountain Training, checked November 2026.
 
-Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
+Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering guide standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

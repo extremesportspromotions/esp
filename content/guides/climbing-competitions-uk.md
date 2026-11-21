@@ -6,6 +6,7 @@ sport: mountaineering
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/climbing-competitions-uk-hero.jpg"
 heroAlt: "Climber on a tall indoor competition-style wall"
 featured: false
@@ -30,8 +31,8 @@ The BMC lists the British Boulder, Lead, Speed, Para Climbing and Ice Climbing C
 > [!SAFETY]
 > Warm up properly. Competition problems are built to push you, and cold fingers and shoulders get hurt.
 
-Source: [National Climbing Competition Calendar](https://www.thebmc.co.uk/en/national-competition-calendar), [Youth Climbing Series](https://www.thebmc.co.uk/en/youth-climbing-series) and [England and Wales Climbing Trials](https://www.thebmc.co.uk/en/england-wales-climbing-trials), BMC, checked October 2026.
+Source: [National Climbing Competition Calendar](https://www.thebmc.co.uk/en/national-competition-calendar), [Youth Climbing Series](https://www.thebmc.co.uk/en/youth-climbing-series) and [England and Wales Climbing Trials](https://www.thebmc.co.uk/en/england-wales-climbing-trials), BMC, checked November 2026.
 
-Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
+Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering guide standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

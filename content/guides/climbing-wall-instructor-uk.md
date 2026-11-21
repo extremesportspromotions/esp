@@ -6,6 +6,7 @@ sport: mountaineering
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/climbing-wall-instructor-uk-hero.jpg"
 heroAlt: "Climber bouldering on colourful holds at an indoor wall"
 heroPosition: "83% 50%"
@@ -32,15 +33,15 @@ If you live at the wall, this is how you start sharing it. The award suits wall 
 - 30 personal climbing visits to at least three different walls.
 - 40 led climbs on walls, and confidence leading at French grade 4.
 - Helping to supervise at least 15 instructed sessions on at least two different walls, including a large public facility, with your own reflective comments on at least five of them in DLOG.
-- A current first aid certificate from an in-person course of at least one full day (8 hours) with an assessment.
+- A current first aid certificate from an in-person (not online) course of at least one full day, or equivalent, that included an assessment.
 
 Mountain Training also offers a Bouldering Wall Instructor award and an abseil module for Climbing Wall Instructors.
 
 > [!SAFETY]
 > Indoors still means ropes, heights and falls. Most accidents start with a missed check.
 
-Source: [Climbing Wall Instructor](https://www.mountain-training.org/qualifications/climbing/climbing-wall-instructor/) and [Qualifications](https://www.mountain-training.org/qualifications/), Mountain Training, checked October 2026.
+Source: [Climbing Wall Instructor](https://www.mountain-training.org/qualifications/climbing/climbing-wall-instructor/), [Bouldering Wall Instructor](https://www.mountain-training.org/qualifications/climbing/bouldering-wall-instructor/) and [Climbing Wall Instructor Abseil Module](https://www.mountain-training.org/qualifications/climbing/climbing-wall-instructor-abseil-module/), Mountain Training, checked November 2026.
 
-Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
+Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering guide standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

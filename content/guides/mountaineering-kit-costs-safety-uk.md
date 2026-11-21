@@ -6,6 +6,7 @@ sport: mountaineering
 category: Safety
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/mountaineering-kit-costs-safety-uk-hero.jpg"
 heroAlt: "Close-up of a climber's harness and chalk bag on rock"
 featured: false
@@ -34,8 +35,8 @@ In England, Wales and Scotland, anyone who sells adventure activities to under-1
 > [!SAFETY]
 > Use a mountain forecast, tell someone your route and turn back early. In an emergency, dial 999 or 112 and ask for Police, then Mountain Rescue.
 
-Source: [Adventure activities licensing](https://www.hse.gov.uk/aala/general-information.htm), HSE; [Adventure activities licence](https://www.gov.uk/find-licences/adventure-activities-licence), GOV.UK; [Mountain Leader](https://www.mountain-training.org/qualifications/walking/mountain-leader/), Mountain Training; [How to call out Mountain Rescue](https://www.mountain.rescue.org.uk/how-to-call-out-mr/), Mountain Rescue England and Wales; and [Scottish Mountain Rescue](https://www.scottishmountainrescue.org/), checked October 2026.
+Source: [Adventure activities licensing](https://www.hse.gov.uk/aala/general-information.htm), HSE; [Adventure activities licence](https://www.gov.uk/find-licences/adventure-activities-licence), GOV.UK; [Mountain Leader](https://www.mountain-training.org/qualifications/walking/mountain-leader/), Mountain Training; [How to call out Mountain Rescue](https://www.mountain.rescue.org.uk/how-to-call-out-mr/), Mountain Rescue England and Wales; and [Scottish Mountain Rescue](https://www.scottishmountainrescue.org/), checked November 2026.
 
-Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
+Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering guide standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

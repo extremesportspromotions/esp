@@ -6,6 +6,7 @@ sport: mountaineering
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/mountaineering-and-climbing-instructor-uk-hero.jpg"
 heroAlt: "Roped party of mountaineers with ice axes climbing a snowy slope"
 heroPosition: "43% 50%"
@@ -39,15 +40,15 @@ After the second training course:
 - 20 multi-pitch climbs at VS 4c or above, many of them on mountain crags and major sea cliffs.
 - 20 quality mountain days in sole charge of a group.
 - 20 rock climbing teaching days with a variety of climbers and venues.
-- A current first aid certificate from an in-person course of at least two full days (16 hours) with an assessment.
+- A current first aid certificate from an in-person (not online) course of at least two full days, or equivalent, that included an assessment.
 
-These are the current rules. Mountain Training has agreed changes to the prerequisites, coming in between June 2026 and January 2028, so check its page before you register. Above this sits the Winter Mountaineering and Climbing Instructor award.
+These are the current rules. Mountain Training has agreed changes to the prerequisites, coming in between June 2026 and January 2028, and they'll be published on its page. Above this sits the Winter Mountaineering and Climbing Instructor award.
 
 > [!SAFETY]
 > On multi-pitch ground, retreat is part of the plan. Know your escape before you need it.
 
-Source: [Mountaineering and Climbing Instructor](https://www.mountain-training.org/qualifications/climbing/mountaineering-and-climbing-instructor/), Mountain Training, checked October 2026.
+Source: [Mountaineering and Climbing Instructor](https://www.mountain-training.org/qualifications/climbing/mountaineering-and-climbing-instructor/) and [Winter Mountaineering and Climbing Instructor](https://www.mountain-training.org/qualifications/climbing/winter-mountaineering-and-climbing-instructor/), Mountain Training, checked November 2026.
 
-Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
+Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering guide standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

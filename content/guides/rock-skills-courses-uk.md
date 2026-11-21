@@ -6,6 +6,7 @@ sport: mountaineering
 category: Getting started
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/rock-skills-courses-uk-hero.jpg"
 heroAlt: "Two climbers on ropes on a steep rock face"
 featured: false
@@ -26,13 +27,13 @@ Real rock is a different game from the wall. It's cold under your fingertips, it
 - **Learn to Lead Sport Climbs (2 days, age 14+):** clipping bolts, checking fixed gear and threading the lower-off. You'll need 20 routes climbed and 20 belays.
 - **Learn to Lead Trad Climbs (2 days, age 14+):** carrying, choosing and placing your own gear, and building anchors. You'll need 20 belays plus 20 climbs seconded at VDiff or above, or 20 sport leads.
 
-All four run on single-pitch crags across the UK and Ireland.
+All four run on single-pitch crags across the UK and Ireland. Mountain Training says the trad course also suits people planning to go for the [Rock Climbing Instructor](https://www.extremesportspromotions.com/guides/rock-climbing-instructor-uk) award.
 
 > [!SAFETY]
 > Check your partner's knot and harness, and let them check yours, before every climb. Every time.
 
-Source: [Skills courses](https://www.mountain-training.org/skills-courses/), Mountain Training, checked October 2026.
+Source: [Skills courses](https://www.mountain-training.org/skills-courses/), [Rock Skills Introduction](https://www.mountain-training.org/skills-courses/rock-skills-introduction/), [Rock Skills Intermediate](https://www.mountain-training.org/skills-courses/rock-skills-intermediate/), [Learn to Lead Sport Climbs](https://www.mountain-training.org/skills-courses/rock-skills-learn-to-lead-sport-climbs/) and [Learn to Lead Trad Climbs](https://www.mountain-training.org/skills-courses/rock-skills-learn-to-lead-trad-climbs/), Mountain Training, checked November 2026.
 
-Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
+Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering guide standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).

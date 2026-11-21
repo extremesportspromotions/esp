@@ -6,6 +6,7 @@ sport: skydiving
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/skydiving-d-licence-uk-hero.jpg"
 heroAlt: "Skydiver under canopy high above a sea of clouds"
 featured: false
@@ -28,9 +29,9 @@ A thousand jumps. That's a thousand exits, a thousand openings and a thousand la
 You need at least a D Licence and ten hours of freefall to become an Accelerated Freefall Instructor. Read more in [coaching and instructor ratings](https://www.extremesportspromotions.com/guides/skydiving-coach-and-instructor-ratings-uk).
 
 > [!SAFETY]
-> Experience is not immunity. Keep doing the same careful kit checks and canopy planning you did on jump one. In an emergency, call 999.
+> Experience is not immunity. Keep doing the same careful kit checks and canopy planning you did on jump one. In an emergency, call 999: the NHS says 999 is for life-threatening emergencies.
 
-Source: [Training & Progression](https://britishskydiving.org/training-progression/) and [Be an Instructor](https://britishskydiving.org/be-an-instructor/), British Skydiving, checked October 2026.
+Source: [Training & Progression](https://britishskydiving.org/training-progression/), [Be an Instructor](https://britishskydiving.org/be-an-instructor/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, and [When to call 999](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-call-999/), NHS, checked November 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

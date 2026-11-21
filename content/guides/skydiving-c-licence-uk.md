@@ -6,6 +6,7 @@ sport: skydiving
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/skydiving-c-licence-uk-hero.jpg"
 heroAlt: "Tandem skydivers in freefall high above green farmland and snowy mountains"
 heroPosition: "59% 50%"
@@ -34,9 +35,9 @@ Two hundred jumps. You've got the skills, and now the sport starts asking you to
 - Start on the instructor path: Category System Basic Instructor, then Category System Instructor. Tandem Instructor needs 800 jumps and 8 hours of freefall. See [coaching and instructor ratings](https://www.extremesportspromotions.com/guides/skydiving-coach-and-instructor-ratings-uk).
 
 > [!SAFETY]
-> A camera is a distraction. Only fly one when your Chief Instructor approves it. In an emergency, call 999.
+> A camera is a distraction. Only fly one when your Chief Instructor approves it. In an emergency, call 999: the NHS says 999 is for life-threatening emergencies.
 
-Source: [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, checked October 2026.
+Source: [Training & Progression](https://britishskydiving.org/training-progression/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, and [When to call 999](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-call-999/), NHS, checked November 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

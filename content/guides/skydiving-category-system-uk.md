@@ -6,6 +6,7 @@ sport: skydiving
 category: Getting started
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/skydiving-category-system-uk-hero.jpg"
 heroAlt: "Solo skydiver under a red, white and black canopy above green fields and roads"
 heroPosition: "42% 50%"
@@ -24,14 +25,14 @@ Picture it: about six hours of ground school, then you're sitting in the door at
 
 ## How it works
 
-The Category System takes you from student to Category 8 in eight levels. Early jumps use the static line. As you progress you lose it, pull your own parachute and make that all-important first freefall. Every level builds the skills you need for your A licence.
+The Category System takes you from student to Category 8 in eight levels. Early jumps use the static line. As you progress you lose it, pull your own parachute and make that all-important first freefall, after at least five static line jumps. Want to speed up? You can switch to AFF at Level 2 once you've made at least 2 jumps and reached Category 2, or at Level 3 once you've reached Category 5. Every level builds the skills you need for your A licence.
 
 It suits you if you'd rather pay as you go than buy a whole course at once.
 
 > [!SAFETY]
-> Your instructor clears you for each category. If they ask you to repeat a jump, it's because you're not ready yet, and that's the system keeping you safe. In an emergency, call 999.
+> Your instructor clears you for each category. If they ask you to repeat a jump, it's because you're not ready yet, and that's the system keeping you safe. In an emergency, call 999: the NHS says 999 is for life-threatening emergencies.
 
-Source: [Static Line](https://britishskydiving.org/static-line/) and [My First Jump](https://britishskydiving.org/my-first-jump/), British Skydiving, checked October 2026.
+Source: [Static Line](https://britishskydiving.org/static-line/), [My First Jump](https://britishskydiving.org/my-first-jump/) and the [Operations Manual](https://144578763.fs1.hubspotusercontent-eu1.net/hubfs/144578763/STC%20Matters/Operations%20Manual/Operations%20Manual%20September%202026.pdf) (September 2026), British Skydiving, and [When to call 999](https://www.nhs.uk/nhs-services/urgent-and-emergency-care-services/when-to-call-999/), NHS, checked November 2026.
 
 Governing body: [British Skydiving](https://britishskydiving.org). It sets the UK safety standards and training awards for skydiving, so it's the official place to find out more.
 

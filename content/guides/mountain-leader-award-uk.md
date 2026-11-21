@@ -6,6 +6,7 @@ sport: mountaineering
 category: How-to
 author: ESP Editorial
 date: 2026-10-18
+updated: 2026-11-21
 heroImage: "/guides/mountain-leader-award-uk-hero.jpg"
 heroAlt: "Line of walkers on a stone path through a mountain valley"
 heroPosition: "50% 50%"
@@ -25,7 +26,7 @@ Big hills, real weather and a group trusting you to bring them home. The Mountai
 ## What you need
 
 - Before training: 20 quality mountain days.
-- Before assessment: 40 quality mountain days in at least three regions of the UK or Ireland, and at least 8 nights of camping, including 4 nights of wild camping, and a current first aid certificate from an in-person course of at least two full days (16 hours) with an assessment.
+- Before assessment: 40 quality mountain days in at least three regions of the UK or Ireland, and at least 8 nights of camping, including 4 nights of wild camping, and a current first aid certificate from an in-person (not online) course of at least two full days, or equivalent, that included an assessment.
 
 Log your days on DLOG, Mountain Training's digital logbook.
 
@@ -36,8 +37,8 @@ Mountain Training also offers the Winter Mountain Leader and International Mount
 > [!SAFETY]
 > Mountain weather changes fast. Use a mountain forecast, and in an emergency dial 999 or 112 and ask for Police, then Mountain Rescue.
 
-Source: [Mountain Leader](https://www.mountain-training.org/qualifications/walking/mountain-leader/), Mountain Training, and [How to call out Mountain Rescue](https://www.mountain.rescue.org.uk/how-to-call-out-mr/), Mountain Rescue England and Wales, checked October 2026.
+Source: [Mountain Leader](https://www.mountain-training.org/qualifications/walking/mountain-leader/), [Winter Mountain Leader](https://www.mountain-training.org/qualifications/walking/winter-mountain-leader/) and [International Mountain Leader](https://www.mountain-training.org/qualifications/walking/international-mountain-leader/), Mountain Training, and [How to call out Mountain Rescue](https://www.mountain.rescue.org.uk/how-to-call-out-mr/), Mountain Rescue England and Wales, checked November 2026.
 
-Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
+Governing body: [British Mountaineering Council (BMC)](https://www.thebmc.co.uk) for England and Wales. Leader and instructor awards come from [Mountain Training](https://www.mountain-training.org), and coasteering guide standards come from the [National Coasteering Charter](https://www.nationalcoasteeringcharter.org.uk), so these are the official places to find out more.
 
 The [club map](https://www.extremesportspromotions.com/?sport=mountaineering#find-a-club) lists some of the UK clubs for this sport. It is a starting point, so check with the club before you travel. To have a coach found for you, use the [enquiry form](https://www.extremesportspromotions.com/#enquire).
